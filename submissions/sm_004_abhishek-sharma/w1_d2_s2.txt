@@ -1,0 +1,411 @@
+    1  man sudo_root
+    2  cd
+    3  ls
+    4  cd Downloads
+    5  sudo dpkg -i zoom*.deb
+    6  sudo apt-get -f install
+    7  man help
+    8  help
+    9  help exit
+   10  exit
+   11  echo hello
+   12  cal
+   13  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+   14  sudo dpkg -i google-chrome-stable_current_amd64.deb
+   15  sudo chmod u+s /sbin/shutdown
+   16  sudo apt install ./slack-desktop-*.deb
+   17  sudo apt install ./slack-desktop-4.1.1-amd64.deb
+   18  sudo apt install ./slack-desktop-4.1.1-amd64-*.deb
+   19  sudo apt-get install wget
+   20  sudo apt-get install unzip
+   21  clear
+   22  date -u
+   23  cal 1997
+   24  df -h
+   25  man free
+   26  free -m
+   27  pwd
+   28  wget https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv
+   29  ls
+   30  less countries.csv 
+   31  man less
+   32  ls
+   33  cd ..
+   34  ls
+   35  cd /
+   36  ls
+   37  cd -
+   38  cd ..
+   39  ls
+   40  cd -
+   41  ls
+   42  cd ..
+   43  ls
+   44  cd home
+   45  ls
+   46  clear
+   47  ls
+   48  mkdir practise
+   49  sudo mkdir practise
+   50  ls
+   51  cd abhi
+   52  ls
+   53  cd ..
+   54  ls
+   55  cd practicse
+   56  cd practise
+   57  mkdir movies
+   58  ls
+   59  cd ..
+   60  ls
+   61  rm practise
+   62  rm -r practise
+   63  sudo rm -r practise
+   64  ls
+   65  cd abhi
+   66  ls
+   67  clear
+   68  ls
+   69  mkdir movies songs books epsilon
+   70  ls
+   71  rm movies songs books epsilon
+   72  rm -r movies songs books epsilon
+   73  ls
+   74  mkdir practise
+   75  ls
+   76  cd practise/
+   77  mkdir movies songs books epsilon
+   78  ls
+   79  cd movies/
+   80  mkdir english hindi french chinese
+   81  ls
+   82  cd ..
+   83  cd songs/
+   84  mkdir tamil kannada urdu 
+   85  ls
+   86  cd ..
+   87  cd books/
+   88  mkdir english hindi french chinese
+   89  ls
+   90  cd ..
+   91  ls
+   92  rm -r epsilon
+   93  ls
+   94  mkdir alpha/beta/gamma/delta/epsilon
+   95  mkdir -p alpha/beta/gamma/delta/epsilon
+   96  ls
+   97  clear
+   98  ls -l
+   99  ls -R
+  100  cd
+  101  ls
+  102  clear
+  103  wget https://github.com/masai-school/assignments-data/raw/master/downloads/course.zip
+  104  ls
+  105  cd Downloads
+  106  ls
+  107  cd ..
+  108  unzip course.zip 
+  109  clear
+  110  ls
+  111  cd course
+  112  ls
+  113  ls -R
+  114  cd week_1/day_1/
+  115  ls
+  116  ls -a
+  117  cd ..
+  118  ls -Ra
+  119  ls -R
+  120  cd ..
+  121  ls
+  122  cd all
+  123  ls
+  124  ls -lt
+  125  man ls
+  126  ls -r
+  127  ls -Rrt
+  128  ls -Rt
+  129  ls -lrt
+  130  clear
+  131  cd ..
+  132  ls
+  133  cd all
+  134  ls
+  135  cd ..
+  136  cp all/overall.txt ../practise/
+  137  cd ../practise/
+  138  ls
+  139  cd ../course/
+  140  cp week_1/ ../practise/
+  141  ls
+  142  cp -r week_1/ ../practise/
+  143  ls ../practise/
+  144  cp *s1.txt all/s1
+  145  mkdir all/s1
+  146  ls all
+  147  cp *s1.txt all/s1
+  148  ls week_1
+  149  ls week_1/day_1
+  150  man cp
+  151  clear
+  152  ls
+  153  cp *s1.txt all/s1/
+  154  lscp /*s1.txt all/s1/
+  155  ls *s1.txt
+  156  ls all/*s1.txt
+  157  ls week_1/*s1.txt
+  158  ls week_1
+  159  man cp
+  160  cp -r*s1.txt all/s1/
+  161  cp -r *s1.txt all/s1/
+  162  cp -r s1.txt* all/s1/
+  163  ls -r all
+  164  history
+  165  clear
+  166  cp all/*s1.txt s1
+  167  cd all
+  168  ls
+  169  cp *s1.txt s1
+  170  ls s1
+  171  cd ../..
+  172  cd course/
+  173  cp all/*d3* all/s1
+  174  ls all/s1
+  175  history
+  176  ls
+  177  ls -R week_1
+  178  mkdir all/day_3
+  179  cp week_1/day_3/*d3* all/day_3/
+  180  ls al/day_3/
+  181  ls all/day_3/
+  182  ls -R
+  183  mv week_2/day_3/w3_d3_s1.txt w2_d3_s1.txt
+  184  ls week_2/day_3/
+  185  ls
+  186  rm w2_d3_s1.txt 
+  187  mv week_2/day_3/w3_d3_s1.txt week_2/day_3/w2_d3_s1.txt
+  188  ls week_2/day_3/
+  189  cd week_2/day_3/
+  190  cat w3_d3_s2.txt 
+  191  cat w3_d3_s1.txt 
+  192  cat > w3_d3_s1.txt 
+  193  cat w3_d3_s1.txt 
+  194  less w3_d3_s2.txt 
+  195  cd ../..
+  196  mv week_2/day_3/w3_d3_s1.txt week_2/day_3/w2_d3_s1.txt
+  197  ls week_2/day_3/
+  198  mv week_2/day_3/w3_d3_s2.txt week_2/day_3/w2_d3_s1.txt
+  199  ls week_2/day_3/
+  200  ls week_2/
+  201  mv week_2/day-4 week_2/day_4
+  202  ls week_2/
+  203  ls all
+  204  mv all/w1* all/w1
+  205  mkdir all/w1
+  206  mv all/w1* all/w1
+  207  ls all
+  208  ls all/w1
+  209  mv all/w2* all/w2
+  210  ls all
+  211  mkdir all/w2
+  212  mv all/w2* all/w2
+  213  ls all/w2
+  214  cp all/*s2.txt all/s2
+  215  ls all/s2
+  216  ls all
+  217  ls all/s2/
+  218  rm all/s2
+  219  mkdir all/s2
+  220  cp all/*s2.txt all/s2
+  221  ls all/s2/
+  222  ls all/
+  223  cd all
+  224  ls
+  225  ls s1
+  226  ls s2
+  227  ls
+  228  cat > w1_d2_s2.txt
+  229  cat > w1_d5_s2.txt
+  230  cat > w2_d4_s2.txt
+  231  cat > w1_d1_s2.txt
+  232  cat > w1_d4_s2.txt
+  233  cat > w2_d2_s2.txt
+  234  cat > w1_d3_s2.txt
+  235  cat > w2_d1_s2.txt
+  236  cat > w2_d5_s2.txt
+  237  ls 
+  238  ls w2
+  239  ls s1
+  240  ls s2
+  241  rm s2/w3_d3_s2.txt 
+  242  ls s2
+  243  ls w2
+  244  ls
+  245  ls s2
+  246  cd ..
+  247  mv all/*s2* all/s2
+  248  ls all/s2
+  249  ls all
+  250  cp all/s2/w3_d3_s2.txt all/
+  251  ls all
+  252  mv all/s1 all/session_wise
+  253  ls all
+  254  ls all/session_wise/
+  255  mv all/s2 all/session_wise
+  256  ls 
+  257  rm all/overall.txt 
+  258  rm -r all/w3*
+  259  ls all/session_wise/
+  260  ls -R all/
+  261  ls all/session_wise/
+  262  ls all
+  263  ls all/session_wise/s2/
+  264  rm all/session_wise/*s2*
+  265  ls all/session_wise/s2/
+  266  rm all/session_wise/s2/*s2*
+  267  ls all/session_wise/s2/
+  268  ls all
+  269  ls all/session_wise/
+  270  cd ..
+  271  ls
+  272  ls practise/
+  273  ls practise/week_1/
+  274  cd course/
+  275  cp ../practise/week_1/*s2.txt all/session_wise/s2/
+  276  ls ../practise/week_1/day_1/
+  277  ls
+  278  cp week_1/*s2.txt all/session_wise/s2/
+  279  ls week_1/
+  280  ls all/w3*
+  281  ls -r all/w3*
+  282  ls -r all
+  283  ls -R all
+  284  mkdir all/session_wise/s1
+  285  mv all/session_wise/*s1.txt all/session_wise/s1/
+  286  ls -R all
+  287  man rm
+  288  rm -r all/w3*
+  289  rm -R all/w3*
+  290  ls all/day_3/
+  291  ls -l all/session_wise/
+  292  ls all/session_wise/
+  293  ls all/w3*
+  294  ls -r all/w3*
+  295  ls -R all/w3*
+  296  ls -R all/day_3/
+  297  ls -R all/day_3/w3*
+  298  ls -R all/session_wise/w3*
+  299  ls all/
+  300  ls -R all/w1/w3*
+  301  ls -R all/w1/
+  302  ls -R all/session_wise/
+  303  ls -R all/session_wise/s1/w3*
+  304  ls -R all/session_wise/s2/w3*
+  305  ls -R all/session_wise/s2/
+  306  rm -R all/session_wise/s1/w3*
+  307  ls -R all/session_wise/s2/
+  308  ls all/
+  309  rm -r all/day_3
+  310  ls all/
+  311  ls ../practise/week_1/ -a
+  312  rm -r ../practise/week_1/ -a
+  313  man rm
+  314  ls -r ../practise/week_1/ -a
+  315  rm -r ../practise/week_1/ -a
+  316  rm -r ../practise/week_1/.*
+  317  ls -r ../practise/week_1/ -a
+  318  ls ../practise/week_1/ -a
+  319  ls ../practise/week_1/
+  320  ls
+  321  rm -r week_1 week_2
+  322  history
+  323  cd ..
+  324  ls
+  325  history > w1_d2_s1.txt
+  326  quit
+  327  history
+  328  git -- version
+  329  sudo apt-get install git
+  330  git config
+  331  git config --global user.name "Abhishek Sharma"
+  332  git config --global user.email "abhishek.sharma1597@gmail.com"
+  333  git config  user.email 
+  334  git config  user.name
+  335  cd ~
+  336  ls
+  337  mkdir repos
+  338  mkdir repos/test
+  339  cd repos/test/
+  340  git init
+  341  mkdir start
+  342  date > start
+  343  less start/
+  344  less start
+  345  rm start
+  346  rm -r start
+  347  cat date > start
+  348  date > start
+  349  ls
+  350  less start
+  351  mv start start.txt
+  352  ls
+  353  git add start.txt
+  354  git status
+  355  git commit -m "Start Time"
+  356  git remote add origin https://github.com/Abhi1597/test.git
+  357  git push origin master
+  358  cat > profile.md
+  359  git add profile.md
+  360  cat > profile.md
+  361  git commit -m "Online Commit"
+  362  echo profile.md
+  363  git status
+  364  ls
+  365  git add profile.md
+  366  git commit -m "Online Commit"
+  367  git push origin master
+  368  wget https://github.com/masai-school/assignments-data/raw/master/downloads/course.zip
+  369  ls
+  370  unzip course.zip 
+  371  ls
+  372  ls course
+  373  ls course/all
+  374  git add course/all/overall.txt 
+  375  git commit -m "FirstFile"
+  376  git push origin master
+  377  get status
+  378  git status
+  379  ls
+  380  ls course
+  381  cd course/
+  382  git add week_1
+  383  git commit -m "Week1 Course"
+  384  git status
+  385  git push origin master
+  386  cd ..
+  387  ls
+  388  git add course/week_2/day_5 
+  389  git commit -m "W2 D5"
+  390  git push origin master
+  391  cd ~
+  392  mkdir masai
+  393  ls
+  394  cd masai
+  395  git init
+  396  echo "# SAMURAI - ABHISHEK SHARMA" > profile.md
+  397  ls
+  398  git remote add origin https://github.com/Abhi1597/masai-school-test.git
+  399  ls
+  400  git add profile.md 
+  401  git commit -m "Second File"
+  402  git push origin master
+  403  ls
+  404  cd ..
+  405  mkdir repos
+  406  ls
+  407  mv w1_d2_s1.txt repos
+  408  mkdir repos/history
+  409  mv repos/w1_d2_s1.txt repos/history/
+  410  cd repos/history/
+  411  history > w1_d2_s2.txt
