@@ -102,6 +102,9 @@ movies_collections.json
 student_marks.json
 
 data/dumps:
+2014.dump
+2015.dump
+2016.dump
 2017.dump
 2018.dump
 2019.dump
@@ -235,7 +238,29 @@ superman.txt
 wonder_woman.txt
 
 data/superheros/original:
+ant-man.txt
+aquaman.txt
 barry_allen.txt
+black_panther.txt
+black_widow.txt
 bruce_wayne.txt
 brunce_banner.txt
+captain_america.txt
+captain_marvel.txt
+doctor_strange.txt
+drax.txt
+falcon.txt
+gamora.txt
+green_lantern.txt
+groot.txt
+hawkeye.txt
+mantis.txt
+martin_manhunter.txt
+rocket_racoon.txt
+spider-man.txt
+star-lord.txt
+superman.txt
+thor.txt
 tony_stark.txt
+wasp.txt
+wonder_woman.txt

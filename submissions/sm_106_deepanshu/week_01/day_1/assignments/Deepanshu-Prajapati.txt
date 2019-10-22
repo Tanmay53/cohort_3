@@ -1,4 +1,3 @@
-data/:
 dummy
 dumps
 food
@@ -68,11 +67,15 @@ w1_d5_s1.txt
 w1_d5_s2.txt
 
 data/dummy/course/week_2:
+day-4
 day_1
 day_2
 day_3
-day-4
 day_5
+
+data/dummy/course/week_2/day-4:
+w2_d4_s1.txt
+w2_d4_s2.txt
 
 data/dummy/course/week_2/day_1:
 w2_d1_s1.txt
@@ -86,10 +89,6 @@ data/dummy/course/week_2/day_3:
 w3_d3_s1.txt
 w3_d3_s2.txt
 
-data/dummy/course/week_2/day-4:
-w2_d4_s1.txt
-w2_d4_s2.txt
-
 data/dummy/course/week_2/day_5:
 w2_d5_s1.txt
 w2_d5_s2.txt
@@ -102,6 +101,9 @@ movies_collections.json
 student_marks.json
 
 data/dumps:
+2014.dump
+2015.dump
+2016.dump
 2017.dump
 2018.dump
 2019.dump
@@ -235,7 +237,7 @@ superman.txt
 wonder_woman.txt
 
 data/superheros/original:
-barry_allen.txt
-bruce_wayne.txt
-brunce_banner.txt
-tony_stark.txt
+barry_allen
+bruce_warner
+bruce_wayne
+tony_stark
