@@ -1,20 +1,12 @@
 data/:
-data
 dummy
+dumps
 food
 junk
 lists
 logs
 numbers
-superheroes
-
-data/data:
-2014.dump
-2014.log
-2015.dump
-2015.log
-2016.dump
-2016.log
+superheros
 
 data/dummy:
 course
@@ -76,11 +68,15 @@ w1_d5_s1.txt
 w1_d5_s2.txt
 
 data/dummy/course/week_2:
+day-4
 day_1
 day_2
 day_3
-day-4
 day_5
+
+data/dummy/course/week_2/day-4:
+w2_d4_s1.txt
+w2_d4_s2.txt
 
 data/dummy/course/week_2/day_1:
 w2_d1_s1.txt
@@ -94,10 +90,6 @@ data/dummy/course/week_2/day_3:
 w3_d3_s1.txt
 w3_d3_s2.txt
 
-data/dummy/course/week_2/day-4:
-w2_d4_s1.txt
-w2_d4_s2.txt
-
 data/dummy/course/week_2/day_5:
 w2_d5_s1.txt
 w2_d5_s2.txt
@@ -109,10 +101,18 @@ employee_salaries.json
 movies_collections.json
 student_marks.json
 
+data/dumps:
+2014.dump
+2015.dump
+2016.dump
+2017.dump
+2018.dump
+2019.dump
+
 data/food:
 fruits
 meats
-vegetabales
+vegetables
 
 data/food/fruits:
 fruit_apple.txt
@@ -128,7 +128,7 @@ meat_fish.txt
 meat_mutton.txt
 meat_prawns.txt
 
-data/food/vegetabales:
+data/food/vegetables:
 vegetable_beans.txt
 vegetable_beetroot.txt
 vegetable_brinjal.txt
@@ -153,23 +153,34 @@ locales.json
 tld.txt
 
 data/logs:
-2019.dump
+access
 error
-logs
 
-data/logs/error:
-2019-01-error.log
-2019-02-error.log
-2019-03-error.log
-2019-04-error.log
-2019-05-error.log
-
-data/logs/logs:
+data/logs/access:
 2019-01-access.log
 2019-02-access.log
 2019-03-access.log
 2019-04-access.log
 2019-05-access.log
+
+data/logs/error:
+2018-01-error.log
+2018-02-error.log
+2018-03-error.log
+2018-04-error.log
+2018-05-error.log
+2018-06-error.log
+2018-07-error.log
+2018-08-error.log
+2018-09-error.log
+2018-10-error.log
+2018-11-error.log
+2018-12-error.log
+2019-01-error.log
+2019-02-error.log
+2019-03-error.log
+2019-04-error.log
+2019-05-error.log
 
 data/numbers:
 even_2.txt
@@ -184,15 +195,14 @@ odd_9.txt
 
 data/superheros:
 avengers
-gurdians
-gurdiansrocket_racoon
+guardians
 justice_league
+original
 
 data/superheros/avengers:
 ant-man.txt
 black_panther.txt
 black_widow.txt
-bruce_banner.txt
 captain_america.txt
 captain_marvel.txt
 doctor_strange.txt
@@ -201,24 +211,47 @@ falcon.txt
 gamora.txt
 groot.txt
 hawkeye.txt
+hulk.txt
+iron_man.txt
 mantis.txt
 rocket_racoon.txt
 spider-man.txt
 star-lord.txt
 thor.txt
-tony_stark.txt
 wasp.txt
 
-data/superheros/gurdians:
+data/superheros/guardians:
+ant-man.txt
+black_panther.txt
+black_widow.txt
+captain_america.txt
+captain_marvel.txt
+doctor_strange.txt
 drax.txt
+falcon.txt
 gamora.txt
 groot.txt
+hawkeye.txt
+hulk.txt
+iron_man.txt
+mantis.txt
+rocket_racoon.txt
+spider-man.txt
+star-lord.txt
+thor.txt
+wasp.txt
 
 data/superheros/justice_league:
 aquaman.txt
-barry_allen.txt
 batman.txt
+flash.txt
 green_lantern.txt
 martin_manhunter.txt
 superman.txt
 wonder_woman.txt
+
+data/superheros/original:
+barry_allen.txt
+bruce_wayne.txt
+brunce_banner.txt
+tony_star.txt
