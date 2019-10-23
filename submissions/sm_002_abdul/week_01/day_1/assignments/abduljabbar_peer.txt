@@ -102,10 +102,6 @@ movies_collections.json
 student_marks.json
 
 data/dumps:
-2014.dump
-2015.dump
-2016.dump
-2017.dump
 2018.dump
 2019.dump
 
@@ -157,6 +153,18 @@ access
 error
 
 data/logs/access:
+2018-01-access.log
+2018-02-access.log
+2018-03-access.log
+2018-04-access.log
+2018-05-access.log
+2018-06-access.log
+2018-07-access.log
+2018-08-access.log
+2018-09-access.log
+2018-10-access.log
+2018-11-access.log
+2018-12-access.log
 2019-01-access.log
 2019-02-access.log
 2019-03-access.log
@@ -195,7 +203,6 @@ odd_9.txt
 
 data/superheros:
 avengers
-guardians
 justice_league
 original
 
@@ -210,6 +217,7 @@ drax.txt
 falcon.txt
 gamora.txt
 groot.txt
+guardians
 hawkeye.txt
 hulk.txt
 iron_man.txt
@@ -220,11 +228,12 @@ star-lord.txt
 thor.txt
 wasp.txt
 
-data/superheros/guardians:
+data/superheros/avengers/guardians:
 drax.txt
 gamora.txt
 groot.txt
 mantis.txt
+rocket_racoon.txt
 star-lord.txt
 
 data/superheros/justice_league:
@@ -237,7 +246,7 @@ superman.txt
 wonder_woman.txt
 
 data/superheros/original:
-barry_allen.txt
-bruce_wayne.txt
-brunce_banner.txt
-tony_stark.txt
+barry_allen
+bruce_banner
+bruce_wayne
+tony_stark
