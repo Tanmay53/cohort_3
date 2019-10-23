@@ -102,12 +102,16 @@ movies_collections.json
 student_marks.json
 
 data/dump:
-2018.dump
-2019.dump
+2014.dump
+2014.log
+2015.dump
+2015.log
+2016.dump
+2016.log
 
 data/food:
 fruits
-meat
+meats
 vegetables
 
 data/food/fruits:
@@ -117,7 +121,7 @@ fruit_grapes.txt
 fruit_mango.txt
 fruit_orange.txt
 
-data/food/meat:
+data/food/meats:
 meat_chicken.txt
 meat_eggs.txt
 meat_fish.txt
@@ -149,6 +153,9 @@ locales.json
 tld.txt
 
 data/logs:
+2017.dump
+2018.dump
+2019.dump
 access
 error
 
@@ -193,7 +200,7 @@ data/superheros:
 avengers
 guardians
 justice_league
-originals
+original
 
 data/superheros/avengers:
 ant-man.txt
@@ -233,8 +240,8 @@ martin_manhunter.txt
 superman.txt
 wonder_woman.txt
 
-data/superheros/originals:
+data/superheros/original:
+barry_allen
 bruce_banner
 bruce_wayne
-burry_allen
 tony_stark
