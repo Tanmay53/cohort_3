@@ -1,6 +1,6 @@
 data/:
 dummy
-dump
+dumps
 food
 junk
 lists
@@ -101,13 +101,32 @@ employee_salaries.json
 movies_collections.json
 student_marks.json
 
-data/dump:
+data/dumps:
+2014.dump
+2015.dump
+2016.dump
+2017.dump
 2018.dump
 2019.dump
 
 data/food:
+fruit_apple.txt
+fruit_banana.txt
+fruit_grapes.txt
+fruit_mango.txt
+fruit_orange.txt
 fruits
-meat
+meat_chicken.txt
+meat_eggs.txt
+meat_fish.txt
+meat_mutton.txt
+meat_prawns.txt
+meats
+vegetable_beans.txt
+vegetable_beetroot.txt
+vegetable_brinjal.txt
+vegetable_carrot.txt
+vegetable_potato.txt
 vegetables
 
 data/food/fruits:
@@ -116,8 +135,16 @@ fruit_banana.txt
 fruit_grapes.txt
 fruit_mango.txt
 fruit_orange.txt
+fruits
 
-data/food/meat:
+data/food/fruits/fruits:
+fruit_apple.txt
+fruit_banana.txt
+fruit_grapes.txt
+fruit_mango.txt
+fruit_orange.txt
+
+data/food/meats:
 meat_chicken.txt
 meat_eggs.txt
 meat_fish.txt
@@ -193,7 +220,7 @@ data/superheros:
 avengers
 guardians
 justice_league
-originals
+original
 
 data/superheros/avengers:
 ant-man.txt
@@ -206,6 +233,7 @@ drax.txt
 falcon.txt
 gamora.txt
 groot.txt
+guardians
 hawkeye.txt
 hulk.txt
 iron_man.txt
@@ -213,16 +241,49 @@ mantis.txt
 rocket_racoon.txt
 spider-man.txt
 star-lord.txt
+superheros
 thor.txt
 wasp.txt
 
+data/superheros/avengers/guardians:
+Drax
+Gamora
+Groot
+Mantis
+Rocket
+StarLord
+
+data/superheros/avengers/guardians/Drax:
+
+data/superheros/avengers/guardians/Gamora:
+
+data/superheros/avengers/guardians/Groot:
+
+data/superheros/avengers/guardians/Mantis:
+
+data/superheros/avengers/guardians/Rocket:
+
+data/superheros/avengers/guardians/StarLord:
+
 data/superheros/guardians:
-drax.txt
-gamora.txt
-groot.txt
-mantis.txt
-rocket_racoon.txt
-star-lord.txt
+Drax
+Gamora
+Groot
+Mantis
+Rocket
+StarLord
+
+data/superheros/guardians/Drax:
+
+data/superheros/guardians/Gamora:
+
+data/superheros/guardians/Groot:
+
+data/superheros/guardians/Mantis:
+
+data/superheros/guardians/Rocket:
+
+data/superheros/guardians/StarLord:
 
 data/superheros/justice_league:
 aquaman.txt
@@ -233,8 +294,8 @@ martin_manhunter.txt
 superman.txt
 wonder_woman.txt
 
-data/superheros/originals:
+data/superheros/original:
+barry_allen
 bruce_banner
 bruce_wayne
-burry_allen
 tony_stark
