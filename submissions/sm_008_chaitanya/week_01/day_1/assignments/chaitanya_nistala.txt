@@ -1,0 +1,259 @@
+data/:
+total 28
+drwxr-xr-x 4 chaitanya chaitanya 4096 Oct 25 18:41 dummy
+drwxr-xr-x 5 chaitanya chaitanya 4096 Oct 25 18:49 food
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 junk
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 lists
+drwxr-xr-x 5 chaitanya chaitanya 4096 Oct 25 20:24 logs
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 numbers
+drwxr-xr-x 6 chaitanya chaitanya 4096 Oct 25 19:08 superheros
+
+data/dummy:
+total 8
+drwxr-xr-x 5 chaitanya chaitanya 4096 Oct 25 18:41 course
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 json
+
+data/dummy/course:
+total 12
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 all
+drwxr-xr-x 8 chaitanya chaitanya 4096 Oct 25 18:41 week_1
+drwxr-xr-x 7 chaitanya chaitanya 4096 Oct 25 18:41 week_2
+
+data/dummy/course/all:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 overall.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d1_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d1_s2.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d2_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d2_s2.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d3_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d3_s2.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d4_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d4_s2.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d5_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d5_s2.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d1_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d1_s2.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d2_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d2_s2.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d4_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d4_s2.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d5_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d5_s2.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w3_d3_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w3_d3_s2.txt
+
+data/dummy/course/week_1:
+total 20
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day_1
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day_2
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day_3
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day_4
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day_5
+
+data/dummy/course/week_1/day_1:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d1_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d1_s2.txt
+
+data/dummy/course/week_1/day_2:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d2_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d2_s2.txt
+
+data/dummy/course/week_1/day_3:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d3_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d3_s2.txt
+
+data/dummy/course/week_1/day_4:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d4_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d4_s2.txt
+
+data/dummy/course/week_1/day_5:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d5_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w1_d5_s2.txt
+
+data/dummy/course/week_2:
+total 20
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day_1
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day_2
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day_3
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day-4
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 day_5
+
+data/dummy/course/week_2/day_1:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d1_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d1_s2.txt
+
+data/dummy/course/week_2/day_2:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d2_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d2_s2.txt
+
+data/dummy/course/week_2/day_3:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w3_d3_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w3_d3_s2.txt
+
+data/dummy/course/week_2/day-4:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d4_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d4_s2.txt
+
+data/dummy/course/week_2/day_5:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d5_s1.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 w2_d5_s2.txt
+
+data/dummy/json:
+total 492
+-rw-r--r-- 1 chaitanya chaitanya  80747 Oct 25 18:41 cars_mileage.json
+-rw-r--r-- 1 chaitanya chaitanya 112567 Oct 25 18:41 company_valuations.json
+-rw-r--r-- 1 chaitanya chaitanya  98599 Oct 25 18:41 employee_salaries.json
+-rw-r--r-- 1 chaitanya chaitanya 103532 Oct 25 18:41 movies_collections.json
+-rw-r--r-- 1 chaitanya chaitanya  95889 Oct 25 18:41 student_marks.json
+
+data/food:
+total 12
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:47 fruits
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:49 meats
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:49 vegetables
+
+data/food/fruits:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 fruit_apple.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 fruit_banana.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 fruit_grapes.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 fruit_mango.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 fruit_orange.txt
+
+data/food/meats:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 meat_chicken.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 meat_eggs.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 meat_fish.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 meat_mutton.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 meat_prawns.txt
+
+data/food/vegetables:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 vegetable_beans.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 vegetable_beetroot.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 vegetable_brinjal.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 vegetable_carrot.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 vegetable_potato.txt
+
+data/junk:
+total 124
+-rw-r--r-- 1 chaitanya chaitanya 16370 Oct 25 18:41 city_names_orders_rand.csv
+-rw-r--r-- 1 chaitanya chaitanya  4194 Oct 25 18:41 emails_rand.txt
+-rw-r--r-- 1 chaitanya chaitanya 69347 Oct 25 18:41 marks_rand_2000.csv
+-rw-r--r-- 1 chaitanya chaitanya  1360 Oct 25 18:41 names_100.txt
+-rw-r--r-- 1 chaitanya chaitanya 25000 Oct 25 18:41 random_ids.txt
+
+data/lists:
+total 628
+-rw-r--r-- 1 chaitanya chaitanya 391996 Oct 25 18:41 colornames.csv
+-rw-r--r-- 1 chaitanya chaitanya  83017 Oct 25 18:41 common_passwords.txt
+-rw-r--r-- 1 chaitanya chaitanya   3670 Oct 25 18:41 countries.csv
+-rw-r--r-- 1 chaitanya chaitanya   7368 Oct 25 18:41 currency.csv
+-rw-r--r-- 1 chaitanya chaitanya 100507 Oct 25 18:41 github_languages.yml
+-rw-r--r-- 1 chaitanya chaitanya   8012 Oct 25 18:41 language.csv
+-rw-r--r-- 1 chaitanya chaitanya  15701 Oct 25 18:41 locales.json
+-rw-r--r-- 1 chaitanya chaitanya  23312 Oct 25 18:41 tld.txt
+
+data/logs:
+total 12
+-rw-r--r-- 1 chaitanya chaitanya    0 Oct 25 18:41 2017.dump
+-rw-r--r-- 1 chaitanya chaitanya    0 Oct 25 18:41 2018.dump
+-rw-r--r-- 1 chaitanya chaitanya    0 Oct 25 18:41 2019.dump
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 20:16 access
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 19:57 data
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 20:18 error
+
+data/logs/access:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-01-access.log
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-02-access.log
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-03-access.log
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-04-access.log
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-05-access.log
+
+data/logs/data:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2014.dump
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2015.dump
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2016.dump
+
+data/logs/error:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-01-error.log
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-02-error.log
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-03-error.log
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-04-error.log
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 2019-05-error.log
+
+data/numbers:
+total 36
+-rw-r--r-- 1 chaitanya chaitanya 2 Oct 25 18:41 even_2.txt
+-rw-r--r-- 1 chaitanya chaitanya 2 Oct 25 18:41 even_4.txt
+-rw-r--r-- 1 chaitanya chaitanya 2 Oct 25 18:41 even_6.txt
+-rw-r--r-- 1 chaitanya chaitanya 2 Oct 25 18:41 even_8.txt
+-rw-r--r-- 1 chaitanya chaitanya 2 Oct 25 18:41 odd_1.txt
+-rw-r--r-- 1 chaitanya chaitanya 2 Oct 25 18:41 odd_3.txt
+-rw-r--r-- 1 chaitanya chaitanya 2 Oct 25 18:41 odd_5.txt
+-rw-r--r-- 1 chaitanya chaitanya 2 Oct 25 18:41 odd_7.txt
+-rw-r--r-- 1 chaitanya chaitanya 2 Oct 25 18:41 odd_9.txt
+
+data/superheros:
+total 16
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 avengers
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:58 guardians
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 18:41 justice_league
+drwxr-xr-x 2 chaitanya chaitanya 4096 Oct 25 19:14 original
+
+data/superheros/avengers:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 ant-man.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 black_panther.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 black_widow.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 captain_america.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 captain_marvel.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 doctor_strange.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 drax.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 falcon.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 gamora.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 groot.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 hawkeye.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 hulk.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 iron_man.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 mantis.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 rocket_racoon.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 spider-man.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 star-lord.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 thor.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 wasp.txt
+
+data/superheros/guardians:
+total 0
+
+data/superheros/justice_league:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 aquaman.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 batman.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 flash.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 green_lantern.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 martin_manhunter.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 superman.txt
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 18:41 wonder_woman.txt
+
+data/superheros/original:
+total 0
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 19:14 barry_allen
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 19:13 bruce_wayne
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 19:14 brunce_banner
+-rw-r--r-- 1 chaitanya chaitanya 0 Oct 25 19:09 tony_stark
