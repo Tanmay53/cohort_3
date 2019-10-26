@@ -1,0 +1,8 @@
+superheros
+numbers
+logs
+lists
+junk
+food
+dumps
+dummy
