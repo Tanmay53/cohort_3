@@ -1,1 +1,0 @@
-     500 temp_count_pak.txt
