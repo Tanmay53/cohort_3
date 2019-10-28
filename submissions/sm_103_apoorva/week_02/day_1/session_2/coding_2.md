@@ -100,11 +100,11 @@ div {
 Fill the below property values for the `div`
 1. Color
 ```
-  
+  white
 ```
 2. Height
 ```
-
+100px
 ```
 
 ### FSD.CSS.3.2
@@ -115,15 +115,15 @@ Fill the below property values for the `div`
 Fill the below property values for the `div`
 1. Width
 ```
-
+100px
 ```
 2. Height
 ```
-
+100px
 ```
 3. Padding
 ```
-
+4px
 ```
 ### FSD.CSS.3.3
 ```
@@ -131,27 +131,27 @@ Fill the below property values for the `div`
 ```
 1. Width
 ```
-
+100px
 ```
 2. Height
 ```
-
+100px
 ```
 3. Padding-Left
 ```
-
+4px
 ```
 4. Margin-Right
 ```
-
+6px
 ```
 5. Font-Size
 ```
-
+16px
 ```
 6. Color
 ```
-
+black
 ```
 ### FSD.CSS.3.4
 ```
@@ -159,27 +159,27 @@ Fill the below property values for the `div`
 ```
 1. Color
 ```
-
+white
 ```
 2. Background Color
 ```
-
+black
 ```
 3. Padding-Bottom
 ```
-
+4px
 ```
 4. Margin-Top
 ```
-
+10px
 ```
 5. Font-Size
 ```
-
+12px
 ```
 6. Height
 ```
-
+100px
 ```
 ### FSD.CSS.3.5
 ```
@@ -191,23 +191,23 @@ Fill the below property values for the `div`
 ```
 2. Background Color
 ```
-
+white
 ```
 3. Padding-Bottom
 ```
-
+4px
 ```
 4. Margin-Right
 ```
-
+6px
 ```
 5. Font-Size
 ```
-
+11px
 ```
 6. Color
 ```
-
+violet
 ```
 ### FSD.CSS.3.6
 ```
@@ -215,27 +215,27 @@ Fill the below property values for the `div`
 ```
 1. Width
 ```
-
+100px
 ```
 2. Color
 ```
-
+red
 ```
 3. Padding-Right
 ```
-
+20px
 ```
 4. Margin-Left
 ```
-
+15px
 ```
 5. Font-Size
 ```
-
+12px
 ```
 6. Background Color
 ```
-
+black
 ```
 ### FSD.CSS.3.7
 ```
@@ -243,27 +243,27 @@ Fill the below property values for the `div`
 ```
 1. Width
 ```
-
+75px
 ```
 2. Height
 ```
-
+100px
 ```
 3. Padding-Top
 ```
-
+4px
 ```
 4. Margin-Bottom
 ```
-
+10px
 ```
 5. Font-Size
 ```
-
+22px
 ```
 6. Color
 ```
-
+white
 ```
 ### FSD.CSS.3.8
 ```
@@ -271,27 +271,27 @@ Fill the below property values for the `div`
 ```
 1. Width
 ```
-
+100px
 ```
 2. Height
 ```
-
+100px
 ```
 3. Padding-Left
 ```
-
+6px
 ```
 4. Margin-Right
 ```
-
+6px
 ```
 5. Font-Size
 ```
-
+20px
 ```
 6. Color
 ```
-
+orange
 ```
 ### FSD.CSS.3.9
 ```
@@ -299,23 +299,23 @@ Fill the below property values for the `div`
 ```
 1. Width
 ```
-
+75px
 ```
 2. Height
 ```
-
+200px
 ```
 3. Background Color
 ```
-
+black
 ```
 4. Color
 ```
-
+red
 ```
 5. Font-Size
 ```
-
+12px
 ```
 ### FSD.CSS.3.10
 ```
@@ -323,27 +323,27 @@ Fill the below property values for the `div`
 ```
 1. Width
 ```
-
+150px
 ```
 2. Height
 ```
-
+100px
 ```
 3. Padding-Top
 ```
-
+4px
 ```
 4. Margin-Left
 ```
-
+22px
 ```
 5. Font-Size
 ```
-
+14px
 ```
 6. Color
 ```
-
+blue
 ```
 ### FSD.CSS.3.11
 ```
@@ -351,15 +351,15 @@ Fill the below property values for the `div`
 ```
 1. Background Color
 ```
-
+black
 ```
 2. Height
 ```
-
+20px
 ```
 3. Margin-Left
 ```
-
+20px
 ```
 4. Padding-Right
 ```
@@ -367,11 +367,11 @@ Fill the below property values for the `div`
 ```
 5. Font-Size
 ```
-
+28px
 ```
 6. Color
 ```
-
+orange
 ```
 ### FSD.CSS.3.12
 ```
@@ -379,25 +379,25 @@ Fill the below property values for the `div`
 ```
 1. Width
 ```
-
+75px
 ```
 2. Height
 ```
-
+100px
 ```
 3. Background Color
 ```
-
+black
 ```
 4. Margin-Right
 ```
-
+10px
 ```
 5. Font-Size
 ```
-
+12px
 ```
 6. Color
 ```
-
+white
 ```
