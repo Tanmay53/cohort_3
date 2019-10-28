@@ -100,7 +100,7 @@ div {
 Fill the below property values for the `div`
 1. Color
 ```
-  white
+white
 ```
 2. Height
 ```
@@ -139,7 +139,7 @@ Fill the below property values for the `div`
 ```
 3. Padding-Left
 ```
-4px
+10px
 ```
 4. Margin-Right
 ```
@@ -167,7 +167,7 @@ black
 ```
 3. Padding-Bottom
 ```
-4px
+10px
 ```
 4. Margin-Top
 ```
@@ -187,7 +187,7 @@ black
 ```
 1. Width
 ```
-
+100px
 ```
 2. Background Color
 ```
@@ -227,7 +227,7 @@ red
 ```
 4. Margin-Left
 ```
-15px
+6px
 ```
 5. Font-Size
 ```
@@ -259,7 +259,7 @@ black
 ```
 5. Font-Size
 ```
-22px
+12px
 ```
 6. Color
 ```
@@ -303,7 +303,7 @@ orange
 ```
 2. Height
 ```
-200px
+100px
 ```
 3. Background Color
 ```
@@ -355,7 +355,7 @@ black
 ```
 2. Height
 ```
-20px
+100px
 ```
 3. Margin-Left
 ```
@@ -363,7 +363,7 @@ black
 ```
 4. Padding-Right
 ```
-
+20px
 ```
 5. Font-Size
 ```
@@ -399,5 +399,5 @@ black
 ```
 6. Color
 ```
-white
+
 ```

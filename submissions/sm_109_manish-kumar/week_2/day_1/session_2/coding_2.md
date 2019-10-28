@@ -98,9 +98,8 @@ div {
 <div>MASAI</div>
 ```
 Fill the below property values for the `div`
-1. Color
-```
-  white
+1. Col
+white
 ```
 2. Height
 ```
@@ -115,15 +114,15 @@ Fill the below property values for the `div`
 Fill the below property values for the `div`
 1. Width
 ```
-100px
+100
 ```
 2. Height
 ```
-100px
+50
 ```
 3. Padding
 ```
-4px
+40
 ```
 ### FSD.CSS.3.3
 ```
@@ -131,23 +130,23 @@ Fill the below property values for the `div`
 ```
 1. Width
 ```
-100px
+100
 ```
 2. Height
 ```
-100px
+100
 ```
 3. Padding-Left
 ```
-4px
+4
 ```
 4. Margin-Right
 ```
-6px
+6
 ```
 5. Font-Size
 ```
-16px
+16
 ```
 6. Color
 ```
@@ -167,19 +166,19 @@ black
 ```
 3. Padding-Bottom
 ```
-4px
+4
 ```
 4. Margin-Top
 ```
-10px
+10
 ```
 5. Font-Size
 ```
-12px
+12
 ```
 6. Height
 ```
-100px
+100
 ```
 ### FSD.CSS.3.5
 ```
@@ -187,7 +186,7 @@ black
 ```
 1. Width
 ```
-
+100
 ```
 2. Background Color
 ```
@@ -195,19 +194,19 @@ white
 ```
 3. Padding-Bottom
 ```
-4px
+4
 ```
 4. Margin-Right
 ```
-6px
+6
 ```
 5. Font-Size
 ```
-11px
+11
 ```
 6. Color
 ```
-violet
+black
 ```
 ### FSD.CSS.3.6
 ```
@@ -215,7 +214,7 @@ violet
 ```
 1. Width
 ```
-100px
+100
 ```
 2. Color
 ```
@@ -223,15 +222,15 @@ red
 ```
 3. Padding-Right
 ```
-20px
+20
 ```
 4. Margin-Left
 ```
-15px
+6
 ```
 5. Font-Size
 ```
-12px
+12
 ```
 6. Background Color
 ```
@@ -243,23 +242,23 @@ black
 ```
 1. Width
 ```
-75px
+75
 ```
 2. Height
 ```
-100px
+100
 ```
 3. Padding-Top
 ```
-4px
+4
 ```
 4. Margin-Bottom
 ```
-10px
+10
 ```
 5. Font-Size
 ```
-22px
+22
 ```
 6. Color
 ```
@@ -271,23 +270,23 @@ white
 ```
 1. Width
 ```
-100px
+100
 ```
 2. Height
 ```
-100px
+100
 ```
 3. Padding-Left
 ```
-6px
+6
 ```
 4. Margin-Right
 ```
-6px
+6
 ```
 5. Font-Size
 ```
-20px
+20
 ```
 6. Color
 ```
@@ -299,11 +298,11 @@ orange
 ```
 1. Width
 ```
-75px
+75
 ```
 2. Height
 ```
-200px
+100
 ```
 3. Background Color
 ```
@@ -315,7 +314,7 @@ red
 ```
 5. Font-Size
 ```
-12px
+12
 ```
 ### FSD.CSS.3.10
 ```
@@ -323,23 +322,23 @@ red
 ```
 1. Width
 ```
-150px
+100
 ```
 2. Height
 ```
-100px
+100
 ```
 3. Padding-Top
 ```
-4px
+4
 ```
 4. Margin-Left
 ```
-22px
+22
 ```
 5. Font-Size
 ```
-14px
+14
 ```
 6. Color
 ```
@@ -355,19 +354,19 @@ black
 ```
 2. Height
 ```
-20px
+100
 ```
 3. Margin-Left
 ```
-20px
+20
 ```
 4. Padding-Right
 ```
-
+20
 ```
 5. Font-Size
 ```
-28px
+28
 ```
 6. Color
 ```
@@ -379,11 +378,11 @@ orange
 ```
 1. Width
 ```
-75px
+75
 ```
 2. Height
 ```
-100px
+100
 ```
 3. Background Color
 ```
@@ -391,11 +390,11 @@ black
 ```
 4. Margin-Right
 ```
-10px
+10
 ```
 5. Font-Size
 ```
-12px
+12
 ```
 6. Color
 ```
