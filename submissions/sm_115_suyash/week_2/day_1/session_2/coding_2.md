@@ -100,11 +100,11 @@ div {
 Fill the below property values for the `div`
 1. Color
 ```
-  white
+  
 ```
 2. Height
 ```
-100px
+
 ```
 
 ### FSD.CSS.3.2
@@ -115,15 +115,15 @@ Fill the below property values for the `div`
 Fill the below property values for the `div`
 1. Width
 ```
-100px
+
 ```
 2. Height
 ```
-100px
+
 ```
 3. Padding
 ```
-4px
+
 ```
 ### FSD.CSS.3.3
 ```
@@ -143,15 +143,15 @@ Fill the below property values for the `div`
 ```
 4. Margin-Right
 ```
-6px
+4px
 ```
 5. Font-Size
 ```
-16px
+12 px
 ```
 6. Color
 ```
-black
+white
 ```
 ### FSD.CSS.3.4
 ```
@@ -163,7 +163,7 @@ white
 ```
 2. Background Color
 ```
-black
+red
 ```
 3. Padding-Bottom
 ```
@@ -171,11 +171,11 @@ black
 ```
 4. Margin-Top
 ```
-10px
+4px
 ```
 5. Font-Size
 ```
-12px
+20px
 ```
 6. Height
 ```
@@ -187,11 +187,11 @@ black
 ```
 1. Width
 ```
-
+100px
 ```
 2. Background Color
 ```
-white
+red
 ```
 3. Padding-Bottom
 ```
@@ -207,7 +207,7 @@ white
 ```
 6. Color
 ```
-violet
+purple
 ```
 ### FSD.CSS.3.6
 ```
@@ -227,7 +227,7 @@ red
 ```
 4. Margin-Left
 ```
-15px
+6px
 ```
 5. Font-Size
 ```
@@ -247,7 +247,7 @@ black
 ```
 2. Height
 ```
-100px
+50px
 ```
 3. Padding-Top
 ```
@@ -255,15 +255,15 @@ black
 ```
 4. Margin-Bottom
 ```
-10px
+20px
 ```
 5. Font-Size
 ```
-22px
+20px
 ```
 6. Color
 ```
-white
+black
 ```
 ### FSD.CSS.3.8
 ```
@@ -275,7 +275,7 @@ white
 ```
 2. Height
 ```
-100px
+50px
 ```
 3. Padding-Left
 ```
@@ -291,7 +291,7 @@ white
 ```
 6. Color
 ```
-orange
+purple
 ```
 ### FSD.CSS.3.9
 ```
@@ -303,11 +303,11 @@ orange
 ```
 2. Height
 ```
-200px
+100px
 ```
 3. Background Color
 ```
-black
+red
 ```
 4. Color
 ```
@@ -315,7 +315,7 @@ red
 ```
 5. Font-Size
 ```
-12px
+20px
 ```
 ### FSD.CSS.3.10
 ```
@@ -327,7 +327,7 @@ red
 ```
 2. Height
 ```
-100px
+50px
 ```
 3. Padding-Top
 ```
@@ -335,7 +335,7 @@ red
 ```
 4. Margin-Left
 ```
-22px
+10px
 ```
 5. Font-Size
 ```
@@ -355,15 +355,15 @@ black
 ```
 2. Height
 ```
-20px
+200px
 ```
 3. Margin-Left
 ```
-20px
+10px
 ```
 4. Padding-Right
 ```
-
+20px
 ```
 5. Font-Size
 ```
@@ -387,15 +387,15 @@ orange
 ```
 3. Background Color
 ```
-black
+red
 ```
 4. Margin-Right
 ```
-10px
+20px
 ```
 5. Font-Size
 ```
-12px
+20px
 ```
 6. Color
 ```
