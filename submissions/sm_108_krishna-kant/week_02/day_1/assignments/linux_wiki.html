@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(white 3%, #f6f6f6 97%);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .aside {
+        float: left;
+        clear: both;
+        min-height: 100%;
+        border-right: 1px solid skyblue;
+        padding: 5px 20px;
+      }
+      .aside img {
+        margin-bottom: 20px;
+      }
+      .aside .side_nav ul {
+        padding: 12px 0px;
+      }
+      .aside .side_nav ul li {
+        padding: 2px 8px;
+        font-size: 12px;
+        color: #0b0080;
+      }
+      .aside .side_nav p {
+        margin: 5px 10px;
+        padding: 4px 0px;
+        font-size: 12px;
+        color: #444444;
+        border-bottom: 0.05px solid steelblue;
+      }
+      .section-1 {
+        float: left;
+        width: 85%;
+        
+      }
+      .section-1 .nav {
+        float: right;
+        clear: both;
+      }
+      .section-1 .nav ul li {
+        float: left;
+        padding: 10px 7px;
+        font-size: 12px;
+      }
+      .section-1 .nav ul li img {
+        height: 13px;
+      }
+      .section-1 .sub-nav .tab {
+        float: left;
+        clear: both;
+      }
+      .section-1 .sub-nav .tab-bar {
+        float: right;
+      }
+      .section-1 .sub-nav .tab-bar ul li {
+        float: left;
+        padding: 10px;
+        font-size: 14px;
+        color: blue;
+      }
+      .section-1 .sub-nav .tab ul li {
+        color: blue;
+        float: left;
+        padding: 10px;
+        font-size: 14px;
+      }
+      .main-section {
+        float: left;
+        clear: both;
+        padding: 15px;
+        width: 100%;
+        background: white;
+      }
+      .main-section h1 {
+        font-weight: 200;
+        font-family: sans-serif;
+      }
+      .main-section > p{
+          margin-top:10px;
+      }
+      .main-section .content{
+          float: left;
+          clear: both;
+          width: 70%;
+          font-size: 15px;
+          word-spacing: 8px;
+        
+      }
+      .more_links{
+          border: 1px solid grey;
+          padding: 10px;
+          width: 220px;
+          margin: 10px;
+      }
+      .more_links h3{
+          text-align: center;
+      }
+      .more_links ol {
+          padding: 10px 30px;
+      }
+      .more_links ol li
+      {
+          color: blue;
+          font-size: 15px;
+      }
+      .image{
+          float: right;
+          padding: 20px;
+          width: 300px;
+          text-align: center;
+          border: 1px solid grey;
+          background: #f6f6f6;
+      }
+      .image p {
+          font-size: 13px;
+
+       }
+       .image ul li {
+           width:300px;
+         
+       }
+       .fl-l {
+           float: left;
+            width: 10%;
+           clear: both;
+           margin: 0px 0px 15px 0px; 
+       }
+       .fl-r{
+           float: right;
+           width: 70%;
+         text-align: left;
+       }
+       .fl-r p {
+           width: 180px;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="aside ">
+        <div class="brand">
+          <img
+            src="https://en.wikipedia.org/static/images/project-logos/enwiki.png"
+            alt="wiki logo"
+          />
+        </div>
+        <div class="side_nav">
+          <ul>
+            <li><a href="#">Main Page</a></li>
+            <li><a href="#">Contents</a></li>
+            <li><a href="#">Featured contents</a></li>
+            <li><a href="#">Random article</a></li>
+            <li><a href="#">Donate to Wikiepedia</a></li>
+            <li><a href="#">Wikiepedia store</a></li>
+          </ul>
+          <p>Interaction</p>
+          <ul>
+            <li><a href="#">Main Page</a></li>
+            <li><a href="#">Contents</a></li>
+            <li><a href="#">Featured contents</a></li>
+            <li><a href="#">Random article</a></li>
+            <li><a href="#">Donate to Wikiepedia</a></li>
+          </ul>
+          <p>Tools</p>
+          <ul>
+            <li><a href="#">Main Page</a></li>
+            <li><a href="#">Contents</a></li>
+            <li><a href="#">Featured contents</a></li>
+            <li><a href="#">Random article</a></li>
+            <li><a href="#">Donate to Wikiepedia</a></li>
+            <li><a href="#">Wikiepedia store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-1">
+        <div class="nav">
+          <ul>
+            <li>
+              <img
+                src="https://en.wikipedia.org/w/skins/Vector/images/user-avatar.svg?b7f58"
+                alt=""
+              />
+              Not logged in
+            </li>
+            <li><a href="#">Talk</a></li>
+            <li><a href="#">Contributions</a></li>
+            <li><a href="#">Create account</a></li>
+            <li><a href="#">Log in</a></li>
+          </ul>
+        </div>
+        <div class="sub-nav">
+          <div class="tab">
+            <ul>
+              <li>Article</li>
+              <li>Talk</li>
+            </ul>
+          </div>
+          <div class="tab-bar">
+            <ul>
+              <li>Read</li>
+              <li>Edit</li>
+              <li>View history</li>
+              <li><input type="text" placeholder="Search Wikipedia" /></li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-section">
+          <h1>Linus torvalds</h1>
+          <hr />
+          <p>From Wikipedia, the free encyclopedia</p>
+          <br>
+          
+          <div class="content">
+            <p><b>Linus Benedict Torvalds</b> (<span class="nowrap"><span class="IPA nopopups noexcerpt"><a href="/wiki/Help:IPA/English" title="Help:IPA/English">/<span style="border-bottom:1px dotted"><span title="/ˈ/: primary stress follows">ˈ</span><span title="'l' in 'lie'">l</span><span title="/iː/: 'ee' in 'fleece'">iː</span><span title="'n' in 'nigh'">n</span><span title="/ə/: 'a' in 'about'">ə</span><span title="'s' in 'sigh'">s</span></span><span class="wrap"> </span><span style="border-bottom:1px dotted"><span title="/ˈ/: primary stress follows">ˈ</span><span title="'t' in 'tie'">t</span><span title="/ɔːr/: 'ar' in 'war'">ɔːr</span><span title="'v' in 'vie'">v</span><span title="/ɔː/: 'au' in 'fraud'">ɔː</span><span title="'l' in 'lie'">l</span><span title="'d' in 'dye'">d</span><span title="'z' in 'zoom'">z</span></span>/</a></span></span> <a href="/wiki/Help:Pronunciation_respelling_key" title="Help:Pronunciation respelling key"><i title="English pronunciation respelling"><span style="font-size:90%">LEE</span>-nəs <span style="font-size:90%">TOR</span>-vawldz</i></a>,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> <small>Finland Swedish:&nbsp;</small><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><a href="/wiki/Help:IPA/Swedish" title="Help:IPA/Swedish">[ˈliːnʉs ˈtuːrvɑlds]</a></span> <span class="nowrap" style="font-size:85%">(<span class="unicode haudio"><span class="fn"><span style="white-space:nowrap;margin-right:.25em;"><a href="/wiki/File:Sv-Linus_Torvalds2.ogg" title="About this sound"><img alt="About this sound" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png" decoding="async" width="11" height="11" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/17px-Loudspeaker.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/22px-Loudspeaker.svg.png 2x" data-file-width="20" data-file-height="20"></a></span><a href="//upload.wikimedia.org/wikipedia/commons/3/3c/Sv-Linus_Torvalds2.ogg" class="internal" title="Sv-Linus Torvalds2.ogg">listen</a></span></span>)</span>; born December 28, 1969) is a Finnish-American<sup id="cite_ref-citLinus_2-1" class="reference"><a href="#cite_note-citLinus-2">[2]</a></sup><sup id="cite_ref-oreg100914_6-0" class="reference"><a href="#cite_note-oreg100914-6">[6]</a></sup> software engineer who is the creator and, historically, the principal developer of the <a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a>, which is the <a href="/wiki/Kernel_(operating_system)" title="Kernel (operating system)">kernel</a> for <a href="/wiki/Linux" title="Linux">Linux</a> <a href="/wiki/Operating_system" title="Operating system">operating systems</a> (<a href="/wiki/Linux_distribution" title="Linux distribution">distributions</a>) and other operating systems such as <a href="/wiki/Android_(operating_system)" title="Android (operating system)">Android</a> and <a href="/wiki/Chrome_OS" title="Chrome OS">Chrome OS</a>. He also created the <a href="/wiki/Distributed_revision_control" class="mw-redirect" title="Distributed revision control">distributed version control</a> system <a href="/wiki/Git_(software)" class="mw-redirect" title="Git (software)">Git</a> and the <a href="/wiki/Scuba_dive" class="mw-redirect" title="Scuba dive">scuba dive</a> logging and planning software <a href="/wiki/Subsurface_(software)" title="Subsurface (software)">Subsurface</a>.
+</p>
+<br>
+<p>He was honored, along with <a href="/wiki/Shinya_Yamanaka" title="Shinya Yamanaka">Shinya Yamanaka</a>, with the 2012 <a href="/wiki/Millennium_Technology_Prize" title="Millennium Technology Prize">Millennium Technology Prize</a> by the <a href="/wiki/Technology_Academy_Finland" title="Technology Academy Finland">Technology Academy Finland</a> "in recognition of his creation of a new open source operating system for computers leading to the widely used Linux kernel."<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup> He is also the recipient of the 2014 <a href="/wiki/Computer_Pioneer_Award" title="Computer Pioneer Award">IEEE Computer Society Computer Pioneer Award</a><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> and the 2018 <a href="/wiki/IEEE_Masaru_Ibuka_Consumer_Electronics_Award" title="IEEE Masaru Ibuka Consumer Electronics Award">IEEE Masaru Ibuka Consumer Electronics Award</a>.<sup id="cite_ref-ibuka_rl_9-0" class="reference"><a href="#cite_note-ibuka_rl-9">[9]</a></sup>
+</p>    
+        <div class="more_links">
+            <h3>Content [<a href="#">hide</a>]</h3>
+            <ol>
+                <li>Life and Career</li>
+                <li>he Linus/Linux connection T</li>
+                <li>Authority and trademark</li>
+                <li>Personal life</li>
+                <li>Awards and Acheivement</li>
+                <li>Medic recognotion</li>
+            </ol>
+        </div>        
+</div>
+          <div class="image">
+              <h3>Linus torvalds </h3>
+              <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="">
+              <p>torvalds at linuxCon Europe 2014</p>
+             <br>
+              <div class="fl-l">
+                  <ul>
+                      <li>
+                          <div class="fl-l">
+                          <h5  >Born</h5>
+                        </div>
+                        <div class="fl-r">
+                          <p>Linus Benedict Torvalds
+                                December 28, 1969 (age 49)
+                                Helsinki, Finland</p>
+                            </div>
+                      </li>
+                      <li>
+                            <div class="fl-l">
+                            <h5  >Resident</h5>
+                          </div>
+                          <div class="fl-r">
+                            <p>Dunthorpe , Oregon , U.S</p>
+                              </div>
+                        </li>
+                        <li>
+                                <div class="fl-l">
+                                <h5  >Nationality</h5>
+                              </div>
+                              <div class="fl-r">
+                                <p>Fininsh , American (naturalized in 2010)</p>
+                                  </div>
+                            </li>
+                  </ul>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
