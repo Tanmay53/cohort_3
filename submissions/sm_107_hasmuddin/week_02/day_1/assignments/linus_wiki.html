@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linus wiki</title>
+    <style>
+    #left {
+        width:250px;
+        height:600px;
+        border:1px solid black;
+        float: left;
+    }
+    .wiki {
+        height:100px;
+        
+        margin-left:50px;
+    }
+    .wikipedia {
+        margin-left:30px;
+        margin-top:1px;
+    }
+    .desc1 {
+        margin-left:30px;
+        margin-top:-20px;
+        margin-bottom:30px;
+    }
+    li {
+        margin-top:10px;
+    }
+
+/* header */
+
+    #header {
+        width:1070px;
+        height:80px;
+    
+        margin-left:270px;
+        margin-top:-550px;
+    }
+    .right {
+        float:left;
+        margin-left:30px;
+    }
+   
+   #rightside {
+       float:right;
+       margin-right:10px;
+       margin-top:-5px;
+   }
+   #rightbtm {
+       float:right;
+       clear:left;
+       margin-left:600px;
+   }
+
+
+
+   /* main */
+    #main {
+
+        width:1070px;
+        height:490px;
+        margin-left:270px;
+        margin-top:10px;
+
+    }
+    #linust {
+        margin-left:20px;
+    }
+    #line {
+        margin-left:20px;
+        font-size:14px;
+        margin-top:-5px;
+    }
+    
+.photo {
+    float:right;
+    height:380px;
+    width:250px;
+    border:1px solid black;
+    margin-left:10px;
+
+}
+.linus {
+    height:200px;
+    margin:10px 50px;
+}
+.below {
+    font-size:12px;
+    margin-left:30px;
+    margin-top:-10px;
+}
+
+.born {
+    float:left;
+    margin-left:10px;
+    margin-top:0px;
+
+}
+.birth {
+    font-size:12px;
+    float: right;
+    margin-right:20px;
+    margin-top:-1px;
+
+}
+.resid {
+    margin-left:10px;
+    margin-top:10px;
+    float: left;
+}
+
+.oregon {
+    float: right;
+    font-size:14px;
+    margin-right:14px;
+    margin-top:10px;
+}
+.new {
+    clear: both;
+    float: left;
+    width:170px;
+    height:230px;
+    border:1px solid black;
+    margin-left:300px;
+    margin-top:-230px;
+}
+#content2 {
+    text-align: center;
+    margin-top:5px;
+}
+ol {
+    margin-left:-10px;
+    font-size:12px;
+}
+
+    </style>
+</head>
+<body>
+<div id="left">
+    <img class="wiki" src="data:image/jpeg;base64,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" alt="wiki">
+    <h1 class="wikipedia">Wikiepedia</h1>
+    <p class="desc1">The Free Encyclopedia</p>
+    <ul>
+        <li>Main Page</li>
+        <li>Contents</li>
+        <li>Feature content</li>
+        <li>Current event</li>
+        <li>Random article</li>
+        <li>Donate to Wikiepedia</li>
+        <li>Wikiepedia store</li>
+    </ul>
+<ul>
+    <li>Interaction</li>
+    <hr>
+    <li>Help</li>
+    <li>About wikipedia</li>
+    <li>Community portal</li>
+    <li>Recent changes</li>
+    <li>Contact page</li>
+</ul>
+
+<!-- header -->
+<div id="header">
+
+<ul id="rightside">
+
+    <li class="right">Not logged in</li>
+    <li class="right">Talk</li>
+    <li class="right">Contribution</li>
+    <li class="right">Create account</li>
+    <li class="right">Log in</li>
+</ul>
+<input id="rightbtm" type="text">
+
+
+
+</div>
+
+
+
+<!-- main -->
+
+
+<div id="main">
+<h1 id="linust">Linus Torvalds</h1>
+<hr>
+
+<p id="line">From Wikipedia, the free encyclopedia</p>
+<div class="photo">
+    <img class="linus" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/220px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" alt="lin">
+    <p class="below">Torvalds at LinuxCon Europe 2014</p>
+    <h4 class="born">Born</h4> 
+    <p class="birth">Linus Benedict Torvalds <br>
+December 28, 1969 (age 49) <br>
+Helsinki, Finland</p>
+<p class="oregon">Dunthorpe, Oregon, U.S.</p>
+
+<h4 class="resid">Residence</h4>
+
+</div>
+
+<div class="content">
+        Linus Benedict Torvalds (/ˈliːnəs ˈtɔːrvɔːldz/ LEE-nəs TOR-vawldz,[5] Finland Swedish: [ˈliːnʉs ˈtuːrvɑlds] (About this soundlisten); born December 28, 1969) is a Finnish-American[2][6] software engineer who is the creator and, historically, the principal developer of the Linux kernel, which is the kernel for Linux operating systems (distributions) and other operating systems such as Android and Chrome OS. He also created the distributed version control system Git and the scuba dive logging and planning software Subsurface.
+
+        He was honored, along with Shinya Yamanaka, with the 2012 Millennium Technology Prize by the Technology Academy Finland "in recognition of his creation of a new open source operating system for computers leading to the widely used Linux kernel."[7] He is also the recipient of the 2014 IEEE Computer Society Computer Pioneer Award[8] and the 2018 IEEE Masaru Ibuka Consumer Electronics Award.[9]
+</div>
+
+</div>
+
+
+<div class="new">
+    <h3 id="content2">Content</h3>
+    <ol>
+        <li>Life and career
+            <ol>
+                <li>Early years</li>
+                <li>Linux</li>
+            </ol>
+        </li>
+        <li>The Linus/Linux connection</li>
+        <li>Authority and trademark</li>
+        <li>Personal life</li>
+        <li>Awards and Achievements</li>
+        <li>Media recognition</li>
+        
+    </ol>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    
+</body>
+</html>
