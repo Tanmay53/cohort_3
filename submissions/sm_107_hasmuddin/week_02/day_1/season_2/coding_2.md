@@ -100,7 +100,7 @@ div {
 Fill the below property values for the `div`
 1. Color
 ```
-  white
+white
 ```
 2. Height
 ```
@@ -119,7 +119,7 @@ Fill the below property values for the `div`
 ```
 2. Height
 ```
-100px
+50px
 ```
 3. Padding
 ```
@@ -163,7 +163,7 @@ white
 ```
 2. Background Color
 ```
-black
+red
 ```
 3. Padding-Bottom
 ```
@@ -175,7 +175,7 @@ black
 ```
 5. Font-Size
 ```
-12px
+20px
 ```
 6. Height
 ```
@@ -187,11 +187,11 @@ black
 ```
 1. Width
 ```
-
+100px
 ```
 2. Background Color
 ```
-white
+red
 ```
 3. Padding-Bottom
 ```
@@ -207,7 +207,7 @@ white
 ```
 6. Color
 ```
-violet
+purple
 ```
 ### FSD.CSS.3.6
 ```
@@ -215,7 +215,7 @@ violet
 ```
 1. Width
 ```
-100px
+75px
 ```
 2. Color
 ```
@@ -227,7 +227,7 @@ red
 ```
 4. Margin-Left
 ```
-15px
+6px
 ```
 5. Font-Size
 ```
@@ -243,11 +243,11 @@ black
 ```
 1. Width
 ```
-75px
+150px
 ```
 2. Height
 ```
-100px
+150px
 ```
 3. Padding-Top
 ```
@@ -259,11 +259,11 @@ black
 ```
 5. Font-Size
 ```
-22px
+20px
 ```
 6. Color
 ```
-white
+black
 ```
 ### FSD.CSS.3.8
 ```
@@ -275,7 +275,7 @@ white
 ```
 2. Height
 ```
-100px
+50px
 ```
 3. Padding-Left
 ```
@@ -291,7 +291,7 @@ white
 ```
 6. Color
 ```
-orange
+purple
 ```
 ### FSD.CSS.3.9
 ```
@@ -303,11 +303,11 @@ orange
 ```
 2. Height
 ```
-200px
+100px
 ```
 3. Background Color
 ```
-black
+red
 ```
 4. Color
 ```
@@ -315,7 +315,7 @@ red
 ```
 5. Font-Size
 ```
-12px
+20px
 ```
 ### FSD.CSS.3.10
 ```
@@ -323,11 +323,11 @@ red
 ```
 1. Width
 ```
-150px
+100px
 ```
 2. Height
 ```
-100px
+50px
 ```
 3. Padding-Top
 ```
@@ -343,7 +343,7 @@ red
 ```
 6. Color
 ```
-blue
+purple
 ```
 ### FSD.CSS.3.11
 ```
@@ -355,23 +355,23 @@ black
 ```
 2. Height
 ```
-20px
+100px
 ```
 3. Margin-Left
 ```
-20px
+6px
 ```
 4. Padding-Right
 ```
-
+20px
 ```
 5. Font-Size
 ```
-28px
+14px
 ```
 6. Color
 ```
-orange
+red
 ```
 ### FSD.CSS.3.12
 ```

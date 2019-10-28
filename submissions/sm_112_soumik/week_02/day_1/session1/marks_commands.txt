@@ -1,0 +1,9 @@
+1.grep -i india marks_rand_2000.csv |wc -l
+2.grep -i pakistan  marks_rand_2000.csv |wc-l
+3.grep -i india marks_rand_2000.csv |sort -r -n| head -n 100 
+4.grep -i pakistan marks_rand_2000.csv |sort -r-n| head -n 100
+5.grep -i india marks_rand_2000.csv |sort -r-n| head -n 3
+6.grep -i pakistan marks_rand_2000.csv |sort -r-n| head -n 3
+7.grep -i pakistan marks_rand_2000.csv |sort -r-n|tail -n 5
+8.grep -i indai marks_rand_2000.csv |sort -r-n|tail -n 5
+

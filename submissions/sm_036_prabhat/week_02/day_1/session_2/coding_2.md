@@ -100,11 +100,11 @@ div {
 Fill the below property values for the `div`
 1. Color
 ```
-  white
+white;  
 ```
 2. Height
 ```
-100px
+100px;
 ```
 
 ### FSD.CSS.3.2
@@ -115,15 +115,15 @@ Fill the below property values for the `div`
 Fill the below property values for the `div`
 1. Width
 ```
-100px
+100px;
 ```
 2. Height
 ```
-100px
+50px;
 ```
 3. Padding
 ```
-4px
+4px;
 ```
 ### FSD.CSS.3.3
 ```
@@ -143,11 +143,11 @@ Fill the below property values for the `div`
 ```
 4. Margin-Right
 ```
-6px
+0
 ```
 5. Font-Size
 ```
-16px
+16
 ```
 6. Color
 ```
@@ -163,7 +163,7 @@ white
 ```
 2. Background Color
 ```
-black
+red
 ```
 3. Padding-Bottom
 ```
@@ -171,11 +171,11 @@ black
 ```
 4. Margin-Top
 ```
-10px
+6px
 ```
 5. Font-Size
 ```
-12px
+20px
 ```
 6. Height
 ```
@@ -187,27 +187,27 @@ black
 ```
 1. Width
 ```
-
+100px;
 ```
 2. Background Color
 ```
-white
+red
 ```
 3. Padding-Bottom
 ```
-4px
+4px;
 ```
 4. Margin-Right
 ```
-6px
+5px;
 ```
 5. Font-Size
 ```
-11px
+16px;
 ```
 6. Color
 ```
-violet
+voilet;
 ```
 ### FSD.CSS.3.6
 ```
@@ -215,27 +215,27 @@ violet
 ```
 1. Width
 ```
-100px
+100px;
 ```
 2. Color
 ```
-red
+red;
 ```
 3. Padding-Right
 ```
-20px
+20px;
 ```
 4. Margin-Left
 ```
-15px
+15px;
 ```
 5. Font-Size
 ```
-12px
+12px;
 ```
 6. Background Color
 ```
-black
+black;
 ```
 ### FSD.CSS.3.7
 ```
@@ -243,27 +243,27 @@ black
 ```
 1. Width
 ```
-75px
+100px;
 ```
 2. Height
 ```
-100px
+50px;
 ```
 3. Padding-Top
 ```
-4px
+4px;
 ```
 4. Margin-Bottom
 ```
-10px
+6px;
 ```
 5. Font-Size
 ```
-22px
+20px;
 ```
 6. Color
 ```
-white
+black;
 ```
 ### FSD.CSS.3.8
 ```
@@ -271,27 +271,27 @@ white
 ```
 1. Width
 ```
-100px
+100px'
 ```
 2. Height
 ```
-100px
+50px;
 ```
 3. Padding-Left
 ```
-6px
+6px;
 ```
 4. Margin-Right
 ```
-6px
+20px;
 ```
 5. Font-Size
 ```
-20px
+20px;
 ```
 6. Color
 ```
-orange
+purple;
 ```
 ### FSD.CSS.3.9
 ```
@@ -303,19 +303,19 @@ orange
 ```
 2. Height
 ```
-200px
+100px;
 ```
 3. Background Color
 ```
-black
+black;
 ```
 4. Color
 ```
-red
+red;
 ```
 5. Font-Size
 ```
-12px
+14px'
 ```
 ### FSD.CSS.3.10
 ```
@@ -323,27 +323,27 @@ red
 ```
 1. Width
 ```
-150px
+100px'
 ```
 2. Height
 ```
-100px
+50px;
 ```
 3. Padding-Top
 ```
-4px
+4px;
 ```
 4. Margin-Left
 ```
-22px
+22px;
 ```
 5. Font-Size
 ```
-14px
+14px;
 ```
 6. Color
 ```
-blue
+blue;
 ```
 ### FSD.CSS.3.11
 ```
@@ -351,27 +351,27 @@ blue
 ```
 1. Background Color
 ```
-black
+black;
 ```
 2. Height
 ```
-20px
+100px;
 ```
 3. Margin-Left
 ```
-20px
+20px;
 ```
 4. Padding-Right
 ```
-
+20px;
 ```
 5. Font-Size
 ```
-28px
+28px;
 ```
 6. Color
 ```
-orange
+orange;
 ```
 ### FSD.CSS.3.12
 ```
@@ -379,25 +379,25 @@ orange
 ```
 1. Width
 ```
-75px
+100px;
 ```
 2. Height
 ```
-100px
+100px;
 ```
 3. Background Color
 ```
-black
+red;
 ```
 4. Margin-Right
 ```
-10px
+20px;
 ```
 5. Font-Size
 ```
-12px
+20px;
 ```
 6. Color
 ```
-white
+white;
 ```
