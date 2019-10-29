@@ -39,13 +39,28 @@ Split the below mentioned properties into inherited and non-inherited
 1. Inherited
 
 ```
-
+color
+font-size
+text-align
+font-weight
+visibilty
+word-wrap
 ```
 
 2. Non-Inherited
 
 ```
-
+padding
+margin
+background-color
+border
+float
+display
+height
+width
+z-index
+position
+clear
 ```
 
 ### FSD.CSS.5.2
