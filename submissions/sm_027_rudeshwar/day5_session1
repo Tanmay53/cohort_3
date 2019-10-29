@@ -1,0 +1,19 @@
+{
+    "child": {
+        "directory": "\/home\/rudreshwar\/coding\/week_02\/day_1\/session1",
+        "height": 471,
+        "profile": "2b7c4080-0ddd-46c5-8f23-563fd3ba789d",
+        "readOnly": false,
+        "synchronizedInput": true,
+        "type": "Terminal",
+        "uuid": "2d64ceae-3d7a-4893-9f33-85c10eeb979c",
+        "width": 1136
+    },
+    "height": 471,
+    "name": "Default",
+    "synchronizedInput": false,
+    "type": "Session",
+    "uuid": "f00ced19-8076-48a0-870a-ad9727fced34",
+    "version": "1.0",
+    "width": 1136
+}
