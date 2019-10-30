@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Layout 3</title>
+    <style media="screen">
+      .flex-container {
+        margin: 50px auto;
+        width: 800px;
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .flex-container > div {
+        width: 150px;
+        height: 150px;
+        margin: 25px;
+        background: teal;
+        border-radius: 4px;
+      }
+      .flex-container > div:nth-child(2),
+      .flex-container > div:nth-child(3),
+      .flex-container > div:nth-child(4),
+      .flex-container > div:nth-child(7),
+      .flex-container > div:nth-child(8),
+      .flex-container > div:nth-child(12) {
+        background: #ffffff;
+      }
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (max-width: 991px) {
+        .flex-container {
+          width: 100%;
+        }
+        .flex-container > div:nth-child(odd) {
+          background: rgb(167, 165, 165);
+        }
+        .flex-container > div:nth-child(even) {
+          background: black;
+        }
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (max-width: 767px) {
+        .flex-container > div {
+          width: 200px;
+        }
+        .flex-container > div:nth-child(2n + 1) {
+          background: red;
+        }
+        .flex-container > div:nth-child(3n + 2) {
+          background: yellow;
+        }
+      }
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        .flex-container > div {
+          width: 100px;
+        }
+        .flex-container > div:nth-child(odd) {
+          background: red;
+        }
+        .flex-container > div:nth-child(even) {
+          background: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
