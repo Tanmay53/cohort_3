@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid_4</title>
+    <style>
+        body {
+            margin: 200px;
+        }
+        .grid {
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-gap: 50px;
+        } 
+        .grid div {
+            background: cadetblue;
+        }
+        .gridarea1 {
+            grid-area: 1 / 2 / 1 / 4;
+        }
+        .gridarea2 {
+            grid-area: 2 / 1 / 2 / 3;
+        }
+        .gridarea3 {
+            grid-area: 3 / 3 / 3 / 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div></div>
+        <div class="gridarea1"></div>
+        <div></div>
+
+        <div class="gridarea2"></div>
+        <div></div>
+        <div></div>
+        
+        <div></div>
+        <div></div>
+        <div class="gridarea3"></div>
+    </div>
+</body>
+</html>
