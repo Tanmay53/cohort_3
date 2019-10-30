@@ -9,7 +9,7 @@
         margin: 50px auto;
         display: grid;
         grid-template-rows: 100px 600px;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 20px;
         grid-column-gap: 50px;
       }
@@ -18,15 +18,13 @@
         font-size: 25px;
       }
       .yellow {
-        grid-area: 1 / 1 / span 1 / span 8;
+        grid-area: 1 / 1 / span 1 / span 2;
         background: yellow;
       }
       .red {
-        grid-area: 2 / 1 / span 1 / span 4;
         background: red;
       }
       .green {
-        grid-area: 2 / 5 / span 1 / span 4;
         background: green;
       }
 
@@ -35,21 +33,21 @@
         .grid-container {
           width: 100%;
           margin: 0px auto;
-          grid-template-rows: 100px 250px 250px;
+          grid-template-rows: 100px;
           grid-template-columns: repeat(1, 1fr);
           grid-gap: 20px;
         }
         .yellow {
-          grid-area: 1 / 1 / span 1 / span 8;
-          background: yellow;
+          grid-area: 1 / 1 / span 1 / span 1;
         }
         .red {
-          grid-area: 3 / 1 / span 1 / span 8;
-          background: red;
+          grid-area: 3 / 1 / span 1 / span 1;
         }
         .green {
-          grid-area: 2 / 1 / span 1 / span 8;
-          background: green;
+          grid-area: 2 / 1 / span 1 / span 1;
+        }
+        .height {
+          height: 250px;
         }
       }
     </style>
@@ -57,8 +55,8 @@
   <body>
     <div class="grid-container">
       <div class="yellow">Navigation</div>
-      <div class="red">Left Box</div>
-      <div class="green">Right Box</div>
+      <div class="red height">Left Box</div>
+      <div class="green height">Right Box</div>
     </div>
   </body>
 </html>
