@@ -1,0 +1,603 @@
+    1  sudo apt-get install linux-headers-$(uname -r) build-essential git
+    2  git clone https://github.com/lwfinger/rtlwifi_new.git
+    3  cd rtlwifi_new/ && git checkout origin/extended -b extended
+    4  sudo make install
+    5  sudo modprobe -r rtl8723de
+    6  sudo modprobe rtl8723de
+    7  sudo dkms install rtlwifi-new/0.6
+    8  sudo dkms add ./rtlwifi_new
+    9  sudo apt-get install linux-headers-$(uname -r) build-essential git
+   10  git clone https://github.com/lwfinger/rtlwifi_new.git
+   11  cd rtlwifi_new/ && git checkout origin/extended -b extended
+   12  sudo make install
+   13  sudo modprobe -r rtl8723de
+   14  sudo modprobe rtl8723de
+   15  sudo apt purge bcmwl-kernel-source
+   16  sudo sed -i '/blacklist bcma/ d' /etc/modprobe.d/blacklist.conf
+   17  sudo sed -i '/blacklist brcmsmac/ d' /etc/modprobe.d/blacklist.conf
+   18  sudo modprobe rtl8723de
+   19  sudo apt install git build-essential dkms
+   20  git clone -b extended https://github.com/lwfinger/rtlwifi_new.git
+   21  sudo dkms add ./rtlwifi_new
+   22  sudo dkms install rtlwifi-new/0.6
+   23  sudo modprobe -r rtl8723de && sudo modprobe rtl8723de
+   24  sudo apt install git build-essential dkms
+   25  git clone -b extended https://github.com/lwfinger/rtlwifi_new.git
+   26  sudo dkms add ./rtlwifi_new
+   27  sudo dkms install rtlwifi-new/0.6
+   28  sudo modprobe -r rtl8723de && sudo modprobe rtl8723de
+   29  echo "options rtl8723de ant_sel=3" | sudo tee /etc/modprobe.d/rtl8723de.conf
+   30  sudo apt remove bcmwl-kernel-source && sudo apt install git dkms
+   31  git clone -b extended https://github.com/lwfinger/rtlwifi_new.git
+   32  rm -rf rtlwifi_new/
+   33  git clone -b extended https://github.com/lwfinger/rtlwifi_new.git
+   34  sudo dkms add ./rtlwifi_new
+   35  sudo dkms install rtlwifi-new/0.6
+   36  cd rtlwifi_new/
+   37  ls
+   38  sudo make install
+   39  sudo modprobe -r rtl8723de
+   40  sudo modprobe rtl8723de
+   41  sudo apt-get install --reinstall bcmwl-kernel-source
+   42  reboot 
+   43  snap install slack --classic
+   44  snap find zoom
+   45  cd Downloads/
+   46  sudo dpkg -i zoom*.db
+   47  sudo dpkg -i zoom*.deb
+   48  free
+   49  free -h
+   50  date
+   51  cal
+   52  df
+   53  df-h
+   54  df -h
+   55  free
+   56  free -h
+   57  pwd
+   58  cd
+   59  ls
+   60  cd
+   61  less
+   62  file
+   63  mkdir
+   64  mkdir --help
+   65  pwd
+   66  clear
+   67  history
+   68  clear
+   69  date
+   70  date -u
+   71  man date
+   72  cal
+   73  man cal
+   74  cal -y
+   75  cal -y 1994
+   76  cal -y 1993
+   77  man cal
+   78  df 
+   79  df -h
+   80  free
+   81  free -h
+   82  pwd
+   83  cd ~
+   84  pwd
+   85  man weget
+   86  wget  https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv
+   87  man wget
+   88  wget  https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv
+   89  ls
+   90  cat countries.csv.1
+   91  india
+   92  countries.csv.1 less
+   93  less countries.csv.1
+   94  pwd
+   95  man mkdir
+   96  mkdir practise
+   97  pwd
+   98  ls
+   99  cp practise/*Desktop
+  100  cp practise/* Desktop
+  101  ls
+  102  cp practise Desktop
+  103  cp -r practise Desktop
+  104  mkdir english hindi french chinese
+  105  ls
+  106  mkdir movies
+  107  ls
+  108  cp -r english movies
+  109  cp -r hindi movies
+  110  cp -r french movies
+  111  cp -r chinese movies
+  112  ls
+  113  cp -r movies practise
+  114  ls
+  115  cd
+  116  cd practice
+  117  cd practise
+  118  mkdir movies
+  119  man mkdir
+  120  mkdir masai
+  121  cwd
+  122  pwd
+  123  ls
+  124  mkdir -p masai Desktop
+  125  ls
+  126  mkdir -p coding/softskills/Desktop
+  127  mkdir -p practise/movies/english hindi french chinese
+  128  ls
+  129  mkdir -practise/songs/tamil kannada urdu
+  130  mkdir -p practise/songs/tamil kannada urdu
+  131  rm tamil
+  132  mkdir -p practise/songs/tamil kannada urdu
+  133  ls
+  134  mkdir -p practise/books/english hindi french chinese
+  135  mkdir -p books/hindi french chinese
+  136  mkdir -p books/english hindi french chinese
+  137  ls
+  138  cd
+  139  pwd
+  140  mkdir -p practise/books/english hindi french chinese
+  141  mkdir practise/books/english hindi french chinese
+  142  pwd
+  143  mkdir practise/books/hindi french chinese
+  144  mkdir -p practise/songs/tamil kannada urdu
+  145  ls
+  146  mkdir -p practise/songs/tamil
+  147  mkdir -p practise/songs/kannnada
+  148  mkdir -p practise/songs/urdu
+  149  mkdir -p practise/books/english hindi french chinese
+  150  mkdir -p practise/books/hindi
+  151  mkdir -p practise/books/french
+  152  mkdir -p practise/books/chinese
+  153  mkdir -p practise/epsilon/delta/gamma/beta/alpha
+  154  pwd
+  155  man zip
+  156  wget  https://github.com/masai-school/assignments-data/raw/master/downloads/course.zip
+  157  unzip course.zip
+  158  g
+  159  git status
+  160  ls
+  161  cd
+  162  cd course
+  163  pwd
+  164  pwd 
+  165  ls
+  166  cd all
+  167  ls
+  168  cd ..
+  169  ls
+  170  cd ..
+  171  ls
+  172  cd course/
+  173  ls
+  174  cd all
+  175  ls
+  176  pwd
+  177  cp overall.txt /home/prasanth/practise/
+  178  cp overall.txt ../../practise/
+  179  ls -a
+  180  cp /home/prasanth/course/all/overall.txt /home/prasanth/practise/
+  181  pwd
+  182  cd /
+  183  pwd
+  184  ls
+  185  pwd
+  186  cd ..
+  187  pwd
+  188  cd .
+  189  cd ~
+  190  pwd
+  191  cd /home/prasanth/course/all/
+  192  cp overall.txt/home/prasanth/practise/
+  193  cp /overall.txt/home/prasanth/practise/
+  194  cp overall.txt home/prasanth/practise
+  195  cp overall.txt /home/prasanth/practise/
+  196  cd ..
+  197  cp /home/course/overall.txt/home/prasanth/practise/
+  198  cp overall.txt/course/home home/prasanth/practise
+  199  cp home/course/all/overall.txt home/prasanth/practise
+  200  cp /home/course/all/overall.txt /home/prasanth/practise/
+  201  cp /home/course/all/overall.txt/home/prasanth/practise/
+  202  cp /home/course/all/overall.txt /home/prasanth/practise/
+  203  cp /home/prasanth/course/all/overall.txt /home/prasanth/practise/
+  204  cp /home/prasanth/course/week_1/ /home/prasanth/practise/
+  205  cp /home/prasanth/course/week_1  /home/prasanth/practise/
+  206  cp /home/prasanth/course/week_1 /home/prasanth/practise/
+  207  cp -r/home/prasanth/course/week_1  /home/prasanth/practise/
+  208  cp -r home/prasanth/course/week_1  /home/prasanth/practise/
+  209  pwd
+  210  cd /home/prasanth/course/week_1/
+  211  ls
+  212  cd .
+  213  ls
+  214  cd-
+  215  cd~
+  216  cd ~
+  217  ls
+  218  man cp
+  219  cd course
+  220  cd week1
+  221  cd week_1 
+  222  cd ..
+  223  cp week_1 /home/prasanth/practise/
+  224  cp -r week_1 /home/prasanth/practise/
+  225  cd ..
+  226  pwd
+  227  /
+  228  cp -r /home/prasanth/course/week_1 /home/prasanth/practise/
+  229  cd course/all
+  230  cp s1.txt /home/prasanth/s1/
+  231  cp *s1.txt /home/prasanth/s1/
+  232  cp *s1.txt s1
+  233  cp -r *s1.txt s1
+  234  cd ~
+  235  cd course
+  236  cd all
+  237  mkdir s1
+  238  cp *s1.txt s1
+  239  mkdir s2
+  240  cp *s2.txt s2
+  241  mkdir day_3
+  242  cp *d3 day_3
+  243  pwd
+  244  cp *d3*.txt day_3/
+  245  ls
+  246  pwd
+  247  ls course
+  248  cd course
+  249  ls
+  250  ls all
+  251  ls week_1
+  252  man ls
+  253  ls week_1
+  254  ls day_1
+  255  cd week_1
+  256  ls day_1
+  257  man ls
+  258  ls -a
+  259  ls -a day_1
+  260  ls -Ra
+  261  cd..
+  262  cd ..
+  263  cd all
+  264  ls
+  265  ls -t
+  266  man ls
+  267  ls -rt
+  268  ls
+  269  man mv
+  270  mv w3_d3_s1.txt w2_d3
+  271  mv w3_d3_s1.txt w2_d3_s1.txt
+  272  mv w2_d3_s1.txt w3_d3_s1.txt
+  273  ls
+  274  touch w3_d3_s1.txt
+  275  ls
+  276  mv w2_d3_s1.txt w3_d3_s1.txt
+  277  ls
+  278  mv w3_d3_s1.txt w2_d3_s1.txt
+  279  ls
+  280  mv w3_d3_s2.txt w2_d3_s1.txt
+  281  ls
+  282  cd ..
+  283  ls
+  284  cd week_2
+  285  ls
+  286  mv day-4 day_4
+  287  ls
+  288  cd ..
+  289  cd week_1
+  290  ls
+  291  cd ..
+  292  ls all
+  293  cd all
+  294  mv w1*.txt w1
+  295  mkdir w1
+  296  ls
+  297  mv w1*.txt w1
+  298  ls
+  299  mkdir w2
+  300  mv w2*.txt w2
+  301  ls
+  302  pwd
+  303  cd coiurse
+  304  cd course
+  305  cd all
+  306  mkdir session_wise
+  307  ls
+  308  mv s1 s2 session_wise
+  309  ls
+  310  man rm
+  311  rm overall.txt
+  312  ls
+  313  cd day_3
+  314  ls
+  315  cd ..
+  316  ls -a
+  317  ls -R
+  318  rm w3*.txt
+  319  ls
+  320  ls -R
+  321  man rm
+  322  ls
+  323  rm day_3
+  324  man rm
+  325  ls day_3
+  326  rm -r day_3
+  327  ls
+  328  cd ~
+  329  ls
+  330  cd practise
+  331  ls
+  332  cd week_1
+  333  ls -a
+  334  rm .day_6 
+  335  rm -r .day_6
+  336  ls
+  337  ls -a
+  338  rm .
+  339  rm -r . ..
+  340  rm -r .
+  341  cd ~
+  342  cd course
+  343  ls
+  344  rm -r week_1 week _2
+  345  rm -r week_1 week_2
+  346  rm -r week_1 
+  347  rm week_1
+  348  rm -r week_1
+  349  cd week_1
+  350  ls
+  351  ls -a
+  352  cd ..
+  353  pwd
+  354  history > w1_d2_s1.txt
+  355  ls
+  356  clear
+  357  git --version
+  358  git config --global user.name "Prasanth Kumar"
+  359  git config --global user.email "prasanthkbciv@gmail.com"
+  360  pwd
+  361  mkdir repos
+  362  ls
+  363  cd repos
+  364  mkdir test
+  365  ls
+  366  cd test
+  367  git init
+  368  date > start.txt
+  369  ls
+  370  ls start.txt
+  371  cd start.txt
+  372  ls -R
+  373  cat start.txt
+  374  less start.txt
+  375  git status
+  376  git add start.txt
+  377  git status
+  378  git commit "Start time"
+  379  git commit start.txt "Start Time"
+  380  git commit  -m "Start Time"
+  381  git remote add origin https://github.com/Prasanthkumargit/test.git
+  382  git push origin master
+  383  pwd
+  384  mkdir coding
+  385  ls
+  386  cd coding
+  387  ls
+  388  cd softskills
+  389  ls
+  390  cd Desktop
+  391  ls
+  392  cd ~
+  393  cd coding
+  394  rm -r softskills
+  395  ls
+  396  cd softskills
+  397  mkdir week_1
+  398  ls
+  399  cd week_1
+  400  mkdir day_5
+  401  ls
+  402  pwd
+  403  ls
+  404  cd repos
+  405  touch profile.md
+  406  ls
+  407  cd profile.md
+  408  man cd
+  409  cd test
+  410  ls test
+  411  ls -r 
+  412  ls -r start.txt
+  413  cd start.txt
+  414  less start.txt
+  415  cat start.txt
+  416  cd profile.md
+  417  cat profile.md
+  418  cd ..
+  419  ls
+  420  man cd 
+  421  man ls
+  422  man cd
+  423  cd profile.md
+  424  cd test
+  425  ls
+  426  start.txt
+  427  cd start.txt
+  428  less start.txt
+  429  date
+  430  prasanth kumar
+  431  cd ..
+  432  ls
+  433  less profile.md
+  434  echo "# SAMURAIS - PRASANTH KUMAR" > profile.md
+  435  less profile.md
+  436  "sir name: Bellamkonda" > profile.ms
+  437  echo " sir name:  - Bellamkonda" > profile.ms
+  438  less profile.ms
+  439  commit profile.md
+  440  commit -m profile.md
+  441  git add profile.md
+  442  git commit -m 
+  443  git commit -m
+  444  man git
+  445  git status
+  446  git init
+  447  git commit -m 
+  448  git status
+  449  git add profile.md
+  450  git status
+  451  git commit -m profile.md
+  452  git push
+  453  git push repos
+  454  git push https://github.com/Prasanthkumargit/test.git
+  455  git remote add https://github.com/Prasanthkumargit/test.git
+  456  git stustus
+  457  git status
+  458  git push profile.md
+  459  git push profile.md https://github.com/Prasanthkumargit/test.git
+  460  ls
+  461  cd repos
+  462  ls
+  463  git status
+  464  git add profile.md
+  465  git status
+  466  git add profile.ms
+  467  git status
+  468  git commit -m "online commit"
+  469  git push https://github.com/Prasanthkumargit/test.git
+  470  ls
+  471  cd test
+  472  git status
+  473  git push 
+  474  git push https://github.com/Prasanthkumargit/test.git
+  475  cd ..
+  476  ls
+  477  touch profile2.md
+  478  ls
+  479  date > profile2.md
+  480  less profile2.md
+  481  git status
+  482  cd test
+  483  git add profile2.md
+  484  ls
+  485  touch profile3.md
+  486  date profile3.md
+  487  date > profile3.md
+  488  cat profile3.md
+  489  git status
+  490  git add profile3.md
+  491  git status
+  492  git commit -m "new profile"
+  493  git push https://github.com/Prasanthkumargit/test.git
+  494  touch profile1.md
+  495  ls
+  496  "Prasanth kumar Bellamkonda" > profile1.md
+  497  echo "Prasanth kumar Bellamkonda" > profile1.md
+  498  cat profile.md
+  499  cat profile1.md
+  500  git status
+  501  git add profile1.md
+  502  git status
+  503  git commit -m "name added"
+  504  git push https://github.com/Prasanthkumargit/test.git
+  505  wget https://github.com/masai-school/assignments-data/raw/master/downloads/course.zip 
+  506  ls
+  507  unzip course.zip
+  508  cd course
+  509  ls
+  510  cd all
+  511  ls
+  512  git status
+  513  git add overall.txt
+  514  git status
+  515  git commit -m "First file"
+  516  git push https://github.com/Prasanthkumargit/test.git
+  517  cd ..
+  518  ls
+  519  git status
+  520  git add week_1
+  521  git status
+  522  git commit -m "week 1 course"
+  523  git push https://github.com/Prasanthkumargit/test.git
+  524  ls
+  525  git add week_2/day_5
+  526  git status
+  527  git commit -m "W2 D5"
+  528  git push https://github.com/Prasanthkumargit/test.git
+  529  cd ~
+  530  pwd
+  531  mkdir masai
+  532  cd masai
+  533  git init
+  534  echo "Samurais- Prasanth kumar bellamkonda" > profile.md
+  535  ls
+  536  less profile.md
+  537  git remote https://github.com/Prasanthkumargit/masai--school---test.git
+  538  git remote add origin master https://github.com/Prasanthkumargit/masai--school---test.git
+  539  git status
+  540  git add profile.md
+  541  git status
+  542  git commit -m "my name"
+  543  git push origin master https://github.com/Prasanthkumargit/masai--school---test.git
+  544  git push https://github.com/Prasanthkumargit/masai--school---test.git
+  545  git push origin master 
+  546  git push origin master
+  547  git remote -v
+  548  git remote add origin master https://github.com/Prasanthkumargit/masai--school---test.git
+  549  gir remote -v
+  550  git remote -v
+  551  git remote origin master https://github.com/Prasanthkumargit/masai--school---test.git
+  552  ls
+  553  git status
+  554  git add profile.md
+  555  git status
+  556  git add profile.md
+  557  git status
+  558  ls
+  559  rm profile.md
+  560  ls
+  561  echo "Prasanth kumar bellamkonda"> profile.md
+  562  ls
+  563  cat profile.md
+  564  git init
+  565  git status
+  566  git add profile.md
+  567  git status
+  568  git commit -m "My name"
+  569  git remote add origin master https://github.com/Prasanthkumargit/masai--school---test.git
+  570  git push origin master
+  571  git push https://github.com/Prasanthkumargit/masai--school---test.git
+  572  git clone https://github.com/Prasanthkumargit/masai--school---test.git
+  573  ls
+  574  git push https://github.com/Prasanthkumargit/masai--school---test.git
+  575  git pull 
+  576  git push
+  577  git remote add profile.md https://github.com/Prasanthkumargit/masai--school---test.git
+  578  git push
+  579  git push https://github.com/Prasanthkumargit/masai--school---test.git
+  580  git remote add profile.md https://github.com/Prasanthkumargit/masai--school---test.git
+  581  git push https://github.com/Prasanthkumargit/masai--school---test.git
+  582  git remote origin https://github.com/Prasanthkumargit/masai--school---test.git
+  583  git remote add origin https://github.com/Prasanthkumargit/masai--school---test.git
+  584  git push profile.md https://github.com/Prasanthkumargit/masai--school---test.git
+  585  ls
+  586  git add profile.md
+  587  git status
+  588  git commit -m "My name"
+  589  rm profile.md
+  590  ls
+  591  echo "Prasanthkumar bellamkonda" > profile.md
+  592  ls
+  593  cat profile.md
+  594  git add profile.md
+  595  git status
+  596  git commit -m "My name"
+  597  git push origin master
+  598  cd ~
+  599  history > w1_d2_s2
+  600  ls
+  601  rm w1_d2_s2
+  602  ls
+  603  history > w1_d2_s2.txt
