@@ -1,0 +1,5 @@
+1.grep -i mumbai city_names_orders_rand.csuniq -D city_names_orders_rand.csv |wc -l
+v |wc -w
+2.
+3.uniq -D city_names_orders_rand.csv |wc -l
+
