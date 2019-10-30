@@ -1,6 +1,9 @@
-# Week 2 - Day 1
+# Week 2 - Day 2
+
+### Session 2
 
 **SUBMISSION:**
+
 - Download this file
 - Fill the answers
 - Place the file into the location `~/repos/cohort_3/submissions/<your_folder>/week_02/day_2/session_2` 
@@ -10,393 +13,200 @@
 
 Sample Submission
 
+1. Property
+```css
+value
 ```
-white
-```
-```
-20px
+2. Elements
+```css
+div
+.class1
+#id1
+color
 ```
 
-Consider the below styles for solving the problems
+The CSS for each problem is mentioned above the HTML Code 
+
+
+
+### FSD.CSS.5.1
+
+Split the below mentioned properties into inherited and non-inherited
+
+`color` `font-size` `padding` `margin` `background-color` `border` `display` `float` `text-align` `font-weight` `display` `height` `width` `overflow`  `visiblity` `word-wrap` `z-index` `position` `overflow` `clear`
+1. Inherited
+```
+color
+font-size
+text-align
+font-weight
+visiblity
+word-wrap
+```
+2. Non-Inherited
+```
+padding
+margin
+background-color
+border
+display
+float
+height
+width
+overflow
+z-index
+position
+clear
+```
+
+
+
+### FSD.CSS.5.2
 
 ```css
-* {
-    color: yellow;
-    font-size: 12px;
-}
-div {
-	height: 100px;
-    width: 100px;
-    margin: 6px;
-    padding: 4px;
-    background-color: black;
-    color: white;
-}
-#id1 {
-    height: 50px;
+li:first_child {
     color: red;
 }
-#id2 {
-    width: 75px;
-    margin: 10px;
-}
-#id3 {
-    font-size: 14px;
-    margin-left: 10px;
-    color: blue;
-}
-.class1 {
-    background-color:white;
-    color: black;
-    font-size: 16px;
-}
-.class2 {
-    font-size: 22px;
-    width: 150px;
-}
-.class3 {
-    height: 200px;
-    color: red;
-    padding-right: 20px;
-    margin-left: 15px;
-}
-.class4 {
-    margin-bottom: 20px;
-    font-size: 11px;
-}
-.class5 {
-    height: 100px;
-    margin: 6px;
-    background-color: black;
-}
-.class6 {
-    width: 100px;
-    padding-left: 6px;
-    padding-right: 8px;
+li:nth-child(6) {
     color: orange;
 }
-#id2 {
-    font-size: 20px;
-    margin-right: 20px;
-    background-color: red;
+li:nth-child(2n) {
+    color: blue;
 }
-.class2 {
-    height: 50px;
-    color: black;
-}
-.class4 {
+li:nth-child(4n+3) {
     color: purple;
-    background-color: red;
+}
+li:last_child {
+    color: green;
 }
 ```
 
+```html
+<ul>
+    <li id="id1">1</li>
+    <li id="id2">2</li>
+    <li id="id3">3</li>
+    <li id="id4">4</li>
+    <li id="id5">5</li>
+    <li id="id6">6</li>
+    <li id="id7">7</li>
+    <li id="id8">8</li>
+    <li id="id9">9</li>
+    <li id="id10">10</li>
+    <li id="id11">11</li>
+    <li id="id12">12</li>
+    <li id="id13">13</li>
+    <li id="id14">14</li>
+    <li id="id15">15</li>
+</ul>
+```
 
+Fill the colour of all the elements
 
-### FSD.CSS.3.1
-
-```
-<div>MASAI</div>
-```
-Fill the below property values for the `div`
-1. Color
-```
-white
-```
-2. Height
-```
-100px
-```
-
-### FSD.CSS.3.2
-
-```
-<div style="height:50px;">MASAI</div>
-```
-Fill the below property values for the `div`
-1. Width
-```
-100px
-```
-2. Height
-```
-50px
-```
-3. Padding
-```
-4px
-```
-### FSD.CSS.3.3
-```
-<div class="class1">MASAI</div>
-```
-1. Width
-```
-100px
-```
-2. Height
-```
-100px
-```
-3. Padding-Left
-```
-4px
-```
-4. Margin-Right
-```
-6px
-```
-5. Font-Size
-```
-16
-```
-6. Color
-```
-black
-```
-### FSD.CSS.3.4
-```
-<div id="id2">MASAI</div>
-```
-1. Color
-```
-white
-```
-2. Background Color
+1. #id1
 ```
 red
 ```
-3. Padding-Bottom
-```
-4px
-```
-4. Margin-Top
-```
-10px
-```
-5. Font-Size
-```
-20px
-```
-6. Height
-```
-100px
-```
-### FSD.CSS.3.5
-```
-<div class="class1 class4" style="color:violet">MASAI</div>
-```
-1. Width
-```
-100px
-```
-2. Background Color
-```
-red
-```
-3. Padding-Bottom
-```
-4px
-```
-4. Margin-Right
-```
-6px
-```
-5. Font-Size
-```
-11px
-```
-6. Color
-```
-violet
-```
-### FSD.CSS.3.6
-```
-<div class="class5 class3" id="id1">MASAI</div>
-```
-1. Width
-```
-100px
-```
-2. Color
-```
-red
-```
-3. Padding-Right
-```
-20px
-```
-4. Margin-Left
-```
-6px
-```
-5. Font-Size
-```
-12px
-```
-6. Background Color
-```
-black
-```
-### FSD.CSS.3.7
-```
-<div class="class2" id="id2">MASAI</div>
-```
-1. Width
-```
-75px
-```
-2. Height
-```
-50px
-```
-3. Padding-Top
-```
-4px
-```
-4. Margin-Bottom
-```
-10px
-```
-5. Font-Size
-```
-20px
-```
-6. Color
-```
-black
-```
-### FSD.CSS.3.8
-```
-<div class="class4 class2 class6" style="font-size:20px">MASAI</div>
-```
-1. Width
-```
-100px
-```
-2. Height
-```
-50px
-```
-3. Padding-Left
-```
-6px
-```
-4. Margin-Right
-```
-6px
-```
-5. Font-Size
-```
-20px
-```
-6. Color
-```
-purple
-```
-### FSD.CSS.3.9
-```
-<div class="class5 class3" id="id2">MASAI</div>
-```
-1. Width
-```
-75px
-```
-2. Height
-```
-100px
-```
-3. Background Color
-```
-red
-```
-4. Color
-```
-red
-```
-5. Font-Size
-```
-20px
-```
-### FSD.CSS.3.10
-```
-<div class="class2 class4 class5" id="id3" style="margin-left:22px">MASAI</div>
-```
-1. Width
-```
-150px
-```
-2. Height
-```
-50px
-```
-3. Padding-Top
-```
-4px
-```
-4. Margin-Left
-```
-22px
-```
-5. Font-Size
-```
-14px
-```
-6. Color
+2. #id2
 ```
 blue
 ```
-### FSD.CSS.3.11
+3. #id3
 ```
-<div class="class5 class3" id="id3" style="color:orange; font-size:28px; margin:20px">MASAI</div>
+black  
 ```
-1. Background Color
+4. #id4
+```
+blue
+```
+5. #id5
 ```
 black
 ```
-2. Height
+6. #id6
 ```
-100px
+blue
 ```
-3. Margin-Left
+7. #id7
 ```
-20px
+purple
 ```
-4. Padding-Right
+8. #id8
 ```
-20px
+blue
 ```
-5. Font-Size
+9. #id9
 ```
-28px
+black
 ```
-6. Color
+10. #id10
 ```
-orange
+blue
 ```
-### FSD.CSS.3.12
+11. #id11
 ```
-<div id="id2">MASAI</div>
+purple
 ```
-1. Width
+12. #id12
 ```
-75px
+blue
 ```
-2. Height
+13. #id13
 ```
-100px
+black
 ```
-3. Background Color
+14. #id14
 ```
-red
+blue
 ```
-4. Margin-Right
+15. #id15
 ```
-20px
+green
 ```
-5. Font-Size
+
+
+
+### FSD.CSS.5.3
+
+Fill the specificity score for the selectors
+
+1. `div`
 ```
-20px
+1
 ```
-6. Color
+2. `p + div`
 ```
-white
+2
+```
+3. `.class1 + p`
+```
+11
+```
+4. `#id1 > div + p`
+```
+102
+```
+5. `#id1 ~ .class1 > li > a[title]`
+```
+122
+```
+6. `nav > a:hover::before`
+```
+13
+```
+7. `ul#primary-nav li.active`
+```
+112
+```
+8. `li:first-child h2 .title`
+```
+22   
+```
+9. `#nav .selected > a:hover`
+```
+121
+```
+10. `#heading nav ul li.disabled`
+```
+113
+```
