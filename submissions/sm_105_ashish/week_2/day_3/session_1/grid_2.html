@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>grid2</title>
+  
+  <style>
+.cont {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows: 50px 50px;
+  width: 800px;
+  height:600px;
+  margin:auto;
+  }
+.red {
+  grid-area: 1 / 1 / span 1 / span 3;
+  background: red;
+ 
+}
+.green
+{
+  height:500px;
+  background: green;
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+.blue
+{
+    height:500px;
+  background: blue;
+  grid-area: 2 / 2 / span 1 / span 2;
+}
+
+
+  </style>
+  </head>
+  <body>
+      <div class="cont">
+      <div class="red"></div>
+       <div class="green"></div>
+      <div class="blue"></div>
+     
+</div>
+  </body>
+</html>

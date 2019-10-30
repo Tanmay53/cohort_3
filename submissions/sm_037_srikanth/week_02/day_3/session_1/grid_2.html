@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid_2</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 70px 500px;
+            grid-gap:30px;
+            margin: 20px;
+        }
+        .grid div:nth-child(1){
+            background: red;
+            grid-area: 1 / span 2;
+        }
+        .grid div:nth-child(2){
+            background: green;
+            margin-left: 10px;
+        }
+        .grid div:nth-child(3){
+            background: blue;
+            margin-left: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
