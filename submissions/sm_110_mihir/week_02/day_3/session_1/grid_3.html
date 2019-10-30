@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid3</title>
+    <style>
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px;
+            grid-gap: 20px;
+
+        }
+
+        .grid-wrapper div {
+            background-color: seagreen;
+        }
+
+        .grid-wrapper .hide{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="hide"></div>
+        
+        <div></div>
+        <div></div>
+        <div class="hide"></div>
+        <div class="hide"></div>
+        <div></div>
+        
+    </div>
+</body>
+</html>
