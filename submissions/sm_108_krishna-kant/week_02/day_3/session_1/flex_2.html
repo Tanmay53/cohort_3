@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>flex_2</title>
+    <style>
+      .flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        margin: auto;
+      }
+      .flexbox div {
+        height: 150px;
+        margin: 10px;
+        width: 150px;
+        flex-basis: 1;
+        border-radius: 5px;
+        background: seagreen;
+      }
+      .flexbox div:nth-child(2),
+      .flexbox div:nth-child(4),
+      .flexbox div:nth-child(9) {
+        flex-grow: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flexbox">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
