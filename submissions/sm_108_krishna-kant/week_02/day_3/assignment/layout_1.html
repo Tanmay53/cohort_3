@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>layout_1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1000px;
+        grid-gap: 10px;
+      }
+      .grid div:nth-child(1) {
+        height: 40px;
+        background: red;
+        grid-area: 1 / 1 / span 1 / span 2;
+        font-size: 25px;
+        padding: 7px;
+      }
+      .grid div:nth-child(2) {
+        height: 450px;
+        background: seagreen;
+        padding: 7px;
+      }
+      .grid div:nth-child(3) {
+        height: 450px;
+        padding: 7px;
+        background: teal;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .grid div:nth-child(1) {
+          grid-area: 1 / 1 / span 1 / span 1;
+        }
+        .grid > div:nth-child(2),
+        .grid > div:nth-child(3) {
+          height: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div>Navigation</div>
+      <div>LEFT BOX</div>
+      <div>RIGTH BOX</div>
+    </div>
+  </body>
+</html>
