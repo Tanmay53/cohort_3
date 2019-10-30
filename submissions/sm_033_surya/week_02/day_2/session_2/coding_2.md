@@ -34,14 +34,16 @@ The CSS for each problem is mentioned above the HTML Code
 Split the below mentioned properties into inherited and non-inherited
 
 `color` `font-size` `padding` `margin` `background-color` `border` `display` `float` `text-align` `font-weight` `display` `height` `width` `overflow`  `visiblity` `word-wrap` `z-index` `position` `overflow` `clear`
+
 1. Inherited
 ```
 color
 font-size
+backgroun-color
+display
 text-align
 font-weight
-visiblity
-word-wrap
+visibility
 ```
 2. Non-Inherited
 ```
@@ -49,11 +51,11 @@ padding
 margin
 background-color
 border
-display
 float
 height
 width
 overflow
+word-wrap
 z-index
 position
 clear
@@ -113,11 +115,11 @@ blue
 ```
 3. #id3
 ```
-black  
+black
 ```
 4. #id4
 ```
-blue
+blur
 ```
 5. #id5
 ```
@@ -125,7 +127,7 @@ black
 ```
 6. #id6
 ```
-blue
+orange
 ```
 7. #id7
 ```
@@ -188,7 +190,7 @@ Fill the specificity score for the selectors
 ```
 5. `#id1 ~ .class1 > li > a[title]`
 ```
-122
+113
 ```
 6. `nav > a:hover::before`
 ```
@@ -200,7 +202,7 @@ Fill the specificity score for the selectors
 ```
 8. `li:first-child h2 .title`
 ```
-22   
+22  
 ```
 9. `#nav .selected > a:hover`
 ```
