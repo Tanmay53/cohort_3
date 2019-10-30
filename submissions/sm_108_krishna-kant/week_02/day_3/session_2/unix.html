@@ -1,0 +1,146 @@
+<!-- 
+*/ student_code : sm_108 
+*/ Author :  Krishna Kant Sharma
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Unix Html</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        max-width: 1100px;
+        margin: auto;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 350px;
+        max-height: 250px;
+        padding: 30px;
+        margin: auto;
+        flex-direction: column;
+        background: lightgray;
+        text-align: center;
+      }
+      .main img {
+        max-width: 80px;
+      }
+      .main h2 {
+        font-size: 26px;
+        color: blue;
+        margin: 10px;
+        font-weight: bold;
+      }
+      .main p {
+        font-size: 20px;
+        margin: 0px;
+      }
+      .section-2 {
+        display: flex;
+        max-width: 600px;
+        margin: 50px auto;
+      }
+      .section-2 .img img {
+        max-width: 80px;
+      }
+      .section-2 div:nth-child(2) {
+        padding: 10px;
+      }
+      .section-2 div:nth-child(2) h2 {
+        margin: 0;
+        color: red;
+      }
+      .section-3 {
+        display: flex;
+        background: orange;
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+      }
+      .section-3 div {
+        max-width: 50%;
+      }
+      .section-3 div h2 {
+        color: white;
+        margin: 0px 0px 40px 0px;
+      }
+      .border {
+        border-right: 5px solid black;
+      }
+      .section-3 div:nth-child(2) {
+        justify-self: right;
+        text-align: right;
+      }
+      .section-3 div:nth-child(2) div {
+        max-width: 100%;
+      }
+
+      @media only screen and (max-width: 500px) {
+        .section-2 {
+          flex-direction: column;
+          text-align: center;
+        }
+        .section-3 {
+          flex-direction: column;
+        }
+        .section-2 .img img {
+          max-width: 100%;
+        }
+        .section-3 div {
+          max-width: 100%;
+          justify-self: center;
+          text-align: center;
+        }
+        .border {
+          border-right: none;
+        }
+      }
+    </style>
+    <body>
+      <div class="container">
+        <div class="main">
+          <img
+            src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg"
+            alt=""
+          />
+          <h2>Linus Torvalds</h2>
+          <p>The creator or Linux & Git</p>
+        </div>
+        <div class="section-2">
+          <div class="img">
+            <img
+              src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <h2>Salman Khan</h2>
+            <p>
+              Salman khan is the founder of the khan Academy which has a mission
+              of a providing world class education for anyone , anywhere
+            </p>
+          </div>
+        </div>
+        <div class="section-3">
+          <div class="border">
+            <h2>Ken thompson</h2>
+            <p>Desgined and implemented the original Unix operating system</p>
+          </div>
+          <div>
+            <div>
+              <h2>Dennis Ritchie</h2>
+              <p>The Creator of C Programming Language</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </head>
+</html>
