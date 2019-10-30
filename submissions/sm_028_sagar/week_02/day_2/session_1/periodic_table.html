@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Periodic Table</title>
+    <style>
+        * {
+            font-family: Arial;
+        }
+        .table{
+            width:1260px;
+            margin:40px auto;
+        }
+
+        .heading {
+            font-size: 25px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+    
+        .sq {
+            width: 46px;
+            height: 46px;
+            margin: 10px 5px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        .H {
+            background-color: rgb(151, 13, 13);
+            color: white;
+            font-size: 25px;
+            margin: 15px;
+        }
+
+        .silicon {
+            width: 160px;
+            height: 160px;
+            border: 3px solid black;
+            background-color: rgb(121, 156, 42);
+            margin-left: 200px;
+            margin-top: 40px;
+            position: absolute
+        }
+
+        .silicon-box {
+            margin-left: 10px;
+        }
+
+        .first {
+            background-color: rgb(101, 156, 18);
+            margin-left: 15px;
+            margin-right: 5px;
+            float: left;
+            clear: left;
+        }
+
+        .sili-icon {
+            font-size: 50px;
+            margin-top: 32px;
+            margin-bottom: 10px
+        }
+
+        .sili-text {
+            font-size: 20px;
+            margin: 0px 0px;
+        }
+
+        .bt {
+            clear: left;
+            margin-left: 250px;
+            margin-top: 540px;
+        }
+
+        .Li {
+            font-size: 17px;
+            color: white;
+            padding-top: 5px;
+            padding-left: 5px
+        }
+
+        .Am {
+            padding-top: 5px;
+            padding-left: 2px;
+        }
+
+        .No {
+            padding-top: 10px;
+            padding-left: 5px
+        }
+
+        .c3 {
+            background-color: rgb(rgb(255, 232, 253));
+            width: 40px;
+            height: 40px;
+            border: 5px solid black;
+            float: left;
+        }
+
+        .blue {
+            background-color: rgb(14, 14, 190);
+        }
+        .number{
+            margin:12px 0px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .one {
+            margin: 15px 0px 15px 10px;
+        }
+
+        .iblock {
+            background-color: grey
+        }
+
+        .bt-row1 {
+           
+           background-color: rgb(79, 120, 60);
+           margin: 0px 0px;
+       }
+
+       .bt-row2 {
+           background-color: rgb(128, 176, 106);
+           float: left;
+           margin: 0px 0px;
+           float: left;
+       }
+        .col-purple{
+            background-color:rgb(156, 43, 171);
+        }
+        .col-orange{
+            background-color:rgb(247, 126, 20)
+        }
+        .col-yellow{
+            background-color: rgb(235, 196, 26);
+        }
+        .col-pink{
+            background-color: rgb(237, 24, 120);
+        }
+        .col-grey{
+            background-color:rgb(112, 92, 91);
+        }
+        .col-green {
+            background-color:rgb(10, 148, 31);
+        }
+
+        /* -----------Combinators------------------ */
+
+        .H>div {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .silicon>p {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            margin-left: 120px;
+            margin-right: 0px;
+            font-weight: 500;
+        }
+
+        .bt > div {
+            width: 35px;
+            height: 35px;
+            border: 1px solid rgb(97, 85, 47);
+        }
+        .first+div {
+            background-color: rgb(227, 66, 66);
+            float: left;
+        }
+
+        .float {
+            float: left;
+            clear: left;
+        }
+
+        .float~div {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table">
+        <!-- -------------- Header -------------------- -->
+        <div class="heading">THE PERIODIC TABLE OF ELEMENTS</div>
+        <div>
+
+            <!-- -----------------below is table ------------------ -->
+            <div class="float">
+                <!-- ----------element-H --------------- -->
+
+                <div class="sq H">
+                    <div>H</div>
+                </div>
+
+                <div class="float">
+                    <!-- --------------1st and 2nd and 3rd column ----------- -->
+                    <div class="sq first"></div>
+                    <div class="sq "><div class="number">4</div></div>
+                    <div class="sq first"></div>
+                    <div class="sq "><div class="number">12</div></div>
+
+                    <div class="float">
+                        <div class="sq first"></div>
+                        <div class="sq "><div class="number">20</div></div>
+                        <div class="sq first"></div>
+                        <div class="sq "><div class="number">38</div></div>
+                        <div class="sq first"></div>
+                        <div class="sq "><div class="number">56</div></div>
+                        <div class="sq c3"></div>
+                        <div class="sq first"></div>
+                        <div class="sq "><div class="number">88</div></div>
+                        <div class="sq c3"></div>
+                    </div>
+
+                    <!-- ------------- below is code blue ----------------- -->
+                    <div>
+                        <div class="sq blue float"></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue float"></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue float"></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue float"></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                        <div class="sq blue "></div>
+                    </div>
+
+                </div>
+                <!-- -------------p - block --------------------- -->
+                <div>
+                    <div class="sq float col-purple"></div>
+                    <div class="sq col-green"></div>
+                    <div class="sq col-green"></div>
+                    <div class="sq col-green"></div>
+                    <div class="sq col-pink"></div>
+                    <div class="sq float col-orange"></div>
+                    <div class="sq col-purple"></div>
+                    <div class="sq col-green"></div>
+                    <div class="sq col-green"></div>
+                    <div class="sq col-pink"></div>
+                    <div class="sq float col-orange"></div>
+                    <div class="sq col-purple"></div>
+                    <div class="sq col-purple"></div>
+                    <div class="sq col-green"></div>
+                    <div class="sq col-pink"></div>
+                    <div class="sq float col-orange"></div>
+                    <div class="sq col-orange"></div>
+                    <div class="sq col-purple"></div>
+                    <div class="sq col-purple"></div>
+                    <div class="sq col-pink"></div>
+                    <div class="sq float col-orange"></div>
+                    <div class="sq col-orange"></div>
+                    <div class="sq col-orange"></div>
+                    <div class="sq col-purple"></div>
+                    <div class="sq col-pink"></div>
+                    <div class="sq col-grey float"></div>
+                    <div class="sq col-grey "></div>
+                    <div class="sq col-grey "></div>
+                    <div class="sq col-grey "></div>
+                    <div class="sq col-grey "></div>
+                </div>
+            </div>
+            <!-- -----------------inert gases ----------------- -->
+            <div>
+                <div class="sq iblock float col-yellow one"></div>
+                <div class="sq iblock float col-yellow"></div>
+                <div class="sq iblock float col-yellow"></div>
+                <div class="sq iblock float col-yellow"></div>
+                <div class="sq iblock float col-yellow"></div>
+                <div class="sq iblock float col-yellow"></div>
+                <div class="sq iblock float col-grey"></div>
+            </div>
+        </div>
+        <!-- Silicon Box -->
+        <div class="silicon">
+            <p>14</p>
+            <div class="silicon-box">
+                <p class="sili-icon">Si</p>
+                <p class="sili-text">Silicon</p>
+            </div>
+        </div>
+
+
+        <!--  bottom table -->
+        <!-- ---------------- -->
+        <div class="bt">
+            <div class="bt-row1 float">
+                <div class="Li">Li</div>
+            </div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <div class="bt-row1"></div>
+            <!--    2nd row ------------------------- -->
+
+            <div class="bt-row2 float"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2">
+                <div class="Am">Am</div>
+            </div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2"></div>
+            <div class="bt-row2">
+                <div class="No">No</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
