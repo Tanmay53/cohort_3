@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Grid 3</title>
+        <style media="screen">
+        .grid-container {
+            margin: 25px auto;
+            width: 875px;
+            display: grid;
+            grid-template-rows: repeat(4, 200px);
+            grid-template-columns: repeat(4, 200px);
+            grid-gap: 25px;
+        }
+        .grid-container > div {
+            background: teal;
+            border-radius: 4px;
+        }
+        .grid-container .box1 { grid-area: 2 / 4 / span 1 / span 1; background: #ffffff; }
+        .grid-container .box2 { grid-area: 3 / 3 / span 1 / span 2; background: #ffffff; }
+        .grid-container .box3 { grid-area: 4 / 2 / span 1 / span 3; background: #ffffff; }
+        
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="box1"></div>
+            <div></div>
+            <div></div>
+            <div class="box2"></div>
+            <div></div>
+            <div class="box3"></div>
+        </div>
+    </body>
+</html>
