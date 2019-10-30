@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Grid 4</title>
+        <style media="screen">
+        .grid-container {
+            margin: 100px auto;
+            width: 675px;
+            display: grid;
+            grid-template-rows: repeat(3, 150px);
+            grid-template-columns: repeat(4, 150px);
+            grid-gap: 25px;
+        }
+        .grid-container > div {
+            background: teal;
+            border-radius: 4px;
+        }
+        .rect1 { grid-area: 1 / 2 / span 1 / span 2; }
+        .rect2 { grid-area: 2 / 1 / span 1 / span 2; }
+        .rect3 { grid-area: 3 / 3 / span 1 / span 2; }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div></div>
+            <div class="rect1"></div>
+            <div></div>
+            <div class="rect2"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="rect3"></div>
+        </div>
+    </body>
+</html>
