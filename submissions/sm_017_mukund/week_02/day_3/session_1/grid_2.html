@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>grid_2</title>
+    <style type="text/css">
+        #grid {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 300px 900px;
+            grid-template-rows: 70px 500px;
+        }
+
+        #id1 {
+            grid-area: 1/1/2/span 2;
+            background-color: red;
+        }
+
+        #id2 {
+            background-color: green;
+        }
+
+        #id3 {
+            background-color: indigo;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <div id="id1"></div>
+        <div id="id2"></div>
+        <div id="id3"></div>
+
+    </div>
+
+</body>
+
+</html>

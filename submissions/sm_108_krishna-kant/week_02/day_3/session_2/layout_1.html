@@ -1,0 +1,56 @@
+<!-- 
+*/ student_code : sm_108 
+*/ Author :  Krishna Kant Sharma
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>flex_1</title>
+    <style>
+      .flexbox {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      .flexbox div {
+        height: 450px;
+        width: 200px;
+        background: seagreen;
+        border-radius: 2px;
+        margin: 10px;
+      }
+
+      /* tab view */
+      @media only screen and (max-width: 768px) {
+        .flexbox {
+          flex-wrap: wrap;
+        }
+        .flexbox div {
+          background: grey;
+        }
+      }
+      /* mobile view */
+      @media only screen and (max-width: 500px) {
+        .flexbox {
+          flex-wrap: wrap;
+        }
+        .flexbox div {
+          width: 100%;
+          background: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flexbox">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

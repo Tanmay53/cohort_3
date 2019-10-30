@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex 2</title>
+        <style type="text/css">
+            #container > div{
+                width: 50%;
+                display: flex;
+            }
+
+            #row1 > div, #row2 > div, #row3 > div{
+                flex-basis: 100px;
+                height: 100px;
+                background: blue;
+                margin:20px;
+                flex-grow: 1
+            }
+            
+            #row1 > div:nth-child(2), #row2 > div:nth-child(1), #row3 > div:nth-child(3){
+                flex-grow: 10;
+            } 
+                       
+
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="row1">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="row2">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="row3">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+</html>
