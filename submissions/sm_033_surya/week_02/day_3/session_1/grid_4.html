@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>grid_4</title>
+    <style>
+        #overall {
+            width: 1100px;
+            height: 700px;
+            margin: 20px;
+        }
+        .row_1 {
+            display: grid; 
+            grid-template-columns: 200px 50px 600px 50px 200px;
+            grid-template-rows: 200px;
+            background: green;
+            margin-bottom: 50px; 
+        }
+      .row_2 {
+          display: grid;
+          grid-template-rows:200px;
+        grid-template-columns:650px 25px 200px 25px 200px;
+        background: green;
+        margin-bottom: 50px;
+      }
+
+      .row_3 {
+          display: grid;
+          grid-template-rows:200px;
+        grid-template-columns:200px 50px 200px 50px 600px;
+        background: green;
+      }
+      .row_1 div:nth-of-type(2n), .row_2 div:nth-of-type(2n), .row_3 div:nth-of-type(2n){
+          background: white;
+      }
+    </style>
+</head>
+<body>
+        <div id ="overall">
+            <div class="row_1">
+                    <div class="cell1"></div>
+                    <div class="cell2"></div>
+                    <div class="cell3"></div>
+                    <div class="cell4"></div>
+                    <div class="cell5"></div>
+        </div>
+        <div class="row_2">
+                <div class="cell1"></div>
+                <div class="cell2"></div>
+                <div class="cell3"></div>
+                <div class="cell4"></div>
+                <div class="cell5"></div>
+        </div>
+        <div class = "row_3">
+                    <div class="cell6"></div>
+                    <div class="cell7"></div>
+                    <div class="cell8"></div>
+                    <div class="cell9"></div>
+                    <div class="cell10"></div>
+       
+                </div>
+            </div>
+</body>
+</html>
