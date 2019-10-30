@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>grid_3</title>
+<style>
+    .overall {
+        display: grid;
+        width: 800px;
+        height: 800px;
+        grid-gap: 20px;
+        background: white;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+        padding: 20px;
+    }
+    .overall div {
+        background: green;
+    }
+    .cell11 {
+            grid-area: 3 / 3 / span 2 / span 2;
+            background: white !important;
+            }   
+            .cell8 {
+                background: white !important;
+            }
+</style>
+
+</head>
+<body>
+    <div class="overall">
+        <div class="cell1"></div>
+        <div class="cell2"></div>
+        <div class="cell3"></div>
+        <div class="cell4"></div>
+        <div class="cell5"></div>
+        <div class="cell6"></div>
+        <div class="cell7"></div>
+        <div class="cell8"></div>
+        <div class="cell9"></div>
+        <div class="cell10"></div>
+        <div class="cell11"></div>
+        <div class="cell12"></div>
+
+    </div>
+
+</body>
+</html>
