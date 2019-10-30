@@ -34,29 +34,13 @@ The CSS for each problem is mentioned above the HTML Code
 Split the below mentioned properties into inherited and non-inherited
 
 `color` `font-size` `padding` `margin` `background-color` `border` `display` `float` `text-align` `font-weight` `display` `height` `width` `overflow`  `visiblity` `word-wrap` `z-index` `position` `overflow` `clear`
+
 1. Inherited
 ```
-color
-font-size
-text-align
-font-weight
-visiblity
-word-wrap
-```
+color,font-size,background-color,float,text-align,font-weight,visibility
 2. Non-Inherited
 ```
-padding
-margin
-background-color
-border
-display
-float
-height
-width
-overflow
-z-index
-position
-clear
+padding,margin,border,display,height,width,overflow,word-wrap,z-index,position,clear
 ```
 
 
@@ -64,7 +48,7 @@ clear
 ### FSD.CSS.5.2
 
 ```css
-li:first_child {
+li:first-child {
     color: red;
 }
 li:nth-child(6) {
@@ -76,7 +60,7 @@ li:nth-child(2n) {
 li:nth-child(4n+3) {
     color: purple;
 }
-li:last_child {
+li:last-child {
     color: green;
 }
 ```
@@ -113,7 +97,7 @@ blue
 ```
 3. #id3
 ```
-black  
+purple
 ```
 4. #id4
 ```
@@ -200,7 +184,7 @@ Fill the specificity score for the selectors
 ```
 8. `li:first-child h2 .title`
 ```
-22   
+22
 ```
 9. `#nav .selected > a:hover`
 ```
