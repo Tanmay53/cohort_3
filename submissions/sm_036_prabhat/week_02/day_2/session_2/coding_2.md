@@ -146,7 +146,7 @@ blue
 ```
 15. #id15
 ```
-purple
+purple;
 ```
 
 
@@ -194,4 +194,4 @@ Fill the specificity score for the selectors
 10. `#heading nav ul li.disabled`
 ```
 113
-```
+``` 
