@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    .main{
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            grid-template-rows: 35px 700px;
+            grid-gap: 20px;
+            
+        }
+    .box1{
+        background:red;
+        grid-area: 1/1/span 1/ span 3;
+        
+    }
+    .box2{
+        background: greenyellow;
+        grid-area: 2/1/span 1/ span 1;
+    }
+    .box3{
+        background: teal;
+        grid-area: 2/2/span 1/ span 2;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+         
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+
+
+    </div>
+</body>
+</html>
