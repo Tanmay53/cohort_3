@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 100px;
+        }
+        .main1{
+            height: 400px;
+             width: 180px; 
+             float: left; 
+             margin-right: 10px; 
+             text-align: center;
+             margin-top: 25px;
+        }
+        .main2{
+            height: 400px; 
+            width: 500px; 
+            float: left;
+             margin-right: 10px;
+              margin-top: 28px;
+        }
+        .main3{
+            height: 400px; 
+            width: 350px; 
+            float: left;
+            margin-top: 25px;
+        }
+        .square{
+            background-color: yellow; 
+            height: 35px;
+            width: 35px; 
+            float: left;
+            margin: 10px; 
+        }
+        #next{
+            clear: left;
+        }
+        #after{
+            clear: right;
+        }
+        .big{
+            background-color: green; 
+            height: 120px;
+            width: 120px; 
+            float: left; 
+            margin: 10px; 
+            padding: 10px 10px 10px 6px;
+        }
+        .main2 > .square{
+            background-color: blue;
+        }
+        }
+        h2{
+            float: left;
+            font-size: 45px;
+        }
+        h2 + p{
+            float: left;
+        }
+        #table
+        {
+            height: 90px;
+            clear: both;
+            width: 550px;
+            margin-left: 200px;
+        }
+        .small{
+            height: 33px;
+            width: 33px;
+            background-color: cadetblue;
+            float: left;
+            border-style: groove;
+        }
+        .small ~ #next{
+            background-color: darkcyan;
+        }
+        #next ~ .small{
+            background-color: darkcyan;
+        }
+        .main2 > #next{
+            margin-left: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">The Periodic Table</h1>
+    <div class="main1">
+        <div class="square" id="next">
+        <p style="font-size: 17px;">H</p>
+        </div>
+        <div class="square" id="next"></div>
+        <div class="square">4</div>
+        <div class="square"id="next"></div>
+        <div class="square">12</div>
+        <div class="square" id="next"></div>
+        <div class="square">20</div>
+        <div class="square" id="next"></div>
+        <div class="square">38</div>
+        <div class="square" id="next"></div>
+        <div class="square">56</div>
+        <div class="square" style="border-style: groove;"></div>
+        <div class="square" id="next"></div>
+        <div class="square">88</div>
+        <div class="square" style="border-style: groove;"></div>
+    </div>
+    <div class="main2">
+        <div class="big">
+            <p style="float: right; font-size: 12px;">14</p>
+            <h2 style="float: left;">S1</h2>
+            <p style="float: left;font-size: 16px; clear: left;">Silicon</p>
+        </div>
+        <div class="square" id="next"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square" id="next"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square" id="next"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square" id="next"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    <div class="main3">
+            <div class="square" id="after" style="float: right; margin-right: 30px;"></div>
+            <div class="square" style="clear: both;"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square" style="clear: both;"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square" style="clear: both;"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square" style="clear: both;"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square" style="clear: both;"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square" style="clear: both;"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+    </div>
+    <div style="clear: both; height: 100px; width: 100px;"></div>
+
+        <div id="table">    
+            <div class="small"><p>La</p></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small" id="next"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"><p>Am</p></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"></div>
+            <div class="small"><p>No</p></div>
+            
+        <div>
+</body>
+</html>

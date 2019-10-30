@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Layout-6</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    img {
+
+      width: 100px;
+    }
+    .div1 {
+      padding: 10px;
+      background: rgb(218, 218, 218);
+      width: 400px;
+      text-align: center;
+      
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+    .div1 p {
+      font-size: 28px;
+    }
+    .div1 h1 {
+      font-size: 36px;
+      color: rgb(0, 0, 145);
+    }
+    .div1 img {
+      margin-top: 20px;
+    }
+   
+   .div2 {
+     width: 800px;
+     
+     margin: 0 auto;
+
+   }
+   .div2 img {
+     float: left;
+     width: 120px;
+     margin: 20px;
+   }
+   .div2 h1 {
+     color: red;
+     font-size: 40px;
+   }
+   .div2 p {
+     color: black;
+     font-size: 22px;
+   }
+   .clear {
+     clear: both;
+   }
+   .foot {
+     width: 90%;
+     background: #D3562F;
+     margin: 0 auto;
+     height: 200px;
+
+   }
+   .left {
+     
+     float: left;
+     margin: 20px;
+   }
+   .left h1 {
+     color: white;
+   }
+   .border {  
+     width: 8px;
+     height: 160px;
+     float: left;
+     margin-top: 20px;
+     background: black;
+     margin-left: 150px;
+   }
+   .right {
+     
+     text-align: right;
+     float: right;
+     margin: 20px;
+   }
+   .right h1 {
+     color: white;
+   }
+  </style>
+</head>
+<body>
+  <div class="div1">
+      <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="">
+  <h1>Linus Torvalds</h1>
+  <p>The Creator of Linux & Git</p>
+  </div>
+  <div class="div2">
+      <div class="img">
+          <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg" alt="">
+        </div>
+        <div class="text">
+            <h1>Salman Khan</h1>
+            <p>Salman khan is the founder of the Khan Academy which has a mission of providing a free world-class education for everyone, anywhere.</p>
+      </div>
+  </div>
+  <div class="clear"></div>
+  <div class="foot">
+    <div class="left">
+      <h1>Ken Thompson</h1>
+      <p>design and implementation the original unix operating system</p>
+    </div>
+    <div class="border">
+
+    </div>
+    <div class="right">
+      <h1>Dennis Ritchie</h1>
+      <p>the creator of c programming language</p>
+    </div>
+  </div>
+</body>
+</html>

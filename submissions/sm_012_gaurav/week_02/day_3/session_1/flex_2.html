@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex 2</title>
+        <style type="text/css">
+            .flex-box {
+                display: flex;
+                flex-direction: row;
+                width: 40%;
+            }
+            .flex-box div {
+                height: 80px;
+                width: 80px;
+                background-color: lightseagreen;
+                margin: 10px;
+            }
+            .fgrow {
+                flex-grow: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-box">
+            <div></div>
+            <div class="fgrow"></div>
+            <div></div>
+        </div>
+        <div class="flex-box">
+            <div class="fgrow"></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flex-box">
+            <div></div>
+            <div></div>
+            <div class="fgrow"></div>
+        </div>
+    </body>
+</html>
