@@ -1,0 +1,22 @@
+.flex-box
+{
+  display: flex;
+  border: 5px solid red;
+  margin: 500px;
+}
+.flex-box div
+{
+  margin: 100px 20px 100px 20px;
+  border: 1px solid red;
+  padding: 10px;
+  
+  height:700px;
+  width:800px;
+  background:blue;
+  
+}
+#box1
+{   
+    flex-direction:row;
+  
+}
