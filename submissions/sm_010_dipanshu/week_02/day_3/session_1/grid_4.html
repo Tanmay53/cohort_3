@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+
+            .parent-div {
+                display: grid;
+                grid-template-columns: 150px 150px 150px 150px 150px;
+                grid-template-rows: 150px 150px 150px;
+                grid-gap: 30px;
+                margin-top: 250px;
+            }
+
+            .parent-div div {
+                background: #217862;
+                border-radius: 5px;
+            }
+
+            .parent-div :nth-child(2) {
+                grid-area: 1 / 2 / 1 / span 3;
+            }
+
+            .parent-div :nth-child(4) {
+                grid-area: 2 / 1 / 2 / span 3;
+            }
+
+            .parent-div :nth-child(9) {
+                grid-area: 3 / 3 / 3 / span 3;
+            }
+
+        </style>
+        <title>
+            Grid 4
+        </title>
+    </head>
+    <body>
+        <div class="parent-div">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>
