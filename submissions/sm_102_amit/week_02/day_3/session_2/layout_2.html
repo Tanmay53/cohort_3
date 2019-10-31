@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Layout 2</title>
+    <style media="screen">
+      .flex-container {
+        margin: 100px auto;
+        width: 750px;
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .flex-container > div {
+        width: 150px;
+        height: 150px;
+        margin: 25px;
+        background: teal;
+        border-radius: 4px;
+      }
+      .flex-container > div:nth-child(2),
+      .flex-container > div:nth-child(4),
+      .flex-container > div:nth-child(9) {
+        flex-grow: 2;
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (max-width: 991px) {
+        .flex-container {
+          width: 100%;
+        }
+        .flex-container > div {
+          background: pink;
+          width: 100px;
+        }
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (max-width: 767px) {
+        .flex-container > div {
+          background: yellow;
+          width: 200px;
+          height: 400px;
+        }
+        .flex-container > div:nth-child(n) {
+          flex-grow: 1;
+        }
+      }
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        .flex-container > div {
+          background: red;
+          width: 100%;
+          flex-grow: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
