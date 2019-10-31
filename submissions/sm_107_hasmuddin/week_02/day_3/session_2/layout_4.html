@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout_4</title>
+    <style>
+    .grid {
+        display:grid;
+        height:300px;
+        width:50%;
+        grid-template-columns:repeat(5, 1fr);
+        grid-template-rows:repeat(2, 1fr);
+        margin:200px auto;
+        
+
+    }
+    .grid .box {
+        height:100px;
+        width:100px;
+        border:1px solid black;
+        margin:10px;
+        background:green;
+
+    }
+    
+    @media (max-width:800px) {
+        .grid {
+        display:grid;
+        height:250px;
+        width:40%;
+        grid-template-columns:repeat(5, 1fr);
+        grid-template-rows:repeat(2, 1fr);
+        margin-left:35px;
+        
+
+    }
+    .grid .box {
+        height:95px;
+        width:95px;
+        border:1px solid black;
+        margin:10px;
+        background:yellow;
+
+    }
+    @media (max-width:400px) {
+        .grid {
+        display:grid;
+        height:250px;
+
+        width:30%;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns:repeat(1, 1fr);
+        grid-template-rows:repeat(10, 1fr);
+        margin-left:160px;
+
+    }
+    .grid .box {
+        height:100px;
+        width:100px;
+        border:1px solid black;
+        margin:10px;
+        background:crimson;
+
+    }
+    
+    
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+
+
+    </div>
+</body>
+</html>

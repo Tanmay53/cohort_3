@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>layout_7</title>
+    <style>
+    .cont
+    {
+        display: flex;
+        flex-direction: column;
+        width: 1100px;
+        margin: auto;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+      .box1
+      {
+          display: flex;
+          flex-direction: column;
+          width:450px;
+          height:300px;
+          background: lightgrey;
+          margin: auto;
+          margin-top: 20px;
+          
+      }
+      .box2
+      {
+          display: flex;
+         flex-direction: row;
+          width:680px ;
+          height:150px;
+          margin: auto;
+          margin-top: 30px;
+          text-align: start;
+      }
+      #ph > .ph1
+      {
+          color: darkblue;
+          font-size: 30px;
+      }
+      .box3
+      {
+          display:flex;
+          background:orangered;
+          width:900px;
+          height:140px;
+          margin: auto;
+          flex-direction: row;
+        }
+        .box3 > div 
+        {
+            width:450px;
+            height:120px;
+            margin-top: 10px;
+            background-color: orangered;
+        }
+     
+      #ph
+      {
+          margin: auto;
+          width:350px;
+          margin-top: 10px;
+          text-align: center;
+      }
+      #sal
+      {
+            
+          margin-left: 20px;
+          margin-top: 0px;
+      }
+      #sal > .sh1
+      {
+           margin-top: 0px;
+           color:red;
+           font-size: 30px;
+      }
+      .b1
+      {
+          border-right:solid 8px black;
+      }
+      .b1 > .a1 {
+          color: white;
+          margin-left: 20px;
+          margin-top: 0px;
+          font-size: 20px;
+      }
+      .b1 > p
+      {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .b2
+      {
+          text-align: right;
+          border: none;
+      }
+      .img1
+      {
+          width:100px;
+          height:150px;
+      }
+      .img2
+      {
+        width:100px;
+          height:130px; 
+      }
+      @media(max-width: 590px)
+      {
+        .cont
+    {
+        display: flex;
+        flex-direction: column;
+        width: 550px;
+        margin: auto;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+      .box1
+      {
+          display: flex;
+          flex-direction: column;
+          width:225px;
+          height:160px;
+          background: lightgrey;
+          margin: auto;
+          margin-top: 10px;
+          
+      }
+      .box2
+      {
+          display: flex;
+         flex-direction: row;
+          width:480px ;
+          height:150px;
+          margin: auto;
+          margin-top: 15px;
+          text-align: start;
+      }
+      #ph > .ph1
+      {
+          color: rgb(63, 63, 133);
+          font-size: 10px;
+      }
+      .box3
+      {
+          display:flex;
+          background:rgb(59, 19, 4);
+          width:450px;
+          height:90px;
+          margin: auto;
+          flex-direction: row;
+        }
+        .box3 > div 
+        {
+            width:225px;
+            height:80px;
+            margin-top: 5px;
+            background-color: rgb(177, 81, 46);
+        }
+     
+      #ph
+      {
+          margin: auto;
+          width:175px;
+          margin-top: 1px;
+          text-align: center;
+      }
+      #sal
+      {
+            
+          margin-left: 10px;
+          margin-top: 0px;
+      }
+      #sal > .sh1
+      {
+           margin-top: 0px;
+           color:red;
+           font-size: 10px;
+      }
+      .b1
+      {
+          border-right:solid 4px black;
+      }
+      .b1 > .a1 {
+          color: white;
+          margin-left: 10px;
+          margin-top: 0px;
+          font-size: 20px;
+      }
+      .b1 > p
+      {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .b2
+      {
+          text-align: right;
+          border: none;
+      }  
+      .img1
+      {
+          width:50px;
+          height:75px;
+          margin-top: 5px;
+      }
+      .img2
+      {
+        width:100px;
+          height:100px; 
+      }
+      .pp
+      {
+          font-size: 12px;
+      }
+      }
+
+    </style>
+</head>
+<body>
+   <div class="cont">
+    <div class="box1">
+        <div id="ph">
+             <img class="img1" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="linus">
+            <p class="ph1"><b>Linus Torvalds</b></p><p class="ph2">The creator of linux and Git.</p></div>
+        </div>
+    <div class="box2">
+            <img  class="img2" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg" alt="Sal khan">
+           <div id="sal"> <p class="sh1"><b>Sal khan</b></p>
+            Salman khan the a founder of khan acadmey which has a mission <br>
+            of providing a free world-class education for any one, anywhere.
+             <br></div>
+            </div>
+
+   <div class="box3">
+        <div class="b1"> <p class="a1">Ken Thompson</p> <p class="pp"> Designed and implemented the<br> original unix sysyem.</p> </div>
+        <div class="b1 b2"> <p class="a1"> Dennis Ritchie</p><p class="pp"> The creator of c programming language.</p> </div>
+     </div>
+    
+
+   </div>
+</body>
+</html> 
