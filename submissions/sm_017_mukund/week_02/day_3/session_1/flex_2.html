@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>flex_2</title>
+    <style type="text/css">
+        body{
+            margin: 5% 20%;
+        }
+        .flex{
+            display: flex;
+        }
+        .flex > div{
+            background: greenyellow;
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+        }
+        #box1 div:nth-of-type(2){
+            flex-basis: 300px;
+        }
+        #box2 div:nth-of-type(1){
+            flex-basis: 300px;
+        }
+        #box3 div:nth-of-type(3){
+            flex-basis: 300px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+        <div class="flex" id="box1">
+            <div ></div>
+            <div ></div>
+            <div ></div>
+        </div>
+        <div class="flex" id="box2">
+            <div ></div>
+            <div ></div>
+            <div ></div>
+        </div>
+        <div class="flex" id="box3">
+            <div ></div>
+            <div ></div>
+            <div ></div>
+        </div>
+    
+</body>
+
+
+</html>
