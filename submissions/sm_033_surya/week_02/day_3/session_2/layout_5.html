@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>layout_5</title>
+    <style>
+        .overall{
+            width: 1000px;
+            height: 700px;
+            display: grid;
+            grid-gap: 40px;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 75px auto;
+            background: white;
+            margin: 20px;
+
+        }
+        .overall div{
+            background: green;
+        }
+        .cell1{
+            grid-area: 1 / 1 / 1 / 3;
+            background: red !important;
+        }
+        .cell1 + div {
+            background: #30e72a;
+        }
+    @media (max-width:600px)
+        {
+            .overall{
+            width: 800px;
+            height: 500px;
+            }
+            .overall div{
+            background: red;
+        }
+        .cell1{
+            background: #30e72a !important;
+        }
+        .cell1 + div {
+            background: green;
+        }
+
+        }
+        @media (min-width:1200px)
+        {
+            .overall{
+            width: 1000px;
+            height: 700px;
+            }
+            .overall div{
+                background: green;
+                border: 10px solid black;
+        }
+        .cell1{
+            background: red !important;
+            border: 10px solid black;
+        }
+        .cell1 + div {
+            background: #30e72a;
+            border: 10px solid black;
+        }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="overall">
+        <div class="cell1"></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+</html>

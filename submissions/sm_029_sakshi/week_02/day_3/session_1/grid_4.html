@@ -1,0 +1,42 @@
+<html>
+       <style>
+      .container div {
+  background-color:pink;
+}
+
+.container{
+  display : grid;
+  grid-gap:20px;
+  border:2px;
+  grid-template-rows:100px 100px 100px ;
+  grid-template-columns:150px 150px 150px 150px ;
+  
+}
+#line1{
+ grid-area:1/2/1/4;
+}
+#line2{
+  grid-area:2/1/2/3;
+  
+}
+#line3{
+grid-area:3/3/3/5;  
+}
+</style>
+<body>
+
+       <div class="container">
+    <div></div>
+      <div id="line1"></div>
+     <div></div>
+     <div></div>
+     <div id="line2"></div>
+      <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+      <div></div>
+     <div id="line3"></div>
+     </div>
+     </body>
+</html>
