@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex 3</title>
+    <style>
+      .cont {
+        margin: auto;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+      .cont > div {
+        display: flex;
+        flex-direction: row;
+      }
+      .cont > div > div {
+        width: 100px;
+        height: 100px;
+        background: green;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div>
+        <div></div>
+      </div>
+
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

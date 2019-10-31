@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Layout 6</title>
+    <style media="screen">
+      .grid-container {
+        margin: 25px auto;
+        width: 875px;
+        display: grid;
+        grid-template-columns: repeat(4, 200px);
+        grid-gap: 25px;
+      }
+      .grid-container > div {
+        background: teal;
+        height: 200px;
+        border-radius: 4px;
+      }
+      .grid-container .box1 {
+        grid-column-start: 1;
+      }
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (max-width: 991px) {
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (max-width: 767px) {
+      }
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        .grid-container {
+          width: 100%;
+          grid-template-columns: repeat(1, 100%);
+        }
+        .grid-container > div {
+          height: 50px;
+        }
+        .grid-container .box1 {
+          width: 50px;
+          height: 200px;
+        }
+        .grid-container > div:nth-child(odd) {
+          background: red;
+        }
+        .grid-container > div:nth-child(even) {
+          background: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="box1"></div>
+      <div></div>
+      <div></div>
+      <div class="box1"></div>
+      <div></div>
+      <div class="box1"></div>
+    </div>
+  </body>
+</html>
