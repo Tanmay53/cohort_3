@@ -1,0 +1,348 @@
+body {
+    margin: 0px;
+}
+nav{
+    
+    background-color: rgb(22, 34, 34);
+    height: 80px;
+    
+}
+
+.container1 {
+   
+    width: 80%;
+    margin:0px 10%;
+    height: 45px;
+    float: left;
+    font-size: 20px;
+    padding-top: 30px;
+  
+}
+
+.container2 {
+    
+    float: right;
+    
+
+}
+.left_align {
+    float: left;
+}
+.right_align {
+    float: right;
+}
+
+.clr {
+    clear: both;
+}
+.break {
+    clear: both;
+}
+.container1 a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+nav img {
+    width: 20px;
+    float: left;
+    padding: 0px;
+}
+
+header {
+    clear: both;
+    height: 400px;
+    width: 100%;
+    background-color: darkslategrey;
+    
+}
+
+header > img{
+    height: 600px;
+}
+
+.s2_c1 {
+    float: left;
+    width: 200px;
+    padding: 25px;
+    margin-left: 25%;
+    color: white;
+}
+
+.s2_c2 {
+    float: left;
+    height: 300px;
+    width: 300px;
+    margin: 25px;
+    padding: 10px;
+    background-color: white;
+}
+
+main, main ~ div {
+    height: 400px;
+    width: 1200px;
+    margin: 50px 5%;
+    border: 1px solid rgb(94, 172, 172);
+   
+}
+main img{
+   
+    width: 80px;
+    
+}
+main  div {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+main div:nth-child(4){
+    width: 15%;
+}
+main p {
+    font-size: 18px;
+    color: rgb(59, 28, 28);
+}
+
+main button {
+    background-color:blue;
+    color: white;
+    width: 270px;
+   
+    padding: 10px;
+    font-size: 20px;
+}
+
+#sales {
+    background-color: white;
+    border: thin solid blue;
+    color: blue;
+    width: 200px;
+}
+#secure-background {
+    height: 400px;
+    width: 1200px;
+    
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+
+
+.security-container {
+    position: relative;
+}
+.security-container .left_box{
+    position: absolute;
+    top: 100px;
+    left:100px;
+    z-index: 1;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+    text-align: justify;
+}
+
+.security-container button{
+    position: absolute;
+    top: 150px;
+    left: 800px;
+    z-index: 1;
+    padding: 15px;
+    background-color: blue;
+    color: white;
+}
+.security-container p{
+    bottom: 150px;
+    left: 100px;
+    font-size: 18px;
+    
+    color: aqua;
+}
+.left_box {
+    width: 600px;
+}
+form div {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form p {
+    padding: 1px 1px;
+    font-size: 12px;
+    color: grey;
+}
+
+form button {
+    background-color: green;
+    color: white;
+    width: 270px;
+   
+    padding: 10px;
+    font-size: 20px;
+}
+
+form input{
+    width: 100%;
+    
+}
+
+/* testimonials */
+
+.testimonials {
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.testimonials img{
+    width: 80px;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+}
+
+.testimonials div {
+    width: 80%;
+    margin: auto;
+}
+
+.teams *{
+    text-align: center;
+    width: 960px;
+   
+    margin: 20px auto;
+}
+
+.teams h4{
+    color: grey;
+}
+
+.teams h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+}
+
+.teams p{
+    color: grey;
+    width: 400px;
+}
+
+.teams button {
+    width: 200px;
+    border: think solid blue;
+    margin-left: 500px;
+    color: blue;
+    padding: 15px;
+    font-size: medium;
+}
+
+.better-code img{
+    width: 500px;
+    margin: 20px;
+    float: left;
+}
+
+.code-text{
+    width: 500px;
+    float: left;
+}
+
+.code-text h1{
+    color: rgb(43, 78, 66);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.code-text p{
+    color: rgb(29, 5, 5);
+    font-family: monospace;
+}
+.enterprise {
+    width: 1200px;
+   
+    height: 500px;
+    
+}
+
+.enterprise h1{
+    text-align: center;
+    color: rgb(105, 104, 104);
+}
+.enterprise div:nth-child(1){
+   width: 1100px;
+   border: 2px solid black;
+}
+.carousel {
+    width: 200px;
+    float:left;
+    margin: 20px 35px;
+    border: 2px solid aqua;
+    padding: 10px;
+
+}
+
+.carousel img{
+    width: 200px;
+    height: 200px;
+    
+}
+
+.carousel .caption{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    
+    font-weight: bold;
+}
+
+.carousel p,hr{
+    color: grey;
+    font-size: 14px;
+    font-weight: thin;
+}
+
+.carousel a{
+    color: blue;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#developers {
+    height: 600px;
+}
+
+#developers p{
+    height: 60px;
+}
+
+#developers h4{
+    color: grey;
+    text-align: center;
+}
+
+#developers h2{
+    width: 40%;
+    margin: auto;
+}
+
+.signup {
+    width: 100%;
+    margin: 0px;
+    background-color: darkslategrey;
+}
+
+.signup h1{
+    padding-top: 40px;
+    color: white;
+    width: 70%;
+    margin: auto;
+}
+
+.signup-form *{
+    float: left;
+    width: 20%;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
