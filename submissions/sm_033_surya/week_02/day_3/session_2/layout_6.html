@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>grid_3</title>
+<title>layout_6</title>
 <style>
     .overall {
         display: grid;
-        width: 800px;
-        height: 800px;
+        width: 600px;
+        height: 600px;
         grid-gap: 20px;
         background: white;
         grid-template-rows: auto auto auto auto;
@@ -24,7 +24,39 @@
             }
             .cell10{
                 grid-area: 4/1/4/1;
-            } 
+            
+            }
+            @media (max-width: 600px){
+            
+                .overall {
+        
+                    width: 400px;
+                    height: 400px;
+                    grid-gap: 20px;      
+        
+                    } 
+                    .overall div {
+                   background: #636363;
+                     }
+            }
+            @media (min-width: 1200px){
+            
+            .overall {
+    
+                width: 800px;
+                height: 800px;
+                grid-gap: 20px;      
+    
+                } 
+
+                .overall div {
+                  background: blue;
+    }
+        }
+
+
+
+
 </style>
 
 </head>
