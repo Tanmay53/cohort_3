@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .main{
+            height: auto;
+            height: auto;
+            display: grid;
+            grid-template-columns: 200px 300px 300px ;
+            grid-template-rows: 100px 600px;
+            grid-gap:20px;
+            justify-content: center;
+            margin-top:50px;
+        }
+        #box1{
+            grid-area: 1/1/2/4;
+            background-color: red;
+        }
+        #box2{
+            grid-area: 2/1/4/2;
+            background-color: yellowgreen;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+        #box3{
+            grid-area: 2/2/4/4;
+            background-color: teal;
+        }
+        @media(max-width: 768px){
+            .main{
+            height: auto;
+            height: auto;
+            display: grid;
+            grid-template-columns: 100px 200px 200px ;
+            grid-template-rows: 80px 400px;
+            grid-gap:20px;
+            justify-content: center;
+            margin-top:50px;
+        }
+        #box1{
+            grid-area: 1/1/2/4;
+            background-color: black;
+        }
+        #box2{
+            grid-area: 2/1/4/2;
+            background-color: blue;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+        #box3{
+            grid-area: 2/2/4/4;
+            background-color: goldenrod;
+        }
+        }
+    </style>
+</head>
+<body>
+     <div class="main">
+             <div id="box1"></div>
+             <div id="box2"></div>
+             <div id="box3"></div>
+         </div>
+
+     </div> 
+</body>
+</html>

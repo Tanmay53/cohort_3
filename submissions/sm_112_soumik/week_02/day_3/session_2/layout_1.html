@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+    .flexbox{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexbox div{
+        height: 450px;
+        width: 100px;
+        background-color: rgb(11, 104, 96);
+        margin: 10px;
+        border-radius: 2px;
+    }
+    @media only screen and (min-width: 600px) {
+        .flexbox{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexbox div{
+        height: 450px;
+        width: 100px;
+        background-color:red;
+        margin: 10px;
+        border-radius: 2px;  
+    } 
+    @media only screen and (min-width: 992px) {       
+        .flexbox{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .flexbox div{
+        height: 450px;
+        width: 100px;
+        background-color:royalblue;
+        margin: 10px;
+        border-radius: 2px;  } 
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

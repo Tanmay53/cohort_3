@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>grid2</title>
+  
+  <style>
+.cont {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows: 50px 50px;
+  width: 800px;
+  height:600px;
+  margin:auto;
+  }
+.red {
+  grid-area: 1 / 1 / span 1 / span 3;
+  background: red;
+ 
+}
+.green
+{
+  height:500px;
+  background: green;
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+.blue
+{
+    height:500px;
+  background: blue;
+  grid-area: 2 / 2 / span 1 / span 2;
+}
+@media(max-width: 600px)
+{
+    .cont {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 200px  ;
+  grid-template-rows: 50px 100px 100px;
+  width: 400px;
+  height:600px;
+  margin:auto;
+  }   
+  .red {
+  grid-area: 1 / 1 / span 1 / span 3;
+  background:pink;
+  }
+  .green
+{
+  height:100px;
+  background: greenyellow;
+  grid-area: 2 / 1 / span 1 / span 3;
+}
+.blue
+{
+    height:200px;
+  background:blueviolet;
+  grid-area: 3 / 1 / span 1 / span 3;
+}
+}
+
+  </style>
+  </head>
+  <body>
+      <div class="cont">
+      <div class="red"></div>
+       <div class="green"></div>
+      <div class="blue"></div>
+     
+</div>
+  </body>
+</html>
