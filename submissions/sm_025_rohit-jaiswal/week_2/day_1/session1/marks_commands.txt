@@ -1,0 +1,8 @@
+1.grep India marks_rand_2000.txt
+2.grep Pak marks_rand_2000.txt
+3.grep India marks_rand_2000.txt | sort -g -r | head -n 100
+4.grep Pak marks_rand_2000.txt | sort -g -r | head -n 100
+5.grep India marks_rand_2000.txt | sort -g -r | head -n 3
+6.grep Pak marks_rand_2000.txt | sort -g -r | head -n 3
+7.grep India marks_rand_2000.txt | sort -g -r | tail -n 5
+8.grep Pak marks_rand_2000.txt | sort -g -r | tail -n 5

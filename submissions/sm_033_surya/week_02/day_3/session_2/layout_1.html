@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>layout_1</title>
+    <style>
+        #around {
+            display: flex;
+            width: 900px;
+            flex-direction: row;
+            margin: 40px;
+        }
+        #around div {
+            height: 600px;
+            width: 300px;
+            background: green;
+        }
+
+        #around div {
+            margin-right: 50px;
+        }
+        @media (max-width:600px){
+            #around {
+                width: 700px;
+                margin: 20px;
+            }
+            #around div {
+                height: 400px;
+                width: 200px;
+                background: red;
+            }
+            #around div {
+                border: 5px solid green;
+            }
+            
+        }
+        @media (min-width:1300px )
+        {
+            #around div {
+                height: 700px;
+                width: 200px;
+                background: purple;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id ="around">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>
