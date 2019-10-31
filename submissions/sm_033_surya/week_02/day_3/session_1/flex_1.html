@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>flex_1</title>
+    <style>
+        #around {
+            display: flex;
+            width: 900px;
+            flex-direction: row;
+            margin: 40px;
+        }
+        #around div {
+            height: 600px;
+            width: 300px;
+            background: green;
+        }
+
+        #around div:nth-of-type(2n){
+            flex-shrink: 2;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+<div id ="around">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>
