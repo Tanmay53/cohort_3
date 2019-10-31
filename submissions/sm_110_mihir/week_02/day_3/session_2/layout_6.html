@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout6</title>
+    <style>
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px;
+            grid-gap: 20px;
+
+        }
+
+        .grid-wrapper div {
+            background-color: pink;
+        }
+
+        .grid-wrapper .hide{
+            visibility: hidden;
+        }
+        @media (min-width: 600px){
+            .grid-wrapper div{
+                background-color:aqua;
+                
+            }
+
+        }
+
+        @media (min-width: 1200px){
+            .grid-wrapper div{
+                background-color: seagreen;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="hide"></div>
+        
+        <div></div>
+        <div></div>
+        <div class="hide"></div>
+        <div class="hide"></div>
+        <div></div>
+        
+    </div>
+</body>
+</html>
