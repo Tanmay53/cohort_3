@@ -1,0 +1,59 @@
+<!-- 
+*/ student_code : sm_108 
+*/ Author :  Krishna Kant Sharma
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>grid_2</title>
+    <style>
+      .grid {
+        display: grid;
+        max-width: 800px;
+        grid-template-areas:
+          "div_1 div_1 div_1 div_1 div_1 div_1"
+          "div_2 div_2 div_3 div_3 div_3 div_3";
+        grid-gap: 10px;
+        margin: auto;
+      }
+      .grid div:nth-child(1) {
+        grid-area: div_1;
+        height: 40px;
+        border-radius: 4px;
+        background: red;
+      }
+      .grid div:nth-child(2) {
+        grid-area: div_2;
+        background: green;
+        border-radius: 4px;
+        height: 500px;
+      }
+      .grid div:nth-child(3) {
+        grid-area: div_3;
+        background: seagreen;
+        border-radius: 4px;
+        height: 500px;
+      }
+
+      @media only screen and (max-width: 500px) {
+        .grid {
+          grid-template-areas:
+            "div_1 div_1 div_1 "
+            "div_1 div_1 div_1 "
+            "div_2 div_2 div_2 "
+            "div_3 div_3 div_3";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

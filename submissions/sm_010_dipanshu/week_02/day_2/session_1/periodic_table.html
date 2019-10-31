@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+
+            .main-window {
+                margin-top: 125px;
+                margin-left: 350px;
+            }
+
+            .heading {
+                font-size: 30px;
+                margin-left: 250px;
+            }
+
+            .side-pane {
+                float: left;
+                height: auto;
+            }
+            
+            .sp-r1 {
+                height: 70px;
+                width: 190px;
+            }
+            
+            .sp-r1 div{
+                float: left;
+                height: 50px;
+                width: 50px;
+                margin: 5px;
+                background: blue;
+                border: 1px solid black;
+            }
+
+            #hidden {
+                background: white;
+                border: 1px solid white;
+            }
+
+            .middle-pane {
+                float: left;
+                width: 535px;
+                height: auto;
+            }
+
+            .mp-r1 {
+                float: left;
+                height: 170px;
+                width: 170px;
+                margin: 10px;
+                margin-top: 28px;
+                background: #89a02c;
+                border: 1px solid black;
+            }
+
+            #mp-r1-t1 {
+                text-align: right;
+                margin-right: 10px;
+                margin-bottom: 0px;
+            }
+
+            #mp-r1-t2 {
+                text-align: left;
+                margin: 0px 0px 10px 10px;
+                font-size: 60px;
+                font-weight: bold;
+            }
+
+            #mp-r1-t3 {
+                text-align: left;
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+
+            .mp-r2 {
+                float: left;
+                margin: 10px;
+                margin-top: 6px;
+                width: auto;
+                height: auto;
+            }
+
+            .mp-r2-boxes div {
+                float: left;
+                height: 50px;
+                width: 50px;
+                margin-right: 5px;
+                margin-bottom: 18px;
+                background: blue;
+                border: 1px solid black;
+            }
+
+            .rp-r1 {
+                height: 70px;
+                width: 1200px;
+            }
+
+            .rp-r1>div{
+                float: left;
+                height: 50px;
+                width: 50px;
+                margin: 5px;
+                background: blue;
+                border: 1px solid black;
+            }
+
+            #c1 {
+                background: #a90002;
+            }
+
+            #t1 {
+                margin: 10px 0px 0px 15px;
+                font-weight: bold;
+                font-size: 25px;
+                color: white;
+            }
+
+            #c2 {
+                background: #89a02c;
+            }
+
+            #c3 {
+                background: #ff5555;
+            }
+
+            #t2 {
+                text-align: center;
+                margin-top: 16px;
+            }
+
+            #c4 {
+                background: #ffe6d5;
+                border: 6px solid black;
+                width: 40px;
+                height: 40px;
+            }
+
+            #c5 {
+                background: #ffcc00;
+            }
+
+            #c6 {
+                background: #ff0066;
+            }
+
+            #c7 {
+                background: #5aa02c;
+            }
+
+            #c8 {
+                background: #aa0087;
+            }
+
+            #c9 {
+                background: #ff6600;
+            }
+
+            #c10 {
+                background: #6d535e;
+            }
+
+            .bottom-pane {
+                clear: left;
+                float: left;
+                margin-left: 250px;
+            }
+
+            .bp-r1 div{
+                float: left;
+                height: 40px;
+                width: 40px;
+                background: #47582e;
+                border: 1px solid #66614d;
+            }
+
+            .bp-r2 div{
+                float: left;
+                height: 40px;
+                width: 40px;
+                background: #95bc5f;
+                border: 1px solid #66614d;
+            }
+
+            #bp-r1-t1 {
+                color: white;       
+            }
+
+            #bp-r2-t2 {
+                margin-top: 6px;
+                margin-left:4px;     
+            }
+
+            #bp-r2-t3 {
+                margin-bottom: 2px;   
+                text-align: right;
+            }
+
+        </style>
+        <title>
+            Periodic Table
+        </title>
+    </head>
+    <body>
+        <div class="main-window">
+            <div>
+                <p class="heading">THE PERIODIC TABLE OF ELEMENTS</p>
+            </div>
+            <div>
+                <div class="side-pane">
+                    <div class="sp-r1">
+                        <div id="c1">
+                            <p id="t1">H</p>
+                        </div>
+                        <div id="hidden"></div>
+                        <div id="hidden"></div>
+                    </div>
+                    <div class="sp-r1">
+                        <div id="c2"></div>
+                        <div id="c3">
+                            <p id="t2">
+                                4
+                            </p>
+                        </div>
+                        <div id="hidden"></div>
+                    </div>
+                    <div class="sp-r1">
+                        <div id="c2"></div>
+                        <div id="c3">
+                            <p id="t2">
+                                12
+                            </p>
+                        </div>
+                        <div id="hidden"></div>
+                    </div>
+                    <div class="sp-r1">
+                        <div id="c2"></div>
+                        <div id="c3">
+                            <p id="t2">
+                                20
+                            </p>
+                        </div>
+                        <div id="hidden"></div>
+                    </div>
+                    <div class="sp-r1">
+                        <div id="c2"></div>
+                        <div id="c3">
+                            <p id="t2">
+                                38
+                            </p>
+                        </div>
+                        <div id="hidden"></div>
+                    </div>
+                    <div class="sp-r1">
+                        <div id="c2"></div>
+                        <div id="c3">
+                            <p id="t2">
+                                56
+                            </p>
+                        </div>
+                        <div id="c4"></div>
+                    </div>
+                    <div class="sp-r1">
+                        <div id="c2"></div>
+                        <div id="c3">
+                            <p id="t2">
+                                88
+                            </p>
+                        </div>
+                        <div id="c4"></div>
+                    </div>
+                </div>
+                <div class="middle-pane">
+                    <div class="mp-r1">
+                        <p id="mp-r1-t1">14</p>
+                        <p id="mp-r1-t2">Si</p>
+                        <p id="mp-r1-t3">Silicon</p>
+                    </div>
+                    <div class="mp-r2">
+                        <div class="mp-r2-boxes">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="mp-r2-boxes">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>   
+                        <div class="mp-r2-boxes">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>  
+                        <div class="mp-r2-boxes">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>  
+                    </div>
+                </div>
+                <div>
+                    <div class="rp-r1">
+                        <div id="hidden"></div>
+                        <div id="hidden"></div>
+                        <div id="hidden"></div>
+                        <div id="hidden"></div>
+                        <div id="hidden"></div>
+                        <div id="c5"></div>
+                    </div>
+                    <div class="rp-r1">
+                        <div id="c8"></div>
+                        <div id="c7"></div>
+                        <div id="c7"></div>
+                        <div id="c7"></div>
+                        <div id="c6"></div>
+                        <div id="c5"></div>
+                    </div>
+                    <div class="rp-r1">
+                        <div id="c9"></div>
+                        <div id="c8"></div>
+                        <div id="c7"></div>
+                        <div id="c7"></div>
+                        <div id="c6"></div>
+                        <div id="c5"></div>
+                    </div>
+                    <div class="rp-r1">
+                        <div id="c9"></div>
+                        <div id="c8"></div>
+                        <div id="c8"></div>
+                        <div id="c7"></div>
+                        <div id="c6"></div>
+                        <div id="c5"></div>
+                    </div>
+                    <div class="rp-r1">
+                        <div id="c9"></div>
+                        <div id="c9"></div>
+                        <div id="c8"></div>
+                        <div id="c8"></div>
+                        <div id="c6"></div>
+                        <div id="c5"></div>
+                    </div>
+                    <div class="rp-r1">
+                        <div id="c9"></div>
+                        <div id="c9"></div>
+                        <div id="c9"></div>
+                        <div id="c8"></div>
+                        <div id="c6"></div>
+                        <div id="c5"></div>
+                    </div>
+                    <div class="rp-r1">
+                        <div id="c10"></div>
+                        <div id="c10"></div>
+                        <div id="c10"></div>
+                        <div id="c10"></div>
+                        <div id="c10"></div>
+                        <div id="c10"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-pane">
+                <div class="bp-r1">
+                        <div>
+                            <p id="bp-r1-t1">La</p>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="bp-r2">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div>
+                            <p id="bp-r2-t2">Am</p>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div>
+                                <p id="bp-r2-t3">No</p>
+                        </div>
+                    </div>   
+            </div>
+        </div>
+    </body>
+</html>

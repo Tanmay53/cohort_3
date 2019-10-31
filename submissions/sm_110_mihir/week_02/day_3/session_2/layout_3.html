@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout_3</title>
+    <style>
+        .flex_box {
+            display: flex;
+                       
+        }
+
+        .flex_box div{
+            background-color: aqua;
+            margin: 10px;
+            
+            height: 100px;
+            width: 100px;
+        }
+        @media (min-width: 600px){
+            .flex_box div{
+                background-color: green;
+                
+            }
+
+        }
+
+        @media (min-width: 1200px){
+            .flex_box div{
+                background-color: seagreen;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex_box">
+        <div></div>
+    </div>
+    <div class="flex_box">
+            <div></div>
+            <div></div>
+    </div>
+    <div class="flex_box">
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    <div class="flex_box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+</body>
+</html>
