@@ -3,16 +3,49 @@
   <head>
     <title>Layout 1</title>
     <style>
-      .cont {
+      html, body {
+        height: 100%;
+      }
+      body {
         display: flex;
-        flex-direction: row;
+        align-items: center;
         justify-content: center;
       }
-      .cont div {
-        background: green;
-        width: 100px;
-        height: 400px;
-        margin: 10px;
+      .cont {
+        display: flex;
+      }
+      @media (max-width: 600px) {
+        .cont {
+          flex-direction: column;
+        }
+        .cont div {
+          background: yellow;
+          width: 100px;
+          height: 100px;
+          margin: 10px;
+        }
+      }
+      @media (min-width: 600px) {
+        .cont {
+          flex-direction: column;
+        }
+        .cont div {
+          background: red;
+          width: 400px;
+          height: 100px;
+          margin: 10px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .cont {
+          flex-direction: row;
+        }
+        .cont div {
+          background: green;
+          width: 100px;
+          height: 400px;
+          margin: 10px;
+        }
       }
     </style>
   </head>
