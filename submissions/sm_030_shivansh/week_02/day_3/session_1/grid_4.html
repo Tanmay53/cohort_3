@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid_4</title>
+    <style>
+      .grid-box {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+        grid-gap: 20px;
+      }
+
+      .grid-box div {
+        height: 100px;
+        background-color: lawngreen;
+      }
+      .span1 {
+        grid-area: 1/ 2 / 1 / 5;
+      }
+      .span2 {
+        grid-area: 2/ 1 / 2 / 4;
+      }
+      .span3 {
+        grid-area: 3/ 3/ 3 / 6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-box">
+      <div></div>
+      <div class="span1"></div>
+      <div></div>
+
+      <div class="span2"></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+      <div class="span3"></div>
+    </div>
+  </body>
+</html>
