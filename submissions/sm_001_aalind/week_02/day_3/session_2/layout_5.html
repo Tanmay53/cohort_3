@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Grid 2</title>
+  <title>Layout 5</title>
   <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: grid;
+      align-items: center;
+    }
     #cont {
       display: grid;
       grid-template-columns: 200px 500px;
@@ -19,6 +26,12 @@
     }
     #cont div:last-child {
       background: blue;
+    }
+    @media (max-width: 1024px) {
+      #cont {
+        grid-template-columns: 500px;
+        grid-template-rows: 50px 50px 50px;
+      }
     }
   </style>
 </head>
