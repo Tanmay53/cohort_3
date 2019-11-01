@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.grid_1{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 40px 600px;
+    grid-gap: 30px;
+    width: 70%;
+
+}
+#box1{
+    grid-area: 1 / 1 / span 1 /span 3;
+    background-color: red;
+    border-radius: 5px;
+
+}
+#box2{
+    grid-area: 2 / 1 /span 1 /span 1;
+    background-color: green;
+    border-radius: 5px;
+
+    
+}
+#box3{
+    grid-area: 2 / 2 /span1 /span 2;
+    background-color: cyan;
+    border-radius: 5px;
+
+}
+@media only screen and (min-width: 560px) {
+            body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box_1{
+            display: grid;
+            grid-gap:10px;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: auto auto;
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .box_1 div{
+            background-color: rgb(46, 9, 9);
+            height:80px;
+            width: 80px;
+            border-radius: 5px;
+
+        }
+        } @media only screen and (min-width: 560px) {
+            body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box_1{
+            display: grid;
+            grid-gap:10px;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: auto auto;
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .box_1 div{
+            background-color: rgb(47, 0, 255);
+            height:80px;
+            width: 80px;
+            border-radius: 5px;
+
+        }
+        } @media only screen and (min-width: 560px) {
+            body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box_1{
+            display: grid;
+            grid-gap:10px;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: auto auto;
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .box_1 div{
+            background-color:darkgreen;
+            height:80px;
+            width: 80px;
+            border-radius: 5px;
+
+        }
+        }
+
+
+
+</style>
+<body>
+    <div class="grid_1">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+</body>
+</html>

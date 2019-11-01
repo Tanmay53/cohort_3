@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Layout 2</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      #parent-div {
+        margin-top: 100px;
+        display: inline-block;
+      }
+      .row1 {
+        background: green;
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+        float: left;
+      }
+      .row2 {
+        background: red;
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+        float: left;
+      }
+      .row3 {
+        background: blue;
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+        float: left;
+      }
+      .large-div {
+        width: 250px;
+      }
+      .mid-div {
+        clear: left;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent-div">
+      <div class="row1"></div>
+      <div class="row1 large-div"></div>
+      <div class="row1"></div>
+
+      <div class="mid-div"></div>
+
+      <div class="row2 large-div"></div>
+      <div class="row2"></div>
+      <div class="row2"></div>
+
+      <div class="mid-div"></div>
+
+      <div class="row3"></div>
+      <div class="row3"></div>
+      <div class="row3 large-div"></div>
+
+      <div class="mid-div"></div>
+    </div>
+  </body>
+</html>

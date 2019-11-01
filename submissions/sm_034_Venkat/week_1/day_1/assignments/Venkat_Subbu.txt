@@ -1,8 +1,277 @@
-superheros
-numbers
-logs
-lists
-junk
-food
-dumps
-dummy
+data/:
+total 32
+drwxr-xr-x 4 venkat venkat 4096 Oct 30 22:56 dummy
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 23:17 dump
+drwxr-xr-x 5 venkat venkat 4096 Oct 30 23:25 food
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 junk
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 lists
+drwxr-xr-x 4 venkat venkat 4096 Oct 30 23:18 logs
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 numbers
+drwxr-xr-x 6 venkat venkat 4096 Oct 30 23:32 superheros
+
+data/dummy:
+total 8
+drwxr-xr-x 5 venkat venkat 4096 Oct 30 22:56 course
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 json
+
+data/dummy/course:
+total 12
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 all
+drwxr-xr-x 8 venkat venkat 4096 Oct 30 22:56 week_1
+drwxr-xr-x 7 venkat venkat 4096 Oct 30 22:56 week_2
+
+data/dummy/course/all:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 overall.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d1_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d1_s2.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d2_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d2_s2.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d3_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d3_s2.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d4_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d4_s2.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d5_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d5_s2.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d1_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d1_s2.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d2_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d2_s2.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d4_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d4_s2.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d5_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d5_s2.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w3_d3_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w3_d3_s2.txt
+
+data/dummy/course/week_1:
+total 20
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day_1
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day_2
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day_3
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day_4
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day_5
+
+data/dummy/course/week_1/day_1:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d1_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d1_s2.txt
+
+data/dummy/course/week_1/day_2:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d2_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d2_s2.txt
+
+data/dummy/course/week_1/day_3:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d3_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d3_s2.txt
+
+data/dummy/course/week_1/day_4:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d4_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d4_s2.txt
+
+data/dummy/course/week_1/day_5:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d5_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w1_d5_s2.txt
+
+data/dummy/course/week_2:
+total 20
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day_1
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day_2
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day_3
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day-4
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 day_5
+
+data/dummy/course/week_2/day_1:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d1_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d1_s2.txt
+
+data/dummy/course/week_2/day_2:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d2_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d2_s2.txt
+
+data/dummy/course/week_2/day_3:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w3_d3_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w3_d3_s2.txt
+
+data/dummy/course/week_2/day-4:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d4_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d4_s2.txt
+
+data/dummy/course/week_2/day_5:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d5_s1.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 w2_d5_s2.txt
+
+data/dummy/json:
+total 492
+-rw-r--r-- 1 venkat venkat  80747 Oct 30 22:56 cars_mileage.json
+-rw-r--r-- 1 venkat venkat 112567 Oct 30 22:56 company_valuations.json
+-rw-r--r-- 1 venkat venkat  98599 Oct 30 22:56 employee_salaries.json
+-rw-r--r-- 1 venkat venkat 103532 Oct 30 22:56 movies_collections.json
+-rw-r--r-- 1 venkat venkat  95889 Oct 30 22:56 student_marks.json
+
+data/dump:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2014.dump
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2015.dump
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2016.dump
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2017.dump
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018.dump
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019.dump
+
+data/food:
+total 12
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 23:24 fruits
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 23:25 meat
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 23:25 vegetables
+
+data/food/fruits:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 fruit_apple.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 fruit_banana.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 fruit_grapes.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 fruit_mango.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 fruit_orange.txt
+
+data/food/meat:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 meat_chicken.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 meat_eggs.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 meat_fish.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 meat_mutton.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 meat_prawns.txt
+
+data/food/vegetables:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 vegetable_beans.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 vegetable_beetroot.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 vegetable_brinjal.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 vegetable_carrot.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 vegetable_potato.txt
+
+data/junk:
+total 124
+-rw-r--r-- 1 venkat venkat 16370 Oct 30 22:56 city_names_orders_rand.csv
+-rw-r--r-- 1 venkat venkat  4194 Oct 30 22:56 emails_rand.txt
+-rw-r--r-- 1 venkat venkat 69347 Oct 30 22:56 marks_rand_2000.csv
+-rw-r--r-- 1 venkat venkat  1360 Oct 30 22:56 names_100.txt
+-rw-r--r-- 1 venkat venkat 25000 Oct 30 22:56 random_ids.txt
+
+data/lists:
+total 628
+-rw-r--r-- 1 venkat venkat 391996 Oct 30 22:56 colornames.csv
+-rw-r--r-- 1 venkat venkat  83017 Oct 30 22:56 common_passwords.txt
+-rw-r--r-- 1 venkat venkat   3670 Oct 30 22:56 countries.csv
+-rw-r--r-- 1 venkat venkat   7368 Oct 30 22:56 currency.csv
+-rw-r--r-- 1 venkat venkat 100507 Oct 30 22:56 github_languages.yml
+-rw-r--r-- 1 venkat venkat   8012 Oct 30 22:56 language.csv
+-rw-r--r-- 1 venkat venkat  15701 Oct 30 22:56 locales.json
+-rw-r--r-- 1 venkat venkat  23312 Oct 30 22:56 tld.txt
+
+data/logs:
+total 8
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 23:15 access
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 23:17 errors
+
+data/logs/access:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-01-access.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-02-access.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-03-access.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-04-access.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-05-access.log
+
+data/logs/errors:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-01-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-02-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-03-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-04-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-05-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-06-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-07-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-08-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-09-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-10-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-11-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2018-12-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-01-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-02-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-03-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-04-error.log
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 2019-05-error.log
+
+data/numbers:
+total 36
+-rw-r--r-- 1 venkat venkat 2 Oct 30 22:56 even_2.txt
+-rw-r--r-- 1 venkat venkat 2 Oct 30 22:56 even_4.txt
+-rw-r--r-- 1 venkat venkat 2 Oct 30 22:56 even_6.txt
+-rw-r--r-- 1 venkat venkat 2 Oct 30 22:56 even_8.txt
+-rw-r--r-- 1 venkat venkat 2 Oct 30 22:56 odd_1.txt
+-rw-r--r-- 1 venkat venkat 2 Oct 30 22:56 odd_3.txt
+-rw-r--r-- 1 venkat venkat 2 Oct 30 22:56 odd_5.txt
+-rw-r--r-- 1 venkat venkat 2 Oct 30 22:56 odd_7.txt
+-rw-r--r-- 1 venkat venkat 2 Oct 30 22:56 odd_9.txt
+
+data/superheros:
+total 16
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 avengers
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 23:30 guardians
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 22:56 justice_league
+drwxr-xr-x 2 venkat venkat 4096 Oct 30 23:37 originals
+
+data/superheros/avengers:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 ant-man.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 black_panther.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 black_widow.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 captain_america.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 captain_marvel.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 doctor_strange.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 drax.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 falcon.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 gamora.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 groot.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 hawkeye.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 hulk.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 iron_man.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 mantis.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 rocket_racoon.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 spider-man.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 star-lord.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 thor.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 wasp.txt
+
+data/superheros/guardians:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 23:30 drax.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 23:30 gamora.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 23:30 groot.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 23:30 mantis.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 23:30 rocket_racoon.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 23:30 star-lord.txt
+
+data/superheros/justice_league:
+total 0
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 aquaman.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 batman.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 flash.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 green_lantern.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 martin_manhunter.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 superman.txt
+-rw-r--r-- 1 venkat venkat 0 Oct 30 22:56 wonder_woman.txt
+
+data/superheros/originals:
+total 16
+-rw-r--r-- 1 venkat venkat 12 Oct 30 23:34 bat_man
+-rw-r--r-- 1 venkat venkat 12 Oct 30 23:36 flash
+-rw-r--r-- 1 venkat venkat 13 Oct 30 23:37 hulk
+-rw-r--r-- 1 venkat venkat 11 Oct 30 23:33 iron_man

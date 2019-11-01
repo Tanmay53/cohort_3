@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout_3</title>
+    <style>
+    .flex {
+        display: flex;
+        flex-direction:row;
+        width:500px;
+        height:600px;
+        flex-wrap:wrap;
+        margin:auto;  
+    }
+        .flex .box {
+            width:100px;
+            height:100px;
+            margin:10px; 
+            background:blue;
+        }
+        .flex .box:nth-child(4n), .box:nth-child(2), .box:nth-child(3), .box:nth-child(7) {
+            background:white;
+        }
+        #box16{
+            background:blue;
+        }
+        @media (max-width:1000px) {
+            .flex {
+        display: flex;
+        flex-direction:row;
+        width:500px;
+        height:600px;
+        flex-wrap:wrap;
+        margin:auto;  
+    }
+        .flex .box {
+            width:100px;
+            height:100px;
+            margin:10px; 
+            background:green;
+        }
+        .flex .box:nth-child(4n), .box:nth-child(2), .box:nth-child(3), .box:nth-child(7) {
+            background:white;
+        }
+        #box16{
+            background:green;
+        }
+        }
+        @media (max-width:700px) {
+            .flex {
+        display: flex;
+        flex-direction:row-reverse;
+        width:400px;
+        height:600px;
+        flex-wrap:wrap;
+        margin:auto;  
+    }
+        .flex .box {
+            width:80px;
+            height:80px;
+            margin:10px; 
+            background:darkorange;
+        }
+        .flex .box:nth-child(4n), .box:nth-child(2), .box:nth-child(3), .box:nth-child(7) {
+            background:white;
+        }
+        #box16{
+            background:darkorange;
+        }
+        }
+
+
+
+        @media (max-width:400px) {
+            .flex {
+        display: flex;
+        flex-direction:row;
+        width:400px;
+        height:600px;
+        flex-wrap:wrap;
+        margin:auto;  
+    }
+        .flex .box ,#box16{
+            width:70px;
+            height:70px;
+            margin:10px;
+            background:cyan;
+            border:1px solid black;
+        }
+        .flex .box:nth-child(4n), .box:nth-child(2), .box:nth-child(3), .box:nth-child(7) {
+            background:white;
+            border:none;
+        }
+        
+    
+    </style>
+
+
+
+</head>
+<body>
+    <div class="flex">
+        <div class="box"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="box"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box" id="box16"></div>
+
+
+    </div>
+
+
+
+
+    
+</body>
+</html>
