@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout 5</title>
+        <style type="text/css">
+            .grid {
+                display: grid;
+                grid-gap: 15px;
+                grid-template-rows: 100px 400px;
+                grid-template-columns: 100px 400px;
+            }
+        #red {
+            background-color: red;
+            grid-area: 1 / 1 / 2 / span 2;
+        }
+        #green {
+            background-color: green;
+        }
+        #blue {
+            background-color: blue;
+        }
+        @media (max-width: 900px) {
+            .grid {
+                grid-gap: 10px;
+                grid-template-columns: 50px 200px;
+                grid-template-rows: 50px 200px;
+            }
+        }
+        @media (max-width: 500px) {
+            .grid {
+                grid-gap:5px;
+                grid-template-rows: 25px 100px;
+                grid-template-columns: 25px 100px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div id="red"></div>
+            <div id="green"></div>
+            <div id="blue"></div>
+        </div>
+    </body>
+</html>

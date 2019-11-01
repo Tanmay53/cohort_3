@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Flex 1 Layout</title>
+ <style>
+
+ .rectangular-flex-box {
+  display: flex;
+  height: 500px;
+ 
+ }
+
+ .rectangular-flex-box div{
+  display: flex;
+  flex-direction: row;
+  height: 550px;
+  width: 120px;
+  padding: 10px;
+  margin: 20px;
+  background-color: seagreen;
+  border-radius: 5px;
+ }
+
+ .body {
+ margin: 5%;
+ margin-left: 230px;
+ }
+ </style>
+</head>
+<body class="body">
+ <div class="rectangular-flex-box">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+ </div>
+</body>
+</html>
