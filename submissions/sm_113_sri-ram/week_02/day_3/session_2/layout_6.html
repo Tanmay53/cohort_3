@@ -1,0 +1,66 @@
+<html>
+
+
+<head></head>
+<style>
+    .grid {
+        grid-gap: 10px;
+        grid-template-areas: auto;
+        float: left;
+    }
+
+    .grid div {
+
+        background: rgb(164, 18, 201);
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        border-radius: 4px;
+    }
+
+    .main {
+        padding: 100px 0px 0px 480px;
+    }
+
+    @media(min-width: 300px) {
+        body {
+            background: blue;
+            margin: auto auto auto auto;
+            margin-block: center;
+        }
+    }
+
+    @media(max-width: 800px) {
+        body {
+            background: brown;
+            margin: auto auto auto auto;
+        }
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="grid">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="grid">
+            <div></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

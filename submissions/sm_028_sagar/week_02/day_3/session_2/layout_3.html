@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout 5</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 120px 120px 120px 120px;
+            grid-template-rows: 120px 120px 120px 120px;
+            width: 550px;
+            margin: 50px auto;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .grid div {
+            background-color: rgba(29, 40, 138, 0.384);
+            margin: 10px 15px;
+            border-radius: 5px;
+        }
+
+        @media (max-width:500px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 80px 80px 80px 80px;
+                grid-template-rows: 80px 80px 80px 80px;
+                background-color: black;
+                width: 330px;
+                margin: 30px auto;
+            }
+
+            .hidden {
+                visibility: hidden;
+            }
+
+            .grid div {
+                background-color: white;
+                margin: 10px 10px;
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div></div>
+        <div class="hidden"></div>
+        <div class="hidden"></div>
+        <div class="hidden"></div>
+        <div></div>
+        <div></div>
+        <div class="hidden"></div>
+        <div class="hidden"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="hidden"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+
+</html>
