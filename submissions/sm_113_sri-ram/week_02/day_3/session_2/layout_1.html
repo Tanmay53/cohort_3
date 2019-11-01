@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>layout_01</title>
+</head>
+
+
+<style>
+    .flexbox {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .flexbox div {
+        margin: 20px;
+        padding-top: 200px;
+        background: cyan;
+        height: 400px;
+        width: 100px;
+    }
+
+
+    #box {
+        flex-direction: row;
+    }
+
+    @media(min-width: 300px) {
+        body {
+            background: blue;
+        }
+    }
+
+    @media(max-width: 500px) {
+        body {
+            background: brown
+        }
+
+    }
+</style>
+
+<body>
+    <div class="flexbox" id="box">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
