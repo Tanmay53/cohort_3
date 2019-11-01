@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Layout 3</title>
+    <style>
+      html {
+        height: 100%;
+        margin: 0px;
+      }
+      body {
+        display: grid;
+        grid-gap: 20px;
+        font-family: arial;
+        color: grey;
+        font-size: 30px;
+        justify-content: center;
+      }
+      body > div:first-child {
+        background: yellow;
+        padding-left: 10px;
+        color: black;
+        font-size: 35px;
+      }
+      #div-2 {
+        background: red;
+        padding: 10px 0px 0px 10px;
+      }
+      .green-div {
+        background: green;
+        padding: 10px 0px 0px 10px;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          background: blue;
+          grid-template-columns: 350px;
+          grid-template-rows: 50px 150px 100px 100px 100px;
+        }
+      }
+
+      @media (min-width: 600px) {
+        body {
+          grid-template-columns: 220px 220px 220px;
+          grid-template-rows: 50px 250px 150px;
+          font-size: 25px;
+        }
+        body > div:first-child {
+          grid-area: 1 / 1 / 2 / span 3;
+        }
+        #div-2 {
+          grid-area: 2 / 1 / 3 / span 3;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        body {
+          grid-template-columns: 600px 300px;
+          grid-template-rows: 50px 150px 150px 150px;
+        }
+        body > div:first-child {
+          grid-area: 1 / 1 / span 1 / span 2;
+        }
+        #div-2 {
+          grid-area: 2 / 1 / span 3 / span 1;
+        }
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div>NAVIGATION</div>
+    <div id="div-2">LEFT BOX</div>
+    <div class="green-div">RIGHT BOX 1</div>
+    <div class="green-div">RIGHT BOX 2</div>
+    <div class="green-div">RIGHT BOX 3</div>
+  </body>
+</html>
