@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     .main{
+         width:auto;
+         height:auto;
+         display: grid;
+         grid-gap:20px;
+         grid-template-rows: repeat(2, 100px) ;
+         grid-template-columns: repeat(5, 100px);
+         margin-top:150px;
+         justify-content: center;
+     }
+     .main div{
+         background-color: teal;
+     }
+     @media(max-width: 768px){
+        .main{
+         width:auto;
+         height:auto;
+         display: grid;
+         grid-gap:20px;
+         grid-template-rows: repeat(2, 50px) ;
+         grid-template-columns: repeat(5, 50px);
+         margin-top:50px;
+         justify-content: center;
+     }
+     .main div{
+         background-color: red;
+     }
+     }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div></div>
+        <div></div>     
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>unix_flex</title>
+    <style>
+
+     
+        .box-flex {
+            display: flex;
+            
+            padding: 10px;
+            
+        }
+
+       
+        .box1{
+            background-color: aqua;
+            
+            justify-content: center;
+            
+            /* margin: 10px 25%; */
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .box1 h1 {
+            color: blue;
+            margin: 0px;
+            
+        }
+
+        .box1 h2{
+            margin: 0px;
+        }
+        .section2 {
+                width: 75%;
+                margin: 0 auto;
+                flex-direction: row;
+            }
+        
+
+        .box2 div {
+            margin: 10px;
+            padding: 10px;
+            
+        }
+
+        .box2 img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        #sal{
+            color: red;
+            font-size: 30px;
+            
+        }
+        #salman {
+            margin-top: 30px ;
+            font-size: 24px;
+            padding-top: 30px;
+        }
+        
+       .box3 {
+           background-color: red;
+           flex-direction: row;
+          
+           padding: 0px;
+        
+       }
+       
+       .box3 div{
+           
+           margin: 0px;
+           width: 650px;
+           padding: 10px;
+           flex-grow: 1;
+       }
+       .box3 .white{
+            margin-top: 10px;
+            color: white;  
+            font-size: 30px         
+       }
+       .right_align {
+           border-left: 10px solid black;
+           text-align: right;
+       }
+
+       @media (min-width: 400px){
+           
+            #verticle {
+               flex-direction: column;
+               justify-content: center;
+           }
+           /*#verticle img{
+               width: 400px;
+           } */
+           
+
+        }
+
+        @media (min-width: 700px){
+            .box1 {
+                width: 300px;
+                margin: 0 auto;
+            }
+            .box1 img{
+                width: 200px;
+                height: 200px;
+                display: block;
+                margin: 0 auto;
+            }
+            #verticle {
+                flex-direction: row;
+            }
+        } 
+        
+    </style>
+</head>
+<body>
+    <div class="box-flex box1">
+        <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="linus">
+        <h1>Linus Torvalds</h1>
+        <h2>The creator of Linux & Git</h2>
+    </div>
+    <div class="box-flex section2" id="verticle">
+        <div><img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg" alt="sal khan"></div>
+        <div class="box2">
+            <div id="sal">Sal Khan</div>
+            <div id="salman">Salman Khan is the founder of the Khan Academy which has a mission of providing a free world-class education for anyone, anywhere.</div>
+        </div>
+    </div>
+    
+    <div class="box-flex box3">
+        <div class="white">Ken Thompson</div>
+        
+        <div class="white right_align">Dennis Ritchie</div>
+    </div>
+    <div class="box-flex box3">
+        <div>Designed and Implemented the original Unix operating system</div>
+        
+        <div class="right_align">the creator of C programming Language</div>
+    </div>
+</body>
+</html>

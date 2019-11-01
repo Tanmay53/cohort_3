@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid 2</title>
+        <style type="text/css">
+            .grid {
+                display: grid;
+                grid-template-rows: 100px 350px;
+                grid-template-columns: 100px 350px;
+                grid-gap: 20px;
+            }
+            #red {
+                background-color: red;
+                grid-area: 1 / 1 / 2 / span 2;
+            }
+            #green {
+                background-color: green;
+            }
+            #blue {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div id="red"></div>
+            <div id="green"></div>
+            <div id="blue"></div>
+        </div>
+    </body>
+</html>

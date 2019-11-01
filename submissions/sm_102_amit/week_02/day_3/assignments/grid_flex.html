@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Grid Flex</title>
+    <style>
+      .container {
+        margin: 100px auto;
+        width: 1150px;
+        display: flex;
+      }
+      .text-center {
+        margin-top: 100px;
+        text-align: center;
+      }
+      .d-grid {
+        display: grid;
+      }
+      .element {
+        height: 38px;
+        width: 38px;
+        padding: 5px;
+        background-color: maroon;
+        border: 1px solid #000000;
+      }
+      .container .left-box {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px;
+      }
+      .container .center-box {
+        display: flex;
+        width: 594px;
+        flex-flow: row wrap;
+        margin: 200px 30px 0px;
+      }
+      .container .center-box .element {
+        margin: 16px 8px 0px;
+      }
+      .container .right-box {
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 16px;
+        margin: 60px 0px 0px;
+      }
+      .col-start {
+        grid-column-start: 1;
+      }
+      .bg-light-green {
+        background: #88a02c;
+      }
+      .bg-light-pink {
+        background: #f35153;
+      }
+      .bg-black {
+        background: #000000;
+      }
+      .bg-violet {
+        background: #3368fa;
+      }
+      .bg-purple {
+        background: #ac4587;
+      }
+      .bg-green {
+        background: #59a02c;
+      }
+      .bg-pink {
+        background: #f24d66;
+      }
+      .bg-orange {
+        background: #f56526;
+      }
+      .bg-light-maroon {
+        background: #6d535e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-center heading">THE PERIODIC TABLE OF ELEMENTS</h1>
+    <div class="container">
+      <div class="d-grid left-box">
+        <div class="element"></div>
+        <div class="element bg-light-green col-start"></div>
+        <div class="element bg-light-pink"></div>
+        <div class="element bg-light-green col-start"></div>
+        <div class="element bg-light-pink"></div>
+        <div class="element bg-light-green col-start"></div>
+        <div class="element bg-light-pink"></div>
+        <div class="element bg-light-green col-start"></div>
+        <div class="element bg-light-pink"></div>
+        <div class="element bg-light-green col-start"></div>
+        <div class="element bg-light-pink"></div>
+        <div class="element bg-black"></div>
+        <div class="element bg-light-green col-start"></div>
+        <div class="element bg-light-pink"></div>
+        <div class="element bg-black"></div>
+      </div>
+      <div class=" center-box">
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+        <div class="element bg-violet"></div>
+      </div>
+      <div class="d-grid right-box">
+        <div class="element bg-purple"></div>
+        <div class="element bg-green"></div>
+        <div class="element bg-green"></div>
+        <div class="element bg-green"></div>
+        <div class="element bg-pink"></div>
+
+        <div class="element bg-orange"></div>
+        <div class="element bg-purple"></div>
+        <div class="element bg-green"></div>
+        <div class="element bg-green"></div>
+        <div class="element bg-pink"></div>
+
+        <div class="element bg-orange"></div>
+        <div class="element bg-purple"></div>
+        <div class="element bg-purple"></div>
+        <div class="element bg-green"></div>
+        <div class="element bg-pink"></div>
+
+        <div class="element bg-orange"></div>
+        <div class="element bg-orange"></div>
+        <div class="element bg-purple"></div>
+        <div class="element bg-purple"></div>
+        <div class="element bg-pink"></div>
+
+        <div class="element bg-orange"></div>
+        <div class="element bg-orange"></div>
+        <div class="element bg-orange"></div>
+        <div class="element bg-purple"></div>
+        <div class="element bg-pink"></div>
+
+        <div class="element bg-light-maroon"></div>
+        <div class="element bg-light-maroon"></div>
+        <div class="element bg-light-maroon"></div>
+        <div class="element bg-light-maroon"></div>
+        <div class="element bg-light-maroon"></div>
+      </div>
+    </div>
+  </body>
+</html>

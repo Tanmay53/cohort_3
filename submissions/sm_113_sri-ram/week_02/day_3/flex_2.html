@@ -1,0 +1,40 @@
+<html>
+        
+        
+    <head>
+    <style>
+    .flexbox { display: flex;justify-content: center; }
+    .flexbox div{ margin: 10px;background: darkblue;height: 80px;width: 80px;   
+    }
+    
+    .main{height: 500px;width: 500px;padding: 100px ; margin:auto}
+
+    #box1 div:nth-of-type(2){  flex-grow: 2;}
+    #box2 div:nth-of-type(1){  flex-grow: 2;}
+    #box3 div:nth-of-type(3){   flex-grow: 2;}
+</style>
+</head>
+
+<body>
+<div class="main" >
+    <div class="flexbox" id="box1">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="flexbox" id="box2">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="flexbox" id="box3">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+        
+    
+    
+</body>
+</html>
