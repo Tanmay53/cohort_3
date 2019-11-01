@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unix</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0px;
+      }
+      #cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #linus-div {
+        margin-top: 10px;
+        background: lightgrey;
+        width: 400px;
+        font-family: arial;
+      }
+      #linus-div > div {
+        text-align: center;
+        padding: 15px 0px;
+      }
+      #linus-div img {
+        width: 100px;
+      }
+      #linus-div > div:nth-child(2) {
+        font-size: 30px;
+        font-weight: bold;
+        color: darkblue;
+      }
+      #linus-div > div:last-child {
+        font-size: 25px;
+      }
+      #sal-div {
+        margin-top: 40px;
+        font-family: arial;
+        display: grid;
+        grid-template-columns: auto 500px;
+        grid-template-rows: auto auto;
+      }
+      #sal-div > div:first-child {
+        grid-row: 1 / span 2;
+        padding-right: 20px;
+      }
+      #sal-div > div:nth-child(2) {
+        color: red;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      #sal-div > div:last-child {
+        font-size: 15px;
+      }
+      #sal-div img {
+        width: 100px;
+        display: block;
+      }
+      #footer-div {
+        margin-top: 30px;
+        width: 850px;
+        display: flex;
+        flex-direction: row;
+        background: #D35730;
+        padding: 20px;
+        font-family: arial;
+      }
+      #footer-div > div:first-child, #footer-div > div:last-child {
+        flex-grow: 1;
+      }
+      #footer-div > div:nth-child(2) {
+        background: black;
+        width: 5px;
+      }
+      #footer-div > div:last-child {
+        text-align: right
+      }
+      .foot-head {
+        color: white;
+        font-size: 25px;
+        padding-bottom: 30px;
+      }
+      .foot-foot {
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <div id="linus-div">
+        <div>
+          <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg"/>
+        </div>
+        <div>Linus Torvalds</div>
+        <div>The creator of Linux & Git</div>
+      </div>
+
+      <div id="sal-div">
+        <div>
+          <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg">
+        </div>
+        <div>Sal Khan</div>
+        <div>Salman is the founder of the Khan Academy which has a mission of providing a free world-class
+              education for anyone, anywhere.
+        </div>
+      </div>
+
+      <div id="footer-div">
+        <div>
+          <div class="foot-head">Ken Thompson</div>
+          <div class="foot-foot">Designed and Implemented the <br>
+          original Unix operating system</div>
+        </div>
+        <div></div>
+        <div>
+          <div class="foot-head">Dennis Ritchie</div>
+          <div class="foot-foot">The creator of C Programming Language</div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

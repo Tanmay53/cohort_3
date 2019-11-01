@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.grid1{
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px 80px;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.grid1 div{
+    height: 80px;
+    width: 80px;
+    background-color: seagreen;
+    grid-gap: 10px;
+}
+.grid1 div:nth-child(8),
+.grid1 div:nth-child(10){
+    grid-column-start:1;
+}
+@media only screen and (min-width: 560px) {
+    .grid1{
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px 80px;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.grid1 div{
+    height: 80px;
+    width: 80px;
+    background-color: darkred;
+    grid-gap: 10px;
+}
+.grid1 div:nth-child(8),
+.grid1 div:nth-child(10){
+    grid-column-start:1;
+}
+
+}
+
+
+</style>
+<body>
+    <div class="grid1">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
