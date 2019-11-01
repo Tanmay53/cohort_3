@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      .main{
+          margin:auto;
+          margin-top:50px;
+          width:800px;
+          height: 660px;
+      } 
+      .outerbox{
+          display: flex;
+          width: 800px;
+          height: 150px;
+          margin-bottom:40px;
+      }
+       .outerbox div{
+          background-color: teal;
+          width:150px;
+          height: 150px;
+          margin-right: 40px;
+        
+
+      }
+      #box1{
+          flex-grow: 2;
+      }
+      #box2{
+          flex-grow: 2;
+      }
+      #box3{
+          flex-grow: 2;
+      }
+      @media( max-width: 768px){
+        .main{
+          margin:auto;
+          margin-top:10px;
+          width: 250px;
+          height: 250px;
+      } 
+      .outerbox{
+          display: flex;
+          width: 450px;
+          height: 100px;
+          margin-bottom:10px;
+      }
+        .outerbox > div{
+            background-color: red;
+            width: 80px;
+            height: 80px;
+        }
+       
+      }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="outerbox">
+           <div></div>
+           <div id="box3"></div>
+           <div></div>
+        </div>
+        <div class="outerbox">
+           <div id="box1"></div>
+           <div></div>
+           <div></div>
+        </div>
+        <div class="outerbox">
+           <div></div>
+           <div></div>
+           <div id="box2"></div>
+        </div>
+    </div>    
+</body>
+</html>

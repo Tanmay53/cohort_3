@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Grid 4</title>
+    <style> 
+    #grid4{
+        background: white;
+        margin-left: 250px;
+        display: grid;
+        grid-template-columns: 150px 150px 150px 150px;
+        grid-template-rows: 150px 150px 150px;
+        grid-gap: 40px;
+        padding: 40px;
+    }
+    #grid4 div {
+        background: teal;
+
+    }
+    #blank1{
+        grid-area:1/2/span 1/span 2;
+    }
+    #blank2{
+        grid-area:2/1/span 1/span 2;
+    }
+    #blank3{
+        grid-area:3/3/span 1/span 2;
+    }
+    
+    </style>
+</head>
+
+<body>
+<div id="grid4">
+    <div></div>
+    <div id="blank1" ></div>
+
+    <div></div>
+    <div id="blank2"></div>
+    
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="blank3"></div>
+    
+</div>
+</body>
+</html>
