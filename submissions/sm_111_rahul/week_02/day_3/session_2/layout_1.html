@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    
+
+     .main{
+         width: 600px;
+         height: 700px;
+         display: flex;
+         justify-content: space-between;
+         margin: auto;
+         margin-top: 40px;
+         flex-direction: row;
+
+     }
+     .box{
+        background-color: teal;
+        height: 700px;
+        width: 120px;
+     }
+     @media (max-width: 600px){
+        .box{
+            background:tomato;
+            height: 100px;
+            width: 400px;
+            }
+            .main{
+         width: 400px;
+         height: 700px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+        
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+         <div class="box"></div>
+    </div>     
+</body>
+</html>

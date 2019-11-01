@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    .main{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .box{
+        height: 250px;
+        width: 300px;
+        background-color: plum;
+        margin: 20px;
+    }
+    .salkhan{
+        display: grid;
+        grid-template-rows: 80px 80px;
+        grid-template-columns: 150px 600px;
+        grid-gap:5px;
+        margin-left: 350px;
+    }
+    .box1{
+        grid-area: 1/1/span 2/span 1;
+       
+        
+    }
+    .box2{
+        grid-area: 1/2/span 1/span 1;
+        
+    }
+    .box3{
+        grid-area: 2/2/span 1/span 1;
+        
+    }
+    .lastgrid{
+        display: grid;
+        grid-template-rows: 80px 80px;
+        grid-template-columns: 500px 500px;
+        justify-content: center;
+        
+    }
+    .lastbox1{
+        grid-area: 1/1/span 1/span 1;
+        background: orange;
+        border-right-style: solid;
+        
+       
+    }
+    @media (max-width: 600px) {
+            .box {
+            background: greenyellow;
+                }
+            .salkhan{
+                justify-content: center;
+            }
+            
+       
+
+    }
+    
+    .lastbox2{
+        grid-area: 1/2/span 1/span 1;
+        background: orange;
+        
+    }
+    .lastbox3{
+        grid-area: 2/1/span 1/span 1;
+        background: orange;
+        border-right-style: solid;
+    }
+    .lastbox4{
+        grid-area: 2/2/span 1/span 1;
+        background: orange;
+        
+    }
+    
+
+
+
+    #id2{
+        height: 100px;width: 100px;margin:30px 100px 20px 100px;
+    }
+    #id3{
+        color: blue;margin:10px 40px 10px 40px;
+    }
+    #id4{
+        display: flex; margin-left: 60px;
+    }
+    #id5{
+        
+        height: 150px;width: 150px;
+        align-content: center;
+    }
+    #id6{
+        margin-top: 20px;
+        color: red;
+        
+    }
+    #id7{
+        color: white;
+    }
+    #id8{
+        margin: 20px;
+    }
+    #id9
+    {
+        color: white;margin: 40px 20px 10px 20px; text-align: right;
+    }
+    #id10{
+        text-align: right;margin: 20px 20px 10px 20px;
+    }
+   
+    
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <img id="id2" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="Linus Torvalds">
+                <h1 id="id3">Linus  Torvalds</h1>
+                <h id="id4">The Creator of Linux & Git</h>
+    
+        </div>
+    </div>
+    <div class="salkhan">
+        <div class="box1">
+            <img id="id5" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg" alt="sal khan">
+        </div>
+        <div class="box2">
+            <h1 id="id6">Sal Khan</h1>
+        </div>
+        <div class="box3">
+            <p >Sal Khan is the founder of Khan Amademy which has a miision <br> of providing a free world class education for anyone anywhere </p>
+        </div>
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="lastgrid">
+        <div class="lastbox1">
+            <h1 id="id7" style="margin-left: 10px;">Ken Thompson</h1>
+        </div>
+        <div class="lastbox2">
+            <h1 id="id9">Dennis Ritchie</h1>
+        </div>
+        
+        <div class="lastbox3">
+            <p id="id8">Designed and implemented the <br>original Unix operating system</p>
+        </div>
+        <div class="lastbox4">
+            <p id="id10"> The Creator of C programming language</p>
+        </div>
+
+
+    </div>
+    
+    
+    
+    
+    
+
+
+</body>
+</html>

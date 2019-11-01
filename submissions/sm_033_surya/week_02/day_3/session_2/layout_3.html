@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>layout_3</title>
+    <style>
+        #overall{
+            width: 800px;
+            height: 600px;
+            margin: 50px;
+        }
+        .row1 div, .row2 div, .row3 div, .row4 div{
+            width:150px;
+            height:150px; 
+            background: green;
+            margin: 15px;
+        }
+        .row1, .row2, .row3, .row4{
+            display: flex; 
+            flex-direction: row;
+        }
+        @media(max-width :600px){
+
+        .row1 div, .row2 div, .row3 div, .row4 div{
+            width:100px;
+            height:100px; 
+            background: red;
+            margin: 10px;
+        }
+        }
+
+        @media(min-width:1500px){
+            .row1 div, .row2 div, .row3 div, .row4 div{
+            width:250px;
+            height:250px; 
+            background: rgb(22, 97, 167);
+            margin: 25px;
+        }
+        #overall{
+            width: 1200px;
+            height: 800px;
+            margin: 50px;
+        }
+        }
+    </style>
+    </head>
+<body>
+    <div id = "overall">
+        <div class="row1">
+            <div></div>
+        </div>
+        <div class="row2">
+            <dIV></dIV>
+            <div></div>
+        </div>
+        <div class="row3">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="row4">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

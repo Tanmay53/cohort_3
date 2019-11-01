@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>grid1</title>
+  
+  <style>
+      .cont {
+    display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 150px 150px 150px 150px 150px;
+  grid-template-rows: 150px 150px; 
+  background: white;
+  justify-content: center;
+  margin-top: 40px;
+  }
+
+.cont div 
+{
+  background:blueviolet;
+  width: 150px;
+  
+  
+}
+@media(max-width: 1000px)
+{
+    .cont {
+    display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px; 
+  background: white;
+  justify-content: center;
+  margin-top: 30px;
+  }
+
+.cont div 
+{
+  background:pink;
+  width: 100px;
+  
+}
+@media(max-width: 600px)
+{
+    .cont {
+    display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 75px 75px 75px 75px 75px;
+  grid-template-rows: 75px 75px; 
+  background: white;
+  justify-content: center;
+  margin-top: 20px;
+  }
+
+.cont div 
+{
+  background:blue;
+  width: 75px;
+  
+}
+  </style>
+  </head>
+  <body>
+      <div class="cont">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+</div>
+  </body>
+</html>
