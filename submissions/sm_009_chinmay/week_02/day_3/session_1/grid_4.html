@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Grid 4 Layout</title>
+ <style>
+
+.grid-container {
+ display: grid;
+ grid-template-columns: 150px 150px 150px 150px ;
+ grid-template-rows: 150px 150px 150px  ;
+ grid-gap: 30px;
+margin: 10px;
+padding: 10px;
+
+}
+
+.grid-container div {
+ background-color: seagreen;
+ border-radius: 5px; 
+}
+
+#box-2 {
+ grid-area: 1 / 2 / 2 / span 2;
+}
+
+#box-5 {
+ grid-area: 2 / 1 / 2 / span 2;
+}
+
+#box-11 {
+ grid-area: 3 / 3 / 3 / span 2;
+}
+
+.body {
+   margin: 10%;
+   margin-left: 20%;
+  }
+
+ </style>
+</head>
+<body class="body">
+ <div class="grid-container">
+   <div id="box-1"></div>
+   <div id="box-2"></div>
+   <div id="box-3"></div>
+   <div id="box-4"></div>
+   <div id="box-5"></div>
+   <div id="box-6"></div>
+   <div id="box-7"></div>
+   <div id="box-8"></div>
+   <div id="box-9"></div>
+   <div id="box-10"></div>
+   <div id="box-11"></div>
+   <div id="box-12"></div>
+  </div>
+</body>
+</html>
