@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout 6</title>
+        <style type="text/css">
+            .flex-box {
+                display: flex;
+                flex-direction: row;
+            }
+            .flex-box div {
+                width: 120px;
+                height: 120px;
+                background-color: lightseagreen;
+                margin: 15px;
+            }
+            @media (max-width: 900px) {
+                .flex-box div {
+                    width: 80px;
+                    height: 80px;
+                    margin: 10px;
+                }
+            }
+            @media (max-width: 500px) {
+                .flex-box div {
+                    width: 40px;
+                    height: 40px;
+                    margin: 5px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flex-box">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flex-box">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flex-box">
+            <div></div>
+        </div>
+    </body>
+</html>
