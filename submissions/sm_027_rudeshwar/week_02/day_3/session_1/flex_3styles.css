@@ -1,0 +1,21 @@
+.flex-box
+{
+  display:flex;
+  background:white;
+  margin:0.5px;
+  border:5px solid white;
+  padding: 
+}
+.flex-box div
+{
+  height:150px;
+  width:200px;
+  margin:5px;
+  border:5px solid green;
+  padding:25px;
+  background:green;
+}
+#box1
+{
+  flex-direction:row; 
+}
