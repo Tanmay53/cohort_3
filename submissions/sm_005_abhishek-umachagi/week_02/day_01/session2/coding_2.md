@@ -323,27 +323,27 @@ red
 ```
 1. Width
 ```
-
+150px
 ```
 2. Height
 ```
-
+100px
 ```
 3. Padding-Top
 ```
-
+14px
 ```
 4. Margin-Left
 ```
-
+22px
 ```
 5. Font-Size
 ```
-
+4px
 ```
 6. Color
 ```
-
+blue
 ```
 ### FSD.CSS.3.11
 ```
