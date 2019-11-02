@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Git_hub</title>
+    <style>
+        .header{
+            width: auto; height: 60px; background: #24292e;
+        }
+    .header_l div {
+        height: 60px; width: auto; float: left;
+    }
+    .logo {
+        width: 40px;  height: 40px;   margin:10px 10px 10px 200px;
+       float: left;
+        }
+       .header p {
+            color: white; margin: 20px 10px;  float: left;
+       }
+       .header_r{
+        height: 60px; width: auto; float: right;  margin-right: 400px;
+       }
+       .header_r div {
+        float: right;
+       }
+       .header_r input {
+           background: #24292e; margin: 10px 10px; height: 40px;  border: none;
+       }
+       .header_r div:first-child p{
+           border: 1px solid white; padding: 5px; margin: 15px 10px;       }
+        .row1 {
+            background: #24292ef1;
+            width: auto;
+            height: 600px;
+        }
+        
+        .row1 div {
+            float: left;
+            height:500px ;
+            width: 500px;
+
+        }   
+        .row1 div:first-of-type{
+            color: white;
+            margin: 3% 0%  0% 20%;
+            text-align: center; 
+            text-align: left;
+        }
+        .row1 div:nth-of-type(2){
+            margin-top: 3%;
+            padding-left: 20px;
+        }
+        .row1 h1{
+            margin-top:150px;
+            font-size: 50px;
+        }
+        .row1 p{
+            font-size: 17px;
+        }
+        span {
+            font-weight: bolder;
+        }
+        .form {
+            background: white;
+            font-size: 20px;
+        }
+        form {
+            margin: 50px 5px;
+        }
+        input, button {
+            width: 470px;
+            height: 40px;
+             margin: 10px 0 5px 0;
+        }
+        .form p {
+            font-size: 12px;
+        }
+        label {
+            font-weight: bolder;
+        }
+        button {
+            background: #04b804;
+            color: white;
+            height: 60px;
+        }
+        .row2, .row3, .row4, .row5, .row6, .row7, .row8, .row9, .row10, .row11, .row12, .row13, .row14 {
+            width: 70%;
+            height: 350px;
+            border: 1px solid black;
+            margin: 100px 300px;
+        }
+        .row2 div{
+            float: left;
+            width: 250px;
+            height: 300px;
+            margin: 20px;
+            text-align: center;
+        }
+        .row2 div:first-of-type{
+            width: 350px;
+        }
+        .row2 img {
+            width: 80px;
+            height: 80px;
+            margin: 50px 100px 10px 100px;
+
+        }
+         .row2  p, .row2 h3{
+            margin: 0px;    
+        }
+        .row2 h1  {
+            text-align: left;
+            margin: 100px 0 0 0;
+        }
+        .row2 div:nth-of-type(1) {
+            text-align: left
+        }
+        .row2 > div > div {
+            background: #1d57d3;
+    
+            margin: 30px;
+            width: 200px !important;
+            height: 50px;
+            text-align: center;
+            padding: 30px 0 0 30px;
+            color: white;
+            font-weight: bolder;
+
+        }
+        .contact{
+            border:2px solid  #1d57d3 !important;
+            background: white !important;
+            color: #1d57d3 !important;
+        }
+        .row3 {
+            background:url("https://github.githubassets.com/images/modules/site/advanced-security-iso-ui.jpg");
+            color: white;
+            height: 300px;
+        }
+        .row3 img {
+            height: 80px;
+            width: 80px;
+            border: 2px solid black;
+            border-radius: 100px;
+        }
+        .row3 > div:first-of-type{
+            width: 500px;
+            text-align: left;
+            margin: 20px;
+            float: left;
+        }
+        .row3 > div:nth-of-type(2){
+            float: right;
+            width: 200px;
+            height: 50px;
+            background: blue;
+            margin: 150px 50px 0 0 ;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .row4{
+            width: 1300px;
+            height: 250px;
+            text-align: center;
+            color: #686868;
+            border: none;
+        }
+        .row4 > div {
+            width: 210px;
+            height: 90px;
+            
+            float: left;
+        }
+        .row4 > div img {
+            height: 60px;
+            width: 100px;
+            padding: 20px;
+        }
+        .row4 > div:nth-of-type(7){
+            text-align: right;
+        }
+        .row5{
+            width: 700px;
+            height: 250px;
+            text-align: center;
+            margin-left: 600px;
+            border: none;
+        }
+        .row5 div {
+            height: 30px;
+            width: 200px;
+            border:1px solid #1d57d3;
+            margin-left: 250px;
+            color: #1d57d3;
+            padding-top: 20px;
+        }
+        .row5 h3 {
+            color: #686868;
+        }
+        .row6{
+            height: 650px;
+            border: none;
+        }
+        .row6 div  {
+            width: 500px;
+            height: 200px;
+            float: right;
+
+            text-align: left;
+        }
+        .row6 div:nth-of-type(1){
+            height: 600px;
+            width: 800px;
+            float: left;
+            }
+        .row6 div:nth-of-type(1) img {
+            height: 600px;
+            width: 800px;
+        }
+        .row7{
+            height: 550px;
+            text-align: center;
+            border: none;
+        }
+        .row7 div {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #4d4d4d;
+            float: left;
+            margin:10px;;
+        }
+        .row7 div img {
+            width: 250px;
+            height: 250px;
+            margin: 20px;  
+        } 
+        .row7 div h4{
+            margin: 0px;
+            margin-left:10px; 
+            text-align: left;
+        }
+        .row7 div p {
+            margin: 0px;
+            margin-left:10px; 
+            text-align: left;
+        }
+        .row7 h3{
+            color: #4d4d4d;
+        }
+        .row7 > div > div {
+            border-top: 1px solid #4d4d4d !important; 
+            border: none;
+            height: 30px;
+            width: 260px;
+            padding:20px 0 0 20px;
+            color: #1d57d3;
+        }
+        .row8{
+            width: 700px;
+            height: 250px;
+            text-align: center;
+            margin-left: 600px;
+            border: none;
+        }
+        .row8 div {
+            height: 30px;
+            width: 400px;
+            border:1px solid #1d57d3;
+            margin-left: 140px;
+            color: #1d57d3;
+            padding-top: 20px;
+        }
+        .row8 h3 {
+            color: #686868;
+        }
+        .row9 {
+            width: 1050px;
+            height: 650px;
+            margin-left: 500px !important;
+            border: none;
+        }
+        .row9 div {
+            width: 500px;
+            height: 200px;
+            float: left;
+            margin: 3px;
+        }
+        .row9 div:nth-of-type(2){
+            height: 400px;
+            float: right;
+        }
+        .row9 div:nth-of-type(4){
+            clear: left;
+            margin-left: 250px;
+            border: 1px solid #5c5b5b;
+            height: 240px;
+        }
+        .row9 div img {
+            height: 400px;
+            width: 500px;
+    
+        }
+        .row9 div:last-child  img {
+            width: 60px;
+            height: 60px;
+            margin: 20px 20px 130px 20px;
+            float: left;
+        }
+        .row9 div p:nth-of-type(2),.row9 div p:nth-of-type(3){
+            color:blue;
+        }
+
+        .row10 {
+            width: 700px;
+            height: 250px;
+            text-align: center;
+            margin-left: 600px;
+            border: none;
+        }
+        .row10 div {
+            height: 30px;
+            width: 400px;
+            border:1px solid #1d57d3;
+            margin-left: 140px;
+            color: #1d57d3;
+            padding-top: 20px;
+        }
+        .row10 h3 {
+            color: #686868;
+        }
+        .row11 {
+            height: 250px;
+            text-align: center;
+            border: none;
+        }
+        .row11 div {
+            width: 160px;
+            height: 170px;
+            float: left;
+        }
+        .row11 div img {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 80px;
+            margin: 5px 20px 40px 30px;
+        }
+        .row11 div:nth-of-type(2n) {
+            padding-top:60px;
+            height: 110px; 
+        }
+        .row11 div:first-child{
+            margin-left: 150px;
+        }
+        .row11 div:nth-of-type(8) {
+            width: 500px;
+            height: 60px;
+         text-align: center;
+         margin: 10px 0px 0px 400px;
+         padding: 0px;
+        }
+        .row11 p, .row11 h4 {
+            margin: 10px;
+        }
+        .row11 h4{
+            color: #1d57d3;
+        }
+        .row12 {
+            width: 700px;
+            height: 250px;
+            text-align: center;
+            margin-left: 600px;
+            margin-bottom: 20px;
+            
+        }
+        .row12 h3 {
+            color: #686868;
+        }
+        .row13{
+            height: 600px;
+            text-align: center;
+            margin-top: 20px;
+            border: none;
+           
+        }
+        .row13 div {
+            width: 300px;
+            height: 500px;
+            border: 1px solid #4d4d4d;
+            float: left;
+            margin:10px;
+        }
+        .row13 div img {
+            width: 250px;
+            height: 250px;
+            margin: 20px;  
+        } 
+        .row13 div h4{
+            margin: 0px;
+            margin-left:10px; 
+            text-align: left;
+        }
+        .row13 div p {
+            margin: 0px;
+            margin-left:10px; 
+            text-align: left;
+
+        } 
+        .row13 > div > div {
+            height: 150px;
+            width: 270px;
+            margin-bottom: 0px;
+            border: none;
+        } 
+
+        .row13 > div > div:last-child {
+            border-top: 1px solid #4d4d4d !important; 
+            border: none;
+            height: 30px;
+            width: 260px;
+            padding:10px 0 0 10px;
+            color: #1d57d3;
+            text-align: left;
+        }
+        .row13 h3 {
+            color:#616161    
+        }
+        .row14{
+            width: 850px;
+            height: 450px;
+            margin-left:450px;
+            margin-bottom: 0px;
+            border: none;
+        }
+        .row14 span {
+            font-size: 30px;
+        }
+        .row14 div  {
+            width: 300px;
+            height: 100px;
+            float: right;
+            text-align: left;
+        }
+        .row14>div:nth-of-type(1){
+            height: 400px;
+            width: 500px;
+            float: left;
+            }
+        .row14 div > div {
+            width: 200px;
+            height: 200px;
+            background: #f77811;
+            border-radius: 100%;
+            margin: 10px;
+            float: left;
+            border: none;
+            }
+            .row14 > div > div:nth-of-type(2){
+                height: 180px;
+                width: 180px;
+                margin-top: 50px; 
+                background: #1243e7  
+            }
+        .row14 > div>div:last-child{
+            margin-left :150px;
+            height: 150px;
+            width: 150px;
+            background: #990792;
+            font-size: 13px;
+            
+        }
+        .row14>div:nth-of-type(1) div p{
+            margin: 40px;
+            text-align: center;
+            color: white;
+        }
+        .row14>div:nth-of-type(1) div:first-child p{
+            margin: 50px;
+        }
+        .row15 {
+            color: white;
+            background:#24292ef1;
+            width: auto;
+            height: 600px;
+            margin-left: 0px;
+            text-align: center;
+        }
+        .row15 > div {
+            height: 200px;
+            width: 1300px;
+            margin:100px 0px 0px 300px;
+        
+        }
+        .row15  > div div {
+            float: left;
+           
+            margin-right: 20px;
+        }
+        .row15 input , .row15 button {
+            width: 300px;
+            border: none;
+        }
+        .row15 > div div {
+            text-align: left;
+            
+        }
+        .footer {
+            height: 400px;
+            width: 100%;
+        }
+        .footer > div {
+            width: 200px;
+            height: 300px;
+            float: left;
+            margin-top:100px; 
+        }
+        .footer > div:first-child {
+            margin-left: 200px;
+            width: 600px;
+            text-align: center;
+            padding-top: 10px;
+            height: 200px;
+        }
+        .footer ul {
+            list-style: none;
+        }
+        .footer li {
+            margin: 10px;
+            font-size: 15px;
+        }
+        .footer_bottom {
+            height: 60px;
+            width: auto;
+        }
+        .footer_bottom div {
+            float: left;
+            width: auto;
+            height: 60px;
+            margin: 10px;
+        }
+        .footer_bottom div:first-child{
+            margin-left: 200px;
+        }
+        .footer_bottom div:nth-of-type(4) div{
+            float: right;
+            margin: 5px;
+        }
+        .footer_bottom div:last-child{
+            float:right;
+    
+        }
+        .footer_bottom img {
+            width: 40px;
+            height: 40px;
+        
+        }
+        .footer_bottom div div:first-child {
+            margin-right: 200px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <div class= "header_l">   
+        <div ><img class="logo" src="https://icon-library.net/images/github-icon-png/github-icon-png-29.jpg" alt=""/>
+            <p>Why GitHub?</p>
+        </div>
+        <div><p>Enterprise</p></div>
+        <div><p>Explore</p></div>
+        <div><p>Marketplace</p></div>
+        <div><p>Pricing</p></div>
+        </div>
+
+    <div class="header_r">
+         <div ><p class="signup">Sign up</p></div>
+        <div><p>Sign in</p></div>
+        <div><input type="text" placeholder="Search GitHub"></div>
+    </div>
+    </div>
+    <div class="row1">
+        
+        <div>
+            <h1>Built for developers</h1>
+        <p>GitHub is a platform inspired by the way you work.From <span>open source</span>to <span>buisness</span>,
+            you can host and review code, manage projects, and build software along side 40 million developers.</p></div>
+        <div class="form">
+            <form>
+
+                <label>Username</label><br>
+                <input type="text">
+                <label for="email">Email</label><br>
+                <input type="text">
+                <label>Password</label><br>
+                <input type="text">
+                <p>Make sur it's at least 15 characters OR at least 8 characters including a number and lowercase letter.</p>
+                <button type="submit">Sign up for GitHub</button>
+                <p>By clicking “Sign up for GitHub”, you agree to our Terms of Service and Privacy Statement. We’ll occasionally send you account related emails.</p>
+            </form>
+        </div>
+    </div>
+    <div class="row2">
+        <div><h1>Get started with GitHub Enterprise</h1>
+        <p>Take collaboration to the next level with security and administrative features built for teams.</p></div>
+        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRujHAxx4CJKt-fJ0olBeTk6tP9qMgbqc0LpaMsFkSqaX7SVuBc&s" alt=""/>
+            <h3>Enterprise Cloud</h3><p>Leave the hosting to us.</p>
+            <div>Try Cloud for free</div>
+        </div>
+        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaYn0CMn3D5m7v3vIqWOiNfTggKZdnpRDsG3-b_cEuE-yi0p4w&s" alt=""/>
+        <h3>Enterprise Server</h3>
+        <p>Deploy to your environment.</p>   
+         <div>Try Server for free</div>
+        </div>
+        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs6HJ0PAqTfO40096ReevQ5pVw5WDLPwCV9zCIHxOBYSL1sUwt&s" alt=""/>
+            <h3>Talk to us</h3><p>Want to use both?</p>
+            <div class="contact">Contact Sales -</div>
+        </div>
+    </div>
+    <div class="row3">
+        <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5fQBn9RrrS9ndcInugYQu1PC2-vu89f4quz_wriZs6Bl_7pd0&s" alt="security logo">
+        <h1>Securing software, together</h1>
+        <p>Discover community-powered tools to find and prevent security vulnerabilities, announced at GitHub HQ in San Francisco.</p>
+        </div>
+        <div>Watch the recap -></div>
+    </div>
+    <div class="row4">
+        <P>More than 2.1 million businesses and organizations use GitHub </p>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/airbnb-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/sap-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/ibm-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/google-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/paypal-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/bloomberg-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/spotify-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/swift-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/facebook-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/node-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/nasa-logo.png" alt=""/></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/logos/walmart-logo.png" alt=""/></div>
+    </div>
+    <div class="row5">
+        <h3> GitHub for teams</h3>
+        <h1>A better way to work together </h1>
+        <h4>GitHub brings teams together to work through problems, move ideas forward, and learn from each other along the way. </h4>
+        <div>See Up You Team --></div>
+
+    </div>
+    <div class="row6">
+            <div><img src="https://github.githubassets.com/images/modules/site/home-illo-team.svg" alt=""/></div>
+            <div><h2>Write better</h2>
+            <p>collaboration makes perfect. The conversations and code reviews that happen pull request help 
+                your team share the weight of your work and improve the software you build</p>
+            
+            </div>
+            <div><h2>Manage your chaos</h2>
+                <p> Take a deep breath. On GitHub, project management happens in issues and project boards, right alongside your code. 
+                    All you have to do is mention a teammate to get them involved. Learn about project management.</p></div>
+            <div><h2>Find the right tools</h2><p> Browse and buy apps from GitHub Marketplace with your GitHub account. 
+                Find the tools you like or discover new favorites—then start using them in minutes. Learn about integrations.</p></div>
+    </div>
+    <div class="row7">
+        <h3>See how the world's leading companies use GitHub Enterprise. </h3>
+        <div><img src="https://customer-stories-feed.github.com/customer_stories/mgm-resorts/hero.jpg" alt=""/>
+        <h4>MGM Resorts International</h4>
+        <p>Hospitality</p> <div>Read more</div></div>
+        <div><img src="https://customer-stories-feed.github.com/customer_stories/nationwide/nw_hero.jpg" alt=""/>
+        <h4>Nationawide</h4>
+        <p>Insurance</p><div>Read more</div></div>
+        <div><img src="https://customer-stories-feed.github.com/customer_stories/sap/sap6.jpg" alt=""/>
+        <h4>SAP</h4> <p>Business Software</p><div>Read more</div></div>
+        <div><img src="https://customer-stories-feed.github.com/customer_stories/spotify/spotifyhero.jpg" alt=""/>
+        <h4>Spotify</h4>
+        <p>Technology / Streaming</p>
+        <div>Read more</div></div>
+    </div>
+    <div class="row8">
+        <h3>  Security and administration</h3>
+        <h1>Your business needs, met  </h1>
+        <h4>From flexible hosting to granular access controls, we’ve got your security requirements covered. </h4>
+        <div>Learn how GitHub Enterprise works--></div>
+    </div>
+    <div class="row9">
+        <div><h3>Code security</h3>
+            <p>Prevent problems before they happen. 
+            Protected branches, signed commits, and required status checks protect your work and help you maintain a high standard for your code.</p></div>
+        <div><img src="https://github.githubassets.com/images/modules/site/home-illo-business.png" alt=""/></div>
+        <div><h3>Access controlled</h3>
+            <p>Encourage teams to work together while limiting access to those who need it with granular permissions and authentication through SAML/SSO and LDAP. </p>
+        </div>
+        <div><img src="https://cdn2.iconfinder.com/data/icons/cloud-computing-1/512/database-512.png" alt=""/>
+        <h3>Hosted where you need it</h3>
+        <p>Securely and reliably host your work on GitHub using GitHub Enterprise Cloud. 
+            Or deploy GitHub Enterprise Server in your own data centers or in a private cloud using Amazon Web Services, Azure, or Google Cloud Platform.</p>
+            <p>Campus plans --></p>
+            <p>Contact Sales for more information --></p>
+        
+        
+        </div>
+    </div>
+    <div class="row10">
+        <h3>Integrations </h3>
+        <h1>Your business needs, met  </h1>
+        <h4>Customize your process with GitHub apps and an intuitive API. Integrate the tools you already use or discover new favorites to create a happier, more efficient way of working. </h4>
+        <div>Learn about integrations--></div>
+    </div>
+    <div class="row11">
+        <div> <img src="https://github.githubassets.com/images/modules/site/integrators/slackhq.png" alt=""/></div>
+        <div> <img src="https://github.githubassets.com/images/modules/site/integrators/zenhubio.png" alt=""/></div>
+        <div> <img src="https://github.githubassets.com/images/modules/site/integrators/travis-ci.png" alt=""/></div>
+        <div> <img src="https://github.githubassets.com/images/modules/site/integrators/atom.png" alt=""/></div>
+        <div> <img src="https://github.githubassets.com/images/modules/site/integrators/circleci.png" alt=""/></div>
+        <div> <img src="https://github.githubassets.com/images/modules/site/integrators/google.png" alt=""/></div>
+        <div> <img src="https://github.githubassets.com/images/modules/site/integrators/codeclimate.png" alt=""/></div>
+        <div><p>Sometimes, there’s more than one tool for the job. 
+            Why not try something new? <p>
+            <h4>Browse GitHub Marketplace --></h4>
+            </div>
+    </div>
+    <div class="row12">
+        <h3>Community </h3>
+        <h1>Welcome home,
+            developers</h1>
+        <h4>GitHub is home to the world’s largest community of developers and their projects...  </h4>
+    </div>
+    <div class="row13">
+        <div><img src="https://customer-stories-feed.github.com/customer_stories/freakboy3742/hero.jpg" alt=""/>
+            <div>
+        <h4>Russell Keith-Magee</h4>
+        <p>Russell Keith-Magee created BeeWare to fill a gap in his own process. Today, BeeWare is the go-to project for supporting Python on every platform.</p> </div><div>Read more</div></div>
+        <div><img src="https://customer-stories-feed.github.com/customer_stories/kris-nova/hero.jpg" alt=""/><div>
+        <h4> Kris Nova  </h4>
+        <p>Kris Nova quickly developed a passion fo Kris Nova Kris r open source software. Now she gets to work on open source tooling at her day job, which includes maintaining Kubernetes Operations (kops).</p></div><div>Read more</div></div>
+        <div><img src="https://customer-stories-feed.github.com/customer_stories/yyx990803/hero.jpg" alt=""/><div>
+        <h4>Evan You </h4> <p>In 2013, Evan You founded Vue, a Javascript framework funded by the community on Patreon. In 2016, Vue reached 2,000,000 downloads.</p></div><div>Read more</div></div>
+        <div><img src="https://customer-stories-feed.github.com/customer_stories/jessfraz/hero.jpg" alt=""/><div>
+        <h4>Jess Frazelle</h4>
+        <p>Jess Frazelle works on Kubernetes full-time. Previously she maintained Docker, a software containerization platform used by thousands of teams. Read more →</p></div>
+        <div>Read more</div></div>
+        <h3>...whether you’re making your first commit or sending a Rover to <br>
+            Mars, there’s room for you here, too. </h3>
+    </div>
+    <div class="row14">
+            <div>
+                <div><p><span>100M*</span><br>respositories worldwide</p></div>
+                <div><p><span>40M*</span><br>developers worldwide</p></div>
+                <div><p><span>2.1M*</span><br>bussinesses & organizations worldwide</p></div>
+            </div>
+            <div>
+            <p>GitHub’s users create and maintain influential technologies alongside the world’s largest open source community .</p>
+            </div>
+            <div>
+                <p> Developers use GitHub for personal projects, from experimenting with new programming languages to hosting their life’s work.</p></div>
+            <div><p>  Businesses of all sizes use GitHub to support their development process and to securely build software.</p></div>
+    </div>
+    <div class="row15">
+        <h1><br>Get started for free — join the millions of developers already<br> using GitHub to share their code, work together, and build <br>amazing things. </h1>
+            <div class="form_2">
+                    <form>
+                    <div>
+                        <label>Username</label><br>
+                        <input type="text"></div>
+                        <div><label for="email">Email</label><br>
+                        <input type="text"></div>
+                        <div><label>Password</label><br>
+                        <input type="text"></div>
+                        <div><button type="submit">Sign up for GitHub</button></div>
+                    </form>
+    </div>
+    <p>By clicking “Sign up for GitHub”, you agree to our <span>terms of service </span> and <span>privacy statement </span>. We’ll occasionally send you account related emails.</p>
+    </div>
+    <div class="footer">
+        <div><h1>GitHub</h1></div>
+        <div><ul>
+            <li>Product</li>
+            <li> Features</li>
+            <li>Security</li>
+            <li>Enterprise</li>
+            <li>Customer stories</li>
+            <li>Pricing</li>
+            <li>Resources</li>
+        </ul></div>
+        <div>
+                <ul>
+                        <li>Platform</li>                           
+                        <li>Developer API</li>
+                        <li> Partners</li>
+                        <li> Atom</li>
+                        <li> Electron</li>
+                        <li> GitHub Desktop</li>
+                
+                    </ul>
+        </div>
+        <div><ul>
+                <li>Support</li>
+                <li>Help</li>
+                <li>Community Forum</li>
+                <li> Professional Services</li>
+                <li> Learning Lab</li>
+                <li>Status</li>
+                <li>Contact GitHub</li>
+            </ul></div>
+        <div><ul>
+                <li> Company </li>
+                <li>About</li>
+                <li>Blog</li>
+                <li> Careers</li>
+                <li> Press</li>
+                <li>Shop</li>
+               
+            </ul></div>  
+
+    </div>
+    <div class="footer_bottom">
+        <div>© 2019 GitHub, Inc.</div>
+        <div>Term</div>
+        <div>Privacy</div>
+        <div>
+            <div><img src="https://icons-for-free.com/iconfiles/png/512/logo+twitter+twitter+logo+icon-1320167831451644641.png" alt=""/></div>
+            <div><img src="http://fullermarketing.ie/wp-content/uploads/2017/05/FB-logo.png" alt=""/></div>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP05BN3gUP8wEarL12fBXJ_vvSVncgwMUriyN87nGEcihmHGfV&s" alt=""/></div>
+            <div><img src="https://cdn2.iconfinder.com/data/icons/popular-social-media-flat/48/Popular_Social_Media-22-512.png" alt=""/></div>
+            <div><img src="https://image.flaticon.com/icons/svg/25/25231.svg" alt=""/></div>
+
+        </div>
+    </div>
+</body>
+</html>
