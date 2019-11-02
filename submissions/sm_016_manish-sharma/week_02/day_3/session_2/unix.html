@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Unix</title>
+    <style>
+        body{
+            background:white;
+            width: 98%;
+            height: 600px;
+           display: grid;
+           grid-template-rows: 50% 25% 25%;
+        }
+        body > div {background:white; margin: 10px;
+        }
+        .grid1{
+            display: grid;
+            grid-template-columns:35% 30% 20%;
+            margin-top: 10px;
+        }
+        .grid1 div:nth-of-type(2){background:lightsteelblue;margin: 2px;}
+        .linus{
+               display:grid;
+               grid-template-rows: 60% 15% 25%;
+              } 
+        .linus img{width: 100px;margin-left: 150px;margin-top: 15px;}  
+        .text1 {font-size:30px;font-family:Franklin Gothic; text-align: center; color:rgb(27, 2, 138);} 
+        .text2 {font-size:25px;font-family:Franklin Gothic; text-align: center; color: black;} 
+
+        .grid2{
+            display: grid;
+            margin-left: 260px;
+            grid-template-columns:20% 50%;
+        }
+        .grid2 div{background:white; margin: 2px;}
+        .grid2 img {width: 100px;margin-left:110px;} 
+        .grid2 h2 {font-size:30px;font-family:Franklin Gothic;color: red; margin-top:-5px;margin-left: 10px;}
+        .grid2 p{padding: 0px 10px 10px 10px;}        
+
+        .grid3{
+            display: grid;
+            grid-template-columns:49% 2% 49%; 
+            margin-left: 150px;margin-right: 150px;
+        }
+        .grid3 div{background:rgb(231, 106, 17);}
+        .grid3 div:nth-of-type(2) {background:rgb(231, 106, 17)}
+        .grid3 .black{background: black; margin-top:15px; width:8px;height:100px;}
+        .grid3 h2{color: white;font-family: Arial; padding: 10px;margin-right: 5px;}
+        .grid3 p {margin-top:-10px; margin-left: 10px; margin-right:15px;}
+        .dennis {text-align: right;}
+
+       @media (max-width:1000px){
+           body {background: gold;grid-template-columns:30% 35% 35%;}
+           body > div {background:gold}
+           .grid2 div{background:gold}
+       }
+
+    </style>
+</head>
+
+<body>
+   <div class="grid1">
+      <div></div>
+      <div class="linus">
+          <div>
+             <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="linus">
+          </div>
+          <div class="text1"><b>Linus Torvalds</b></div>
+          <div class="text2">The creator of Linux & Git</div>
+      </div>
+      <div></div>
+   </div>
+   <div class="grid2">
+        <div>
+            <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg" alt="salman">
+        </div>
+        <div>
+            <h2>Sal Khan</h2>
+            <p>Salman Khan is the founder of Khan Academy which has a mission
+            of providing a free world-class education for anyone,anywhere</p>
+        </div>
+   </div>
+   <div class="grid3">
+        <div>
+            <h2>Ken Thompson</h2>
+            <p>Designed and Implemented the original Unix operating system</p>
+        </div>
+        <div>   <div class="black"></div>  </div>
+        <div class="dennis">
+            <h2>Dennis Ritchie</h2>
+            <p>The creator of C programming Language</p>
+        </div>
+   </div>    
+
+</body>
+</html> 
