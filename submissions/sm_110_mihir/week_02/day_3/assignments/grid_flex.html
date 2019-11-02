@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid-flex-periodic-table</title>
+    <style>
+        .row {
+            display: flex;
+            height: 500px;
+        }
+        .col {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .col div {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            margin: 10px;
+            
+        }
+        
+        
+        
+        .col1 div{
+            background-color: olivedrab;
+        }
+        .col1 div:nth-child(1){
+            background-color: brown;
+        }
+        .col2 div{
+            background-color: tomato;
+        }
+        .col3 div{
+            background-color: black;
+        }
+
+        .grid-box {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto auto auto;
+            grid-template-rows: 50px 50px 50px 50px;
+            grid-gap: 20px;
+        }
+        .down {
+            margin-top: 228px;
+        }
+        .grid-box div {
+            background-color: blue;
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+
+        }
+        .grid-box2 {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: 50px 50px 50px 50px 50px 50px;
+            grid-gap: 20px;
+        }
+
+        .down2 {
+            margin-top: 88px;
+            margin-left: 20px;
+        }
+        .grid-box2 div {
+            background-color: olivedrab;
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+
+        }
+        .grid-box2 .indianred {
+            background-color: indianred;
+            
+        }
+        .grid-box2 .tomato {
+            background-color: tomato;
+        }
+        .grid-box2 .violetred {
+            background-color: mediumvioletred;
+        }
+        .pink, .grid-box2 .pink {
+            background-color: pink;
+        }
+        .col .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col col1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         
+        </div>
+        <div class="col col2">
+            
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="col col3 ">
+            
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- grid middle section -->
+        
+        <div class="grid-box down">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="grid-box2 down2">
+            <div class="violetred"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="pink"></div>
+            
+            <div class="tomato"></div>
+            <div class="violetred"></div>
+            <div></div>
+            <div></div>
+            <div class="pink"></div>
+            
+
+            <div class="tomato"></div>
+            <div class="violetred"></div>
+            <div class="violetred"></div>
+            <div></div>
+            <div class="pink"></div>
+            
+            <div class="tomato"></div>
+            <div class="tomato"></div>
+            <div class="violetred"></div>
+            <div class="violetred"></div>
+            <div class="pink"></div>
+            
+            <div class="tomato"></div>
+            <div class="tomato"></div>
+            <div class="tomato"></div>
+            <div class="violetred"></div>
+            <div class="pink"></div>
+            
+            <div class="pink"></div>
+            <div class="pink"></div>
+            <div class="pink"></div>
+            <div class="pink"></div>
+            <div class="pink"></div>
+
+            
+        </div>
+        <div class="col">
+            <div class="pink"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+        </div>
+        
+    
+       
+    </div>
+</body>
+</html>

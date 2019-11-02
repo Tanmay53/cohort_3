@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout_4</title>
+    <style>
+       @media only screen and (max-width: 768px){
+        .wrapper{ 
+           display: grid;
+           grid-template-rows: 80px repeat(4, 150px);
+           grid-template-columns: repeat(1 , 1fr);
+           margin: auto;
+           margin-top: 40px;
+           height: auto;
+           grid-gap: 20px;
+           width:90%;
+       }
+       .wrapper div:nth-child(1){
+           background-color: yellow;
+           grid-area: 1/1/2/2;
+       }
+       .wrapper div:nth-child(2){
+           background-color: red;
+       }
+       .wrapper div:nth-child(3){
+           background-color: rgb(74, 255, 38);
+       }
+       .wrapper div:nth-child(4){
+           background-color: rgba(13, 100, 199, 0.877);
+          
+       } 
+       .wrapper div:nth-child(5){
+           background-color: grey ;
+           grid-row-start: 3;
+       }
+       .wrapper div{
+           padding:10px;
+           font-size: 30px;
+           color:rgba(221, 203, 203, 0.966);
+       }
+       #nav{
+           font-style: bold;
+           font-size: 40px;
+           font-weight: bolder;
+           color:black;
+       }        
+       }
+       @media only screen and (min-width: 768px){
+        .wrapper{
+           display: grid;
+           grid-template-rows: 80px 220px 220px;
+           grid-template-columns: repeat(2 , 1fr);
+           margin:auto;
+           margin-top: 40px;
+           height: auto;
+           grid-gap: 20px;
+           width:90%;
+       }
+       .wrapper div:nth-child(1){
+           background-color: yellow;
+           grid-area: 1/1/2/3;
+       }
+       .wrapper div:nth-child(2){
+           background-color: red;
+       }
+       .wrapper div:nth-child(3){
+           background-color: rgb(74, 255, 38);
+       }
+       .wrapper div:nth-child(4){
+           background-color: rgba(13, 100, 199, 0.877);
+       } 
+       .wrapper div:nth-child(5){
+           background-color: grey ;
+       }
+       .wrapper div{
+           padding:10px;
+           font-size: 30px;
+           color:rgba(221, 203, 203, 0.966);
+       }
+       #nav{
+           font-style: bold;
+           font-size: 40px;
+           font-weight: bolder;
+           color:black;
+       }    
+       }  
+       @media only screen and (min-width: 992px){
+       .wrapper{
+           display: grid;
+           grid-template-rows: 80px 270px;
+           grid-template-columns: repeat(4 , 1fr);
+           margin:auto;
+           margin-top: 40px;
+           height: auto;
+           grid-gap: 20px;
+           width:90%;
+       }
+       .wrapper div:nth-child(1){
+           background-color: yellow;
+           grid-area: 1/1/2/5;
+       }
+       .wrapper div:nth-child(2){
+           background-color: red;
+       }
+       .wrapper div:nth-child(3){
+           background-color: rgb(74, 255, 38);
+       }
+       .wrapper div:nth-child(4){
+           background-color: rgba(13, 100, 199, 0.877);
+       } 
+       .wrapper div:nth-child(5){
+           background-color: grey ;
+       }
+       .wrapper div{
+           padding:10px;
+           font-size: 30px;
+           color:rgba(221, 203, 203, 0.966);
+       }
+       #nav{
+           font-style: bold;
+           font-size: 40px;
+           font-weight: bolder;
+           color:black;
+       }
+       }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="nav">NAVIGATION</div>
+        <div>BOX1</div>
+        <div>BOX2</div>
+        <div>BOX3</div>
+        <div>BOX4</div>
+    </div>
+</body>
+</html>
