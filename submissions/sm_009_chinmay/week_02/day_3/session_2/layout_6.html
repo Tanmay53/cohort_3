@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Layout 6</title>
+ <style>
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 65px);
+  grid-template-rows: repeat(4, 65px);
+  grid-gap: 25px;
+  padding: 6px;
+  /* margin: 15px; */
+  margin-top: 15%;
+  margin-left: 10%;
+  margin-bottom: 35%;
+ }
+
+ .grid-container div {
+  background-color: rgb(248, 233, 28);
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-column: 1/1;
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-column: 1/1; 
+ }
+ 
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+ 
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(4, 80px);
+  grid-gap: 25px;
+  padding: 10px;
+  /* margin: 15px; */
+  margin-top: 10%;
+  margin-left: 10%;
+ }
+
+ .grid-container div {
+  background-color: rgb(248, 46, 28);
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-column: 1/1;
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-column: 1/1; 
+ }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: repeat(4, 90px);
+  grid-gap: 25px;
+  padding: 10px;
+  /* margin: 15px; */
+  margin-top: 5%;
+  margin-left: 15%;
+ }
+
+ .grid-container div {
+  background-color: rgb(222, 28, 248);
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-column: 1/1;
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-column: 1/1; 
+ }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  grid-gap: 25px;
+  padding: 10px;
+  /* margin: 15px; */
+  margin-top: 5%;
+  margin-left: 20%;
+ }
+
+ .grid-container div {
+  background-color: rgb(28, 215, 248);
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-column: 1/1;
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-column: 1/1; 
+ }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(4, 120px);
+  grid-gap: 25px;
+  padding: 10px;
+  /* margin: 15px; */
+  margin-top: 5%;
+  margin-left: 25%;
+ }
+
+ .grid-container div {
+  background-color: seagreen;
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-column: 1/1;
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-column: 1/1; 
+ }
+
+}
+
+
+ </style>
+</head>
+<body>
+ <div class="grid-container">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+ </div>
+</body>
+</html>
