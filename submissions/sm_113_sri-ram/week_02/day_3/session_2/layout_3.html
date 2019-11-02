@@ -1,0 +1,66 @@
+<html>
+
+
+<head>
+    <style>
+        .flexbox {
+            display: flex;
+        }
+
+        .flexbox div {
+            margin: 20px;
+            background: greenyellow;
+            height: 80px;
+            width: 80px;
+        }
+
+        .main {
+            margin: 100px 0px 0px 500px;
+        }
+
+        #box1,
+        #box2,
+        #box3,
+        #box4 {
+            flex-direction: row;
+        }
+
+
+        @media(min-width: 500px) {
+            body {
+                background: blue;
+            }
+        }
+
+        @media(max-width: 800px) {
+            body {
+                background: brown
+            }
+        }
+    </style>
+
+<body>
+    <div class="main">
+        <div class="flexbox" id="box1">
+            <div></div>
+        </div>
+        <div class="flexbox" id="box2">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flexbox" id="box3">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flexbox" id="box4">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
