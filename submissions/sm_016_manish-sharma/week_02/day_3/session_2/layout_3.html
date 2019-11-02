@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Layout 3</title>
+    <style>   
+    body{
+        width: 60%;
+        height: 700px;
+        display: grid;
+        grid-template-rows: 20% 20% 20% 20%;
+        grid-template-columns: 20% 20% 20% 20%;
+        margin-left: 150px;
+    }
+    div {
+        background: teal;
+        margin: 20px;
+    }
+    .str3 {
+        background: white;
+   
+        grid-area: span 1/ span 3;
+    }
+    .str2 {
+        background: white;
+     
+        grid-area: span 1/ span 2;
+    }
+    .str {
+        background: white;
+      
+    }
+    
+    @media (max-width: 1000px){
+        body{background: yellowgreen;row-gap: 40px;}
+        .str3 {background: red;}
+        .str{background: green;}
+        
+    }
+
+    </style>
+</head>
+
+<body>
+<div></div>
+<div class="str3"></div>
+<div></div>
+<div></div>
+<div class="str2"></div>
+<div></div>
+<div></div>
+<div></div>
+<div class="str"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html> 
