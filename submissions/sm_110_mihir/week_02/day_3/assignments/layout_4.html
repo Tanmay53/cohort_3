@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout-5-flex-nesting</title>
+    <style>
+        .container{
+            display: flex;
+           
+        }
+        .nav{
+            background-color: yellow;
+            
+            height: 4rem;
+        }
+        .box{
+            height: 8rem;
+        }
+        #box1{
+            background-color: red;
+        }
+        #box2{
+            background-color: green;
+        }
+        #box3{
+            background-color: blue;
+        }
+        #box4{
+            background-color:orange;
+        }
+        .container div{
+            font-size: 2rem;
+            flex:1;
+            padding: 2rem;
+            margin: 2rem
+        }
+        /* small screen */
+        @media(max-width:600px){
+            .container{
+                display: block;
+            }
+            
+        }
+
+        /* medium screen */
+        
+        @media(min-width:600px){
+            
+            .container{
+                flex-wrap: wrap;
+            }
+            
+            .container .box{
+                padding: 4rem;
+            }
+        }
+        @media(min-width:992px){
+            .container .box{
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">Navigation</div>
+    </div>
+    <div class="container">
+        <div id="box1" class="box">BOX 1</div>
+        <div id="box2" class="box">BOX 2</div>
+        <div id="box3" class="box">BOX 3</div>
+        <div id="box4" class="box">BOX 4</div>
+    </div>
+</body>
+</html>
