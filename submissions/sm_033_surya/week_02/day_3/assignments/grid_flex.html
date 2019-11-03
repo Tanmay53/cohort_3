@@ -1,0 +1,194 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>grid and flex</title>
+       
+        <style>
+            .overall {
+                height: 600px;
+            }
+    
+            .box_1 {
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: 80px 80px 80px;
+                grid-template-rows: 80px 80px 80px 80px 80px 80px 80px;
+                grid-auto-flow: column;
+                padding: 20px 0px 20px 20px;
+                
+
+            }
+            .box_1 div, .box_2 div, .box_3 div {
+                border: 2px solid black;
+            }
+    .box_1 div:nth-of-type(15){
+        grid-area:6/3/6/3;
+    }
+    .box_1 div:nth-of-type(14){
+        grid-area:7/3/7/3;
+    }
+    .box_1 div:nth-of-type(13){
+        grid-area:7/2/7/2;
+    }
+    .box_1 div:nth-of-type(12){
+        grid-area:6/2/6/2;
+    }
+    .box_1 div:nth-of-type(11){
+        grid-area:5/2/5/2;
+    }
+    .box_1 div:nth-of-type(10){
+        grid-area:4/2/4/2;
+    }
+    .box_1 div:nth-of-type(9){
+        grid-area:3/2/3/2;
+    }
+    .box_1 div:nth-of-type(8){
+        grid-area:2/2/2/2;
+    }
+    .box_2 {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: 80px 80px 80px 80px;
+        grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+        padding: 20px;
+        padding-top: 320px;
+    }
+    .box_3 {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: 80px 80px 80px 80px 80px 80px;
+        grid-template-columns: 80px 80px 80px 80px 80px ;
+        padding-top: 120px;
+    }
+    .overall {
+        display: flex;
+        flex-direction: row;
+    }
+    .box_1 div:first-child{
+        background: #ac360d;
+    }
+    .box_1 div:nth-of-type(2),.box_1 div:nth-of-type(3),.box_1 div:nth-of-type(4),.box_1 div:nth-of-type(5),.box_1 div:nth-of-type(6),.box_1 div:nth-of-type(7)
+    {
+        background: #89a02c;
+    }
+    .box_1 div:nth-of-type(8),.box_1 div:nth-of-type(9),.box_1 div:nth-of-type(10),.box_1 div:nth-of-type(11),.box_1 div:nth-of-type(12),.box_1 div:nth-of-type(13)
+    {
+        background: #e65154;
+    }
+    .box_1 div:nth-of-type(14), .box_1 div:last-child{
+        background: black;
+    }
+    .box_2 div {
+        background: #3a6bfe;
+    }
+    .box_3 div:nth-of-type(6),.box_3 div:nth-of-type(11),.box_3 div:nth-of-type(16),.box_3 div:nth-of-type(17),.box_3 div:nth-of-type(21),.box_3 div:nth-of-type(22), .box_3 div:nth-of-type(23)
+    {
+        background: #e86014;
+    }
+    .box_3 div:nth-of-type(1),.box_3 div:nth-of-type(7),.box_3 div:nth-of-type(12),.box_3 div:nth-of-type(13),.box_3 div:nth-of-type(18),.box_3 div:nth-of-type(19), .box_3 div:nth-of-type(24){
+        background: #ae4c86;
+    }
+    .box_3 div:nth-of-type(2),.box_3 div:nth-of-type(3),.box_3 div:nth-of-type(4),.box_3 div:nth-of-type(8),.box_3 div:nth-of-type(9),.box_3 div:nth-of-type(14){
+        background: #5aa02c;
+    }
+    .box_3 div:nth-of-type(26),.box_3 div:nth-of-type(27),.box_3 div:nth-of-type(28),.box_3 div:nth-of-type(29),.box_3 div:nth-of-type(30){
+        background: #6d535d;
+    }
+    .box_3 div:nth-of-type(5),.box_3 div:nth-of-type(10),.box_3 div:nth-of-type(15),.box_3 div:nth-of-type(20),.box_3 div:nth-of-type(25){
+        background:#e65464;
+    }
+        </style>
+         </head>
+        <body>
+            <div class="overall">
+            <div class="box_1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+            <div class="box_2">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box_3">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            </div>
+        </body>
+    </html>

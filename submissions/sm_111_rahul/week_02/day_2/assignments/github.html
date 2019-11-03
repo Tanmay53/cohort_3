@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Github homepage</title>
+        <style>
+            *{
+                margin:0px;
+        }
+            li{
+                float: left;
+                color: white;
+                margin: 15px;
+                list-style: none;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size:25px;
+                padding-left: 20px;
+        }
+            .nav-bar{
+                height: 60px;
+                width: auto;
+                background-color: #171a18;
+                padding:5px;
+        }
+            .main-cont{
+                height:700px;
+                width:auto;
+                background-image: url(https://github.githubassets.com/images/modules/site/heroes/simple-codelines.svg);
+                background-color: #4f5250;
+        }
+            .gitback-1{
+                height: 400px;
+                width: 560px;
+                float:left;
+                padding:50px;
+                padding-left:200px;
+                padding-top:200px;
+                margin-left: 150px;
+        }
+            .gitback-2{
+                height: 520px;
+                width: 400px;
+                float:left;
+                padding:40px;
+                background-color: white;
+                border-radius: 6px;
+                margin-top: 40px;
+        }
+            #title {
+                color:white;
+                line-height: 70px;
+                font-style: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 60px;
+        }
+            .gittext{
+                color:#a9b8ae;
+                font-size: 20px;
+                line-height: 40px;
+              
+        }
+            input {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;  
+                border-radius: 5px; 
+        }
+            #btn{
+               background-color: rgb(0, 201, 67);
+               width:400px;
+               height: 70px;
+               margin-top: 25px;
+        }
+            #passhint{
+               font-size: 14px;
+               color:black;
+               line-height: 17px;
+               margin-bottom: 25px;
+        }
+            h1{
+               font-size:30px;
+               font-style: bold;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;;
+        }
+            #signup{
+              background-color: #171a18; 
+              width: 100px;
+              height: 40px;
+              color:white;
+              font-size:20px;
+              margin-top:-10px;
+        }
+            #inp{
+              background-color: #171a18;
+              color:white;
+              margin-top: -10px;
+              border-radius: 4px;
+              font-size: 15px;
+        }
+            #tnc{
+              font-size: 12px;
+              color:black;
+              line-height: 16px;
+              margin-top: 25px;  
+         }
+            .box{
+              width:1100px;
+              height: 220px;
+              margin: 50px auto;
+              padding: 10px;
+
+        }
+            .box div{
+              float:left;
+              height:200px;
+              width:230px;
+              margin:5px;
+              margin-right:10px;
+        }
+            .box img{
+              width:50px;
+              height: 50px;
+              margin:25px;
+              margin-left:80px;
+        }
+            .box div:first-child{
+              width: 340px;
+        }
+            .box1{
+              width:1100px;
+              height: 240px;
+              margin: 50px auto;
+              padding: 10px;
+              background-image: url(https://github.githubassets.com/images/modules/site/advanced-security-iso-ui.jpg);
+              border-radius: 6px;
+        }
+            .box1 div:first-child{
+              width:700px;
+              height:180px;
+              float:left;
+              padding: 30px;
+        }
+            .box1 div:last-child{
+              width:300px;
+              height:180px;
+              float:left;
+              padding: 20px;
+        }
+            .box1 button{
+              width:170px;
+              height: 40px;
+              background-color: rgb(32, 82, 221) ;
+              margin: 70px auto;
+              color:white;
+              font-size: 18px;
+        }
+            .box2{
+              width:1100px;
+              height: 220px;
+              margin: 50px auto;
+              padding: 10px;
+        }
+            .box2 div{
+             float:left; 
+             width:1000px;
+             height:100px;
+             padding:10px;
+             margin:0 180px;
+        }  
+            .box2 img{
+             width:70px;
+             height:40px;
+             margin:20px;
+        }
+            .box3{
+              width:1100px;
+              height: 300px;
+              margin: 50px auto;
+              padding: 10px;
+              margin-top: 180px;
+        }  
+             .box4{
+              width:1200px;
+              height: 650px;
+              margin: 30px auto;
+              padding: 10px;
+        }  
+            .box4 div{
+              float: left;
+              height: 600px;
+        }
+            .box4 div:first-child{
+              width:650px;
+              background-image: url(https://github.githubassets.com/images/modules/site/home-illo-team.svg) ;
+    
+        }
+            .box4 div:last-child{
+              width:400px;
+              padding:30px;
+              margin-top:40px;
+
+        }
+            .box5{
+              width:1100px;
+              height: 400px;
+              margin: 50px auto;
+              padding: 10px;  
+        }
+            .box5 div{
+              float:left;
+              width:250px;
+              height:300px;
+              margin:12px;
+        }
+            .box5 img{
+                width:250px;
+                height: 300px;
+                border-radius: 4px;
+            }
+            .box6{
+              width:1100px;
+              height: 400px;
+              margin: 30px auto;
+              padding: 10px;   
+        }
+            .box6 div{
+              float: left;
+              width:250px;
+              height: 390px;
+              margin:12px;
+        }
+            .box6 img{
+              width:250px;
+              height: 380px;
+              border-radius: 4px;  
+            }
+            .box7{
+              width:100%;
+              height: 700px;
+              background-color: #171a18;
+        }
+            .box p:first-child{
+              font-size:40px;
+              font-style:bold;
+        }
+            #p1{
+              font-size: 22px;
+              line-height: 25px;
+        }
+            .subt{
+              font-size: 23px;
+              font-style: bold;
+              text-align: center;
+        }
+            .subt-desc{
+              font-size: 18px;
+              text-align: center;
+              color:grey;
+        }
+            .box button{
+              background-color: rgb(32, 82, 221);
+              width:200px;
+              height: 40px;
+              margin-top: 20px;
+              color:white;
+              font-size: 18px;
+              margin-left:15px;
+        }
+            .subt-1{
+              color:white;
+              text-align: left;
+              font-size: 35px;
+            
+
+        }
+            .subt-1-desc{
+              color:white;
+              text-align: left;
+              font-size: 18px;
+        }
+            .headt{
+              font-size:55px ;
+              font-style: bold;
+              text-align: center;
+              
+        }
+            .box3 button{
+                width: 250px;
+                height: 70px;
+                border-radius: 4px;
+                border:1px solid rgb(32, 82, 221);
+                color:rgb(32, 82, 221);
+                font-size: 20px;
+                padding: 10px;
+                margin:40px 400px;
+            }
+            .box4-t{
+                font-size:20px;
+                font-style: bold;
+        }
+            .box4-desc{
+                font-size:16px;
+            }
+            #lowert{
+                color:white;
+                line-height: 60px;
+                font-style: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 50px;
+                text-align: center;
+                margin-top: 50px;
+            }
+            .white{
+                float:left;
+                color:white;
+                margin:30px;
+                margin-left:150px;
+            }
+            .white button{
+                width:240px;
+                height: 45px;
+                background-color:rgb(0, 201, 67) ;
+                color:white;
+                font-size: 20px;
+                margin-top:25px;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <ul>
+                 <li style="margin-left: 100px;"> <img width="40px" height="40px" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></li>
+                 <li> Why Github?</li>
+                 <li> Enterprise</li>
+                 <li> Explore</li>
+                 <li> Marketplace</li>
+                 <li> Pricing</li>
+                 <li> <input id="inp" type="search" placeholder="Search Github " ></li>
+                 <li> Sign in</li>
+                 <li> <button id="signup" type="button">
+                     Sign up
+                      </button>
+                 </li>
+            </ul>
+        </div>
+        <div class="main-cont">
+            <div class="gitback-1"> <p id="title" >Built for <br>developers</p>
+                <p class="gittext">  GitHub is a development platform inspired by the <br>
+                                     way you work. From open source to business, 
+                                     you <br>can host and review code, manage projects, and <br>
+                                     build software alongside 40 million developers.
+                </p>
+            </div>
+            <div class="gitback-2">
+                <form>
+                     UserName: <br>
+                    <input type="text" placeholder="">
+                     Email:<br>
+                    <input type="email" placeholder="">
+                     Password: <br>
+                    <input type="password" >
+                    <p id="passhint">Make sure it's at least 15 characters OR
+                        <span style="color:rgb(66, 206, 23)"> at least 8 characters including <br>
+                        a number and a lowercase letter.
+                        </span>
+                    <a href="https://help.github.com/articles/creating-a-strong-password" style="text-decoration: none;">Learn more.</a></p>
+                    <button id="btn" type="submit"> Sign up for Github</button>
+                    <p id="tnc">By clicking “Sign up for GitHub”, you agree to our 
+                    <a style="text-decoration: none;"href="https://help.github.com/terms">Terms of Service</a> and <br> 
+                    <a style="text-decoration: none;" href="https://help.github.com/privacy">Privacy Statement</a>. We’ll occasionally send you account related emails.</p>
+                </form>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <p>Get started with<br> GitHub Enterprise</p><br>
+                <p id="p1">Take collaboration to the next level <br>with security and administrative<br> features built for teams.</p>
+            </div>
+            <div>
+                <img src="https://cdn1.iconfinder.com/data/icons/business-and-management-15/24/Cloud_storage-512.png">
+                <p class="subt"> Enterprise Cloud</p>
+                <p class="subt-desc">Leave the hosting to us.</p>
+                <button>Try Cloud for free</button>        
+            </div>
+            <div>
+                <img src="https://cdn0.iconfinder.com/data/icons/30-hardware-line-icons/64/Server-512.png">
+                <p class="subt">Enterprise Server<p>
+                <p class="subt-desc"> Deploy to your environment.</p>
+                <button>Try Server for free</button>         
+            </div>
+            <div>
+                <img src="https://cdn4.iconfinder.com/data/icons/basic-mobile-app-ui/50/04-03-customerservice-256.png"> 
+                <p class="subt">Talk to us<p>
+                <p class="subt-desc"> Want to use both?</p>
+                <button>Contact Sales.</button>
+            </div>
+
+        </div>
+        <div class="box1">
+            <div>   
+                <br><br><br>
+                <p class="subt-1 subt"> Securing software, together<p><br>
+                <p class="subt-1-desc subt-desc"> Discover community-powered tools to find and prevent security<br>
+                                                  vulnerabilities, announced at GitHub HQ in San Francisco.
+                </p>
+            </div>
+            <div>
+                <button>Watch the Recap</button>
+            </div>
+        </div>
+        <div class="box2">
+            <p class="subt-desc">More than 2.1 million businesses and organizations use GitHub</p>
+            <div>
+                <img src="https://github.githubassets.com/images/modules/site/logos/airbnb-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/sap-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/ibm-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/google-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/paypal-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/bloomberg-logo.png" >
+            </div>
+            <div>
+                <img src="https://github.githubassets.com/images/modules/site/logos/spotify-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/swift-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/facebook-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/node-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/nasa-logo.png" >
+                <img src="https://github.githubassets.com/images/modules/site/logos/walmart-logo.png" >
+            </div>
+        </div>    
+        <div class="box3">
+            <p class="subt-desc">GitHub for teams</p><br>
+            <p class="headt">A better way to work together</p><br>
+            <p class="subt-desc"> GitHub brings teams together to work through problems, move ideas<br>
+                forward, and learn from each other along the way.
+            </p>
+            <button>Sign up your team</button>
+        </div>
+        <div class="box4">
+            <div></div>
+            <div>
+                <p class="box4-t">Write better code</p><br>
+                <p class="box4-desc">Collaboration makes perfect. The conversations and code <br>reviews that happen 
+                    in pull requests help your team share<br> the weight of your work and improve the 
+                    software you<br> build. Learn about code review.
+                </p><br><br>
+                <p class="box4-t">Manage your chaos</p><br>
+                <p class="box4-desc">Take a deep breath. On GitHub, project management <br>happens in issues and project
+                    boards, right alongside your<br> code. All you 
+                    have to do is mention a teammate to get <br>
+                    them involved. Learn about project management.
+                </p><br>  <br>  
+                <p class="box4-t">Find the right tools</p><br>
+                <p class="box4-desc">Browse and buy apps from GitHub Marketplace with your <br>GitHub 
+                    account. Find the tools you like or discover new <br>favorites—
+                    then start using them in minutes. Learn about <br>integrations.
+                </p>    
+            </div>
+        </div>
+        <div class="box5">
+            <p class="subt-desc">See how the world's leading companies use GitHub Enterprise.</p>
+            <div><img src="https://customer-stories-feed.github.com/customer_stories/mgm-resorts/hero.jpg"><br><p class="box4-t">Mgm Resorts International</p></div>
+            <div><img src="https://customer-stories-feed.github.com/customer_stories/nationwide/nw_hero.jpg"><br><p class="box4-t">Nationwide</p></div>
+            <div><img src="https://customer-stories-feed.github.com/customer_stories/sap/sap6.jpg"><br><p class="box4-t">SAP</p></div>
+            <div><img src="https://customer-stories-feed.github.com/customer_stories/spotify/spotifyhero.jpg"><br><p class="box4-t">Spotify</p></div>
+        </div>
+        <br><br><br>
+        <p class="subt-desc">Community</p><br>
+        <p class="headt">Welcome home,<br>developers<p><br>
+        <p class="subt-desc">GitHub is home to the world’s largest community of developers and <br>their projects...
+        </p>
+        <div class="box6">
+            <div><img src="https://customer-stories-feed.github.com/customer_stories/freakboy3742/hero.jpg"></div>
+            <div><img src="https://customer-stories-feed.github.com/customer_stories/kris-nova/hero.jpg"></div>
+            <div><img src="https://customer-stories-feed.github.com/customer_stories/yyx990803/hero.jpg"></div>
+            <div><img src="https://customer-stories-feed.github.com/customer_stories/jessfraz/hero.jpg"></div>
+        </div>
+        <div class="box7">
+            <p id="lowert"><br><br>Get started for free — join the millions of developers already<br>
+                 using GitHub to share their code, work together, and build amazing things.</p>
+            <form>
+                    <span class="white">UserName: <br>
+                        <input type="text" placeholder="your username">
+                    </span>
+                    <span class="white">Email:<br>
+                        <input type="email" placeholder="your email address">
+                    </span>
+                    <span class="white">password: <br>
+                        <input type="password" placeholder="password">
+                    </span>
+                    <span class="white">   
+                        <button type="submit"> Sign up for Github</button>
+                    </span> 
+                    <br><br>   
+                    <p class="white" style="clear: left;">By clicking “Sign up for GitHub”, you agree to our 
+                      <a style="text-decoration: none;"href="https://help.github.com/terms">Terms of Service</a> and  
+                      <a style="text-decoration: none;" href="https://help.github.com/privacy">Privacy Statement</a>. We’ll occasionally send you account related emails.
+                    </p>   
+            </form>     
+        </div>
+    </body>
+</html>
