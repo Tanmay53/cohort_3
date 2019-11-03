@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Layout 3</title>
+    <style>  
+    body{width: 100%;
+        height: 650px;
+        display: grid;
+        grid-template-columns: 65% 35% ;
+        grid-template-rows:15% 75% ;
+        grid-gap: 20px;
+    }
+    .nav {grid-area: span 1 / span 2;background: yellow; font-size: 60px;padding: 10px 0 0 10px;}
+    .left {background: red;font-size: 25px;padding: 10px 0 0 10px;}
+    .right { display: flex;
+            flex-direction: column;}
+    .right div { background: lime; flex-basis: 30%; margin: 10px;font-size: 25px;padding: 10px 0 0 10px;} 
+
+    @media (max-width: 1000px) { 
+       body{width: 120%;
+           display: flex;
+            flex-direction: column;
+            }
+    .nav {flex-basis: 15%; margin: 10px;}
+    .left {flex-basis: 40%; margin: 10px;}
+    .right {flex-basis: 30%;flex-direction: row;}
+
+    }   
+    
+    @media (max-width: 800px) {
+        body{width: 80%;
+           display: flex;
+            flex-direction: column;
+            margin-left: 70px;
+            }
+    .nav {flex-basis: 10%; margin: 10px; font-size: 30px;}
+    .left {flex-basis: 30%; margin: 10px;}
+    .right {flex-basis: 65%;flex-direction: column;}
+
+    
+    }
+    </style>
+</head>
+
+<body>
+  <div class="nav">Navigation</div>
+  <div class="left">LEFT BOX</div>
+  <div class="right">
+        <div>RIGHT BOX 1</div>
+        <div>RIGHT BOX 2</div>
+        <div>RIGHT BOX 3</div>
+  </div>
+
+</body>
+</html> 
