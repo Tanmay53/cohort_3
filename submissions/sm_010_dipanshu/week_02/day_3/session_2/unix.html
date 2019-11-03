@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style type="text/css">
+            .cont {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .linus {
+                background: #e3dadb;
+                width: 500px;
+                text-align: center;
+            }
+
+            .linus img {
+                width: 125px;
+                margin: 20px;
+            }
+
+            .linus :nth-child(2) {
+                font-size: 40px;
+                color: #050085;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .linus :last-child {
+                font-size: 35px;
+                margin-bottom: 15px;
+            }
+
+            .sal {
+                display: grid;
+                grid-template-columns: auto 580px;
+                grid-template-rows: 50px auto;
+                margin: 50px;
+            }
+
+            .sal :first-child {
+                width: 150px;
+                grid-area: 1/1/span 2/1;
+                margin-right: 20px;
+            }
+
+            .sal :nth-child(2) {
+                text-align: left;
+                color: #D3000E;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .sal :last-child {
+                text-align: justify;
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: row;
+                background: #d35500;
+                height: 120px;
+                padding: 10px;
+                width: 1000px;
+            }
+
+            .footer > div:first-child, .footer > div:last-child{
+                flex-grow: 1;
+            }
+
+            .head {
+                color: white;
+                font-size: 30px;
+                margin: 10px;
+            }
+
+            .tail {
+                color: white;
+                font-size: 30px;
+                text-align: right;
+                margin: 10px;
+            }
+
+            .head-desc {
+                margin: 10px;
+            }
+
+            .tail-desc{
+                margin: 10px;
+                margin-top: 30px;
+                text-align: right;
+            }
+
+            .footer > div:nth-child(2) {
+                width: 5px;
+                background: black;
+            }
+
+            @media (max-width: 800px) {
+
+                .cont {
+                    border: 5px green dashed;
+                }
+
+                .linus {
+                    background: crimson;
+                }
+
+                .sal {
+                    background: yellow;
+                }
+
+                .footer {
+                    width: auto;
+                }
+            }
+        </style>
+        <title>
+            Pioneers of Open Source
+        </title>
+    </head>
+    <body>
+        <div class="cont">
+            <div class="linus">
+                <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="linus torvalds">
+
+                <div>Linus Torvalds</div>
+                
+                <div>The creator of Linux & Git</div>
+            </div>
+            <div class="sal">
+                <div>
+                    <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg" alt="sal khan">
+                </div>
+
+                <div>Sal Khan</div>
+
+                <div> Salman Khan is the founder of the khan academy which has a mission of providing a free world-class education for anyone, anywhere.</div>
+            </div>
+            <div class="footer">
+                <div>
+                    <div class="head">Ken Thompson</div>
+                    <div class="head-desc">Designed and Implemented the <br> original Unix Operating System</div>
+                </div>
+                <div></div>
+                <div>
+                    <div class="tail">Dennis Ritchie</div>
+                    <div class="tail-desc">The creator of C Programming Language</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

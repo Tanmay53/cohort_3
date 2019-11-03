@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Layout 3</title>
+ <style>
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(4, 70px);
+  grid-gap: 15px;
+  margin: 60px 60px 60px 60px ;
+ }
+
+ .grid-container div {
+  background-color: rgb(204, 163, 74);
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1; 
+  /* grid-column: 2/1 [OR] grid-area: 2/1/2/1
+     can also be used.
+  */
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2; 
+ }
+
+
+ .grid-container div:nth-child(4) {
+  grid-area: 3/1; 
+ }
+
+
+ .grid-container div:nth-child(5) {
+  grid-area: 3/2; 
+ }
+
+
+ .grid-container div:nth-child(6) {
+  grid-area: 3/3; 
+ }
+
+
+ .grid-container div:nth-child(7) {
+  grid-area: 4/1; 
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-area: 4/2; 
+ }
+
+ .grid-container div:nth-child(9) {
+  grid-area: 4/3; 
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-area: 4/4; 
+ }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  grid-template-rows: repeat(4, 110px);
+  grid-gap: 15px;
+  margin: 100px 100px 100px 100px ;
+ }
+
+ .grid-container div {
+  background-color: rgb(202, 204, 74);
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1; 
+  /* grid-column: 2/1 [OR] grid-area: 2/1/2/1
+     can also be used.
+  */
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2; 
+ }
+
+
+ .grid-container div:nth-child(4) {
+  grid-area: 3/1; 
+ }
+
+
+ .grid-container div:nth-child(5) {
+  grid-area: 3/2; 
+ }
+
+
+ .grid-container div:nth-child(6) {
+  grid-area: 3/3; 
+ }
+
+
+ .grid-container div:nth-child(7) {
+  grid-area: 4/1; 
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-area: 4/2; 
+ }
+
+ .grid-container div:nth-child(9) {
+  grid-area: 4/3; 
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-area: 4/4; 
+ }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  grid-template-rows: repeat(4, 110px);
+  grid-gap: 15px;
+  margin: 100px 100px 100px 100px ;
+ }
+
+ .grid-container div {
+  background-color: rgb(218, 78, 199);
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1; 
+  /* grid-column: 2/1 [OR] grid-area: 2/1/2/1
+     can also be used.
+  */
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2; 
+ }
+
+
+ .grid-container div:nth-child(4) {
+  grid-area: 3/1; 
+ }
+
+
+ .grid-container div:nth-child(5) {
+  grid-area: 3/2; 
+ }
+
+
+ .grid-container div:nth-child(6) {
+  grid-area: 3/3; 
+ }
+
+
+ .grid-container div:nth-child(7) {
+  grid-area: 4/1; 
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-area: 4/2; 
+ }
+
+ .grid-container div:nth-child(9) {
+  grid-area: 4/3; 
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-area: 4/4; 
+ }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  grid-template-rows: repeat(4, 110px);
+  grid-gap: 15px;
+  margin: 100px 100px 100px 100px ;
+ }
+
+ .grid-container div {
+  background-color: rgb(74, 204, 187);
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1; 
+  /* grid-column: 2/1 [OR] grid-area: 2/1/2/1
+     can also be used.
+  */
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2; 
+ }
+
+
+ .grid-container div:nth-child(4) {
+  grid-area: 3/1; 
+ }
+
+
+ .grid-container div:nth-child(5) {
+  grid-area: 3/2; 
+ }
+
+
+ .grid-container div:nth-child(6) {
+  grid-area: 3/3; 
+ }
+
+
+ .grid-container div:nth-child(7) {
+  grid-area: 4/1; 
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-area: 4/2; 
+ }
+
+ .grid-container div:nth-child(9) {
+  grid-area: 4/3; 
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-area: 4/4; 
+ }
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+ 
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(4, 120px);
+  grid-gap: 15px;
+  margin: 100px 100px 100px 100px ;
+ }
+
+ .grid-container div {
+  background-color: seagreen;
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1; 
+  /* grid-column: 2/1 [OR] grid-area: 2/1/2/1
+     can also be used.
+  */
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2; 
+ }
+
+
+ .grid-container div:nth-child(4) {
+  grid-area: 3/1; 
+ }
+
+
+ .grid-container div:nth-child(5) {
+  grid-area: 3/2; 
+ }
+
+
+ .grid-container div:nth-child(6) {
+  grid-area: 3/3; 
+ }
+
+
+ .grid-container div:nth-child(7) {
+  grid-area: 4/1; 
+ }
+
+ .grid-container div:nth-child(8) {
+  grid-area: 4/2; 
+ }
+
+ .grid-container div:nth-child(9) {
+  grid-area: 4/3; 
+ }
+
+ .grid-container div:nth-child(10) {
+  grid-area: 4/4; 
+ }
+
+}
+ </style>
+</head>
+<body>
+ <div class="grid-container">
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+ </div>
+</body>
+</html>

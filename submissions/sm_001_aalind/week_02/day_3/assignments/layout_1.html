@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Layout 1</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0px;
+      }
+      body {
+        display: grid;
+        grid-template-columns: 600px 300px;
+        grid-template-rows: 50px 400px;
+        grid-gap: 20px;
+        font-family: arial;
+        justify-content: center;
+        align-content: center;
+      }
+
+      body > div:first-child {
+        background: yellow;
+        font-size: 40px;
+        padding-left: 10px;
+      }
+      body > div:nth-child(2) {
+        background: red;
+        padding: 10px 0px 0px 10px;
+        font-size: 25px;
+        color: grey;
+      }
+      body > div:last-child {
+        background: green;
+        padding: 10px 0px 0px 10px;
+        font-size: 25px;
+        color: grey;
+      }
+
+      @media (max-width: 1024px) {
+        body {
+          grid-template-columns: 500px;
+          grid-template-rows: 50px 150px 150px;
+        }
+        body > div:first-child {
+          background: yellow;
+          font-size: 40px;
+          padding-left: 10px;
+        }
+        body > div:nth-child(2) {
+          background: red;
+          padding: 10px 0px 0px 10px;
+          font-size: 25px;
+          color: grey;
+        }
+        body > div:last-child {
+          background: green;
+          padding: 10px 0px 0px 10px;
+          font-size: 25px;
+          color: grey;
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        body > div:first-child {
+          grid-column: 1 / span 2;
+        }
+        body > div:nth-child(2) {
+          margin-right: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>Navigation</div>
+    <div>LEFT BOX</div>
+    <div>RIGHT BOX</div>
+  </body>
+</html>
