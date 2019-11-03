@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 100px;
+            grid-template-rows: 100px 500px;
+            width: 600px;
+            margin: 20px;
+            padding-left: 350px;
+        }
+
+        .grid-container div:nth-child(1) {
+
+            background: red;
+            border-radius: 4px;
+            height: 80px;
+            grid-column: 1/span3;
+            grid-row: 1/span3;
+            width: 530px;
+        }
+
+        .grid-container div:nth-child(2) {
+
+            background: rgb(68, 175, 6);
+            border-radius: 4px;
+            grid-column: 1/span1;
+            grid-row: 2/span1;
+            width: 100px;
+
+
+        }
+
+        .grid-container div:nth-child(3) {
+
+            background: rgb(92, 179, 230);
+            border-radius: 4px;
+            grid-row: 2/span1;
+            grid-column: 2/span1;
+            width: 410px;
+        }
+
+        @media(min-width: 300px) {
+            body {
+                background: blue;
+                margin: auto auto auto auto;
+                margin-block: center;
+            }
+        }
+
+        @media(max-width: 800px) {
+            body {
+                background: brown;
+                margin: auto auto auto auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div></div>
+        <div></div>
+        <div></div>
+
+
+    </div>
+</body>
+
+</html>

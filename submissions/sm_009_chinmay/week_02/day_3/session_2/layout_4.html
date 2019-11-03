@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Layout 4</title>
+ <style>
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(5, 70px);
+  grid-template-rows: repeat(2, 70px);
+  width: 810px;
+  margin-left: 40px;
+  margin-top: 200px;
+ }
+
+ .grid-container div {
+  background-color: rgb(233, 51, 127);
+  border-radius: 5px;
+ }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+ .grid-container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(5, 90px);
+  grid-template-rows: repeat(2, 90px);
+  width: 810px;
+  margin-left: 40px;
+  margin-top: 200px;
+ }
+
+ .grid-container div {
+  background-color: rgb(47, 221, 221);
+  border-radius: 5px;
+ }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(5, 120px);
+  grid-template-rows: repeat(2, 120px);
+  width: 810px;
+  margin-left: 50px;
+  margin-top: 200px;
+ }
+
+ .grid-container div {
+  background-color: rgb(221, 47, 47);
+  border-radius: 5px;
+ }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(2, 150px);
+  width: 810px;
+  margin: 100px;
+  margin-top: 200px;
+ }
+
+ .grid-container div {
+  background-color: rgb(221, 102, 47);
+  border-radius: 5px;
+ }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+ .grid-container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(2, 150px);
+  width: 810px;
+  margin-left: 200px;
+  margin-top: 200px;
+ }
+
+ .grid-container div {
+  background-color: seagreen;
+  border-radius: 5px;
+ }
+
+}
+
+ </style>
+</head>
+<body>
+ <div class="grid-container">
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flex_2</title>
+    <style>
+        .flex-box {
+            display: flex;
+            flex-direction: row;
+            margin: 50px;
+        }
+        .flex-box div {
+            height: 100px;
+            width: 100px;
+            background: cadetblue;
+            margin-left: 50px;
+        }
+        body {
+            margin: 200px;
+        }
+        .box1 {
+            flex-basis: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <div></div>
+        <div class="box1"></div>
+        <div></div>
+    </div>
+    <div class="flex-box">
+        <div class="box1"></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="flex-box">
+        <div></div>
+        <div></div>
+        <div class="box1"></div>
+    </div>
+</body>
+</html>

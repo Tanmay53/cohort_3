@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout 2</title>
+        <style type="text/css">
+            .flex-box {
+                display: flex;
+                flex-direction: row;
+                width: 50%;
+            }
+            .flex-box div {
+                width: 20%;
+                height: 100px;
+                margin: 15px;
+                background-color: lightseagreen;
+            }
+            .fgrow {
+                flex-grow: 0.7
+            }
+            @media (max-width: 900px) {
+                .flex-box div {
+                    width: 15%;
+                    height: 50px;
+                    margin: 10px;
+                }
+            }
+
+            @media (max-width: 500px) {
+                .flex-box div {
+                    width: 10%;
+                    height: 25px;
+                    margin: 5px;
+                    background-color: lightsalmon;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-box">
+            <div></div>
+            <div class="fgrow"></div>
+            <div></div>
+        </div>
+        <div class="flex-box">
+            <div class="fgrow"></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flex-box">
+            <div></div>
+            <div></div>
+            <div class="fgrow"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout4</title>
+<style>
+    #grid-wrapper {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px ;
+    }
+
+    #grid-wrapper div{
+        height: 10opx;
+        width: 100px;
+        background-color: aqua;
+    }
+
+    @media (min-width: 600px){
+            #grid-wrapper div{
+                background-color: green;
+                
+            }
+
+        }
+
+        @media (min-width: 1200px){
+            #grid-wrapper div{
+                background-color: seagreen;
+                
+            }
+        }
+</style>
+
+</head>
+<body>
+    <div id="grid-wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
