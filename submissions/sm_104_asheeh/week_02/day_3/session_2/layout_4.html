@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout_4</title>
+        <style>
+
+                
+                #cont{
+                    display: grid;
+                    grid-template-columns: 150px 150px 150px 150px 150px;
+                    grid-template-rows: 150px 150px;
+                    margin: 150px;
+                    margin-right:20px;
+                    margin-left:200px;
+                    grid-gap:25px;
+                   
+
+                }
+                #cont div{
+                    background-color: teal;
+                    border-radius:5px;
+                }
+
+                @media only screen and (max-width: 600px) {
+
+#cont div{
+    background-color: aqua !important;
+}
+} 
+@media only screen and (min-width: 600px) {
+
+#cont div{
+       background-color: thistle !important;
+    }
+    }
+
+    @media only screen and (min-width: 760px) {
+
+#cont div{
+    background-color: greenyellow !important;
+}
+} 
+
+@media only screen and (min-width: 900px) {
+
+#cont div{
+    background-color: teal !important;
+}
+}      
+        </style>
+    </head>
+
+    <body>
+        <div id="cont">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+        
+    </body>
+</html>
