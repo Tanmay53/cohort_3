@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Layout 2</title>
+    <style> 
+    body { 
+        width: 1350px;
+        height:650px;
+        display: grid;
+        grid-template-rows: 15% 70%;
+        row-gap: 10px;
+        }
+    body div:nth-of-type(1)  { background: yellow; margin-bottom: 20px;font-size: 50px; padding-top: 10px; padding-left: 10px;}
+     
+    .reverse { width: 1350 px;
+         height: 600px;
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-gap: 60px;
+    } 
+    .reverse div:nth-of-type(1)  {background: red;font-size: 25px;padding-top: 10px; padding-left: 10px;}
+    .reverse div:nth-of-type(2)  {background:lime; font-size: 25px;padding-top: 10px; padding-left: 10px;}  
+  
+
+    @media (max-width: 1000px)       
+    {
+        body { 
+            width: 60%;
+        margin: 30px 500px 0px 200px;
+        height:650px;
+        display: flex;
+        flex-direction: column;
+        }
+        .reverse {display: flex;
+            flex-direction:column-reverse;
+        }
+        body div:nth-of-type(1)  { flex-basis: 15%; background: yellow; font-size: 50px; padding-top: 10px; padding-left: 10px;} 
+        .reverse div:nth-of-type(1)  { flex-basis: 40%; background: red; font-size: 25px; padding-left: 10px;}
+        .reverse div:nth-of-type(2)  { flex-basis: 40%; background:limegreen; font-size: 25px;padding-top: 10px; padding-left: 10px;margin-bottom: 30px;}  
+    }             
+        </style>
+    </head>
+    
+    <body>
+        <div>Navigation</div>
+        <div class="reverse">
+        <div>LEFT BOX</div>
+        <div>RIGHT BOX</div>
+        </div>
+    </body>
+    </html> 
