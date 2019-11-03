@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+    .body{
+        text-align: center;
+    }
+    .container {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(4,1fr);
+        width: 50%;
+        height: 500px;
+        align-content: center;
+        margin: 0 auto;
+        
+        grid-template-areas:
+        "red red red red"
+        "green teal teal teal"
+    }
+    .red {
+        background-color: red;
+        grid-area: red;
+        height: 30px;
+        text-align: center;
+    }
+    .green {
+        background-color: green;
+        grid-area: green;
+        height: 350px;
+        text-align: center;
+    }
+    .teal {
+        background-color: teal;
+        grid-area:teal;
+        height: 350px;
+        text-align: center;
+    }
+    @media (max-width:968px) {
+            .red {background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);border-radius: 5px;}
+                .green {background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);border-radius: 5px;}
+                .teal {background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,249,255,1) 95%);border-radius: 5px;}
+}
+
+    
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="red"></div>
+        <div class="green"></div>
+        <div class="teal"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Layout_2</title>
+    <style>
+        * {
+            border-radius: 5px;
+        }
+
+        .box {
+            width: 1000px;
+            margin: 150px auto;
+        }
+
+        .row1 {
+            margin: 10px
+        }
+
+        .row2 {
+            margin: 10px;
+            clear: left;
+        }
+
+        .row3 {
+            margin: 10px;
+            clear: left;
+        }
+
+        .space1 {
+            margin: 20px 25px;
+            float: left;
+        }
+
+        .space2 {
+            margin: 20px 15px;
+            float: left;
+        }
+
+        .space3 {
+            margin: 20px 25px;
+            float: left;
+        }
+
+        .square {
+            width: 120px;
+            height: 120px;
+            background-color: rgb(45, 186, 153);
+        }
+
+        .rectangle {
+            width: 360px;
+            height: 120px;
+            background-color: rgb(45, 186, 153);
+        }
+
+        #rect {
+            width: 400px;
+            margin-left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="row1">
+            <div class="square space1"></div>
+            <div class="rectangle space1"></div>
+            <div class="square space1"></div>
+        </div>
+        <div class="row2">
+            <div class="rectangle space2" id="rect"></div>
+            <div class="square space2"></div>
+            <div class="square space2"></div>
+        </div>
+        <div class="row3">
+            <div class="square space3"></div>
+            <div class="square space3"></div>
+            <div class="rectangle space3"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
