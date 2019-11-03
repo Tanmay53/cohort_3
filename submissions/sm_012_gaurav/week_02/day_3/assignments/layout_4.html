@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout 4</title>
+        <style type="text/css">
+            * {
+                font-family: sans-serif;
+            }
+            .grid {
+                display: grid;
+                grid-template-rows: 15% 40%;
+                grid-template-columns: 20% 20% 20% 20%;
+                grid-gap: 20px;
+                grid-template-areas: "yellow yellow yellow yellow"
+                                     "red green purple gray";
+                height: 700px;
+            }
+            .grid div {
+                padding: 10px;
+                font-size: 30px;
+            }
+            .yellow {
+                background-color: yellow;
+                grid-area: yellow;
+            }
+            .red {
+                background-color: red;
+                grid-area: red;
+            }
+            .purple {
+                background-color: purple;
+                grid-area: purple;
+            }
+            .green {
+                background-color: green;
+                grid-area: green;
+            }
+            .gray {
+                background-color: gray;
+                grid-area: gray;
+            }
+            @media (max-width: 900px) {
+                .grid {
+                    grid-template-areas: "yellow yellow"
+                                         "red purple"
+                                         "green gray";
+                    grid-template-rows: 15% 30% 30%;
+                    grid-template-columns: 20% 20%;
+                    grid-gap: 15px;
+                }
+            }
+            @media (max-width: 500px) {
+                .grid {
+                    grid-template-areas: "yellow"
+                                        "red"
+                                        "gray"
+                                        "green"
+                                        "purple";
+                    grid-template-rows: 15% 20% 20% 20% 20%;
+                    grid-template-columns: 70%;
+                    grid-gap: 10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="yellow">Navigation</div>
+            <div class="red">Box 1</div>
+            <div class="green">Box 2</div>
+            <div class="purple">Box 3</div>
+            <div class="gray">Box 4</div>
+        </div>
+    </body>
+</html>

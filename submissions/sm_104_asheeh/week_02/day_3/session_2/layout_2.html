@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout_2</title>
+        <style>
+        .cont{
+            width: 600px;
+            margin: 100px auto;
+        }   
+        .class1 {
+                  display: flex;
+                  justify-content: center; 
+
+                 
+
+
+
+        }
+        .class1 div{
+                     padding:10px;
+                     background-color: teal;
+                     flex-basis: 100px;
+                     height: 100px;
+                    border-radius: 5px;
+                     margin: 10px;
+                     }
+
+              #box1 div:nth-of-type(2){
+                  flex-grow: 2;
+              }      
+              #box2 div:nth-of-type(1){
+                  flex-grow: 2;
+              }      
+
+              #box3 div:nth-of-type(3){
+                  flex-grow: 2;
+              }  
+
+              @media only screen and (max-width: 600px) {
+
+                    .class1 div{
+                        background-color: aqua !important;
+                    }
+                    } 
+                    @media only screen and (min-width: 600px) {
+
+                    .class1 div{
+                           background-color: thistle !important;
+                        }
+                        }
+
+                        @media only screen and (min-width: 760px) {
+
+                    .class1 div{
+                        background-color: greenyellow !important;
+                    }
+                    } 
+
+                    @media only screen and (min-width: 900px) {
+
+                    .class1 div{
+                        background-color: teal !important;
+                    }
+                    }      
+
+    </style>
+
+    </head>
+<body><div class="cont"> 
+    <div class="class1" id="box1">
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    <div class="class1" id="box2">
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    <div class="class1" id="box3">
+            <div></div>
+            <div></div>
+            <div></div>
+    </div>
+    </div>
+</body>
+</html>

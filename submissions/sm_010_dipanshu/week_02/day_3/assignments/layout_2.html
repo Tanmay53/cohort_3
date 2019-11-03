@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Layout 2
+        </title>
+        <style type="text/css">
+            .cont{
+                display: grid;
+                grid-template-areas: "nav nav"
+                                     "left right";
+                grid-gap: 25px;
+            }
+
+            .nav {
+                grid-area: nav;
+                height: 100px;
+                background: yellow;
+                font-size: 40px;
+                padding: 10px;
+            }
+
+            .left {
+                grid-area: left;
+                height: 400px;
+                background: red;
+                padding: 10px;
+                margin-right: 20px;
+                font-size: 30PX;
+            }
+
+            .right {
+                grid-area: right;
+                height: 400px;
+                background: #00ff2a;
+                padding: 10px;
+                margin-left: 20px;
+                font-size: 30PX;
+            }
+
+            @media (max-width: 600px) {
+                .cont {
+                    display: grid;
+                    grid-template-areas: "nav"
+                                         "right"
+                                         "left";
+                }
+
+                .left {
+                    height: 250px;
+                    margin: 0;
+                }
+
+                .right {
+                    height: 250px;
+                    margin: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cont">
+            <div class="nav">Navigation</div>
+            <div class="left">LEFT BOX</div>
+            <div class="right">RIGHT BOX</div>
+        </div>
+    </body>
+</html>

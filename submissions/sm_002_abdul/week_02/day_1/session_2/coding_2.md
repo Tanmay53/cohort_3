@@ -100,11 +100,11 @@ div {
 Fill the below property values for the `div`
 1. Color
 ```
- White 
+  white
 ```
 2. Height
 ```
-100px;
+100px
 ```
 
 ### FSD.CSS.3.2
@@ -171,7 +171,7 @@ red
 ```
 4. Margin-Top
 ```
-10px
+6px
 ```
 5. Font-Size
 ```
@@ -203,7 +203,7 @@ red
 ```
 5. Font-Size
 ```
-11px
+16px
 ```
 6. Color
 ```
@@ -243,7 +243,7 @@ black
 ```
 1. Width
 ```
-75
+75px
 ```
 2. Height
 ```
@@ -299,7 +299,7 @@ purple
 ```
 1. Width
 ```
-75px
+100px
 ```
 2. Height
 ```
