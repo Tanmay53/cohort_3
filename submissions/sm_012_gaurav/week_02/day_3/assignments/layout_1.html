@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout 1</title>
+        <style type="text/css">
+            * {
+                font-family: sans-serif;
+            }
+            .grid {
+                display: grid;
+                grid-template-rows: 15% 70%;
+                grid-template-columns: 25% 25%;
+                grid-gap: 30px;
+                height: 600px;
+            }
+            .yellow {
+                background-color: yellow;
+                grid-area: 1 / 1 / 2 / span 2;
+                font-size: 50px;
+            }
+            .grid p {
+                margin: 10px;
+                padding: 0px;
+            }
+            .red {
+                background-color: red;
+                font-size: 30px;
+            }
+            .green {
+                background-color: green;
+                font-size: 30px;
+            }
+            @media (max-width: 600px) {
+                .grid {
+                    grid-template-rows: 15% 35% 35%;
+                    grid-template-columns: 70%;
+                    grid-gap: 15px;
+                }
+                .yellow {
+                    grid-area: 1 / 1 / 2 / 2;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="yellow"><p>Navigation</p></div>
+            <div class="red"><p>LEFT BOX</p></div>
+            <div class="green"><p>RIGHT BOX</p></div>
+        </div>
+    </body>
+</html>
