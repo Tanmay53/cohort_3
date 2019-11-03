@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+           @media(min-width: 450px) and (max-width: 650px){
+            .gridbox{
+                margin:100px;
+                display:grid;
+                width:300px;
+                grid-template-columns: 300px;
+                grid-template-rows: 50px 100px 100px 100px 100px;
+                grid-gap:20px; 
+                }
+                #id1{
+                    background-color: yellow;
+                    padding:10px
+                }
+                #id2{
+                    background-color: red;
+                    padding: 10px;
+                }
+                #id3{
+                    background-color: grey;
+                    padding: 10px;
+                }
+                #id4{
+                    background-color:green;
+                    padding: 10px;
+                }
+                #id5{
+                    background-color: blue;
+                    padding: 10px;
+                }
+           }
+           @media(min-width: 651px) and (max-width: 850px){
+            .gridbox{
+                margin:100px;
+                display:grid;
+                width:620px;
+                grid-template-columns: 300px 300px;
+                grid-template-rows: 50px 200px 200px;
+                grid-gap:20px; 
+                }
+                #id1{
+                    grid-area: 1/1/2/3;
+                    background-color: yellow;
+                    padding:10px
+                }
+                #id2{
+                    background-color: red;
+                    padding: 10px;
+                }
+                #id3{
+                    background-color: grey;
+                    padding: 10px;
+                }
+                #id4{
+                    background-color:green;
+                    padding: 10px;
+                }
+                #id5{
+                    grid-area: 2/2/3/3;
+                    background-color: blue;
+                    padding: 10px;
+                }
+           }
+           @media(min-width: 851px) and (max-width: 1380px){
+            .gridbox{
+                margin:100px;
+                display:grid;
+                width:max-content;
+                grid-template-columns: 200px 200px 200px 200px;
+                grid-template-rows: 50px 200px;
+                grid-gap:20px; 
+                
+                }
+                #id1{
+                    grid-area: 1/1/2/5;
+                    background-color: yellow;
+                    padding:10px
+                }
+                #id2{
+                    background-color: red;
+                    padding: 10px;
+                }
+                #id3{
+                    background-color: grey;
+                    padding: 10px;
+                }
+                #id4{
+                    background-color:green;
+                    padding: 10px;
+                }
+                #id5{
+                    background-color: blue;
+                    padding: 10px;
+                }
+           }
+        </style>
+    </head>
+    <body>
+            <div class="gridbox">
+                    <div id="id1">NAVIGATION</div>
+                    <div id="id2"> BOX1</div>
+                    <div id="id3"> BOX 2</div> 
+                    <div id="id4">BOX 3</div> 
+                    <div id="id5"> BOX 4</div> 
+                </div>
+    </body>
+</html>
