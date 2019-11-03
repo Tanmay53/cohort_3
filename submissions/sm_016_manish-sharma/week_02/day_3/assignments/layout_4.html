@@ -1,0 +1,62 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Layout 4</title>
+    <style>    
+    body {
+        width: 100%;
+        height: 600px;
+        display: grid;
+        grid-template-rows: 15% 45%;
+        grid-template-columns: 24% 24% 24% 24% ;
+        grid-template-areas:  "n n n n"
+                            "b1 b2 b3 b4";
+        grid-gap: 20px;                      
+    }
+    body div {background: black;}
+    .nav{grid-area: n;background: yellow;font-size: 60px;padding: 10px 0 0 10px;}
+    .box1{grid-area: b1;background: red;font-size: 25px;padding: 10px 0 0 10px;}
+    .box2{grid-area: b2;background: green;font-size: 25px;padding: 10px 0 0 10px;}
+    .box3{grid-area: b3;background: blue;font-size: 25px;padding: 10px 0 0 10px;}
+    .box4{grid-area: b4;background: grey;font-size: 25px;padding: 10px 0 0 10px;}
+
+    @media (max-width: 1000px){
+        body{
+            width: 70%;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 15% 50% 50% ;
+            grid-template-areas: "n n"
+                                 "b1 b3"
+                                 "b2 b4";
+            row-gap: 20px;column-gap: 40px; margin-left: 50px;              
+        }
+        .nav {font-size: 45px;}
+    }
+
+    @media (max-width: 800px){
+        body{
+            width: 100%;
+            height: 500px;
+            display: grid;
+            grid-template-rows: 15% 20% 20% 20% 20% ;
+            grid-template-areas: "n"
+                                 "b1"
+                                 "b4"
+                                 "b2"
+                                 "b3";
+            grid-gap: 20px;                    
+    }
+
+     </style>
+</head>
+
+<body>
+    <div class="nav">Navigation</div>
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+    <div class="box4">Box 4</div>
+</body>
+</html>
