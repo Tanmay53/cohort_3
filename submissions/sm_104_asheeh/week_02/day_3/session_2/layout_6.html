@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout_6</title>
+    <style>
+             .class1{
+                      display: grid;
+                      grid-template-columns: 100px 100px 100px 100px;
+                      grid-template-rows: 100px 100px 100px 100px;
+                      grid-gap:25px;
+                      width: 475px;
+                      height: 475px;
+                      margin-left: 100px;
+
+             }
+             .class1 div{
+                          background-color: teal;
+                          border-radius: 5px;
+             }
+            #eig{
+        
+              grid-column-start: 1;  
+            }
+            #ten{
+                grid-column-start: 1;
+            }
+
+            @media only screen and (max-width: 600px) {
+
+.class1 div{
+    background-color: aqua !important;
+}
+} 
+@media only screen and (min-width: 600px) {
+
+.class1 div{
+       background-color: thistle !important;
+    }
+    }
+
+    @media only screen and (min-width: 760px) {
+
+.class1 div{
+    background-color: greenyellow !important;
+}
+} 
+
+@media only screen and (min-width: 900px) {
+
+.class1 div{
+    background-color: teal !important;
+}
+}      
+
+    </style>
+    </head>
+    <body>
+        <div class="class1">
+            
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            
+            
+                <div></div>
+                <div></div>
+                <div></div>
+            
+            
+                <div id="eig"></div>
+                <div></div>
+            
+            
+                <div id="ten"></div>
+            
+        </div>
+    </body>
+
+</html>
