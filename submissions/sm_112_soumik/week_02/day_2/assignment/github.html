@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
            input{
-            border-radius: 9%;
+            border-radius: 5px;
         }
     .topbar{
         height: 60px;   
@@ -161,8 +161,10 @@
         .inside{
             height: 180px;
             width: 560px;
-            border: 3px black dotted;
             margin: 20px 10px;
+        }
+        .inside:hover{
+            border: 3px black solid;
         }
         .imgbox{
             height: 150px;
@@ -193,8 +195,46 @@
         }
         .newsl{
             background-color: rgb(46, 45, 45);
-            height: 500px;
+            height: 350px;
             padding: 10px;  
+        }
+        .profile_1 img{
+            height: 300px;
+            width: 250px;
+            border: 3px black solid;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .newsl p{
+            float: left;
+            margin: 15px 10px;
+            width: 20%;
+        }
+        .newsl input{
+            float: left;
+            width: 20%;
+            height:30px;
+            margin: 0px 10px;
+        }
+        #btn5{
+            width: 20%;
+            height: 40px;
+            background-color: green;
+            color: wheat;
+            margin-top: 40px;
+        }
+        .table{
+            float: left;
+            margin-left:300px;
+            padding: 50px;
+
+        }
+        .table tr {
+            height: 30px;
+            width: 600px;
+        }
+        td{
+            width:100px;
         }
     </style>
 </head>
@@ -299,28 +339,78 @@
                 <img id="lower" src="https://www.logoground.com/uploads6/dv6y2019259702019-02-123908587cool-dino.jpg" alt="">
                 <!-- <p id="clear" style="text-align: center; font-size: 30px; max-resolution: left 100px;">Sometimes,there are more then 1 tool for the job.<br>Why not try something new.</p> -->
             </div>
+            <div class="get_started" id="clear" style="border: 1px white solid;">
+                    <h2 style="color: black; font-size: 50px;">Welcome Home ,<br>Developers.</h2>
+                    <p>GitHub is home to the world’s largest community of developers and their projects...</p>
+            </div>
             <div class="get_started profile" id="clear">
                 <div class="profile_1">
-                    <img src="" alt="">
-                    <h2 style="color: black;"></h2>
-                    <p></p>
+                    <img src="https://editorial01.shutterstock.com/wm-preview-1500/1763771a/4b4a682b/uk-games-developers-portrait-shoot-shutterstock-editorial-1763771a.jpg" alt="">
+                    <h2 style="color: black;">Rami Malik</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est incidunt quod ad magni maiores accusamus alias sit adipisci, nobis iure nisi laborum dolores itaque, enim neque dignissimos et eveniet excepturi.</p>
                 </div>
                 <div class="profile_1">
-                        <img src="" alt="">
-                        <h2 style="color: black;"></h2>
-                        <p></p>
+                        <img src="https://www.hyperledger.org/wp-content/uploads/2018/09/josh.png" alt="">
+                        <h2 style="color: black;">Ed Sheeran</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam hic, possimus nam explicabo harum unde impedit doloremque, sed magnam molestiae ratione? Illo rem molestias ipsum consequatur adipisci suscipit magnam modi.</p>
                 </div>
                 <div class="profile_1">
-                        <img src="" alt="">
-                        <h2 style="color: black;"></h2>
-                        <p></p>
+                        <img src="https://miro.medium.com/max/2860/1*1MaCdl-MJ-45PqWeZi47mA.jpeg" alt="">
+                        <h2 style="color: black;">Chris Martin</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et aperiam illo impedit porro possimus pariatur placeat animi dolores at beatae. Totam quia nobis culpa autem reprehenderit, sint doloremque aliquid ducimus.</p>
                 </div>
             </div>
             <div class="get_started newsl" id="clear">
                 <h2>Get started for free — join the millions of developers already <br>using GitHub to share their code, work together, and build <br>amazing things.</h2>
-                
-
-
+                <p> Username</p>
+                <p> Email</p>
+                <p> Password</p>
+                <input type="text" placeholder="Enter Your Name" id="clear">
+                <input type="text" placeholder="Enter Your Email">
+                <input type="text" placeholder="Enter Your Password">
+                <button id="btn5">Sign Up For Github</button>
+                <p style="width:100%;">By clicking “Sign up for GitHub”, you agree to our terms of service and privacy statement. We’ll occasionally send you account related emails.</p>
+            </div>
+            <div class="get_started" id="clear" style="border: 2px white solid;"> 
+                <H1 style="float: left; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: rgb(8, 8, 37);">Github</H1>
+                <table class="table"> 
+                    <tr style="margin-top: 50px;">
+                        <td>Product</td>
+                        <td>Plateform</td>
+                        <td>Support </td>
+                        <td>Company</td>
+                    </tr>
+                    <tr>
+                        <td>Features</td>
+                        <td>DEveloper API</td>
+                        <td>Help</td>
+                        <td>About</td>
+                    </tr>
+                    <tr>
+                        <td>Security</td>
+                        <td>Partners</td>
+                        <td>Community Blog</td>
+                        <td>Form</td>
+                    </tr>
+                    <tr>
+                        <td>Enterprise</td>
+                        <td>Atom</td>
+                        <td>Professionsal Services</td>
+                        <td>Careers</td>
+                    </tr>
+                    <tr>
+                        <td>Customer Stories</td>
+                        <td>Electron</td>
+                        <td>LEarning Lab</td>
+                        <td>Press</td>
+                    </tr>
+                    <tr>
+                        <td>Pricing</td>
+                        <td>Github Desktop</td>
+                        <td>Status</td>
+                        <td>Shop</td>
+                    </tr>
+                </table>
             </div>
                 
         </div>
