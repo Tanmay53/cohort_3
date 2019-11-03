@@ -1,0 +1,186 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    width:100%;
+    }
+    .class1{
+        height: 45px;
+    }
+    .class1 > div:nth-of-type(n+2){
+        float:right;
+        margin-right: 50px;
+        margin-top: 10px;
+        padding-top:5px;
+    }
+    .class1>:first-child{
+        float:left;
+    }
+    .class1 > div:nth-of-type(2){
+        padding:5px;
+        border :1px solid red;               
+    }
+    .class2{
+        display:flex;
+        flex-direction: row;
+        grid-gap:500px;
+        margin: 0px 100px 0px 100px;
+        color: white;
+        }
+    .class3{
+        display: flex;
+        flex-direction: row;
+        grid-gap:300px;
+        margin: 0px 100px 0px 100px;
+        color: white;
+        font-size: 20px;
+    }
+    .class2 div{
+        padding: 15px;
+    }
+    .class4{
+        display:grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 150px 150px 150px;
+        grid-gap:50px;
+        margin-left:150px;
+    }
+    .class4>div{
+        border-left: 3px solid grey;
+        padding-left:20px;
+    }
+    .class5{
+        display:grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 150px 150px ;
+        grid-gap:50px;
+        margin-left:150px;
+
+    }
+    .class5>div{
+        border-left: 3px solid grey;
+        padding-left:20px;
+    }
+    #id1{
+        margin-right:200px ;
+        text-align: center;
+        color: white;
+
+    }
+    #color{
+        background-color: rgba(43, 103, 182, 0.973);
+    }
+    .text{
+        text-align: center;
+        font-size: 20px;
+    }                
+    .text1{
+        margin-left:100px;
+        color: white;
+        font-size: 20px;
+    }
+    .text2{
+        /* margin-left:100px; */
+        /* color: white; */
+        font-size: 30px;
+        text-align: center;
+    }
+    #id2{
+        color: lightgrey;
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    #id3>div{
+        height: 10px;
+        margin-left:30px;
+        float:left;
+        padding:10px;
+    }
+    @media(max-width: 650px){
+        .class1{
+        height: 45px;
+    }
+    .class1 > div:nth-of-type(n+2){
+        float:right;
+        margin-right: 50px;
+        margin-top: 10px;
+        padding-top:5px;
+        visibility: hidden;
+    }
+    .class1>:first-child{
+        float:left;
+    }
+    .class2{
+        display:flex;
+        flex-direction: column;
+        grid-gap:40px;
+        color: white;
+        }
+    .class3{
+        display: flex;
+        flex-direction: column;
+        grid-gap:50px;
+        color: white;
+        font-size: 20px;
+        margin-left:150px;
+    }
+    .class2 div{
+        padding: 15px;
+    }
+    .class4{
+        display:grid;
+        grid-template-columns: 300px ;
+        grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px 150px;
+        grid-gap:50px;
+        margin-left:50px;
+    }
+    .class4>div{
+        border-left: 3px solid grey;
+        padding-left:20px;
+    }
+    .class5{
+        display:grid;
+        grid-template-columns: 300px ;
+        grid-template-rows: 150px 150px 150px 150px 150px 150px;
+        grid-gap:50px;
+        margin-left:50px;
+
+    }
+    .class5>div{
+        border-left: 3px solid grey;
+        padding-left:20px;
+    }
+    #id1{
+        margin-left:150px ;
+        text-align: center;
+        color: white;
+
+    }
+    #color{
+        background-color: rgba(43, 103, 182, 0.973);
+    }
+    .text{
+        text-align: center;
+        font-size: 20px;
+    }                
+    .text1{
+        margin-left:50px;
+        color: white;
+        font-size: 20px;
+    }
+    .text2{
+        /* margin-left:100px; */
+        /* color: white; */
+        font-size: 30px;
+        text-align: center;
+    }
+    #id2{
+        color: lightgrey;
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    #id3>div{
+        height: 10px;
+        margin-left:30px;
+        float:left;
+        padding:10px;
+    }
+    }

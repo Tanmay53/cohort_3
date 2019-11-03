@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Layout 5</title>
+ <style>
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: rgb(255, 251, 0);
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1/2/1;
+  grid-row: 2/ span 24;
+  background-color: rgb(27, 71, 214);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2/2/ span 2;
+  grid-row: 2/span 24;
+  background-color: rgb(230, 58, 150);
+ }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: rgb(224, 40, 126);
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1/2/1;
+  grid-row: 2/ span 24;
+  background-color: rgb(99, 27, 214);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2/2/ span 2;
+  grid-row: 2/span 24;
+  background-color: rgb(39, 233, 240);
+ }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+ 
+ .grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: rgb(255, 115, 0);
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1/2/1;
+  grid-row: 2/ span 24;
+  background-color: rgb(27, 214, 205);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2/2/ span 2;
+  grid-row: 2/span 24;
+  background-color: rgb(46, 113, 139);
+ }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: rgb(255, 97, 97);
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1/2/1;
+  grid-row: 2/ span 24;
+  background-color: rgb(113, 238, 99);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2/2/ span 2;
+  grid-row: 2/span 24;
+  background-color: rgb(83, 230, 235);
+ }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: red;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1/2/1;
+  grid-row: 2/ span 24;
+  background-color: rgb(43, 214, 27);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2/2/ span 2;
+  grid-row: 2/span 24;
+  background-color: seagreen;
+ }
+}
+
+ </style>
+</head>
+<body>
+  <div class="grid-container">
+   <div></div>
+   <div></div>
+   <div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            
+            .gridbox{
+                margin:200px;
+                display:grid;
+                flex-basis:800px;
+                grid-template-columns: 100px 100px 100px 100px 100px;
+                grid-template-rows: 100px 100px 100px 100px 100px;
+                grid-gap:20px;
+                }
+                .gridbox div{
+                      background-color: teal;
+                }
+                @media (min-width: 450px) and (max-width: 550px)
+                {
+                    .gridbox div{
+                    background-color:teal;
+                }
+                }
+                @media (min-width: 550px) and (max-width: 750px)
+                {
+                    .gridbox div{
+                    background-color:red;
+                }
+                }
+            
+        </style>
+    </head>
+    <body>
+        <div class="gridbox">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

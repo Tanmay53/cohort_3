@@ -1,0 +1,22 @@
+#rj
+{
+  display:grid;
+  background:white;
+  margin:100px;
+  border:10px solid white;
+  padding:50px;
+  grid-gap:10px;
+  grid-template-rows:200px;
+  grid-template-columns:auto auto auto auto auto;  
+}
+#rj div
+{
+  background:green;
+  height:50px;
+  width:100px;
+  margin:50px;
+  border:5px solid green;
+  padding:50px;
+  
+  
+}

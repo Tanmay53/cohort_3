@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>unix</title>
+<style>
+#main {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+}
+#box {
+    display:flex;
+    flex-direction:column;
+    width:300px;
+    background:burlywood;
+    align-items:center;
+    justify-content:center;
+
+
+}
+#box img, #skhan img {
+    width:100px;
+    margin-top:10px; 
+} 
+#box img, #box h2 {
+    text-align: center;
+}
+#skhan {
+    display:grid;
+    grid-template-columns:repeat(1, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+}
+#skhan img {
+    grid-area:1/1/span 2/span 1;
+    margin-right:10px;
+}
+ #skhan h2 {
+    grid-area:1/2/span 1/ span 1;
+    color:red;
+}
+#bottom {
+    display:grid;
+    width:650px;
+    grid-template-areas:
+    "head col head2"
+    "para  col para2";
+    border:1px solid black;
+    background:orange;
+    margin:auto;
+    margin-top:10px;
+}
+#bottom h2:nth-child(1){
+    grid-area:head;
+    margin:10px;
+}
+#bottom p:nth-child(1) {
+    grid-area:para2;
+    margin:10px;
+}
+#bottom h2:nth-child(2){
+    grid-area:head2;
+    margin:10px;
+}
+#bottom p:nth-child(2) {
+    grid-area:para;
+    margin:10px;
+
+}
+#bottom .col {
+    margin:10px 40px;
+    grid-area:col;
+    width:5px;
+    background:black;
+    height:120px;
+}
+@media (max-width:700px) {
+    #main {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+}
+#box {
+    display:flex;
+    flex-direction:column;
+    width:300px;
+    background:burlywood;
+    align-items:center;
+    justify-content:center;
+
+
+}
+#box img, #skhan img {
+    width:80px;
+    margin-top:10px; 
+} 
+#box img, #box h2 {
+    text-align: center;
+}
+#skhan {
+    display:grid;
+    grid-template-columns:repeat(1, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+}
+#skhan img {
+    grid-area:1/1/span 2/span 1;
+    margin-right:10px;
+}
+ #skhan h2 {
+    grid-area:1/2/span 1/ span 1;
+    color:red;
+}
+#skhan p {
+    margin-top:-20px;
+}
+#bottom {
+    display:grid;
+    width:500px;
+    grid-template-areas:
+    "head col head2"
+    "para  col para2";
+    border:1px solid black;
+    background:orange;
+    margin:auto;
+    margin-top:10px;
+}
+#bottom h2:nth-child(1){
+    grid-area:head;
+    margin:10px;
+}
+#bottom p:nth-child(1) {
+    grid-area:para2;
+    margin:10px;
+}
+#bottom h2:nth-child(2){
+    grid-area:head2;
+    margin:10px;
+}
+#bottom p:nth-child(2) {
+    grid-area:para;
+    margin:10px;
+
+}
+#bottom .col {
+    margin:10px 40px;
+    grid-area:col;
+    width:5px;
+    background:black;
+    height:120px;
+}
+
+}
+@media (max-width:410px) {
+    #main {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+}
+#box {
+    display:flex;
+    flex-direction:column;
+    width:250px;
+    background:burlywood;
+    align-items:center;
+    justify-content:center;
+
+
+}
+#box img, #skhan img {
+    width:60px;
+    margin-top:10px; 
+} 
+#box img, #box h2 {
+    text-align: center;
+}
+#skhan {
+    display:grid;
+    grid-template-columns:repeat(1, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+}
+#skhan img {
+    grid-area:1/1/span 2/span 1;
+    margin-right:10px;
+}
+ #skhan h2 {
+    grid-area:1/2/span 1/ span 1;
+    color:red;
+}
+#skhan p {
+    margin-top:-20px;
+    flex-wrap:wrap;
+}
+#bottom {
+    display:grid;
+    width:400px;
+    grid-template-areas:
+    "head col head2"
+    "para  col para2";
+    border:1px solid black;
+    background:orange;
+    margin:auto;
+    margin-top:10px;
+}
+#bottom h2:nth-child(1){
+    grid-area:head;
+    margin:10px;
+}
+#bottom p:nth-child(1) {
+    grid-area:para2;
+    margin:10px;
+}
+#bottom h2:nth-child(2){
+    grid-area:head2;
+    margin:10px;
+}
+#bottom p:nth-child(2) {
+    grid-area:para;
+    margin:10px;
+
+}
+#bottom .col {
+    margin:10px 40px;
+    grid-area:col;
+    width:5px;
+    background:black;
+    height:120px;
+}
+
+}
+
+
+
+</style>
+
+</head>
+<body>
+<div id="main">
+    <div id="box">
+    <img class="pic" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="linux">
+    <h2 class="heading">Linus Torvalds</h2>
+    <h2 class="heading second">The creator of Linux & Git</h2>
+</div>
+
+<div id="skhan">
+    <img class="pic2" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg" alt="skhan">
+    <h2 id="name">Sal Khan</h2>
+    <p id="desc">Salman khan is the founder of the Khan Academy which has a mission <br>of providing a free world-class education for anyone, anywhere.</p>
+
+</div>
+
+<div id="bottom">
+    <h2 class="ken white">Ken Thompson</h2> 
+    <p> Designed and implemented the <br> original unix operating system.</p>
+    <h2 class="white den">Dennis Ritchie</h2>
+    <p>The creator of C programming Language.</p>
+    <div class="col"></div>
+</div>
+
+
+</div>
+
+
+    
+</body>
+</html>
