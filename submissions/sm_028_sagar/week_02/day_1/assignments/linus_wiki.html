@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linus Wiki</title>
+</head>
+<style>
+    * {
+        font-family: Arial;
+        text-decoration: none;
+    }
+
+    * a:hover {
+        text-decoration: underline;
+    }
+
+    /* ------------left-side-bar----------------------------------- */
+    .left-sidebar {
+        width: 156px;
+        height: 1000px;
+        float: left;
+        border: 1px solid rgb(212, 216, 255);
+        background-color: rgb(242, 243, 252);
+    }
+
+    .wiki-logo {
+        width: 130px;
+        height: 140px;
+        border: 1px solid rgb(rgb(212, 216, 255));
+        margin-left: 10px;
+    }
+
+    .left-sidebar div {
+        font-size: 14px;
+        text-decoration: none;
+        margin-left: 12px;
+        margin-top: 15px;
+    }
+
+    .left-sidebar a {
+        text-decoration: none;
+        font-size: 13px;
+        letter-spacing: 0.3px;
+    }
+
+    /* ---------working on header elements----------------------- */
+    .header {
+        height: 22px;
+        border: 1px solid rgb(rgb(212, 216, 255));
+        margin-left: 160px;
+        margin-top: 0px;
+        text-align: right;
+        font-size: 12px;
+    }
+
+    .header span:nth-of-type(1) {
+        color: black;
+    }
+
+    .header>span {
+        margin: 2px 4px;
+        letter-spacing: 0.5px;
+        font-family: Arial;
+        color: rgb(11, 11, 206);
+    }
+
+    /* -----------search wiki --------------------------------- */
+    .search-bar {
+        height: 25px;
+        margin-left: 160px;
+        font-size: 12px;
+        border: 1px solid rgb(15, 178, 219);
+        background-color: rgb(242, 243, 252);
+    }
+
+    .search-bar span {
+        color: rgb(11, 11, 206);
+        font-family: Arial;
+        letter-spacing: 0.5px;
+        margin: 2px 4px;
+        padding: 5px 2px 5px 2px;
+    }
+
+    .search-bar>div {
+        border-left: 1px solid rgb(15, 178, 219);
+        border-right: 1px solid rgb(15, 178, 219);
+        border-bottom: 1px solid rgb(15, 178, 219);
+        border-top: 1px solid rgb(253, 253, 253);
+        border-right: none;
+        border-left: none;
+    }
+
+    #article {
+        background-color: white;
+        border-right: 1px solid rgb(15, 178, 219);
+        color: black;
+    }
+
+    .search-bar>div:nth-of-type(1) {
+        text-align: left;
+        height: 25px;
+        width: 200px;
+        float: left;
+    }
+
+    input {
+        border: 1px solid grey;
+        height: 20px;
+        margin: auto 2px;
+    }
+
+    .search-float {
+        padding: 5px 10px;
+        color: rgb(11, 11, 206);
+        font-family: Arial;
+        letter-spacing: 0.5px;
+        float: left;
+    }
+
+    .search-float>div:nth-of-type(1) {
+        border: 1px solid rgb(15, 178, 219);
+    }
+
+    .search-bar>div:nth-of-type(2) {
+        text-align: right;
+        width: 1470px;
+        height: 25px;
+        margin-left: 200px;
+    }
+
+    /* -----------------------linus torvalds title----------------------------- */
+    .linus-title {
+        margin-left: 160px;
+        height: 80px;
+    }
+
+    .linus-title2 {
+        margin-left: 0px;
+        height: 80px;
+    }
+
+    .linus-title-text {
+        font-size: 25px;
+        margin: 25px 20px 5px 20px;
+        font-family: Impact;
+    }
+
+    .linus-breakline {
+        width: 97.5%;
+        height: 0px;
+        margin-right: 5px;
+        border-top: 0.2px solid rgb(165, 161, 161);
+        border-left: unset;
+        border-right: unset;
+        border-bottom: unset;
+    }
+
+    .below-linus-title {
+        margin-left: 180px;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        font-weight: 200;
+    }
+
+    /* ----------------linus-contentbox -------------- */
+    .linus-contentbox {
+        width: 1660px;
+        height: 900px;
+        margin-left: 160px;
+    }
+
+    .contentbox {
+        width: 1350px;
+        height: 500px;
+        float: left;
+        font-size: 16px;
+    }
+
+    .contentbox p {
+        margin-left: 20px;
+    }
+
+    .float {
+        float: left;
+    }
+
+    #content {
+        margin-left: 20px;
+        width: 200px;
+        height: 300px;
+        background-color: rgb(242, 243, 252);
+        border: 1px solid rgb(165, 161, 161);
+    }
+
+    #head {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    #index {
+        font-size: 15px;
+    }
+
+    #index a {
+        text-decoration: none;
+    }
+
+    .second-para {
+        margin-top: 0px;
+    }
+
+    /* -----------------photobox------------------- */
+    .photobox {
+        width: 300px;
+        height: 800px;
+        border: 1px solid rgb(165, 161, 161);
+        float: left;
+        margin-top: 15px;
+        background-color: rgb(242, 243, 252);
+    }
+
+    .photobox-title {
+        height: 25px;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .photo {
+        text-align: center;
+    }
+
+    .photo-font {
+        font-size: 15px;
+    }
+
+    table td:nth-last-of-type(2n) {
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="left-sidebar">
+        <a href="#">
+            <img class="wiki-logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/2000px-Wikipedia-logo-v2-en.svg.png"
+                alt="wiki-logo">
+        </a>
+        <div>
+            <a href="#">Main Page</a><br>
+            <a href="#">Contents</a>
+            <a href="#">Featured content</a><br>
+            <a href="#">Current events</a><br>
+            <a href="#">Random article</a><br>
+            <a href="#">Donate to Wikipedia</a><br>
+            <a href="#">Wikipedia store</a>
+            <br>
+            <br>
+            <span class="font-size">Interaction</span>
+            <hr class="linus-breakline">
+            <a href="#">Help</a><br>
+            <a href="#">About Wikipedia</a><br>
+            <a href="#">Community portal</a><br>
+            <a href="#">Recent Changes</a><br>
+            <a href="#">Contact Page</a><br>
+            <br>
+            <br>
+            <span class="font-size">Tools</span>
+            <hr class="linus-breakline">
+            <a href="#">What links here</a><br>
+            <a href="#">Related changes</a><br>
+            <a href="#">Upload file</a><br>
+            <a href="#">Special pages</a><br>
+            <a href="#">Permanant link</a><br>
+            <a href="#">Page information</a><br>
+            <a href="#">Wikipedia item</a><br>
+            <a href="#">Cite this page</a><br>
+            <br>
+            <br>
+            <span class="font-size">In other projects</span>
+            <hr class="linus-breakline">
+            <a href="#">Wikimedia Commons</a><br>
+            <a href="#">Wikinews</a><br>
+            <a href="#">Wikiquote</a><br>
+            <br>
+            <br>
+            <span class="font-size">Print/export</span>
+            <hr class="linus-breakline">
+            <a href="#">Create a book</a><br>
+            <a href="#">Download as PDF</a><br>
+            <a href="#">Printable version</a>
+        </div>
+
+
+    </div>
+
+    <!-- ----------header------------------ -->
+    <div class="header">
+        <span>Not logged in</span>
+        <span>Talk</span>
+        <span>Contributions</span>
+        <span>Create account</span>
+        <span>Log in</span>
+    </div>
+    <div class="search-bar">
+        <div>
+            <div class="search-float" id="article">
+                Article
+            </div>
+            <div class="search-float">
+                Talk
+            </div>
+        </div>
+        <div>
+            <span>Read</span>
+            <span>Edit</span>
+            <span>View history</span>
+            <span><input type="search" placeholder="Search Wikipedia"></span>
+        </div>
+    </div>
+    <!-- --------------------------Linus Torvalds title---------------------------- -->
+    <div class="linus-title">
+        <p class="linus-title-text">Linus Torvalds</p>
+        <hr class="linus-breakline ">
+    </div>
+    <div class="below-linus-title">
+        From Wikipedia, the free encyclopedia
+    </div>
+    <!-- -------------------------------linus-content-box------------------------------- -->
+    <div class="linus-contentbox">
+        <div class="float contentbox">
+            <div class="contentbox">
+                <p>
+                    <strong> Linus Benedict Torvalds</strong> ( <a href="#"> /ˈliːnəs ˈtɔːrvɔːldz/ LEE-nəs
+                        TOR-vawldz,</a>[5] Finland Swedish: [ˈliːnʉs
+                    ˈtuːrvɑlds] (About this soundlisten); born December 28, 1969) is a Finnish-American[2][6] software
+                    engineer who is the creator and, historically, the principal developer of the Linux kernel, which is
+                    the
+                    kernel for <a href="#"> Linux operating systems (distributions)</a> and other operating systems such
+                    as Android and
+                    Chrome OS. He also created the distributed version control system Git and the scuba dive logging and
+                    planning software Subsurface.
+                </p>
+                <p>
+                    He was honored, along with Shinya Yamanaka, with the 2012 <a href="#">Millennium Technology
+                        Prize</a> by the
+                    Technology
+                    Academy Finland "in recognition of his creation of a new open source operating system for computers
+                    leading to the widely used Linux kernel."[7] He is also the recipient of the 2014 IEEE Computer
+                    Society
+                    Computer Pioneer Award[8] and the 2018 <a href="#">IEEE Masaru Ibuka Consumer Electronics
+                        Award</a>.[9]
+                </p>
+                <div id="content">
+                    <div id="head">Contents[hide]</div>
+                    <div id="index">
+                        <ol>
+                            <li><a href="#">Life and career</a></li>
+                            <ol>
+                                <li><a href="#">Early years</a></li>
+                                <li><a href="#">Linux</a></li>
+                            </ol>
+                            <li><a href="#">The Linus/Linux connection</a></li>
+                            <li><a href="#">Authority and trademark</a></li>
+                            <li><a href="#">Personal Life</a></li>
+                            <li><a href="#">Awards and achievements</a></li>
+                            <li><a href="#">Media recognition</a></li>
+                            <li><a href="#">Bibliography</a></li>
+                            <li><a href="#">See also</a></li>
+                            <li><a href="#">References</a></li>
+                            <li><a href="#">External Links</a></li>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentbox">
+                <div class="linus-title2">
+                    <p class="linus-title-text">Life and Career</p>
+                    <hr class="linus-breakline">
+                </div>
+                <div> <strong>
+                        <p class="second-para">
+                            Early years [edit]
+                        </p>
+                    </strong></div>
+                <p>
+                    Torvalds was born in Helsinki, Finland, on December 28, 1969. He is the son of journalists Anna and
+                    Nils Torvalds,[10] and the grandson of statistician Leo Törnqvist and of poet Ole Torvalds. Both of
+                    his parents were campus radicals at the University of Helsinki in the 1960s. His family belongs to
+                    the Swedish-speaking minority. Torvalds was named after Linus Pauling, the Nobel Prize-winning
+                    American chemist, although in the book Rebel Code: Linux and the Open Source Revolution, Torvalds is
+                    quoted as saying, "I think I was named equally for Linus the Peanuts cartoon character", noting that
+                    this makes him half "Nobel Prize-winning chemist" and half "blanket-carrying cartoon character".[11]
+                </p>
+                <p>
+                    Torvalds attended the University of Helsinki between 1988 and 1996,[12] graduating with a master's
+                    degree in computer science from the NODES research group.[13] His academic career was interrupted
+                    after his first year of study when he joined the Finnish Army Uusimaa brigade, in the summer of
+                    1989, selecting the 11-month officer training program to fulfill the mandatory military service of
+                    Finland. In the army he held the rank of Second Lieutenant, with the role of a ballistic calculation
+                    officer.[14] Torvalds bought computer science professor Andrew Tanenbaum's book Operating Systems:
+                    Design and Implementation, in which Tanenbaum describes MINIX, an educational stripped-down version
+                    of Unix. In 1990, he resumed his university studies, and was exposed to UNIX for the first time, in
+                    the form of a DEC MicroVAX running ULTRIX.[15] His MSc thesis was titled Linux: A Portable Operating
+                    System.[16]
+                </p>
+                <p>
+                    Torvalds attended the University of Helsinki between 1988 and 1996,[12] graduating with a master's
+                    degree in computer science from the NODES research group.[13] His academic career was interrupted
+                    after his first year of study when he joined the Finnish Army Uusimaa brigade, in the summer of
+                    1989, selecting the 11-month officer training program to fulfill the mandatory military service of
+                    Finland. In the army he held the rank of Second Lieutenant, with the role of a ballistic calculation
+                    officer.[14] Torvalds bought computer science professor Andrew Tanenbaum's book Operating Systems:
+                    Design and Implementation, in which Tanenbaum describes MINIX, an educational stripped-down version
+                    of Unix. In 1990, he resumed his university studies, and was exposed to UNIX for the first time, in
+                    the form of a DEC MicroVAX running ULTRIX.[15] His MSc thesis was titled Linux: A Portable Operating
+                    System.[16]
+                </p>
+
+            </div>
+        </div>
+
+        <div class="photobox">
+            <div class="photobox-title">Linus Torvalds</div>
+            <div class="photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/220px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg"
+                    alt="torvalds"><br>
+                <span class="photo-font"> Torvalds at LinuxCon Europe 2014</span>
+            </div>
+            <div>
+                <table class="photo-font">
+                    <tr>
+                        <td>Born</td>
+                        <td> Linus Benedict Torvalds
+                            December 28, 1969 <br>(age 49) <br>
+                            <span class="blue">Helsinki</span>, Finland</td>
+                    </tr>
+                    <tr>
+                        <td>Residence</td>
+                        <td><span class="blue"> <a href="#">Dunthorpe, Oregon, U.S.[1]</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>Nationality</td>
+                        <td>Finnish, American (naturalized in 2010)[2]</td>
+                    </tr>
+                    <tr>
+                        <td>Alma mater</td>
+                        <td> <a href="#">University of Helsinki (M.S.)[3]</a> </td>
+                    </tr>
+                    <tr>
+                        <td>Occupation</td>
+                        <td>Software engineer</td>
+                    </tr>
+                    <tr>
+                        <td>Employer</td>
+                        <td>Linux Foundation</td>
+                    </tr>
+                    <tr>
+                        <td>Known for</td>
+                        <td>Linux, Git, Subsurface</td>
+                    </tr>
+                    <tr>
+                        <td>Spouse(s)</td>
+                        <td>Tove Torvalds</td>
+                    </tr>
+                    <tr>
+                        <td>Children</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Parent(s)</td>
+                        <td>Nils Torvalds (father)
+                            Anna Torvalds (mother)[4]</td>
+                    </tr>
+                    <tr>
+                        <td>Relatives</td>
+                        <td>Leo Törnqvist (grandfather)
+                            Ole Torvalds (grandfather)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>grid_2</title>
+        <style>
+            .class1{
+                    display: grid;
+                    grid-template-columns: 200px 150px 150px 125px;
+                    grid-template-rows: 75px 150px 150px 150px;
+                    grid-gap:25px;
+                    width: 700px;
+                    margin-left: 600px;
+                  }
+                  .class1 div{
+                              background-color: red;
+                              }
+
+                   #id1{
+                         grid-area: 1 / 1 / 2 / span 4;
+                   } 
+                   #id2{
+                         grid-area: 2 / 1 / span 3 / 2;
+                         background-color: greenyellow;
+                   } 
+
+                   #id3{
+                          grid-area: 2 / 2 / span 3 / span 3;
+                          background-color: teal;
+                   }         
+                  
+        
+        </style>
+    </head>
+
+    <body>
+        <div class="class1">
+                <div id="id1"></div>
+                <div id="id2"></div>
+                <div id="id3"></div>
+        </div>
+    </body>
+</html>
