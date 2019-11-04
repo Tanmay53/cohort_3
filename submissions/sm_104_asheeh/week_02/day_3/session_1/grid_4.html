@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>grid_4</title>
+        <style>
+                .class1{
+                         display: grid;
+                         grid-gap:25px;
+                         grid-template-rows: 150px 150px 150px;
+                         grid-template-columns: 150px 150px 150px;
+                         width: 675px;
+                         margin: 100px auto;
+                        }
+
+                  .class1 div{
+                               background-color: teal;
+                               border-radius: 5px;
+                  }  
+
+                  #second{
+                           grid-area: 1 / 2 / 2 / span 2;
+                  } 
+
+                  #fourth{
+                          grid-area: 2 / 1 / 3 / span 2;
+                  }
+
+                  #ninth{
+                          grid-area:3 / 3 / 4 / span2 ;
+                  }   
+        </style>
+    </head>
+    <body>
+
+        <div class="class1">
+                <div></div>
+                <div id="second"></div>
+                <div></div>
+
+                <div id="fourth"></div>
+                <div></div>
+                <div></div>
+
+                <div></div>
+                <div></div>
+                <div id="ninth"></div>
+        </div>
+    </body>
+</html>

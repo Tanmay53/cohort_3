@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Layout_5</title>
+    <style>
+        body {
+            margin: 200px;
+        }
+        .grid {
+            display: grid;
+            grid-template-rows: 80px 400px;
+            grid-template-columns: 300px 600px;
+            grid-gap: 50px;
+        } 
+        .cadetblue {
+            background: cadetblue;
+        }
+        .red {
+            background: red;
+            grid-area: 1 / 1 / 1 / 3;
+        }
+        .green {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="red"></div>
+        <div class="green "></div>
+        <div class="cadetblue"></div>
+    </div>
+</body>
+</html>
