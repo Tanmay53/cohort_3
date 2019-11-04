@@ -1,0 +1,87 @@
+:root  {
+  font-size: 10px;
+}
+
+/* Navbar */
+#navbar {
+  position: unset;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar > div:nth-child(3) input {
+  margin: 1rem .5rem 2.5rem .5rem;
+}
+
+/* Showcase */
+#showcase {
+  justify-content: flex-start;
+  height: 55vh;
+}
+
+#showcase div:first-child h2 {
+  font-size: 3rem;
+  padding: 1rem 2rem 2rem 0;
+}
+
+#showcase div:first-child p {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+/* Images */
+#images .img-holder {
+  grid-gap: 30px;
+}
+
+#images div img {
+  height: 280px;
+  width: 240px;
+}
+
+#images  h3 {
+  font-size: 1.6rem;
+}
+
+/* FOOTER */
+footer > p {
+  font-size: 1.5rem;
+}
+
+/* SHOP PAGE */
+#product-container .shop-flower .products img {
+  margin-bottom: 2rem;
+}
+
+#product-container  .heading-5 h4 {
+  font-size: 3.5rem;
+  padding-top: 2rem;
+}
+
+#product-container .shop-flower .products > div a {
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  border-radius: 3rem;
+}
+
+.main-container .shop-flower p {
+  font-size: 1.7rem;
+}
+
+.main-container .shop-flower h6 {
+  font-size: 2rem;
+}
+
+/* CONTACT */
+.footer-container {
+  flex-direction: column;
+  
+}
+
+.box {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+/* ABOUT PAGE */
+

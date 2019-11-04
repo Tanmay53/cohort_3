@@ -1,0 +1,385 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Utility classes */
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    width: 85%;
+    margin-inline-end: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+
+/* Navbar */
+#navbar {
+  display: flex;
+  background: #fff;
+  position: sticky;
+  top: 0;
+}
+
+#navbar > div {
+  flex: 1;
+}
+
+#navbar > div:first-child {
+  display: flex;
+  /* align-items: center; */
+}
+
+#navbar > div img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 1.5rem 1rem .5rem 3rem;
+}
+
+#navbar > div:first-child p {
+  color: aqua;
+  margin-top: 2.3rem;
+  font-weight: 200;
+  padding: 0 .6rem;
+  font-size: 2rem;
+}
+
+#navbar > div:first-child p a {
+  color: rgb(245, 50, 50);
+}
+
+#navbar > div:nth-child(2) a {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #444;
+  padding: .8rem 1.5rem .5rem 1.5rem;
+  margin: 1rem .5rem .2rem .5rem;
+}
+
+#navbar > div:nth-child(2) a:hover {
+  color: pink;
+}
+
+#navbar > div:nth-child(3) input {
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  margin: 2rem .5rem 1.5rem 8rem;
+  font-weight: 200;
+}
+
+/* Showcase */
+#showcase {
+  background: url('https://images.unsplash.com/photo-1429979787503-f2d7d20550c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
+  height: 100vh;
+}
+
+#showcase div:first-child  {
+  text-align: right;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+#showcase div:first-child h2 {
+  font-size: 4rem;
+  padding: 10rem 2rem 2rem 0;
+  font-weight: 300;
+}
+
+#showcase div:first-child p {
+  font-size: 1.4rem;
+  padding: 1rem 2rem 1rem 20rem;
+  font-weight: 300;
+}
+
+/* Products */
+.main-container {
+  text-align: center;
+}
+
+.main-container > div:first-child {
+  text-align: center;
+}
+
+.main-container > div:first-child h3 {
+  font-size: 3rem;
+  padding: 3rem 0 1rem 0;
+  font-weight: 300;
+  color: red;
+}
+
+.main-container > div:first-child p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+
+.main-container .shop-flower  {
+  display: grid;
+  color: red;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.main-container .shop-flower p {
+  text-align: center;
+  font-size: 1.3rem;
+  color: rgb(221, 29, 29);
+  padding-bottom: 1rem;
+}
+
+.main-container .shop-flower h6 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.main-container .shop-flower .products:hover {
+  box-shadow: 0 0 3px red;
+  border-radius: 10px;
+}
+
+/* Images */
+#images .img-holder  {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* justify-content: space-around; */
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+#images div img {
+  height: 350px;
+  width: 300px;
+  border-radius: 10px;
+  border: grey solid 1px;
+}
+
+#images div img:hover {
+  box-shadow: 0 0 10px hotpink; 
+}
+
+#images > div p {
+  font-size: 3rem;
+  color: pink;
+  padding: 3rem 0 0 0;
+  text-align: center;
+}
+
+#images  h3 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding: 1rem 4rem 4rem 4rem;
+}
+
+/* Footer */
+
+footer {
+  background: #333;
+  text-align: center;
+  color: #fff;
+}
+
+footer > p {
+  font-size: 2rem;
+}
+
+footer > div > i {
+  padding: 1rem 2rem 0rem 2rem;
+  
+}
+
+footer h2 {
+  color: #333;
+  margin-bottom: -10px;
+}
+
+footer hr {
+  border-color: #bbb;
+}
+
+
+footer hr:last-child {
+  border-color: #bbb;
+  padding-bottom: 30px;
+}
+
+/* SHOP PAGE */
+#product-container .shop-flower .products:hover {
+  box-shadow: 0 0 0 red ;
+}
+
+#product-container .shop-flower .products img{
+  border-radius: 10px;
+}
+
+#product-container .shop-flower .products hr {
+  border-color: #eee;
+}
+
+#product-container .shop-flower .products img:hover {
+  box-shadow: 0 0 5px blueviolet;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+#product-container  .heading-5 h4 {
+  font-size: 3rem;
+  padding: 1rem 0 2rem 0;
+  font-weight: 300;
+  color: rgb(219, 44, 132);
+}
+
+#product-container .shop-flower .products > div a {
+  background: rgba(206, 43, 43, 0.863);
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 300;
+  margin: .5rem 0 4rem 0;
+  display: inline-block;
+  border: 1px solid #fff;
+}
+
+#product-container .shop-flower .products > div a:hover {
+  color: red;
+  background: white;
+  border: 1px solid red;
+}
+
+/* CONTACT PAGE */
+
+.container {
+      margin: auto;
+      max-width: 1100px;
+      overflow: auto;
+      padding: 0px 20px;
+}
+
+.text-primary {
+      color: #f7c08a;
+}
+
+.l-heading {
+      font-size: 40px ;
+}
+
+#contact-info .form-group {
+      margin-bottom: 20px;
+}
+
+#contact-info .container {
+      padding-top: 10px;
+}
+
+#contact-info label {
+      display: block;
+      margin-bottom: 5px;
+}
+
+#contact-info input,
+#contact-info textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px #ddd solid;
+}
+
+#contact-info textarea {
+      height: 200px;
+}
+
+#contact-info input:focus,
+#contact-info textarea:focus {
+      outline: none;
+      border-color: #f7c08a;
+}
+
+.btn {
+      display: inline-block;
+      font-size: 18px;
+      color: #fff;
+      background: #333;
+      padding: 13px 20px;
+      border: none;
+      margin-bottom: 1rem;
+}
+
+.btn:hover {
+  background: #f7c08a;
+  color: #333;
+}
+
+.background-dark {
+  background: #333;
+  color: #fff;
+}
+
+.box {
+      
+      /* float: left; */
+      width: 33.3%;
+      padding: 3rem;
+      text-align: center;
+}
+
+.footer-container {
+  display: flex;  
+}
+
+.box i {
+      margin-bottom: 10px;
+}
+
+/* ABOUT FLOWERS */
+.about-h2 {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 2rem;
+  font-weight: 300;
+  color: #444;
+}
+
+.flower-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 3rem;
+  justify-items: center;
+  align-items: center;
+  margin: 4rem 2rem;
+}
+
+.flower-facts img {
+  height: 100%;
+  width: 100%;
+}
+
+.flower-facts p {
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #444;
+}
+
