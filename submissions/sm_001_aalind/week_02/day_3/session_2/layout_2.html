@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>layout 2</title>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .cont {
+        display: flex;
+        width: 460px;
+        flex-wrap: wrap;
+      }
+      .cont div {
+        background: green;
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+      }
+      .basis-div {
+        flex-basis: 200px;
+      }
+      @media (max-width: 1024px) {
+        .cont {
+          width: 360px;
+        }
+        .cont div {
+          background: red;
+          height: 100px;
+          width: 100px;
+        }
+        .basis-div {
+          flex-basis: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div></div>
+      <div class="basis-div"></div>
+      <div></div>
+      <div class="basis-div"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="basis-div"></div>
+    </div>
+  </body>
+</html>

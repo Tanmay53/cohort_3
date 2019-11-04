@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Flex 2 Layout</title>
+ <style>
+
+  #flex-box {
+   display: flex;
+   flex-direction: row;
+  }
+
+  .square-block {
+   height: 100px;
+   width: 100px;
+   padding: 7px;
+   border: 2px;
+   margin: 20px;
+   border-radius: 5px;
+   background-color: seagreen;
+  }
+
+  .rectangular-block {
+   height: 100px;
+   width: 300px;
+   padding: 7px;
+   border: 2px;
+   margin: 20px;
+   border-radius: 5px;
+   background-color: seagreen;
+  }
+
+  .body {
+   margin: 10%;
+   margin-left: 20%;
+  }
+ </style>
+</head>
+
+<body class="body">
+
+ <div id="flex-box">
+  <div class="square-block"></div>
+  <div class="rectangular-block"></div>
+  <div class="square-block"></div>
+ </div>
+
+ <div id="flex-box">
+   <div class="rectangular-block"></div>
+  <div class="square-block"></div>
+  <div class="square-block"></div>
+ </div>
+
+ <div id="flex-box">
+  <div class="square-block"></div>
+  <div class="square-block"></div>
+  <div class="rectangular-block"></div>
+ </div>
+
+</body>
+
+</html>

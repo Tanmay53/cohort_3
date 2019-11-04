@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>grid_3</title>
+<style>
+    .cont
+    {
+        
+        display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto auto ;
+  grid-template-rows: 120px 120px 120px 120px;
+  width: 600px;
+  height:600px;
+  margin:auto;
+    }
+    .cont div 
+    {
+        background: cornflowerblue;
+        height: 120px;
+        margin-top: 40px;
+    }
+    #box1
+    {
+        grid-area: 4/1/5/2;
+    }
+    #box2
+    {
+        grid-area: 3/2/4/3;
+    }
+    #box9
+    {
+        grid-area: 3/1/4/2;
+    }
+    @media (max-width: 590px) 
+    {
+        .cont
+    {
+        
+        display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto ;
+  grid-template-rows: 100px 100px 100px 100px;
+  width: 500px;
+  height:500px;
+  margin:auto;
+    }
+    .cont div 
+    {
+        background: blueviolet;
+        height: 100px;
+        margin-top: 20px;
+    } 
+    #box1
+    {
+        grid-area: 4/1/5/2;
+    }
+    #box2
+    {
+        grid-area: 3/2/4/3;
+    }
+    #box9
+    {
+        grid-area: 3/1/4/2;
+    }
+    }
+   
+
+
+</style>
+<body>
+    <div class="cont">
+<div></div>
+<div></div>
+<div></div>
+<div id="box1"></div>
+<div></div>
+<div></div>
+<div id="box2"></div>
+
+<div></div>
+<div id="box9"></div>
+
+
+<div ></div>
+
+</div>
+</body>
+</head>
+</html>

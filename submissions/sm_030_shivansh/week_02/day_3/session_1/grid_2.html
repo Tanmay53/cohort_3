@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid_2</title>
+    <style>
+      .grid-box {
+        display: grid;
+        grid-template-areas:
+          'h h h h'
+          'a m m m';
+        grid-gap: 20px;
+        width: 1fr;
+        height: 600px;
+        padding: 10px;
+      }
+      .grid-box header {
+        grid-area: h;
+        height: 100px;
+        background-color: red;
+      }
+
+      .grid-box aside {
+        grid-area: a;
+        width: 1fr;
+        height: 450px;
+        background-color: seagreen;
+      }
+
+      .grid-box main {
+        grid-area: m;
+        width: 3fr;
+        height: 450px;
+        background-color: springgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-box">
+      <header></header>
+      <aside></aside>
+      <main></main>
+    </div>
+  </body>
+</html>

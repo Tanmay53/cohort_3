@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linus Torvalds</title>
+        <style type="text/css">
+
+            #wrapper{
+                width: 480px;
+                margin-left:auto;
+                margin-right: auto;
+                display: grid;
+                grid-row-gap: 20px;
+                grid-template-columns: 1fr; 
+                grid-auto-rows: auto;
+            }
+
+            .footer{
+                background: red;
+                padding: 20px;
+            }
+
+            .footer > h2{
+                color: white;
+            }   
+
+            img{
+                height: 150px;
+                width: 100px;
+            }       
+
+            #header{
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+                background: cyan;
+                text-align: center;
+            }
+            #header > h2{
+                color: blue;
+            }  
+            #header > p{
+                color: red;
+                font-size: 24px;
+            }
+
+            #content{
+                    width:80%;
+                    margin-left:auto;
+                    margin-right: auto;
+                    display: grid;
+                    grid-template-columns: auto;
+                    grid-auto-row: auto;
+
+                }
+
+            #content > img{
+                height: 150px ;
+                grid-row: 1/ span 2;
+            }
+            #content > h2{
+                color: red;
+            }
+
+            #content > h2{
+                color: red;
+            }
+
+            @media(min-width: 500px){
+                #wrapper{
+                    width: 720px;
+                    margin-left:auto;
+                    margin-right: auto;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr; 
+                    grid-auto-rows: auto;
+                }
+
+                #header{
+                    grid-column: 1 / span 2;
+                }
+                #content{
+                    grid-column: 1 / span 2;
+                }
+
+                
+                #content{
+                    width:80%;
+                    margin-left:auto;
+                    margin-right: auto;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    height: 100px 100px;
+                }
+
+                #footer_left{
+                    padding: 50px;
+                    border-right: 3px solid black;
+                }
+
+        }        
+        </style>
+
+
+
+</head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg" alt="Linus Torvalds" />
+                <h2>Linus Torvalds</h2>
+                <p>The creator of Linux & Git</p>
+            </div>
+            <div id="content">
+                <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg" alt="Salman Khan" />
+                <h2>Sal Khan</h2>
+                <p>Salman Khan is the founder of the Khan Academy which has a mission
+                        of providing a free world-class education for anyone, anywhere.
+                </p>
+            </div>
+            <div id="footer_left" class="footer">
+                <h2>Ken Thompson</h2> 
+                <p>Designed and Implemented the original Unix Operating system</p>
+            </div>
+            <div id="footer_right" class="footer">
+                <h2>Dennis Ritchie</h2> 
+                <p>The creator of C Programming Language</p>
+            </div>
+        </div>
+    </body>
+</html>

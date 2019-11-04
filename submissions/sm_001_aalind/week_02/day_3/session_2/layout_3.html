@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Layout 3</title>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .cont {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+      .cont > div {
+        display: flex;
+        flex-direction: row;
+      }
+      .cont > div > div {
+        width: 100px;
+        height: 100px;
+        background: green;
+        margin: 10px;
+      }
+      @media (max-width: 1024px) {
+        .cont > div {
+          flex-direction: column;
+        }
+        .cont > div > div {
+          background: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div>
+        <div></div>
+      </div>
+
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

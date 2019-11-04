@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Grid 3</title>
+    <style> 
+    .grid3{
+        background: white;
+        width: 55%;
+        height: 650px;
+        margin:40px 0 0 100px;
+        display: grid;
+        grid-template-columns:20% 20% 20% 20% ;
+        grid-template-rows: 20% 20% 20% 20% ;
+        grid-gap: 25px;
+        padding: 10px;
+    }
+    .grid3 div{
+        background: blue;
+    }
+    #blank1{
+        background: white;
+        grid-area: 2/4/span 1/ span 1;
+
+    }
+    #blank2{
+        background: white;
+        grid-area: 3/3/span 1/ span 2;
+
+    }
+    #blank3{
+        background: white;
+        grid-area: 4/2/span 1/ span 3;
+
+    }
+    </style>
+   </head>
+   
+   <body>
+  <div class="grid3">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div id="blank1"></div>
+      <div></div>
+      <div></div>
+      <div id="blank2"></div>
+      <div></div>
+      <div id="blank3"></div>
+
+  </div>
+   </body>
+</html>

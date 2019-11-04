@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+      
+    .wrapper{
+        display:flex;
+        width:auto;
+        height: auto;    
+        margin:auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .upper{
+        justify-content: center;
+        background-color: rgb(226, 214, 214);
+        width: 450px;
+        height: 350px;
+        padding:10px;
+        margin:auto;
+        margin-bottom: 30px;
+
+    }
+    .middle{
+        display: flex;
+        width: 800px;
+        height: 200px;
+        margin:auto;
+        margin-bottom: 30px;
+
+    }
+    .lower{
+        display: flex;
+         width:1100px;
+         height:180px;
+         margin:auto;
+         background-color: tomato;
+         padding:7px;
+    }
+    .middle div{
+        flex-direction: row;
+        margin-left:20px;
+    }
+    .lower div{
+        flex-direction: row;
+        margin-left:10px;
+        padding:10px;
+    }  
+
+    .upper > img{
+        
+       display: block;
+        margin: auto;
+    }
+    #linus{
+        font-size: 35px;
+        text-align: center;
+        font-style: bold;
+        color:blue;
+    }
+    #linus-intro{
+        font-size: 25px;
+        text-align: center;
+    }
+    #salman{
+        text-align: left;
+        color:brown;
+        margin-bottom: 20px;
+        font-size:30px;
+        margin-top:0px;
+        font-style:bold;
+
+    }
+    #salman-intro{
+        font-size:20px;
+    }
+    .title{
+        color:white;
+        font-size: 25px;
+
+    }
+    .desc{
+       font-size: 20px;
+    }
+    .right{
+        text-align: right;
+    }
+    #first{
+        border-right: 10px solid black;
+        flex-basis:500px;
+    }
+   @media(max-width: 768px){
+           
+    .wrapper{
+        display:flex;
+        width:auto;
+        height: auto;    
+        margin:auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .upper{
+        justify-content: center;
+        background-color: wheat;
+        width: 350px;
+        height: 240px;
+        padding:7px;
+        margin:auto;
+        margin-bottom: 15px;
+
+    }
+    .middle{
+        display: flex;
+        width: 600px;
+        height: 150px;
+        margin:auto;
+        margin-bottom: 15px;
+
+    }
+    .lower{
+        display: flex;
+         width:700px;
+         height:120px;
+         margin:auto;
+         background-color: greenyellow;
+         padding:7px;
+    }
+    .middle div{
+        flex-direction: row;
+        margin-left:15px;
+    }
+    .lower div{
+        flex-direction: row;
+        margin-left:5px;
+        padding:5px;
+    }  
+
+    .upper > img{
+        
+       display: block;
+        margin: auto;
+        width:100px;
+        height: 120px;
+    }
+    #linus{
+        font-size: 30px;
+        text-align: center;
+        font-style: bold;
+        color:blue;
+    }
+    #linus-intro{
+        font-size: 20px;
+        text-align: center;
+    }
+    #salman{
+        text-align: left;
+        color:blueviolet;
+        margin-bottom: 10px;
+        font-size:25px;
+        margin-top:0px;
+        font-style:bold;
+
+    }
+    #salman-intro{
+        font-size:15px;
+    }
+    .title{
+        color:white;
+        font-size: 20px;
+
+    }
+    .desc{
+       font-size: 15px;
+    }
+    .right{
+        text-align: right;
+    }
+    #first{
+        border-right: 7px solid black;
+        flex-basis:350px;
+    } 
+   }
+    
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="upper">
+            <img width ="150px" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg">
+            <p id="linus">Linus Trovalds</p>
+            <p id="linus-intro"> The Creator of Linux and Git</p>
+        </div>
+        <div class="middle">
+            <img width="150px" src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg">
+            <div>
+                <p id="salman">Salman Khan</p>
+                <p id="salman-intro">Salman Khan is the founder of the Khan Academy which has a mission <br>of providing a free world-class education for anytime, anywhere.</p>
+            </div>
+        </div>
+        <div class="lower">
+            <div id="first">
+                <p class="title">Ken Thompson</p>
+                <p class="desc">Designed and implemented the<br>original Unix operating system</p>
+            </div> 
+            <div> 
+                <p class="title right"> Dennis Ritchie</p>
+                <p class="desc right">The creator of C programming Language</p>
+            </div>
+        </div>
+    <div>
+</body>
+</html>
