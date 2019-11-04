@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Periodic Table(Using Class & Id)</title>
+	<style type="text/css">
+		body{
+			font-family: 'Lato', sans-serif;
+			padding: 25px 100px;
+		}
+		.heading{
+			font-size: 30px; 
+		}
+		.box{
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			margin: 8px;
+			border: 1px solid black;
+		}
+		.hide {
+			visibility: hidden;
+		}
+		.clear{
+			clear: left;
+		}
+		.col, .blue, #block3 .box{
+			float: left;
+		}
+		.mid {
+			margin: 5px;
+		}
+		#first {
+			background-color: #7E000C;
+			color: white;
+			font-size: 24px;
+		} 
+		.col1 > .box, .big, .green {
+			background-color: #538D02;
+		}
+		.col2 > .box {
+			background-color: #FF4545;
+		}
+		.col3 > .box{
+			background-color: #FFC6C6;
+			border: 4px solid black;
+			width: 34px;
+			height: 34px;
+		}
+		#block1 .box{
+			margin-top: 17px;
+		}
+		.big{
+			border: 2px solid black; 
+			width: 125px; 
+			height: 125px; 
+			margin: 30px 5px 0px 5px; /*mid class*/
+			padding: 10px;
+		}
+		#big1{
+			margin-left: 100px; 
+			margin-top: 5px;
+		}
+		#big2{
+			font-size: 60px; 
+			margin-top: 10px;
+		}
+		.col4{
+			padding: 10px;
+		}
+		#block3 {
+			padding-top: 15px;
+		}
+		.blue{
+			background-color: blue;
+		}
+		.yellow{
+			background-color: #EDD000;
+		}
+		.purple{
+			background-color: purple;
+		}
+		.pink{
+			background-color: #F50B39;
+		}
+		.orange{
+			background-color: #FF4F00;
+		}
+		.gray{
+			background-color: #514144;
+		}
+		.space{
+			background-color: white; 
+			height: 50px;
+		}
+		.tab{
+			margin: 0px 200px;
+		}
+		.row{
+			width: 35px; 
+			height: 35px; 
+			background-color: #152A04; 
+			border: 1px solid black;
+		}
+		.row2{
+			background-color: #538D02;
+		}
+		.center{
+			text-align: center;
+		}
+		.am{
+			margin-top: 10px;
+		}
+		.la{
+			margin-left: 5px; 
+			color: white;
+		}
+		.no{
+			margin-left: 10px; 
+			margin-top: 15px;
+		}
+		
+		
+		
+
+	</style>
+</head>
+<body>
+	<div class="heading center">THE PERIODIC TABLE OF ELEMENTS</div>
+	<div class="periodic">
+		<div id="block1">
+			<div class="col col1">
+				<div class="box " id="first"><div class="mid">H</div></div>
+				<div class="box "></div>
+				<div class="box "></div>
+				<div class="box "></div>
+				<div class="box "></div>
+				<div class="box "></div>
+				<div class="box "></div>
+			</div>
+			<div class="col col2">
+				<div class="box hide"><div class="mid"></div></div>
+				<div class="box"><div class="mid">4</div></div>
+				<div class="box"><div class="mid">12</div></div>
+				<div class="box"><div class="mid">20</div></div>
+				<div class="box"><div class="mid">38</div></div>
+				<div class="box"><div class="mid">56</div></div>
+				<div class="box"><div class="mid">88</div></div>
+				
+			</div>
+			<div class="col col3">
+				<div class="box hide"></div>
+				<div class="box hide"></div>
+				<div class="box hide"></div>
+				<div class="box hide"></div>
+				<div class="box hide"></div>
+				<div class="box "></div>
+				<div class="box "></div>
+			</div>
+		</div>
+		<div class="block2 col">
+			<div class="big col">
+				<div id="big1">14</div>
+				<div id="big2">Si</div>
+				<div>Silicon</div>
+			</div>
+			<div class="clear col col4">
+				<div class="clear">
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+				</div>
+				<div class="clear">
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+				</div>
+				<div class="clear">
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+				</div>
+				<div class="clear">
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+					<div class="box blue"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col" id="block3">
+			<div class="clear">
+				<div class="box yellow hide"></div>
+				<div class="box yellow hide"></div>
+				<div class="box yellow hide"></div>
+				<div class="box yellow hide"></div>
+				<div class="box yellow hide"></div>
+				<div class="box yellow "></div>
+			</div>
+			<div class="clear">
+				<div class="box purple"></div>
+				<div class="box green"></div>
+				<div class="box green"></div>
+				<div class="box green"></div>
+				<div class="box pink"></div>
+				<div class="box yellow"></div>
+			</div>
+			<div class="clear">
+				<div class="box orange"></div>
+				<div class="box purple"></div>
+				<div class="box green"></div>
+				<div class="box green"></div>
+				<div class="box pink"></div>
+				<div class="box yellow"></div>
+			</div>
+			<div class="clear">
+				<div class="box orange"></div>
+				<div class="box purple"></div>
+				<div class="box purple"></div>
+				<div class="box green"></div>
+				<div class="box pink"></div>
+				<div class="box yellow"></div>
+			</div>
+			<div class="clear">
+				<div class="box orange"></div>
+				<div class="box orange"></div>
+				<div class="box purple"></div>
+				<div class="box purple"></div>
+				<div class="box pink"></div>
+				<div class="box yellow"></div>
+			</div>
+			<div class="clear">
+				<div class="box orange"></div>
+				<div class="box orange"></div>
+				<div class="box orange"></div>
+				<div class="box purple"></div>
+				<div class="box pink"></div>
+				<div class="box yellow"></div>
+			</div>
+			<div class="clear">
+				<div class="box gray"></div>
+				<div class="box gray"></div>
+				<div class="box gray"></div>
+				<div class="box gray"></div>
+				<div class="box gray"></div>
+				<div class="box gray"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="space clear"></div>
+
+	<div class="tab">
+		<div>
+			<div class="col row"><div class="la am ">La</div></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+			<div class="col row"></div>
+		</div>
+		<div class="clear">
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"><div class="am center">Am</div></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"></div>
+			<div class="col row row2"><div class="no">No</div></div>
+		</div>
+	</div>
+	
+
+</body>
+</html>

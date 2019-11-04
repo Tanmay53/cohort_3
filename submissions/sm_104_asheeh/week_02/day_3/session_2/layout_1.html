@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout_1</title>
+    <style>
+        .class1{
+                display: flex;
+                justify-content: center;
+                
+
+            }
+
+          .class1 div{
+                          
+                          flex-basis: 120px;
+                          height: 540px;
+                          margin: 20px;
+                          background-color: teal;
+                          border-radius: 5px;
+                          
+                    } 
+
+                    @media only screen and (max-width: 600px) {
+
+                    .class1 div{
+                        background-color: aqua !important;
+                    }
+                    } 
+                    @media only screen and (min-width: 600px) {
+
+                    .class1 div{
+                           background-color: thistle !important;
+                        }
+                        }
+
+                        @media only screen and (min-width: 760px) {
+
+                    .class1 div{
+                        background-color: greenyellow !important;
+                    }
+                    } 
+
+                    @media only screen and (min-width: 900px) {
+
+                    .class1 div{
+                        background-color: teal !important;
+                    }
+                    }  
+    </style>
+    </head>
+
+    <body>
+        <div class="class1">
+            <div></div>
+            <div ></div>
+            <div></div>
+            <div></div>
+        
+        </div>
+    </body>
+</html>
