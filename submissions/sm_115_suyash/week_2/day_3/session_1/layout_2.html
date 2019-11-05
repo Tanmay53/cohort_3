@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex layout 2</title>
+</head>
+  <style>
+    .box {
+      height: 100px;
+      width: 100px;
+      margin: 10px;
+      background: seagreen;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 450px;
+      margin: 100px auto;
+    }
+
+    .container :nth-child(2),
+    .container :nth-child(4),
+    .container :nth-child(9) {
+      flex-grow: 3;
+      /* width: 300px; */
+    }
+  </style>
+<body>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+</html>
