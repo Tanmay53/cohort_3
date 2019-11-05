@@ -1,0 +1,36 @@
+<html>
+<style>
+#container div{
+                display: flex;
+            }
+            .row1 div  {
+                height: 100px;
+                flex-basis: 100px;
+                background: blue;
+                margin: 10px;
+            }  
+@media(max-width:780px){
+  .row1{
+    flex-direction:column;
+    background-color:red;
+  }
+}
+</style>
+<body>
+<div id="container">
+<div class="row1">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<div class="row1">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+</body>
+<html>
+

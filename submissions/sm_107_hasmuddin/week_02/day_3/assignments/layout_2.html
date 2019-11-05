@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout2</title>
+    <style>
+    .container {
+        display:flex;
+        justify-content:center;
+    }
+
+    .main {
+        display:grid;
+        width:60%;
+        align-items:center;
+        grid-template-areas:
+        "nav nav"
+        "left right";
+        grid-gap:20px;
+        font-size:30px;
+        font-weight:bolder;
+    }
+    .main .nav h2, .main h5{
+        margin:25px 10px;
+
+    }
+   .main .nav {
+        grid-area:nav;
+        height:100px;
+        background:yellow;
+
+    }
+   .main .left {
+        grid-area:left;
+        height:500px;
+        background:red;
+        
+
+    }
+
+    .main .right {
+        grid-area:right;
+        height:500px;
+        background:green;
+
+    }
+
+    @media (max-width:800px) {
+
+
+        .container {
+        display:flex;
+        justify-content:center;
+    }
+
+    .main {
+        display:grid;
+        width:70%;
+        align-items:center;
+        grid-template-areas:
+        "nav"
+        "right"
+        "left";
+        grid-gap:20px;
+        font-size:30px;
+        font-weight:bolder;
+    }
+    .main .nav h2, .main h5{
+        margin:25px 10px;
+
+    }
+   .main .nav {
+        grid-area:nav;
+        height:80px;
+        background:yellow;
+
+    }
+   .main .left {
+        grid-area:left;
+        height:200px;
+        background:red;
+        
+
+    }
+
+    .main .right {
+        grid-area:right;
+        height:200px;
+        background:green;
+
+    }
+
+
+    }
+    
+    
+
+    
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="main">
+        <div class="nav"><h2>Navigation</h2></div>
+        <div class="left"><h5>LEFT BOX</h5></div>
+        <div class="right"><h5>RIGHT BOX</h5></div>
+    </div>
+</div>
+
+
+
+    
+</body>
+</html>

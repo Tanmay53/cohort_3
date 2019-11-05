@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+
+            .parent-div {
+                display: grid;
+                grid-template-columns: 150px 150px 150px 150px 150px;
+                grid-template-rows: auto auto;
+                grid-gap: 30px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 250px;
+            }
+
+            .child-div {
+                background: #297862;
+                height: 150px;
+                width: 150px;
+                border-radius: 5px;
+            }
+
+            @media (max-width: 800px) {
+
+                .parent-div {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-template-rows: auto auto auto auto auto;
+                    grid-gap: 30px;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 50px;
+                }
+
+                .parent-div :nth-child(even){
+                    background: red;
+                }
+
+                .parent-div :nth-child(odd){
+                    background: blue;
+                }
+            }
+
+        </style>
+        <title>
+            Layout 4
+        </title>
+    </head>
+    <body>
+        <div class="parent-div">
+            <div class="child-div"></div>
+            <div class="child-div"></div>
+            <div class="child-div"></div>
+            <div class="child-div"></div>
+            <div class="child-div"></div>
+            <div class="child-div"></div>
+            <div class="child-div"></div>
+            <div class="child-div"></div>
+            <div class="child-div"></div>
+            <div class="child-div"></div>
+        </div>
+    </body>
+</html>

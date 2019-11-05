@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>layout_5</title>
+    <style type="text/css">
+        #grid {
+            display: grid;
+            grid-gap: 20px;
+
+        }
+
+        #id1 {
+            grid-area: 1/1/2/span 2;
+            background-color: red;
+        }
+
+        #id2 {
+            background-color: green;
+        }
+
+        #id3 {
+            background-color: indigo;
+        }
+
+        @media (max-width: 600px) {
+            #grid {
+
+                grid-template-columns: 80px 250px;
+                grid-template-rows: 50px 300px;
+            }
+
+        }
+
+        @media (min-width: 600px) {
+            #grid {
+
+                grid-template-columns: 120px 400px;
+                grid-template-rows: 70px 400px;
+            }
+
+        }
+
+        @media (min-width: 768px) {
+            #grid {
+
+                grid-template-columns: 150px 550px;
+                grid-template-rows: 70px 450px;
+            }
+
+        }
+
+        @media (min-width: 992px) {
+            #grid {
+
+                grid-auto-columns: 200px 600px;
+                grid-template-rows: 70px 450px;
+            }
+
+        }
+
+        @media (min-width: 1200px) {
+            #grid {
+
+                grid-template-columns: 300px 900px;
+                grid-template-rows: 70px 450px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <div id="id1"></div>
+        <div id="id2"></div>
+        <div id="id3"></div>
+
+    </div>
+
+</body>
+
+</html>

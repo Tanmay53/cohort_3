@@ -1,0 +1,51 @@
+#cont {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:400px 1000px 400px ;
+    grid-template-rows: 300px ;
+    background: white;
+    padding: 20px;
+   
+  }
+  
+  #cont div {
+    background: olive;
+    font-size: 30px;
+    text-align: center;
+    
+  }
+  
+  #cont1 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:1000px 400px 400px ;
+    grid-template-rows: 300px ;
+    background:white;
+    padding: 20px;
+  }
+  
+  
+  #cont1 div {
+    background: olive;
+    font-size: 30px;
+    text-align: center;
+    
+  }
+  
+  
+  #cont2 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:400px 400px 1000px ;
+    grid-template-rows: 300px ;
+    background: white;
+    padding: 20px;
+  }
+  
+  
+  #cont2 div {
+    background: olive;
+    font-size: 30px;
+    text-align: center;
+    
+  }

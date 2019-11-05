@@ -7,7 +7,14 @@
                 margin: 0px;
                 padding :0px;
             }
+            body{
+                font-family: sans-serif;
+                font-size: 13px;
+            }
 
+           ul{
+                display: inline;
+            }
             #container{
                 width: 90%;
                 margin-left: auto;
@@ -18,18 +25,98 @@
             }
             
             #nav{
-                margin-right: 5%;
+                width:8%;
+                
+            }
+            li{
+                color: blue;
             }
 
+            #contents{
+                border: 1px solid blue;
+                padding: 30px;
+                display: inline-block;
+                
+            }
 
+            ul > li{
+                list-style-type: none;
+            }
+
+            ul{
+                margin-bottom: 30px;
+            }
+            #nav > ul li:first-child{
+                border-bottom: 0.5px solid gray;
+                margin-bottom: 5px;
+            }
+
+            #logo{
+                height: 150px;
+                width: 150px;
+                margin-bottom: 40px;
+            }
+            
+            #main-content{
+                width: 80%;
+                margin-left:50px;
+                border-left: 1px solid gray;
+                padding: 20px;
+            }
+            ul.horizontal > li{
+                display: inline-block;
+                margin:10px;
+            }
+            
+            #bottom li{
+                padding: 10px;
+                border-left: 1px solid blueviolet;
+                border-right: 1px solid blueviolet;
+                border-bottom: 1px solid blueviolet;
+            }
+
+            p{
+                margin-top: 5px;
+                margin-bottom: 40px;
+            }
+
+            .right{
+                float: right;
+            }
+            .left{
+                float: left;
+            }
+
+            .clear{
+                clear:both;
+            }
+
+            dl > dd, dl > dt{
+                display: inline-block;
+                vertical-align: top;
+            }
+            tr{
+                margin: 50px;
+            }
+            #intro{
+                float: right;
+                margin-top: 50px;
+                margin-right: 50px;
+                padding: 10px;
+                border: 1px solid gray;
+            }
+            #intro > img{
+                height: 350px;
+                width:250px;
+                margin-left: 10px;
+            }
         </style>
     </head>
     <body>
         <div id="container">
             <div id="nav">
-                <img src = "" alt="wiki logo" />
+                <img id="logo" src = "logo.png" alt="wiki logo" />
                 <ul id="nav_links">
-                    <li>Main Page</li>
                     <li>Contents</li>
                     <li>Featured content</li>
                     <li>Current events</li>
@@ -65,17 +152,84 @@
             </div> <!-- nav -->
             <div id="main-content">
                 <div id="header">
-
+                    <div id="top" >
+                        <ul class="horizontal right">
+                            <li>Not logged in</li>
+                            <li>Talk</li>
+                            <li>Contributions</li>
+                            <li>Create account</li>
+                            <li>Log in</li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                    <div id="bottom">
+                        <ul class="horizontal left">
+                            <li>Article</li>
+                            <li>Talk</li>
+                        </ul>
+                        <ul class="horizontal right">
+                            <li>Read</li>
+                            <li>Edit</li>
+                            <li>View History</li>
+                            <li><input type="text" /></li>
+                        </ul>
+                    </div>
                 </div> <!-- header -->
-                <div id="section">
+                <div class="clear"></div>
+                <div id="section" class="clear">
                     <h1>Linus Torvalds</h1>
                     <hr/>
+                    <div id="intro">
+                            <h3>Linus Torvalds</h3>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/800px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" alt="Linus" />
+                            <div>
+                                <p>Torvalds at LinuxCon Europe 2014</p>
+                            </div>
+    
+                            <table>
+                                <tr>
+                                    <td><b>Born</b></td>
+                                    <td>Linus Benedict <br>
+                                        December 28, 1969 (age 49)<br>
+                                        Helsinki, Finland</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Residence</b></td>
+                                    <td>Dunthorpe, Oregon, U.S.</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Alma mater</b></td>
+                                    <td>University of Helsinki</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Occupation</b></td>
+                                    <td>Software engineer</td>
+                                </tr>
+                            </table>
+                        </div> <!-- intro -->
+                    
                     <p>From Wikipedia, the free encyclopedia</p>
                     <p>
                         Linus Benedict Torvalds (/ˈliːnəs ˈtɔːrvɔːldz/ LEE-nəs TOR-vawldz,[5] Finland Swedish: [ˈliːnʉs ˈtuːrvɑlds] (About this soundlisten); born December 28, 1969) is a Finnish-American[2][6] software engineer who is the creator and, historically, the principal developer of the Linux kernel, which is the kernel for Linux operating systems (distributions) and other operating systems such as Android and Chrome OS. He also created the distributed version control system Git and the scuba dive logging and planning software Subsurface.
 
                         He was honored, along with Shinya Yamanaka, with the 2012 Millennium Technology Prize by the Technology Academy Finland "in recognition of his creation of a new open source operating system for computers leading to the widely used Linux kernel."[7] He is also the recipient of the 2014 IEEE Computer Society Computer Pioneer Award[8] and the 2018 IEEE Masaru Ibuka Consumer Electronics Award.[9] 
                     </p>
+                    
+                    <div id="contents">
+                        <h3>Contents</h3>
+                        <ol>
+                            <li>Life and carrer</li>
+                            <li>The Linus/Linux connection</li>
+                            <li>Authority and trademark</li>
+                            <li>Personal life</li>
+                            <li>Awards and achievements</li>
+                            <li>Media recognition</li>
+                            <li>Bibliography</li>
+                            <li>See also</li>
+                            <li>References</li>
+                            <li>External links</li>
+                        </ol>
+                    </div>
                     
                 </div> <!-- section -->
             </div> <!-- main-content -->

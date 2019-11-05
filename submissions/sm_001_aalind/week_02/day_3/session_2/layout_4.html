@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Layout 4</title>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        display: grid;
+        align-items: center;
+      }
+      #cont {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px;
+        grid-gap: 20px;
+        justify-content: center;
+      }
+      #cont div {
+        background: green;
+      }
+      @media (max-width: 1024px) {
+        #cont {
+          grid-template-columns: 100px 100px;
+          grid-template-rows: 100px 100px 100px 100px 100px;
+        }
+        #cont div {
+          background: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

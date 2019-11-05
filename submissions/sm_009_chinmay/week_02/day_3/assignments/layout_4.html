@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Layout 3</title>
+ <style>
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ 
+
+ .grid-container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 120px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: yellow;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1;
+  background-color: rgb(206, 63, 44);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 3/1;
+  background-color: rgb(74, 204, 124);
+ }
+ .grid-container div:nth-child(4) {
+  grid-area: 4/1;
+  background-color: rgb(48, 45, 212);
+ }
+ .grid-container div:nth-child(5) {
+  grid-area: 5/1;
+  background-color: rgb(174, 179, 176);
+ }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+
+ .grid-container {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 120px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: yellow;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1;
+  background-color: rgb(206, 63, 44);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 3/1;
+  background-color: rgb(74, 204, 124);
+ }
+ .grid-container div:nth-child(4) {
+  grid-area: 4/1;
+  background-color: rgb(48, 45, 212);
+ }
+ .grid-container div:nth-child(5) {
+  grid-area: 5/1;
+  background-color: rgb(174, 179, 176);
+ }
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+ .grid-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 120px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: yellow;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1/2/span 1;
+  grid-row: 2/span 2;
+  background-color: rgb(206, 63, 44);
+ }
+
+ .grid-container div:nth-child(3) {
+
+  grid-area: 4/1/4/ span 1;
+  grid-row: 4/span 2;
+  background-color: rgb(74, 204, 124);
+ }
+ .grid-container div:nth-child(4) {
+  grid-area: 2/2/2/ span 1;
+  grid-row: 2/span 2;
+  
+  background-color: rgb(48, 45, 212);
+ }
+ .grid-container div:nth-child(5) {
+  grid-area: 4/2/4/ span 1;
+  grid-row: 4/span 2;
+  background-color: rgb(174, 179, 176);
+ }
+} 
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 120px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  border-radius: 5px;
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: yellow;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1/2/span 1;
+  grid-row: 2/span 2;
+  background-color: rgb(206, 63, 44);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/2/2/ span 1;
+  grid-row: 2/span 2;
+  background-color: rgb(74, 204, 124);
+ }
+ .grid-container div:nth-child(4) {
+  grid-area: 2/3/2/ span 1;
+  grid-row: 2/span 2;
+  background-color: rgb(48, 45, 212);
+ }
+ .grid-container div:nth-child(5) {
+  grid-area: 2/4/2/ span 1;
+  grid-row: 2/span 2;
+  background-color: rgb(174, 179, 176);
+ }
+} 
+
+ </style>
+</head>
+<body>
+  <div class="grid-container">
+   <div>NAVIGATION</div>
+   <div>BOX 1</div>
+   <div>BOX 2</div>
+   <div>BOX 3</div>
+   <div>BOX 4</div>
+  </div>
+</body>
+</html>

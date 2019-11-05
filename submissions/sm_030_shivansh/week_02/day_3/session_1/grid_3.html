@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid_3</title>
+    <style>
+      .grid-box {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+        padding: 20px;
+        grid-gap: 20px;
+      }
+
+      .grid-box div {
+        width: 100px;
+        height: 100px;
+        background-color: firebrick;
+      }
+      .grid-box div:nth-of-type(5) {
+        grid-column-start: 1;
+      }
+      .grid-box div:nth-of-type(8) {
+        grid-column-start: 1;
+      }
+      .grid-box div:nth-of-type(10) {
+        grid-column-start: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+
+      <div></div>
+    </div>
+  </body>
+</html>

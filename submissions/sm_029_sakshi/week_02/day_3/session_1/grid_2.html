@@ -1,0 +1,30 @@
+<html>
+<style>
+#container {
+  display :grid;
+   margin:10px;
+  grid-gap:20px;
+grid-template-rows: 100px 450px;
+ grid-template-columns: 100px 500px;
+}
+.header{
+  grid-column: 1/span 2;
+  background-color:blue;
+}
+.left{
+  background-color:yellow;
+}
+.right{
+  background-color:pink;
+}
+</style>
+<body>
+ <div id="container">
+
+        <div class="header"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+  </div>
+  </body>
+  </html>
