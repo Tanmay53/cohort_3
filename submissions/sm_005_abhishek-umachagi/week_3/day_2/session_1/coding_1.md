@@ -133,7 +133,7 @@ else{
 Answer
 
 ```
-D
+grade 'D'
 ```
 11. What does the following code print in the `alert` window?  
 ```javascript
