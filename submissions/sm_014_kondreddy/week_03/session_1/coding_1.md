@@ -49,7 +49,7 @@ false
 Answer
 
 ```
-true
+false
 ```
 5. 
 ```javascript
@@ -60,7 +60,7 @@ var B = true
 Answer
 
 ```
-false
+true
 ```
 6. 
 ```javascript
@@ -69,7 +69,7 @@ false
 Answer
 
 ```
-true
+false
 ```
 7.
 ```javascript
