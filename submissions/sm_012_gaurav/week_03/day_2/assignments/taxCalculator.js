@@ -17,9 +17,6 @@ var incomeAfterDeduction = income - deductedAmount;
 if (incomeAfterDeduction<=250000) {
     tax = 0;
 }
-if (incomeAfterDeduction<=250000) {
-    tax = 0;
-}
 else if (incomeAfterDeduction>250000 && incomeAfterDeduction<=500000) {
     tax = (incomeAfterDeduction-250000)*0.1;
 }
@@ -30,8 +27,3 @@ else if(incomeAfterDeduction>1000000) {
     tax = 0.1*250000 + 0.2*500000 + (incomeAfterDeduction-1000000)*0.3;
 }
 console.log("The Tax is",tax);
-
-
-// Income:- 1200000, Savings:- 200000, Tax:- 354000
-// Income:- 600000, Savings:- 50000, Tax:- 117000
-// Income:- 450000, Savings:- 75000, Tax:- 41250
