@@ -362,6 +362,20 @@ hr {
 .highlights ul li {
   margin: 10px 0;
 }
+.points p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.points p > span {
+  font-size: 32px;
+}
+.apply {
+  color: #ffffff;
+  margin: 20px;
+  padding: 10px 40px;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
+}
 /* footer */
 .footer {
   padding: 25px;
