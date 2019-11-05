@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/4e0713dd2e.js"></script>
+  <title>Git Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Utility classes */
+
+    a {
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+      font-size: 18px;
+    }
+
+    .clear-both {
+      clear: both;
+    }
+
+    .border {
+      border: #333 solid 2px;
+    }
+
+    .float-left {
+      float: left;
+    }
+
+    /* Navbar */
+    #navbar div {
+      float: left;
+      width: 50%;
+      margin-top: 5px;
+    }
+
+    #navbar ul li {
+      float: left;
+      padding: 20px 10px;
+    }
+
+    #navbar {
+      background: #24292e;
+      color: #fff;
+      width: 100%;
+      height: 70px;
+    }
+    
+    #navbar ul li i {
+      margin-top: -11px;
+    }
+
+    #navbar ul li a {
+      color: #fff;
+    }
+
+    #navbar ul li:last-child a {
+      border: 1px solid #fff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #navbar ul li input {
+      padding: 10px;
+      margin: -10px;
+    }
+
+    #navbar .right ul {
+      float: right;
+    }
+
+    /* Header */
+    .background-image {
+      height: 590px;
+      background: url('https://github.githubassets.com/images/modules/site/heroes/simple-codelines.svg') no-repeat center center/cover ;
+    }
+/* 
+    header {
+      margin-top: -5px;
+    } */
+
+    header > div > div {
+      float: left;
+      width: 50%;
+    }
+
+    .content-wrap {
+      text-align: left;
+      margin: 150px 0 0 180px;
+    }
+
+    .content-wrap h1 {
+      font-size: 60px;
+      color: white;
+    }
+    .content-wrap p {
+      font-size: 20px;
+      margin-top: 20px ;
+      color: #ccc;
+    }
+
+    .form-wrap form {
+      margin: 50px 160px 0 50px;
+      padding: 20px;
+      background: white;
+    }
+
+    .form-wrap form input {
+      height: 50px;
+      width: 100%;
+      border-radius: 5px;
+      margin: 0px 0 15px 0;
+      padding: 10px;
+    }
+
+    .form-para {
+      font-weight: 600;
+      margin-bottom: -10px;
+    }
+
+    .form-wrap button {
+      height: 60px;
+      width: 100%;
+      border-radius: 5px;
+      background: rgb(68, 182, 68);
+      margin: 20px 0;
+      color: #fff;
+    }
+
+    .form-wrap form > p {
+      font-size: 14px;
+    }
+
+    .overlay {
+      background:  rgba(27, 27, 34, 0.973);
+      height: 599px;
+    }
+
+    /* Showcase */
+    #showcase {
+      height: 600px;
+      background: grey;
+      width: 100%;
+      position: absolute;
+
+    }
+
+    #showcase .content-holder {
+      height: 300px;
+      position: relative;
+      background: indigo;
+      margin: 120px 50px;
+    }
+
+    #showcase .content-holder .content-left {
+      width: 30%;
+      color: honeydew;
+    }
+
+    #showcase .content-holder .content-right {
+      width: 70%;
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="left">
+      <ul class="left-navbar">
+        <li><i class="fab fa-github fa-2x"></i></li>
+        <li>Why Gitgub?</li>
+        <li>Enterprise</li>
+        <li>Explore</li>
+        <li>Marketpalce</li>
+        <li>Pricing</li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul class="right-navbar">
+        <li><input type="text" placeholder="search Github"></li>
+        <li><a href="#">Sign in</a></li>
+        <li><a href="#">Sign up</a></li>
+    </div>
+  </nav>
+  <div class="clear-both"></div>
+  <header class="background-image">
+    <div class="overlay">
+      <div class="content">
+        <div class="content-wrap">
+          <h1>Built for <br> developers</h1>
+          <p>GitHub is a development platform inspired by the <br>way you work. From open source to business, you <br> can host and review
+          code, manage projects, and <br> build software alongside 40 million developers.</p>
+        </div>
+      </div>
+      <div class="form">
+        <div class="form-wrap">
+          <form action="">
+            <label for="name"><p class="form-para">Username</p></label>
+            <br>
+            <input type="text">
+            <br>
+            <label for="name"><p class="form-para">Email</p></label>
+            <br>
+            <input type="email">
+            <br>
+            <label for="password"><p class="form-para">Password</p></label>
+            <br>
+            <input type="password">
+            <p>Make sure it's at least 15 characters OR at least 8 characters including a number and a lowercase letter. <a href="#"> Learn more</a>.</p>
+            <button type="submit" class="button-decoration">Sign up for free Github</button>
+            <p>By clicking “Sign up for GitHub”, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Statement</a>. We’ll occasionally send you
+            account related emails.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <img src="img/svg_1.svg" alt="SVG" width="450px">
+  </header>
+  <div class="clear-both"></div>
+  <div id="showcase">
+    <div class="content-holder">
+      <div class="float-left content-left">
+        <h1>Get started with GitHub Enterprise</h1>
+        <p>Take collaboration to the next level with security and administrative features built for teams.</p>
+      </div>
+      <div class="float-left content-right">
+        <div class="float-left box-1">
+          <h4>Enterprise Cloud</h4>
+          <p>Leave the hosting to us.</p>
+          <a href="#">Try Cloud for free</a>
+        </div>
+        <div class="float-left box-2">
+          <h4>Enterprise Server</h4>
+          <p>Deploy to your environment.</p>
+          <a href="#">Try Server for free</a>
+        </div>
+        <div class="float-left box-3">
+          <h4>Talk to us</h4>
+          <p>Want to use both?</p>
+          <a href="#">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+</body>
+</html>
