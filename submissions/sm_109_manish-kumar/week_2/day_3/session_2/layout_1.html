@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>layout1</title>
+<style>
+	.flex1{
+		display: flex;
+		margin-left: 300px;
+		margin-top:75px;
+
+	}
+	.flex1 div{
+		width: 100px;
+		height: 500px;
+		background-color: teal;
+		margin:20px;
+	}
+	@media(max-width: 600px){
+		body{
+			background:red;
+		}
+		.flex1 {
+			flex-direction:column;
+			margin-left: 70px;
+			margin-top:30px;
+		}
+		.flex1 div{
+		width: 250px;
+		height: 100px;
+		background-color: blue;
+		margin:10px;
+	}
+	@media(min-width: 600px){
+		body{
+			background:green!important;
+		}
+		.flex1 {
+			flex-direction:row;
+			margin-left: 70px;
+			margin-top:30px;
+		}
+		.flex1 div{
+		width: 350px;
+		height: 100px;
+		background-color: black !important;
+		margin:10px;
+	}
+</style>
+</head>
+<body>
+	<div class="flex1">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>
