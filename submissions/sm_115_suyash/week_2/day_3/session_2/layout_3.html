@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      display: flex;
+      max-width: 700px;
+      flex-wrap: wrap;
+    }
+
+    .container > div {
+      height: 150px;
+      width: 150px;
+      background: seagreen;
+      margin: 10px;
+    }
+
+    .container :nth-child(2),
+    .container :nth-child(3),
+    .container :nth-child(4),
+    .container :nth-child(7),
+    .container :nth-child(8),
+    .container :nth-child(12) {
+      background: white;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        max-width: 500px;
+      }
+
+      .container > div {
+        height: 100px;
+        width: 100px;
+        background: turquoise;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        max-width: 400px;
+      }
+
+      .container > div {
+        height: 60px;
+        width: 60px;
+        background: springgreen;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>

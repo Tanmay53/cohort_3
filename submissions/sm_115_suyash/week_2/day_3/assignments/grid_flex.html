@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Perodic Table</title>
+  <style>
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+    body {
+      background: #333;
+    }
+
+    .box {
+      height: 50px;
+      width: 50px;
+    }
+    .container {
+      display: flex;
+      width: 90%;
+      margin: 100px auto 0 auto;
+    }
+
+    .container-1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width:170px;
+      grid-gap: 10px;
+
+      height: 300px;
+      margin: 20px;
+    }
+
+    .container-2 {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      width: 530px;
+      grid-gap: 10px;
+      height: 230px;
+      margin: 200px 20px;
+    }
+
+    .container-3 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      width: 350px;
+      grid-gap: 10px;
+      height: 410px;
+      margin: 20px;
+    }
+
+    .container-1 :nth-child(odd),
+    .container-1 :nth-child(12) {
+      background: #ddd;
+    }
+ 
+    .container-1 :nth-child(2),
+    .container-1 :nth-child(4),
+    .container-1 :nth-child(6),
+    .container-1 :nth-child(8),
+    .container-1 :nth-child(10),
+    .container-1 :nth-child(13) {
+      grid-column-start: 1;
+      background: #bbb;
+    }
+
+    .container-1 :nth-child(1),
+    .container-1 :nth-child(14),
+    .container-1 :nth-child(15) {
+      background: #bbb;
+    }
+
+    .container-2 :nth-child(odd) {
+      background: grey;
+    }
+
+    .container-2 :nth-child(even) {
+      background: #ddd;
+    }
+
+    .container-3 :nth-child(2) {
+      grid-column-start: 1;
+
+    }
+
+    .container-3 :nth-child(1) {
+      grid-column-start: 6;
+    }
+
+    .container-3 :nth-child(6n) {
+      background: #aaa;
+    }
+
+    .container-3 :nth-child(6n-1) {
+      background: #bbb;
+    }
+    
+    .container-3 :nth-child(6n-2) {
+      background: #ccc;
+    }
+
+    .container-3 :nth-child(6n-3) {
+      background: #ddd;
+    }
+
+ 
+    .container-3 :nth-child(6n-4) {
+      background: #ddd;
+    }
+
+
+    .container-3 :nth-child(6n-5) {
+      background: grey;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="container-1">
+      <div class="box box-1"></div>
+      <div class="box box-2"></div>
+      <div class="box box-3"></div>
+      <div class="box box-4"></div>
+      <div class="box box-5"></div>
+      <div class="box box-6"></div>
+      <div class="box box-7"></div>
+      <div class="box box-8"></div>
+      <div class="box box-9"></div>
+      <div class="box box-10"></div>
+      <div class="box box-11"></div>
+      <div class="box box-12"></div>
+      <div class="box box-13"></div>
+      <div class="box box-14"></div>
+      <div class="box box-15"></div>
+    </div>
+    <div class="container-2">
+      <div class="box box-1"></div>
+      <div class="box box-2"></div>
+      <div class="box box-3"></div>
+      <div class="box box-4"></div>
+      <div class="box box-5"></div>
+      <div class="box box-6"></div>
+      <div class="box box-7"></div>
+      <div class="box box-8"></div>
+      <div class="box box-9"></div>
+      <div class="box box-10"></div>
+      <div class="box box-11"></div>
+      <div class="box box-12"></div>
+      <div class="box box-13"></div>
+      <div class="box box-14"></div>
+      <div class="box box-15"></div>
+      <div class="box box-16"></div>
+      <div class="box box-17"></div>
+      <div class="box box-18"></div>
+      <div class="box box-19"></div>
+      <div class="box box-20"></div>
+      <div class="box box-21"></div>
+      <div class="box box-22"></div>
+      <div class="box box-23"></div>
+      <div class="box box-24"></div>
+      <div class="box box-25"></div>
+      <div class="box box-26"></div>
+      <div class="box box-27"></div>
+      <div class="box box-28"></div>
+      <div class="box box-29"></div>
+      <div class="box box-30"></div>
+      <div class="box box-31"></div>
+      <div class="box box-32"></div>
+      <div class="box box-33"></div>
+      <div class="box box-34"></div>
+      <div class="box box-35"></div>
+      <div class="box box-36"></div>
+    </div>
+    <div class="container-3">
+      <div class="box box-1"></div>
+      <div class="box box-2"></div>
+      <div class="box box-3"></div>
+      <div class="box box-4"></div>
+      <div class="box box-5"></div>
+      <div class="box box-6"></div>
+      <div class="box box-7"></div>
+      <div class="box box-8"></div>
+      <div class="box box-9"></div>
+      <div class="box box-10"></div>
+      <div class="box box-11"></div>
+      <div class="box box-12"></div>
+      <div class="box box-13"></div>
+      <div class="box box-14"></div>
+      <div class="box box-15"></div>
+      <div class="box box-16"></div>
+      <div class="box box-17"></div>
+      <div class="box box-18"></div>
+      <div class="box box-19"></div>
+      <div class="box box-20"></div>
+      <div class="box box-21"></div>
+      <div class="box box-22"></div>
+      <div class="box box-23"></div>
+      <div class="box box-24"></div>
+      <div class="box box-25"></div>
+      <div class="box box-26"></div>
+      <div class="box box-27"></div>
+      <div class="box box-28"></div>
+      <div class="box box-29"></div>
+      <div class="box box-30"></div>
+      <div class="box box-31"></div>
+      <div class="box box-32"></div>
+      <div class="box box-33"></div>
+      <div class="box box-34"></div>
+      <div class="box box-35"></div>
+      <div class="box box-36"></div>
+      <div class="box box-37"></div>
+    </div>
+  </div>
+</body>
+</html>
