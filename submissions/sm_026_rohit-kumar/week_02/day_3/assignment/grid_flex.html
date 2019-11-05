@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Periodic Table</title>
+        <style type="text/css">
+
+        /*--- Wrapper grid  ----------------------------------------*/
+            #wrapper{
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: grid;
+                grid-template-columns: 1fr 0.5fr 3fr 2fr;
+                grid-template-rows: auto;
+                grid-gap: 10px;
+                align-items: last baseline;
+            }
+
+        /* -------------Left ------------------------------ */    
+            #left{
+                display: grid;
+                grid-template-columns: 50px 50px;
+                grid-template-rows: repeat(7, 50px);
+                grid-gap: 10px;
+                
+            }
+            #left div:nth-child(2), #left div:nth-child(3){
+                grid-row-start: 2;
+            }
+            #left div:nth-child(4), #left div:nth-child(5){
+                grid-row-start: 3;
+            }
+            #left div:nth-child(6), #left div:nth-child(7){
+                grid-row-start: 4;
+            }
+            #left div:nth-child(8), #left div:nth-child(9){
+                grid-row-start: 5;
+            }
+            #left div:nth-child(10), #left div:nth-child(11){
+                grid-row-start: 6;
+            }
+            #left div:nth-child(12), #left div:nth-child(13){
+                grid-row-start: 7;
+            }
+
+            
+            #left > div{
+                background: cyan;
+                border: 1px solid black;
+            }
+
+            #left_bud {
+                display: grid;
+                grid-template-columns: 50px;
+                grid-template-rows: 50px 50px;
+                grid-gap: 10px;
+            }
+            #left_bud > div{
+                border: 1px solid black;
+                background: brown;
+            }
+        /* -------------Left Ends------------------------------ */    
+        
+
+        /* -------------Middle ------------------------------ */    
+            #middle{
+                display: grid;
+                grid-template-columns: repeat(9, 50px);
+                grid-template-rows: repeat(9, 50px);
+                grid-gap: 10px;
+            }
+            #middle > div{
+                background: blue;
+                border: 1px solid black;
+            }
+        /* -------------Middle Ends ------------------------------ */    
+        
+
+        /* -------------Right---- ------------------------------ */    
+            #right{
+                display: grid;
+                grid-template-columns: repeat(5, 50px);
+                grid-template-rows: repeat(6, 50px);
+                grid-gap: 10px;
+            }
+            #right > div{
+                background: green;
+                border: 1px solid black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="left">
+                <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+            </div>
+            <div id="left_bud">
+                <div></div> <div></div>
+            </div>
+            <div id="middle">
+                <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div>
+            </div>
+            <div id="right">
+                <div></div> <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div> <div></div>
+            </div>
+        </div>
+    </body>
+</html>

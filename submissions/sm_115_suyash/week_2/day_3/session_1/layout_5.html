@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid Layout 5</title>
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 40px;
+      grid-template-areas: 
+      'b1 b1 b1 b1 b1'
+      'b2 b2 b3 b3 b3';
+    }
+
+    .container :first-child {
+      grid-area: b1;
+      height: 50px;
+      background: red;
+    }
+
+    .container :nth-child(2) {
+      grid-area: b2;
+      height: 500px;
+      background: green;
+    }
+
+    .container :last-child {
+      grid-area: b3;
+      height: 500px;
+      background: teal;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
