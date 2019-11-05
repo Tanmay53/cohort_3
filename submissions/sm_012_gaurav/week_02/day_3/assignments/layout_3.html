@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout 3</title>
+        <style type="text/css">
+            * {
+                font-family: sans-serif;
+            }
+            .grid {
+                display: grid;
+                grid-template-rows: 15% 25%;
+                grid-template-columns: 40% 25%;
+                grid-gap: 20px;
+                grid-template-areas: "head head"
+                                     "red green1"
+                                     "red green2"
+                                     "red green3";
+                height: 600px;
+            }
+            p {
+                margin: 10px;
+            }
+            .yellow {
+                font-size: 50px;
+                background-color: yellow;
+                grid-area: head;
+            }
+            .red {
+                font-size: 30px;
+                background-color: red;
+                grid-area: red;
+            }
+            .green {
+                background-color: green;
+                font-size: 30px;
+            }
+            .green1 {
+                grid-area: green1;
+            }
+            .green2 {
+                grid-area: green2;
+            }
+            .green3 {
+                grid-area: green3;
+            }
+            @media (max-width: 900px) {
+                .grid {
+                    grid-template-rows: 15% 40% 25%;
+                    grid-template-columns: 25% 25% 25%;
+                    grid-template-areas: "head head head"
+                                         "red red red"
+                                         "green1 green2 green3";
+                    grid-gap: 15px;
+                }
+            }
+            @media (max-width: 500px) {
+                .grid {
+                    grid-template-areas: "head"
+                                        "red"
+                                        "green1"
+                                        "green2"
+                                        "green3";
+                    grid-template-rows: 10% 25% 20% 20%;
+                    grid-template-columns: 70%;
+                    grid-gap: 10px;
+                    height: 700px;
+                }
+                .yellow {
+                    font-size: 40px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="yellow"><p>Navigation</p></div>
+            <div class="red"><p>LEFT BOX</p></div>
+            <div class="green green1"><p>RIGHT BOX 1</p></div>
+            <div class="green green2"><p>RIGHT BOX 2</p></div>
+            <div class="green green3"><p>RIGHT BOX 3</p></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,613 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  line-height: 0.98;
+  overflow-x: hidden;
+}
+.btn {
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.main-header .navbar {
+  background: #24292e;
+  padding: 10px;
+  height: 70px;
+}
+
+.right {
+  float: right;
+}
+.main-header .brand {
+  float: left;
+}
+.main-header .navbar img {
+  width: 32px;
+  margin: 8px;
+}
+.main-header .navbar ul {
+  float: left;
+}
+.main-header .navbar ul li {
+  padding: 16px 13px;
+  color: white;
+  float: left;
+}
+
+.main-header .navbar ul li a {
+  color: white;
+}
+
+.main-header .navbar .right ul li input {
+  padding: 11px 9px;
+  background: #444;
+  border-radius: 2px;
+  border: none;
+  margin-top: -25px;
+  width: 240px;
+  color: rgba(255, 2555, 255, 0.9);
+}
+.section-showcase {
+  background: rgba(43, 49, 55, 1)
+    url("https://github.githubassets.com/images/modules/site/heroes/simple-codelines.svg")
+    no-repeat center center/cover;
+  height: 700px;
+
+  width: 100%;
+}
+.section-showcase {
+  position: relative;
+  min-height: 650px;
+}
+.section-showcase .content {
+  position: absolute;
+
+  top: 180px;
+  left: 150px;
+}
+.section-showcase .content h1 {
+  font-size: 62px;
+  font-weight: bold;
+  color: white;
+}
+.section-showcase .content p {
+  color: rgba(255, 2555, 255, 0.6);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 20px;
+  width: 40%;
+}
+.section-showcase .form-content {
+  width: 33%;
+  top: 65px;
+  right: 150px;
+  position: absolute;
+}
+
+.form {
+  background: rgb(250, 251, 252);
+  padding: 22px;
+  border-radius: 2px;
+}
+.form div label {
+  font-weight: bold;
+  font-size: 15px;
+}
+.form div {
+  margin: 15px 0px;
+}
+.form .form-control {
+  padding: 15px;
+  width: 370px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: rgb(250, 251, 252);
+  margin: 5px 0px 20px 0px;
+}
+.form p a {
+  color: blue;
+}
+.form .form-control:last-child {
+  margin-bottom: 5px;
+}
+.form p {
+  font-size: 12px;
+  text-align: justify;
+  color: black;
+}
+.btn-form {
+  padding: 20px 120px;
+  margin: 35px 0px;
+  border-radius: 4px;
+  border: none;
+  background-color: #2ebc4f;
+  color: white;
+  font-size: 16px;
+}
+
+.get_started {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-color: #fafbfc;
+  background-image: url("http://campus.mst.edu/emctest/brand_resources/design_elements/patterns/dots/Dots-MetallicSilver-02.png");
+  background-size: 2000px 350px;
+  background-repeat: no-repeat;
+  background-position-y: 70px;
+  background-position-x: -1500px;
+}
+.get_started .side img {
+  width: 450px;
+  position: absolute;
+  top: -50px;
+  right: 40px;
+  z-index: 2;
+}
+.get_started .content {
+  position: absolute;
+  height: 300px;
+  width: 93%;
+  background: #fff;
+  box-shadow: 0px 0px 10px 2px #ddd;
+  border-radius: 5px;
+  top: 117px;
+  left: 45px;
+  padding: 40px;
+}
+.content .div-1 {
+  width: 350px;
+  padding: 10px;
+}
+.content .div-1 h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+.content .div-1 p {
+  font-size: 20px;
+  color: #586069;
+  line-height: 1.2;
+  margin: 20px 0px;
+}
+.fl-l {
+  float: left;
+}
+
+.content .div-2 {
+  width: 170px;
+  text-align: center;
+  margin-left: 70px;
+  margin-top: 15px;
+}
+
+.content .div-2 h4 {
+  margin: 10px 0px;
+}
+.content .div-2 p {
+  font-size: 14px;
+}
+
+.content div > img {
+  width: 60px;
+  height: 60px;
+}
+.btn-primary {
+  padding: 20px;
+  background: #1074e7;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  margin: 30px 0px;
+}
+.btn-special {
+  background: white;
+  border: 1px solid #1074e7;
+  color: #1074e7;
+}
+
+.section-2 {
+  width: 100%;
+  padding: 15px;
+}
+.section-2 .overlay-2 {
+  height: 250px;
+  width: 97%;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 1)
+    url("https://github.githubassets.com/images/modules/site/advanced-security-iso-ui.jpg")
+    no-repeat center center/cover;
+  margin: 130px auto 50px auto;
+}
+.section-2 .overlay-2 .left {
+  width: 55%;
+  padding: 25px 40px;
+  float: left;
+}
+.section-2 .overlay-2 .left img {
+  width: 80px;
+}
+
+.section-2 .overlay-2 .left h2 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.section-2 .overlay-2 .left p {
+  font-size: 15px;
+  color: white;
+  line-height: 1.3;
+}
+.section-2 .overlay-2 .right {
+  padding: 70px 110px;
+  float: right;
+  width: 30%;
+}
+.section-2 .clients {
+  width: 100%;
+  margin: 50px;
+}
+.section-2 .clients h5 {
+  text-align: center;
+  margin-right: 0px !important;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+}
+.section-2 .clients ul {
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+}
+.section-2 .clients ul:last-child {
+  margin-left: 70px;
+}
+.section-2 .clients ul li {
+  display: inline;
+  padding-left: 110px;
+}
+.section-2 .clients ul:last-child li {
+  padding-left: 100px;
+}
+.section-2 .clients ul li img {
+  height: 20px;
+  color: #444;
+}
+
+/* Team */
+.team {
+  padding: 50px;
+  text-align: center;
+}
+.team pre {
+  color: rgba (0, 0, 0, 0.6);
+  font-size: 18px;
+  margin: 20px 0px;
+}
+.team h2 {
+  font-size: 48px;
+  margin: 30px 0px;
+}
+.team p {
+  color: rgba(43, 49, 55, 1);
+  font-size: 20px;
+  width: 60%;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.team button.btn-special {
+  font-size: 17px;
+}
+/* Docs */
+.docs {
+  width: 100%;
+  padding: 10px;
+}
+
+.docs .docs_image {
+  width: 55%;
+  display: inline;
+}
+.docs .docs_image img {
+  width: 55%;
+}
+.docs .docs_content {
+  width: 40%;
+  float: right;
+}
+
+.docs .docs_content div {
+  padding: 20px;
+  border-radius: 5px;
+}
+.docs .docs_content div h3 {
+  font-size: 18px;
+  color: rgba(43, 49, 55, 1);
+  margin: 10px 0px;
+}
+
+.docs .docs_content div p {
+  font-size: 14px;
+  width: 85%;
+  color: rgba(43, 49, 55, 1);
+  line-height: 1.3;
+}
+.docs .docs_content div p a {
+  color: blue;
+}
+.docs .docs_content div:hover {
+  box-shadow: 0px 0px 10px 1px #999;
+}
+
+.enterprise {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+.enterprise h3 {
+  color: #586069;
+  margin: 20px 0px;
+}
+.enterprise .ent-grid div {
+  width: 280px;
+  height: 320px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px 1px #e5e7e9;
+  position: relative;
+  float: left;
+  margin: 0px 14px;
+}
+
+.enterprise .ent-grid div img {
+  width: 100%;
+}
+
+.enterprise .ent-grid div h3 {
+  text-align: left;
+  color: rgba(43, 49, 55, 1);
+  margin: 10px 0px;
+  font-size: 16px;
+}
+
+.enterprise .ent-grid div p {
+  text-align: left;
+  font-size: 12px;
+  margin: 7px 0px 0px 0px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid rgb(225, 228, 232);
+}
+
+.enterprise .ent-grid div a {
+  color: blue;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Community */
+.community {
+  clear: both;
+  padding: 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+.community pre {
+  color: rgba(43, 49, 55, 1);
+  font-size: 18px;
+  margin: 20px 0px;
+}
+.community h2 {
+  font-size: 48px;
+  margin: 30px 0px;
+}
+.community p {
+  color: rgba(43, 49, 55, 1);
+  font-size: 20px;
+  width: 60%;
+  margin: auto;
+  line-height: 1.5;
+}
+.community .ent-grid div {
+  width: 280px;
+  height: 400px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px 1px #e5e7e9;
+  position: relative;
+  float: left;
+  margin: 25px 10px;
+}
+
+.community .ent-grid div img {
+  width: 100%;
+  height: 220px;
+}
+
+.community .ent-grid div h3 {
+  text-align: left;
+  color: rgba(43, 49, 55, 1);
+  margin: 10px 0px;
+  font-size: 16px;
+}
+
+.community .ent-grid div p {
+  text-align: justify;
+  font-size: 12px;
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(225, 228, 232);
+}
+
+.community .ent-grid div a {
+  color: blue;
+  position: absolute;
+  bottom: 10px;
+  left: 3px;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Bussniess */
+.business {
+  padding: 50px;
+  text-align: center;
+  clear: both;
+  margin-top: 50px;
+}
+.business pre {
+  color: rgba (0, 0, 0, 0.6);
+  font-size: 18px;
+  margin: 20px 0px;
+}
+.business h2 {
+  font-size: 48px;
+  margin: 30px 0px;
+}
+.business p {
+  color: rgba(43, 49, 55, 1);
+  font-size: 20px;
+  width: 60%;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.business button.btn-special {
+  font-size: 17px;
+}
+/* Security */
+.security {
+  width: 100%;
+  padding: 50px 180px;
+}
+
+.security .security_image {
+  width: 55%;
+  display: inline;
+}
+.security .security_image img {
+  float: right;
+  width: 45%;
+}
+.security .security_content {
+  width: 50%;
+}
+
+.security .security_content div {
+  padding: 20px;
+  border-radius: 5px;
+}
+.security .security_content div h3 {
+  font-size: 18px;
+  color: rgba(43, 49, 55, 1);
+  margin: 10px 0px;
+}
+
+.security .security_content div p {
+  font-size: 14px;
+  width: 85%;
+  color: rgba(43, 49, 55, 1);
+  line-height: 1.3;
+}
+.security .security_content div p a {
+  color: blue;
+}
+
+/* Integration */
+.integration {
+  margin-top: 100px;
+  padding: 50px;
+  text-align: center;
+}
+.integration pre {
+  color: rgba (0, 0, 0, 0.6);
+  font-size: 18px;
+  margin: 20px 0px;
+}
+.integration h2 {
+  font-size: 48px;
+  margin: 30px 0px;
+}
+.integration p {
+  color: rgba(43, 49, 55, 1);
+  font-size: 20px;
+  width: 60%;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.integration button.btn-special {
+  font-size: 17px;
+}
+.integration-image ul {
+  width: 100%;
+  padding: 0px 130px;
+}
+.integration-image ul li {
+  float: left;
+  padding: 0px 15px;
+}
+.integration-image ul li:nth-child(even) {
+  margin: 50px 0px;
+}
+
+.integration-image ul li div img {
+  height: 95px;
+  width: 95px;
+  border-radius: 50%;
+}
+.integration-image p {
+  font-size: 14px;
+  margin: 20px auto;
+}
+.integration-image a {
+  color: blue;
+  margin: 30px 0px;
+}
+
+/* Main footer */
+.main-footer {
+  padding: 50px;
+}
+.main-footer .div-1 {
+  float: left;
+  width: 40%;
+}
+.main-footer .div-1 img {
+  width: 100px;
+}
+
+.main-footer .div-ul {
+  float: left;
+  margin-bottom: 50px;
+  margin-right: 40px;
+}
+.main-footer .div-ul ul li {
+  padding: 10px;
+}
+.main-footer .div-ul ul li:first-child a {
+  font-size: 16px;
+}
+.main-footer .div-ul ul li a {
+  color: #586069;
+  font-size: 14px;
+}
+.main-footer p {
+  color: #586069;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  clear: both;
+}
