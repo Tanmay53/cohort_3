@@ -1,0 +1,46 @@
+<html>
+<style>
+.flex-box {
+            display: flex;
+            flex-direction: row;
+            margin: 50px;
+        }
+        .flex-box div {
+            height: 100px;
+            width: 100px;
+            background: cadetblue;
+            margin:10px;
+        }
+        
+        .box1 {
+            flex-basis: 400px;
+        }
+@media(max-width:780px)
+{
+  .flex-box{
+    flex-direction:column;
+     }
+  .flex-box div{
+    background-color:red;
+  }
+}
+</style>
+<body>
+
+                   <div class="flex-box">
+        <div></div>
+        <div class="box1"></div>
+        <div></div>
+    </div>
+    <div class="flex-box">
+        <div class="box1"></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="flex-box">
+        <div></div>
+        <div></div>
+        <div class="box1"></div>
+    </div>
+    </body>
+    </html>

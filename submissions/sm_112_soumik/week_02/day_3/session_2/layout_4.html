@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box_1{
+            display: grid;
+            grid-gap:10px;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: auto auto;
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .box_1 div{
+            background-color: seagreen;
+            height:80px;
+            width: 80px;
+            border-radius: 5px;
+
+        }
+        @media only screen and (min-width: 560px) {
+            body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box_1{
+            display: grid;
+            grid-gap:10px;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: auto auto;
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .box_1 div{
+            background-color: red;
+            height:80px;
+            width: 80px;
+            border-radius: 5px;
+
+        }
+        }
+    </style>
+    </head>
+<body>
+
+    <div class="box_1">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+    </div>
+</body>
+</html>

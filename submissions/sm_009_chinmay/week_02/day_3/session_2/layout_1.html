@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Layout 1</title>
+ <link rel="stylesheet" type="css" href="layout_1.css">
+ <style>
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+
+   .rectangular-flex-box {
+    display: flex;
+    flex-direction: row;
+   }
+
+   .rectangular-flex-box div {
+
+    height: 500px;
+    width: 120px;
+    /* padding: 10px; */
+    margin: 7px;
+    background-color: rgb(231, 228, 69);
+    border-radius: 5px;
+   }
+
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+   .rectangular-flex-box {
+    display: flex;
+    flex-direction: row;
+   }
+
+   .rectangular-flex-box div {
+
+    height: 500px;
+    width: 150px;
+    /* padding: 10px; */
+    margin: 10px;
+    background-color: rgb(40, 200, 192);
+    border-radius: 5px;
+   }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+   .rectangular-flex-box {
+    display: flex;
+    flex-direction: row;
+   }
+
+   .rectangular-flex-box div {
+
+    height: 500px;
+    width: 160px;
+    /* padding: 10px; */
+    margin: 10px;
+    background-color: rgb(125, 44, 179);
+    border-radius: 5px;
+   }
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+   .rectangular-flex-box {
+    display: flex;
+    flex-direction: row;
+   }
+
+   .rectangular-flex-box div {
+
+    height: 500px;
+    width: 160px;
+    padding: 10px;
+    margin: 20px;
+    background-color: seagreen;
+    border-radius: 5px;
+   }
+
+   .body {
+    width: 100%;
+    height: 100%;
+
+   }
+
+
+  }
+ </style>
+</head>
+
+<body class="body">
+ <div class="rectangular-flex-box">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+ </div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grid</title>
+	<style>
+		body{
+			margin-left: 300px;
+			margin-top: 50px;
+		}
+		#one{
+			display: grid;
+			grid-template-columns: 150px 300px 150px;
+			padding: 15px;
+			grid-column-gap: 25px;
+		}
+		#one .onne {
+			background-color: teal;
+			height: 150px;
+			width: 150px;
+			
+		}
+		#one .onee {
+			width: 300px;
+			background-color: teal;
+			height: 150px;
+			
+		}
+		#two{
+			display: grid;
+			grid-template-columns: 300px 150px 150px;
+			padding: 15px;
+			grid-column-gap: 25px;
+		}
+		#two .onne {
+			background-color: teal;
+			height: 150px;
+			width: 150px;
+			
+		}
+		#two .onee {
+			width: 300px;
+			background-color: teal;
+			height: 150px;
+			
+		}
+		#three{
+			display: grid;
+			grid-template-columns: 150px 150px 300px;
+			padding: 15px;
+			grid-column-gap: 25px;
+		}
+		#three .onne {
+			background-color: teal;
+			height: 150px;
+			width: 150px;
+			
+		}
+		#three .onee {
+			width: 300px;
+			background-color: teal;
+			height: 150px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="one">
+		<div class="onne"></div>
+		<div class="onee"></div>
+		<div class="onne"></div>
+	</div>
+	<div id="two">
+		<div class="onee"></div>
+		<div class="onne"></div>
+		<div class="onne"></div>
+	</div>
+	<div id="three">
+		<div class="onne"></div>
+		<div class="onne"></div>
+		<div class="onee"></div>
+	</div>
+</body>
+</html>
