@@ -1,5 +1,5 @@
-var income=400000
-var saving=100000
+var income=250000
+var saving=00000
 console.log("Income : ",income)
 console.log("Saving : ",saving)
 var Tax=0
@@ -80,4 +80,9 @@ else if ((250000<income) && (income<=500000)){
             console.log("Tax : ",Tax);
         }
     }
+}
+
+
+else{
+    console.log("Tax : ",Tax)
 }
