@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Linus Trovalds</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+    }
+
+    header .container {
+      display: flex;
+      margin: 30px auto;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: rgb(229, 217, 207);
+    }
+
+    .container img {
+      margin: 20px auto 0px auto;
+    }
+
+    .container h1 {
+      padding: 10px;
+      color: darkblue;
+      font-weight: 800;
+    }
+
+    .container h2 {
+      padding: 20px 45px 20px 45px;
+      margin: 0 20px;
+      font-weight: 200;
+    }
+
+    section {
+      width: 100%;
+    }
+
+    section .container {
+      display: flex;
+      margin: auto;
+      width: 48%;
+    }
+
+    section .text-container h1 {
+      color: red;
+      font-size: 40px;
+      margin-left: 20px;
+    }
+
+    section .text-container p {
+      margin-left: 30px;
+    }
+
+    #showcase {
+      display: flex;
+      background: rgb(2216, 86, 33);
+      justify-content: space-between;
+      width: 90%;
+      margin: 30px 5%;
+    }
+
+    #showcase  h1 {
+      color: white;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    #showcase  p {
+      margin: 0 0 30px 20px;
+    }
+
+    #showcase .text-content-2 {
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    #showcase .text-content {
+      border-right: 5px black solid;
+      margin: 5px;
+      padding-right: 300px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="img/linus.jpg" alt="Image" height="120px">
+      <h1>Linus Trovalds</h1>
+      <h2>The Creator of Linux & Git</h2>
+    </div>    
+  </header>
+  <section>
+    <div class="container">
+      <div class="img-container">
+        <img src="img/khan.jpg" alt="Image" height="120px">
+      </div>
+      <div class="text-container">
+        <h1>Sal Khan</h1>
+        <p>Salman Khan is the founder of Khan Academy which has a mission <br>
+        of providing a free world-class education for anyone, anywhere.</p>
+      </div>
+    </div>
+  </section>
+  <section id="showcase">
+    <div class="text-content">
+      <h1>Ken Thompsan</h1>
+      <p>Designed and Implemented <br> the orignal Unix operating system.</p>
+    </div>
+    <div class="text-content-2">
+      <h1>Dennis Ritchie</h1>
+      <p>The Creator of C Programming Language.</p>
+    </div>
+  </section>
+</body>
+</html>
