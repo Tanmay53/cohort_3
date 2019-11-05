@@ -25,10 +25,13 @@ if (totalIncome > savingAmt) {
 // calculate tax
 if (taxableIncome != undefined) {
   if (taxableIncome > 1000000) {
-    taxAmt = 0.3 * (taxableIncome - 1000000);
+    taxAmt =
+      0.3 * (taxableIncome - 1000000) +
+      0.2 * (taxableIncome - 500000) +
+      0.1 * (taxableIncome - 250000);
     netIncome = taxableIncome - parseInt(taxAmt);
   } else if (taxableIncome > 500000 && taxableIncome <= 1000000) {
-    taxAmt = 0.2 * (taxableIncome - 500000);
+    taxAmt = 0.2 * (taxableIncome - 500000) + 0.1 * (taxableIncome - 250000);
     netIncome = taxableIncome - parseInt(taxAmt);
   } else if (taxableIncome >= 250000 && taxableIncome <= 500000) {
     taxAmt = 0.1 * (taxableIncome - 250000);
