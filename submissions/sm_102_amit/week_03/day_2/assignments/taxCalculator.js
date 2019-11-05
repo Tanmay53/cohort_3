@@ -1,5 +1,5 @@
-var totalIncome = 600000;
-var savingAmt = 20000;
+var totalIncome = 12500000;
+var savingAmt = 5000000;
 var rebate, taxableIncome, taxAmt, netIncome;
 
 // check
@@ -25,13 +25,10 @@ if (totalIncome > savingAmt) {
 // calculate tax
 if (taxableIncome != undefined) {
   if (taxableIncome > 1000000) {
-    taxAmt =
-      0.3 * (taxableIncome - 1000000) +
-      0.2 * (taxableIncome - 500000) +
-      0.1 * (taxableIncome - 250000);
+    taxAmt = 0.3 * (taxableIncome - 1000000) + 0.2 * 500000 + 0.1 * 250000;
     netIncome = taxableIncome - parseInt(taxAmt);
   } else if (taxableIncome > 500000 && taxableIncome <= 1000000) {
-    taxAmt = 0.2 * (taxableIncome - 500000) + 0.1 * (taxableIncome - 250000);
+    taxAmt = 0.2 * (taxableIncome - 500000) + 0.1 * 250000;
     netIncome = taxableIncome - parseInt(taxAmt);
   } else if (taxableIncome >= 250000 && taxableIncome <= 500000) {
     taxAmt = 0.1 * (taxableIncome - 250000);
@@ -42,6 +39,7 @@ if (taxableIncome != undefined) {
   }
 }
 
+// output
 console.log(
   "Total Income: " +
     totalIncome +
