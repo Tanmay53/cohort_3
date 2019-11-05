@@ -1,0 +1,51 @@
+   <html>
+   <style>
+   #container div{
+                display: flex;
+            }
+            .row1 {
+                height: 100px;
+                flex-basis:700px;
+                background-color: blue;
+              margin:10px;
+              
+            }  
+.row2{
+  height:400px;
+  flex-basis: 200px;
+  background-color:yellow;
+  margin:10px;
+}
+.row3 {
+  height:400px;
+  flex-basis:480px;
+  background-color:red;
+  margin:10px;
+}
+
+@media(max-width:780px)
+{
+  
+  .row1{
+    background-color:pink;
+  }
+  .row2{
+    background-color:green;
+  }
+  .row3{
+    background-color:black;
+  }
+}
+</style>
+   <body>
+     <div id="container">
+       <div>
+         <div class="row1"></div>
+       </div>
+       <div>
+         <div class="row2"></div>
+         <div class="row3"></div>
+       </div>
+     </div>
+     <body>
+     </html>

@@ -1,0 +1,16 @@
+#cont {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:auto auto auto auto;
+    grid-template-rows: 300px ;
+    background: white;
+    padding: 20px;
+   
+  }
+  
+  #cont div {
+    background: lime;
+    font-size: 30px;
+    text-align: center;
+    
+  }
