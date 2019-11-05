@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Layout 2</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box box-1"><h1>Navigation</h1></div>
+    <div class="box box-2"><p>LEFT BOX</p></div>
+    <div class="right">
+      <div class="box box-3"><p>RIGHT BOX</p></div>
+      <div class="box box-4"><p>RIGHT BOX</p></div>
+      <div class="box box-5"><p>RIGHT BOX</p></div>
+    </div>
+  </div>
+
+  <style>
+    .container {
+      background: linear-gradient(to right, blue, yellow, red);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    h1, p {
+      padding: 15px;
+    }
+
+    .container > div:nth-child(1) {
+      grid-column: span 3;
+      grid-row: span 6;
+      background: linear-gradient(to right, red, #9354cb);
+    }
+
+    .container > div:nth-child(2) {
+      grid-column: span 2;
+      background: mediumblue;
+      grid-row: span 25;
+    }
+
+    .container > div:nth-child(3) {
+      grid-row: span 25;
+    }
+
+    .right {
+      display: grid;
+      grid-gap: 20px;
+    }
+
+    .box-3 {
+      background: midnightblue;
+      
+      
+    }
+    
+    .box-4 {
+      background: palegreen;
+    }
+
+
+    .box-5 {
+      background: olive;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      
+          .container > div:nth-child(1) {
+      grid-column: span 1;
+      grid-row: span 6;
+      background: linear-gradient(to right, red, #9354cb);
+    }
+
+    .container > div:nth-child(2) {
+      grid-column: span 1;
+      background: mediumblue;
+      grid-row: span 20;
+    }
+
+    .container > div:nth-child(3) {
+      grid-row: span 25;
+    }
+
+    .right {
+      grid-auto-flow: column;  
+    }
+
+    .container > div:nth-child(3) {
+      grid-row: span 15;
+    }
+    }
+
+    @media (max-width: 400px) {
+      .right {
+      grid-auto-flow: row;  
+    }
+
+
+    .container > div:nth-child(2) {
+      grid-row: span 15;
+    }
+    }
+  </style>
+</body>
+</html>
