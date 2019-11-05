@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Layout 1</title>
+    <style>
+    .main{
+        width: 50%;
+        height: 500px;
+        display: flex;
+        margin-top: 50px;
+        margin-left: 300px;
+        
+    }
+    .main div{
+        background:teal;
+        flex-basis: 25%;
+        margin: 20px;
+        
+    }
+    @media (max-width: 1000px){
+        body{
+            background: green;
+        }
+        .main {
+            flex-direction: column;
+        }
+        .main div {
+            background: tomato;
+        }
+    }
+      </style>
+</head>
+<body>
+<div class="main" >
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+</body>
+</html>

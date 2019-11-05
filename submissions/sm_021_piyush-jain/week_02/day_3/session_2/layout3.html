@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            
+            .flexbox{
+            display:flex;
+            margin-left: 210px;
+            width: 800px;
+        }
+        .flexbox div{
+            background-color:teal;
+            height:100px;
+            width:100px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+          
+          @media (min-width: 450px)and (max-width: 550px)
+           {
+               .flexbox div{
+               background-color: red;
+           }
+           
+           }
+          @media (min-width: 650px)and (max-width: 850px)
+           {
+               .flexbox div{
+               background-color: red;
+           }
+           
+           }
+           @media (min-width: 860px)
+           {
+               .flexbox div{
+               background-color: yellow;
+           }
+           
+           }
+
+        </style>
+    </head>
+    <body>
+        <div class="flexbox">
+             <div></div>
+        </div>
+        <div class="flexbox">
+                <div></div>
+                <div></div>
+        </div>
+        <div class="flexbox">
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+        <div class="flexbox">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+    </body>
+</html>
