@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Layout 1</title>
+ <style>
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ 
+ .grid-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 100px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  border-radius: 5px;
+  
+ }
+
+ .grid-container div:nth-child(1){
+  background-color: yellow;
+ }
+
+ .grid-container div:nth-child(2) {
+  /* grid-area: 2/1/2/span 2;*/
+  grid-row: 2/ span 2; 
+  background-color: rgb(206, 63, 44);
+ }
+
+ .grid-container div:nth-child(3) {
+  /* grid-area: 2/3/2/ span 2; */
+  grid-row: 4/span 2;
+  background-color: rgb(74, 204, 124);
+ }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 100px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  border-radius: 5px;
+  
+ }
+
+ .grid-container div:nth-child(1){
+  background-color: yellow;
+ }
+
+ .grid-container div:nth-child(2) {
+  /* grid-area: 2/1/2/span 2;*/
+  grid-row: 2/ span 2; 
+  background-color: rgb(206, 63, 44);
+ }
+
+ .grid-container div:nth-child(3) {
+  /* grid-area: 2/3/2/ span 2; */
+  grid-row: 4/span 2;
+  background-color: rgb(74, 204, 124);
+ }
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 100px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  border-radius: 5px;
+  
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: yellow;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1/2/span 2;
+  grid-row: 2/ span 24;
+  background-color: rgb(206, 63, 44);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/3/2/ span 2;
+  grid-row: 2/span 24;
+  background-color: rgb(74, 204, 124);
+ }
+} 
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ .grid-container {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 100px); 
+  /* border: 1px solid black; */
+  padding: 1%;
+ }
+
+ .grid-container div {
+  border-radius: 5px;
+  
+ }
+
+ .grid-container div:nth-child(1){
+  grid-column: 1/ -1;
+  background-color: yellow;
+ }
+
+ .grid-container div:nth-child(2) {
+  grid-area: 2/1/2/span 2;
+  grid-row: 2/ span 24;
+  background-color: rgb(206, 63, 44);
+ }
+
+ .grid-container div:nth-child(3) {
+  grid-area: 2/3/2/ span 2;
+  grid-row: 2/span 24;
+  background-color: rgb(74, 204, 124);
+ }
+} 
+
+ </style>
+</head>
+<body>
+  <div class="grid-container">
+   <div>NAVIGATION</div>
+   <div>LEFT BOX</div>
+   <div>RIGHT BOX</div>
+  </div>
+</body>
+</html>

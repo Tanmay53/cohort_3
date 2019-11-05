@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Grid Flex
+        </title>
+        <style type="text/css">
+            .cont {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 200px;
+            }
+
+            .left-pane .hidden {
+                background: white;
+                border: 2px solid white;
+            }
+
+            .left-pane {
+                display : grid;
+                grid-template-columns: 60px 60px 60px;
+                grid-gap: 10px;
+            }
+
+            .left-pane > div {
+                width: 50px;
+                height: 50px;
+                border: 2px solid black;
+                background: blue;
+            }
+
+            .left-pane .red-c {
+                background: #aa0000;
+            }
+
+            .left-pane .pink-c {
+                background: #ff5555;
+            }
+
+            .left-pane .green-c {
+                background: #89a02c;
+            }
+
+            .left-pane .black-c {
+                background: black;
+            }
+
+            .middle-pane {
+                display: grid;
+                grid-template-columns: 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+                grid-gap: 10px;
+                height: 240px;
+                margin: 10px;
+                margin-top: 185px;
+                margin-bottom: 0;
+                
+            }
+
+            .middle-pane div {
+                width: 50px;
+                height: 50px;
+                border: 2px solid black;
+                background: blue;
+            }
+
+            .right-pane {
+                display: grid;
+                grid-template-columns: 60px 60px 60px 60px 60px 60px;
+                grid-gap: 10px;
+            }
+
+            .right-pane div {
+                width: 50px;
+                height: 50px;
+                border: 2px solid black;
+                background: blue;
+            }
+
+            .right-pane .hidden {
+                background: white;
+                border: 2px solid white;
+            }
+
+            .right-pane .green-c {
+                background: #5aa02c;
+            }
+
+            .right-pane .yellow-c {
+                background: #ffcc00;
+            }
+
+            .right-pane .gray-c {
+                background: #6d535e;
+            }
+
+            .right-pane .pink-c {
+                background: #ff0066;
+            }
+
+            .right-pane .orange-c {
+                background: #ff6600;
+            }
+
+            .right-pane .purple-c {
+                background: #aa0087;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cont">
+            <div class="left-pane">
+                <div class="red-c"></div>
+                <div class="hidden"></div>
+                <div class="hidden"></div>
+                <div class="green-c"></div>
+                <div class="pink-c"></div>
+                <div class="hidden"></div>
+                <div class="green-c"></div>
+                <div class="pink-c"></div>
+                <div class="hidden"></div>
+                <div class="green-c"></div>
+                <div class="pink-c"></div>
+                <div class="hidden"></div>
+                <div class="green-c"></div>
+                <div class="pink-c"></div>
+                <div class="hidden"></div>
+                <div class="green-c"></div>
+                <div class="pink-c"></div>
+                <div class="black-c"></div>
+                <div class="green-c"></div>
+                <div class="pink-c"></div>
+                <div class="black-c"></div>
+            </div>
+            <div class="middle-pane">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="right-pane">
+                <div class="hidden"></div>
+                <div class="hidden"></div>
+                <div class="hidden"></div>
+                <div class="hidden"></div>
+                <div class="hidden"></div>
+                <div class="yellow-c"></div>
+                <div class="purple-c"></div>
+                <div class="green-c"></div>
+                <div class="green-c"></div>
+                <div class="green-c"></div>
+                <div class="pink-c"></div>
+                <div class="yellow-c"></div>
+                <div class="orange-c"></div>
+                <div class="purple-c"></div>
+                <div class="green-c"></div>
+                <div class="green-c"></div>
+                <div class="pink-c"></div>
+                <div class="yellow-c"></div>
+                <div class="orange-c"></div>
+                <div class="purple-c"></div>
+                <div class="purple-c"></div>
+                <div class="green-c"></div>
+                <div class="pink-c"></div>
+                <div class="yellow-c"></div>
+                <div class="orange-c"></div>
+                <div class="orange-c"></div>
+                <div class="purple-c"></div>
+                <div class="purple-c"></div>
+                <div class="pink-c"></div>
+                <div class="yellow-c"></div>
+                <div class="orange-c"></div>
+                <div class="orange-c"></div>
+                <div class="orange-c"></div>
+                <div class="purple-c"></div>
+                <div class="pink-c"></div>
+                <div class="yellow-c"></div>
+                <div class="gray-c"></div>
+                <div class="gray-c"></div>
+                <div class="gray-c"></div>
+                <div class="gray-c"></div>
+                <div class="gray-c"></div>
+                <div class="gray-c"></div>
+            </div>
+        </div>
+    </body>
+</html>
