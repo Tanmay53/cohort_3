@@ -1,0 +1,119 @@
+
+Boolean Logic
+Look at the code involving logical operators and evaluate the output. Your answers should be either true or false.
+
+true && true || false && false
+
+Answer true
+
+
+true == false || false == false
+
+Answer false
+
+
+9932494354545 % 2 != 1 
+
+Answer false
+
+
+190 + 20 >= 100 && 50 <= 50
+
+Answer false
+
+
+var A = true
+var B = true 
+!(A || B) == !A && !B
+
+Answer true
+
+
+!true || !true || true && true && !true
+
+Answer false
+
+
+var A = true 
+var B = false
+var C = false 
+var D = true
+((A || B) && (C || D)) == ((A || B) && C) || ((A || B) && D)
+
+Answer true
+
+
+var x = false
+var y = false 
+var z = false
+x && z || !x && y || z || y == x && z || !x && y
+
+Answer false
+
+
+If statements and Arithmetic Operators:
+
+    What is the value of d ?
+
+var a = 50
+var b = a + a
+var c = b * b + 1
+var d = c % 2
+
+Answer 1
+
+
+    What is the value of grade ?
+
+var marks = 1967
+marks = marks % 100
+var grade
+if(marks > 90){
+  grade = 'A'
+}
+else if(marks > 80 && marks <= 90){
+  grade = 'B'
+}
+else if(marks > 70 && marks <= 80){
+  grade = 'C'
+}
+else if(marks > 60 && marks <= 70){
+  grade = 'D'
+}
+else{
+  grade = 'F'
+}
+
+Answer default F
+
+
+    What does the following code print in the alert window?
+
+var browser = 'Brave'
+switch (browser) {
+  case 'Edge':
+    alert( "You've got the Edge!" );
+    break;
+
+  case 'Chrome':
+  case 'Firefox':
+  case 'Safari':
+  case 'Opera':
+    alert( 'Okay we support these browsers too' );
+    break;
+
+  default:
+    alert( 'We hope that this page looks ok!' );
+}
+
+Answer default
+
+
+    What is the value of y?
+
+var x = 12 
+var y = 12 + "12"
+
+Answer 1212
+
+
