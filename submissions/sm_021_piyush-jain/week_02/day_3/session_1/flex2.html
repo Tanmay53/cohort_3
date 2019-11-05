@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+        .flexbox{
+            display:flex;
+            padding: 15px;
+            width:600px;
+        }
+        .flexbox div{
+            background-color:teal;
+            height:100px;
+            width:100px;
+            margin: 20px;
+        }
+        #id1 div:first-child{
+            flex-grow: 1;
+        }
+        #id2 div:nth-of-type(2n){
+            flex-grow: 1;
+        }
+        #id3 div:last-child{
+            flex-grow: 1;
+        }
+            body > div{
+                margin-left: 235px;
+            }
+        </style>
+    </head>
+    <body>
+         <div class="flexbox" id="id2">
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+        <div class="flexbox" id="id1">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        <div class="flexbox" id="id3">
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+    </body>
+</html>
