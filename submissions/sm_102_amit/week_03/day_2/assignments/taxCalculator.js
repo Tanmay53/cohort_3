@@ -1,5 +1,5 @@
 var totalIncome = 600000;
-var savingAmt = 0;
+var savingAmt = 20000;
 var rebate, taxableIncome, taxAmt, netIncome;
 
 // check
