@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+            #navigation{
+                background: yellow;
+            }
+            #left_box{
+                background: red;
+            }
+            #right_box{
+                background: green;
+                grid-row-start: 2;
+            }
+
+            #wrapper{
+                width: 495px;
+                margin-left: auto;
+                margin-right: auto;
+                display: grid;
+                grid-template-columns: 0.95fr;
+                grid-template-rows: 60px 200px 200px;
+                grid-gap: 20px;
+            }
+
+            @media(min-width: 500px){
+                #wrapper{
+                    width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 60px 400px;
+                    grid-gap: 20px;
+                }
+
+                #navigation{
+                    grid-column: 1 / span 2;
+                }
+
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="navigation"></div>
+            <div id="left_box"></div>
+            <div id="right_box"></div>
+        </div>
+    </body>
+</html>
