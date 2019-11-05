@@ -6,7 +6,7 @@ if (total < 300){
     else if (total >1000){
         console.log("Final Price is:" + (total - 100) , "Discount is:" + 100)
 }
-    else if (total => 300 & total < 1000){
+    else if (total <= 300 & total < 1000){
         console.log("Final Price is: " + (total - discount) , "Discount is:" + discount)
     }
    
