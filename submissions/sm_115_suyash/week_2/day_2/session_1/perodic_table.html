@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using selectors</title>
+  <style>
+    .header {
+      text-align: center;
+      color: red;
+    }
+
+    #container-1 {
+      float: left;
+      margin-left: 60px;
+    }
+
+    #container-1 > div {
+      width: 40px;
+      height: 40px;
+      background: black;
+      margin: 10px;
+      float: left;
+      border: 2px solid red;
+    }
+
+   .clear-both {
+     clear: both;
+   }
+
+   #container-2 {
+     float: left;
+     margin-top: 10px;
+   }
+
+   #container-2 > div {
+     background: black;
+     height: 40px;
+     width: 40px;
+     margin: 10px;
+     float: left;
+     border: 2px solid red;
+   }
+
+   #container-2 .box-1 {
+     height: 158px;
+     width: 140px;
+   }
+    
+   #container-3 {
+     float: left ;
+   }
+
+   #container-3 > div {
+     background: black;
+     height: 40px;
+     width: 40px;
+     margin: 10px;
+     float: left;
+     border: 2px solid red;
+   }
+
+   #container-3 .box-1 {
+     float: right;
+   }
+
+   #container-4 {
+     margin: 50px 400px;
+     width: 100%;
+   }
+
+   #container-4 div {
+     float: left;
+     background: rgb(3, 43, 16);
+     height: 30px;
+     width: 30px;
+     border: 1px solid #555;
+   }
+
+   #container-4 .dark-color {
+     background: rgb(7, 26, 17);
+   }
+
+   p, h2, h4 {
+     color: white;
+     text-align: center;
+   }
+
+   .text-size {
+     font-size: 20px;
+     margin-top: 10px;
+   }
+
+   .silicon-no {
+     float: right;
+     margin: 5px 10px 0 0;
+   }
+   .silicon-name {
+     margin: 55px 0 0 10px;
+     text-align: left;
+     font-size: 45px;
+   }
+   .silicon-des {
+     text-align: left;
+     margin-left: 10px;
+   }
+
+   .cont-4text {
+     margin-top: 10px;
+   }
+  </style>
+</head>
+<body>
+  <div class="header"><h1>THE PERIODIC TABLE OF ELEMENTS</h1></div>
+  <div id="container-1">
+    <div class="box-1"><p class="text-size">H</p></div>
+    <div class="clear-both box-2"></div>
+    <div class="box-3"><p>4</p></div>
+    <div class="clear-both box-4"></div>
+    <div class="box-5"><p>12</p></div>
+    <div class="clear-both box-6"></div>
+    <div class="box-7"><p>20</p></div>
+    <div class="clear-both box-8"></div>
+    <div class="box-9"><p>38</p></div>
+    <div class="clear-both box-10"></div>
+    <div class="box-11"><p>56</p></div>
+    <div class="box-12"></div>
+    <div class="clear-both box-13"></div>
+    <div class="box-14"><p>88</p></div>
+    <div class="box-15"></div>
+  </div>
+  <div id="container-2">
+    <div class="box-1">
+      <h4 class="silicon-no">14</h4>
+      <h2 class="silicon-name">Si</h2>
+      <p class="silicon-des">Silicon</p>
+    </div>
+    <div class="clear-both box-2"></div>
+    <div class="box-3"></div>
+    <div class="box-4"></div>
+    <div class="box-5"></div>
+    <div class="box-6"></div>
+    <div class="box-7"></div>
+    <div class="box-8"></div>
+    <div class="box-9"></div>
+    <div class="box-10"></div>
+    <div class="clear-both box-11"></div>
+    <div class="box-12"></div>
+    <div class="box-13"></div>
+    <div class="box-14"></div>
+    <div class="box-15"></div>
+    <div class="box-16"></div>
+    <div class="box-17"></div>
+    <div class="box-18"></div>
+    <div class="box-19"></div>
+    <div class="clear-both box-20"></div>
+    <div class="box-21"></div>
+    <div class="box-22"></div>
+    <div class="box-23"></div>
+    <div class="box-24"></div>
+    <div class="box-25"></div>
+    <div class="box-26"></div>
+    <div class="box-27"></div>
+    <div class="box-28"></div>
+    <div class="clear-both box-29"></div>
+    <div class="box-30"></div>
+    <div class="box-31"></div>
+    <div class="box-32"></div>
+    <div class="box-33"></div>
+    <div class="box-34"></div>
+    <div class="box-35"></div>
+    <div class="box-36"></div>
+    <div class="box-37"></div>
+  </div>
+  <div id="container-3">
+    <div class="box-1"></div>
+    <div class="clear-both box-2"></div>
+    <div class="box-3"></div>
+    <div class="box-4"></div>
+    <div class="box-5"></div>
+    <div class="box-6"></div>
+    <div class="box-7"></div>
+    <div class="clear-both box-8"></div>
+    <div class="box-9"></div>
+    <div class="box-10"></div>
+    <div class="box-11"></div>
+    <div class="box-12"></div>
+    <div class="box-13"></div>
+    <div class="clear-both box-14"></div>
+    <div class="box-15"></div>
+    <div class="box-16"></div>
+    <div class="box-17"></div>
+    <div class="box-18"></div>
+    <div class="box-19"></div>
+    <div class="clear-both box-20"></div>
+    <div class="box-21"></div>
+    <div class="box-22"></div>
+    <div class="box-23"></div>
+    <div class="box-24"></div>
+    <div class="box-25"></div>
+    <div class="clear-both box-26"></div>
+    <div class="box-27"></div>
+    <div class="box-28"></div>
+    <div class="box-29"></div>
+    <div class="box-30"></div>
+    <div class="box-31"></div>
+    <div class="clear-both box-32"></div>
+    <div class="box-33"></div>
+    <div class="box-34"></div>
+    <div class="box-35"></div>
+    <div class="box-36"></div>
+    <div class="box-37"></div>
+  </div>
+  <div class="clear-both"></div>
+  <div id="container-4">
+    <div class="box-1"><p class="cont-4text">La</p></div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+    <div class="box-4"></div>
+    <div class="box-5"></div>
+    <div class="box-6"></div>
+    <div class="box-7"></div>
+    <div class="box-8"></div>
+    <div class="box-9"></div>
+    <div class="box-10"></div>
+    <div class="box-11"></div>
+    <div class="box-12"></div>
+    <div class="box-13"></div>
+    <div class="box-14"></div>
+    <div class="dark-color clear-both box-15"></div>
+    <div class="dark-color box-16"></div>
+    <div class="dark-color box-17"></div>
+    <div class="dark-color box-18"></div>
+    <div class="dark-color box-19"></div>
+    <div class="dark-color box-20"></div>
+    <div class="dark-color box-21"><p class="cont-4text">Am</p></div>
+    <div class="dark-color box-22"></div>
+    <div class="dark-color box-23"></div>
+    <div class="dark-color box-24"></div>
+    <div class="dark-color box-25"></div>
+    <div class="dark-color box-26"></div>
+    <div class="dark-color box-27"></div>
+    <div class="dark-color box-28"><p class="cont-4text">No</p></div>
+  </div>
+</body>
+</html>

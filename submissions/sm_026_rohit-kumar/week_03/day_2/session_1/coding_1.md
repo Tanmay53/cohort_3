@@ -49,7 +49,7 @@ false
 Answer
 
 ```
-true
+false
 ```
 5. 
 ```javascript
@@ -60,7 +60,7 @@ var B = true
 Answer
 
 ```
-false
+true
 ```
 6. 
 ```javascript
@@ -69,7 +69,7 @@ false
 Answer
 
 ```
-true
+false
 ```
 7.
 ```javascript
@@ -157,7 +157,7 @@ switch (browser) {
 Answer
 
 ```
-we hope that this page looks ok!
+We hope that this page looks ok!
 ```
 12. What is the value of y?
 ```javascript

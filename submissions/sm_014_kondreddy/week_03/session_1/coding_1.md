@@ -49,7 +49,7 @@ false
 Answer
 
 ```
-true
+false
 ```
 5. 
 ```javascript
@@ -69,7 +69,7 @@ false
 Answer
 
 ```
-true
+false
 ```
 7.
 ```javascript
@@ -105,9 +105,9 @@ var c = b * b + 1
 var d = c % 2
 ```
 Answer
-
-```
 1
+```
+
 ```
 10. What is the value of `grade` ? 
 ```javascript
@@ -133,7 +133,7 @@ else{
 Answer
 
 ```
-D
+F
 ```
 11. What does the following code print in the `alert` window?  
 ```javascript
