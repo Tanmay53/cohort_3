@@ -1,5 +1,5 @@
-// assuming income and savings are positive and savings is less than income
-var income=2000000, saving=500000, grossTax, deductable, taxableIncome
+// assuming income and savings are positive.
+var income=270000, saving=400000, grossTax, deductable, taxableIncome
 console.log('income=', income, ', savings=', saving)
 // checking for deductable slab
 // case 1
@@ -15,7 +15,7 @@ else {
     deductable=saving * 0.10
 }
 
-// deductable slab of 50000 if checked and applied
+// deductable cap of 50000 is checked and applied, even if saving is way greater than income
 if(deductable > 50000)
     deductable=50000
 console.log('Deductable:', deductable)
