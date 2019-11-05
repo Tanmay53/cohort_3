@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+            .grid1 {
+                display: grid;
+                width: 100%;
+                justify-content: center;
+                text-align: left;
+                grid-gap: 30px;
+                grid-template-columns:150px 150px 150px 150px 150px 150px;
+                grid-auto-rows: minmax(100px,auto);
+                grid-template-areas:
+                "nav nav nav nav nav nav"
+                "lb lb lb rb rb rb "
+                "lb lb lb rb rb rb "
+                "lb lb lb rb rb rb "
+                "lb lb lb rb rb rb "
+                ;} 
+            .yellow {
+                background-color: yellow;
+                grid-area: nav;
+                font-size: 25px;
+            }
+            .red {background-color: red;grid-area: lb} 
+            .green {background-color: green;grid-area: rb}  
+            @media (max-width:968px) {
+                .grid1 {
+                display: grid;
+                width: 100%;
+                justify-content: center;
+                text-align: left;
+                grid-gap: 10px;
+               grid-template-rows:repeat(200px,1fr);
+               grid-template-areas:
+               "nav nav nav nav nav nav"
+               "rb rb rb rb rb rb"
+               "rb rb rb rb rb rb"
+               "lb lb lb lb lb lb"
+               "lb lb lb lb lb lb"
+         
+                }
+            }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid1">
+        <div class="yellow">Navigation</div>
+        <div class="red">LEFT BOX</div>
+        <div class="green">RIGHT BOX</div>
+    </div>
+</body>
+</html>
