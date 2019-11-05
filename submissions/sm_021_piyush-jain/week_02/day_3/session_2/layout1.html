@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+          
+               .class1{
+                   display:flex;
+                   margin: 150px;
+                   width: 800px;
+
+               }
+               .class1 div{
+                   flex-basis: 125px;
+                   height: 300px;
+                   background-color: teal;
+                   margin:30px;
+                   
+               }
+           @media (max-width: 450px )
+           {
+               .class1 div{
+               background-color: red;
+           }
+           
+           }
+           @media (min-width: 900px )
+           {
+               .class1 div{
+               background-color: yellow;
+           }
+           
+           }
+        </style>
+    </head>
+    <body>
+        <div class="class1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

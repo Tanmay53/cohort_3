@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        .grid1 {
+            display: grid;                
+            grid-template-areas:
+            "nav nav nav nav nav nav"
+            "lb lb lb lb rb rb"
+            "lb lb lb lb rb rb"
+            "lb lb lb lb rb rb";
+            grid-gap: 30px;
+        }
+
+        .rbox {
+            display: grid;
+            grid-area: rb;
+            grid-template-areas: 
+            "rb1"
+            "rb2"
+            "rb3";
+            grid-gap: 10px;
+        } 
+
+        .yellow {
+            background-color: yellow;
+            grid-area: nav;
+            font-size: 25px;
+            height: 100px;
+        }
+
+        .red {
+            background-color: red;
+            grid-area: lb;
+            height: 327px;
+        } 
+        .green1 {
+            background-color: green;
+            grid-area: rb1;
+            height: 100px;
+        } 
+        .green2 {
+            background-color: green;
+            grid-area: rb2;height: 100px;
+        } 
+        .green3 {
+            background-color: green;
+            grid-area: rb3;height: 100px;
+        }  
+            
+        @media (max-width:768px) {
+            .grid1 {
+                grid-gap: 10px;
+                grid-template-areas:
+                "nav"
+                "lb"
+                "rb";
+            }
+
+            .rbox {
+                    grid-template-areas: "rb1 rb2 rb3";
+                    grid-gap: 30px;
+                }
+        }
+        
+        @media (max-width:600px) {
+            .grid1 {
+            grid-gap: 10px;
+            grid-template-areas:
+                "nav"
+                "lb"
+                "rb";
+            font-size: 15px;
+            }
+            .rbox {
+                grid-template-areas: "rb1"
+                "rb2"
+                "rb3";
+                grid-gap: 30px;
+            }  
+        }
+    </style>
+</head>
+<body>
+    <div class="grid1">
+        <div class="yellow">Navigation</div>
+        <div class="red">LEFT BOX</div>
+        <div class="rbox">
+            <div class="green1">RIGHT BOX 1</div>
+            <div class="green2">RIGHT BOX 2</div>
+            <div class="green3">RIGHT BOX 3</div>
+        </div>
+    </div>
+</body>
+</html>
