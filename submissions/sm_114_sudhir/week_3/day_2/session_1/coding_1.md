@@ -60,7 +60,7 @@ var B = true
 Answer
 
 ```
-false
+true
 ```
 6. 
 ```javascript
