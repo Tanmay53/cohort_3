@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 var totalIncome = 12500000;
 var savingAmt = 5000000;
+=======
+var totalIncome = 600000;
+var savingAmt = 20000;
+>>>>>>> 137d26a8bf4cc762860b5c2206dcb81dcf91adc4
 var rebate, taxableIncome, taxAmt, netIncome;
 
 // check
