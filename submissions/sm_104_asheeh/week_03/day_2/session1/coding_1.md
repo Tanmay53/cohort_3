@@ -40,7 +40,7 @@ true
 Answer
 
 ```
-flase
+false
 ```
 4. 
 ```javascript
@@ -49,7 +49,7 @@ flase
 Answer
 
 ```
-flase
+true
 ```
 5. 
 ```javascript
@@ -60,7 +60,7 @@ var B = true
 Answer
 
 ```
-true
+false
 ```
 6. 
 ```javascript

@@ -40,7 +40,7 @@ true
 Answer
 
 ```
-flase
+false
 ```
 4. 
 ```javascript
@@ -49,7 +49,7 @@ flase
 Answer
 
 ```
-flase
+true
 ```
 5. 
 ```javascript
@@ -69,7 +69,7 @@ true
 Answer
 
 ```
-false
+true
 ```
 7.
 ```javascript
