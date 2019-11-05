@@ -1,0 +1,633 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.1;
+  font-family: 'Nunito', sans-serif;
+  /* font-size: 16px; */
+}
+
+/* Utility Classes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+p {
+  margin: 0 0px 15px 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(52, 53, 55);
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #fff;
+}
+
+#navbar .logo {
+  flex: 1;
+}
+
+#navbar img {
+  padding: 20px 0 10px 25px;
+}
+
+#navbar a {
+  padding: 10px 10px;
+  margin: 5px 25px;
+}
+
+#navbar a:hover {
+  /* color: #fff; */
+  /* background: #555; */
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+#navbar a:last-child {
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+#navbar a:last-child:hover {
+  background: red;
+  color: #fff;
+}
+
+/* Banner */
+.banner-1 {
+  background: #444 url("../img/banner_1.jpg") no-repeat center center/cover ;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.banner-1 .banner-1-text  {
+  font-size: 2.2rem; 
+  color: #fff;
+  margin-right: 5rem;
+}
+
+.banner-1 .banner-1-text p {
+  font-size: 3.3rem;
+  margin: 50px 0 0 0;
+}
+/* Skill */
+#skill {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px;
+  text-align: center;
+  margin: 5rem 1.5rem 4rem 1.5rem;
+}
+
+#skill > div {
+  padding: 0 2rem;
+  font-size: 1.3rem;
+  color: rgb(33, 37, 41);
+  font-weight: 500;
+}
+
+#skill h3 {
+  padding: 1.5rem 1rem;
+}
+
+#skill p {
+  font-weight: 300;
+}
+
+/* Curriculam */
+.curriculam {
+  background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.text-wrap {
+  display: grid;
+  grid-template-columns: 28rem 28rem;
+  grid-template-rows: 13rem 13rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  grid-gap: 30px;
+}
+
+.text-container {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.text-wrap .item {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  color: #3584A7;
+}
+
+.curriculam .uniq {
+  font-size: 2rem;
+  font-weight: 200;
+  padding: 5rem 0 2.5rem 0;
+}
+
+.curriculam .text-container .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.curriculam .text-container .item h1 {
+  font-size: 4.5rem;
+  font-weight: 200;
+  margin-bottom: .5rem;
+}
+
+.curriculam .text-container .item span {
+  font-size: 1.5rem;
+}
+
+.curriculam .text-container .item p {
+  font-size: 1.5rem;
+  color: #6c757d;
+  line-height: 1.2;
+}
+
+/* Location */
+.campus {
+  text-align: center;
+}
+
+.campus .content {
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+
+.campus .content h2 {
+  padding: 5rem 0 2rem 0;
+}
+
+.campus .content p {
+  padding: 0 8rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.campus .campus-img {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 2.5rem 0;
+}
+
+.campus .campus-img img {
+  margin-right: 30px;
+  border: 1rem solid #F8F9FA;
+  box-shadow: 0 0 3px #ccc;
+}
+
+.campus .campus-img  p {
+  font-size: 1.2rem;
+}
+
+/* Courses */
+#course {
+  text-align: center;
+  background: rgb(248, 249, 250);
+}
+
+#course .courses-details-container {
+  display: grid;
+  grid-template-columns: 26rem 26rem;
+  grid-template-rows: 28rem 28rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  justify-content: center;
+  /* align-content: center; */
+}
+
+#course .courses-details-container .developer {
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 2px #555;
+  border-radius: 5px;
+}
+
+#course .content {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: rgb(44, 48, 52);
+  padding: 4.5rem 0 2rem 0;
+}
+
+#course .courses-details-container {
+  padding-bottom: 6rem;
+}
+
+#course .courses-details-container .developer h1 {
+  background: linear-gradient(-225deg, #2CD8D5 0%, #6B8DD6 48%, #8E37D7 100%);
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 300;
+  padding: 1rem 2.5rem;
+}
+
+#course .courses-details-container .course-details{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 40px;
+}
+
+#course .courses-details-container .course-details P {
+  padding-top: 1rem;
+  color: #6c757d;
+}
+
+#course .courses-details-container .line {
+  height: 1px;
+  background: #333;
+  width: 90%;
+  margin: 4rem auto 0 auto;
+}
+
+#course .courses-details-container .more-details a {
+  text-align: right;
+  float: right;
+  padding: 1rem;
+  background: grey;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 200;
+  margin: 20px;
+}
+
+#course .courses-details-container .course-details h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#course .courses-details-container .coming-soon a {
+  text-align: right;
+  float: right;
+  padding: 1rem;
+  border-radius: 30px;
+  border: 1px solid #555;
+  font-size: 1.3rem;
+  color: #555;
+  font-weight: 200;
+  margin: 20px;
+}
+
+/* Hiring Partners */
+#hiring-partners div:first-child h3 {
+  text-align: center;
+  padding: 4rem 0 2rem 0;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 3px;
+}
+
+#hiring-partners div:nth-child(2) {
+  display: flex;
+  justify-content: space-around;
+}
+
+#hiring-partners div:nth-child(2) img {
+  width: 8rem;
+  padding-bottom: 3rem;
+}
+
+/* Payment */
+#payment {
+  background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  text-align: center;
+}
+
+#payment .heading h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 5rem 0 3rem 0;
+  font-weight: 300;
+}
+
+#payment .fees-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+}
+
+#payment .fees-container .fees {
+  background: #fff;
+  border-radius: 5px;
+}
+
+#payment .fees-container .fees h3 {
+  font-size: 1.5rem;
+  color: #6c757d;
+  padding-top: 2.6rem;
+  font-weight: 300;
+}
+
+#payment .fees-container .line {
+  height: 1px;
+  background: #444;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+#payment .fees-container .fees p {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  padding: 0 14rem 0 8rem;
+}
+
+#payment .fees-container .fees .rupees {
+  color: #3584A7;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+#payment .fees-container .fees:first-child h4 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: red;
+  padding-bottom: 4rem;
+}
+
+#payment .fees-container .fees:last-child h4 {
+   font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.3;
+  padding-bottom: 3rem;
+}
+
+#payment .fees-container .fees:last-child h4 span {
+  color: #3584A7;
+}
+
+#payment a {
+  font-size: 1.2rem;
+  color: #fff;
+  display: inline-block;
+  border: 1px solid #fff;
+  font-weight: 300;
+  padding: 1rem;
+  border-radius: 30px;
+  margin-bottom: 4rem;
+}
+
+/* Adimission */
+
+#adimission {
+  text-align: center;
+}
+
+#adimission .adimission-content h2 {
+  color: #333;
+  font-size: 2.3rem;
+  padding: 4.7rem 0 2rem 0;
+  font-weight: 200;
+}
+
+#adimission .adimission-content p {
+  font-size: 1.3rem;
+  padding: 0 8rem;
+  font-weight: 200;
+}
+
+#adimission  h3 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  padding: 2rem;
+}
+
+.box img {
+    height: 80px;
+}
+
+.box h4 {
+  color: grey;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.box p {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+.box .logo-holder {
+  background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  padding: 2rem;
+  border-radius: 100%;
+  margin: 0 auto;
+  height: 145px;
+  width: 145px;
+  margin-bottom: 1rem;
+}
+
+#adimission .apply {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr); 
+  grid-template-rows: 250px 75px 270px;
+}
+
+.box1 {
+  grid-column: 2/ 5;
+}
+
+.box2 {
+  grid-column: 6/ 9;
+}
+
+.box3 {
+  grid-column: 10/ 13;
+}
+
+.box4 {
+  grid-column-start: 1;
+  grid-column: 1/ 15;
+  margin-left: 70px;
+  height: 1px;
+  width: 90%;
+  background: #bbb;
+}
+
+.box5 {
+  grid-column: 3/ 6;
+  padding-right: 1rem;
+}
+
+.box6 {
+  grid-column: 6/ 9;
+  margin: -80px;
+}
+
+.box7 {
+  grid-column: 10/ 12;
+  padding-right: 1rem;
+}
+
+#adimission a {
+  padding: .8rem 2.5rem;
+  display: inline-block;
+  font-size: 1.3rem;
+  background: #DD3E45;
+  color: #fff;
+  border: #fff solid 1px;
+  border-radius: 30px;
+  margin-bottom: 3rem;
+}
+
+#adimission a:hover {
+  background: white;
+  color: #DD3E45;
+  border: #DD3E45 solid 1px;
+}
+
+.footer-line {
+  background: #bbb;
+  height: 1px;
+  width: 90%;
+  margin: 1rem auto 1.5rem auto;
+}
+
+footer {
+  display: flex;
+}
+
+footer .div-1 {
+  margin: 0 3rem;
+  flex: 1;
+}
+
+footer .div-1 a {
+  margin: 0 15px;
+  padding: 10px 10px;
+  color: #473B7B;
+}
+
+footer .div-2 i {
+  padding: 0 1.2rem 1rem 1.2rem;
+  display: inline-block;
+}
+
+footer .div-2 {
+  margin-right: 6rem;
+  color: #333;
+}
+
+
+/* MASAI FEES */
+.isa {
+  padding-bottom: 2rem;
+}
+
+.isa > div > h3 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #fff;
+  padding: 4rem 0 1rem 7rem;
+  text-align: left;
+}
+
+hr {
+  display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    width: 85%;
+    margin-inline-end: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.isa > p {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #fff;
+  padding: .5rem;
+}
+
+/* ISA Percent */
+#isa-percent {
+  text-align: center;
+}
+
+#isa-percent > div:first-child p {
+  font-size: 2.5rem;
+  padding: 3rem 0 1rem 0;
+  letter-spacing: 2px;
+}
+
+#isa-percent > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+#isa-percent > div:nth-child(2) div {
+  padding: 0 3rem;
+}
+
+#isa-percent > div:nth-child(2) h3 {
+  color: #3584A7;
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+#isa-percent > div:nth-child(2) p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+#question {
+  padding: 3rem 0; 
+}
+
+#question > div h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-bottom: 2rem;
+}
+
+#question > div p {
+  font-size: 1.3rem;
+  padding: .5rem 0 .5rem 5rem;
+}
+
+#question > div p i {
+  margin-right: .3rem;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Layout 3
+        </title>
+        <style type="text/css">
+            .cont{
+                display: grid;
+                grid-template-areas: "nav nav nav"
+                                     "left left right"
+                                     "left left right"
+                                     "left left right";
+                grid-gap: 25px;
+            }
+
+            .nav {
+                grid-area: nav;
+                height: 100px;
+                background: yellow;
+                font-size: 40px;
+                padding: 10px;
+            }
+
+            .left {
+                grid-area: left;
+                height: 400px;
+                background: red;
+                padding: 10px;
+                margin-right: 20px;
+                font-size: 30px;
+            }
+
+            .right {
+                grid-area: right;
+                display: grid;
+                grid-template-areas: "a"
+                                     "b"
+                                     "c";
+                height: 420px;
+                margin-left: 20px;
+                grid-gap: 20px;
+            }
+
+            .right div {
+                padding: 10px;
+                background: #00ff2a;
+                font-size: 30px;
+            }
+
+            .right :first-child{
+                grid-area: auto;
+            }
+
+            .right :nth-child(2) {
+                grid-area: b;
+            }
+
+            .right :last-child {
+                grid-area: c;
+            }
+
+            @media (max-width: 768px) {
+                .cont {
+                    display: grid;
+                    grid-template-areas: "nav"
+                                         "left"
+                                         "right";
+                }
+
+                .nav {
+                    height: 50px;
+                }
+
+                .left {
+                    height: 400px;
+                    margin: 0;
+                }
+
+                .right {
+                    height: 200px;
+                    margin: 0;
+                    grid-template-areas: "a b c";
+                    height: 200px;
+                    width: auto;
+                    grid-gap: 60px;
+                }
+
+                .right div {
+                    font-size: 20px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .cont {
+                    display: grid;
+                    grid-template-areas: "nav"
+                                         "left"
+                                         "right";
+                }
+
+                .nav {
+                    height: 50px;
+                }
+
+                .left {
+                    height: 200px;
+                    margin: 0;
+                }
+
+                .right {
+                    margin: 0;
+                    grid-template-areas: "a"
+                                         "b"
+                                         "c";
+                    height: 350px;
+                    width: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cont">
+            <div class="nav">Navigation</div>
+            <div class="left">LEFT BOX</div>
+            <div class="right">
+                <div>RIGHT BOX 1</div>
+                <div>RIGHT BOX 2</div>
+                <div>RIGHT BOX 3</div>
+            </div>
+        </div>
+    </body>
+</html>

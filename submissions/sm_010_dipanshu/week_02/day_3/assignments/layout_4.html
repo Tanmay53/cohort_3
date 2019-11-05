@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>
+            Layout 4
+        </title>
+        <style type="text/css">
+
+            .cont {
+                display: grid;
+                grid-template-areas: "nav nav nav nav"
+                                     "a b c d";
+                grid-gap: 30px;
+            }
+
+            .nav {
+                background: yellow;
+                height: 60px;
+                font-size: 40px;
+                padding: 10px;
+                grid-area: nav;
+            }
+
+            .a {
+                grid-area: a;
+                background: red;
+                height: 300px;
+                width: auto;
+                padding: 10px;
+                font-size: 30px;
+            }
+
+            .b {
+                grid-area: b;
+                background: green;
+                height: 300px;
+                width: auto;
+                padding: 10px;
+                font-size: 30px;
+            }
+
+            .c {
+                grid-area: c;
+                background: blue;
+                height: 300px;
+                width: auto;
+                padding: 10px;
+                font-size: 30px;
+            }
+
+            .d {
+                grid-area: d;
+                background: grey;
+                height: 300px;
+                width: auto;
+                padding: 10px;
+                font-size: 30px;
+            }
+
+            @media (max-width: 768px) {
+                .cont {
+                    display: grid;
+                    grid-template-areas: "nav nav"
+                                         "a c"
+                                         "b d";
+                }
+
+                .a {
+                    width: 300px;
+                    height: 200px;
+                }
+
+                .b {
+                    width: 300px;
+                    height: 200px;
+                }
+
+                .c {
+                    width: 300px;
+                    height: 200px;
+                }
+
+                .d {
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .cont {
+                    display: grid;
+                    grid-template-areas: "nav"
+                                         "a"
+                                         "d"
+                                         "b"
+                                         "c";
+                }
+
+                .a {
+                    height: 100px;
+                }
+
+                .b {
+                    height: 100px;
+                }
+
+                .c {
+                    height: 100px;
+                }
+
+                .d {
+                    height: 100px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="cont">
+            <div class="nav">Navigation</div>
+            <div class="a">Box 1</div>
+            <div class="b">Box 2</div>
+            <div class="c">Box 3</div>
+            <div class="d">Box 4</div>
+        </div>
+    </body>
+</html>
