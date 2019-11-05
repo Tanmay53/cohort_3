@@ -69,7 +69,7 @@ false
 Answer
 
 ```
-true
+false
 ```
 7.
 ```javascript
@@ -82,7 +82,7 @@ var D = true
 Answer
 
 ```
-true
+true (with precedence in the increasing order ((), ==, &&, ||))
 ```
 8. 
 ```javascript
@@ -94,7 +94,7 @@ x && z || !x && y || z || y == x && z || !x && y
 Answer
 
 ```
-true
+false (with precedence in the increasing order (==, &&, ||))
 ```
 ## If statements and Arithmetic Operators: 
 9. What is the value of `d` ?
@@ -157,7 +157,7 @@ switch (browser) {
 Answer
 
 ```
-we hope that this page looks ok!
+We hope that this page looks ok!
 ```
 12. What is the value of y?
 ```javascript
