@@ -107,7 +107,7 @@ var d = c % 2
 Answer
 
 ```
-d=1
+1
 ```
 10. What is the value of `grade` ? 
 ```javascript
@@ -133,7 +133,7 @@ else{
 Answer
 
 ```
-grade = D
+D
 ```
 11. What does the following code print in the `alert` window?  
 ```javascript
@@ -156,8 +156,8 @@ switch (browser) {
 ```
 Answer
 
-```We hope that this page looks ok!
-
+```
+We hope that this page looks ok!
 ```
 12. What is the value of y?
 ```javascript

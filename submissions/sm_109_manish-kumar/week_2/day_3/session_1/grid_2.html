@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grid</title>
+	<style>
+		body{
+			margin-left: 300px;
+			margin-top: 50px;
+		}
+		#grid1{
+			display: grid;
+			grid-template-columns: 800px;
+		}
+		#grid1 div{
+			background-color: red;
+			height: 50px;
+		}
+		#grid2{
+			display: grid;
+			grid-template-columns: 225px 525px;
+			grid-gap: 50px;
+			margin-top: 20px;
+		}
+		#grid2 .one {
+			background-color: green;
+			width: 225px;
+			height: 450px;
+		}
+		#grid2 .two {
+			background-color: teal;
+		}
+	</style>
+</head>
+<body>
+	<div id="grid1">
+		<div></div>
+	</div>
+	<div id="grid2">
+		<div class="one"></div>
+		<div class="two"></div>
+	</div>
+</body>
+</html>
