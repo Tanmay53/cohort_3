@@ -40,7 +40,7 @@ true
 Answer
 
 ```
-flase
+false
 ```
 4. 
 ```javascript
@@ -49,7 +49,7 @@ flase
 Answer
 
 ```
-flase
+true
 ```
 5. 
 ```javascript
@@ -60,7 +60,7 @@ var B = true
 Answer
 
 ```
-true
+false
 ```
 6. 
 ```javascript
@@ -157,7 +157,7 @@ switch (browser) {
 Answer
 
 ```
-We hope that this page looks ok!
+we hope this page looks ok!
 ```
 12. What is the value of y?
 ```javascript
@@ -167,5 +167,5 @@ var y = 12 + "12"
 Answer
 
 ```
-1212
+"!212"
 ```
