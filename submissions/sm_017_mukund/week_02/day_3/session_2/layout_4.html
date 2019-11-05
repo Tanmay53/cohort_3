@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>layout_4</title>
+    <style>
+        body {
+            margin: 5% 20%;
+        }
+
+        #grid {
+            display: grid;
+            grid-gap: 20px;
+
+        }
+
+        #grid div {
+            background-color: greenyellow;
+        }
+
+        @media (max-width: 600px) {
+            #grid {
+
+                grid-template-columns: 60px 60px 60px 60px 60px;
+                grid-template-rows: 60px 60px;
+            }
+
+        }
+
+        @media (min-width: 600px) {
+            #grid {
+
+                grid-template-columns: 80px 80px 80px 80px 80px;
+                grid-template-rows: 80px 80px;
+            }
+
+        }
+
+        @media (min-width: 768px) {
+            #grid {
+
+                grid-template-columns: 100px 100px 100px 100px 100px;
+                grid-template-rows: 100px 100px;
+            }
+
+        }
+
+        @media (min-width: 992px) {
+            #grid {
+
+                grid-auto-columns: 120px 120px 120px 120px 120px;
+                grid-template-rows: 120px 120px;
+            }
+
+        }
+
+        @media (min-width: 1200px) {
+            #grid {
+
+                grid-template-columns: 130px 130px 130px 130px 130px;
+                grid-template-rows: 130px 130px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+
+
+</body>
+
+
+</html>

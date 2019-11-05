@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Grid layoout 4</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      max-width: 500px;
+      grid-gap: 10px;
+      margin: 100px auto;
+    }
+
+    div > div {
+      height: 100px;
+      background: seagreen;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 300px;
+      }
+      .container > div {
+        height: 80px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 200px;
+      }
+      .container > div {
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>
