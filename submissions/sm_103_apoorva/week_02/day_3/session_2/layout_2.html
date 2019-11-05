@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+            width: 800px;
+            margin: 0px auto;
+        }
+        .box{
+            height: 150px;
+            width: 150px;
+            background-color: seagreen;
+            margin: 20px;
+        }
+        .box1{
+            flex-grow: 3;
+        }
+        @media (max-width: 800px) {
+            .box1 {
+            background: red;
+                }
+        }
+
+        
+        
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+        <div class="box box1"></div>
+        <div class="box"></div>
+
+    </div>
+    <div class="main">
+            <div class="box box1"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+    
+    </div>
+    <div class="main">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box box1"></div>
+    </div>
+
+    
+</body>
+</html>
