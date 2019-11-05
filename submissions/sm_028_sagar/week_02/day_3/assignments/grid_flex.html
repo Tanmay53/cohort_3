@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Flex</title>
+    <style>
+        .grid {
+            display: grid;
+            grid: repeat(7, 70px) / repeat(18,65px);
+            width: min-content;
+            margin:100px auto;
+        }
+        .grid div{
+            width: 48px;
+            height: 48px;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+        div:nth-of-type(1){
+            grid-area: 1 / 1 / 1 / 18;
+        }
+        div:nth-of-type(4){
+            grid-area: 2 / 2 / 2 / 13;
+        }
+        div:nth-of-type(12){
+            grid-area: 3 / 2 / 3 / 13;
+        }
+        div:nth-of-type(20){
+            grid-area: 4 / 2 / 4 / 4;
+        }
+         div:nth-of-type(37) {
+            grid-area: 5 / 2 / 5 /4;
+        }
+        .grid div:nth-child(1){
+            background-color: rgb(155, 44, 44);
+        }
+        .light-green{
+            background: rgb(59, 185, 59);
+        }
+        .cream{
+            background:rgb(221, 47, 82);
+        }
+        .black{
+            background:black;
+        }
+        .blue{
+            background: blue;
+        }
+        .orange{
+            background:rgb(255, 169, 8);
+        }
+        .purple{
+            background: purple;
+        }
+        .green{
+            background: green;
+        }
+        .crimson{
+            background: crimson;
+        }
+        .yellow{
+            background: yellow;
+        }
+        .grey{
+            background:rgb(116, 113, 113);
+        }
+
+    </style>
+</head>
+
+<body>
+        <div class="grid">
+            <div></div>
+            <div class="yellow"></div>
+            <div class="light-green"></div>
+            <div class="cream"></div>
+            <div class="purple"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="crimson"></div>
+            <div class="yellow"></div>
+            
+            <!-- 10 ---------------------- -->
+            <div class="light-green"></div>
+            <div class="cream"></div>
+            <div class="orange"></div>
+            <div class="purple"></div>
+            <div class="green"></div>
+            <div class="green"></div>
+            <div class="crimson"></div>
+            <div class="yellow"></div>
+            <div class="light-green"></div>
+            <div class="cream"></div>
+            <!-- ------- 20 ------------------------ -->
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="orange"></div>
+            <!-- -----------30 -------------------- -->
+            <div class="purple"></div>
+            <div class="purple"></div>
+            <div class="green"></div>
+            <div class="crimson"></div>
+            <div class="yellow"></div>
+            <div class="light-green"></div>
+            <div class="cream"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <!-- -------------- 40 -------------------  -->
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="purple"></div>
+            <div class="purple"></div>
+            <!-- --------------------- 50 ----------------- -->
+            <div class="crimson"></div>
+            <div class="yellow"></div>
+            <div class="light-green"></div>
+            <div class="cream"></div>
+            <div class="black"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <!-- -------------------- 60 ----------------- -->
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="orange"></div>
+            <div class="purple"></div>
+            <div class="crimson"></div>
+            <div class="yellow"></div>
+            <!-- --------------------------- 70 ---------------------- -->
+            <div class="light-green"></div>
+            <div class="cream"></div>
+            <div class="black"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <!-- --------------------- 80 ------------------------- -->
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="grey"></div>
+            <div class="grey"></div>
+            <div class="grey"></div>
+            <div class="grey"></div>
+            <div class="grey"></div>
+            <div class="grey"></div>
+            
+            <!-- --------------------------- 90 --------------------------- -->
+           
+        </div>
+    </div>
+
+</body>
+
+</html>
