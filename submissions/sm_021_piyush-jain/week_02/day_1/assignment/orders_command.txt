@@ -1,0 +1,5 @@
+1. grep -ic mumbai city_names_orders.csv
+2. grep -ic bangalore city_names_orders.csv
+3. sort city_names_orders_rand.csv |uniq -d| wc -l
+4 and 5. sort city_names_orders.csv |uniq -c|sort -nr|head -1
+6 and 7. grep mumbai city_names_orders.csv | sort |uniq -c| sort -nr|head -1
