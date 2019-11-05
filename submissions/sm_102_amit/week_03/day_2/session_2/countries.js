@@ -1,4 +1,6 @@
 var country = "India";
+
+// switch case
 switch (country) {
   case "India":
     console.log(country + " -> The continent is Asia");
