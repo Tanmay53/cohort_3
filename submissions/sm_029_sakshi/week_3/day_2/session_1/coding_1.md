@@ -15,102 +15,101 @@
 #### Boolean Logic
 ##### Look at the code involving logical operators and evaluate the output. Your answers should be either `true` or `false`.
 1. 
-```javascript
+javascript
 true && true || false && false
-```
+
 Answer
 
 ```
-true
+TRUE
 ```
 2. 
-```javascript
+javascript
 true == false || false == false
-```
+
 Answer
 
 ```
-true
+TRUE
 ```
 3. 
 
-```javascript
+javascript
 9932494354545 % 2 != 1 
-```
+
 Answer
 
 ```
-false
+FALSE
 ```
 4. 
-```javascript
+javascript
 190 + 20 >= 100 && 50 <= 50
-```
+
 Answer
 
 ```
-true
+TRUE
 ```
 5. 
-```javascript
+javascript
 var A = true
 var B = true 
 !(A || B) == !A && !B
-```
+
 Answer
 
 ```
-false
+TRUE
 ```
 6. 
-```javascript
+javascript
 !true || !true || true && true && !true
-```
+
 Answer
 
 ```
-true
+FALSE
 ```
 7.
-```javascript
+javascript
 var A = true 
 var B = false
 var C = false 
 var D = true
 ((A || B) && (C || D)) == ((A || B) && C) || ((A || B) && D)
-```
+
 Answer
 
 ```
-true
+TRUE
 ```
-8. 
-```javascript
+javascript
 var x = false
 var y = false 
 var z = false
 x && z || !x && y || z || y == x && z || !x && y
-```
+
 Answer
 
 ```
-true
+TRUE
 ```
 ## If statements and Arithmetic Operators: 
 9. What is the value of `d` ?
-```javascript
+javascript
 var a = 50
 var b = a + a
 var c = b * b + 1
 var d = c % 2
-```
+
 Answer
 
 ```
 1
 ```
 10. What is the value of `grade` ? 
-```javascript
+javascript
 var marks = 1967
 marks = marks % 100
 var grade
@@ -129,14 +128,14 @@ else if(marks > 60 && marks <= 70){
 else{
   grade = 'F'
 }
-```
+
 Answer
 
 ```
 D
 ```
 11. What does the following code print in the `alert` window?  
-```javascript
+javascript
 var browser = 'Brave'
 switch (browser) {
   case 'Edge':
@@ -157,13 +156,13 @@ switch (browser) {
 Answer
 
 ```
-we hope that this page looks ok!
+We hope that this pd looks ok
 ```
 12. What is the value of y?
-```javascript
+javascript
 var x = 12 
 var y = 12 + "12"
-```
+
 Answer
 
 ```
