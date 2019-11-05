@@ -1,11 +1,11 @@
-var income = 1100000; //Amount earned
-var saving = 350000; //Saving
+var income = 600000; //Amount earned
+var saving = 100000; //Saving
 var rebate;
 var slack;
 var applicableTax;
 
-console.log("Initial income: " + income);
-console.log("Saving: " + saving);
+// console.log("Initial income: " + income);
+// console.log("Saving: " + saving);
 
 // ============ rebate calculation ============== 
 if (income < 500000) {
@@ -33,8 +33,8 @@ if (income < 500000) {
         income = income - rebate;
     }
 }
-console.log("rebate: " + rebate)
-console.log("Income after rebate deduction: " + income);
+// console.log("rebate: " + rebate)
+// console.log("Income after rebate deduction: " + income);
 
 // ============= tax-calculation ============= 
 if (income <= 250000) {
