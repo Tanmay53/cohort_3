@@ -1,9 +1,9 @@
-var totalIncome = Number(1200000);
+var totalIncome = Number(1050000);
 var tax;
 var taxableIncome;
 var taxableAmount;
 var rebate;
-var savings = Number(0);
+var savings = Number(80000);
 
 // Checking if savings is not greater than total income
 if (savings > totalIncome) {
