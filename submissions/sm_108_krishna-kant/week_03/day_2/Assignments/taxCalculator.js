@@ -1,9 +1,9 @@
-var totalIncome = Number(490000);
+var totalIncome = Number(1050000);
 var tax;
 var taxableIncome;
 var taxableAmount;
 var rebate;
-var savings = Number(400000);
+var savings = Number(80000);
 
 // Checking if savings is not greater than total income
 if (savings > totalIncome) {
@@ -40,7 +40,7 @@ if (savings > totalIncome) {
     );
   } else if (taxableIncome > 500000 && taxableIncome <= 1000000) {
     taxableAmount = taxableIncome - 500000;
-    tax = 0.2 * taxableAmount;
+    tax = 0.2 * taxableAmount + 0.1 * 250000;
     console.log(
       "Total Income : ",
       totalIncome + "\n Rebate : ",
@@ -50,7 +50,7 @@ if (savings > totalIncome) {
     );
   } else if (taxableIncome > 1000000) {
     taxableAmount = taxableIncome - 1000000;
-    tax = 0.3 * taxableAmount;
+    tax = 0.3 * taxableAmount + 0.2 * 500000 + 0.1 * 250000;
     console.log(
       "Total Income : ",
       totalIncome + "\n Rebate : ",
