@@ -1,0 +1,1 @@
+console.log("Hello Masai")       //Output showing on the screen
