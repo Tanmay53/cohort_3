@@ -1,9 +1,8 @@
-var limit = Number(14);
-var i = 0;
-function loop() {
+function loop(limit) {
+  var i = 0;
   while (i < limit) {
     console.log(i);
     i++;
   }
 }
-loop();
+loop(12);
