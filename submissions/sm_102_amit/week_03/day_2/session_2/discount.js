@@ -1,6 +1,7 @@
 var total = 500;
 var discount;
 discount = (10 * total) / 100;
+// calculate price
 if (total >= 300) {
   if (discount < 100) {
     var price = total - discount;
