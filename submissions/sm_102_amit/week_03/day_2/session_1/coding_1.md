@@ -26,7 +26,7 @@
 Answer
 
 ```
-True
+true
 ```
 
 2.
@@ -38,7 +38,7 @@ true == false || false == false;
 Answer
 
 ```
-True
+true
 ```
 
 3.
@@ -50,7 +50,7 @@ True
 Answer
 
 ```
-False
+false
 ```
 
 4.
@@ -62,7 +62,7 @@ False
 Answer
 
 ```
-True
+true
 ```
 
 5.
@@ -76,7 +76,7 @@ var B = true;
 Answer
 
 ```
-False
+false
 ```
 
 6.
@@ -88,7 +88,7 @@ False
 Answer
 
 ```
-False
+false
 ```
 
 7.
@@ -103,7 +103,7 @@ var D = true((A || B) && (C || D)) == ((A || B) && C) || ((A || B) && D);
 Answer
 
 ```
-True
+true
 ```
 
 8.
@@ -118,7 +118,7 @@ var z = false;
 Answer
 
 ```
-False
+false
 ```
 
 ## If statements and Arithmetic Operators:
