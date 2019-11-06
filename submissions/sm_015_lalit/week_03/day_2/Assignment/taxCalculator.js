@@ -1,10 +1,16 @@
-var income = 700000
-var savings = 50000
+var income = 500000
+var savings = 300000
 if (income <= 500000) {
     sb = (savings * 0.5)
+    if (sb > 50000) {
+        sb = 50000
+    }
     netIncome = income - sb
 } else if (500000 < income & income <= 1000000) {
     sb = (savings * 0.3)
+    if (sb > 50000) {
+        sb = 50000
+    }
     netIncome = income - sb
 } else if (1000000 < income) {
     sb = (savings * 0.1);
