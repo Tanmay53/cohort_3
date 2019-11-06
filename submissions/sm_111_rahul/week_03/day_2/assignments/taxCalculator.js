@@ -1,7 +1,7 @@
 var total_income, saving, rebate, taxable_income, slab1, slab2, slab3;
 
-saving = 80000;
-total_income = 1050000;
+saving = 900000;
+total_income = 990000;
 
 if(total_income < 500000)
 {
@@ -34,7 +34,7 @@ else{
         taxable_income = total_income - rebate;
     }
 }
-console.log(taxable_income);
+console.log('The Taxable Income is: '+ taxable_income);
 if(taxable_income < 250000 ){
     console.log('No Tax');
 }else if(taxable_income >= 250000 && taxable_income < 500000){
