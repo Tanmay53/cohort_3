@@ -30,7 +30,7 @@ true == false || false == false
 Answer
 
 ```
-false
+true
 ```
 3. 
 
@@ -60,7 +60,7 @@ var B = true
 Answer
 
 ```
-True
+false
 ```
 6. 
 ```javascript
