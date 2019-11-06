@@ -1,5 +1,5 @@
-var income;
-var savings;
+var income = 1100000;
+var savings = 100000;
 var income_tax;
 var rebate = 0;
 
@@ -17,14 +17,15 @@ if (rebate > 50000) {
 
 income = income - rebate;
 
-if(income < 250000) {
+if(income <= 250000) {
 	income_tax = 0;
-} else if (income >= 250000 && income <= 500000) {
+} else if (income <= 500000) {
 	income_tax = (income - 250000) * .10;
-} else if (income > 500000 && income <= 1000000) {
+} else if (income <= 1000000) {
 	income_tax = 250000 * .10 + (income - 500000) * .20;
 } else if (income > 1000000) {
 	income_tax = 250000 * .10 + 500000 * .20 + (income - 1000000) * .30;
 }
 
 console.log(income_tax)
+
