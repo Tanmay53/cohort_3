@@ -1,11 +1,11 @@
-var sampleString = "Krishna Kant Sharma";
-var reverse = "";
+var sampleString = "Amit Kumar";
 
 function reverseString(args) {
+  sampleString = "";
   for (i = args.length - 1; i >= 0; i--) {
-    reverse += args[i];
+    sampleString += args[i];
   }
-  console.log(reverse);
+  console.log(sampleString);
 }
 
 reverseString(sampleString);
