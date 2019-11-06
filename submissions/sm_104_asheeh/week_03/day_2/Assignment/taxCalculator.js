@@ -1,10 +1,16 @@
-var income=526000, savings=30, a=250000, ti, tax
-if(250000<income && income<500000){
+var income=990000, savings=900000, a=250000, ti, tax
+if(250000<income && income<500000 && savings<100000){
                    ti=income-0.5*savings
                    
 }
-else if(500000<=income && income<1000000){
+else if(250000<income && income<500000 && savings>=100000){
+      ti=income-50000
+}
+else if(500000<=income && income<1000000 && savings<166666.6666){
                       ti=income-0.3*savings
+}
+else if(500000<=income && income<1000000 && savings>=166666.6666){
+      ti=income-50000
 }
 else if(income>=1000000 && savings<500000){
                       ti=income-0.1*savings
