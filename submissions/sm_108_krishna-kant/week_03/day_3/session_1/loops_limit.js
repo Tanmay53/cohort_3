@@ -1,5 +1,5 @@
-var limit = 20;
+var limit = 60;
 
-for (i = 0; i <= 20; i++) {
+for (i = 0; i <= limit; i++) {
   console.log(i);
 }
