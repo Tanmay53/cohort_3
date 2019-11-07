@@ -1,1 +1,1 @@
-## Sprint-1 Projects List
+# COHORT-3 Sprint-1 Projects
