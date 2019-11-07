@@ -24,9 +24,11 @@ function division_checker(number, limit){
 // code starts here
 var limit = 100
 var number = 10
-res = division_checker(number, limit)
-console.log("Avg is : ", res)
 
+if (number > 0){
+    res = division_checker(number, limit)
+    console.log("Avg is : ", res)
+}
 
 /*
 
