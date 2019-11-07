@@ -1,6 +1,8 @@
-var limit = Number(14);
-var i = 0;
-while (i < limit) {
-  console.log(i);
-  i++;
+function range(limit) {
+  var i = 0;
+  while (i < limit) {
+    console.log("Hello Masai");
+    i++;
+  }
 }
+range(14);

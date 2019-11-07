@@ -8,4 +8,5 @@ function reverse_string(word, i=0) {
   return reverse_string(word, i+1) + word[i];
 }
 
-console.log(reverse_string("1212 aalind 5643 sharma"));
+
+console.log(reverse_string("amrahs dnilaa"));
