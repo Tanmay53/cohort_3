@@ -1,5 +1,9 @@
-var n;
-//Loop for printing numbers from given number to zero.
-for(var i=n;i>=0;i--) {
-    console.log(i);
+//Function to print numbers from given number to zero.
+function printNumbersReverse(limit) {
+    for(var i=limit;i>=0;i--) {
+        console.log(i);
+    }
 }
+
+//Calling printNumbersReverse function.
+printNumbersReverse(10);
