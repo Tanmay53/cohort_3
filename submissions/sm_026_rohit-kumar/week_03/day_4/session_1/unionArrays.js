@@ -1,6 +1,7 @@
 function union(arr1, arr2) {
     // keep all elements of arr1 as it is
-    var new_arr = arr1
+    var new_arr = []
+    new_arr = new_arr.concat(arr1)
 
     // pick elements from arr2
     for(var i = 0; i < arr2.length; i++) {

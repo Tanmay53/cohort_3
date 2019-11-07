@@ -18,6 +18,6 @@ function intersection(arr1, arr2) {
 
 // main
 var arr1 = [1, 2, 3, 4, 5, 6]
-var arr2 = [4, 5, 6, 7, 7, 8, 9]
+var arr2 = [4, 5, 6, 7, 8, 9]
 
 console.log(intersection(arr1, arr2))
