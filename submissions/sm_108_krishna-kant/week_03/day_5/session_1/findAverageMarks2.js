@@ -13,11 +13,11 @@ student = {
   }
 };
 
-function findAverage(student) {
+function avgMarks(student) {
   return student.average();
 }
 
 // Genrating Output
 console.log(
-  `The average of marks student ${student.name} is ${findAverage(student)}`
+  `The average of marks student ${student.name} is ${avgMarks(student)}`
 );
