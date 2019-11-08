@@ -1,4 +1,6 @@
-var arr = [2, 3, 5, 7, 8, 2, 1, 5, 2];
+var arr = {
+  array: [2, 3, 5, 7, 8, 2, 1, 5, 2]
+};
 var targetIndex = 2;
 var count = 0;
 
@@ -18,5 +20,8 @@ function countInArray(args, value) {
 
 // Generating Output
 console.log(
-  `The count of ${targetIndex} in array is ${countInArray(arr, targetIndex)}`
+  `The count of ${targetIndex} in array is ${countInArray(
+    arr.array,
+    targetIndex
+  )}`
 );
