@@ -1,13 +1,14 @@
 // function to remove duplicate values from object
-function removeDuplicateValues(arrayObj) {
-  if (arrayObj.array.length > 0) {
+function removeDuplicateValues(array) {
+  // check if array is empty or not
+  if (array.length > 0) {
     newArray = [];
     index = 0;
-    for (var i = 0; i < arrayObj.array.length; i++) {
-      if (position(newArray, arrayObj.array[i]) >= 0) {
+    for (var i = 0; i < array.length; i++) {
+      if (position(newArray, array[i]) >= 0) {
         continue;
       } else {
-        insert(newArray, arrayObj.array[i], index);
+        insert(newArray, array[i], index);
         index++;
       }
     }
@@ -33,8 +34,11 @@ function insert(array, element, index) {
 
 // input
 arrayObj = {
-  array: [6, 6, 6, 6, 1, 2, 1, 2, -8, 0]
+  array: [6, 6, 6, 6, 1, 2, 1, 2, -8, 0],
+  removeDuplicates: function() {
+    console.log(removeDuplicateValues(this.array));
+  }
 };
 
 // output
-console.log(removeDuplicateValues(arrayObj));
+arrayObj.removeDuplicates();
