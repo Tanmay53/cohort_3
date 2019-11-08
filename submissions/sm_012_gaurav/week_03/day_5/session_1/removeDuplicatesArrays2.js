@@ -13,23 +13,23 @@ function indexPos(array, value) {
 
 
 function removeDuplicatesArrays (array) {
-    var uniqueArray = [];   //Variable to hold unique elements of array.
-    for (var i = 0; i < array.length; i++) {
-        /*Condition to check if particular element is present in the uniqueArray or not.
-        If not, push the element into uniqueArray.*/
-        if (indexPos(uniqueArray, array[i]) == -1) {
-            uniqueArray.push(array[i]);
+    object = {
+        arr: array,
+        uniqueArray: [],
+        reomveDuplicateElements: function() {
+            for (var i = 0; i < this.arr.length; i++){
+                if (indexPos(this.uniqueArray, this.arr[i]) == -1) {
+                    this.uniqueArray.push(this.arr[i]);
+                }
+            }
+            return this.uniqueArray
         }
     }
-    return uniqueArray;
+    return object.reomveDuplicateElements();
 }
 
-object = {
-    array: ['aaa','bbb','ccc','c','aaa','bbb','ccc'],
-    reomveDuplicateElements: function() {
-        var uniqueArray = removeDuplicatesArrays(this.array);
-        console.log("Unique Elements of the array are:",uniqueArray);
-    }
-}
 
-object.reomveDuplicateElements();
+/* Test Case :- 
+   I/P :- [25,25,25,84,84,79,85,96]  O/P :- [25,84,79,85,96]
+   I/P :- [12,85,-1,-1,85]  O/P :- [12,85,-1]
+*/
