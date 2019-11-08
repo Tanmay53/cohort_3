@@ -1,10 +1,14 @@
-var num = 5, count = 0, sum = 0 , i = 0, average = 0;
-while(i < 55){
-    if(i % num == 0){
+var count = 0, sum = 0 , i = 0, average = 0 , num , upperLimit;
+   
+ function averageDivisible(num , upperLimit) {  
+
+    while(i < upperLimit){
+     if(i % num == 0){
         sum = sum + i;
         count++;
-    }
-    i++;
-}
+        }
+         i++;
+        }
   console.log(average = sum / count);
-
+    }
+ averageDivisible(5, 10)
