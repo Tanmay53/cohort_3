@@ -11,4 +11,4 @@ function average_divisible(limit, num) {
   return (sum/count);
 }
 
-console.log(average_divisible(100, 1));
+console.log(average_divisible(15, 5));

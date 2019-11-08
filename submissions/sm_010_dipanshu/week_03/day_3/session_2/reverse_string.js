@@ -12,13 +12,10 @@ function reverseThis(inputString){
         var length = inputArray.length              //getting the length of original array
 
         //looping from the end of the array to the beginning
-        for(var i = length; i >= 0; i--){
-            inputArray[inputArray.length]= inputArray[i];    //moving the contents of array starting from the end ---> to the the end of the original array
-        }
-
-        //loop to remove the original contents of the array
-        for(var i = 0; i < length; i++){
-            inputArray.shift()          
+        for(var i = 0; i <= Math.floor((length-1)/2); i++){
+            temp = inputArray[i]
+            inputArray[i] = inputArray[length-1-i]
+            inputArray[length-1-i] = temp
         }
     }
     

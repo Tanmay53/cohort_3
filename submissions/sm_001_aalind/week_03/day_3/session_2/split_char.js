@@ -1,3 +1,5 @@
+// Given a string, split the string into single characters and store into an array 
+// (NOTE: You can't use inbuilt methods)
 
 function split_char(word) {
 
