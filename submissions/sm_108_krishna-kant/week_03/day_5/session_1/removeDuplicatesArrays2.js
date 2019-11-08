@@ -8,15 +8,22 @@ var filteredArray = {
 
 // function
 function removeDuplicates(args) {
+  var j = 0;
   for (array in args) {
     for (var i = 0; i < args[array].length; i++) {
       //   checking if element present in filtered array
       if (filteredArray.array.indexOf(args[array][i]) == -1) {
-        filteredArray.array.push(args[array][i]);
+        push(filteredArray.array, args[array][i], j);
+        j++;
       }
     }
   }
   console.log(filteredArray.array);
+}
+
+// push function
+function push(array, element, index) {
+  return (array[index] = element);
 }
 
 // function calling
