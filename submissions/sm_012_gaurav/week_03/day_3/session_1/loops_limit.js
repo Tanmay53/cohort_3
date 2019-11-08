@@ -1,5 +1,9 @@
-var n;
-//Loop for printing numbers from 0 to given limit.
-for (var i=0;i<=n;i++) {
-    console.log(i);
+//Function to print numbers from 0 to given limit.
+function printNumbers(limit) {
+    for (var i=0;i<=limit;i++) {
+        console.log(i);
+    }
 }
+
+//Calling printNumbers function.
+printNumbers(10);
