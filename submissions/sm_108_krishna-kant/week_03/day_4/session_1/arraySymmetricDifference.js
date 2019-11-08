@@ -13,9 +13,7 @@ function arrayDifference(args1, args2) {
   }
   for (i = 0; i < args1.length; i++) {
     if (!args2.includes(args1[i])) {
-      if (!difference.includes(args1[i])) {
-        difference.push(args1[i]);
-      }
+      difference.push(args1[i]);
     }
   }
 
