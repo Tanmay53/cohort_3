@@ -6,9 +6,7 @@ var difference = [];
 function arrayDifference(args1, args2) {
   for (i = 0; i < args2.length; i++) {
     if (!args1.includes(args2[i])) {
-      if (!difference.includes(args2[i])) {
-        difference.push(args2[i]);
-      }
+      difference.push(args2[i]);
     }
   }
   return difference;
