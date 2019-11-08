@@ -1,4 +1,4 @@
-var income=300000
+var income=200000
 if (income<250000){
     console.log('Income is below 250000,so no tax deducted')
 }
