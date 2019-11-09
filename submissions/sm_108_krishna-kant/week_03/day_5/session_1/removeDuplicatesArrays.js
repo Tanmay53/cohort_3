@@ -13,13 +13,20 @@ function indexOf(args, value) {
 
 // function
 function removeDuplicates(args) {
+  var j = 0;
   for (var i = 0; i < args.length; i++) {
     //   checking if element present in filtered array
     if (indexOf(filteredArray, args[i]) == -1) {
-      filteredArray.push(args[i]);
+      push(filteredArray, args[i], j);
+      j++;
     }
   }
   console.log(filteredArray);
+}
+
+// push function
+function push(array, element, index) {
+  return (array[index] = element);
 }
 
 // function calling
