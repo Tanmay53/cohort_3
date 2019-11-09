@@ -1,0 +1,206 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+
+.head-bar {
+    display: grid;
+    grid-template-rows: 80px;
+    grid-template-columns: 1fr 5fr repeat(4, 0.8fr);
+}
+
+.head-bar div {
+    background: gray;
+}
+
+.head-bar div p {
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.head-bar div input[type="submit"] {
+    padding: 10px 12px;
+    border: 0.2px solid red;
+    color: red;
+    border-radius: 5px;
+}
+
+.head-bar div:nth-of-type(2n+1) {
+    background: rgb(204, 202, 202);
+}
+
+.head-bar div:nth-of-type(1) img {
+    margin: 20px 25px;
+}
+
+.masai_image {
+    width: 100%;
+    height: 760px;
+    border: 1px dashed red;
+    background-image: url("https://www.masaischool.com/static/posters/banner_1.jpg");
+    background-size: cover;
+}
+
+.masai-property {
+    display: grid;
+    grid-template-rows: 450px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    border: 1px solid blue;
+    margin: 10px 50px;
+    text-align: center;
+}
+
+.masai-property p {
+    font-size: 20px;
+}
+
+
+/* .masai-property img {
+    width: 250px;
+    height: 200px;
+} */
+
+.masai-property img+p {
+    font-size: 30px;
+    margin: auto 0px;
+}
+
+.masai-property div {
+    border: 1px dashed red;
+}
+
+.unique {
+    width: 100%;
+    height: 700px;
+    border: 1px dashed gray;
+    background-image: linear-gradient(0.25turn, #0f0249, #6bee67);
+}
+
+.unique>div {
+    display: grid;
+    grid-template-rows: 100px 220px 220px;
+    grid-template-columns: 440px 440px;
+    row-gap: 30px;
+    column-gap: 30px;
+    width: max-content;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.unique>div div {
+    border: 1px solid pink;
+}
+
+.unique div:nth-of-type(1) {
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+.unique>div div:nth-of-type(1) {
+    font-size: 35px;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.unique_schedule span {
+    font-size: 60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.unique p {
+    font-size: 20px;
+}
+
+
+/* -------- Masai Campus ---------  */
+
+.campus {
+    width: 100%;
+    height: 800px;
+    border: 1px dashed red;
+}
+
+.masai-campus {
+    width: max-content;
+    display: grid;
+    grid-template-rows: 220px 440px 40px;
+    grid-template-columns: 550px 550px;
+    column-gap: 20px;
+    margin: 40px auto;
+}
+
+.masai-campus img {
+    width: 510px;
+    height: 400px;
+    margin: 20px
+}
+
+.masai-campus div {
+    border: 1px solid red;
+    text-align: center;
+}
+
+.masai-campus div:nth-of-type(1) {
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+.masai-campus div:nth-of-type(1) p:nth-of-type(1) {
+    font-size: 35px;
+}
+
+.masai-campus div p {
+    font-size: 19px;
+    text-align: center;
+}
+
+
+/* ------------- courses ---------------  */
+
+.courses {
+    width: 100%;
+    height: 1000px;
+    border: 1px dashed red;
+}
+
+.course-block {
+    display: grid;
+    grid-template-rows: 100px 380px 380px;
+    grid-template-columns: 550px 550px;
+    row-gap: 25px;
+    column-gap: 20px;
+    width: max-content;
+    margin: 25px auto;
+}
+
+.course-block div {
+    border: 1px solid blue
+}
+
+.course-block div:nth-of-type(1) {
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+.course-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#course-button {
+    width: 600px;
+    height: 80px;
+    margin-top: 0px;
+}
+
+.course-flex div {
+    width: 200px;
+    height: 80px;
+    border: 0.5px solid green;
+    margin: 12px 35px;
+}
