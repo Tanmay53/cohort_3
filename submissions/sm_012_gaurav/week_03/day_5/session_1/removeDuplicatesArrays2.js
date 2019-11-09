@@ -1,21 +1,15 @@
-function removeDuplicatesArrays (array) {
-    var uniqueArray = [];   //Variable to hold unique elements of array.
+//Function to remove duplicates from an array using Object.
+function removeDuplicatesArrays(array) {
+    object = {};
     for (var i = 0; i < array.length; i++) {
-        /*Condition to check if particular element is present in the uniqueArray or not.
-        If not, push the element into uniqueArray.*/
-        if (uniqueArray.indexOf(array[i]) == -1) {
-            uniqueArray.push(array[i]);
-        }
+        object[array[i]] = array[i];
     }
-    return uniqueArray;
+    return Object.keys(object);
 }
 
-object = {
-    array: ['aaa','bbb','ccc','c','aaa','bbb','ccc'],
-    reomveDuplicateElements: function() {
-        var uniqueArray = removeDuplicatesArrays(this.array);
-        console.log("Unique Elements of the array are:",uniqueArray);
-    }
-}
 
-object.reomveDuplicateElements();
+
+/* Test Case :- 
+   I/P :- [25,25,25,84,84,79,85,96]  O/P :- ['25','84','79','85','96']
+   I/P :- [12,85,-1,-1,85]  O/P :- ['12','85','-1']
+*/
