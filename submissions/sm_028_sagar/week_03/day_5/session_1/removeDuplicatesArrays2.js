@@ -14,9 +14,9 @@ function removeDuplicate(input) {
 
         obj[input[i]] = input[i];
     }
-}
 
-return Object.values(obj);
+
+    return Object.values(obj);
 }
 
 
