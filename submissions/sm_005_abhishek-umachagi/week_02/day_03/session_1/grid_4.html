@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>grid_4.html</title>
+        <style>
+            .grid{
+                display:grid;
+                grid-template-rows:100px 100px 100px;
+                grid-template-columns:100px 100px 100px 100px;
+                grid-gap:20px;
+                justify-content:center;
+                margin-top:100px;
+            }
+            .grid div{
+                background:rgb(2, 99, 102);
+            }
+            #box1{
+                grid-area:1 / 2 /span 1/ span 2;
+            }
+            #box2{
+                grid-area:2 / 1 / span 1/ span 2;
+            }
+            #box3{
+                grid-area:3 / 3 / span 1/ span 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div></div>
+            <div id="box1"></div>
+            <div></div>
+            <div id="box2"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div id="box3"></div>
+        </div>
+    </body>
+</html>
