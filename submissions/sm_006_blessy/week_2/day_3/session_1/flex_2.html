@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>flex_2.html</title>
+    </head>
+    <style>
+        .flex-box{
+            display:flex; 
+        }
+        .flex-box div{
+          height:50px;
+          background:purple;
+          margin:20px;
+          padding: 20px;
+          border: 1px solid black;
+        }
+        #box1 div {
+            flex-grow:1 ;
+        }
+        #box1 div:nth-of-type(2n) {
+         flex-grow:3 ;
+        }
+         #box2 div {
+            flex-grow:1;
+        }
+        #box2 div:nth-of-type(1) {
+            flex-grow:3 ;
+        }
+        #box3 div {
+            flex-grow: 1 ;
+        }
+        #box3 div:nth-of-type(3){
+            flex-grow:3;
+        }
+         
+     </style>
+     <body>
+         <div class="flex-box" id="box1">
+             <div></div>
+             <div></div>
+             <div></div>
+         </div>
+         <div class="flex-box" id="box2">
+                <div></div>
+                <div></div>
+                <div></div>
+         </div>
+         <div class="flex-box" id="box3">
+                <div></div>
+                <div></div>
+                <div></div>
+         </div>
+
+
+     </body>
+</html>
