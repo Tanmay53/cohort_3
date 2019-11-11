@@ -1,0 +1,11 @@
+.square{
+    display:flex;
+    margin:25px;
+    flex-direction:row;
+      }
+  .square div{
+    background-color:lime;
+    height:100px;
+    width:100px;
+    margin:25px 
+    }  

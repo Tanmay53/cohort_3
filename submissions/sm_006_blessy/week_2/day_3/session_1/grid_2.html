@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>grid_2.html</title>
+        <style>
+            #layout1 {
+                display: grid;
+                grid-gap: 20px;
+                padding: 20px;
+                margin:10px; 
+                grid-template-columns:200px 400px;
+                grid-template-rows:100px 500px; 
+                 justify-content:center;
+            }
+                .red {
+                background:red;
+                grid-column: 1 /span 2;
+            }
+                .green {
+                    height:500px;
+                    background:green;
+                }
+                .blue {
+                    height:500px;
+                    background:blue;
+                }
+        </style>
+        </head>
+        <body>
+            <div id="layout1">
+                <div class="red"></div>
+                <div class="green" ></div>
+                <div class="blue"></div>
+            </div>
+        </body>
+</html>
