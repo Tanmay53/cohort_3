@@ -1,5 +1,6 @@
 function checkElementBefore(arr) {
 var new_arr =    arr.map(function(element, index, arr){
+                    // i to keep track of prev element
                     i = index - 1
                     if(i < 0)
                         return 1
@@ -12,8 +13,6 @@ var new_arr =    arr.map(function(element, index, arr){
                         }
                     }
                 })
-
-        console.log(new_arr)
         return new_arr
 }
 
