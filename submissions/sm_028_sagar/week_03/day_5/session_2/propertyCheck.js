@@ -97,3 +97,10 @@ function convertStringToArray(str) {
     }
     return arr;
 }
+
+
+
+//input -----------------> output
+//sagar.kadu17@gmail.com ----> true
+//sagar!.kadu17@gmail.com ----> false
+//sagar@.kadu17@gmail.com -----> false

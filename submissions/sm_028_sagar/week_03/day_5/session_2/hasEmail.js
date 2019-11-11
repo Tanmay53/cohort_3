@@ -1,5 +1,5 @@
 //Invoking function
-console.log(checkValidEmail('sagar.kadu17@gmail.com'))
+console.log(checkValidEmail('sagarkadu17@gmail.com.com'))
 
 
 
@@ -142,3 +142,11 @@ function convertStringToArray(str) {
     }
     return arr;
 }
+
+
+
+//input -----------------> output
+//sagar.kadu17@gmail.com ----> true
+//sagar!.kadu17@gmail.com ----> false
+//sagar@.kadu17@gmail.com -----> false
+//sagarkadu17@gmail.com.com ----> false
