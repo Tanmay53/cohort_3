@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>grid_2.html</title>
+    <style>
+        #box{
+         display:grid;
+         grid-gap:40px;
+         grid-template-rows:150px 150px 150px ;
+         grid-template-columns:150px 150px 150px 150px;
+         padding:30px;
+         justify-content:center;
+        }
+        #box div{
+         background:rgb(39,120,102);
+        }
+        #box .box1{
+         grid-area:1/2/span 1/span 2;
+        }
+        #box .box2{
+         grid-area:2/1/span 1/span 2;
+        }
+        #box .box3{
+         grid-area:3/3/span 1/span 2;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div></div>
+      <div class="box1"></div>
+      <div></div>
+      <div class="box2"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="box3"></div>
+    </div>
+  </body>
+</html>
