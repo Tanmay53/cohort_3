@@ -1,0 +1,14 @@
+.row{
+    display:grid;
+    grid-gap:20px;
+    grid-template-columns: 100px 100px 100px 100px 100px ;
+    grid-template-rows:100px 100px ;
+    justify-content: center;
+    margin-top:80px;
+  }
+  .row div{
+    background-color:cyan;
+    height:100px;
+    width:100px;
+    margin:20px
+  }
