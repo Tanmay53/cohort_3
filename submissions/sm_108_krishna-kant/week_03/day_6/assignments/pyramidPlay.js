@@ -1,6 +1,6 @@
-var level = 4;
+var level = 5;
 var pyramid = "";
-var x = 2;
+var x = 1;
 var pos = [];
 // pyramid
 function pyramidRight(level) {
@@ -11,6 +11,11 @@ function pyramidRight(level) {
     console.log(createHorizantle(horizantalItems, i));
     pos.push(Math.ceil(horizantalItems / 2) + x);
     pos.push(Math.ceil(horizantalItems / 2) - x);
+    if (i % 2 == 0) {
+      pos[0] = null;
+    } else {
+      pos[0] = Math.ceil(horizantalItems / 2);
+    }
     x = x + 2;
     pyramid = "";
   }
