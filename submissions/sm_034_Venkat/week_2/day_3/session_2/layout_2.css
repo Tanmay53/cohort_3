@@ -1,0 +1,13 @@
+.parent{
+    display:flex ;
+    justify-content: center;
+        }
+  .parent div{
+    background-color:lime;
+    height:100px;
+    width:100px;
+    margin:25px;
+    }
+ #rectangle{
+    width:250px
+  }
