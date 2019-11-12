@@ -8,22 +8,28 @@ function isUpper(char){
 
 function mirrorImage(str){
     // creating array of alphabets
-    var alphabets=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    var lowAlphabets=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    var highAlphabets=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
     var letters=str.split('')
-    var upperFlag=false
     for(var i=0;i<letters.length;i++){
-        if(isUpper(letters[i]))
-            upperFlag=true
-        letters[i]=letters[i].toLowerCase()
-        for(var j=0;j<alphabets.length;j++)
-            if(letters[i]==alphabets[j]){
-                if(upperFlag)
-                    letters[i]=alphabets[25-j].toUpperCase()
-                else
-                    letters[i]=alphabets[25-j]
-            }
-        // reset
-        upperFlag=false
+        // is letter is upper case traverse upper case alphabets
+        if(isUpper(letters[i])){
+            for(var j=0;j<highAlphabets.length;j++)
+                if(letters[i]==highAlphabets[j]){
+                    // on finding letter in alphabets, change it to its corresponing mirror alphabet
+                    letters[i]=highAlphabets[25-j]
+                    // break to next letter of input string
+                    break
+                }
+        }
+        // is letter is lower case traverse lower case alphabets
+        else{
+            for(j=0;j<lowAlphabets.length;j++)
+                if(letters[i]==lowAlphabets[j]){
+                    letters[i]=lowAlphabets[25-j]
+                    break
+                }
+        }
     }
     return letters.join('')
 }

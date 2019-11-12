@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Github</title>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            #wrapper{
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                
+            }
+            #header{
+                height: 80px;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                background:"red";
+             
+                
+            }
+            #header > img {
+                float: left;
+                height: 70px;
+                width: 70px;
+            }
+            #header li{
+                display: inline;
+                color: white;
+                padding: 10px;
+            
+            }
+            #right {
+                float: right;
+                padding-top: 30px;
+                margin-bottom: 50px;
+                padding-right: 50px;
+            }
+            #left{
+                float: left;
+                padding-top: 30px;
+            }
+            #right li:nth-child(2){
+                border: 1px solid white
+            }
+
+            #msg {
+                color: cyan;
+            }
+            #msg > h1 {
+                color: white;
+                font-size: 55px;
+                margin-bottom: 50px;
+            }
+            #login{
+                padding: 30px;
+                background: white;
+                width: 320px;
+            }
+
+            #content{
+                margin-top: 100px;
+            }
+
+            #login{
+                margin-left: 300px;
+            }
+            #msg{
+                margin-left: 50px;
+            }
+            #msg, #login{
+                display: inline-block;
+                
+            }
+
+            #para{
+                font-size: 12px;
+            }
+            
+            #button{
+                background: #28a745;
+                height: 30px;
+                width: 200px;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                margin:20px;
+            }
+
+            #content2{
+                height: 300px;
+            }
+            #content2 > div{
+                display: inline-block;
+                width: 300px;
+                padding-top:50px;
+                
+            }
+            
+            #content2 > div:first-child{
+                padding-left: 30px;
+            }
+
+            #button2{
+
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align :center;
+                width: 150px;
+                height: 20px;
+                background: blueviolet;
+            }
+
+            #wall{
+                background-image: url("https://github.githubassets.com/images/modules/site/advanced-security-iso-ui.jpg");
+                height: 250px;
+                padding: 50px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #wall > h1{
+                color: white;
+            }
+            #wall > p{
+                color: cyan;
+            }
+
+            #footer{
+                padding-top: 100px;
+                padding-bottom: 100px;
+                text-align: center;
+                background: white;
+            }
+
+        </style>
+    </head>
+    <body style="background: #2B3137">
+        <div id="wrapper" >
+            <div id="header" style="background: #111216";>
+                <img src="https://p7.hiclipart.com/preview/593/30/489/github-computer-icons-commit-repository-github.jpg" />
+                <ul id="left">
+                    <li>Why Github?</li>
+                    <li>Enterprise</li>
+                    <li>Explore</li>
+                    <li>Marketplace</li>
+                    <li>Pricing</li>
+                </ul>
+                <ul id="right">
+                    <li>Sign in</li>
+                    <li>Sign up</li>
+                </ul>
+            </div>
+            <div style="clear: both"></div>
+            <div id="content">
+                <div id="upper">
+                    <div id="msg">
+                        <h1>Built for <br>developers</h1>
+                        <p>GitHub is a development platform inspired by the <br>
+                            way you work. From open source to business, you <br>
+                             can host and review code, manage projects, and<br>
+                              build software alongside 40 million developers.</p>
+                    </div>
+                    <div id="login">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div><p>Username</p></div>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div><p>Email</p></div>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div><p>Password</p></div>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td>
+                                        <div><p id="para">Make sure it's at least 15 characters OR <BR>
+                                             at least 8 characters including a number <BR>
+                                                and a lowercase letter. Learn more</p></div>
+                                        <div id="button">Sign Up for GitHub</div>
+                                    </td>
+                                </tr>
+                                
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="content2" style="background: white;">
+                <div>
+                    <h2>Get started with <br>
+                         GitHub Enterprise</h2> 
+                    <p>
+                            Take collaboration to the next level <br>
+                            with security and administrative <br>
+                            features built for teams. 
+                    </p>
+                </div>
+                <div>
+                    <h3>Enterprise Cloud</h3>
+                    <p>Leave the hosting to us.</p>
+                    <div id="button2">Try Cloud for free</div>
+                </div>
+                <div>
+                    <h3>Enterprise Server</h3>
+                    <p>Deploy to your environment.</p>
+                    <div  id="button2">Try Cloud for free</div>
+                </div>
+                <div>
+                    <h3>Talk to us</h3>
+                    <p>Want to use both?</p>
+                    <div  id="button2">Contact Sales</div>
+                </div>
+            </div>
+            <div id="wall">
+                <h1>
+                    Securing software, together
+                </h1>
+                <p>
+                    Discover community-powered tools to find and prevent security vulnerabilities, <br>
+                     announced at GitHub HQ in San Francisco.
+                </p>
+            </div>
+            <div id="footer">
+                <h2>GitHub for teams</h2>
+                <h1>A better way to work together</h1>
+            </div>
+        </div>
+    </body>
+</html>
