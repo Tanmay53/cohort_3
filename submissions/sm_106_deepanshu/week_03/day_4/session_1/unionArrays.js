@@ -1,31 +1,16 @@
-var arr1=[3,4,5,6,7,8]
-var arr2=[1,2,3,4,3,2]
+var arr1=[3,4,5,6,8]
+var arr2=[1,9,2,3,8]
+var cat = []
+function unionArrays(arr1, arr2) {
+    
+  cat = cat.concat(arr1)
 
-var union=[];
-
-var uniqUnion = [];
-var count=0;
-function unionArray(arr1, arr2) { 
-
-  for(var i=0; i<arr1.length;i++) {
-    union.push(arr1[i])
-  }
-  for(var j=0;j<arr2.length;j++) {
-    union.push(arr2[j])
-  }
-
-  for(i=0;i<union.length;i++)
-  {
-    for(j=0;j<union.length;j++)
-    {
-      if(union[i]==union[j])
-      union[i] = null
+  for(var i =0;i<arr2.length;i++) {
+    if(!arr1.includes(arr2[i])) {
+      cat.push(arr2[i])
     }
+  }
+  return cat
+}
 
-   
-  }
-  console.log(union)
-  }
-  
-  
-unionArray(arr1, arr2)
+console.log(unionArrays(arr1, arr2))
