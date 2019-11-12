@@ -1,4 +1,3 @@
-
 function union(set1,set2){
     var obj={}
     size1=set1.length
@@ -16,5 +15,3 @@ var set1= [1,2,3]
 var set2= [8,5,6,3,1,4,2,7]
 
 console.log(union(set1,set2))
-
-
