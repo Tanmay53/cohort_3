@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    .body {
+      margin-left: 25%;
+      margin-right: 25%;
+      border: 2px solid grey;
+      border-radius: 10px;
+    }
+
+    .drivingEligibilityCheck,
+    .changeColour,
+    .findContinent {
+      margin-top: -5%;
+      text-align: center;
+    }
+
+    #ageDisplay{
+      font-size: 18px;
+      text-decoration: underline;
+      color: royalblue;
+    }
+    .findContinent {
+      margin-bottom: 5%;
+    }
+
+    #ageCheck,
+    #colourToChange {
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    #buttonColour {
+      padding: 15px;
+      border-radius: 15px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <br><br>
+  <!-- FSD JS.8.2 Driving Eligibility Check -->
+  <div class="drivingEligibilityCheck">
+    <h2>Driving Eligibility Check</h2>
+    <div>
+      <input type="text" id="ageCheck" placeholder="Input age" />
+    </div>
+    <p id="ageDisplay"></p>
+    <button id="ageCheckButton" onclick="drivingEligibilityCheck()">Click to check Driving Eligibility</button>
+  </div>
+  <br><br>
+  <hr>
+  <br><br>
+
+  <!-- FSD JS.8.3 Change color of the button -->
+  <div class="changeColour">
+    <h2>Change color of the button</h2>
+    <div>
+      <input type="text" id="colourToChange" placeholder="Input colour">
+    </div>
+    <br>
+    <button id="buttonColour" onclick="changeColour()">Click here to change my color</button>
+  </div>
+  </div>
+  <br><br>
+  <hr>
+  <br><br>
+
+  <!-- FSD JS.8.4 Show continents for selected Country -->
+  <div class="findContinent">
+    <h2>Know Continents for the selected Country</h2>
+    <select id="select-continent">
+      <!-- <option value=""> -- </option> -->
+      <option value="India"> India </option>
+      <option value="United States of America"> United States of America </option>
+      <option value="China"> China </option>
+      <option value="Nepal"> Nepal </option>
+      <option value="Australia"> Australia </option>
+      <option value="France"> France </option>
+      <option value="Germany"> Germany </option>
+      <option value="South Africa"> South Africa </option>
+      <option value="Nigeria"> Nigeria </option>
+      <option value="Mexico"> Mexico </option>
+      <option value="Argentina"> Argentina </option>
+      <option value="Brazil"> Brazil </option>
+      <option value="Canada"> Canada </option>
+      <option value="Singapore"> Singapore </option>
+      <option value="Sweden"> Sweden </option>
+    </select>
+
+    <button id="clickToFindContinent" onclick="findContinent()">Find Continent</button>
+
+    <p id="continentName"></p>
+
+  </div>
+
+  <!-- Java Script code -->
+  <script>
+    // FSD JS.8.2
+    function drivingEligibilityCheck() {
+      if (document.getElementById("ageCheck").value == 0 || null) {
+        document.getElementById("ageDisplay").innerHTML = "Please enter your age above"
+      }
+      else if (document.getElementById("ageCheck").value > 18) {
+        document.getElementById("ageDisplay").innerHTML = "You can drive in India!"
+      }
+      else if (document.getElementById("ageCheck").value < 18) {
+        document.getElementById("ageDisplay").innerHTML = "You can't drive in India"
+      }
+      else {
+        document.getElementById("ageDisplay").innerHTML = "You are just old enough to drive in India!"
+      }
+    }
+    // FSD JS.8.3
+    function changeColour() {
+        document.getElementById("buttonColour").style.background = document.getElementById("colourToChange").value;
+    }
+
+    // FSD JS.8.4
+    function findContinent() {
+      var country = document.getElementById("select-continent").value
+      var continent
+
+      switch (country) {
+        case "India":
+          continent = "Asia";
+          break;
+        case "United States of America":
+          continent = "Asia";
+          break;
+        case "China":
+          continent = "Asia";
+          break;
+        case "Nepal":
+          continent = "Asia";
+          break;
+        case "Australia":
+          continent = "Oceania/Australia";
+          break;
+        case "France":
+          continent = "Europe";
+          break;
+        case "Germany":
+          continent = "Europe";
+          break;
+        case "South Africa":
+          continent = "Africa";
+          break;
+        case "Nigeria":
+          continent = "Africa";
+          break;
+        case "Mexico":
+          continent = "North America";
+          break;
+        case "Argentina":
+          continent = "South America";
+          break;
+        case "Brazil":
+          continent = "South America";
+          break;
+        case "Canada":
+          continent = "North America";
+          break;
+        case "Singapore":
+          continent = "Asia";
+          break;
+        case "Sweden":
+          continent = "Europe";
+          break;
+        default:
+          day = "Invalid Input";
+      }
+      document.getElementById("continentName").innerHTML = continent
+    }
+  </script>
+</body>
+
+</html>
