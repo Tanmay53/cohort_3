@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="box box-1">
+      <p class="para-1">Enter Your Age</p>
+      <p><input type="number" id="age"></p>
+      <button id="btn-1" onclick="enterAge()">Enter</button>
+    </div>
+    <div class="box box-2">
+      <p class="para-1">Enter Your Color</p>
+      <p><input type="text" id="color"></p>
+      <button id="btn-2" onclick="changeColor()">Change Color</button>
+    </div>
+    <div class="box box-3">
+      <p class="para-1">Enter Your Country</p>
+      <p>
+        <select name="" id="select-box" onclick="selectContinent()">
+          <option value=""></option>
+          <option value="Asia">India</option>
+          <option value="North America">United States of America</option>
+          <option value="Asia">China</option>
+          <option value="Asia">Nepal</option>
+          <option value="Australia">Australia</option>
+          <option value="Europe">France</option>
+          <option value="Europe">Germany</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="North America">Mexico</option>
+          <option value="South America">Brazil</option>
+          <option value="Argentina">Argentina</option>
+          <option value="North America">Canada</option>
+          <option value="Asia">Singapore</option>
+          <option value="Europe">Sweden</option>
+        </select>
+      </p>
+    </div>
+  </div>
+  <div id="get-para"><p id="get-value">age</p></div>
+  <script>
+    function enterAge() {
+      val = document.getElementById('age').value
+      if(val > 18) {
+        document.getElementById('get-value').innerHTML = "You can drive in India!"
+      }
+      else if (val == 18) {
+        document.getElementById('get-value').innerHTML = "You are just old enough to drive in India!"
+      }
+      else {
+        document.getElementById('get-value').innerHTML = "You can't drive in India"
+      }
+    }
+
+    function changeColor() {
+      val = document.getElementById('color').value
+      document.getElementById('btn-2').style.color = val
+      document.getElementById('get-value').style.color = val
+    }
+
+    function selectContinent() {
+      val = document.getElementById('select-box').value
+      alert(val)
+    }
+
+  </script>
+</body>
+</html>
