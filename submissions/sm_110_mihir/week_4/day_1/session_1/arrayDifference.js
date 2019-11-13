@@ -1,5 +1,5 @@
 // set1 - set2
-function intersection(set1,set2){
+function difference(set1,set2){
     var obj={},result={}
     size1=set1.length
     size2=set2.length
@@ -30,6 +30,6 @@ function intersection(set1,set2){
 }
 var set1= [8,5,6,1,4,2,7,3]
 var set2= [1,2,8,0,9,10,2,3]
-console.log(intersection(set1,set2))
+console.log(difference(set1,set2))
 
 // set1-set2 output- [4,5,6,7]
