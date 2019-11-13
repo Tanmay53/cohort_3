@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .ageCheck,.colorButton,.continent_select {
+            margin: 80px 0px 0px 350px;
+        }
+    </style>
+    <script type="text/javascript">
+        function ageCheck() {
+            var age = document.getElementById("ageCheck").value;
+            if (age > 18)
+                document.getElementById("ageResult").innerHTML = "You can drive in India";
+            else if (age < 18)
+                document.getElementById("ageResult").innerHTML = "You can not drive in India";
+            else
+                document.getElementById("ageResult").innerHTML = "You are just old enough to drive in India!";
+
+        }
+        function changeButton() {
+            var color = document.getElementById("colorButton").value;
+            document.getElementById("changeColor").style.background=color;
+        }
+        function findContinent(){
+            var country=document.getElementById("continent_select").value;
+            switch (country)
+            {
+                case "India":
+                case "China":
+                case "Singapore":
+                case "Nepal":
+                    alert("The continent is Asia")
+                    break;
+                case "United States of America":
+                case "Canada":
+                case "Mexico":
+                    alert("The continent is North America")
+                    break;
+                case "France":
+                case "Germany":
+                case "Sweden":
+                    alert("The continent is Europe")
+                    break;
+                case "South Africa":
+                case "Nigeria":
+                    alert("The continent is Africa")
+                    break;
+                case "Argentina":
+                case "Brazil":
+                    alert("The continent is South America")
+                    break;
+           }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- class for checking if user can drive in India -->
+    <div class="ageCheck">
+        <input type="text" id="ageCheck" placeholder="Enter your Age">
+        <br>
+        <button onclick="ageCheck()">Age Check</button>
+        <p id="ageResult"></p>
+    </div>
+    <!-- class for changing buttons color -->
+    <div class="colorButton">
+        <input type="text" id="colorButton">
+        <br>
+        <div><button onclick="changeButton()" id="changeColor">Color Change</button></div>
+    </div>
+    <!-- class for checking continent -->
+    <div class="continent_select">
+        <select id="continent_select">
+            <option value="India"> India </option>
+            <option value="United States of America">United States of America</option>
+            <option value="China">China</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Australia">Australia</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Canada">Canada</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Sweden">Sweden</option>
+        </select>
+        <button onclick="findContinent()" id="Continent">Find Continent</button>
+    </div>
+</body>
+</html>
