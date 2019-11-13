@@ -1,22 +1,17 @@
-var num2
-var value
-var add
-var sum
-for(var i=1; i<=10; i++)
-{
-    if(i%2==0)
-    {   
-     console.log(i)
-          
-          console.log('printSumArg of',i,num2,'is',+i + num2)
-          return i+num2
-          
+var num=100//given limit
+var num2=20//given number
 
-      
-           
-      }
-    
+var value=0
+var sum = 0
+for(var i=1; i<=num; i++)
+{
+   if( i%20==0)
+   {
+    sum =sum+i
+    value=value+1
+   }  
 }
+console.log(sum/value)//60
 
 
 
