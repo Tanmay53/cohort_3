@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>JS</title>
+        <style>
+            .drive input{
+                border: 2px solid red;
+                height: 30px;
+            }
+            .drive, .buttonColor, .continent {
+                text-align: center;
+                border-top: 2px solid gray
+            }
+
+            .drive > button {
+                margin:  20px;
+                padding: 10px;
+            }
+            .buttonColor input {
+                margin:  10px 10px 0px 10px;
+                height: 30px;
+            }
+            .buttonColor button {
+                margin:  30px;
+                padding: 20px;
+                font-size: 30px;
+            }
+            .continent {
+                padding:  30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="drive">
+            <h1>You are eligible to Drive in INDIA?</h1>
+            <h3>Age:</h3>
+            <input type = text id = "age" name = "age">
+                <br>
+            <button onclick = verify() id = "verify">Verify</button>
+            <p id = "result"></p>
+        </div>
+        <div class="buttonColor">
+            <p>Please enter color</p>
+                <input type = text id = "colorButtonText" name = "name">
+                <br>
+            <button onclick = colorChange() id = "colorButton">Click here to change my color</button>
+        </div>
+        <div class="continent">
+                <select id = "continent_select">
+                        <option value = "Asia"> India </option>
+                        <option value = "North America">States of America</option>
+                        <option value = "Asia">China</option>
+                        <option value = "Asia">Nepal</option>
+                        <option value = "Oceania/Australia">Australia</option>
+                        <option value = "Europe">France</option>
+                        <option value = "Europe">Germany</option>
+                        <option value = "Africa">South Africa</option>
+                        <option value = "Africa">Nigeria</option>
+                        <option value = "North America"> Mexico</option>
+                        <option value = "South America">Argentina</option>
+                        <option value = "South America">Brazil</option>
+                        <option value = "North America">Canada</option>
+                        <option value = "Asia">Singapore</option>
+                        <option value = "Europe">Sweden	</option>
+                    </select>
+
+                    <button onclick = findContinent()>Find continent </button>
+        </div>
+        <script>
+
+
+        // function for drive
+
+            function verify() {
+                        var x = 0
+                        var result = ""
+                        x = parseInt(document.getElementById("age").value)
+                        if(x > 18)
+                        {
+                            result = "You can drive in India!"
+                        }
+                        if ( x < 18)
+                        {
+                            result = "You can't drive in India"
+                        }
+                        if (x == 18)
+                        {
+                            result = "You are just old enough to drive"
+                        }
+
+                        document.getElementById("result").innerHTML = result
+            }
+
+            // function for colorchange button
+
+            function colorChange (){
+                document.getElementById("colorButton").style.background = document.getElementById("colorButtonText").value
+            }
+
+            // function for continent
+
+            function findContinent(){
+                alert("The continent is " +document.getElementById("continent_select").value)
+            }
+        </script>
+    </body>
+</html>
