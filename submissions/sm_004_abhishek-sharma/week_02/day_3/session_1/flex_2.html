@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flex Layout 2</title>
+	<style type="text/css">
+		body{
+			padding: 100px 300px;
+		}
+		.box{
+			display: flex;
+			flex-flow: row nowrap;
+			width: 620px;
+		}
+		.box div{
+			background-color: #14868C;
+			margin: 20px; 
+			width: 100px; 
+			height: 100px; 
+		}	
+		#row1 div:nth-of-type(2){
+			flex-grow: 3;
+		}
+		#row2 div:nth-of-type(1){
+			flex-grow: 3.4;
+			margin: 20px 10px 20px 20px;
+		}
+		#row3 div:nth-of-type(3){
+			flex-grow: 3;
+		}
+		#row2 .column_2{
+			margin: 20px 10px;
+		}
+		#row2 .column_3{
+			margin: 20px 20px 20px 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box" id="row1">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="box" id="row2">
+		<div></div>
+		<div class="column_2"></div>
+		<div class="column_3"></div>
+	</div>
+	<div class="box" id="row3">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+</body>
+</html>
