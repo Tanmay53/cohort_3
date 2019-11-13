@@ -32,6 +32,20 @@ function get_mirror_image(string) {
 // code execution starts here
 
 var string = "PaPa"
-var string = "AyzB"
+var string = "PaPa"
+var string = "AbKbA"
 
 console.log(get_mirror_image(string))
+
+/*
+------------------------Test Cases-----------------------
+
+Input --------------------------- Ouput
+
+AyzB                              AyzB
+PaPa                              KzKz
+AbRaM                             ZyIzN
+AbKbA                             ZyPyZ
+
+
+*/
