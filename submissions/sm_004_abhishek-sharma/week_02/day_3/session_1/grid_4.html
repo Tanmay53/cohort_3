@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Layout 4</title>
+    <style>
+        body{
+            padding: 100px 250px;
+        }
+        #cont{
+            display: grid;
+            gap: 40px;
+            grid-template-columns: 125px 125px 50px 125px 125px;
+            grid-template-rows: repeat(3, 125px);
+        }
+        #cont div{
+			background-color: #14868C;
+		}
+        #line1{
+            grid-area: 1/ 2/ 1/ span 3;
+            margin-right: 20px;
+        } 
+        #line2{
+            grid-area: 2/ 1/ 2/ span 3;
+
+        } 
+        #line3{
+            grid-area: 3/ 3/ 3/ span 3;
+        }        
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div></div>
+        <div id="line1"></div>
+        <div></div>
+
+        <div id="line2"></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div id="line3"></div>
+    </div>
+    
+</body>
+</html>
