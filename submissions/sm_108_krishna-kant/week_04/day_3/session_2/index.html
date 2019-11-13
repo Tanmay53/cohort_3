@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Index</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid-container">
+        <div>
+          <div class="form-group">
+            <label for="age">Enter your age</label>
+            <input type="number" id="age" required />
+            <input
+              type="submit"
+              class="btn-primary"
+              value="Calculate"
+              onclick="checkAge()"
+            />
+            <span class="result" id="ageResult"></span>
+          </div>
+        </div>
+        <div>
+          <div class="form-group">
+            <label for="color" id="colorResult">Enter your color</label>
+            <input type="text" id="color" required />
+            <input
+              type="submit"
+              class="btn-primary"
+              value="Change"
+              id="changeColor"
+              onclick="changeColor()"
+            />
+            <span class="result" id="ageColor"></span>
+          </div>
+        </div>
+        <div>
+          <div class="form-group">
+            <label for="color">Enter your color</label>
+            <select name="city" id="country" required>
+              <option value=""></option>
+              <option value="India">India</option>
+              <option value="United States of America"
+                >United States of America</option
+              >
+              <option value="China">China</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Australia">Australia</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="South Africa">South Africa</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Canada">Canada</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Sweden">Sweden</option>
+            </select>
+            <input
+              type="submit"
+              class="btn-primary"
+              value="Check"
+              onclick="checkCountry()"
+            />
+            <span class="result" id="resultCountry"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
