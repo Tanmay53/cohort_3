@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Playing with DOM</title>
+    </head>
+    <body>
+        <div>
+            Age: <input type='text' id='age'>
+            <button onclick='evaluateAge()'>Can I Drive?</button>
+            <p id='agePara'></p>
+        </div>
+
+        <div>
+            Color: <input type='text' id='color'>
+            <button onclick='changeColor()' id='cButton'>Click here to change my color</button>
+        </div>
+
+        <div>
+            <select id="continentSelect">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="United States of America">United States of America</option>
+                <option value="China">China</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Australia">Australia</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Sweden">Sweden</option>
+            </select>
+            <button onclick='findContinent()'>Find Continent</button>
+        </div>
+
+        <script type='text/javascript'>
+        function evaluateAge(){
+            var age = document.getElementById('age').value
+            document.getElementById('age').value = ''
+            if(age != ''){
+                if(age > 18){
+                    document.getElementById('agePara').innerHTML = 'You can drive in India!'
+                }
+                else if(age < 18){
+                    document.getElementById('agePara').innerHTML = 'You cannot drive in India!'
+                }
+                else if(age == 18){
+                    document.getElementById('agePara').innerHTML = 'You are just old enough to drive in India!'
+                }
+            }
+            else{
+                document.getElementById('agePara').innerHTML = ''
+            }
+        }
+
+        function changeColor(){
+            var color = document.getElementById('color').value
+            document.getElementById('cButton').style.background = color
+        }
+
+        function findContinent(){
+            var country = document.getElementById('continentSelect').value
+            document.getElementById('continentSelect').value = ''
+            switch(country){
+                case 'India': alert('The continent is Asia')
+                              break
+                case 'China': alert('The continent is Asia')
+                              break
+                case 'Australia': alert('The continent is Australia')
+                                  break
+                case 'United States of America': alert('The continent is North America')
+                                                 break
+                case 'Nepal': alert('The continent is Asia')
+                              break
+                case 'France': alert('The continent is Europe')
+                               break
+                case 'Germany': alert('The continent is Europe')
+                                break
+                case 'South Africa': alert('The continent is Africa')
+                                     break
+                case 'Nigeria': alert('The continent is Africa')
+                                break
+                case 'Mexico': alert('The continent is South America')
+                               break
+                case 'Argentina': alert('The continent is South America')
+                                  break
+                case 'Brazil': alert('The continent is South America')
+                               break
+                case 'Canada': alert('The continent is North America')
+                               break
+                case 'Singapore': alert('The continent is Asia')
+                                  break
+                case 'Sweden':alert('The continent is Europe')
+                              break
+            }
+        }
+        </script>
+    </body>
+</html>

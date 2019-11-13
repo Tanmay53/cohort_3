@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Layout 3</title>
+    <style>
+        body{
+            padding: 25px 200px;
+        }
+        #cont{
+            display: grid;
+            gap: 50px;
+            grid-template-columns: repeat(4, 150px);
+            grid-template-rows: repeat(4, 150px);
+        }
+        #cont div{
+			background-color: #14868C;
+		}
+        #cont .hide{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="hide"></div>
+
+        <div></div>
+        <div></div>
+        <div class="hide"></div>
+        <div class="hide"></div>
+
+        <div></div>
+        <div class="hide"></div>
+        <div class="hide"></div>
+        <div class="hide"></div>
+    </div>
+    
+</body>
+</html>

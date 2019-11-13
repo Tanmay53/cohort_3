@@ -1,10 +1,19 @@
-var name="Masai School is Awesome"
-var sc='s'
-//console.log(typeof(name))
-for(i=0;name[i].length;i++)
+var name="Masai"
+var splitcharac='s'
+var arr
+var i=0
+
+console.log(typeof(name[i]))
+
+for(i=0;i<=name.length-1;i++)
 {
-    console.log("The split string is", name[i])
-    if()
-
-
+    // for(j=0;j<=name.length-1;j++)
+    // {
+    console.log(name[i])
+    if('s'==name[i])
+    {
+      console.log(typeof(s))
+        break
+    }
+    // }
 }
