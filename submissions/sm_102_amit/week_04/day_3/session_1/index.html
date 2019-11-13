@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W4 D3 Coding</title>
+  </head>
+  <body>
+    <h1>Check your eligibility!</h1>
+    <input type="number" name="age" id="age" />
+    <button onclick="checkAge()">Check Eligibility</button>
+    <p id="result"></p>
+
+    <hr />
+
+    <h1>Change Button Color!</h1>
+    <input type="text" name="color" id="color" />
+    <button onclick="changeColor()" id="btn">Change Color</button>
+
+    <hr />
+
+    <h1>Check the Continent!</h1>
+    <select name="country" id="continent_select">
+      <option value=""></option>
+      <option value="India">India</option>
+      <option value="United States of America">United States of America</option>
+      <option value="China">China</option>
+      <option value="Nepal">Nepal</option>
+      <option value="Australia">Australia</option>
+      <option value="France">France</option>
+      <option value="Germany">Germany</option>
+      <option value="South Africa">South Africa</option>
+      <option value="Nigeria">Nigeria</option>
+      <option value="Mexico">Mexico</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Brazil">Brazil</option>
+      <option value="Canada">Canada</option>
+      <option value="Singapore">Singapore</option>
+      <option value="Sweden">Sweden</option>
+    </select>
+    <button onclick="findContinent()">Find Continent</button>
+    <script type="text/javascript">
+      // function to check the age
+      function checkAge() {
+        var output = "";
+        // show the alert when input is blank
+        if (document.getElementById("age").value == "") {
+          alert("No input!");
+        } else {
+          var age = document.getElementById("age").value;
+          if (age > 18) {
+            output = "You can drive in India!";
+          } else if (age < 18) {
+            output = "You can't drive in India!";
+          } else if (age == 18) {
+            output = "You are just old enough to drive in India!";
+          }
+          document.getElementById("result").innerHTML = output;
+        }
+      }
+
+      // function to change the background color of button
+      function changeColor() {
+        // show the alert when input is blank
+        if (document.getElementById("color").value == "") {
+          alert("No input!");
+        } else {
+          var color = document.getElementById("color").value;
+          document.getElementById("btn").style.backgroundColor = color;
+        }
+      }
+
+      // function to check the continent of selected country
+      function findContinent() {
+        var output = "";
+        // show the alert when input is blank
+        if (document.getElementById("continent_select").value == "") {
+          alert("No input!");
+        } else {
+          var country = document.getElementById("continent_select").value;
+          // switch case
+          switch (country) {
+            case "India":
+              output = "The continent is Asia";
+              break;
+            case "USA":
+              output = "The continent is North America";
+              break;
+            case "China":
+              output = "The continent is Asia";
+              break;
+            case "Nepal":
+              output = "The continent is Asia";
+              break;
+            case "Australia":
+              output = "The continent is Australia";
+              break;
+            case "France":
+              output = "The continent is Europe";
+              break;
+            case "Germany":
+              output = "The continent is Europe";
+              break;
+            case "South Africa":
+              output = "The continent is Africa";
+              break;
+            case "Nigeria":
+              output = "The continent is Africa";
+              break;
+            case "Mexico":
+              output = "The continent is North America";
+              break;
+            case "Argentina":
+              output = "The continent is South America";
+              break;
+            case "Brazil":
+              output = "The continent is South America";
+              break;
+            case "Canada":
+              output = "The continent is North America";
+              break;
+            case "Singapore":
+              output = "The continent is Asia";
+              break;
+            case "Sweden":
+              output = "The continent is Europe";
+              break;
+            default:
+              output = "No Continent!";
+          }
+          alert(output);
+        }
+      }
+    </script>
+  </body>
+</html>
