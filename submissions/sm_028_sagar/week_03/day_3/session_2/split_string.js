@@ -1,5 +1,5 @@
-var string = ' AAB/BB/3/KDSO'; //given string
-var givenChar = '/'; //given character
+var string = ' AAB  BB 3/KDSO'; //given string
+var givenChar = ' '; //given character
 
 //invoking function
 split_arr(string, givenChar);
