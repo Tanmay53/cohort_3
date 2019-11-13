@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Layout 2</title>
+    <style>
+        #cont{
+            display: grid;
+            gap: 25px;
+            grid-template-columns: 250px 1000px;
+            grid-template-rows: 50px 800px;
+            padding: 25px;
+
+        }
+        #block1{
+			background: red;
+            grid-area: 1/1/1/span 2;
+        }
+        #block2{
+			background: lightgreen; 
+            margin: 0px 0px 10px 10px;
+        }
+        #block3{
+			background: #14868C;            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div id="block1"></div>
+        <div id="block2"></div>
+        <div id="block3"></div>
+    </div>
+    
+</body>
+</html>
