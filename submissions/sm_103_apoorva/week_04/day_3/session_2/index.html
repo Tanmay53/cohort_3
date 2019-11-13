@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Your Elegibility</h1>
+    <p>Enter Your age Below</p>
+    <div>
+        <input type="text" id="age"/>
+    </div>
+    </br>
+    <button onclick="drive()" >Show Eligibity</button>
+    <p id="result"></p>
+    <br>
+    <div style="border-block-end-style: solid;"></div>
+    <br>
+
+
+
+
+    <h1>Change color of button</h1>
+    <br>
+    <div>
+            <input type="text" id="color" />
+    </div>
+    <br>
+    <button onclick="changeColor()" id="type">Click here to change my color</button>
+    <br>
+    <div style="border-block-end-style: solid;"></div>
+    <br>
+
+
+
+
+    <h1>Check Continent of a Country</h1>
+    <p>Enter Country below</p>
+    <div>
+        <input type="text" id="countryName"/>
+    </div>
+    <br>
+    <button onclick="countries()">Show Continent</button>
+
+    <script type="text/javascript"> 
+
+    function drive()
+    {
+        var output="";
+        var input=document.getElementById("age").value
+        if(input>18)
+        {
+            output="You can drive in India!"
+        }
+        else if(input<18)
+        {
+            output="You can't drive in India"
+        }
+        else if(input ==18)
+        {
+            output="You are just old enough to drive in India!"
+        }
+        document.getElementById("result").innerHTML=output
+    }
+
+
+
+    function changeColor()
+    {
+
+        var input=document.getElementById("color").value
+        document.getElementById("type").style.background=input
+
+    }
+
+
+
+
+
+
+
+    function countries()
+    {
+        var output=""
+        var Continent="Asia Europe Africa North America South America Australia"
+        var country= document.getElementById("countryName").value
+        switch(country){
+            case "India":
+            case "China":
+            case "Nepal":
+            case "Singapore":
+                output= "Continent is Asia";
+                break;
+            case "France":
+            case "Germany":
+            case "Sweden":
+                output="Continent is Europe";
+                break;
+            case "canada":
+            case "United States Of America":
+            case "Mexico":
+                output="Continent is North America";
+                break;
+            case "Brazil":
+            case "Argentina":
+                output="Continent is South America";
+                break;
+            case "Nigeria":
+            case "South Africa":
+                output="Continent is Africa";
+                break;
+            case "Australia":
+                output="Continent is Australia"; 
+            }
+            alert(output)
+    }
+    
+    </script>
+    
+</body>
+</html>
