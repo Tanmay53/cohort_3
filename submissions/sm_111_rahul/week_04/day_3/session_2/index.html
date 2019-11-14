@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eligibility to drive in India</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            font-size: 18px;
+    
+        }
+        #container{
+            display: flex;
+            flex-basis: row;
+            width:80%;
+            height: 30%;
+            margin: 30px auto;
+            justify-content: center;
+
+            
+        }
+        #container > div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            width: 350px;
+            height: 250px;
+            border-radius: 5px;
+            padding:20px;
+    
+            
+            
+        }
+        #container div:nth-child(1){
+            background-color: #00909e;
+            margin-right: 30px;
+        }
+        #container div:nth-child(2){
+            background-color: #e25822;
+            margin-right: 30px;
+        }
+        #container div:nth-child(3){
+            background-color: #6fc1a5;
+        }
+        input , select{
+            width:200px;
+            height: 30px;
+        }
+        button{
+            width:200px;
+            height: 30px;
+        }
+        #info{
+            text-align: center;
+            font-size: 35px;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <input type="number" name="age" id="age" placeholder="Enter Your Age"><br><br>
+            <button onclick="checkEligiblity()">Check Eligibility</button><br><br>
+            <p id="info"></p>
+        </div>
+        <div>
+            <input type="text" placeholder="Enter color name" name="dColor" id="dColor"><br><br>
+            <button onclick="changeColor()" id="btn-clr">Be Colorful</button>
+        </div>
+        <div>
+            <select id="continentSelect">
+                <option value="" selected>Select Country</option>
+                <option value="India">India</option>
+                <option value="United States of America">United States of America</option>
+                <option value="China">China</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Australia">Australia</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Sweden">Sweden</option>
+            </select><br><br>
+            <button onclick="findContinent()">Find Continent</button>
+        </div>
+    </div>
+    <script>
+            function checkEligiblity() {
+                var age = document.getElementById('age').value;
+                if(age >= 0){
+                    if (age > 18) {
+                        document.getElementById('info').innerHTML = "You can drive in India!";
+                        document.getElementById('info').style.color = "green"
+                    } else if (age == 18) {
+                        document.getElementById('info').innerHTML = "You are just old enough to drive in India!";
+                        document.getElementById('info').style.color = "Yellow"
+                    } else {
+                        document.getElementById('info').innerHTML = "You can't drive in India";
+                        document.getElementById('info').style.color = "Red"
+                    }
+                }else{
+                    document.getElementById('info').innerHTML = "Invalid Age"
+                }
+            }
+            function changeColor() {
+                document.getElementById('btn-clr').style.background = document.getElementById('dColor').value;
+            }
+    
+            function findContinent() {
+                var country = document.getElementById('continentSelect').value
+                switch (country) {
+                    case 'India':
+                        alert('The continent is Asia');
+                        break;
+                    case 'United States of America':
+                        alert('The continent is North America');
+                        break;
+                    case 'China':
+                        alert('The continent is Asia');
+                        break;
+                    case 'Australia':
+                        alert('The continent is Australia');
+                        break;
+                    case 'France':
+                        alert('The continent is Europe');
+                        break;
+                    case 'Germany':
+                        alert('The continent is Europe');
+                        break;
+                    case 'South Africa':
+                        alert('The continent is Africa');
+                        break;
+                    case 'Nigeria':
+                        alert('The continent is Africa');
+                        break;
+                    case 'Argentina':
+                        alert('The continent is South America');
+                        break;
+                    case 'Brazil':
+                        alert('The continent is South America');
+                        break;
+                    case 'Canada':
+                        alert('The continent is North America');
+                        break;
+                    case 'Singapore':
+                        alert('The continent is Asia');
+                        break;
+                    case 'Sweden':
+                        alert('The continent is Europe');
+                        break;
+                    default: {
+                        alert('Unable to locate it')
+                    }
+                }
+            }
+        </script>
+</body>
+
+</html>
