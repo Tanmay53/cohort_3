@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>marraige age validator</title>
+</head>
+<body>
+    <label for="gender">gender</label>
+    <select name="gender" id="gender">
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+    </select>
+    <label for="year">Year of Birth</label>
+    <input type="text" id="year">
+    <button onclick="checkAge()">Am I old enought to get Married?</button>
+    <script type="text/javascript">
+        function checkAge(){
+            var year=document.getElementById("year").value 
+            year=parseInt(year)
+            var gender=document.getElementById("gender").value
+            var age=2019-year
+            if(gender=="F"){
+                if(age>=18)
+                    alert('Valid age to get married')
+                else
+                    alert('Not valid age to get Marraied. Minimal age for female is 18.')
+            }
+            else{
+                if(age>=21)
+                    alert('Valid age to get married')
+                else
+                    alert('Not valid age to get Marraied. Minimal age for female is 18.')
+            }
+        }
+    </script>
+</body>
+</html>
