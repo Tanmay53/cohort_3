@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button onclick="createH1()" id="buttonCreateH1" >Create H1</button>
+        <button onclick="createH3()" >Create 2 H3</button>
+        <button onclick="createDivs()">Create DIVS</button>
+        <button onclick="addStudent()" >Add Students</button>
+        <button onclick="addCopyright()" >Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+            
+            function createH3() {
+                var firstH3 = document.createElement('h3')
+                firstH3.innerHTML = "A Transformation in education!"
+
+                var secondH3 = document.createElement('h3')
+                secondH3.innerHTML = "Learn to earn, pay when you get."
+
+                // find div with id headings
+                var elemDiv = document.getElementById('headings')
+                elemDiv.appendChild(firstH3)
+                elemDiv.appendChild(secondH3)
+
+            }
+
+            function createH1() {
+                //alert('working')
+                
+                var newH1 = document.createElement('h1')
+                newH1.innerHTML = 'MASAI'
+
+                // find div with id headings
+                var elemDiv = document.getElementById('headings')
+                elemDiv.appendChild(newH1)
+            }
+
+            function createDivs() {
+                var elemDiv = document.getElementById('cont')
+                for(var i = 1; i <= 10; i++) {
+                    newDiv = document.createElement('div')
+                    newDiv.innerHTML = 'Content ' + i
+
+                    elemDiv.appendChild(newDiv)
+                }
+
+            }
+
+            function addStudent() {
+                elemUl = document.getElementById('vikings')
+                for(name of students.values()) {
+                    newLi = document.createElement('li')
+                    newLi.innerHTML = name
+
+                    elemUl.appendChild(newLi)
+                }
+            }
+
+            function addCopyright() {
+                //alert('Working')
+                
+                // find reference to body
+                body = document.querySelector('body')
+                
+                elem = document.getElementById('buttonCreateH1')
+                new_p = document.createElement('p')
+                new_p.innerHTML = "@ masai 2019"
+
+                body.insertBefore(new_p, elem)
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function validmarrage()
+{
+    gender  = document.getElementById("gender").value
+    year    = document.getElementById("year").value
+   agee=2019-year
+  if(gender=="FEMALE")
+    {
+      if(agee>=18)
+        {
+          alert('You are allowed to get married !')
+        }
+        else
+        {
+          alert('You are not allowed to get married !')
+         }
+    }
+   else if(gender=="MALE")
+     {
+       if(agee>=21)
+         {
+          alert('You are allowed to get married !')
+        }
+        else
+        {
+          alert('You are not allowed to get married !')
+         }
+     }
+  else
+    {
+      alert("enter your gender please")
+    }     
+ }
+</script>
+<style>
+.container{
+                    width : 60%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 50px;
+                    background-color:pink;
+                }
+.btn {
+    border: 2px solid red;
+    color:green;
+}
+.btn:hover {
+    background-color: yellow;
+    color: blue;
+    transition-duration: 0.9s;
+}
+</style>
+    </head>
+
+    <body>
+        <body>
+            <div class="container">
+              <table>
+                <tr>
+                  <td>MARRAIGE VALIDATOR</td>
+                </tr>
+                <tr>
+                  <tr>
+                   <td>Select gender </td>
+                    <td>
+          <select id = "gender">
+          <option value = "--"> --</option>	
+         <option value = "MALE"> MALE </option>	
+            <option value = "FEMALE"> FEMALE</option>  
+            </td>
+                </tr>
+         <tr>
+        <td>Year of birth</td>
+        <td>
+          <input type="number" id="year" placeholder="yyyy">  </td>
+          </tr>
+           <tr>
+           <td></td>
+            <td>
+        <input type="button" class="btn" value = "find validation" onclick="validmarrage()">
+            </td>
+          </tr>
+                
+                      
+        </select>
+         </td>
+         </tr>
+          </table>
+        </div>
+                        
+    </body>
+</html>
