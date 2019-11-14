@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>marraiage_age_validator</title>
+    </head>
+    <body>
+        <select id="gender">
+            <option value="">--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <input type="text" name="age" id="age">
+        <p></p>
+        <button onclick="checkValid()">Check Valid</button>
+        
+        <script type="text/javascript">
+            function checkValid() {
+                var gender = document.getElementById('gender').value;
+                var age = document.getElementById("age").value;
+
+                if((gender === "male" && age > 22) || (gender === "female" && age > 18)) {
+                    alert("Valid");
+                } else {
+                    alert("Invalid");
+                }
+            }
+        </script>
+    </body>
+</html>

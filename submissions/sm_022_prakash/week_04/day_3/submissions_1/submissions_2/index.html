@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Values</title>
+</head>
+<body>
+  <p id="older18">You can drive in India!</p>
+  <p id="youngerThan18">You can't drive in India</p>
+  <p id="exactly18"> You are just old enough to drive in India!</p>
+	
+	<hr>
+	<button onclick="olderThan18()">>18</button>
+	<button onclick="youngerThan18()">Less than</button>
+	<button onclick="exactly18()">=18</button>
+	<script type="text/javascript">
+		function olderThan18() {
+			alert(document.getElementById("older18").value = "You can drive in India!");
+		}
+
+		function youngerThan18() {
+      alert(document.getElementById("youngerThan18").value= "You can't drive in Indi");
+		}
+
+		function exactly18() {
+      alert(document.getElementById("exactly18").value="You are just old enough to drive in India!");
+		}
+	</script>
+</body>
+</html>
