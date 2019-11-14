@@ -109,11 +109,9 @@ function checkLettersValidity(str){
 
 function checkTwoDots(str){
     for(var i=0;i<str.length-1;i++){
-        for(var j=i+1;j<str.length;j++){
-            if(str[i] == str[j] && str[i] == '.'){
-                //console.log('Invalid email. 2 dots(.) found simultaneously')
-                return -3
-            }
+        if(str[i] == str[i+1] && str[i] == '.'){
+            //console.log('Invalid email. 2 dots(.) found simultaneously')
+            return -3
         }
     }
 }
