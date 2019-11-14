@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driving Eligibilty</title>
+</head>
+<body>
+    <input type="text" name="yourAge" id="yourAge">
+    <input type="text" name="yourColor" id="yourColor">
+    <select id = "continent_select">
+        <option value="">--</option>
+        <option value = "India"> India </option>	
+        <option value = "United States of America"> United States of America </option>	
+        <option value = "China"> China </option>	
+        <option value = "Nepal"> Nepal </option>	
+        <option value = "Australia"> Australia </option>	
+        <option value = "France"> France </option>	
+        <option value = "Germany"> Germany </option>	
+        <option value = "South Africa"> South Africa </option>	
+        <option value = "Nigeria"> Nigeria </option>	
+        <option value = "Mexico"> Mexico </option>	
+        <option value = "Argentina"> Argentina </option>	
+        <option value = "Brazil"> Brazil </option>	
+        <option value = "Canada"> Canada </option>	
+        <option value = "Singapore"> Singapore </option>	
+        <option value = "Sweden"> Sweden </option>	
+    </select>
+    <p id="eligibility"></p>
+    <br><br>
+	<button onclick="drivingAge()">CHECK ELIGIBILTY</button>
+    <button id="newColor" onclick="changeColor()">Click here to change my color</button>
+	<button onclick="findContinent()">Find Continent</button>
+
+    <script type="text/javascript">
+        function drivingAge() {
+            var age = document.getElementById("yourAge").value 
+            // document.getElementById("eligibilty").innerHTML = age
+            if(age > 18)
+                document.getElementById("eligibility").innerHTML = "You can drive in India!"
+            else if(age < 18)
+                document.getElementById("eligibility").innerHTML = "You can't drive in India"
+            else
+                document.getElementById("eligibility").innerHTML = "You are just old enough to drive in India!"
+        }
+
+        function changeColor(){
+            var color = document.getElementById("yourColor").value
+            document.getElementById("newColor").style.backgroundColor = color
+        }
+
+        function findContinent(){
+            var country = document.getElementById("continent_select").value
+            switch(country){
+                case 'India':
+                case 'China':
+                case 'Nepal':
+                case 'Singapore':
+                    alert("The continent is Asia");
+                    break;
+                
+                case 'United States of America':
+                case 'Mexico':
+                case 'Canada':
+                    alert("The continent is North America");
+                    break;
+
+                case 'South America':
+                case 'Argentina':
+                case 'Brazil':
+                    alert("The continent is South America");
+                    break;
+                
+                case 'France':
+                case 'Germany':
+                case 'Sweden':
+                    alert("The continent is Europe");
+                    break;
+
+                case 'Nigeria':
+                    alert("The continent is Africa");
+                    break;
+                case 'Australia':
+                    alert("The continent is Australia");
+                    break;
+                default:
+                    alert("Select a country from the given list!");
+                    break;
+            }
+        }
+    </script>
+    
+</body>
+</html>
