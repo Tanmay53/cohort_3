@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeH1()">Remove H1</button>
+        <button onclick="removeH3()">Remove H3</button>
+        <button onclick="removeH5()" >Remove H5</button>
+        <button onclick="removeRed()">Remove Red</button>
+        <button onclick="removeDivs()" >Remove DIVS</button>
+        <script type="text/javascript">
+            function removeH1() {
+                body_ref = document.querySelector('body')
+                h1_ref = document.querySelector('h1')
+
+                body_ref.removeChild(h1_ref)
+            }
+            function removeH3() {
+                body_ref = document.querySelector('body')
+                refs = document.querySelectorAll('h3')
+
+                alert(refs.length)
+                for(var i = 0; i < refs.length; i++) {
+                    body_ref.removeChild(refs[i])
+                }
+            }
+
+            function removeH5() {
+                heading_ref = document.getElementById('headings')
+                refs = document.querySelectorAll('h5')
+
+                for(var i = 0; i < refs.length; i++) {
+                    heading_ref.removeChild(refs[i])
+                }
+            }
+
+            function removeRed() {
+                cont_ref = document.getElementById('cont')
+                refs = document.querySelectorAll('.red')
+
+                for(var i = 0; i < refs.length; i++) {
+                    cont_ref.removeChild(refs[i])
+                }
+            }
+
+            function removeDivs() {
+                cont_ref = document.getElementById('cont')
+                refs = cont_ref.querySelectorAll('div')
+
+                //alert(refs.length)
+                for(var i = 0; i < refs.length; i++) {
+                    cont_ref.removeChild(refs[i])
+                }
+            }
+        </script>
+    </body>
+</html>
