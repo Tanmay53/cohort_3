@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index</title>
+    <style>
+        body {
+            background: rgb(201, 245, 248);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FSD JS.8.2 -->
+
+    <h1>Check You can Drive or Not !!!</h1>
+    <div>
+        <label>Enter your Age</label>
+        <input id="age" type="number">
+        <br><br>
+        <button onclick="checkAge()">Check Status</button>
+    </div>
+    <p id="driveResult"></p>
+    <hr>
+
+    <!-- FSD JS.8.3 -->
+
+    <h1>Click here to Button color !!!</h1>
+    <label>Enter Color to Change </label>
+    <input id="color" type="text">
+    <br><br>
+    <button id="changeColor" onclick="buttonColorChange()">Click here to change my color</button>
+    <hr>
+
+    <!-- FSD JS.8.4 -->
+
+    <h1>Find Continent !!!</h1>
+    <select id="continent_select">
+        <option value="India">India</option>
+        <option value="United States of America">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+    </select>
+    <button onclick="findContinent()">Find</button>
+    <p id="continent">The continent is</p>
+    <br><hr>
+
+    <script>
+
+        // FSD JS.8.3
+
+        function checkAge(){
+            var age = document.getElementById("age").value;
+            if(age > 18){
+                document.getElementById("driveResult").innerHTML = "You can drive in India!";
+            }
+            else if(age == 18){
+                document.getElementById("driveResult").innerHTML = "You are just old enough to drive in India!";
+            }
+            else{
+                document.getElementById("driveResult").innerHTML = "You can't drive in India!"
+            }
+        }
+
+        // FSD JS.8.3
+
+        function buttonColorChange(){
+            var color = document.getElementById("color").value;
+            document.getElementById("changeColor").style.color = color;
+        }
+
+        // FSD JS.8.4  
+
+        function findContinent(){
+            var continent = document.getElementById("continent_select").value;
+            switch (continent) {
+                case "India":
+                case "China":
+                case "Nepal":
+                case "Singapore":
+                    document.getElementById("continent").innerHTML = "The continent is Asia";
+                break;
+                
+                case "United States of America":
+                    document.getElementById("continent").innerHTML = "The continent is North America";
+                break;
+                
+                case "Australia":
+                    document.getElementById("continent").innerHTML = "The continent is Australia";
+                break;
+                
+                case "France":
+                case "Germany":
+                case "Sweden": 
+                    document.getElementById("continent").innerHTML = "The continent is Europe";
+                break;
+                
+                case "Argentina":
+                case "Mexico":
+                case "Brazil":
+                case "Canada":
+                    document.getElementById("continent").innerHTML = "The continent is America";
+                break;
+                
+                case "South Africa":
+                case "Nigeria":
+                    document.getElementById("continent").innerHTML = "The continent is Africa";
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
