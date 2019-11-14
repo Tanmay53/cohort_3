@@ -1,0 +1,21 @@
+body {
+    padding: 15px;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+button {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.btn {
+    border: 2px solid blueviolet;
+    color: blueviolet;
+}
+.btn:hover {
+    background-color: blueviolet;
+    color: white;
+    transition-duration: 0.5s;
+}
