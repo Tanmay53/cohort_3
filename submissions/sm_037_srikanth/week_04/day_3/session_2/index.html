@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <style>
+       .container{
+           margin-left: 50px;
+       }
+       h3{
+           color: blue;
+       }
+       p{
+           font-size: 22px;
+           
+       }
+       button{
+           padding: 5px;
+           border-radius: 5px;
+           background:grey;
+           color: white;
+           margin: 10px auto;
+       }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <h2>FSD JS.8.2</h2>
+          <dd><h3> Enter your age</h3>
+            <input type="text" name="number" id="age">
+            <p id="demo"> To check Permission to Drive in India</p>
+            <button onclick="check();">CHECK</button>
+          </dd> 
+        </div>
+        <div class="container">
+            <h2>FSD JS.8.3</h2>
+          <dd><h3>Change the color of Button</h3>
+            <input type="text" id="color"><br>
+            <button id="change" onclick="changeColor()">Click here to change my color</button>
+          </dd>
+        </div>
+        <div class="container">
+            <h2>FSD JS.8.4</h2>
+           <dd><h3> List of Countries by Continent</h3>
+                <select id = "continent_select">
+                        <option value = "India"> India </option>
+                        <option value = "United States of America"> United States of America </option>
+                        <option value = "China"> China </option>
+                        <option value = "Nepal"> Nepal </option>
+                        <option value = "Australia"> Australia </option>
+                        <option value = "France"> France </option>
+                        <option value = "Germany"> Germany </option>
+                        <option value = "South Africa"> South Africa </option>
+                        <option value = "Nigeria"> Nigeria </option>
+                        <option value = "Mexico"> Mexico </option>
+                        <option value = "Argentina"> Argentina </option>
+                        <option value = "Brazil"> Brazil </option>
+                        <option value = "Canada"> Canada </option>
+                        <option value = "Singapore"> Singapore </option>
+                        <option value = "Sweden"> Sweden </option>
+                </select><br>
+                <button id="find" onclick="continent()">Find continent</button>
+            </dd> 
+        </div>
+
+    <script type="text/javascript">
+
+    function check(){
+        
+        var age= document.getElementById("age").value;
+         if(age > 18){
+            document.getElementById('demo').style.color="green";
+              document.getElementById("demo").innerHTML="You can drive in India!"
+            }else if(age < 18){
+                document.getElementById('demo').style.color="red";
+                document.getElementById("demo").innerHTML="You can't drive in India"
+            }else{
+                 document.getElementById('demo').style.color="grey";
+                 document.getElementById("demo").innerHTML="You are just old enough to drive in India!"
+            }
+    }
+
+    function changeColor(){
+       document.getElementById("change").style.background = document.getElementById("color").value;
+    };
+
+    function continent(){
+       var select= document.getElementById("continent_select").value;
+          switch(select){
+            case 'India':
+            case "Singapore":
+            case "Nepal":
+            case "China":
+             select=alert('The continent is Asia' );
+             break;
+            case "Germany":
+            case "Sweden":
+            case "France":
+             select=alert('The continent is  Europe' );
+             break;
+            case "Mexico":
+            case "Canada":
+            case "United States of America":
+             select=alert('The continent is North America');
+             break;
+            case "Argentina":
+            case "Brazil":
+             select=alert('The continent is South America');
+             break;
+            case "South Africa":
+            case "Nigeria":
+             select=alert('The continent is Africa');
+             break;
+            case "Australia":
+             select=alert('The continent is Australia'); 
+             break;
+            default:
+             select= "Gives continents";
+          }
+         return document.getElementById('find')=select;
+           
+       }
+       
+    </script>
+</body>
+</html>
