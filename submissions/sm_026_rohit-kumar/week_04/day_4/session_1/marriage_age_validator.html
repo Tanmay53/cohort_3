@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marriage Age Validator</title>
+        <style type="text/css">
+            #wrapper {
+                width: 60%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        </style>
+        <script type="text/javascript">
+            function validate() {
+                gender  = document.getElementById('gender').value
+                year    = Number(document.getElementById('year').value)
+
+                
+                if(gender == "male") {
+                    if(2019 - year >= 21)
+                        alert('You are allowed to get married !')
+                    else
+                        alert('You are not allowed to get married !')
+                }
+                else if(gender == "female") {
+                    if(2019 - year >= 18)
+                        alert('You are allowed to get married !')
+                    else
+                        alert('You are not allowed to get married !')
+                }
+                else {
+                    alert('Please select Gender !')
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h2>Marriage age validator</h2>
+            <table>
+                <tr>
+                    <td>Gender : </td>
+                    <td>
+                        <select id="gender">
+                            <option value="select">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth : </td>
+                    <td><input id="year" type="text" placeholder="YYYY"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" onclick="validate()" value="Validate" >
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
