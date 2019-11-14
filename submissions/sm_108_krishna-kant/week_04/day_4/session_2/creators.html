@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>Practise Creators</title>
+  </head>
+  <body>
+    <div id="headings"></div>
+    <div id="cont"></div>
+    <ul id="vikings">
+      <li>Priyanshu</li>
+    </ul>
+    <button onclick="createH1()" id="H1">Create H1</button>
+    <button onclick="createH3()">Create 2 H3</button>
+    <button onclick="createDiv()">Create DIVS</button>
+    <button onclick="addStudent()">Add Students</button>
+    <button onclick="addCopyright()">Add Copyright</button>
+    <script>
+      var students = [
+        "Ajay",
+        "Akshay",
+        "Anusha",
+        "Chandrashekhara",
+        "Haren",
+        "Hasaan",
+        "Mahesh",
+        "Mousumi",
+        "Pavan",
+        "Rahul",
+        "Sumanta",
+        "Venkatesh",
+        "Vetrival",
+        "Vijayendra"
+      ];
+
+      //create h1
+      function createH1() {
+        var div = getElement("#headings");
+        var h1 = document.createElement("h1");
+        h1.textContent = "Masai School";
+        div.appendChild(h1);
+      }
+      function createH3() {
+        var div = getElement("#headings");
+        var message = [
+          "A Transformation in education!",
+          "Learn to earn, pay when you get."
+        ];
+        var headings3_1 = document.createElement("h3");
+        var headings3_2 = document.createElement("h3");
+        headings3_1.textContent = message[0];
+        headings3_2.textContent = message[1];
+        div.appendChild(headings3_1);
+        div.appendChild(headings3_2);
+      }
+
+      function createDiv() {
+        var divi = getElement("#cont");
+        for (var i = 0; i < 10; i++) {
+          divs = document.createElement("div");
+          divs.textContent = `Content ${i}`;
+          divi.appendChild(divs);
+        }
+      }
+
+      function addStudent() {
+        ul = getElement("#vikings");
+        students.forEach(function(val) {
+          var li = document.createElement("li");
+          li.textContent = val;
+          ul.appendChild(li);
+        });
+      }
+
+      function addCopyright() {
+        body = getElement("body");
+        h1 = getElement("#H1");
+        p = document.createElement("p");
+        p.textContent = "@ masai 2019";
+        body.insertBefore(p, h1);
+      }
+
+      function getElement(selector) {
+        return document.querySelector(selector);
+      }
+    </script>
+  </body>
+</html>
+© 2019 GitHub, Inc.

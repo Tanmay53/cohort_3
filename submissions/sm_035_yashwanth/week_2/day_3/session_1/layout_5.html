@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-us">
+<html>
+  <head>
+  <style> 
+
+#layout1{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns:100%;
+  
+  padding: 20px;
+}
+#layout1 div {
+  background: red;
+  height:50px;
+}
+#layout2{
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns:40% 57%;
+  grid-template-rows: auto; 
+  padding: 20px;
+}
+#green{
+  height:500px;
+  background:green;
+}
+#yellow{
+  height:500px;
+  background:yellow;
+}
+@media (min-width: 600px) {
+  div {
+    background: black;
+  }
+}
+@media (max-width: 1024px) {
+  div {
+    background: blue;
+  }
+}
+  </style>
+ <title>layout_5.html</title>
+   </head>
+   <body>
+    <div id ="layout1" >
+     <div id="red"></div>
+    </div>
+    <div id ="layout2">
+      <div id ="green" ></div>
+      <div id ="yellow" ></div>
+    </div>
+  </body>
+</html>
