@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div>
+        <h3>Can you drive in India?</h3>
+        <label for="age">Enter Your age Here</label>
+        <input type="text" id="age" placeholder="Ex.,22..">
+        <button id="age_check" onclick="age_check()">Check</button>
+        <div>
+            <p id="age_status"></p>
+        </div>
+    </div>
+    <div>
+        <h3>Change color of button</h3>
+        <label for="">Enter color of button</label>
+        <input type="text" id="button_color_value" placeholder="Ex.,green">
+        <button id="button_color_click" onclick="change_color()">Click here to change my color</button>
+    </div>
+    <div>
+        <h3>Know Continent...</h3>
+        <label for="continent_select">Select Continent</label>
+        <select id="continent_select">
+            <option value="default"> - </option>
+            <option value="India">India</option>
+            <option value="United States of America">United States of America</option>
+            <option value="China">China</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Australia">Australia</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Canada">Canada</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Sweden">Sweden</option>
+        </select>
+        <button id="Find_continent" onclick="continent_select()">Find Continent</button>
+    </div>
+
+
+    <!-- -----------------------------------------------------------  -->
+    <script type="text/javascript">
+        //function to check driving age limit in india
+        function age_check() {
+            var age = Number(document.getElementById('age').value);
+            if (age > 18) {
+                document.getElementById('age_status').innerHTML = "You can drive in India!";
+            } else if (age < 18) {
+                document.getElementById('age_status').innerHTML = "You can't drive in India";
+            } else {
+                document.getElementById('age_status').innerHTML = "You are just old enough to drive in India!";
+            }
+        }
+
+        //function to change color of button according to user input
+        function change_color() {
+            var color = document.getElementById('button_color_value').value;
+            document.getElementById('button_color_click').style.backgroundColor = color;
+        }
+
+        //function to show alert for selected country:
+        function continent_select() {
+            var country = document.getElementById('continent_select').value;
+            var continent;
+            switch (country) {
+                case 'India':
+                    continent = 'Asia';
+                    break;
+                case 'United States of America':
+                    continent = 'North America';
+                    break;
+                case 'China':
+                    continent = 'Asia';
+                    break;
+                case 'Nepal':
+                    continent = 'Asia';
+                    break;
+                case 'Australia':
+                    continent = 'Australia';
+                    break;
+                case 'France':
+                    continent = 'Europe';
+                    break;
+                case 'Germany':
+                    continent = 'Europe';
+                    break;
+                case 'South Africa':
+                    continent = 'Africa';
+                    break;
+                case 'Nigeria':
+                    continent = 'Africa';
+                    break;
+                case 'Mexico':
+                    continent = 'North America';
+                    break;
+                case 'Argentina':
+                    continent = 'South America';
+                    break;
+                case 'Brazil':
+                    continent = 'South America';
+                    break;
+                case 'Canada':
+                    continent = 'North America';
+                    break;
+                case 'Singapore':
+                    continent = 'Asia';
+                    break;
+                case 'Sweden':
+                    continent = 'Europe';
+                    break;
+                default:
+                    continent = '-';
+                    break;
+            }
+            if (continent == '-') {
+                alert('Select valid country to know continent')
+            } else {
+                alert('The continent is ' + continent);
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
