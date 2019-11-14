@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #444, #bbb);
+}
+
+#container {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  height: 60vh;
+}
+#container .box {
+  color: #fff;
+  background: #222;
+  height: 45%;
+  width: 30%;
+  margin-top: 3rem;
+  border-radius: 1rem;
+}
+#container .box-2 {
+  align-self: center;
+}
+#container .box p:first-child {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+#container .box input {
+  padding: .5rem 2rem;
+  border-radius: 10px;
+}
+#container .box-1 button {
+  padding: .4rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  background: #f7c08a;
+  border: 1px #333 solid;
+  
+}
+#container .box-2 button {
+  padding: .4rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  background: #f7c08a;
+  border: 1px #333 solid;
+}
+#container .box button:hover {
+  background: #eb831b;
+}
+#get-para {
+  display: flex;
+  justify-content: center;
+
+}
+#get-value {
+  font-size: 3rem;
+  padding: 2rem 3rem;
+  color: #fff;
+  margin: 0;
+}
+#select-box {
+  padding: .5rem 2rem;
+  margin: 1rem 0;
+  background: #fff;
+  border-radius: 10px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>task on DOM</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <!-- box for age validating either they are eligible for drive or not -->
+      <div class="container box1">
+        <h1>Age validator for drive</h1>
+        <input type="number" id="age" placeholder="type your age" />
+        <button id="validator" onclick="ageValidator()">Age Validate</button>
+        <p id="result"></p>
+      </div>
+      <!-- button change color  -->
+      <div class="container box2">
+        <h1>Button Color change</h1>
+        <input type="text" id="color" placeholder="type color name" />
+        <button id="changeButton" onclick="changeButtonColor()">
+          Click here to change my color
+        </button>
+      </div>
+
+      <!-- find continent of countries -->
+      <div class="container box3">
+        <h1>Find continent of country</h1>
+        <h3>Select Country</h3>
+
+        <select id="continent_select">
+          <option value="">--</option>
+          <option value="India">India</option>
+          <option value="United States of America"
+            >United States of America</option
+          >
+          <option value="China">China</option>
+          <option value="Nepal">Nepal</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Canada">Canada</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Sweden">Sweden</option>
+        </select>
+        <button id="findContinent" onclick="findContinent()">
+          Show continent
+        </button>
+      </div>
+    </div>
+
+    <!-- javascript -->
+    <script>
+      //age validator function for find which person is eligible to drive;
+      function ageValidator() {
+        var age = document.getElementById("age").value;
+        var res = document.getElementById("result");
+        if (age > 18) {
+          res.innerHTML = "You can drive in India!";
+          res.style.color = "green";
+        } else if (age == "") {
+          res.innerHTML = "Please input your age";
+        } else if (age < 18) {
+          res.innerHTML = "You can't drive in India";
+          res.style.color = "red";
+        } else if (age == 18) {
+          res.innerHTML = "You are just old enough to drive in India!";
+          res.style.color = "black";
+        }
+
+        //function for change button color
+      }
+      function changeButtonColor() {
+        var clr = document.getElementById("color").value;
+        document.getElementById("changeButton").style.background = clr;
+      }
+
+      //function to find continet of countries
+
+      function findContinent() {
+        var country = document.getElementById("continent_select").value;
+        switch (country) {
+          case "India":
+          case "China":
+          case "Nepal":
+          case "Singapore":
+            alert("The continent is Asia");
+            break;
+          case "United States of America":
+          case "Mexico":
+          case "Canada":
+            alert("The continent is North America");
+            break;
+          case "France":
+          case "Germany":
+          case "Sweden":
+            alert("The continent is Europe");
+            break;
+          case "South Africa":
+          case "Nigeria":
+            alert("The continent is Africa");
+            break;
+          case "Argentina":
+          case "Brazil":
+            alert("The continent is South America");
+        }
+      }
+    </script>
+  </body>
+</html>
