@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Practise Deletions</title>
+  </head>
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <div id="headings">
+      <h5>First H5</h5>
+      <h5>Second H5</h5>
+      <h5>Third H5</h5>
+    </div>
+    <div id="cont">
+      <div class="green">First DIV</div>
+      <div class="red">Second DIV</div>
+      <div class="blue">Third DIV</div>
+      <p class="green">First P</p>
+      <p class="red">Second P</p>
+      <p class="blue">Third P</p>
+    </div>
+    <hr />
+    <button onclick="removeH1()">Remove H1</button>
+    <button onclick="removeH3()">Remove H3</button>
+    <button onclick="removeH5()">Remove H5</button>
+    <button onclick="removeRed()">Remove Red</button>
+    <button onclick="removeDiv()">Remove DIVS</button>
+    <script>
+      function removeH1() {
+        h1 = getElement("h1");
+        body = getElement("body");
+        body.removeChild(h1);
+      }
+
+      function removeH3() {
+        h3 = document.querySelectorAll("h3");
+        body = getElement("body");
+        for (i = 0; i < h3.length; i++) {
+          body.removeChild(h3[i]);
+        }
+      }
+
+      function removeH5() {
+        h5 = document.querySelectorAll("h5");
+        body = getElement("#headings");
+        for (i = 0; i < h5.length; i++) {
+          body.removeChild(h5[i]);
+        }
+      }
+
+      function removeRed() {
+        red = document.querySelectorAll(".red");
+        body = getElement("#cont");
+        for (i = 0; i < red.length; i++) {
+          body.removeChild(red[i]);
+        }
+      }
+
+      function removeDiv() {
+        div = document.querySelectorAll("#cont div");
+        body = getElement("#cont");
+        for (i = 0; i < div.length; i++) {
+          body.removeChild(div[i]);
+        }
+      }
+
+      function getElement(selector) {
+        return document.querySelector(selector);
+      }
+    </script>
+  </body>
+</html>
