@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leaderboard</title>
+    <style>
+        
+        .cont-grid{
+            width: 300px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            text-align: center;
+            grid-gap:10px;
+        }
+        .cont-grid div{
+            border: 2px solid black;
+            height: 40px;
+            background: green;
+            padding: 10px;
+            font-size: 2rem;
+        }
+        button{
+            padding: 10px;
+            background: rgb(41, 129, 41);
+            font-size: 2rem;
+
+        }
+        .cont-grid2{
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+        }
+        .cont-grid2 div{
+            width: 100px;
+        }
+        .cont-grid #score{
+            width: auto;
+            grid-area:1/1/1/span 3;
+            background: pink;
+        }
+        .cont-grid .zero{
+            grid-area:5/2/5/3;
+            background:purple;
+            color: white;
+        }
+        .cont-grid .enter{
+            grid-area:6/1/6/4;
+            background: black;
+            color: white;
+        }
+        .cont-grid div:first-child{
+            background: rgb(240, 7, 7);
+        }
+        .outer-flex{
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin:auto;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-flex">
+        <div class="cont-grid cont-grid2">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <h2>MIN</h2>
+            <h2>MAX</h2>
+        </div>
+        <h2 >SCORE</h2>
+    
+        <div class="cont-grid">
+            <div id="score">#</div>
+            <button onclick="capture()">1</button>
+            <button onclick="capture()">2</button>
+            <button onclick="capture()">3</button>
+            <button onclick="capture()">4</button>
+            <button onclick="capture()">5</button>
+            <button onclick="capture()">6</button>
+            <button onclick="capture()">7</button>
+            <button onclick="capture()">8</button>
+            <button onclick="capture()">9</button>
+            <button class="zero" onclick="capture()">0</button>
+            <button class="enter" onclick="calculate()">ENTER</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var total="",max=0,min=500
+        var score=document.getElementById("score")
+        function capture(){
+            var num=event.target.innerHTML;
+            total+=num
+            score.innerHTML=total
+        }
+        function calculate(){
+            var minBox=document.getElementById("box1")
+            var maxBox=document.getElementById("box2")
+            total=parseInt(total)
+            if(total>max){
+                max=total
+                maxBox.innerHTML=total
+            }
+            if(total<min){
+                min=total
+                minBox.innerHTML=total
+            }
+            score.innerHTML='#'
+            total=""
+        }
+    </script>
+</body>
+</html>
