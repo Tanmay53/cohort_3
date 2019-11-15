@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>session_2</title>
+</head>
+<body>
+    <h1>Hello Masai..</h1>
+</body>
+<script>
+    function random(num){
+        return Math.floor(Math.random()*num);
+    }
+  var bodyColor =document.querySelector('body');
+
+      function bodyBackground(){
+        var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        bodyColor.style.background=randomColor;
+      }
+     // window.onresize=bodyBackground;
+     window.addEventListener('resize', bodyBackground);
+</script>
+</html>

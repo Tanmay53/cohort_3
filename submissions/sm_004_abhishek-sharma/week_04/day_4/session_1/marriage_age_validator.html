@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marriage Validator</title>
+</head>
+<body>
+    <select name="yourGender" id="yourGender">
+        <option value="">--</option>
+        <option value="male">M</option>
+        <option value="female">F</option>
+    </select>
+    <input type="text" name="yourDob" id="yourDob">
+    <button onclick="ageValidity()">Check Marriage Age Eligibility</button>
+
+    <script type="text/javascript">
+        function ageValidity() {
+            var gender = document.getElementById("yourGender").value
+            var dob = document.getElementById("yourDob").value
+            var today = new Date()
+            var year = today.getFullYear()
+            var age = year - dob
+            if(gender == "male"){
+                if(age >= 21)
+                    alert("You are of valid age to get married!")
+                else
+                    alert("You are NOT of valid age to get married!!")
+
+            }
+            else if(gender == "female"){
+                if(age >= 18)
+                    alert("You are of valid age to get married!")
+                else
+                    alert("You are NOT of valid age to get married!!")
+            }
+        }
+    </script>
+    
+</body>
+</html>

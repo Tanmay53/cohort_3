@@ -1,0 +1,17 @@
+.cont
+{
+    background-color:rgb(124, 236, 161);
+    width:100%;
+    height:100%;
+    display:flex;
+    font-size: 30px;
+}
+.cont > div
+{
+    border: solid 2px rgb(231, 118, 118);
+    height:300px;
+    width:300px;
+    margin:50px;
+    padding:50px;
+    background: rgb(150, 200, 204);
+}
