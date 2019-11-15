@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>registration</title>
+    <style>
+        .outer-cont{
+            display: flex;
+            justify-content: center;
+        }
+        .inner-cont{
+            display: flex;
+            flex-direction: column;
+            margin: 40px 40px;
+            background: whitesmoke;
+            padding: 10px;
+        }
+        #result{
+            background: rgb(110, 118, 228);
+            color: white;
+            padding: 10px;
+            min-width: 400px;
+            max-height: 400px;
+            overflow-y: scroll;
+        }
+        td{
+            font-size: 2rem;
+        }
+        img{
+            width: 80px;
+        }
+        .inner-cont div{
+            font-size: 2rem;
+            padding-top: 20px;
+        }
+        .inner-cont input{
+            font-size: 1.4rem;
+            text-indent: 20px;
+        }
+        
+        button{
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 2rem;
+            background: rgb(75, 9, 9);
+            color: white;
+        }
+        #delete, #edit{
+            font-size: 1rem;
+            background: seagreen;
+            margin-right:4px;
+        }
+        @media (max-width: 600px){
+            .outer-cont{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-cont">
+        <div class="inner-cont">
+            <div>INSERT</div>
+            <div>Product Name</div>
+            <input type="text" id="name">
+            <div>Product Image URL</div>
+            <input type="text" id="url">
+            <div>Price</div>
+            <input type="text" id="price">
+            <button onclick="insert()" id="insert">SUBMIT</button>
+        </div>
+        <div class="inner-cont" id="result">
+            <table>
+                
+            </table>
+        </div>
+    </div>
+    <script>
+        function create(name,url,price){
+            var button=document.createElement('button')
+            button.id="delete"
+            button.innerHTML='DELETE'
+            var edit=document.createElement('button')
+            edit.id="edit"
+            edit.addEventListener('click',editItem())
+            edit.innerHTML='EDIT'
+            var nameEle=document.createElement('td')
+            var imgTd=document.createElement('td')
+            var imgEle=document.createElement('img')
+            var priceEle=document.createElement('td')
+            var tr=document.createElement('tr')
+            
+            nameEle.innerHTML=name
+            imgEle.src=url
+            imgTd.appendChild(imgEle)
+            priceEle.innerHTML=price
+            tr.appendChild(imgTd)
+            tr.appendChild(nameEle)
+            tr.appendChild(priceEle)
+            tr.appendChild(button)
+            tr.appendChild(edit)
+            console.log(nameEle,imgTd,priceEle,tr)
+           
+
+            // append child
+            var table=document.querySelector("table")
+            table.appendChild(tr)
+            
+        }
+        function insert(){
+            // event.preventDefault()
+            var name=document.getElementById("name").value
+            var url=document.getElementById("url").value
+            var price=document.getElementById("price").value
+            price='₹ '+price
+            create(name,url,price)
+        }
+        function deleteItem(){
+            console.log('delete clicked')
+        }
+        function editItem(){
+            console.log('edit clicked')
+        }
+    </script>
+    
+</body>
+</html>
