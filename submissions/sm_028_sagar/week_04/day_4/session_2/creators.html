@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Practise Creators</title>
+</head>
+
+<body>
+    <div id="headings">
+    </div>
+    <div id="cont">
+    </div>
+    <ul id="vikings">
+        <li>Priyanshu</li>
+    </ul>
+    <button onclick="create_h1()" id="btn">Create H1</button>
+    <button onclick="create_2_h3()">Create 2 H3</button>
+    <button onclick="create_div()">Create DIVS</button>
+    <button onclick="add_student()">Add Students</button>
+    <button onclick="add_copyright()">Add Copyright</button>
+    <script>
+        function create_h1() {
+            var val = document.getElementById('headings');
+            var h1 = document.createElement('h1');
+            h1.textContent = 'MASAI';
+
+            val.appendChild(h1);
+        }
+
+        function create_2_h3() {
+            var val = document.getElementById('headings');
+            var firstH3 = document.createElement('h3');
+            firstH3.textContent = 'A Transformation in education!';
+
+            var secondH3 = document.createElement('h3');
+            secondH3.textContent = 'Learn to earn, pay when you get.';
+
+            val.appendChild(firstH3);
+            val.appendChild(secondH3);
+        }
+
+        function create_div() {
+            var val = document.getElementById('cont');
+            for (var i = 1; i <= 10; i++) {
+                var div = document.createElement('div');
+                div.textContent = 'Content ' + i;
+                val.appendChild(div);
+            }
+        }
+
+        function add_student() {
+            var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
+            var val = document.getElementById('vikings');
+
+            for (var i = 0; i < students.length; i++) {
+                var ele = document.createElement('li');
+                ele.textContent = (students[i]);
+                val.appendChild(ele);
+            }
+        }
+
+        function add_copyright() {
+            var btn = document.getElementById('btn');
+            var para = document.createElement('p');
+            para.textContent = '@ masai 2019';
+
+            var bodyEle = document.querySelector('body');
+            bodyEle.insertBefore(para, btn);
+        }
+    </script>
+</body>
+
+</html>

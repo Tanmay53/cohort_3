@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marriage Age Validator</title>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        label,
+        input,
+        select,
+        button {
+            display: block;
+            margin: 40px auto;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="age">Enter your Age:
+            <input type="number" name="age" id="age">
+        </label>
+        <label for="gender">Gender:</label>
+        <select name="Gender" id="gender">
+            <option value="">--</option>
+            <option value="Male">M</option>
+            <option value="Female">F</option>
+        </select>
+        <button onclick="marriageChecker()">Click me to check you age is valid for marriage</button>
+    </div>
+
+    <script type="text/javascript">
+
+
+        // function to check your age is valid for marriage
+
+        function marriageChecker() {
+
+            var age = document.getElementById("age").value;
+            var gender = document.getElementById("gender").value;
+
+            if (age === "" || gender === "")
+                alert("Enter age or Gender");
+
+            else if (age < 0)
+                alert("Enter valid age");
+
+            else {
+                if (gender === "Male" && age >= 21)
+                    alert("Valid age to get married in India");
+
+                else if (gender === "Female" && age >= 18)
+                    alert("Valid age to get married in India");
+
+                else
+                    alert("Not a Valid age to get married in India");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
