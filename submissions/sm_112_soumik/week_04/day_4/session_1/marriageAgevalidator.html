@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center;">
+    <h1>Marraige Age Validator</h1>
+    <div class="container">
+      <select name="empty" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <input type="text" id="checkAge" placeholder="Enter year of Birth" />
+      <button onclick="marriageValid()">Check</button>
+    </div>
+    <script>
+      function marriageValid() {
+        var year = Number(document.getElementById("checkAge").value);
+        var age = 2019 - year;
+        var gender = document.getElementById("gender").value;
+
+        if (
+          (gender == "male" && age >= 21) ||
+          (gender == "female" && age >= 18)
+        ) {
+          alert("Happy Wedding");
+        } else {
+          alert("Sorry,You are not eligible");
+        }
+      }
+    </script>
+  </body>
+</html>
