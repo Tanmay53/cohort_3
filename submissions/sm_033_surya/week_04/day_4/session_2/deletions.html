@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeH1()">Remove H1</button>
+        <button onclick="removeH3()">Remove H3</button>
+        <button onclick="removeH5()">Remove H5</button>
+        <button onclick="removeRed()">Remove Red</button>
+        <button onclick="removeDiv()">Remove DIVS</button>
+        <script>
+            function removeH1() {
+                var h1el = document.querySelector('h1')
+               var bodyele = document.querySelector('body')
+               bodyele.removeChild(h1el)
+            }
+            function removeH3 (){
+                var bodyele = document.querySelector('body')
+                var h31el = document.querySelectorAll('h3')
+               for ( i = 0; i < h31el.length ;i++ ){
+               bodyele.removeChild(h31el[i])
+               }
+            }
+            function removeH5 (){
+                var headele = document.querySelector('#headings')
+                var h5el = document.querySelectorAll('h5')
+               for ( i = 0; i < h5el.length ;i++ ){
+               headele.removeChild(h5el[i])
+               }
+            }
+            function removeRed (){
+                var contele = document.querySelector('#cont')
+                var redel = document.querySelectorAll('.red')
+               for ( i = 0; i < redel.length ;i++ ){
+               contele.removeChild(redel[i])
+               }
+            }
+            function removeDiv(){
+
+                var contele = document.querySelector('#cont')
+                var divel = document.querySelectorAll('#cont > div')
+                for ( i = 0; i < divel.length ;i++ )
+               {
+                   console.log(divel.length)
+               contele.removeChild(divel[i])
+               }
+            }
+
+        </script>
+    </body>
+</html>

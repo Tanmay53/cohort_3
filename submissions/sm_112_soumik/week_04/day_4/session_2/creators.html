@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Practise Creators</title>
+  </head>
+  <body>
+    <div id="headings"></div>
+    <div id="cont"></div>
+    <ul id="vikings">
+      <li>Priyanshu</li>
+    </ul>
+    <button onclick="createH1()">Create H1</button>
+    <button onclick="createH3()">Create 2 H3</button>
+    <button onclick="creatediv()">Create DIVS</button>
+    <button onclick="addStud()">Add Students</button>
+    <button onclick="addCopy()">Add Copyright</button>
+    <script>
+      var students = [
+        "Ajay",
+        "Akshay",
+        "Anusha",
+        "Chandrashekhara",
+        "Haren",
+        "Hasaan",
+        "Mahesh",
+        "Mousumi",
+        "Pavan",
+        "Rahul",
+        "Sumanta",
+        "Venkatesh",
+        "Vetrival",
+        "Vijayendra"
+      ];
+      function createH1() {
+        createH1 = document.createElement("h1");
+        createH1.textContent = "Masai School";
+        var h1 = document.getElementById("headings");
+        h1.appendChild(createH1);
+      }
+      function createH3() {
+        createH3 = document.createElement("h3");
+        createH31 = document.createElement("h3");
+        createH3.textContent = "A Transformation in education! ";
+        createH31.textContent = "Learn to earn, pay when you get.";
+        var h3 = document.getElementById("cont");
+        h3.appendChild(createH3);
+        h3.appendChild(createH31);
+      }
+      function creatediv() {
+        for (i = 1; i <= 10; i++) {
+          creatediv[i] = document.createElement("div");
+          creatediv[i].textContent = "Content" + i;
+          var div = document.getElementById("headings");
+          div.appendChild(creatediv[i]);
+        }
+      }
+      function addStud() {
+        for (i = 1; i < students.length; i++) {
+          createLi = document.createElement("li");
+          createLi.textContent = students[i];
+          var li = document.getElementById("vikings");
+          li.appendChild(createLi);
+        }
+      }
+      function addCopy() {
+        var btn = document.querySelector("button");
+        var para = document.createElement("p");
+        para.textContent = "@ Masai 2019";
+        body = document.querySelector("body");
+        body.insertBefore(para, btn);
+      }
+    </script>
+  </body>
+</html>

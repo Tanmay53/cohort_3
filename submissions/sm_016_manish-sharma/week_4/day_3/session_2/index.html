@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>INDEX</title>
+    <style>
+        body {
+            background: teal;
+            display: grid;
+            grid-template-areas: "d1 d2"
+                "d1 d3";
+        }
+
+        div {
+            background: lightgreen;
+            border-radius: 30px;
+            margin: 5px;
+        }
+
+        .div1 {
+            grid-area: d1;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .div2 {
+            grid-area: d2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .div3 {
+            grid-area: d3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .div12 {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div12">
+            <button onclick="showOlder()">Age is older than 18</button>
+            <p id='older'></p>
+        </div>
+        <div class="div12">
+            <button onclick="showYounger()">Age is younger than 18</button>
+            <p id='younger'></p>
+        </div>
+        <div class="div12">
+            <button onclick="showEnough()">Age is exactly 18 years old</button>
+            <p id='enough'></p>
+        </div>
+    </div>
+    <div class="div2">
+        <input id="colors">
+        <button id="change" onclick="changeColor()">Click here to change my color</button>
+    </div>
+    <div class="div3">
+        <select id='selectC'>
+            <option value="ind">India</option>
+            <option value="usa">United States of America</option>
+            <option value="chn">China</option>
+            <option value="nep">Nepal</option>
+            <option value="aus">Australia</option>
+            <option value="fra">France</option>
+            <option value="ger">Germany</option>
+            <option value="rsa">South Africa</option>
+            <option value="nig">Nigeria</option>
+            <option value="mex">Mexico</option>
+            <option value="arg">Argentina</option>
+            <option value="bra">Brazil</option>
+            <option value="can">Canada</option>
+            <option value="sin">Singapore</option>
+            <option value="swe">Sweden</option>
+        </select>
+        <button id="findC" onclick="find()">Find continent</button>
+    </div>
+
+
+
+    <script type="text/javascript">
+        function showOlder() {
+            //If the user is older than 18 print You can drive in India! in the p tag.    
+            document.getElementById('older').innerHTML = 'You can drive in India!'
+        }
+        function showYounger() {
+            //If the user is younger than 18 print You can't drive in India in the p tag.    
+            document.getElementById('younger').innerHTML = "You can't drive in India"
+        }
+        function showEnough() {
+            //If the user is younger than 18 print You can't drive in India in the p tag.    
+            document.getElementById('enough').innerHTML = "You are just old enough to drive in India!"
+        }
+        function changeColor() {
+            //When the button Click here to change my color is clicked, the color of the button must change according to the text input    
+            document.getElementById('change').style.backgroundColor = document.getElementById("colors").value
+        }
+
+        function find() {
+            //shows you the continents for each country
+
+            switch (document.getElementById("selectC").value) {
+                case 'ind':
+                case 'chn':
+                case 'nep':
+                case 'sin': alert(document.getElementById('findC').value = "The continent is ASIA");
+                    break;
+                case 'usa':
+                case 'mex':
+                case 'can': alert(document.getElementById('findC').value = "The continent is NORTH AMERICA");
+                    break;
+                case 'rsa':
+                case 'nig': alert(document.getElementById('findC').value = "The continent is AFRICA");
+                    break;
+                case 'fra':
+                case 'ger':
+                case 'swe': alert(document.getElementById('findC').value = "The continent is EUROPE");
+                    break;
+                case 'arg':
+                case 'bra': alert(document.getElementById('findC').value = "The continent is SOUTH AMERICA");
+                    break;
+                case 'aus': alert(document.getElementById('findC').value = "The continent is AUSTRALIA");
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

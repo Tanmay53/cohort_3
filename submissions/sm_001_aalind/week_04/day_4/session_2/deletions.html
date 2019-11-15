@@ -21,12 +21,51 @@
             <p class="blue">Third P</p>
         </div>
         <hr/>
-        <button>Remove H1</button>
-        <button>Remove H3</button>
-        <button>Remove H5</button>
-        <button>Remove Red</button>
-        <button>Remove DIVS</button>
+        <button onclick="removeH1()">Remove H1</button>
+        <button onclick="removeH3()">Remove H3</button>
+        <button onclick="removeH5()">Remove H5</button>
+        <button onclick="removeRed()">Remove Red</button>
+        <button onclick="removeDivs()">Remove DIVS</button>
+
         <script>
+            function removeH1() {
+                var headings1 = document.querySelectorAll("h1");
+                for(var i = 0; i < headings1.length; i++) {
+                    if(headings1[i].textContent === "First H1") {
+                        var body = document.querySelector("body");
+                        body.removeChild(headings1[i]);
+                    }
+                }
+            }
+            function removeH3() {
+                var headings3 = document.querySelectorAll("h3");
+
+                for(var i = 0; i < headings3.length; i++) {
+                    var body = document.querySelector("body");
+                    body.removeChild(headings3[i]);
+                }
+            }
+            function removeH5() {
+                var headings = document.getElementById('headings');
+                var body = document.querySelector("body");
+                body.removeChild(headings);
+            }
+            function removeRed() {
+                var redClass = document.querySelectorAll("#cont > .red");
+
+                for(var i = 0; i < redClass.length; i++) {
+                    var cont = document.getElementById("cont");
+                    cont.removeChild(redClass[i]);
+                }
+            }
+            function removeDivs() {
+                var divs = document.querySelectorAll("#cont > div");
+
+                for(var i = 0; i < divs.length; i++) {
+                    var cont = document.getElementById("cont");
+                    cont.removeChild(divs[i]);
+                }
+            }
         </script>
     </body>
 </html>
