@@ -6,17 +6,17 @@
 <body>
 	<!-- These elements below are for FSD.JS.9.1-->
 	<h1> Create your own exponentiation function! </h1>
-	<input type="text" name = "num1">
-	<input type="text" name = "num2">
-	<p> </p>
+	<input type="text" id='num1' name = "num1">
+	<input type="text" id='num2' name = "num2">
+	<p id='answer1'> Your Answer.</p>
 	</hr>
 	<button onclick="exponent()">Click here to find the exponent!</button>
 	<!-- These elements above are for FSD.JS.9.1-->
 
 	<!-- These elements below are for FSD.JS.9.2-->
 	<h1>Sum of multiples of 3 and 5!</h1>
-	<p></p>
-	<input type="text">
+	<p id='answer2'>Your sum</p>
+	<input id="num3" type="text">
 	<button onclick="sumOf3And5()">Click here for the output!</button>
 	
 	<!-- These elements above are for FSD.JS.9.2-->
@@ -29,12 +29,32 @@
 	<!-- These elements above are for FSD.JS.9.3-->
 	<script type="text/javascript">
 		//Write javascript for FSD.JS.9.1 here
-		function exponent(){
-			
-		}
+       function exponent()
+       {
+            var a=parseInt(document.getElementById('num1').value)
+            var b=parseInt(document.getElementById('num2').value)
+            var ans=1
+             for(var i=0;i<b;i++)
+            {
+                ans=ans*a
+            }
+             document.getElementById('answer1').innerHTML=ans
+      }
+        
 		//Write javascript for FSD.JS.9.2 here
-		function sumOf3And5(){
-		}
+        function sumOf3And5()
+        {
+            var a=parseInt(document.getElementById('num3').value)
+            var sum=0;
+            for(var i=0;i<=a;i++)
+            {
+                if(i%3==0 && i%5==0)
+                {
+                    sum=sum+i
+                }
+            }
+            document.getElementById('answer2').innerHTML=sum
+        }
 		//Write javascript for FSD.JS.9.3 here
 		function validateEmail(){
 		}
