@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id="num1">
+	<input type="text" name = "num2" id="num2">
+	<p id="result1"></p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p></p>
+	<input type="text" id="limit">
+	<p id="result2"></p>
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" name="email" id="email" required />
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+			output = 1;
+			var num = document.getElementById("num1").value;
+			var pow = document.getElementById("num2").value;
+			for(var i = 1; i <= pow; i++) {
+				output *= num;
+			}
+			console.log(output);
+			document.getElementById("result1").innerHTML = output;
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+			output = 0;
+			var limit = document.getElementById("limit").value;
+			for(var i = 1; i <= limit; i++) {
+				if((i % 3 == 0) && (i % 5 == 0)) {
+					output += i;
+				}
+			}
+			document.getElementById("result2").innerHTML = output;
+		}
+
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+			var result = "";
+			var email = document.getElementById("email").value;
+			if(email.length < 1) {
+				result = false;
+			}
+			
+			if(email.indexOf("@") < 1 || email.indexOf("@") == -1) {
+				result = false;
+			}
+			
+			var parts = email.split("@");
+
+			if(parts.length > 2) {
+				result = false;
+			}
+
+			var specialChar = ["@", "+", "!", "#", "$", "%", ",", "&", "*", "/"];
+			for(var i = 0; i < specialChar.length; i++) {
+				if(parts[0].includes(specialChar[i]) == true) {
+					result = false;
+					break;
+				}
+			}
+				
+			var dot = parts[1].indexOf(".");
+			if (dot == -1 || dot < 5) {
+				result = false;
+			}
+			
+			var dotParts = parts[1].split(".");
+			if(dotParts.length > 2) {
+				result = false;
+			}
+			
+			for (var i = 0; i < dotParts.length; i++) {
+				if (dotParts[i].length < 1) {
+					result = false;
+				}
+			}
+
+			result = true;
+			
+			if(result == true) {
+				alert("Valid Email!");
+			} else {
+				alert("Invalid Email!");
+			}
+		}
+	</script>
+</body>
+</html>
