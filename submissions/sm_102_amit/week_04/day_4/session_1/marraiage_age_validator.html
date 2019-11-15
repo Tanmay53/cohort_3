@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Marriage Age Validator</title>
+  </head>
+  <body>
+    <h1>Check your eligibility!</h1>
+    <select name="gender" id="gender" required>
+      <option value="">--</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <input type="date" name="dob" id="dob" required />
+    <button onclick="verifyAge()">Check Eligibility</button>
+    <p id="result"></p>
+
+    <script type="text/javascript">
+      // function to check the age
+      function verifyAge() {
+        if (document.getElementById("gender").value == "") {
+          alert("Select gender first!");
+        } else {
+          var output = "";
+          var gender = document.getElementById("gender").value;
+          var dob = document.getElementById("dob").value;
+          var dob = new Date(dob);
+          var dobYear = dob.getFullYear();
+          var date = new Date();
+          var year = date.getFullYear();
+          var age = year - dobYear;
+          if (gender == "male") {
+            if (age >= 21) {
+              output = "Yes! You are eligible!";
+            } else {
+              output = "No! You are not eligible!";
+            }
+          } else if (gender == "female") {
+            if (age >= 18) {
+              output = "Yes! You are eligible!";
+            } else {
+              output = "No! You are not eligible!";
+            }
+          }
+          alert(output);
+        }
+      }
+    </script>
+  </body>
+</html>
