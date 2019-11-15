@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marriage Age Validator</title>
+</head>
+
+<body>
+    <div>
+        <select id="gender">
+            <option selected></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input type="number" id="dob">
+    </div>
+    <button onclick="checkMarriage()">Click to check eligibility</button>
+    
+    <script>
+        function checkMarriage(){
+            var year = document.getElementById('dob').value
+            age = 2019 - year;
+            var gender = document.getElementById('gender').value
+            if(gender == 'Male') {
+                if(age >= 21){
+                    alert ("You are Eligible to Marry")
+                }else{
+                    alert ('you are underaged')
+                }
+            }else
+              {
+               if(age >=18){
+                    alert("You are Eligible to Marry")
+               }else{
+                    alert("You are underaged")
+               }
+            }          
+        }
+        
+    </script>
+</body>
+
+</html>
