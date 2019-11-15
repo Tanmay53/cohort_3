@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marriage Validator</title>
+    </head>
+    <body>
+        <div>
+            <select name="gender" id="gender">
+                <option value="">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            Year of Birth <input type="number" id="yob">
+        </div>
+        <div>
+            <button onclick="check()">Valid?</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+
+        <script type="text/javascript">
+            function check(){
+                var gender = document.getElementById("gender").value
+                var yob = document.getElementById("yob").value
+
+                if(gender != '' && yob != ''){
+                    if(checkAge(yob)){
+                        checkValid(gender,yob)
+                    }
+                    else{
+                        return
+                    }
+                }
+                else{
+                    alertValidity(3)
+                    return
+                }
+            }
+
+            function checkAge(yob){
+                if(yob > 2019){
+                    alertValidity(4)
+                    return false
+                }
+                else{
+                    return true
+                }
+            }
+
+            function checkValid(gender,yob){
+                if(gender == 'male'){
+                    if(2019 - yob >= 21){
+                        alertValidity(1)
+                    }
+                    else{
+                        alertValidity(2)
+                    }
+                }
+                else{
+                    if(2019 - yob >= 18){
+                        alertValidity(1)
+                    }
+                    else{
+                        alertValidity(2)
+                    }
+                }
+            }
+
+            function reset(){
+                document.getElementById("gender").value = ''
+                document.getElementById("yob").value = ''
+            }
+
+            function alertValidity(flag){
+                switch(flag){
+                    case 1: alert("Valid legal age for marriage")
+                    break
+                    case 2: alert("Not valid legal for marriage")
+                    break
+                    case 3: alert("Please enter valid details")
+                    break
+                    case 4: alert("Enter a valid year < 2019")
+                    break
+                }
+            }
+        </script>
+    </body>
+</html>

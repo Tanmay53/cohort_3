@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="cont">
+            <div class='firstBox'>
+                  <input type="number" id="age" placeholder="age"/><br>
+                  <button onclick="submission()" id="agevalue">Submit</button>
+                  <p id='message'>Check your eligiblity for driving in India!</p>
+            </div>
+            <div class='secondBox'>
+                  <input type="text" id="clr" placeholder="Enter you desired color"/><br>
+                  <button onclick="changeColor()" id="changemycolor">Click here to change my color</button>
+            </div>
+            <br>
+            <div class="thirdBox">
+                <select id = "continent_select">
+                           <option value="India">India</option>
+                           <option value="United States of America">United States of America</option>
+                           <option value="China">China</option>
+                           <option value="Nepal">Nepal</option>
+                           <option value="Australia">Australia</option>
+                           <option value="France">France</option>
+                           <option value="Germany">Germany</option>
+                           <option value="South Africa">South Africa</option>
+                           <option value="Nigeria">Nigeria</option>
+                           <option value="Mexico">Mexico</option>
+                           <option value="Argentina">Argentina</option>
+                           <option value="Brazil">Brazil</option>
+                           <option value="Canada">Canada</option>
+                           <option value="Singapore">Singapore</option>
+                           <option value="Sweden">Sweden</option>
+                </select><br>
+                <button onclick="checkContinent()" id="continent_select">Find continent</button>
+            </div>
+        </div>
+     <script>
+            function submission()
+                {
+                     var custAge=document.getElementById('age').value
+                       if(custAge>18)
+                       {
+                           document.getElementById('message').innerHTML='You can drive in India!'
+                           document.getElementById('message').style.color='green'
+                           
+                       }
+                       else if(custAge==18)
+                       {
+                           document.getElementById('message').innerHTML='You are just old enough to drive in India!'
+                           document.getElementById('message').style.color='yellow'
+                       }
+                       else if(custAge<0)
+                       {
+                        document.getElementById('message').innerHTML="Your input is invalid!"
+                       }
+                       else
+                       {   
+                          document.getElementById('message').innerHTML="You can't drive in India!"
+                          document.getElementById('message').style.color='red'
+                       }
+                }
+            function changeColor()
+                {
+                     document.getElementById('changemycolor').style.background=document.getElementById('clr').value
+                   
+                }
+            function checkContinent()
+                {
+                       var country=document.getElementById("continent_select").value
+                                  switch(country)
+                           {
+                                  case "India":
+                                  case "China":
+                                  case "Nepal":
+                                  case "Singapore":
+                                      alert(' The Continent is Asia')
+                                      break;
+                                  case "United States of America":
+                                  case "Mexico":
+                                  case "Canada":
+                                       alert(' The continet is North America')
+                                       break;        
+                                  case "France":
+                                  case "Germany":
+                                  case "Sweden":
+                                       alert(' The continet is Europe')
+                                       break;
+                                  case "Brazil":
+                                  case "Argentina":
+                                       alert(' The continet is South America')
+                                       break;
+                                  case "South Africa":
+                                  case "Nigeria":
+                                       alert(' The continet is Africa')
+                                       break;
+                                  case "Australia":
+                                       alert(' The continet is Australia')
+                                       break;
+                            }
+               }
+    </script>
+    </body>
+</html>

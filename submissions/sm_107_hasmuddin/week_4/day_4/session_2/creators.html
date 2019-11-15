@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Practise Creators</title>
+  </head>
+  <body>
+    <div id="headings"></div>
+    <div id="cont"></div>
+    <ul id="vikings">
+      <li>Priyanshu</li>
+    </ul>
+    <button onclick="createHead()">Create H1</button>
+    <button onclick="createDouble()">Create 2 H3</button>
+    <button onclick="createDivs()">Create DIVS</button>
+    <button onclick="addStudent()">Add Students</button>
+    <button onclick="addCopy()">Add Copyright</button>
+    <script>
+      var students = [
+        "Ajay",
+        "Akshay",
+        "Anusha",
+        "Chandrashekhara",
+        "Haren",
+        "Hasaan",
+        "Mahesh",
+        "Mousumi",
+        "Pavan",
+        "Rahul",
+        "Sumanta",
+        "Venkatesh",
+        "Vetrival",
+        "Vijayendra"
+      ];
+      function createHead() {
+        text = document.createElement("h1");
+        text.textContent = "MASAI";
+        headings = document.getElementById("headings");
+        headings.appendChild(text);
+      }
+      function createDouble() {
+        head1 = document.createElement("h3");
+        head1.textContent = "A Transformation in education";
+        head2 = document.createElement("h3");
+        head2.textContent = "Learn to earn, pay when you get";
+        headings = document.getElementById("headings");
+        headings.appendChild(head1);
+        headings.appendChild(head2);
+      }
+      function createDivs() {
+        for (i = 1; i <= 10; i++) {
+          divs = document.createElement("div");
+          divs.textContent = "Content" + " " + i;
+          parentDiv = document.getElementById("cont");
+          parentDiv.appendChild(divs);
+        }
+      }
+      function addStudent() {
+        for (i = 0; i < students.length; i++) {
+          list = document.createElement("li");
+          parentUl = document.getElementById("vikings");
+          list.textContent = students[i];
+          parentUl.appendChild(list);
+        }
+      }
+      function addCopy() {
+        button1 = document.querySelector("button");
+        copy = document.createElement("p");
+        copy.textContent = "@masai 2019";
+        parent = document.querySelector("body");
+        parent.insertBefore(copy, button1);
+      }
+    </script>
+  </body>
+</html>
