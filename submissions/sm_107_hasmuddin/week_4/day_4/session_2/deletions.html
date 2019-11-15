@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Practise Deletions</title>
+  </head>
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <div id="headings">
+      <h5>First H5</h5>
+      <h5>Second H5</h5>
+      <h5>Third H5</h5>
+    </div>
+    <div id="cont">
+      <div class="green">First DIV</div>
+      <div class="red">Second DIV</div>
+      <div class="blue">Third DIV</div>
+      <p class="green">First P</p>
+      <p class="red">Second P</p>
+      <p class="blue">Third P</p>
+    </div>
+    <hr />
+    <button onclick="removeHead1()">Remove H1</button>
+    <button onclick="removeHead3()">Remove H3</button>
+    <button onclick="removeHead5()">Remove H5</button>
+    <button onclick="removeRed()">Remove Red</button>
+    <button onclick="removeDivs()">Remove DIVS</button>
+    <script>
+      function removeHead1() {
+        head = document.querySelector("h1");
+        bodyEle = document.querySelector("body");
+        bodyEle.removeChild(head);
+      }
+      function removeHead3() {
+        heads = document.querySelectorAll("h3");
+        for (i = 0; i < heads.length; i++) {
+          bodyEle = document.querySelector("body");
+          bodyEle.removeChild(heads[i]);
+        }
+      }
+      function removeHead5() {
+        heads = document.querySelectorAll("h5");
+        for (i = 0; i < heads.length; i++) {
+          parentId = document.getElementById("headings");
+          parentId.removeChild(heads[i]);
+        }
+      }
+      function removeRed() {
+        reds = document.querySelectorAll(".red");
+        for (i = 0; i < reds.length; i++) {
+          parentEle = document.getElementById("cont");
+          parentEle.removeChild(reds[i]);
+        }
+      }
+      function removeDivs() {
+        divs = document.querySelectorAll("#cont div");
+        for (i = 0; i < divs.length; i++) {
+          parentEle = document.getElementById("cont");
+          parentEle.removeChild(divs[i]);
+        }
+      }
+    </script>
+  </body>
+</html>
