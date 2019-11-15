@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="changeCol1()">Change H1</button>
+        <button onclick="changeCol2()">Change H3</button>
+        <button onclick="changeCol3()">Change H5</button>
+        <button onclick="changeCol4()">Change Green</button>
+        <button onclick="changeCol5()">Change Red</button>
+        <button onclick="changeCol6()">Change Blue</button>
+        <script>
+            function changeCol1(){
+                var ele = document.querySelector('h1');
+                 ele.style.color = "red";
+            }
+            function changeCol2(){
+                var ele = document.querySelectorAll('h3');
+                for( i = 0; i < ele.length; i++){
+                    var elems = ele[i];
+                 elems.style.color = "green";
+             }
+            }
+            function changeCol3(){
+                var ele = document.querySelectorAll('h5');
+                for( i = 0; i < ele.length; i++){
+                    var elems = ele[i];
+                 elems.style.color = "blue";
+             }
+            }
+            function changeCol4(){
+                var ele = document.querySelectorAll('.green');
+                for( i = 0; i < ele.length; i++){
+                    var elems = ele[i];
+                 elems.style.color = "green";
+             }
+            }
+            function changeCol6(){
+                var ele = document.querySelectorAll('.blue');
+                for( i = 0; i < ele.length; i++){
+                    var elems = ele[i];
+                 elems.style.color = "blue";
+             }
+            }
+            function changeCol5(){
+                var ele = document.querySelectorAll('.red');
+                for( i = 0; i < ele.length; i++){
+                    var elems = ele[i];
+                 elems.style.color = "red";
+             }
+            }
+
+
+        </script>
+    </body>
+</html>

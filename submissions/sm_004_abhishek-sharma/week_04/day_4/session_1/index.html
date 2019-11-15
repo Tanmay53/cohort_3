@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id="num1">
+	<input type="text" name = "num2" id="num2">
+	<p id="printExponent"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="multipleSum"> </p>
+	<input type="text" name = "limit" id="limit">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" name="getEmail" id="getEmail"/>
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+			var a = document.getElementById("num1").value
+			var b = document.getElementById("num2").value
+			console.log(a*b)
+			var exponent = 1
+			if(b == 0){
+				document.getElementById("printExponent").innerHTML = "1"
+				return
+			}
+			else if(b > 0){
+				for(var i = 1; i <= b; i++){
+				exponent *= a
+				}
+			}
+			else{
+				b = -b
+				for(var i = 1; i <= b; i++){
+				exponent *= 1/a
+				}
+			}
+			document.getElementById("printExponent").innerHTML = exponent	
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+			var size = document.getElementById("limit").value
+			var sum = 0
+			for(var i = 0; i <= size;i+=15){
+				sum += i
+				// i = i+15
+			}
+			document.getElementById("multipleSum").innerHTML = sum
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+			var mail = document.getElementById("getEmail").value
+			var check1 = checkSymbol(mail)
+			var check2 = validCharacters(mail)
+			var check3 = checkTlds(mail)
+			if(check1 && check2 && check3)
+				alert("Valid Email!")
+			else
+				alert("Invalid Email!")
+
+			function checkSymbol(str){
+				if(str[0] == "@" || str[0] == "." || str[0] == "-" )
+        			return false
+				var count = 0
+				for(var i = 0; i < str.length; i++){
+					if(str[i] == "." && str[i+1] == ".")
+            			return false
+					if(str[i] == "@"){
+						count++
+					}
+				}
+				if(count == 1)
+					return true
+				else 
+					return false
+			}
+
+			function validCharacters(str){
+				var count = 0
+				for(var i = 0; i < str.length; i++){
+					switch(str[i]){
+						case 'a':
+						case 'A':
+						case 'b':
+						case 'B':
+						case 'c':
+						case 'C':
+						case 'd':
+						case 'D':
+						case 'e':
+						case 'E':
+						case 'f':
+						case 'F':
+						case 'g':
+						case 'G':
+						case 'h':
+						case 'H':
+						case 'i':
+						case 'I':
+						case 'j':
+						case 'J':
+						case 'k':
+						case 'K':
+						case 'l':
+						case 'L':
+						case 'm':
+						case 'M':
+						case 'n':
+						case 'N':
+						case 'o':
+						case 'O':
+						case 'p':
+						case 'P':
+						case 'q':
+						case 'Q':
+						case 'r':
+						case 'R':
+						case 's':
+						case 'S':
+						case 't':
+						case 'T':
+						case 'u':
+						case 'U':
+						case 'v':
+						case 'V':
+						case 'w':
+						case 'W':
+						case 'x':
+						case 'X':
+						case 'y':
+						case 'Y':
+						case 'z':
+						case 'Z':
+						case '0':
+						case '1':
+						case '2':
+						case '3':
+						case '4':
+						case '5':
+						case '6':
+						case '7':
+						case '8':
+						case '9':
+						case '-':
+						case '.':
+						case '@':
+						case '_':continue
+						default : count++
+					}
+				}
+				if(count > 0)
+					return false
+				else 
+					return true
+			}
+
+			function checkTlds(mail){
+				var len = mail.length , tld = ""
+				function getTld(mail){
+					for(var i = 0; i < len; i++){
+						if(mail[i] == "@"){
+							if(mail[i+1] == ".")
+								return false
+							for(var j = i+2; j < len; j++){
+								if(mail[j] == "."){
+									for(var k = j; k < len; k++){
+										tld += mail[k]
+									}
+									return tld
+								}
+							}
+						}
+					}
+				}
+				var tld = getTld(mail)
+				if(tld == ".com" ||tld == ".org" ||tld == ".net" ||tld == ".in")
+					return true
+				else
+					return false
+			}
+		}
+	</script>
+</body>
+</html>
