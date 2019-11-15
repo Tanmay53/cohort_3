@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <div>
+        <h3><b>Enter your age</b></h3>
+        <input type="text" name="yob" id="dob">
+        <button onclick="ageCheck()">Driving Test!</button>
+
+   
+
+        <p id="a18"> </p>
+        <p id ="j18"> </p>
+        <p id="b18"> </p>
+    </div>
+ 
+<div id="dcolor">
+    <input type="text" color="colour" id="wColor">
+    <button id ="bcolor" onclick="changeColor()">Click here to change my color</button>
+
+</div>
+
+
+<div>
+
+
+<select id="continentSelect">
+    <option value="">--</option>
+    <option value="India">India</option>
+    <option value="United States of America">United States of America</option>
+    <option value="China">China</option>
+    <option value="Nepal">Nepal</option>
+    <option value="Australia">Australia</option>
+    <option value="France">France</option>
+    <option value="Germany">Germany</option>
+    <option value="South Africa">South Africa</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Brazil">Brazil</option>
+    <option value="Canada">Canada</option>
+    <option value="Singapore">Singapore</option>
+    <option value="Sweden">Sweden</option>
+</select>
+   
+    <button onclick="wContinent()">Find Continent!</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+
+	function  ageCheck() 
+    {
+        if(dob.value>18)
+        {
+            document.getElementById('a18').innerHTML="You can drive in India!"
+        }
+        else if (dob.value<18)
+        {
+            document.getElementById('b18').innerHTML="You can not drive in India!"
+        }
+        else{
+            document.getElementById('j18').innerHTML="You are just old enough to drive in India!"
+        }
+	}
+
+    function changeColor()
+    {
+        document.getElementById('bcolor').style.background = document.getElementById('wColor').value 
+    }
+
+
+        function wContinent()
+        {
+            switch (continentSelect.value)
+            {
+    case 'India': alert('The continent Asia')
+    break;
+    case 'United States of America': alert('The continent is North America')
+    break;
+    case 'China': alert('The continent is Asia')
+    break;
+    case 'Nepal':alert('The continent is Asia')
+    break;
+    case 'Australia':alert('The continent is Australia')
+    break;
+    case 'France':alert('The continent is Europe')
+    break;
+    case 'Germany':alert('The continent is Europe ')
+    break;
+    case 'South Africa':alert('The continent is Africa')
+    break;
+    case 'Nigeria':alert('The continent is Africa')
+    break;
+    case 'Mexico':alert('The continent is South America')
+    break;
+    case 'Argentina':alert('The continent is South America')
+    break;
+    case 'Brazil':alert('The continent is South America')
+    break;
+    case 'Canada':alert('The continent is North America')
+    break;
+    case 'Singapore':alert('The continent is Asia')
+    break;
+    case 'Sweden':alert('The continent is Europe')
+    break;
+    
+    default: alert('Please select a country name')
+            }
+
+        }
+
+
+
+
+
+	</script>
+</body>
+</html>

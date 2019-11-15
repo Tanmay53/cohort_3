@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Marraiage_Age_Validator</title>
+    <style>
+        body {
+            background: rgb(192, 240, 147);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Marraiage Age Validator</h1>
+    <label>Select Gender</label>
+    <select id="gender">
+        <option id="male">Male</option>
+        <option id="female">Female</option>
+    </select>
+    <label>Enter Your Birth Year :</label>
+    <input id="year" type="number">
+    <br><br>
+    <button onclick="checkStatus()">Check Status</button>
+    <p id="message"></p>
+
+    <script>
+        function checkStatus() {
+            var year = document.getElementById("year").value;
+
+            if(gender == male){
+                if(2019-year >= 21){
+                    document.getElementById("message").innerHTML= "You can Marry !!!"
+                }
+                else{
+                    document.getElementById("message").innerHTML= "You Are Child !!!"
+                }
+            }
+            else{
+                if(2019-year >= 18){
+                    document.getElementById("message").innerHTML= "You can Marry !!!"
+                }
+                else{
+                    document.getElementById("message").innerHTML= "You Are Child !!!"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

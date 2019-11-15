@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Practise Selectors</title>
+  </head>
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+    <button onclick="changeH1()">Change H1</button>
+    <button onclick="changeH3()">Change H3</button>
+    <button onclick="changeH5()">Change H5</button>
+    <button onclick="changeGreen()">Change Green</button>
+    <button onclick="changeRed()">Change Red</button>
+    <button onclick="changeBlue()">Change Blue</button>
+    <script>
+      function changeH1() {
+        var firstH1 = document.querySelector("h1");
+        firstH1.style.color = "red";
+      }
+      function changeH3() {
+        var firstH3 = document.querySelectorAll("h3");
+
+        for (i = 0; i < firstH3.length; i++) {
+          var div = firstH3[i];
+          div.style.color = "green";
+        }
+      }
+      function changeH5() {
+        var firstH5 = document.querySelectorAll("h5");
+
+        for (i = 0; i < firstH5.length; i++) {
+          var div = firstH5[i];
+          div.style.color = "blue";
+        }
+      }
+      function changeGreen() {
+        var greens = document.getElementsByClassName("green");
+        for (i = 0; i < greens.length; i++) {
+          greens[i].style.color = "green";
+        }
+      }
+      function changeRed() {
+        var reds = document.getElementsByClassName("red");
+        for (i = 0; i < reds.length; i++) {
+          reds[i].style.color = "red";
+        }
+      }
+      function changeBlue() {
+        var blues = document.getElementsByClassName("blue");
+        for (i = 0; i < blues.length; i++) {
+          blues[i].style.color = "blue";
+        }
+      }
+    </script>
+  </body>
+</html>
