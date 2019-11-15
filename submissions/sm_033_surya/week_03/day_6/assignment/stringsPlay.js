@@ -1,4 +1,4 @@
-var data = "masai scHool"
+var data = "masai-scHool"
 var hypen = "-"
 var underscore = "_"
 
@@ -15,9 +15,9 @@ function camelCase()
     var y = 0
     for (i = 0 ; i < data.length ; i++)
     {
-        if(data[i] == " ")
+        if(data[i] == " " || data[i] == "_" || data[i]== "-")
         {
-            for (z = i ; data[z] == " " ;z++)
+            for (z = i ; data[z] == " " || data[z] == "_" || data[z] == "-" ;z++)
                    {
                     y = y+1
                    }
@@ -64,9 +64,9 @@ function stringCases(data,value)
     var y = 0
     for (i = 0 ; i < data.length ; i++)
     {
-        if(data[i] == " ") 
+        if(data[i] == " " || data[i] == "_" || data[i]== "-") 
         {   
-            for (z = i ; data[z] == " " ;z++)
+            for (z = i ; data[z] == " " || data[z] == "_" || data[z] == "-";z++)
                {
                 y = y+1
                }

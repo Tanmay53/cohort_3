@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <script type="text/javascript">
+function calculateage()
+{
+  var agevalue=document.getElementById("age").value
+  agevalue=Number(agevalue)
+  if(agevalue=="")
+    {
+  document.getElementById("msz").innerHTML="enter some value"
+    }
+  else if(agevalue>18)
+    {
+  document.getElementById("msz").innerHTML="You can drive in India!"
+    }
+  if(agevalue<18)
+    {
+  document.getElementById("msz").innerHTML="You can't drive in India"
+    }
+  if(agevalue==18)
+    {
+  document.getElementById("msz").innerHTML="You are just old enough to drive in India!"
+    }
+  
+}
+ function changecolor() {
+                var color = document.getElementById('colrrrr').value
+            document.getElementById("colorbutton").style.backgroundColor = color
+            }
+
+ function continent() {
+                var country = document.getElementById("continent_select").value
+                var continent = ''
+                switch(country) {
+                    case "India" :
+                    case "China" :
+                    case "Nepal" :
+                    case "Singapore" :
+                        continent = 'Asia'
+                        break
+                    case "United States of America" :
+                    case "Mexico" : 
+                    case "Canada" :
+                        continent = 'North America'
+                        break
+                    case "Australia" : 
+                        continent = "Oceania"
+                        break
+                    case "France" :
+                    case "Germany" :
+                    case "Sweden" :
+                        continent = "Europe"
+                        break                        
+                    case "South Africa" :
+                    case "Nigeria" :
+                        continent = "Africa"
+                    case "Brazil" :
+                    case "Argentina" :
+                        continent = "South America"
+                    default:
+                        alert('not working')
+                }
+                alert('The continent is : ' + continent)
+            }
+            </script>
+             <style type="text/css">
+                .content{
+                    width : 60%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 50px;
+                    background-color:blue;
+                }
+            </style>
+            </head>
+        
+
+
+
+
+<body>
+    <div class="content">
+      <p id="msz"></p>
+      <table>
+       <tr>
+       <td>Enter Age : </td>
+       <td>
+           <input type="number" id="age" placeholder="Enter Age"></td>
+       </tr>
+        <tsr>
+          <td></td>
+          <td ><input type= "button"  value="click me" onclick="calculateage()"></td>
+          </tr>
+      </table>
+    </div>
+    <div class="content">
+      <table>
+        <tr>
+          <td>TABLE</td>
+          <td>
+        <input type="text" id="colrrrr" placeholder="Enter color">
+      </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="button"  id="colorbutton" value="Click here to change my color"  onclick="changecolor()">
+            
+          </td>
+        </tr>
+        </table>
+          </div>
+          
+    
+              <div class="content">
+                  <table>
+                      <tr>
+                          <td>SELECT </td>
+                          <td>
+                              <select id = "continent_select">
+                                      <option value = "India"> India </option>	
+                                      <option value = "United States of America"> United States of America </option>
+                                      <option value = "China"> China </option>
+                                      <option value = "Nepal"> Nepal </option>
+                                      <option value = "Australia"> Australia </option>
+                                      <option value = "France"> France </option>
+                                      <option value = "Germany"> Germany </option>
+                                      <option value = "South Africa"> South Africa </option>
+                                      <option value = "Nigeria"> Nigeria </option>
+                                      <option value = "Mexico"> Mexico </option>
+                                      <option value = "Argentina"> Argentina </option>
+                                      <option value = "Brazil"> Brazil </option>
+                                      <option value = "Canada"> Canada </option>
+                                      <option value = "Singapore"> Singapore </option>
+                                      <option value = "Sweden"> Sweden </option>
+                                      <option value = "Argentina"> Argentina </option>
+                              </select>
+                          </td>
+                      </tr>
+                     
+                    <tr>
+                          <td></td>
+                          <td>
+                              <input type="button"  value = "find continent" onclick="continent()">
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+  </body>
+  </html>
