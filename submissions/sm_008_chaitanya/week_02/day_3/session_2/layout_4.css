@@ -1,0 +1,19 @@
+#box {
+    display:grid;
+    grid-gap:20px;
+    grid-template-rows:150px 150px;
+    grid-template-columns:150px 150px 150px 150px 150px;
+    padding:20px;
+    justify-content:center;
+    border-top:100px solid white;
+    
+  }
+#box div{
+    background:rgb(39,120,102);
+  }
+  @media(max-width:600px){
+#box div{
+      background:green;
+    }
+  }
+  

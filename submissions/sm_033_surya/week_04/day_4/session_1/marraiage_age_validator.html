@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            #gender {
+                height: 40px;
+                width: 40px;
+            }
+            div {
+                text-align: center;
+            }
+            
+            #verify {
+                margin: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Marraiage Age Validator!</h1>
+            <p>Select gender</p>
+            <select id ="gender">
+                <option value="male">M</option>
+                <option value="female">F</option>
+            </select>
+            <p>Please enter your birth year</p>
+            <input type="text" id = "year">
+            <br>
+            <button id = "verify" onclick="validator()">Verify</button>
+            <p id = "result"></p>
+        </div>
+        <script>
+            function validator(){
+           
+           var birthYear = document.getElementById("year").value
+           
+            var gender = document.getElementById("gender").value
+            var age = 2019-birthYear
+
+            if (gender == "female"){
+                    if(age >= 18)                
+                        document.getElementById("result").innerHTML = "Yor are eligible for marrige in india"
+                else
+                    document.getElementById("result").innerHTML = "Yor are not eligible for marrige in india"
+                     }
+                if (gender == "male"){
+                if(age >= 21)
+                   document.getElementById("result").innerHTML = "Yor are eligible for marrige in india"
+                else 
+                    document.getElementById("result").innerHTML = "Yor are not eligible for marrige in india"
+                }
+            }
+
+        </script>
+    </body>
+
+</html>

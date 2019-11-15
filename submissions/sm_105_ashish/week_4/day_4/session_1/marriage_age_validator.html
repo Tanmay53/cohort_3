@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Age validator
+        </title>
+        <body>
+            <div>
+                <div>
+                    <select id="gen">
+                        <option >Gender</option>
+                        <option  value="Male">Male</option>
+                        <option   value="Female">Female</option>
+                    </select>
+                    <input  id='input1' type="number" placeholder="Enter your birth year"/>
+                    <button onclick="ageValidate()">Submit</button>
+                   
+                </div>
+            </div>
+
+            <script>
+                    function ageValidate()
+                    {
+                        var num=document.getElementById('input1').value
+                        var age=2019-num;
+                        var gender=document.getElementById('gen').value
+                        if(gender=='Male')
+                        {
+                            if(age>=21)
+                            {
+                                alert('Your age is valid to get married in India')
+                            }
+                            else
+                            {
+                               alert('Your age is  not valid to get married in India')
+                            }
+                        }
+                      else
+                        {
+                            if(age>=18)
+                            {
+                                alert('Your age is valid to get married in India')
+                            }
+                            else
+                            {
+                               alert('Your age is  not valid to get married in India')
+                            }
+                        }
+       
+                    }
+               
+               </script>
+        </body>
+   
+    </head>
+</html>
