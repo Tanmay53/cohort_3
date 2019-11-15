@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <style>
+        #age , #color{
+              width: 200px;
+              border:solid black;
+              padding: 5px;
+              text-align: center;
+        }
+        #continentSelect{
+            width: 216px;
+              height: 33px;
+              border:solid black;
+              padding: 5px;
+              text-align: center;
+
+        }
+        #btnAge , #btnColor , #btnContinent{
+            width:216px;
+            height: 33px;
+            background-color: black;
+            color: cornsilk;
+            border:solid blue;
+            margin: 10px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            width : 500px;
+            height: 500px;
+            background-color: cadetblue;
+            margin: auto;
+        }
+        .cont div{
+                   margin:10px auto;
+                   align-items: center;
+        }
+        </style>
+    </head>
+    <body>
+        <div class = "cont">
+            <div>
+        <input type = 'number' id ="age" placeholder="enter your age">
+        <button onclick = "ageCheck()" id = "btnAge">age</button>
+        <p id = 'showMsg'></p></div>
+        <hr />
+        <div>
+        <input type = 'text' id = "color" placeholder="enter color">
+        <button onclick = "changeColor()" id = "btnColor">color</button>
+    </div>
+        <hr />
+        <div>
+        <select id = "continentSelect">
+            <option value = "India">India</option>
+            <option value = "United States of America">United States of America</option>
+            <option value = "China">China</option>
+            <option value = "Nepal">Nepal</option>
+            <option value = "Australia">Australia</option>
+            <option value = "France">France</option>
+            <option value = "Germany">Germany</option>
+            <option value = "South Africa">South Africa</option>
+            <option value = "Nigeria">Nigeria</option>
+            <option value = "Mexico">Mexico</option>
+            <option value = "Argentina">Argentina</option>
+            <option value = "Brazil">Brazil</option>
+            <option value = "Canada">Canada</option>
+            <option value = "Singapore">Singapore</option>
+            <option value = "Sweden">Sweden</option>
+        </select>
+        <button onclick = "findContinent()" id = "btnContinent">Find continent</button>
+       </div>
+    </div>
+        
+        
+        
+        
+        <script type = "text/javascript">
+        function ageCheck(){
+            var year = document.getElementById('age').value
+            if(year > 18)
+            {
+                document.getElementById('showMsg').innerHTML = "You can drive in India!" ;
+
+            }
+            else if(year < 18)
+            {
+                document.getElementById('showMsg').innerHTML = "You can't drive in India" ;
+            }
+            else
+            {
+                document.getElementById('showMsg').innerHTML = "You are just old enough to drive in India!"
+            }
+        }
+
+        function changeColor(){
+            var colorName = document.getElementById('color').value ;
+            document.getElementById('btnColor').style.background = colorName
+        }
+
+        function findContinent(){
+            var country = document.getElementById('continentSelect').value
+            switch(country){
+                case 'India':
+                alert('The continent is Asia')
+                break;
+                case 'United States of America':
+                alert('The continent is North America')
+                break;
+                case 'China':
+                alert('The continent is Asia')
+                break;
+                case 'Nepal':
+                alert('The continent is Asia')
+                break;
+                case 'Australia':
+                alert('The continent is Oceania')
+                break;
+                case 'France':
+                alert('The continent is Europe')
+                break;
+                case 'Germany':
+                alert('The continent is Europe')
+                break;
+                case 'South Africa':
+                alert('The continent is Africa')
+                break;
+                case 'Nigeria':
+                alert('The continent is Africa')
+                break;
+                case 'Mexico':
+                alert('The continent is North America')
+                break;
+                case 'Argentina':
+                alert('The continent is South America')
+                break;
+                case 'Brazil':
+                alert('The continent is South America')
+                break;
+                case 'Canada':
+                alert('The continent is North America')
+                break;
+                case 'Singapore':
+                alert('The continent is Asia')
+                break;
+                case 'Sweden':
+                alert('The continent is Europe')
+                break;
+            }
+        }
+        </script>
+    </body>
+</html>
