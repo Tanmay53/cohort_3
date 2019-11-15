@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id="num1">
+	<input type="text" name = "num2" id="num2">
+	<p id="exp"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="sum"></p>
+	<input type="text" id="limit">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="email" />
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+			var num1 = getElement("#num1").value;
+            var num2 = getElement("#num2").value;
+            var p = getElement("#exp");
+            console.log(num1*num2);
+            var product= 1;
+            for(var i =1;i<=num2;i++){
+                product *= num1;
+            }
+            p.innerHTML = product;
+        }
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+            var sum = 0;
+            var limit = getElement("#limit").value;
+            var p = getElement("#sum");
+            for(i = 0;i<=limit;i++){
+                if(i % 3 == 0 && i % 5 ==0){
+                    sum += i;
+                }
+            }
+            p.innerHTML = sum;
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+           var email = getElement("#email").value;
+            if(email == ""){
+                alert("Enter email")
+            }else{
+                var flag = hasEmail(email);
+                if(flag){
+                    alert("Valid Email!");
+                }else{
+                    alert("Invalid Email!");
+                }
+            }
+            
+		}
+        // return element
+        function getElement(query){
+           return document.querySelector(`${query}`);
+        }
+
+        // -------------------------------------------------------------------//
+        var testCase = [
+                    "a",
+                    "b",
+                    "c",
+                    "d",
+                    "e",
+                    "f",
+                    "g",
+                    "h",
+                    "i",
+                    "j",
+                    "k",
+                    "l",
+                    "m",
+                    "n",
+                    "o",
+                    "p",
+                    "q",
+                    "r",
+                    "s",
+                    "t",
+                    "u",
+                    "v",
+                    "w",
+                    "x",
+                    "y",
+                    "z",
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "_",
+                    "-",
+                    "@",
+                    "."
+                    ];
+// Initialization of Object
+
+
+// CheckEmailValidation
+
+function hasEmail(email) {
+    console.log(email)
+  switch (1) {
+    case 1: {
+      // Test Case 1 : masai.school.com [@ is not present]
+      var flag = false;
+      for (var i = 0; i < email.length; i++) {
+        if (email[i] == "@") {
+            flag =true;
+        }
+      }
+      if(!flag){
+            return false;
+            break;
+            }
+    }
+    case 2: {
+      // Test Case 2 :  masai@.com.my [ tld (Top Level domain) can not start with dot "." ]
+      subEmail = subString(email, "@");
+      if (subEmail[1][0] == ".") {
+        return false;
+        break;
+      }
+    }
+    case 3: {
+      // Test Case 3 : @masai.school.net [ No character before @ ]
+      subEmail = subString(email, "@");
+      if (subEmail[0][0] == "@") {
+        return false;
+        break;
+      }
+    }
+    case 4: {
+      // Test Case 4 : .name@masaischool.org [ an email should not be start with "." ]
+      subEmail = subString(email, "@");
+      if (subEmail[0][0] == ".") {
+        return false;
+        break;
+      }
+    }
+    case 5: {
+      // Test case 5 : name..1234@yahoo.com [double dots are not allowed]
+      subEmail = subString(email, "@");
+      var count = 0;
+      for (var i = 0; i < subEmail[0].length; i++) {
+        if (subEmail[0][i] == ".") {
+          count++;
+        }
+      }
+      if (count > 1) {
+        return false;
+        break;
+      }
+    }
+    case 6: {
+      //Test Case 6 :  Must have single @
+      subEmail = subString(email, "@");
+      for (var i = 0; i < subEmail[0].length; i++) {
+        if (subEmail[0][i] == "@") {
+          return false;
+          break;
+        }
+      }
+    }
+    case 7: {
+    }
+  }
+  return true;
+}
+
+
+
+// Split string
+function subString(array, index) {
+  var subStr = ["", ""];
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] == index) {
+      for (var j = 0; j < i; j++) {
+        subStr[0] += array[j];
+      }
+      for (var j = i + 1; j < array.length; j++) {
+        subStr[1] += array[j];
+      }
+    }
+  }
+  return subStr;
+}
+
+	</script>
+</body>
+</html>
