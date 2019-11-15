@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Practise Selectors</title>
+  </head>
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+    <button onclick="changeH1()">Change H1</button>
+    <button onclick="changeH3()">Change H3</button>
+    <button onclick="changeH5()">Change H5</button>
+    <button onclick="changeGreen()">Change Green</button>
+    <button onclick="changeRed()">Change Red</button>
+    <button onclick="changeBlue()">Change Blue</button>
+    <script>
+      function changeH1() {
+        document.querySelector("h1").style.color = "red";
+      }
+      function changeH3() {
+        var heading3 = document.querySelectorAll("h3");
+        heading3.forEach(function(val) {
+          val.style.color = "green";
+        });
+      }
+      function changeH5() {
+        var heading5 = document.querySelectorAll("h5");
+        heading5.forEach(function(val) {
+          val.style.color = "blue";
+        });
+      }
+      function changeGreen() {
+        var green = document.querySelectorAll(".green");
+        green.forEach(function(val) {
+          val.style.color = "green";
+        });
+      }
+      function changeRed() {
+        var red = document.querySelectorAll(".red");
+        red.forEach(function(val) {
+          val.style.color = "red";
+        });
+      }
+      function changeBlue() {
+        var blue = document.querySelectorAll(".blue");
+        blue.forEach(function(val) {
+          val.style.color = "blue";
+        });
+      }
+    </script>
+  </body>
+</html>
