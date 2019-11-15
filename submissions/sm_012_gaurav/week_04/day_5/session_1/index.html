@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.JS.10.1 !-->
+  <h1>Change the buttons text color random value</h1>
+  <button id="textColor">Click here to change my color</button>
+  <br>
+  <br>
+  <button id="arrColor">Click me to change my color to an array value!</button>
+
+  <!-- FSD.JS.10.2 !-->
+  <h1 id="colorChange">My color should change when I double click the button!</h1>
+  <button id = "h1colorbutton">Double Click here to change the color of the h1 tag !</button>
+  
+  <!-- FSD.JS.10.3 !-->
+  <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="backgroundButton">Click here to change my color!</button>
+  <script>
+      function randomNumber(limit) {
+          return Math.floor(Math.random()*limit);
+      }
+
+      var textColorButton = document.getElementById('textColor');
+      function randomColor() {
+          var color = 'rgb('+randomNumber(255)+','+randomNumber(255)+','+randomNumber(255)+')';
+          return color;
+      }
+
+      function changeTextColor() {
+          textColorButton.style.color = randomColor();
+      }
+      textColorButton.addEventListener('click', changeTextColor);
+
+      var h1ColorChange = document.getElementById('colorChange');
+      var h1colorbutton = document.getElementById('h1colorbutton');
+      function changeH1Color() {
+          h1ColorChange.style.color = randomColor();
+      }
+      h1colorbutton.addEventListener('click', changeH1Color);
+
+      var cnt = 0;
+      var backgroundButton = document.getElementById('backgroundButton');
+      function changeBackgroundColor() {
+          cnt++;
+          if (cnt > 2) {
+              cnt = 0;
+              backgroundButton.removeEventListener('dblclick',changeBackgroundColor);
+          }
+          else {
+              backgroundButton.style.backgroundColor = randomColor();
+          }
+      }
+      backgroundButton.addEventListener('dblclick', changeBackgroundColor);
+
+      var arrColor = document.getElementById('arrColor');
+      var colorArray = ['aqua','red','green','yellow','blue','violet','blueviolet','crimson','cyan','darkviolet','darkslategray','magenta'];
+      var colorIndex = 0;
+      function changeColorArr() {
+          if (colorIndex < colorArray.length) {
+              arrColor.style.backgroundColor = colorArray[colorIndex];
+          }
+          else {
+              colorIndex = 0;
+          }
+          colorIndex++;
+      }
+
+      function randomNumberRange(min, max) {
+          return Math.floor(Math.random()*(max-min)) + min;
+      }
+
+      arrColor.addEventListener('click', changeColorArr);
+
+      function changeFontSize() {
+          var fontSize = randomNumberRange(10,30)+'px';
+          backgroundButton.style.fontSize = fontSize;
+
+      }
+      backgroundButton.onmouseover = changeFontSize;
+  </script>
+</body>
+</html>
