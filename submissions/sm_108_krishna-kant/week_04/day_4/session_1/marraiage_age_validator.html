@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="gender">Gender</label>
+    <select name="gender" id="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+    <p><label>Enter Birth Year</17label></p>
+    <input type="text" id="age" />
+    <input type="submit" onclick="getMarriage()" />
+    <p id="result"></p>
+    <script>
+      // get marriage age
+      function getMarriage() {
+        currDate = new Date;
+        currYear = currDate.getFullYear(); 
+        age = getElement("#age").value;
+        if(age.length == 4){
+        age = currYear - age;
+        gender = getElement("#gender").value;
+        message = "You are not eligible yet";
+        if (gender == "Female") {
+          if (age >= 18) {
+            message = "You are Eligible for marriage";
+          }
+        } else if (gender == "Male") {
+          if (age >= 21) {
+            message = "You are Eligible for marriage";
+          }
+        }
+        getElement("#result").innerHTML = message;
+          }else{
+              alert("Enter Valid Year example : 1999")
+          }
+      }
+
+      //   get element
+      function getElement(query) {
+        return document.querySelector(`${query}`);
+      }
+    </script>
+  </body>
+</html>
