@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button onclick="createh1()">Create H1</button>
+        <button onclick="createh3()">Create 2 H3</button>
+        <button onclick="creatediv()">Create DIVS</button>
+        <button onclick="addstud()">Add Students</button>
+        <button onclick="addCopyright()">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+            function createh1() 
+            {
+                var h1 = document.createElement('h1');
+                h1.textContent = "MASAI";
+                var headings = document.getElementById('headings');
+                headings.appendChild(h1);
+            }
+            function createh3() 
+            {
+                var h31 = document.createElement('h3');
+                var h32 = document.createElement('h3');
+                h31.textContent = "A Transformation in education!";
+                h32.textContent = "Learn to earn, pay when you get.";
+                var headings = document.getElementById('headings');
+                headings.appendChild(h31);
+                headings.appendChild(h32);
+            }
+           
+            function creatediv() {
+                var elemDiv = document.getElementById('cont')
+                for(var i = 1; i <= 10; i++) {
+                    newDiv = document.createElement('div')
+                    newDiv.innerHTML = 'Content ' + i
+                    elemDiv.appendChild(newDiv)
+                }
+            }
+            function addstud()
+            {
+                var studadd = document.getElementById("vikings")
+                for(var i=0;i<=students.length;i++)
+                {
+                    var li=document.createElement("li")
+                    li.textContent=students[i]
+                    studadd.appendChild(li)
+                }
+            }
+         
+            function addCopyright() {
+                var para = document.createElement('p');
+                para.textContent = "@ masai 2019";
+                var bodyElem = document.querySelector('body');
+                var btn = document.querySelector('button');
+                bodyElem.insertBefore(para, btn);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="changeh1()">Change H1</button>
+        <button onclick="changeh3()">Change H3</button>
+        <button onclick="changeh5()">Change H5</button>
+        <button onclick="changegreen()">Change Green</button>
+        <button onclick="changered()">Change Red</button>
+        <button onclick="changeblue()">Change Blue</button>
+        <script>
+            function changeh1() {
+                var Eh1 = document.querySelector('h1');
+                Eh1.style.color = "red";
+            }
+            function changeh3()
+             {
+                var Eh3 = document.querySelectorAll('h3');
+                for (var i = 0; i < Eh3.length; i++)
+                {
+                Eh3[i].style.color = "green";
+                }
+            }
+            function changeh5() 
+            {
+                var Eh5 = document.querySelectorAll('h5');
+                for (var i = 0; i < Eh5.length; i++)
+                {
+                Eh5[i].style.color = "blue";
+                }
+            }
+            function changegreen()
+            {
+               var Cgreen=document.getElementsByClassName("green")
+               for (var i = 0; i < Cgreen.length; i++)
+                {
+                Cgreen[i].style.color = "green";
+                }
+            }
+            function changered()
+            {
+               var Cred=document.getElementsByClassName("red")
+               for (var i = 0; i < Cred.length; i++)
+                {
+                Cred[i].style.color = "red";
+                }
+            }
+            function changeblue()
+            {
+               var Cblue=document.getElementsByClassName("blue")
+               for (var i = 0; i < Cblue.length; i++)
+                {
+                Cblue[i].style.color = "blue";
+                }
+            }
+        </script>
+    </body>
+</html>
