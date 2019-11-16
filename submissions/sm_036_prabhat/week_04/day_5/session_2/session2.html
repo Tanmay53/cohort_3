@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Session2</title>
+</head>
+
+<body>
+    <script>
+        //Random Number function
+        var bodyElement = document.querySelector("body");
+        
+        function random(number){
+        return Math.floor(Math.random()*number);
+        }
+
+        // Change the buttons text color random value
+        bodyElement.onload = function (){
+            var randomColor = "rgb("+ random(255)+"," + random(255)+ "," + random(255) +")";
+            bodyElement.style.background = randomColor; 
+        };
+        
+    </script>
+</body>
+
+</html>

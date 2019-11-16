@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leaderboard</title>
+        <link rel="stylesheet" href="leaderboard.css">
+    </head>
+    <body>
+        <div id="scoreNav">
+            <div>
+                <div id="minScore">
+                    42
+                </div>
+                MIN
+            </div>
+            <div>
+                <div id="maxScore">
+                    2019
+                </div>
+                MAX
+            </div>
+        </div>
+
+        <div id="gridDiv">
+            <div>SCORE</div>
+            <div id="scoreBox">
+                #
+            </div>
+            <div class="numDiv green">1</div>
+            <div class="numDiv">2</div>
+            <div class="numDiv green">3</div>
+            <div class="numDiv">4</div>
+            <div class="numDiv">5</div>
+            <div class="numDiv">6</div>
+            <div class="numDiv green">7</div>
+            <div class="numDiv">8</div>
+            <div class="numDiv green">9</div>
+            <div class="numDiv" id="numDiv0">0</div>
+            <div class="numDiv" onclick="deleteVal()"><<</div>
+            <button id="enterBtn" onclick="submitInput()">ENTER</button>
+        </div>
+
+        <script src="leaderboard.js"></script>
+    </body>
+</html>

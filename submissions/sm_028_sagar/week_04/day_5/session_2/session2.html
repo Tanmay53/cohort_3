@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color on Resize</title>
+</head>
+
+<body>
+    <script>
+        window.onresize = change_color;
+        var body = document.querySelector('body');
+
+        function random(num) {
+            return Math.floor(Math.random() * num);
+        }
+
+        function change_color() {
+            console.log('check');
+            var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+
+</html>

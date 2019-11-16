@@ -1,0 +1,60 @@
+<html>
+    <head>
+            <title></title>
+    </head>
+    <body>
+           
+            
+            <select id="gender">
+                <option value="">--</option>
+                <option value="male">M</option>
+                <option value="female">F</option>
+            </select>
+
+            <p>Enter Year of Birth</p><input type="text" name="yob" id="dob">
+            <button onclick="weddingAge()">Check to see if Valid legal age to get Married</button>
+
+
+            <script type="text/javascript">
+            function weddingAge()
+            {
+                console.log('hi')
+                if (gender.value == 'male')
+                {
+                    if (dob.value <=1998)// checked wrt present year 2019
+                    {
+                        alert('Valid age to marry and settle down')
+                    }
+                    else{
+                        alert('Not yet a Valid age to marry, my boy')
+                    }
+                }
+                else if(gender.value == 'female')
+                {
+                    if(dob.value >= 2001)// checked wrt present year 2019
+                    {
+                        alert('Valid age to marry')
+                    }
+                    else
+                    {
+                        alert('Not yet a valid age to marry')
+                    }
+                }
+            }
+            
+            
+            
+            
+            
+            
+            </script>
+
+
+
+    </body>
+
+
+
+
+
+</html>
