@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse Events</title>
+    <style>
+        #container {
+            width: 600px;
+            height: 600px;
+            margin: 100px auto;
+            border: 1px solid rgb(109, 107, 107);
+            background-color: lightgrey;
+            border-radius: 5px;
+        }
+        
+        #submit {
+            padding: 30px 40px;
+            border-radius: 4px;
+            background-color: rgb(85, 184, 20);
+            font-size: 25px;
+            margin-top: 450px;
+            margin-left: 400px;
+            border: 1px solid rgb(71, 119, 39);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <button id="submit"> Submit </button>
+    </div>
+
+    <script>
+        var div = document.querySelector('#container');
+        var btn = document.querySelector('#submit');
+
+        div.addEventListener('mouseenter', change_color_enter);
+        div.addEventListener('mouseout', change_color_leave);
+
+        function change_color_enter() {
+            var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            btn.style.backgroundColor = randomColor;
+
+        }
+
+        function random(num) {
+            return Math.floor(Math.random() * num);
+        }
+
+        function change_color_leave() {
+            btn.style.backgroundColor = 'rgb(85, 184, 20)';
+        }
+    </script>
+</body>
+
+</html>
