@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event listener</title>
+    </head>
+    <body >
+        <script>
+            window.addEventListener('resize',resizeColor)
+            var bodybox=document.querySelector('body')
+            function random(number)
+           {
+             return Math.floor(Math.random()*number);
+           }
+            function resizeColor ()
+            {
+                var randomColor='rgb('+random(255)+','+random(255)+','+random(255)+')';
+                bodybox.style.background=randomColor
+            }
+        </script>
+    </body>
+</html>

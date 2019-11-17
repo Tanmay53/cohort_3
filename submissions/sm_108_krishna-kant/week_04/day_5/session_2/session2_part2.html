@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #main {
+        background: orange;
+        height: 500px;
+        width: 500px;
+        border-radius: 50px;
+        margin: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 3rem;
+      }
+      #main input {
+        padding: 2rem;
+        background: red;
+        color: white;
+        font-size: 2rem;
+        border: none;
+        border-radius: 20px;
+        justify-self: flex-end;
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", loadElement);
+
+      function loadElement() {
+        var body = document.querySelector("body");
+        var div = document.createElement("div");
+        div.id = "main";
+        var input = document.createElement("input");
+        input.type = "submit";
+        input.id = "submit";
+        div.addEventListener("mouseover", changeColor);
+        div.addEventListener("mouseleave", changeColor);
+        div.appendChild(input);
+        body.appendChild(div);
+      }
+
+      function changeColor(e) {
+        var button = document.querySelector("#submit");
+        if (e.type == "mouseover") button.style.background = "Green";
+        else button.style.background = "red";
+      }
+    </script>
+  </body>
+</html>

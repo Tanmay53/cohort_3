@@ -26,46 +26,51 @@
         <button onclick="removeH5()">Remove H5</button>
         <button onclick="removeRed()">Remove Red</button>
         <button onclick="removeDivs()">Remove DIVS</button>
-
         <script>
+            var bodyElem = document.querySelector('body');
             function removeH1() {
-                var headings1 = document.querySelectorAll("h1");
-                for(var i = 0; i < headings1.length; i++) {
-                    if(headings1[i].textContent === "First H1") {
-                        var body = document.querySelector("body");
-                        body.removeChild(headings1[i]);
-                    }
-                }
+                var div = document.querySelector('h1');
+                bodyElem.removeChild(div)
             }
             function removeH3() {
-                var headings3 = document.querySelectorAll("h3");
+                var div = [];
+                var bodyElem = document.querySelector('body');
+                var div = document.querySelectorAll('h3');
 
-                for(var i = 0; i < headings3.length; i++) {
-                    var body = document.querySelector("body");
-                    body.removeChild(headings3[i]);
+                for(var i=0;i<div.length;i++) {
+                    bodyElem.removeChild(div[i])
                 }
             }
+
             function removeH5() {
-                var headings = document.getElementById('headings');
-                var body = document.querySelector("body");
-                body.removeChild(headings);
+                var div = [];
+                var headings = document.querySelector('#headings');
+                var div = document.querySelectorAll('h5');
+
+                for(var i=0;i<div.length;i++) {
+                    headings.removeChild(div[i])
+                }
             }
             function removeRed() {
-                var redClass = document.querySelectorAll("#cont > .red");
+                var cont = document.querySelector('#cont');
+                var red = document.querySelectorAll('.red');
 
-                for(var i = 0; i < redClass.length; i++) {
-                    var cont = document.getElementById("cont");
-                    cont.removeChild(redClass[i]);
+                for(var i=0;i<red.length;i++) {
+                    cont.removeChild(red[i])
                 }
             }
             function removeDivs() {
-                var divs = document.querySelectorAll("#cont > div");
+                
+                var cont = document.querySelector('#cont');
+                var div = document.querySelectorAll('#cont div');
 
-                for(var i = 0; i < divs.length; i++) {
-                    var cont = document.getElementById("cont");
-                    cont.removeChild(divs[i]);
+                for(var i=0;i<div.length;i++) {
+                    cont.removeChild(div[i]);
+
                 }
             }
+
+
         </script>
     </body>
 </html>
