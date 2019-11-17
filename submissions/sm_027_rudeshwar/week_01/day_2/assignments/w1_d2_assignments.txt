@@ -1,0 +1,1000 @@
+  479  cd week_2
+  480  ls
+  481  mv day-4 day_4
+  482  ls
+  483  cd ..
+  484  ls
+  485  cd all
+  486  ls
+  487  mkdir w1
+  488  ls
+  489  mkdir w2
+  490  mv *w1
+  491  ls *w1
+  492  ls /*w1
+  493  ls /*w1.txt
+  494  ls *w1.txt
+  495  ls *s1.txt
+  496  ls *w1.txt
+  497  ls w1*
+  498  cp w1* w1
+  499  cp w1* Downloads/course/all/w1
+  500  cp w1* /home/rudreshwar/Downloads/course/all/w1
+  501  cp -r w1* /home/rudreshwar/Downloads/course/all/w1
+  502  cp -r /home/rudreshwar/Downloads/course/all/w1  w1* /home/rudreshwar/Downloads/course/all/w1
+  503  cp -r /home/rudreshwar/Downloads/course/all/  w1* /home/rudreshwar/Downloads/course/all/w1
+  504  cd w1
+  505  ls
+  506  cd ..
+  507  ls
+  508  mkdir session_wise
+  509  ls
+  510  mv s1 session_wise
+  511  cd session_wise
+  512  ls
+  513  mv s2 session_wise
+  514  cd ..
+  515  ls
+  516  mv s2 session_wise
+  517  cd session_wise
+  518  ls
+  519  cd
+  520  pwd
+  521  Downloads
+  522  cd Downloads
+  523  cd course
+  524  ls
+  525  cd all
+  526  ls
+  527  rm overall.txt
+  528  ls
+  529  rm day_3
+  530  rm -r day_3
+  531  cd
+  532  practise
+  533  cd practise
+  534  ls
+  535  cd week_1
+  536  ls
+  537  ls -a
+  538  rm .day_6
+  539  rm -r .day_6
+  540  cd
+  541  cd course
+  542  cd Downloads
+  543  cd course
+  544  ls
+  545  cd week_1
+  546  ls
+  547  cd ..
+  548  ls
+  549  rm -r week_1
+  550  rm -r week_2
+  551  cd
+  552  pwd
+  553  cd ~
+  554  history >w1_d2_s1.txt
+  555  git --version
+  556  sudo apt-get install git
+  557  git config
+  558  git config --global user.name "rudresh051"
+  559  git config --global user.mail "jharudreshwar17@gmail.com"
+  560  git config user.name
+  561  git config user.email
+  562  git config user.gmail
+  563  git config --global user.email "jharudreshwar17@gmail.com"
+  564  git config user.email
+  565  cd ~
+  566  pwd
+  567  mkdir repos
+  568  ls
+  569  cd repos
+  570  ls
+  571  cd ..
+  572  ls
+  573  cd repos
+  574  ls
+  575  mkdir test
+  576  ls
+  577  git init
+  578  cd test
+  579  ls
+  580  git init
+  581  date > start
+  582  ls
+  583  git add start.txt
+  584  git add start
+  585  git status
+  586  ls
+  587  cd ..
+  588  ls
+  589  cd ~
+  590  pwd
+  591  cd repos
+  592  cd test
+  593  git init
+  594  mkdir date > start
+  595  ls
+  596  mkdir 22/10/2019 > start 
+  597  date
+  598  mkdir start
+  599  mkdir date > start
+  600  mkdir date > start.txt
+  601  git add start.txt
+  602  git add repos/
+  603  git add test/
+  604  git commit -m "Start Time"
+  605  git remote add origin https://github.com/rudresh051/test.git
+  606  git push origin master
+  607  unzip course
+  608  cd course
+  609  cd all
+  610  ls
+  611  git status
+  612  cd ..
+  613  ls
+  614  cd ..
+  615  ls
+  616  git status
+  617  git add test/
+  618  git add test
+  619  cd course
+  620  cd all
+  621  ls
+  622  add commit push overll.txt
+  623  cd
+  624  pwd
+  625  cd repos
+  626  cd start
+  627  cd test
+  628  ls
+  629  cd course
+  630  ls
+  631  cd all
+  632  ls
+  633  file overall.txt
+  634  git add home/rudreshwar/repos/test/course/all/overall.txt
+  635  pwd
+  636  git add /home/rudreshwar/repos/test/course/all
+  637  pwd
+  638  git add /home/rudreshwar/repos/test/course/all/overall.txt
+  639  git status
+  640  git commit -m "first file"
+  641  git push origin master
+  642  git add /home/rudreshwar/repos/test/course/all/overall.txt
+  643  git status
+  644  git add overall.txt
+  645  git status
+  646  git add overall.txt
+  647  git status
+  648  git add overall.txt
+  649  git status
+  650  cd ~
+  651  cd repos
+  652  cd test
+  653  git init test
+  654  cd ..
+  655  pwd
+  656  cd test
+  657  pwd
+  658  git init
+  659  mkdir start
+  660  git add start.txt
+  661  git status
+  662  git commit "Start Time"
+  663  git add start
+  664  git status
+  665  git add start.txt
+  666  git init
+  667  git add start.txt
+  668  git add test/
+  669  git commit -m "start time"
+  670  git remote add origin https://github.com/rudresh051/test.git
+  671  git push origin master
+  672  cd all
+  673  ls
+  674  git add overall.txt
+  675  git commit -m "first file"
+  676  git push origin master
+  677  cd ..
+  678  ls
+  679  git add week_1/
+  680  git commit -m "Week1 course"
+  681  pwd
+  682  ls
+  683  cd week_2
+  684  ls
+  685  git add day_5/
+  686  git commit -m "W2 D5"
+  687  cd ~
+  688  pwd
+  689  mkdir masai
+  690  pwd
+  691  cd masai
+  692  git init
+  693  pwd
+  694  echo "# SAMURAIS -RUDRESHWAR JHA"> profile.md
+  695  git remote add origin https://github.com/rudresh051/masai-school-test.git
+  696  git push origin master
+  697  history >w1_d2_s2.txt
+  698  pwd
+  699  mkdir repos
+  700  okay
+  701  git clone https://github.com/masai-school/assignments-data
+  702  pwd
+  703  ls
+  704  cd assignments-data
+  705  ls
+  706  cd data
+  707  ls
+  708  cd food
+  709  ls
+  710  pwd
+  711  mkdir fruits vegetables meats
+  712  cd foods
+  713  ls
+  714  mv /*fruit /home/rudreshwar/assignments-data/data/food/fruits
+  715  ls
+  716  mv /home/rudreshwar/assignments-data/data/food/fruits* /home/rudreshwar/assignments-data/data/food/fruits
+  717  mv /home/rudreshwar/assignments-data/data/food/fruits* /home/rudreshwar/assignments-data/data/food/fruits/
+  718  mv /home/rudreshwar/assignments-data/data/food/fruits*.txt /home/rudreshwar/assignments-data/data/food/fruits/
+  719  mv home/rudreshwar/assignments-data/data/food/fruits* /home/rudreshwar/assignments-data/data/food/fruits/
+  720  mv ls home/rudreshwar/assignments-data/data/food/fruits* /home/rudreshwar/assignments-data/data/food/fruits/
+  721  mv ls home/rudreshwar/assignments-data/data/food/*fruits* /home/rudreshwar/assignments-data/data/food/fruits/
+  722  ls
+  723  mv home/rudreshwar/assignments-data/data/food/*fruits* /home/rudreshwar/assignments-data/data/food/fruits/
+  724  mv home/rudreshwar/assignments-data/data/food/*fruit* /home/rudreshwar/assignments-data/data/food/fruits/
+  725  mv home/rudreshwar/assignments-data/data/food/fruit* /home/rudreshwar/assignments-data/data/food/fruits/
+  726  mv home/rudreshwar/assignments-data/data/food/fruit* /home/rudreshwar/assignments-data/data/food/fruits
+  727  mv home/assignments-data/data/food/fruit* /home/rudreshwar/assignments-data/data/food/fruits
+  728  mv home/assignments-data/data/food/*fruit* /home/assignments-data/data/food/fruits
+  729  mv /home/assi
+  730  mv ls home/assignments-data/data/food/*fruit*
+  731  mv ls home/assignments-data/data/food/*fruit
+  732  mv ls home/assignments-data/data/food/fruit*
+  733  mv ls /home/assignments-data/data/food/fruit*
+  734  mv ls /home/assignments-data/data/food/*fruit*
+  735  /home/assignments-data/data/food/*fruit*
+  736  pwd
+  737  ls home/rudreshwar/assignments-data/data/food/*fruit*
+  738  ls Home/rudreshwar/assignments-data/data/food/*fruit*
+  739  ls assignments-data/data/food/*fruit*
+  740  ls Home/rudreshwar/assignments-data/data/food/*fruit*
+  741  CD
+  742  cd
+  743  pwd
+  744  ls 
+  745  cd assignments-data
+  746  ls
+  747  cd data
+  748  ls
+  749  cd food
+  750  ls
+  751  mv fruit_apple.txt fruits/
+  752  ls
+  753  ls *fruit
+  754  ls *fruit*
+  755  mv assignments-data/data/food/*fruit* fruits/
+  756  ls
+  757  mv ~/assignments-data/data/food/*fruit* fruits/
+  758  pwd
+  759  ls
+  760  cd assignments-data/
+  761  ls
+  762  cd data
+  763  ls
+  764  cd food
+  765  ls
+  766  cd fruits
+  767  ls
+  768  cd ..
+  769  ls
+  770  cd
+  771  mv ~/assignments-data/data/food/meat* home/rudreshwar/assignments-data/data/food/meats/
+  772  pwd
+  773  mv ~/assignments-data/data/food/
+  774  ls ~/assignments-data/data/food/
+  775  mv ~/assignments-data/data/food/meat* /home/rudreshwar/assignments-data/data/food/meats/
+  776  pwd
+  777  ls ~/assignments-data/data/food/
+  778  cd meats/
+  779  cd /meats
+  780  cd /meats/
+  781  pwd
+  782  ls ~/assignments-data/data/food/
+  783  pwd
+  784  cd assignments-data/
+  785  ls
+  786  cd data/
+  787  ls
+  788  cd foods
+  789  cd food
+  790  ls
+  791  cd meats
+  792  ls
+  793  cd ..
+  794  ls
+  795  mv ~/assignments-data/data/food/vegetable* /home/rudreshwar/assignments-data/data/food/vegetables/
+  796  ls
+  797  cd vegetables
+  798  ls
+  799  pwd
+  800  cd ../../
+  801  ls
+  802  cd avengers
+  803  cd superheros
+  804  ls
+  805  pwd
+  806  cd avengers
+  807  ls
+  808  cd ..
+  809  ls
+  810  pwd
+  811  cd avengers
+  812  ls
+  813  cd ..
+  814  ls
+  815  cd justice_league
+  816  ls
+  817  cd ..
+  818  cd 
+  819  xrandr -o normal
+  820  pwd
+  821  mkdir coding
+  822  ls
+  823  cd coding
+  824  ls
+  825  mkdir week_1
+  826  ls
+  827  cd week_1
+  828  ls
+  829  mkdir day_3
+  830  pwd
+  831  ls
+  832  cd day_3
+  833  ls
+  834  pwd
+  835  mkdir practise
+  836  cd practise
+  837  ls
+  838  pwd
+  839  cd practise
+  840  mkdir headings.html
+  841  ls
+  842  rm headings.html
+  843  rm -m headings.html
+  844  rm -r headings.html
+  845  ls
+  846  file headings.html
+  847  ls
+  848  file <headings.html>
+  849  headings.html
+  850  date > headings.html
+  851  ls
+  852  date > content.html
+  853  date > tables.html
+  854  ls
+  855  date > masai.html
+  856  ls
+  857  cd /
+  858  pwd
+  859  cd /home/
+  860  cd /rudreshwar/
+  861  cd rudreshwar/
+  862  cd repos/
+  863  ls
+  864  git clone https://github.com/masai-school/cohort_3
+  865  cd assignments-data/
+  866  pwd
+  867  cd cohort_3
+  868  cd ..
+  869  pwd
+  870  cd coding/
+  871  cd rudreshwar/
+  872  cd coding/
+  873  ls
+  874  cd week_1/
+  875  ls
+  876  cd day_3/
+  877  ls
+  878  cd practise/
+  879  ls
+  880  pwd
+  881  cd -
+  882  cd ../../
+  883  cd ../
+  884  cd repos
+  885  ls
+  886  cd cohort_3/
+  887  ls
+  888  cd submissions/
+  889  ls
+  890  cd sm_027_rudreshwar/
+  891  cd sm_027_rudeshwar/
+  892  ls
+  893  mkdir -p week_01/day_3/practise/
+  894  cd week_01/
+  895  ls
+  896  cd day_3/
+  897  ls
+  898  cd practise/
+  899  ls
+  900  cd ../../../../../../..
+  901  pwd
+  902  cd coding/
+  903  ls
+  904  cd week_1/
+  905  ls
+  906  cd day_3/
+  907  ls
+  908  cd practise/
+  909  ls
+  910  cp *.html /home/rudreshwar/repos/cohort_3/submissions/sm_027_rudeshwar/week_01/day_3/practise/
+  911  git commit -m
+  912  git commit -m "day_3 practise"
+  913  git push origin master
+  914  pwd
+  915  cd assignments-data/
+  916  pwd
+  917  cd data
+  918  ls
+  919  cd superheros
+  920  ls
+  921  mkdir guardians
+  922  ls
+  923  cd ..
+  924  ls
+  925  cd superheros
+  926  ls
+  927  cd avengers
+  928  ls
+  929  ls -a
+  930  ls
+  931  cp -r ~/assignments-data/data/superheros/avengers/*.txt /home/rudreshwar/assignments-data/data/superheros/avengers/guardians/
+  932  cd ..
+  933  ls
+  934  cd guardians/
+  935  ls
+  936  cp home/rudreshwar/assignments-data/data/superheros/avengers/*.txt /home/rudreshwar/assignments-data/data/superheros/avengers/guardians/
+  937  ls
+  938  cp home/rudreshwar/assignments-data/data/superheros/avengers/*.txt /home/rudreshwar/assignments-data/data/superheros/avengers/guardians
+  939  ls
+  940  cp ~/assignments-data/data/superheros/avengers/*.txt /home/rudreshwar/assignments-data/data/superheros/avengers/guardians/
+  941  ls
+  942  cd
+  943  pwd
+  944  cd rudreshwar
+  945  cd rudreshwar/
+  946  cd /rudreshwar
+  947  cd /rudreshwar/
+  948  cd ~/rudreshwar
+  949  cd assignments-data
+  950  ls
+  951  cd home/rudreshwar/assignments-data/
+  952  cd home/rudreshwar/assignments-data
+  953  cd home/assignments-data
+  954  cd home/assignments-data/
+  955  cd /home/assignments-data/
+  956  cd /home/assignments-data
+  957  cd /home/assignments-data/data
+  958  cd /home/assignments-data/data/
+  959  cd /assignments-data/data/
+  960  cd assignments-data/data/
+  961  cd ~/assignments-data/data/
+  962  cp ~/assignments-data/data/superheros/avengers/*.txt ~/assignments-data/data/superheros/avengers/guardians/
+  963  cp ~/assignments-data/data/superheros/avengers/ ~/assignments-data/data/superheros/avengers/guardians/
+  964  cp -r ~/assignments-data/data/superheros/avengers/ ~/assignments-data/data/superheros/avengers/guardians/
+  965  cp -r ~/assignments-data/data/superheros/avengers/ ~/assignments-data/data/superheros/avengers/guardians
+  966  cp -r ~/assignments-data/data/superheros/avengers/ guardians/
+  967  ls
+  968  cd guardians
+  969  ls
+  970  cd guardians
+  971  ls
+  972  cd avengers
+  973  ls
+  974  cd ls
+  975  cd guardians
+  976  ls
+  977  pwd
+  978  cd guardians
+  979  ls
+  980  pwd
+  981  rm guardians/
+  982  cd ..
+  983  ls
+  984  rm guardians/
+  985  rm -r guardians/
+  986  ls
+  987  cd ..
+  988  ls
+  989  pwd
+  990  cd avengers
+  991  ls
+  992  cd ..
+  993  ls
+  994  pwd
+  995  ls
+  996  cd ..
+  997  ls
+  998  cd guardians
+  999  ls
+ 1000  rm ant-man.txt        captain_america.txt  falcon.txt   hulk.txt           spider-man.txt
+ 1001  avengers           captain_marvel.txt   gamora.txt   iron_man.txt       star-lord.txt
+ 1002  black_panther.txt  doctor_strange.txt   groot.txt    mantis.txt         thor.txt
+ 1003  black_widow.txt    drax.txt             hawkeye.txt  rocket_racoon.txt  wasp.txt
+ 1004  ls
+ 1005  mv avengers guardians
+ 1006  ls
+ 1007  cd guardians
+ 1008  ls
+ 1009  cd ..
+ 1010  ls
+ 1011  cd ..
+ 1012  ls
+ 1013  cd guardians
+ 1014  ls
+ 1015  cd guardians
+ 1016  ls
+ 1017  cd guardians
+ 1018  ls
+ 1019  ls -a
+ 1020  ls
+ 1021  cd ..
+ 1022  ls
+ 1023  pwd
+ 1024  cd guardians
+ 1025  ls
+ 1026  cd ..
+ 1027  pwd
+ 1028  cd guardians
+ 1029  ls
+ 1030  ..
+ 1031  cd ..
+ 1032  ls
+ 1033  rm -r guardians
+ 1034  ls
+ 1035  cd guardians
+ 1036  pwd
+ 1037  cd guardians
+ 1038  cd ..
+ 1039  ls
+ 1040  rm -r guardians
+ 1041  ls
+ 1042  cd guardians
+ 1043  ls
+ 1044  cd ..
+ 1045  ls
+ 1046  cd superheros
+ 1047  ls
+ 1048  pwd
+ 1049  ls
+ 1050  pwd
+ 1051  cd
+ 1052  pwd
+ 1053  cd /home/
+ 1054  cd /rudreshwar/
+ 1055  pwd
+ 1056  cd rudreshwar/
+ 1057  cd data/
+ 1058  cd assignments-data/
+ 1059  cd data/
+ 1060  ls
+ 1061  cd superheros/
+ 1062  ls
+ 1063  cd avengers/
+ 1064  ls
+ 1065  cd ..
+ 1066  ls
+ 1067  cd guardians/
+ 1068  ls
+ 1069  cd guardians/
+ 1070  ls
+ 1071  cd ..
+ 1072  ls
+ 1073  cd avengers/
+ 1074  ls
+ 1075  cp *.txt /home/rudreshwar/assignments-data/data/superheros/guardians/
+ 1076  ls
+ 1077  cd ..
+ 1078  ls
+ 1079  cd guardians/
+ 1080  ls
+ 1081  cd ..
+ 1082  ls
+ 1083  cd avengers/
+ 1084  ls
+ 1085  cd guardians/
+ 1086  ls
+ 1087  cd ..
+ 1088  ls
+ 1089  rm -r guardians/
+ 1090  ls
+ 1091  cd ~
+ 1092  history >w1_d2_s1.txt
+ 1093  pwd
+ 1094  fr
+ 1095  cd
+ 1096  pwd
+ 1097  free
+ 1098  cd /
+ 1099  pwd
+ 1100  free
+ 1101  free gi
+ 1102  cd
+ 1103  ls
+ 1104  cd
+ 1105  pwd
+ 1106  cd /
+ 1107  pwd
+ 1108  cd /home/helium/
+ 1109  cd /home/rudreshwar/
+ 1110  pwd
+ 1111  cd coding
+ 1112  pwd
+ 1113  cd week_1
+ 1114  pwd
+ 1115  cd -
+ 1116  cd week_1
+ 1117  cd ..
+ 1118  cd week_1
+ 1119  cd ..
+ 1120  cd week_1/
+ 1121  cd ../..
+ 1122  pwd
+ 1123  cd /coding/week_1/
+ 1124  cd coding/week_1/
+ 1125  cd ../../../
+ 1126  pwd
+ 1127  ls
+ 1128  cd rudreshwar/
+ 1129  man ls
+ 1130  cd
+ 1131  pwd
+ 1132  cd ~
+ 1133  pwd
+ 1134  cd /
+ 1135  pwd
+ 1136  ls
+ 1137  cd /home/rudreshwar/
+ 1138  pwd
+ 1139  ls -R
+ 1140  f
+ 1141  -f
+ 1142  pwd
+ 1143  cd ..
+ 1144  cd
+ 1145  pwd
+ 1146  mkdir -p 1/2/3/4/5/6
+ 1147  pwd
+ 1148  cd 1
+ 1149  cd 2
+ 1150  cd 3
+ 1151  cd 4
+ 1152  cd 5
+ 1153  cd 6
+ 1154  cd 7
+ 1155  cd ~
+ 1156  pwd
+ 1157  cd ~
+ 1158  cs /
+ 1159  pwd
+ 1160  cd /
+ 1161  pwd
+ 1162  cd /Home
+ 1163  cd /Home/
+ 1164  cd /home/
+ 1165  pwd
+ 1166  ls
+ 1167  cd /rudreshwar/
+ 1168  cd rudreshwar/
+ 1169  ls
+ 1170  cd coding/
+ 1171  ls
+ 1172  cd week_1/
+ 1173  ls
+ 1174  mkdir day_4
+ 1175  ls
+ 1176  cd day_4/
+ 1177  ls
+ 1178  mkdir session_1
+ 1179  ls
+ 1180  pwd
+ 1181  cd session_1/
+ 1182  pwd
+ 1183  date > date.txt
+ 1184  ls
+ 1185  date > cal_1995.txt
+ 1186  ls
+ 1187  date >> date.txt
+ 1188  ls
+ 1189  less date.txt
+ 1190  less cal_1995.txt
+ 1191  man
+ 1192  man less
+ 1193  less date.txt
+ 1194  less cal_1995.txt
+ 1195  cal 1995
+ 1196  cal -y 1947
+ 1197  man cal
+ 1198  cal 1995
+ 1199  cal -y 1995
+ 1200  pwd
+ 1201  ls
+ 1202  less cal_1995.txt
+ 1203  cal -y 1995 > cal_1995.txt
+ 1204  ls
+ 1205  less cal_1995.txt
+ 1206  man ls
+ 1207  ls -l
+ 1208  pwd
+ 1209  cd ../../../../
+ 1210  ls
+ 1211  cd -
+ 1212  ls
+ 1213  pwd
+ 1214  cd ..
+ 1215  cd ../../
+ 1216  ls
+ 1217  cd ..
+ 1218  ls
+ 1219  cd rudreshwar/
+ 1220  ls
+ 1221  unzip numbers
+ 1222  cd Downloads/
+ 1223  ls
+ 1224  unzip numbers
+ 1225  ls
+ 1226  cd numbers/
+ 1227  ls
+ 1228  ls -l
+ 1229  man ls
+ 1230  ls -a
+ 1231  date > even_2.txt odd_2.txt
+ 1232  date >> even_2.txt odd_2.txt
+ 1233  man >
+ 1234  man >>
+ 1235  pwd
+ 1236  cd 
+ 1237  ls
+ 1238  cd coding/
+ 1239  ls
+ 1240  cd ~/day_4/
+ 1241  cd week_1/
+ 1242  ls
+ 1243  cd day_4/
+ 1244  ls
+ 1245  cd session_1/
+ 1246  ls
+ 1247  ls date.txt
+ 1248  less date.txt
+ 1249  date > date.txt
+ 1250  less date.txt
+ 1251  date >> date.txt
+ 1252  less date.txt
+ 1253  date >> date.txt
+ 1254  less date.txt
+ 1255  cd 
+ 1256  cd
+ 1257  ls
+ 1258  cd Downloads/
+ 1259  ls
+ 1260  cd numbers/
+ 1261  ls
+ 1262  date >> even_2.txt
+ 1263  date >> odd_2.txt
+ 1264  less even_2.txt
+ 1265  cat *2.txt 
+ 1266  less even_2.txt
+ 1267  ls
+ 1268  cat even_2.txt odd_2.txt odd_5.txt odd_7.txt
+ 1269  less even_2.txt
+ 1270  ls
+ 1271  cat *2_.txt
+ 1272  cat *2.txt > primes.txt
+ 1273  ls
+ 1274  cat > even* even.txt
+ 1275  cat even* > even.txt
+ 1276  ls
+ 1277  cat odd* > odd.txt
+ 1278  ls
+ 1279  cat *even* > even.txt
+ 1280  ls
+ 1281  less even.txt
+ 1282  cat even*
+ 1283  ls
+ 1284  less odd.txt
+ 1285  cat even* > even.txt
+ 1286  ls even*
+ 1287  cat even_ > even.txt
+ 1288  cat even_* > even.txt
+ 1289  ls
+ 1290  cd ~
+ 1291  history > w1_d4_s1.txt
+ 1292  history >w1_d4_s1.txt
+ 1293  cd coding/
+ 1294  ls
+ 1295  cd week_1/
+ 1296  ls
+ 1297  cd day_4/
+ 1298  ls
+ 1299  mkdir session_2
+ 1300  ls
+ 1301  date > layout_1.html
+ 1302  ls
+ 1303  man rm
+ 1304  rm  layout_1.html
+ 1305  ls
+ 1306  cd session_2/
+ 1307  ls
+ 1308  date > layout_1.html
+ 1309  ls
+ 1310  cd ~
+ 1311  history > w1_d4_s1.txt
+ 1312  pwd
+ 1313  cd assignments-data/
+ 1314  cd data/
+ 1315  ls
+ 1316  cd superheros/
+ 1317  ls
+ 1318  mkdir original
+ 1319  ls
+ 1320  cd original/
+ 1321  ls
+ 1322  iron_man > tony_stark
+ 1323  man duplicate
+ 1324  man hidden
+ 1325  pwd
+ 1326  cd assignments-data/
+ 1327  cd data/
+ 1328  ls
+ 1329  cd superheros/
+ 1330  ls
+ 1331  cd original/
+ 1332  ls
+ 1333  batman >bruce_wayne
+ 1334  ls
+ 1335  flash > barr_allen
+ 1336  ls
+ 1337  hulk > bruce_banner
+ 1338  ls
+ 1339  cd ..
+ 1340  ls
+ 1341  cd ..
+ 1342  ls
+ 1343  cd ..
+ 1344  ls
+ 1345  cd data/
+ 1346  ls
+ 1347  cd logs/
+ 1348  ls
+ 1349  cd archieve/
+ 1350  ls
+ 1351  cd archive/
+ 1352  ls
+ 1353  man clean
+ 1354  man remove
+ 1355  rm
+ 1356  man delete
+ 1357  man move
+ 1358  ls
+ 1359  cd ..
+ 1360  ls
+ 1361  rm -r archive
+ 1362  ls
+ 1363  cd archive/
+ 1364  rm 2017*
+ 1365  ls
+ 1366  rm 2018*
+ 1367  ls
+ 1368  pwd
+ 1369  mkdir access error
+ 1370  ls
+ 1371  ls *access*
+ 1372  mv *access* /assignments-data/data/logs/access
+ 1373  ls
+ 1374  cd access/
+ 1375  ls
+ 1376  mv *access* /assignments-data/data/logs/access/
+ 1377  mv *access* ./assignments-data/data/logs/access/
+ 1378  mv *access* home/rudreshwar/assignments-data/data/logs/access/
+ 1379  mv *access* /home/rudreshwar/assignments-data/data/logs/access/
+ 1380  mv *access.log /home/rudreshwar/assignments-data/data/logs/access/
+ 1381  mv *access.log home/rudreshwar/assignments-data/data/logs/access/
+ 1382  pwd
+ 1383  mv *access.log /home/rudreshwar/assignments-data/data/logs/access
+ 1384  ls
+ 1385  mv home/rudreshwar/assignments-data/data/logs/access*access.log /home/rudreshwar/assignments-data/data/logs/access
+ 1386  mv /home/rudreshwar/assignments-data/data/logs/access/*access.log /home/rudreshwar/assignments-data/data/logs/access
+ 1387  mv /home/rudreshwar/assignments-data/data/logs/access/*access.log /home/rudreshwar/assignments-data/data/logs/access/
+ 1388  mv /home/assignments-data/data/logs/access/*access.log /home/assignments-data/data/logs/access/
+ 1389  mv /home/rudreshwar/assignments-data/data/logs/access/*access.log /home/rudreshwar/assignments-data/data/logs/access/
+ 1390  mv *access.log /home/rudreshwar/assignments-data/data/logs/access/
+ 1391  mv /home/rudreshwar/assignments-data/data/logs/access/*access.log /home/rudreshwar/assignments-data/data/logs/access/
+ 1392  mv /home/rudreshwar/assignments-data/data/logs/access/*-access.log /home/rudreshwar/assignments-data/data/logs/access/
+ 1393  pwd
+ 1394  mv assignments-data/data/logs/access/*-access.log /home/rudreshwar/assignments-data/data/logs/access/
+ 1395  mv ~/assignments-data/data/logs/access/*-access.log /home/rudreshwar/assignments-data/data/logs/access/
+ 1396  mv ~/assignments-data/data/logs/access/*-access.log /home/rudreshwar/assignments-data/data/logs/access
+ 1397  mv ~/assignments-data/data/logs/access/*-access.log home/rudreshwar/assignments-data/data/logs/access/
+ 1398* 
+ 1399  mv /home/rudreshwar/assignments-data/data/logs/*-access.log /home/rudreshwar/assignments-data/data/logs/access/
+ 1400  ls
+ 1401  cd ..
+ 1402  ls
+ 1403  mv /home/rudreshwar/assignments-data/data/logs/*-error.log /home/rudreshwar/assignments-data/data/logs/error/
+ 1404  ls
+ 1405  mv 2019.dump ./
+ 1406  ls
+ 1407  mv 2019.dump .
+ 1408  mv 2019.dump ../
+ 1409  ls
+ 1410  cd ..
+ 1411  ls
+ 1412  mv 2019.dump ../
+ 1413  ls
+ 1414  cd ..
+ 1415  ls
+ 1416  cd 
+ 1417  ls
+ 1418  cd repos
+ 1419  ls
+ 1420  cd assignments-data/
+ 1421  git clone https://github.com/masai-school/cohort_3.git
+ 1422  cd ~
+ 1423  ls
+ 1424  cd repos/
+ 1425  ls
+ 1426  cd cohort_3/
+ 1427  ls
+ 1428  cd ../..
+ 1429  ls
+ 1430  mv assignments-data/ ~/repos/
+ 1431  ls
+ 1432  cd repos/
+ 1433  ls
+ 1434  cd assignments-data/
+ 1435  ls
+ 1436  ls -1R data/ > 
+ 1437  ls -1R data/ > Rudreshwar_Jha.txt
+ 1438  ls
+ 1439  pwd
+ 1440  cp Rudreshwar_Jha.txt /home/rudreshwar/repos/assignments-data/cohort_3/submissions/sm_027_rudeshwar/week_01/day_1/assignments/
+ 1441  cd cohort_3/
+ 1442  ls
+ 1443  cp Rudreshwar_Jha.txt /home/rudreshwar/repos/cohort_3/submissions/sm_027_rudeshwar/week_01/day_1/assignments/
+ 1444  cd chort_3/
+ 1445  cd hort_3/
+ 1446  cd chort_3/
+ 1447  cd cohort_3/
+ 1448  cd ..
+ 1449  cd cohort_3/
+ 1450  ls
+ 1451  cd submissions/
+ 1452  ls
+ 1453  cd sm_027_rudeshwar/
+ 1454  ls
+ 1455  cd week_01/
+ 1456  ls
+ 1457  mkdir week_01/day_1/assignments/
+ 1458  cd /day_1/assignments/
+ 1459  mkdir day_1/assignments/
+ 1460  mkdir /day_1/assignments
+ 1461  ls
+ 1462  mkdir day_1 assignments
+ 1463  ls
+ 1464  cp Rudreshwar_Jha.txt /home/rudreshwar/repos/cohort_3/submissions/sm_027_rudeshwar/week_01/day_1/assignments/
+ 1465  mkdir -p day_1/assignments/
+ 1466  ls
+ 1467  cd day_1/
+ 1468  ls
+ 1469  cd assignments/
+ 1470  ls
+ 1471* 
+ 1472  cp /home/rudreshwar/repos/assignments-data/Rudreshwar_Jha.txt /home/rudreshwar/repos/cohort_3/submissions/sm_027_rudeshwar/week_01/day_1/assignments/
+ 1473  ls
+ 1474  git commit -m "day1 assignment"
+ 1475  git push origin master
+ 1476  cd ~
+ 1477  history >w1_d2_s1.txt
+ 1478  history >w1_d2_assignments.txt

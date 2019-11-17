@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Change the buttons text color random value</h1>
+    <button id="changeColor">Click here to change my color</button>
+    <button id="arrayColor">
+      Click me to change my color to an array value!
+    </button>
+    <h1>My color should change when I double click the button!</h1>
+    <button id="changeDualColor">
+      Double Click here to change the color of the h1 tag !
+    </button>
+    <h1>
+      The buttons color changes to a random value when it is clicked! But only
+      two times!
+    </h1>
+    <button id="twoTimeChange">Click here to change my color!</button>
+    <button id="mouseoverBtn">MouseHover</button>
+    <script>
+      //html id's
+      var changeColor = document.getElementById("changeColor");
+      var dblChangeColor = document.getElementById("changeDualColor");
+      var arrayColor = document.getElementById("arrayColor");
+      var twoTimeChange = document.getElementById("twoTimeChange");
+
+      //random function
+      function random(num) {
+        return Math.floor(Math.random() * num);
+      }
+      //random color for single click
+      function randomColor() {
+        var randomclr =
+          "rgb(" + random(255) + "," + random(255) + ", " + random(255) + ")";
+        changeColor.style.background = randomclr;
+      }
+
+      //array
+      arrClr = ["red", "green", "darkgrey", "blue", "grey", "black"];
+      i = 0;
+      function arrColor() {
+        arrayColor.style.background = arrClr[i];
+        i++;
+      }
+
+      //single click change background ;
+      changeColor.addEventListener("click", randomColor);
+      arrayColor.addEventListener("click", arrColor);
+
+      // double click change background;
+      function randomColor2() {
+        var randomclr =
+          "rgb(" + random(255) + "," + random(255) + ", " + random(255) + ")";
+        dblChangeColor.style.background = randomclr;
+      }
+      dblChangeColor.addEventListener("dblclick", randomColor2);
+
+      //2 times random function ;
+      index = 1;
+      function twoTimesColor() {
+        var randomclr =
+          "rgb(" + random(255) + "," + random(255) + ", " + random(255) + ")";
+        twoTimeChange.style.background = randomclr;
+        index++;
+
+        if (index > 2) {
+          twoTimeChange.removeEventListener("click", twoTimesColor);
+        }
+      }
+      twoTimeChange.addEventListener("click", twoTimesColor);
+
+      //mousehover
+      mouseoverBtn = document.getElementById("mouseoverBtn");
+      random_words = [
+        "Ayaan",
+        "Mihir",
+        "Deepanshu",
+        "Soumik",
+        "Amit",
+        "Rajshree"
+      ];
+      function changeWord() {
+        num = random(random_words.length);
+        mouseoverBtn.innerHTML = random_words[num];
+      }
+      mouseoverBtn.addEventListener("mouseover", changeWord);
+    </script>
+  </body>
+</html>
