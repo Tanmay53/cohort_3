@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id="num1">
+	<input type="text" name = "num2" id="num2">
+	<p id="expresult"></p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="multipleresult"></p>
+	<input type="text" id="mul1">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="email" />
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+				var x=document.getElementById("num1").value;
+				var y=document.getElementById("num2").value;
+				var exp=1
+				console.log(x*y);
+				if(y==0)
+				document.getElementById("expresult").innerHTML="1";
+				else {
+					for(var i=1;i<=y;i++)
+					{
+                           exp*=x
+					}
+					document.getElementById("expresult").innerHTML=exp;
+
+			}
+		}	
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+			var x=document.getElementById("mul1").value;
+			var sum=0
+			for(var i=1;i<=x;i++)
+			{
+				if(i%15==0)
+				sum+=i
+			}
+			document.getElementById("multipleresult").innerHTML=sum;
+
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+
+				   var email=document.getElementById("email").value;
+				   email=email.split("")
+				   for(var i=0;i<email.length;i++)
+				   {
+					   if((email[0]=='@')||(email[0]=='.'))
+					   {
+						   console.log("Invalid Email")
+					   }
+					   if((email[i]!='@')&&(i==email.length-1))
+					   console.log("Invalid Email")
+					//    if(email[i]=='@')
+					//    {
+					// 	   if((email[i+1]=="gmail")||(email[i+1]=="yahoo"))
+					// 	   {
+					// 		   if((email[i+2]=='.com')||(email[i+2]=='.org')||(email[i+2]=='.edu')
+					// 	   }
+					//    }
+
+				   }
+
+		}
+	</script>
+</body>
+</html>
