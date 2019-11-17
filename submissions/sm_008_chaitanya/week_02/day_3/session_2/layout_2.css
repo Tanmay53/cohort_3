@@ -1,0 +1,25 @@
+.box{
+    display:flex;
+    justify-content:center;
+    
+  }
+  .box div{
+    height:150px;
+    width:150px;
+    border:20px solid white;
+    background:rgb(39,120,102);
+    
+  }
+  .box .big{
+    width:450px;
+  }
+  @media(max-width:600px){
+    .box div{
+      background:green;
+    }
+  }
+  @media(min-width:1200px){
+    .box div{
+      background:blue;
+    }
+  }

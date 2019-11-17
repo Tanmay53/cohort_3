@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Practise Deletions</title>
+</head>
+
+<body>
+    <h1 id="Rh1">First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <div id="headings">
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+    </div>
+    <div id="cont">
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+    </div>
+    <hr />
+    <button onclick="removeH1()">Remove H1</button>
+    <button onclick="removeH3()">Remove H3</button>
+    <button onclick="removeH5()">Remove H5</button>
+    <button onclick="removeRed()">Remove Red</button>
+    <button onclick="removeDivs()">Remove DIVS</button>
+    <script>
+        //function to remove the first h1 tag from webpage    
+        function removeH1() {
+            var h11 = document.getElementById("Rh1")
+            var body1 = document.querySelector('body')
+            body1.removeChild(h11)
+        }
+        // function to remove all the h3 tag from webpage
+        function removeH3() {
+            var body1 = document.querySelector('body')
+            var h3h = document.querySelectorAll('h3')
+            for (var i = 0; i < h3h.length; i++) {
+                body1.removeChild(h3h[i])
+            }
+        }
+        // function to remove all the h5 tag from webpage
+        function removeH5() {
+            var div1 = document.querySelector('#headings')
+            var h5h = document.querySelectorAll('h5')
+            for (var i = 0; i < h5h.length; i++) {
+                div1.removeChild(h5h[i])
+            }
+        }
+        // function to remove all div elements with class name red
+        function removeRed() {
+            var div1 = document.querySelector('#cont')
+            var redd = document.querySelectorAll('.red')
+            for (var i = 0; i < redd.length; i++) {
+                div1.removeChild(redd[i])
+            }
+        }
+        // function to remove all div elements with class name red
+        function removeRed() {
+            var div1 = document.querySelector('#cont')
+            var redd = document.querySelectorAll('.red')
+            for (var i = 0; i < redd.length; i++) {
+                div1.removeChild(redd[i])
+            }
+        } 
+        //function to remove all the divs from main div with id="cont"
+        function removeDivs(){
+            var div1 = document.querySelector('#cont')
+            var redd = document.querySelectorAll('#cont>div')
+            for (var i = 0; i < redd.length; i++) {
+                div1.removeChild(redd[i])
+         
+        }
+    }
+    </script>
+</body>
+
+</html>
