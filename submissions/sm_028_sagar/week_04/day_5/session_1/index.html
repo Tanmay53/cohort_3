@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- FSD.JS.10.1 !-->
+    <h1 id="changeColor">Change the buttons text color random value</h1>
+    <button id="changeTextColor">Click here to change my color</button>
+
+    <!-- Bonus Challenge -->
+    <button id="btn_arr">Click me to change my color to an array value!</button>
+
+    <!-- FSD.JS.10.2 !-->
+    <h1 id="dbl_h1">My color should change when I double click the button!</h1>
+    <button id="btn_dbl">Double Click here to change the color of the h1 tag !</button>
+
+    <!-- FSD.JS.10.3 !-->
+    <h1 id="twice_h1">The buttons color changes to a random value when it is clicked! But only two times!</h1>
+    <button id="btn_twice">Click here to change my color!</button><br><br>
+
+    <button id="hover">Hover over me</button>
+
+
+
+    <script>
+        var cnt = 0;
+        var changeTextColor = document.getElementById('changeTextColor');
+        changeTextColor.addEventListener('click', change_random_color)
+
+        function change_random_color() {
+            var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.getElementById('changeColor').style.color = randomColor;
+        }
+
+        function random(num) {
+            return Math.floor(Math.random() * num);
+        }
+
+        //change color according to array sequence
+        var btn_arr = document.getElementById('btn_arr');
+        btn_arr.addEventListener('click', arr_color)
+        console.log(btn_arr.addEventListener('click', arr_color));
+
+        function arr_color() {
+            var arr = ['Maroon', 'Olive', 'Navy', 'Teal', 'Red', 'Orange', 'Yellow', 'Lime', 'Cyan', 'Blue', 'Purple', 'Lavender', 'Mint'];
+            document.getElementById('btn_arr').style.backgroundColor = arr[cnt];
+            console.log(arr[cnt]);
+            cnt++;
+            if (cnt > arr.length - 1) {
+                cnt = 0;
+            }
+        }
+
+        //color change on double click
+        var btn_dbl = document.getElementById('btn_dbl');
+
+        btn_dbl.dispatchEvent
+
+        btn_dbl.addEventListener('dblclick', dbl_change_color);
+
+        function dbl_change_color() {
+            var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.getElementById('dbl_h1').style.color = randomColor;
+        }
+
+        //change color only twice
+        var btn_twice = document.getElementById('btn_twice');
+        btn_twice.addEventListener('click', change_color_twice)
+
+
+        function change_color_twice() {
+            ++cnt;
+
+            if (cnt <= 2) {
+                var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+                document.getElementById('twice_h1').style.color = randomColor;
+            } else {
+                btn_twice.removeEventListener();
+            }
+        }
+
+        //hover and change random button text size
+        var hover = document.getElementById('hover');
+        hover.addEventListener('mouseover', change_size);
+        hover.addEventListener('mouseleave', default_size);
+
+        function change_size() {
+            hover.style.fontSize = random(1000) + 'px';
+            console.log(++cnt)
+        }
+
+        function default_size() {
+            hover.style.fontSize = '30px';
+        }
+    </script>
+</body>
+
+</html>
