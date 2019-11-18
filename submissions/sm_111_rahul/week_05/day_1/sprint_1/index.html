@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marks Recorder</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>MARKS RECORDER</h1>
+    <div id="container">
+        <div id="studentDetails">
+            <h2>Student Marks</h2>
+            <div>
+                <form>
+                    <table>
+                        <tr>
+                            <td><label for="name">Name:</label></td>
+                            <td><input type="text" id="name" placeholder="Enter your name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="grade">Grade:</label></td>
+                            <td><input type="number" id="grade" placeholder="Enter your grade"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="color: aqua;">Marks</td>
+                        </tr>
+                        <tr>
+                            <td><label for="Science">Science</label></td>
+                            <td><input type="number" id="science" placeholder="Science"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="maths">Maths:</label></td>
+                            <td><input type="number" id="maths" placeholder="Maths"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="history">history:</label></td>
+                            <td><input type="number" id="history" placeholder="History"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="english">English:</label></td>
+                            <td><input type="number" id="english" placeholder="English"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Geography">Geography:</label></td>
+                            <td><input type="number" id="geography" placeholder="Geography"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button onclick="getRecord()">Submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div id="filter">
+            <h2>Check the records of students</h2>
+            <div>
+                <form>
+                    <select id="filterStudent">
+                        <option selected>Select Grade</option>
+                        <option value="10">10</option>
+                        <option value="9">9</option>
+                        <option value="8">8</option>
+                        <option value="7">7</option>
+                        <option value="6">6</option>
+                        <option value="5">5</option>
+
+                    </select>
+                    
+                    <input class="sub" type="submit" id="sub1" onclick="selectFilter()" value="Submit">
+                </form>
+            </div>
+            <div id="result1">
+                <table id="detailsOfStu">
+                    <!-- <tr>
+                        <td>Name:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Science:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Maths:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>English:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>History:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Geography:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Total Marks:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Average Marks:</td>
+                        <td></td>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+       
+</body>
+
+</html>
