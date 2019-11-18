@@ -30,6 +30,8 @@ function show() {
     var total = 0,
         avg;
     arrStudents.forEach(function(obj) {
+        total = 0;
+        avg = 0;
         if (obj.grade == selGrade.value) {
             console.log("for grade :", selGrade.value);
             total +=

@@ -47,17 +47,15 @@
         </div>
 
         <div id="resultDiv">
-            <table id="displayTable">
-                <tr>
-                    <th>Enrollment</th>
-                    <th>Name</th>
-                    <th>Science</th>
-                    <th>Maths</th>
-                    <th>English</th>
-                    <th>History</th>
-                    <th>Geography</th>
-                </tr>
-            </table>
+            <div>
+                Filter:
+                <select onclick="filter(this)">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+            </div>
         </div>
 
         <script src="script.js"></script>

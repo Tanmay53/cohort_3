@@ -1,0 +1,101 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgb(218, 200, 236);
+}
+
+.student_details {
+    width: max-content;
+    margin: 20px auto;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+#grade {
+    padding: 7px 15px;
+}
+
+.student_name_grade {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: max-content;
+    height: 80px;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.student_marks {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(4, 60px);
+}
+
+.student_marks div:nth-of-type(1) {
+    grid-column: 1/4;
+    grid-row: 1;
+    text-align: center;
+    font-size: 20px;
+}
+
+.student_marks div:nth-of-type(7) {
+    grid-column: 1/4;
+    grid-row: 4;
+    text-align: center;
+    align-self: center;
+}
+
+#submit {
+    padding: 15px;
+    background-color: rgb(114, 246, 114);
+}
+
+.student_table {
+    width: fit-content;
+    text-align: center;
+}
+
+.student_list,
+.student_list+div,
+.student_list+button {
+    margin: 10px;
+}
+
+.table {
+    width: max-content;
+    margin: 10px auto;
+}
+
+.table div {
+    padding: 0px 0px;
+    float: left;
+    border: 1px solid black;
+}
+
+.table div p {
+    border: 1px solid green;
+    padding: 10px 38px;
+    margin: 0px;
+}
+
+@media (max-width: 900px) {
+    .student_marks {
+        display: grid;
+        grid-template-columns: repeat(1, 400px);
+        grid-template-rows: repeat(7, 60px);
+    }
+    .student_marks div:nth-of-type(1) {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+        font-size: 20px;
+    }
+    .student_marks div:nth-of-type(7) {
+        grid-column: 1;
+        grid-row: 7;
+        text-align: center;
+        align-self: center;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Student Record</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main"> 
+      <div class="addStudent">
+            <h1>Student Details</h1>
+            <p>Name</p>
+            <input type="text" class="name" id="studentName">
+            <p>Standard</p>
+            <select id="standard">
+                <option value="--"></option>
+                <option value="Grade 1">Grade 1</option>
+                <option value="Grade 2">Grade 2</option>
+                <option value="Grade 3">Grade 3</option>
+                <option value="Grade 4">Grade 4</option>
+                <option value="Grade 5">Grade 5</option>
+            </select>
+            <!-- <input type="text" class="standard" id="standard"> -->
+            <p>Marks</p>
+            <input class="subject" id="science" type="text" placeholder="Science">
+            <input class="subject" id="math" type="text" placeholder="Math">
+            <input class="subject" id="english" type="text" placeholder="English">
+            <input class="subject" id="history" type="text" placeholder="History">
+            <input class="subject" id="geography" type="text" placeholder="Geography">
+            <button onclick="addStudent()" id="submit">ADD STUDENT</button>
+      </div>
+      <div class="table">
+          <h1>Student</h1>
+        <ul class="head">
+            <li>Name</li>
+            <li>Standard</li>
+            <li>Science</li>
+            <li>Math</li>
+            <li>English</li>
+            <li>History</li>
+            <li>Geography</li>
+            <li>Total Marks</li>
+        </ul>
+        <div id="studentData">
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>
