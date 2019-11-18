@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick = "delH1()">Remove H1</button>
+        <button onclick = "delH3()">Remove H3</button>
+        <button onclick = "delH5()">Remove H5</button>
+        <button onclick = "delRed()">Remove Red</button>
+        <button onclick = "delDivs()">Remove DIVS</button>
+        <script>
+            var parent = document.querySelector("body") ;
+            function delH1(){
+                var head1 = document.querySelector("h1") ;
+                parent.removeChild(head1) ;
+            }
+            function delH3(){
+              var head3 = document.querySelectorAll("h3") ;
+              for(var i=0 ; i<head3.length ; i++)
+              {
+              parent.removeChild(head3[i]) ;
+              }
+            }
+            function delH5(){
+                var head5 = document.querySelectorAll("h5") ;
+                var parentDiv = document.getElementById("headings") ;
+                for(var i=0 ; i<head5.length ; i++)
+                {
+                    parentDiv.removeChild(head5[i]) ;
+                }
+            }
+            function delRed(){
+                var div1 = document.querySelectorAll(".red") ;
+                var parentDiv1 = document.getElementById("cont") ;
+                for(var i=0 ; i<div1.length ; i++)
+                {
+                    parentDiv1.removeChild(div1[i]) ;
+                }
+            }
+            function delDivs(){
+                var div2 = document.querySelectorAll("#cont div") ;
+                var parentDiv2 = document.getElementById("cont") ;
+                for(var i=0 ; i<div2.length ; i++)
+                {
+                    parentDiv2.removeChild(div2[i]) ;
+                } 
+            }
+
+        </script>
+    </body>
+</html>

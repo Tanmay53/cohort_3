@@ -1,0 +1,40 @@
+<!-- It should take the gender (dropdown) and year of birth as input and show an alert if the user is of the valid legal age to get married or not -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Coding Session 1!</title>
+</head>
+
+<body>
+  <input id="birthYear" placeholder="Input year of birth">
+  <select id="gender">
+    <option value="">--</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+
+  <button id="checkLegalAge" onclick="marriageAgeValidator()">Click to know</button>
+
+  <p id="displayLegality"></p>
+  <script>
+    function marriageAgeValidator() {
+      var male = document.getElementById("gender").value;
+      var female = document.getElementById("gender").value;
+      var birthYear = document.getElementById("birthYear").value;
+      var currentAge = 2019 - birthYear
+
+      if (currentAge >= 18 && female) {
+        document.getElementById("displayLegality").innerHTML = "You are of the valid legal age to marry!"
+      }
+      else if (currentAge >= 21 && male) {
+        document.getElementById("displayLegality").innerHTML = "You are of the valid legal age to marry!"
+      }
+      else {
+        document.getElementById("displayLegality").innerHTML = "You are not of the valid legal age to marry!"
+      }
+    }
+  </script>
+</body>
+
+</html>
