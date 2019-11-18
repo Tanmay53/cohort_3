@@ -1,0 +1,93 @@
+.content0 {
+    background: no-repeat center/100% url("background.jpeg");   
+}
+.content7 {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 1900px;
+    height: 65px;
+    /* padding: 20px; */
+    font-size: 23 px;
+    text-align: center;
+    /* margin: 22px; */
+}
+.content2 {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 1900px;
+    height: 90px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.content1 {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 1900px;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.content3 {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 1900px;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.content4 {
+    position: fixed;
+    margin-left: 30.5%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 700px;
+    height: 300px;
+    font-size: 38px;
+    text-align: center;
+    padding: 10px;
+}
+
+.content5 {
+    position: fixed;
+    margin-top: 0%;
+    color: #f1f1f1;
+    width: 36%;
+    height: 4px;
+}
+.content6 {
+    position: fixed;
+    margin-left: 120px;
+    margin-top: 70px;
+    text-align: ce1nter;
+
+}
+
+form.form {
+    display: table;
+    margin left: 50px;;
+}
+
+div.form {
+    display: table-row;
+    margin left: 50px;;
+
+}
+
+label,
+input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}   
