@@ -1,0 +1,82 @@
+* {
+    font-family: 'Titillium Web', sans-serif;;
+}
+
+.cont {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+h1 {
+    color: blueviolet;
+    justify-content: center;
+}
+h3 {
+    color: blueviolet;
+    margin-bottom: 0px;
+}
+.outline {
+    font-size: 15px;
+    padding: 5px;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    outline-style: none;
+    color: blueviolet;
+}
+.outline:hover {
+    background-color: blueviolet;
+    color: white;
+    transition-duration: 1s;
+}
+input {
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding: 5px;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    outline-style: none;
+}
+#gradeSelect {
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding: 5px;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    outline-style: none;
+}
+
+#logo {
+    font-size: 55px;
+    text-decoration: none;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+#addMarks {
+    width: 15%;
+}
+
+#seeDetails {
+    margin-top: 30px;
+    margin-right: 15px;
+}
+#seeAverage {
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+table {
+    margin-top: 20px;
+    border: 2px solid blueviolet;
+    color: blueviolet;
+    border-radius: 5px;
+}
+td {
+    border: 1px solid blueviolet;
+    margin: 10px;
+}
+
