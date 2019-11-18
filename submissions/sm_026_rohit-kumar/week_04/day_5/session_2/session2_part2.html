@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            #container {
+                background: #4590DA;
+                height: 600px;
+                width: 600px;
+            }
+
+            #submit {
+                font-size: 30px;
+                background: #36B260;
+                margin-top: 520px;
+                margin-left:400px;
+            }
+        </style>
+    </head>
+</html>
+<div id="container">
+    <button type="submit" id="submit">SUBMIT</button>
+</div>
+<body>
+<script type="text/javascript">
+    submit = document.getElementById('submit')
+    container = document.getElementById('container')
+    function mouseIn() {
+        //alert('working')
+        submit.style.backgroundColor = "#BB3A31"
+    }
+    function mouseOut() {
+        submit.style.backgroundColor = "#36B260"
+    }
+
+    container.addEventListener('mouseenter', mouseIn)
+    container.addEventListener('mouseleave', mouseOut)
+</script>
+</body>
