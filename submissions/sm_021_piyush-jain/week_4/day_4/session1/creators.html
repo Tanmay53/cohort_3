@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Piyush</li>
+        </ul>
+        <button onclick="createH1()" id="button">Create H1</button>
+        <button onclick="createH3()">Create 2 H3</button>
+        <button onclick="createDivs()">Create DIVS</button>
+        <button onclick="addStudents()">Add Students</button>
+        <button onclick="addCopy()">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+            //creates a H1 tag for content as "Masai"   
+            function createH1(){
+                var h11=document.createElement('h1')
+                h11.textContent="Masai";
+                var divElem=document.querySelector('#headings');
+                divElem.appendChild(h11);
+               }
+            //creates two headings in div element
+            function createH3(){
+                var h31=document.createElement('h3')
+                h31.textContent="A Transformation in education!";
+                var h32=document.createElement('h3')
+                h32.textContent="Learn to earn, pay when you get.";
+                var divElem=document.querySelector('#headings');
+                divElem.appendChild(h31);
+                divElem.appendChild(h32);
+               }
+            //multiple content with index value
+            function createDivs(){
+                   var divElem=document.querySelector('div')
+                   for(var i=0;i<10;i++)
+                   {
+                       var div=document.createElement('div');
+                       div.textContent="Content"+ ' '+(i+1);
+                       divElem.appendChild(div);
+                   }
+               }
+            //Gets the students printed when clicked
+            function addStudents(){
+                   var div=document.querySelector('#vikings')
+                   for(var i=0;i<students.length;i++)
+                   {
+                       var lii=document.createElement('li');
+                       lii.textContent=students[i];
+                       div.appendChild(lii);
+                   }
+                
+               }
+            //Adds a copyright when this function is called 
+            function addCopy(){
+                      var newP =document.createElement('p')
+                      newP.textContent="@ masai 2019";
+                      var bodyElem = document.querySelector('body');
+                      bodyElem.insertBefore(newP, button);
+               }
+        </script>
+    </body>
+</html>
