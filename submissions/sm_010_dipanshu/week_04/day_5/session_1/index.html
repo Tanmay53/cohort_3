@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.JS.10.1 !-->
+  <h1>Change the buttons text color random value</h1>
+  <button id="randomColor">Click here to change my color</button>
+  <button id="colorArray">Click me to change my color to an array value!</button>
+
+  <!-- FSD.JS.10.2 !-->
+  <h1 id="h1Random">My color should change when I double click the button!</h1>
+  <button id="colorH1Random">Double Click here to change the color of the h1 tag !</button>
+  
+  <!-- FSD.JS.10.3 !-->
+  <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="randomColor2">Click here to change my color!</button>
+  <script>
+
+    var clickCnt = 1
+    var array = ['red','green','blue','teal','cyan']
+    var colorCnt = array.length
+
+    var random = document.getElementById("randomColor")
+    var colorArray = document.getElementById("colorArray")
+    var h1Random = document.getElementById("h1Random")
+    var colorH1Random = document.getElementById("colorH1Random")
+    var random2 = document.getElementById("randomColor2")
+
+    random.addEventListener("click",randomColor)
+    colorArray.addEventListener("click",clrArray)
+    colorH1Random.addEventListener("dblclick",randomH1Color)
+    random2.addEventListener("click",randomColor2)
+    random2.addEventListener("mouseover",incFntSize)
+
+    function randomColor(){
+      random.style.color = "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")"
+    }
+
+    function clrArray(){
+      
+      if(colorCnt == array.length){
+        colorCnt = 0
+      }
+      console.log('Counter',colorCnt,'Color',array[colorCnt])
+      colorArray.style.background = array[colorCnt]
+      ++colorCnt
+    }
+
+    function randomH1Color(){
+      h1Random.style.color = "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")"
+    }
+
+    function randomColor2(){
+      console.log("Click Counter",clickCnt)
+      if(clickCnt < 3){
+        random2.style.color = "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")"
+        console.log(random2.style.color)
+        ++clickCnt
+      } 
+      else{
+        random2.removeEventListener("click",randomColor2)
+      }
+    }
+
+    function incFntSize(){
+      var min = 10
+      var max = 30
+      var size = Math.floor(Math.random()*(max-min)+min)
+      console.log(size)
+      random2.style.fontSize = size+"px"
+    }
+  </script>
+</body>
+</html>

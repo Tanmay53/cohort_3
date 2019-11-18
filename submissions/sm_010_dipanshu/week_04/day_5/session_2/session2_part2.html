@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body id="body"></body>
+  <script>
+    window.onload = createLayout;
+
+    function createLayout() {
+      var body = document.getElementById("body");
+
+      var div = document.createElement("div");
+      div.setAttribute(
+        "style",
+        "background: blue; width:500px; height:500px; border-radius: 15px; margin:auto; margin-top:100px; display:flex; padding:20px; flex-direction: row-reverse;"
+      );
+
+      var button = document.createElement("input");
+      button.setAttribute(
+        "style",
+        "background:red; border-radius:15px; height:70px; width:150px; align-self: flex-end"
+      );
+      button.setAttribute("type", "submit");
+
+      body.appendChild(div);
+      div.appendChild(button);
+      div.addEventListener("mouseenter",changeColor);
+      div.addEventListener("mouseleave",originalColor);
+
+      function changeColor(e){
+        e.target.querySelector('input').style.background = "green"
+      }
+
+      function originalColor(e){
+        e.target.querySelector('input').style.background = "red"
+      }
+    }
+  </script>
+</html>

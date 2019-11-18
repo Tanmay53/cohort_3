@@ -1,0 +1,37 @@
+.heading{
+    display: flex;
+    background: teal;
+    color: azure;
+    flex-flow: 50%;
+    flex-basis: content;
+    margin: 10px;
+    border: 10px solid teal;
+
+}
+h1{
+    padding: 10px;
+}
+#cont{
+    display: grid;
+    grid-area: auto;
+    margin:10px;
+    background: teal;
+    color: azure;
+    border: 5px solid teal;
+}
+
+#cont h3{
+    font-size: large;
+    padding: 20px;
+}
+
+#cont div{
+    padding: 15px;
+}
+
+button{
+    margin: 20px;
+    background: teal;
+    color: azure;
+    padding: 10px;
+}
