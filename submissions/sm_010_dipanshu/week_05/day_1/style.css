@@ -1,0 +1,45 @@
+.body {
+  background: linear-gradient(#ffafbd, #ffc3a0);
+  background-attachment: fixed;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+h1{
+  text-align: center;
+  margin-top: 50px;
+}
+
+#dataDiv {
+  text-align: center;
+  padding: 5px;
+}
+
+#marksDiv {
+  text-align: center;
+  padding: 5px;
+}
+
+#marksDiv > p {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.inp-item {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+#createRecordBtn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+hr {
+  width: auto;
+  height: 3px;
+  background: black;
+}
