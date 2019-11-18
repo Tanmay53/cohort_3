@@ -1,0 +1,86 @@
+body {
+    margin: 0px;
+    background: linear-gradient(to left,  #3e5151, #decba4 );
+}
+* {
+    font-family: 'Public Sans', sans-serif;
+}
+
+.button {
+    height: 30px;
+    width: 160px;
+    font-size: 20px;
+    background: rgb(135, 38, 173);
+    color: white;
+    margin-left: 20px;
+}
+.textCenter {
+    text-align: center;
+}
+.magrinLeftForMarks {
+    margin-left: 40%;
+}
+div label {
+    font-size: 20px;
+}
+div input {
+    height: 20px;
+    width: 200px;
+    font-size: 20px;
+}
+/* Margin for Name Field  */
+#marginLeftName {
+    margin-left: 35%;
+}
+/* Margin to arrange marks input box */
+.marginLeftScience {
+    margin-left: 65px;
+}
+.marginLeftMath {
+    margin-left: 91px;
+}
+.marginLeftEnglish {
+    margin-left: 69px;
+}
+.marginLeftHistory {
+    margin-left: 68px;
+}
+.marginLeftGeography {
+    margin-left: 33px;
+}
+.alignCenter {
+    margin-left: 45%; 
+}
+
+@media (max-width: 1500px){
+    body {
+        margin: 0px;
+        background: linear-gradient(to left,   #d9a7c7, #fffcdc  );
+    }
+    #marginLeftName {
+        margin-left: 30%;
+    }
+    .magrinLeftForMarks {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 900px){
+    body {
+        margin: 0px;
+        background: linear-gradient(to left, #000000, #434343  );
+    }
+    #marginLeftName {
+        margin-left: 15%;
+    }
+    .magrinLeftForMarks {
+        margin-left: 25%;
+    }
+    * {
+        font-family: 'Public Sans', sans-serif;
+        color: white;
+    }
+    .alignCenter {
+        margin-left: 30%; 
+    }
+}

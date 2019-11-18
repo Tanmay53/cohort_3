@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>index</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <input type="text" id="name" placeholder="name" required size="30">
+        <input type="number" id="grade" placeholder="grade" required min="1" max="12">
+        <input type="number" id="science" placeholder="science" required min="0" max="100">
+        <input type="number" id="math" placeholder="math" required min="0" max="100">
+        <input type="number" id="english" placeholder="english" required min="0" max="100">
+        <input type="number" id="history" placeholder="history" required min="0" max="100">
+        <input type="number" id="geography" placeholder="geography" required min="0" max="100">
+        <button onclick="addData()">Submit</button>
+        <input type="number" id="gradewise" placeholder="select grade" min="1" max="12">
+        <button onclick="gradeWise()">Select</button>
+        <div id="marksheet">
+            <div>Names</div>
+            <div>Grade</div>
+            <div>Science</div>
+            <div>Math</div>
+            <div>English</div>
+            <div>History</div>
+            <div>Geography</div>
+            <div>Total</div>
+            <div>Average</div>
+            
+        </div>
+        <div id="grades">
+                <div>Names</div>
+                <div>Grade</div>
+                <div>Science</div>
+                <div>Math</div>
+                <div>English</div>
+                <div>History</div>
+                <div>Geography</div>
+                <div>Total</div>
+                <div>Average</div>
+                
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+
+</html>
