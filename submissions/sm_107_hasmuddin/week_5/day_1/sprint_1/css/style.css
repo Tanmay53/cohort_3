@@ -1,0 +1,82 @@
+.main {
+  display: flex;
+}
+.main .addStudent {
+  width: 30rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 5px;
+  background: black;
+  color: white;
+}
+.addStudent .subject {
+  padding: 10px;
+  width: 25rem;
+  border-radius: 20px;
+  background: lightblue;
+  border: 1px solid black;
+  text-align: center;
+  margin: 2px;
+}
+.name,
+.standard,
+button {
+  padding: 10px;
+  width: 26rem;
+  border-radius: 20px;
+  border: 1px solid black;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.name,
+#standard,
+.subject,
+button,
+p {
+  font-size: 20px;
+}
+
+.main .table {
+  background: darkgoldenrod;
+  width: 60rem;
+  line-height: 10px;
+  border: 1px solid black;
+}
+.table .head li {
+  float: left;
+  margin: 0.5rem 1rem;
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.main .table .head {
+  border: 1px solid black;
+  height: 2rem;
+  background: blue;
+}
+#studentData {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+.main #studentData ul {
+  height: 2rem;
+  border-bottom: 1px solid black;
+}
+#studentData tr td {
+  float: left;
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px 10px;
+  margin: 10px 25px 0px 30px;
+  font-size: 16px;
+  line-height: 20px;
+}
+#studentData tr {
+  border: 1px solid black;
+}

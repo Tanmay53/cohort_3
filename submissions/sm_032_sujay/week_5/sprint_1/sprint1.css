@@ -1,0 +1,54 @@
+body{
+    background-color:midnightblue ;
+    }
+
+
+p{
+    color: blue;
+    font-size:18px;
+    background : linear-gradient(blue,purple);
+   
+}
+div{
+    font-size:15px;
+  
+
+}
+
+.scores {
+    display:flex;
+    flex-direction: row;
+
+}
+
+
+#student{
+display:flex;
+flex-direction: row
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    div {
+      background: green;
+    }
+    .scores {
+        display:flex;
+        flex-direction: column;
+    
+    }
+  }

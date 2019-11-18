@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+hr {
+  margin: 5px auto;
+}
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+/* common */
+.container {
+  background: linear-gradient(
+    to bottom,
+    rgba(225, 225, 225, 1) 0%,
+    rgba(250, 250, 250, 1) 100%
+  );
+  width: 96%;
+  padding: 2%;
+}
+.heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  margin: 5px 0;
+}
+.h1 {
+  font-size: 40px;
+}
+.h2 {
+  font-size: 35px;
+}
+.h3 {
+  font-size: 30px;
+}
+.text-center {
+  text-align: center;
+}
+
+/* flex */
+.grid {
+  display: grid;
+}
+.grid-box {
+  grid-template-columns: repeat(2, 1fr);
+}
+/* registration box */
+.registration-box {
+  padding: 15px;
+}
+.marks-box {
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+/* input-box */
+.input-box input,
+.input-box select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dddddd;
+  border-radius: 0px;
+  font-size: 16px;
+  margin: 5px 0;
+  padding: 5px;
+  background: #ffffff;
+}
+.input-box label {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.add-btn {
+  float: right;
+  background: #000000;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px;
+}
+
+/* table */
+.table-box {
+  padding: 15px;
+}
+.table-box table {
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-box table th {
+  border: 1px solid #ddd;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  text-align: center;
+  background-color: royalblue;
+  color: #ffffff;
+}
+.table-box table td {
+  border: 1px solid #ddd;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  padding: 8px;
+  text-align: left;
+  color: #000000;
+}
+
+.table-box table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-box table tr:hover {
+  background-color: #ddd;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .registration-box {
+    padding: 0px;
+  }
+  .table-box {
+    padding: 0px;
+  }
+  .add-btn {
+    float: left;
+    clear: both;
+  }
+}
