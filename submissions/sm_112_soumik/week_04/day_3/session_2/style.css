@@ -1,0 +1,55 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box div {
+  height: 300px;
+  width: 300px;
+  border: 3px wheat groove;
+  border-radius: 10px;
+  margin: 35px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+button {
+  background-color: cadetblue;
+  border-radius: 10px;
+  height: 40px;
+}
+input {
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgb(158, 153, 153);
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+select {
+  height: 40px;
+  border-radius: 8px;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(61, 58, 58);
+}
+h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(66, 66, 66);
+}
+body {
+  background: rgb(248, 255, 252);
+  background: linear-gradient(
+    90deg,
+    rgba(248, 255, 252, 1) 0%,
+    rgba(18, 18, 18, 0.8603816526610644) 91%,
+    rgba(0, 0, 0, 0.26934523809523814) 98%,
+    rgba(111, 111, 111, 0.9444152661064426) 99%,
+    rgba(111, 111, 111, 0.9444152661064426) 99%
+  );
+}
+p {
+  font-family: "Courier New", Courier, monospace;
+}

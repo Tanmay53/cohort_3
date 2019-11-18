@@ -1,0 +1,29 @@
+#box{
+    display:grid;
+    grid-gap:30px;
+    grid-template-rows:50px 500px;
+    grid-template-columns:250px 700px;
+    padding:20px;
+    border:50px solid white;
+  }
+  .first{
+    grid-area:1/1/span 1/span 2;
+    background:red;
+  }
+  .second{
+    background:rgb(96,212,21);
+  }
+  .third{
+    background:rgb(39,120,102);
+  }
+  @media(max-width:850px){
+    .first{
+      background:blue
+    }
+    .second{
+      background:black;
+    }
+    .third{
+      background:red;
+    }
+  }

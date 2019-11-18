@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Session2 Part2</title>
+    </head>
+    <body></body>
+    <script>
+        var bodyElem = document.querySelector('body');
+        bodyElem.onload = createDiv();
+        function createDiv() {
+            var div = document.createElement('div');
+            div.style.backgroundColor = 'aqua';
+            div.className = 'container';
+            div.style.borderRadius = "10px";
+            div.style.height = "350px";
+            div.style.display = 'flex';
+            div.style.flexDirection = 'column-reverse';
+            div.style.alignItems = "flex-end";
+            div.style.width = "40%";
+            div.style.padding = "20px";
+            var button = document.createElement('button');
+            button.style.padding = "20px";
+            button.style.borderRadius = "10px";
+            button.style.width = "100px";
+            button.style.height = "100px";
+            button.style.backgroundColor = "magenta";
+            button.textContent = "Submit";
+            div.appendChild(button);
+            div.addEventListener('mouseenter',changeButtonColor);
+            div.addEventListener('mouseleave',resetButtonColor);
+            console.log(div);
+            bodyElem.appendChild(div);
+        }
+        function changeButtonColor(e) {
+            var div = e.target;
+            var btn = div.querySelector('button');
+            btn.style.backgroundColor = "green";
+        }
+        function resetButtonColor() {
+            var btn = this.querySelector('button');
+            btn.style.backgroundColor = "magenta";
+        }
+        </script>
+</html>

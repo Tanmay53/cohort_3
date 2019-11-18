@@ -10,6 +10,9 @@
     width:400px;
     margin:auto;     
   }
+h1 {
+    color : red
+  }
 .row1 > * {
   align-self:center;
   margin:15px;
@@ -20,6 +23,9 @@
   grid-template-columns:auto auto ;
   background:orange;
   grid-column-gap:4px ;
+}
+.row3 > h2 {
+  color : white
 }
 #dennis {
   grid-area:1 / 2 / 1 /3 ;
