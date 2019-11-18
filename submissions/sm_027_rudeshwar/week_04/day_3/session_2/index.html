@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="demo1">p1</p>
+  <p id="demo2">p2</p>
+  <p id="demo3">p3</p>
+  <button onclick="buttonOne()">user is older than 18</button>
+  <button onclick="buttonTwo()">user is younger than 18</button>
+  <button onclick="buttonThree()">user is exactly 18 years old</button>
+
+  <p>red</p>
+ 
+  <button onclick="changeRed()" id="demo4">Click here to change my color</button>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+
+  function buttonOne() {
+    document.getElementById("demo1").innerHTML = "You can drive in India !";
+ }
+ 
+ function buttonTwo() {
+    document.getElementById("demo2").innerHTML = "You can't drive in India ";
+ }
+ 
+ function buttonThree(){
+    document.getElementById("demo3").innerHTML = "You are just old enough to drive in India ! ";
+ }
+
+
+ function changeRed() {
+  document.getElementById("demo4").style.color = "red";
+}
+ 
+ 
+ 
+  </script>
+</body>
+</html>

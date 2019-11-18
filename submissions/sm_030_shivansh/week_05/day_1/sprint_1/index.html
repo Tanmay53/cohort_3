@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Sprint_1</title>
+</head>
+
+<body>
+    <header>
+        <h1>Students Data</h1>
+    </header>
+    <section id="details">
+        <div class="flex-box">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+
+        </div>
+
+        <div class="flex-box">
+            <label for="grade">Grade: </label>
+            <select name="grade" id="grade">
+                <option value="">Please choose an option</option>
+                <option value="5">5th</option>
+                <option value="6">6th</option>
+                <option value="7">7th</option>
+                <option value="8">8th</option>
+                <option value="9">9th</option>
+                <option value="10">10th</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- marks input for various subjects -->
+        <div class="flex-box">
+            <label for="science">Science:</label>
+            <input type="number" id="science">
+
+        </div>
+
+        <div class="flex-box">
+            <label for="maths">Maths: </label>
+            <input type="number" id="maths">
+
+        </div>
+
+        <div class="flex-box">
+            <label for="english">English: </label>
+            <input type="number" id="english">
+        </div>
+
+        <div class="flex-box">
+            <label for="history">History:</label>
+            <input type="number" id="history">
+        </div>
+
+        <div class="flex-box">
+            <label for="geography">Geography:</label>
+            <input type="number" id="geography">
+        </div>
+
+        <div class="flex-box">
+            <button onclick="stdData()">Submit</button>
+        </div>
+
+    </section>
+
+    <section>
+        <h1>Table: Containing Students Records </h1>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Grade</td>
+                <td>Science</td>
+                <td>Maths</th>
+                <td>English</td>
+                <td>History</td>
+                <td>Geography</td>
+                <td>Total Marks</td>
+                <td>Average Marks</td>
+            </tr>
+
+
+            <tr id="start"></tr>
+        </table>
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
