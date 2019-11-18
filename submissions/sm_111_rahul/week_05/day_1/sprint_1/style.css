@@ -1,0 +1,106 @@
+body{
+    background: url(/resources/Marks-Calculator.jpg);
+}
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    color:#e25822;
+}
+h2{
+    font-size: 30px;
+    font-family: monospace;
+    color: #420000;
+    text-align: center;
+}
+#container{
+    height: 1280px;
+    width: 1200px;
+    background-color: #55ae95;
+    border-radius: 7px;
+    margin: auto;
+    padding: 30px;
+}
+#container > div{
+    width: 900px;
+    height: 370px;
+    background-color: coral;
+    margin:auto;
+    margin-top: 60px;
+}
+
+#studentDetails > div{
+    height: 100px;
+    width: 800px;
+    margin:auto;
+}
+table{
+    margin:auto;
+}
+tr{
+    height: 25px;
+}
+td {
+    width:200px;
+    font-size: 30px;
+}
+input{
+    font-size: 16px;
+}
+button{
+    font-size: 25px;
+    float:right;
+    margin-top:10px;
+    border-radius: 6px;
+    width:150px;
+    margin-left:150px;
+}
+select{
+    font-size: 30px;
+    width:250px;
+    border-radius: 6px;
+    margin-left:30px;
+}
+.sub{
+    margin-left:40px;
+    font-size: 30px;
+    margin-top: 15px;
+
+}
+#container #filter {
+    height: 570px;
+    width: 900px;
+}
+#container #filter div:first-child{
+    height: 30px;
+    width:900px;
+}
+#filter div:last-child{
+    height: 570px;
+    width:900px;
+    padding: 30px;
+}
+#detailsOfStu ,#detailsOfStu td{
+    padding:5px;
+    width:700px;
+}
+#detailsOfStu td{
+    border:2px dotted rgb(47, 241, 255);
+    padding:5px;
+    width:700px;
+}
+/* #sub1{
+    margin-top: 205px;
+}
+#studentPerformance div, #filter div{
+    float: left;
+    width: 350px;
+    height: 300px;
+    margin-left:60px;
+}
+#result2{
+    font-size: 30px;
+    color:black;
+
+} */
+

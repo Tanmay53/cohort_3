@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1 id="delete">First H1</h1>
+        <h1>Second H1</h1>
+        <h3 id="delh3">First H3</h3>
+        <h3 id="delh3">Second H3</h3>
+        <div id="headings">
+            <h5 id="delh5">First H5</h5>
+            <h5 id="delh5">Second H5</h5>
+            <h5 id="delh5">Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeH1()">Remove H1</button>
+        <button onclick="removeH3()">Remove H3</button>
+        <button onclick="removeH5()">Remove H5</button>
+        <button onclick="removered()">Remove Red</button>
+        <button onclick="removeDivs()">Remove DIVS</button>
+        <script>
+            function removeH1()
+            {
+                var bodyelm=document.querySelector('body')
+                var firsth1=document.getElementById("delete")
+                bodyelm.removeChild(firsth1)
+            }
+            function removeH3()
+            {
+                var bodyelm=document.querySelector('body')
+                var res=document.querySelectorAll("h3")
+                for(i=0;i<res.length;i++)
+                {
+                    var h3=document.getElementById("delh3")
+                    bodyelm.removeChild(h3)
+                }
+            }
+            function removeH5()
+            {
+                var elm=document.getElementById('headings')
+                var res=document.querySelectorAll("h5")
+                for(i=0;i<res.length;i++)
+                {
+                    var h5=document.getElementById("delh5")
+                    elm.removeChild(h5)
+                }
+            }
+            function removered()
+            {
+                var elm=document.getElementById('cont')
+                var res=document.querySelectorAll('.red')
+                var div=document.querySelectorAll('#cont div')
+                for(i=0;i<res.length;i++)
+                {
+                    elm.removeChild(res[i])
+                }
+            }
+            function removeDivs()
+            {
+                var elm=document.getElementById('cont')
+                var res=document.querySelectorAll('#cont div')
+                for(i=0;i<res.length;i++)
+                {
+                    elm.removeChild(res[i])
+                }
+            }
+        </script>
+    </body>
+</html>
