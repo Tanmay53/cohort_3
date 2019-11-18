@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sprint 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="grid">
+        <div>
+            <h1 class="textCenter">Create New Student Data</h1>
+            <label class="textCenter" id="marginLeftName">Name</label>
+            <input id="name" type="text">
+            <label>Select Grade/Standard</label>
+            <select id="grade">
+                <option value="1">1 Std</option>
+                <option value="2">2 Std</option>
+                <option value="3">3 Std</option>
+                <option value="4">4 Std</option>
+                <option value="5">5 Std</option>
+                <option value="6">6 Std</option>
+                <option value="7">7 Std</option>
+                <option value="8">8 Std</option>
+                <option value="9">9 Std</option>
+                <option value="10">10 Std</option>
+            </select>
+            <br><br><br>
+        </div>
+        <h2 class="textCenter">Enter Marks Details</h2>
+        <div class="magrinLeftForMarks">
+            <br>
+            <label for="Science">Science :</label>
+            <input id="science" class="marginLeftScience" type="number">
+            <br><br>
+            <label for="Math">Math :</label>
+            <input id="math" class="marginLeftMath" type="number">
+            <br><br>
+            <label for="English">English :</label>
+            <input id="english" class="marginLeftEnglish" type="number">
+            <br><br>
+            <label for="History">History :</label>
+            <input id="history" class="marginLeftHistory" type="number">
+            <br><br>
+            <label for="Geography">Geography :</label>
+            <input id="geography" class="marginLeftGeography" type="number">
+            <br><br>
+            <button id="detail" class="button" onclick="submitDetails()">Submit Details</button>
+            <button id="show" class="button" onclick="show()">Show Details</button>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="alignCenter" id="output"></div>
+</body>
+
+</html>
