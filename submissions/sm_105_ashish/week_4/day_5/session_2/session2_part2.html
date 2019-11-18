@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            session 2
+        </title>
+        <style>
+            #cont
+            {
+            height:420px;
+            width:800px;
+            background:yellow;
+            margin:auto;
+            border-radius: 10px;
+            }
+            #myBtn{
+                background:red;
+                height:100px;
+                width:200px;
+                font-size: 40px;
+                margin-top:300px;
+                margin-left:550px;
+                border-radius: 20px;
+                }
+        </style>
+        <body>
+            <script>
+                window.addEventListener('load',createLayout)
+                var bdy=document.querySelector('body')
+                function createLayout()
+                {
+                     var  newdiv=document.createElement('div');
+                     newdiv.id='cont'
+                     var  btn=document.createElement('button');
+                     btn.id='myBtn'
+                     btn.textContent='Submit'
+                     newdiv.append(btn)
+                     bdy.appendChild(newdiv);
+                     var bodyonHover=document.getElementById('myBtn')
+                var bdn=document.getElementById('cont')
+                function onHover()
+                {bodyonHover.style.background='pink'
+                    bodyonHover.style.background='pink'
+                }
+                   function def()
+                   {
+                       bodyonHover.style.background='red'
+                   }
+                bdn.addEventListener('mouseover',onHover);
+                bdn.addEventListener('mouseleave',def)
+                }
+               
+                
+               
+            </script>
+        </body>
+    </head>
+</html>

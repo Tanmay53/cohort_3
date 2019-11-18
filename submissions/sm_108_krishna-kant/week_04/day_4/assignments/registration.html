@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration</title>
+    <style>
+      .container {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 70%;
+        grid-gap: 2rem;
+      }
+      .grid > div {
+        padding: 2rem;
+      }
+      .grid > div:nth-child(2) {
+        background: black;
+        color: white;
+      }
+      .grid > div:nth-child(2) h4 {
+        font-size: 2rem;
+      }
+      .form-control label {
+        display: block;
+        font-size: 1.5rem;
+        padding: 0.2rem 0;
+      }
+      .form-control input {
+        padding: 1.3rem;
+        width: 100%;
+        border: 2px solid black;
+      }
+      .form-control input[type="submit"] {
+        background: black;
+        color: white;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid">
+        <div>
+          <div class="form-control">
+            <label for="name">NAME</label>
+            <input type="text" placeholder="Enter Name" id="name" required />
+          </div>
+          <div class="form-control">
+            <label for="email">EMAIL</label>
+            <input type="email" placeholder="Enter email" id="email" required />
+          </div>
+          <div class="form-control">
+            <label for="Number">NUMBER</label>
+            <input
+              type="number"
+              placeholder="Enter Number"
+              id="number"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <input
+              type="submit"
+              value="Submit"
+              id="submit"
+              onclick="submitData()"
+            />
+          </div>
+        </div>
+        <div>
+          <h4>NAME</h4>
+          <p id="namefield"></p>
+          <h4>EMAIL</h4>
+          <p id="emailfield"></p>
+          <h4>NUMBER</h4>
+          <p id="numberfield"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function submitData() {
+        var name = getElement("#name").value;
+        var email = getElement("#email").value;
+        var number = getElement("#number").value;
+        if (name.length > 3 && name.length < 10) {
+          showAlert();
+        }else if(){
+
+        } else {
+          getElement("#namefield").innerHTML = name;
+          getElement("#emailfield").innerHTML = email;
+          getElement("#numberfield").innerHTML = number;
+        }
+      }
+
+      function getElement(selector) {
+        return document.querySelector(selector);
+      }
+    </script>
+  </body>
+</html>
