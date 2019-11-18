@@ -131,7 +131,7 @@ function displayRecords(obj) {
                     <th>English</th>\
                     <th>History</th>\
                     <th>Geography</th>\
-                    <th>Grades</th>\
+                    <th>Grade</th>\
                     </tr>"
     resultDiv.appendChild(table);
     
@@ -153,8 +153,10 @@ displayRecords(allRecords)
 function filter(e) {
     var filteredObj = {}
     for(student in allRecords) {
-        if(allRecords[student]["Grades"] == e.value) {
-            filteredObj[]
+        if(allRecords[student]["Grade"] == e.value) {
+            filteredObj[student] = allRecords[student];
         }
     }
+
+    displayRecords(filteredObj)
 }
