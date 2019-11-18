@@ -130,10 +130,12 @@
         url = url[0].src;
         var form = document.querySelectorAll("input");
         var btn = document.querySelector("button");
-        form[0].innerHTML = details[1].innerHTML;
+        var oldPrice = details[2].innerHTML;
+        form[0].value = details[1].innerText;
         form[1].value = url;
-        form[2].value = details[2].innerHTML;
+        form[2].value = oldPrice.substr(1, oldPrice.length);
         btn.innerHTML = "UPDATE";
+        editEle.remove();
       }
     </script>
   </body>
