@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marriage_Age_Validator</title>
+</head>
+
+<body>
+    <h2>Check Your Age validity for Marriage</h2>
+    <select name="gender" id="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <input type="number" id="birth_year">
+    <p id="age_status">age_status</p>
+    <button id="check_age" onclick="age_validator()">Check Age</button>
+
+    <script type="text/javascript">
+        function age_validator() {
+            var birth_year = Number(document.getElementById('birth_year').value);
+            var gender = document.getElementById('gender').value;
+            var age_status = document.getElementById('age_status');
+            current_year = 2019;
+
+            if (gender = 'Male') {
+                if (current_year - birth_year >= 21) {
+                    age_status.innerHTML = 'Your age is valid for marriage';
+                } else {
+                    age_status.innerHTML = "Your age is not valid for marriage"
+                }
+            } else if (gender = 'Female') {
+                if (current_year - birth_year >= 18) {
+                    age_status.innerHTML = 'Your age is valid for marriage'
+                } else {
+                    age_status.innerHTML = "Your age is not valid for marriage"
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

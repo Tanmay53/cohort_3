@@ -1,23 +1,15 @@
-function passwordVerify(object,password){
-    var cnt=0
-    for(i=0;i<password.length;i++){
-        if (password[i]===object[i]){
-            cnt=cnt+0
+function passwordVerify(object, password1) {
+    
+        if (object.password===password1){
+            console.log(true)
         }
         else{
-            cnt++
+            console.log(false)
         }
-    }
-    if(cnt>0){
-        console.log(false)
-    }
-    else{
-        console.log(true)
-    }
 }
 
-var person={
-    name:'masai',
+var person = {
+    name: 'masai',
     password: 'i021saqT'
 }
-passwordVerify(person.password,'i021saqT')
+passwordVerify(person, 'i021saqT')
