@@ -6,7 +6,8 @@ var allRecords = {
         Maths: 100,
         English: 95,
         History: 97,
-        Geography: 89
+        Geography: 89,
+        Grade: "A"
     },
     "Rohan": {
         Enrollment: 2,
@@ -15,7 +16,8 @@ var allRecords = {
         Maths: 67,
         English: 88,
         History: 90,
-        Geography: 79
+        Geography: 79,
+        Grade: "B"
     }
 };
 
@@ -26,7 +28,8 @@ var studentObj = {
     Maths: 0,
     English: 0,
     History: 0,
-    Geography: 0
+    Geography: 0,
+    Grade: ""
 };
 
 var errors = {
@@ -109,23 +112,49 @@ function submitBtn() {
 
     allRecords[newStudent.Name] = newStudent;
 
-    var displayTable = document.getElementById("displayTable");
-    displayTable.appendChild(addRow(allRecords[newStudent.Name]));
-
+    displayRecords(allRecords);
 }
 
-function displayRecords() {
-    var table = document.getElementById("displayTable");
+function displayRecords(obj) {
+    var resultDiv = document.getElementById("resultDiv");
+    if(document.getElementById("displayTable") !== null) {
+        resultDiv.removeChild(document.getElementById("displayTable"));
+    }
+    
+    var table = document.createElement("table");
+    table.setAttribute("id", "displayTable");
+    table.innerHTML = "<tr>\
+                    <th>Enrollment</th>\
+                    <th>Name</th>\
+                    <th>Science</th>\
+                    <th>Maths</th>\
+                    <th>English</th>\
+                    <th>History</th>\
+                    <th>Geography</th>\
+                    <th>Grades</th>\
+                    </tr>"
+    resultDiv.appendChild(table);
+    
+    var displayTable = document.getElementById("displayTable");
 
-    for(student in allRecords) {    
+    for(student in obj) {    
         var tr = document.createElement("tr");
 
-        for(key in allRecords[student]) {
+        for(key in obj[student]) {
             var td = document.createElement("td");
-            td.textContent = allRecords[student][key];
+            td.textContent = obj[student][key];
             tr.appendChild(td)
         }
         displayTable.appendChild(tr);
     }
 }
-displayRecords()
+displayRecords(allRecords)
+
+function filter(e) {
+    var filteredObj = {}
+    for(student in allRecords) {
+        if(allRecords[student]["Grades"] == e.value) {
+            filteredObj[]
+        }
+    }
+}
