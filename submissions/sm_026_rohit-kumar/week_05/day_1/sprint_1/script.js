@@ -8,6 +8,7 @@ function recreateTable() {
     table = document.getElementById('display-table')
     allRows = document.querySelectorAll('tr')
 
+    // leaving the initial table header and removing from 1
     for(var i = 1; i < allRows.length; i++) {
         table.removeChild(allRows[i])
     }
@@ -27,6 +28,8 @@ function clearInputs() {
 function validate() {
     table = document.getElementById('display-table')
     
+
+    // name serves as the key in the Object
     txtName =  document.getElementById('txtName').value
     txtGrade = document.getElementById('grade').value
     txtMath =  document.getElementById('txtMath').value
@@ -116,7 +119,7 @@ function update() {
             temp_dict['Science'] = totScience
             temp_dict['History'] = totHistory
             temp_dict['Geography'] = totGeography
-
+            
             flag = true
             totalRecords++
         }      
