@@ -91,6 +91,23 @@
         font-size: 1.5rem;
         font-weight: bol;
       }
+      @media (max-width: 600px) {
+        .container {
+          width: 100%;
+        }
+        .score_board {
+          width: 90%;
+        }
+        .keys {
+          width: 90%;
+        }
+        #enter {
+          width: 80%;
+        }
+        .score {
+          width: 80%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -152,9 +169,6 @@
       //   get Element
       function getElement(selecter) {
         return document.querySelector(selecter);
-      }
-      function getElementAll(selecter) {
-        return document.querySelectorAll(selecter);
       }
     </script>
   </body>

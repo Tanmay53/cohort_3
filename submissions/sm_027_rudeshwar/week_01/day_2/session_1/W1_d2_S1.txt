@@ -1,0 +1,554 @@
+    1  cal
+    2  date
+    3  df
+    4  free
+    5  df -h
+    6  CMD -h
+    7  man CMD
+    8  date -u
+    9  date -u -R
+   10  date -uR
+   11  date -Ru
+   12  pwd
+   13  cd
+   14  cd/usr/bin
+   15  cd..
+   16  cd -
+   17  ls
+   18  ls -l
+   19  ls -a
+   20  ls -t
+   21  ls -S
+   22  ls -R
+   23  cd -
+   24  g
+   25  date
+   26  cal 1995
+   27  free -h
+   28  free
+   29  df
+   30  cmd -h
+   31  -h
+   32  --help
+   33  man free
+   34  pwd
+   35  https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv
+   36  cd -h
+   37  date -Ru
+   38  date
+   39  date -u
+   40  date -R
+   41  date
+   42  date -u
+   43  date -uR
+   44  date -Ru
+   45  date -u -R
+   46  -h
+   47  (-h)
+   48  man CMD
+   49  CMD -h
+   50  man CMD
+   51  man free
+   52  free -m
+   53  free -k
+   54  free -b
+   55  man free
+   56  free -h
+   57  free -g
+   58  free -tebi
+   59  man free
+   60  free --tebi
+   61  free --pebi
+   62  mkdir
+   63  mkdir <lectures>
+   64  mkdir lectures
+   65  mkdir lecture aptitude
+   66  cp aptitude lecture
+   67  cp -r aptitude lecture
+   68  https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv
+   69  wget https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv
+   70  unzip countries.csv
+   71  https://www.youtube.com/watch?v=szgoDIkimNU
+   72  wget https://www.youtube.com/watch?v=szgoDIkimNU
+   73  sudo apt-get install wget
+   74  sudo apt-get install unzip
+   75  wget --version
+   76  man ls
+   77  pwd
+   78  date
+   79  cal
+   80  cal 1995
+   81  free
+   82  free -h
+   83  free -g
+   84  free -m
+   85  free -k
+   86  df
+   87  pwd
+   88  cd..
+   89  pwd
+   90  cd
+   91  ls
+   92  pwd
+   93  countries.csv
+   94  file countries.csv
+   95  less countries.csv
+   96  cd
+   97  pwd
+   98  cd ~
+   99  pwd
+  100  cd
+  101  pwd
+  102  mkdir practise
+  103  pwd
+  104  cd
+  105  ls
+  106  usr
+  107  /usr
+  108  ls /usr
+  109  pwd
+  110  cd practise
+  111  mkdir movies
+  112  pwd
+  113  cd movies
+  114  pwd
+  115  mkmkdir -p english hindi french chinese
+  116  mkdir -p english hindi french chinese
+  117  pwd
+  118  cd english
+  119  pwd
+  120  cd practise
+  121  cd
+  122  cd practise
+  123  pwd
+  124  mkdir -p tamil kannada urdu
+  125  pwd
+  126  cd tamil
+  127  pwd
+  128  cd
+  129  cd practise
+  130  cd
+  131  cd songs
+  132  cd
+  133  pwd
+  134  cd practise
+  135  mkdir songs
+  136  cd songs
+  137  cp tamil songs
+  138  cd
+  139  pwd
+  140  cd practise
+  141  cd tamil
+  142  pwd
+  143  cp tamil songs
+  144  ls
+  145  cd
+  146  pwd
+  147  ls
+  148  cd practise
+  149  ls
+  150  mv kannada tamil
+  151  ls
+  152  mv tamil practise
+  153  ls
+  154  cd
+  155  pwd
+  156  cd practise
+  157  ls
+  158  pwd
+  159  ls
+  160  cd movies
+  161  cd practise
+  162  cd songs
+  163  cd
+  164  pwd
+  165  cd practise
+  166  ls
+  167  rm practise
+  168  pwd
+  169  ls
+  170  rm -r practise
+  171  pwd
+  172  cd
+  173  cd practise
+  174  ls
+  175  cd movies
+  176  ls
+  177  cd
+  178  cd practise
+  179  ls
+  180  cd songs
+  181  ls
+  182  b
+  183  pwd
+  184  b
+  185  ls
+  186  cd practise
+  187  cd
+  188  cd practise
+  189  pwd
+  190  ls
+  191  cd urdu
+  192  ls
+  193  cd
+  194  cd practise
+  195  ls
+  196  rm urdu
+  197  rm -r urdu
+  198  ls
+  199  mkrdir books epsilon
+  200  ls
+  201  mkdir books epsilon
+  202  ls
+  203  cd books
+  204  ls
+  205  mkdir english hindi french chinese
+  206  ls
+  207  cd practise
+  208  cd /practise
+  209  cd..
+  210  ls
+  211  cd..
+  212  cd ..
+  213  ls
+  214  cd
+  215  cd practise
+  216  ls
+  217  cd epsilon
+  218  cd ..
+  219  ls
+  220  rm -r epsilon
+  221  ls
+  222  mkdir alpha
+  223  cd alpha
+  224  mkdir beta
+  225  cd beta
+  226  mkdir gamma
+  227  cd gamma
+  228  mkdir epsilon
+  229  cd epsilon
+  230  cd ..
+  231  cd..
+  232  cd ..
+  233  pwd
+  234  cd practise
+  235  ls
+  236  cd books
+  237  ls
+  238  cd ..
+  239  ls
+  240  cd practise
+  241  ls
+  242  cd movies
+  243  ls
+  244  cd
+  245  cd practise
+  246  cd songs
+  247  ls
+  248  mkdir tamil kannada urdu
+  249  ls
+  250  cd
+  251  pwd
+  252  unzip course(1)
+  253  unzip <course(1)>
+  254  cd
+  255  ls
+  256  cd downloads
+  257  cd Downloads
+  258  ls
+  259  pwd
+  260  ls
+  261  unzip course.zip
+  262  cd course
+  263  ls
+  264  cd all
+  265  ls
+  266  cd ..
+  267  cd week1
+  268  cd ..
+  269  pwd
+  270  cd course
+  271  ls
+  272  cd week_1
+  273  ls
+  274  cd day_1
+  275  ls
+  276  ls -a
+  277  ls
+  278  ls -a
+  279  cd
+  280  cd /practise/songs
+  281  pwd
+  282  cd /practise/movies/english
+  283  cd /usr/bin
+  284  ls
+  285  q
+  286  cd
+  287  pwd
+  288  cd
+  289  ls
+  290  cd downloads
+  291  cd Downloads
+  292  ls
+  293  cd course
+  294  ls
+  295  cd week_1
+  296  ls
+  297  ls -R
+  298  ls -a
+  299  ls -R
+  300  cd ..
+  301  ls
+  302  cd course
+  303  ls
+  304  cd all
+  305  ls
+  306  ls -t
+  307  cd
+  308  pwd
+  309  ls /usr Downloads
+  310  ls /usr course
+  311  cd course
+  312  pwd
+  313  cd Downloads
+  314  ls
+  315  cd course
+  316  ls
+  317  cd all
+  318  ls
+  319  cp overall.txt practise
+  320  cd
+  321  ls
+  322  cd practise
+  323  ls
+  324  ls -a
+  325  cd
+  326  cd Downloads
+  327  ls
+  328  cd course
+  329  ls
+  330  cd all
+  331  ls
+  332  cp <overall.txt> <practise>
+  333  cp <overall.txt> practise
+  334  cp --help
+  335  cp overall.txt practise
+  336  cd
+  337  pwd
+  338  cd /usr/practise
+  339  pwd
+  340  cd /usr/practise
+  341  cd practise
+  342  ls
+  343  cd
+  344  cp overall.txt practise
+  345  cd
+  346  cd Downloads
+  347  cd course
+  348  ls
+  349  cd all
+  350  ls
+  351  cp overall.txt cd /home/rudreshwar/practise
+  352  ls
+  353  cp overall.txt /home/rudreshwar/practise
+  354* cd 
+  355  cp /home/rudreshwar/practise
+  356  cd
+  357  cd /home/rudreshwar/practise
+  358  ls
+  359  cd
+  360  cd /home/rudreshwar/Downloads/course/week_1
+  361  ls
+  362  cd ..
+  363  ls
+  364  cp week_1 /home/rudreshwar/practise
+  365  cp week_1 /home/rudreshwar/*practise
+  366  cp -r week_1 /home/rudreshwar/*practise
+  367  cd
+  368  cd /home/rudreshwar/practise
+  369  ls
+  370  cd /home/rudreshwar/Downloads/course
+  371  ls
+  372  cd all
+  373  ls
+  374  mkdir s1
+  375  pwd
+  376  ls
+  377  pwd
+  378  cd
+  379  cd /home/rudreshwar/Downloads/course
+  380  ls
+  381  cd all
+  382  ls
+  383  cp *s1.txt /home/rudreshwar/Downloads/course/all/s1
+  384  ls
+  385  cd s1
+  386  ls
+  387  cp *s2.txt /home/rudreshwar/Downloads/course/all/s2
+  388  cp -r *s2.txt /home/rudreshwar/Downloads/course/all/s2
+  389  cd ..
+  390  ls
+  391  mkdir s2
+  392  ls
+  393  cp *s2.txt /home/rudreshwar/Downloads/course/all/s2
+  394  ls
+  395  cd s2
+  396  ls
+  397  cd ..
+  398  ls
+  399  cd ..
+  400  ls
+  401  ls -a
+  402  ls
+  403  pwd
+  404  cd all
+  405  mkdir day_3
+  406  pwd
+  407  ls
+  408  cp *d3 /home/rudreshwar/Downloads/course/all/day_3
+  409  ls
+  410  cp *d3 /home/rudreshwar/Downloads/course/all/day_3
+  411  cp *_d3 /home/rudreshwar/Downloads/course/all/day_3
+  412  cp *_d3_ /home/rudreshwar/Downloads/course/all/day_3
+  413  cp *_d3.txt/home/rudreshwar/Downloads/course/all/day_3
+  414  cp *_d3.txt /home/rudreshwar/Downloads/course/all/day_3
+  415  cp *d3.txt /home/rudreshwar/Downloads/course/all/day_3
+  416  cp ?d3.txt /home/rudreshwar/Downloads/course/all/day_3
+  417* cp *d3_.txt /home/rudreshwar/Downloads/course/all/day_3
+  418  ls
+  419  cd
+  420  cd pwd
+  421  cd
+  422  pwd
+  423  cd /course
+  424  cd course/
+  425  cd
+  426  pwd
+  427  cd Downloads/
+  428  ls
+  429  cd
+  430  pwd
+  431  cd course/
+  432  pwd
+  433  cd Downloads/
+  434  cd course
+  435  ls
+  436  cd all
+  437  ls
+  438  *d3
+  439  *s1.txt
+  440  ls d3
+  441  ls *d3
+  442  ls *s1.txt
+  443  ls *d3.txt
+  444  ls *d3_s2.txt
+  445  ls *d3_s2.txt *d3_s1.txt
+  446  cp ls *d3_s2.txt *d3_s1.txt /home/rudreshwar/Downloads/course/all/day_3
+  447  cp all/*d3.txt /home/rudreshwar/Downloads/course/all/day_3
+  448  cp /home/rudreshwar/Downloads/course/all/*d3.txt /home/rudreshwar/Downloads/course/all/day_3
+  449  cp /home/rudreshwar/Downloads/course/all/*d3_s1.txt /home/rudreshwar/Downloads/course/all/*d3_s2.txt /home/rudreshwar/Downloads/course/all/day_3
+  450  cd day_3
+  451  ls
+  452  cd ..
+  453  rm -r day_3
+  454  ls
+  455  mkdir day_3
+  456  ls
+  457  cp /home/rudreshwar/Downloads/course/all/*d3_s1.txt /home/rudreshwar/Downloads/course/all/*d3_s2.txt /home/rudreshwar/Downloads/course/all/day_3
+  458  cd day_3
+  459  ls
+  460  cd
+  461  pwd
+  462  cd Downloads
+  463  cd course
+  464  ls
+  465  cd all
+  466  pwd
+  467  ls
+  468  mv w3_d3_s1.txt w2_d3_s1.txt
+  469  ls
+  470  mv w3_d3_s2.txt w2_d3_s1.txt
+  471  ls
+  472  cd week_2
+  473  ls
+  474  cd ..
+  475  cd all
+  476  ls
+  477  cd ..
+  478  ls
+  479  cd week_2
+  480  ls
+  481  mv day-4 day_4
+  482  ls
+  483  cd ..
+  484  ls
+  485  cd all
+  486  ls
+  487  mkdir w1
+  488  ls
+  489  mkdir w2
+  490  mv *w1
+  491  ls *w1
+  492  ls /*w1
+  493  ls /*w1.txt
+  494  ls *w1.txt
+  495  ls *s1.txt
+  496  ls *w1.txt
+  497  ls w1*
+  498  cp w1* w1
+  499  cp w1* Downloads/course/all/w1
+  500  cp w1* /home/rudreshwar/Downloads/course/all/w1
+  501  cp -r w1* /home/rudreshwar/Downloads/course/all/w1
+  502  cp -r /home/rudreshwar/Downloads/course/all/w1  w1* /home/rudreshwar/Downloads/course/all/w1
+  503  cp -r /home/rudreshwar/Downloads/course/all/  w1* /home/rudreshwar/Downloads/course/all/w1
+  504  cd w1
+  505  ls
+  506  cd ..
+  507  ls
+  508  mkdir session_wise
+  509  ls
+  510  mv s1 session_wise
+  511  cd session_wise
+  512  ls
+  513  mv s2 session_wise
+  514  cd ..
+  515  ls
+  516  mv s2 session_wise
+  517  cd session_wise
+  518  ls
+  519  cd
+  520  pwd
+  521  Downloads
+  522  cd Downloads
+  523  cd course
+  524  ls
+  525  cd all
+  526  ls
+  527  rm overall.txt
+  528  ls
+  529  rm day_3
+  530  rm -r day_3
+  531  cd
+  532  practise
+  533  cd practise
+  534  ls
+  535  cd week_1
+  536  ls
+  537  ls -a
+  538  rm .day_6
+  539  rm -r .day_6
+  540  cd
+  541  cd course
+  542  cd Downloads
+  543  cd course
+  544  ls
+  545  cd week_1
+  546  ls
+  547  cd ..
+  548  ls
+  549  rm -r week_1
+  550  rm -r week_2
+  551  cd
+  552  pwd
+  553  cd ~
+  554  history >w1_d2_s1.txt

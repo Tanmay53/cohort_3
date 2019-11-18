@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mairrage age Validator</title>
+    <style>
+    .margin
+    {
+        margin-left: 50px;
+    }
+    
+    </style>
+</head>
+<body>
+    <h1>Are you above minimal age for mairrage according to govt. rule</h1>
+    <input type="number" style="float: left;" id="year" placeholder="type year of birth">
+    <select id="gender" class="margin">
+            <option value="Male">M</option>
+            <option value="Female">F</option>
+    </select>
+    <div style="clear: both;"></div>
+    <br>
+    <button onclick="mairageAgeValidator()">Click here to check!</button>
+
+
+    <script>
+        function mairageAgeValidator()
+        {
+            var year= document.getElementById("year").value
+            var gender=document.getElementById("gender").value
+            var age= 2019 - year
+            if( gender=="Female")
+            {
+                if(age>=18)
+                    alert("Congrats! You can marry ")
+                else
+                    alert("oops! You can't marry . wait for--"+ (18-age)+"years")
+            }
+            if(gender=="Male")
+            {
+                if(age>=21)
+                    alert("Congrats! You can marry ")
+                else
+                    alert("oops! You can't marry . wait for--"+(21-age)+"years")
+            }
+        }
+    </script>
+</body>
+</html>
