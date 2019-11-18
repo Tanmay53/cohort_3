@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    background: whitesmoke;
+}
+h1 {
+    background: red;
+    margin-top: 0px;
+    padding: 10px;
+}
+.cont-flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inner-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    background: blue;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+th,
+td {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+table {
+    margin-top: 40px;
+}
+.col-flex {
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 600px) {
+    .cont-flex {
+        flex-direction: column;
+    }
+}

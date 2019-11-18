@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Practise Selectors</title>
     </head>
     <body>
@@ -20,21 +21,58 @@
         <button onclick="changeRed()">Change H1</button>
         <button onclick="changeGreen()">Change H3</button>
         <button onclick="changeBlue()">Change H5</button>
-        <button>Change Green</button>
-        <button>Change Red</button>
-        <button>Change Blue</button>
+        <button onclick="allGreen()">Change Green</button>
+        <button onclick="allRed()">Change Red</button>
+        <button onclick="allBlue()">Change Blue</button>
+
         <script type="text/javascript">
+            // Changes all H1 to red color
             function changeRed(){
-                var allH1 = document.querySelectorAll('h1');
-                allH1.style.color = 'red';
+                var h1 = document.querySelectorAll('h1');
+                for(var i = 0; i < h1.length; i++){
+                    var allH1 = h1[i];
+                    allH1.style.color = 'red';
+                }        
             }
+            // Changes all H3 to green color
             function changeGreen(){
-                var allH3 = document.querySelectorAll('h3');
-                allH3.style.color = 'green';
+                var h3 = document.querySelectorAll('h3');
+                for(var i = 0; i < h3.length; i++){
+                    var allH3 = h3[i];
+                    allH3.style.color = 'green';
+                }
             }
+            // Changes all H5 to blue color
             function changeBlue(){
-                var allH5 = document.querySelectorAll('h5');
-                allH5.style.color = 'blue';
+                var h5 = document.querySelectorAll('h5');
+                for(var i = 0; i < h5.length; i++){
+                    var allH5 = h5[i];
+                    allH5.style.color = 'blue';
+                }
+            }
+            // Changes all green classes to green 
+            function allGreen(){
+                var elem1 = document.querySelectorAll('.green');
+                for(var i = 0; i < elem1.length; i++){
+                    var elem = elem1[i];
+                    elem.style.color = 'green';
+                }
+            }
+            // Changes all red classes to red color
+            function allRed() {
+                var elem1 = document.querySelectorAll('.red');
+                for(var i = 0; i < elem1.length; i++){
+                    var elem = elem1[i];
+                    elem.style.color = 'red';
+                }
+            }
+            // Changes all blue classes to blue color
+            function allBlue() {
+                var elem1 = document.querySelectorAll('.blue');
+                for(var i = 0; i < elem1.length; i++){
+                    var elem = elem1[i];
+                    elem.style.color = 'blue';
+                }
             }
         </script>
     </body>

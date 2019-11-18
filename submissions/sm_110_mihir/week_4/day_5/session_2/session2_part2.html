@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>mouse hover</title>
+    <style>
+      .container {
+        height: 400px;
+        width: 400px;
+        border-radius: 40px;
+        margin: 100px auto;
+        background: blue;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      button {
+        justify-self: flex-end;
+        align-self: flex-end;
+        margin: 40px;
+        padding: 40px;
+        border-radius: 40px;
+        font-size: 1.6rem;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container">
+      <button>Submit</button> -->
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", generateDiv);
+      function generateDiv() {
+        var div = document.createElement("div");
+        div.className="container";
+        div.addEventListener('mouseenter',enterColor);
+        div.addEventListener('mouseleave',leaveColor);
+        var button = document.createElement("button");
+        button.innerHTML = "SUBMIT";
+        var bodyEle = document.getElementsByTagName("body");
+        div.appendChild(button);
+        bodyEle[0].appendChild(div);
+
+      }
+      var btn=document.getElementsByTagName('button');
+      function enterColor(){
+        btn[0].style.background='green';
+      }
+      function leaveColor(){
+        btn[0].style.background='red';
+      }
+    </script>
+  </body>
+</html>

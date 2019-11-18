@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>session2_part2</title>
+    <style>
+        button{
+            padding: 25px;
+            font-size: medium;
+            margin: 50px;
+        }
+        #container{
+            margin: 100px;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+            background: darkblue;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="btn" type="submit">SUBMIT</button>
+    </div>
+
+    <script>
+
+    var divs=document.getElementById('container');
+    var btnId=document.getElementById('btn');
+    function random(num){
+        return Math.floor(Math.random()*num);
+    }
+    function btnBackground(){
+        var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        btnId.style.background=randomColor;
+        
+      }
+      divs.addEventListener("mouseover", btnBackground);
+      function def(){
+          btnId.style.background='white';    
+      }
+      divs.addEventListener('mouseout', def);
+      
+    </script>
+</body>
+</html>
