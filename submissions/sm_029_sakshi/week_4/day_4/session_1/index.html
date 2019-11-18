@@ -1,0 +1,111 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1 > Create your own exponentiation function! </h1>
+	<input type="text" id="id1" name = "num1">
+	<input type="text" id="id2" name = "num2">
+	<p id="expo"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="sum35"></p>
+	<input type="text" id="limit">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="email"/>
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+      var num1=document.getElementById("id1").value
+	  var num2=document.getElementById("id2").value
+	  var exponen=1
+	  for(var i=1; i<=num2; i++)
+    {
+        exponen = exponen * num1;
+    }
+	  document.getElementById("expo").innerHTML=exponen
+
+			
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+			var limit=document.getElementById("limit").value
+             sum = 0;
+              for (var i = 0; i <=limit; i++) 
+                     {
+                        if (i % 3 === 0 && i % 5 === 0)
+                             {
+                                   sum += i;
+                             }
+        }
+			document.getElementById("sum35").innerHTML=sum
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+			var email = document.getElementById('email').value
+			if(emailValidator(email)) {
+				alert('Valid Email !')
+			}
+			else {
+				alert("Invalid Email")
+			}
+		}
+		function buildDictionary() {
+			var allowedSymbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@_-."
+			var dict = {}
+			for(var i = 0; i < allowedSymbols.length; i++) {
+				dict[allowedSymbols[i]] = 0
+			}
+			return dict
+		}
+		function emailValidator(email) 
+		{
+			var dict = buildDictionary()
+			var charSeen = 0
+			for(var i = 0; i < email.length; i++) {
+				// if character is not already present in dictionary
+				if (dict[email[i]] == undefined)
+					return false
+				if (email[i] == '@' || email[i] == '.') {
+					if (charSeen <= 1) {
+						return false
+					}
+					charSeen = 0 // reset char seen till now
+				}
+				// update values for keys
+				dict[email[i]] += 1
+				charSeen = charSeen + 1
+			}    
+			// if wrong number of special symbols
+			if(dict['@'] != 1 || dict['.'] < 1)
+				return false
+			// edge case for tld
+			if(charSeen < 3)
+				return false
+			// finally
+			return true
+		}
+	
+	</script>
+</body>
+</html>

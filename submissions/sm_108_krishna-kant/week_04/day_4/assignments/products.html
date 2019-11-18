@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <style>
+      .image-primary {
+        widows: 50px;
+        height: 50px;
+      }
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.4rem;
+      }
+    </style>
+    <title>Task List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div id="main" class="card">
+            <div class="card-content">
+              <span class="card-title">Add Item</span>
+              <div class="row">
+                <form id="item-form">
+                  <div class="input-field col s12">
+                    <input type="text" name="name" id="name" />
+                    <label for="name">Product Name</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input type="text" name="image" id="image" />
+                    <label for="image">Product Image</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <input type="text" name="price" id="price" />
+                    <label for="price">Product Price</label>
+                  </div>
+                  <input
+                    type="submit"
+                    value="Add Item"
+                    id="addItem"
+                    class="btn"
+                  />
+                </form>
+              </div>
+            </div>
+            <div class="card-action">
+              <h5 id="task-title">Items</h5>
+
+              <ul class="collection">
+                <li class="collection-item flex">
+                  <span>Image</span><span>Name</span><span>Price</span
+                  ><a class="delete-item secondary-content flex-end"
+                    ><i class="fa fa-remove"></i
+                  ></a>
+                </li>
+              </ul>
+              <a href="#" class="clear-items btn black">Clear Items</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+      // Define UI Vars
+      const form = document.querySelector("#item-form");
+      const taskList = document.querySelector(".collection");
+      const clearBtn = document.querySelector(".clear-items");
+      const filter = document.querySelector("#filter");
+      const itemName = document.querySelector("#name");
+      const itemImage = document.querySelector("#image");
+      const itemPrice = document.querySelector("#price");
+      const addItemButton = document.querySelector("#addItem");
+      // Load all event listeners
+      loadEventListeners();
+
+      // Load all event listeners
+      function loadEventListeners() {
+        // Add item event
+        form.addEventListener("submit", addItem);
+        // Remove item event
+        taskList.addEventListener("click", removeItem);
+        // Clear item event
+        clearBtn.addEventListener("click", clearItem);
+        // Edit Item event
+      }
+
+      // Add Item
+      function addItem(e) {
+        if (itemName.value === "") {
+          alert("Add a Item");
+          return false;
+        }
+        e.preventDefault();
+        // Create li element
+        if (addItemButton.value != "Update") {
+          const li = document.createElement("li");
+          // Add class
+          li.className = "collection-item flex";
+          // image
+          var image = document.createElement("img");
+          image.src = itemImage.value;
+          image.className = "image-primary";
+
+          // name
+          var name = document.createElement("span");
+          name.innerText = itemName.value;
+          name.id = "name";
+          // price
+          var price = document.createElement("span");
+          price.innerText = itemPrice.value;
+          price.id = "price";
+          var edit = document.createElement("button");
+          edit.innerText = "Edit";
+          edit.className = "btn btn-primary";
+          edit.id = "edit";
+          edit.addEventListener("click", editItem);
+          // Create text node and append to li
+
+          li.appendChild(image);
+          li.appendChild(name);
+          li.appendChild(price);
+          li.appendChild(edit);
+          // Create new link element
+          const link = document.createElement("a");
+          // Add class
+          link.className = "delete-item";
+          // Add icon html
+          link.innerHTML = '<i class="fa fa-remove"></i>';
+          // Append the link to li
+          li.appendChild(link);
+
+          // Append li to ul
+          taskList.appendChild(li);
+
+          // Clear input
+          itemName.value = "";
+          itemPrice.value = "";
+          itemImage.value = "";
+        }
+      }
+
+      // Remove Item
+      function removeItem(e) {
+        if (e.target.parentElement.classList.contains("delete-item")) {
+          if (confirm("Are You Sure?")) {
+            e.target.parentElement.parentElement.remove();
+          }
+        }
+      }
+
+      // Clear Item
+      function clearItem() {
+        while (taskList.firstChild) {
+          taskList.removeChild(taskList.firstChild);
+        }
+      }
+
+      // edit Item
+      function editItem(e) {
+        var parEle = e.target.parentElement;
+        var name = parEle.querySelector("#name");
+        var price = parEle.querySelector("#price");
+        var url = parEle.querySelector(".image-primary");
+        itemName.value = name.innerText;
+        itemPrice.value = price.innerText;
+        itemImage.value = url.src;
+        addItemButton.value = "Update";
+        form.addEventListener("submit", function() {
+          updateItem(parEle);
+        });
+      }
+
+      function updateItem(e) {
+        var name = e.querySelector("#name");
+        var price = e.querySelector("#price");
+        var url = e.querySelector(".image-primary");
+        name.innerText = itemName.value;
+        price.innerText = itemPrice.value;
+        url.src = itemImage.value;
+        // Clear input
+        itemName.value = "";
+        itemPrice.value = "";
+        itemImage.value = "";
+        addItemButton.value = "Submit";
+        form.removeEventListener("submit", updateItem);
+      }
+    </script>
+  </body>
+</html>

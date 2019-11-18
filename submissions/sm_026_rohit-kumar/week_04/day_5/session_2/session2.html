@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+</html>
+<body>
+
+    <script type="text/javascript">
+        body_ref = document.querySelector('body')
+
+        function randomVal() {
+            return Math.floor(Math.random() * 255)
+        }
+        function generateColor() {
+            //alert('working')
+            var rgb = 'rgb(' + randomVal() + ', ' + randomVal() + ', ' + randomVal() + ')'
+            body_ref.style.backgroundColor = rgb
+        }
+
+        window.addEventListener('resize', generateColor)
+
+    </script>
+</body>

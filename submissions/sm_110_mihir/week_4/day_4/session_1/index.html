@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id="num1">
+	<input type="text" name = "num2" id="num2">
+	<p> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p></p>
+	<input type="text" id="limit">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="email"/>
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function multiplication(a,b){
+			console.log(a*b)
+		}
+		function exponent(){
+			var num1=document.getElementById("num1").value
+			var num2=document.getElementById("num2").value
+			var product=1
+			for(var i=1;i<=num2;i++)
+				product*=num1
+			var p=document.getElementsByTagName("p")
+			p[0].innerHTML=product
+			multiplication(num1,num2)
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+			var limit=document.getElementById("limit").value
+			var sum=0
+			for(var i=0;i<=limit;i++)
+				if(i%3==0 && i%5==0)
+					sum+=i
+			var p=document.getElementsByTagName("p")
+			p[1].innerHTML=sum
+		}
+		//Write javascript for FSD.JS.9.3 here
+
+		// to split characters of a string
+		function split_char(str){
+			var arr=[]
+			for(var i=0;i<str.length;i++)
+				arr[i]=str[i]
+			return arr
+		}
+		// check for email's top level domain in the limited list
+		function checkTld(str){
+			// reject single letter tld
+			if(str.length<3)
+				return false
+			// Tld list not exhaustive
+			var icannTld=['.com','.in','.co','.gov','.ai','.io','.au','.nl','','.ca','.jp','.edu','.net','.biz','.it','','.ae','.ac','.airbus','.apple','analytics','.org']
+			for (var i=0;i<icannTld.length;i++)
+				if(str==icannTld[i])
+					return true
+			return false
+		}
+		// check for valid email with given filtering criterias
+		function validEmail(email){
+			email=split_char(email)
+			var countDot=0, countAt=0,posDot,posAt,tld=''
+			for(i=0;i<email.length;i++){
+				// check for whitespace
+				if(email[i]!=' '){
+					// check for valid character
+					if((email[i]>='a' && email[i]<='z') || (email[i]>=0 && email[i]<=9) || email[i]=='-' || email[i]=='_'|| email[i]=='@' || email[i]=='.' ) {
+						// console.log('success')
+						if(email[i]=='@'){
+							countAt++
+							posAt=i
+							// @ only 1 allowed, not at the start
+							if(countAt>1 || i==0)
+								return false
+						}
+						if(email[i]=='.'){
+							// . not at the start
+							if(i==0)
+								return false
+							// . cannot be after @
+							if(i==posAt+1)
+								return false
+							countDot++
+							// if . repeats
+							if(countDot>1){
+								// check double dot
+								if(i==posDot+1)
+									return false
+								// check tld - top level domain
+								if(checkTld(tld)==false)
+									return false
+								// tld is checked and reset
+								tld=''
+							}
+							posDot=i
+						}
+						if(countDot){
+							tld+=email[i]
+						}
+					}  
+					else
+						return false
+				}
+				else 
+					return false
+			}
+			// check last tld
+			if(checkTld(tld)==false)
+				return false
+			// check for @ and .
+			if(countDot && countAt)
+				return true
+			else
+				return false
+		}
+		
+		function validateEmail(){
+			var email=document.getElementById("email").value
+			email=validEmail(email)
+			if(email)
+				alert('Valid Email!')
+			else
+				alert('Invalid Email!')
+		}
+	</script>
+</body>
+</html>

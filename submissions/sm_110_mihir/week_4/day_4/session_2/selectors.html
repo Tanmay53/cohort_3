@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="firstH1()">Change H1</button>
+        <button onclick="h3()">Change H3</button>
+        <button onclick="h5()">Change H5</button>
+        <button onclick="green()">Change Green</button>
+        <button onclick="red()">Change Red</button>
+        <button onclick="blue()">Change Blue</button>
+        <script type="text/javascript">
+            function firstH1(){
+                var h1=document.querySelector('h1')
+                h1.style.color='red'
+            }
+            function h3(){
+                var h3=document.querySelectorAll('h3')
+                for(var i=0;i<h3.length;i++)
+                    h3[i].style.color='green'
+            }
+            function h5(){
+                var h5=document.querySelectorAll('h5')
+                for(var i=0;i<h5.length;i++)
+                    h5[i].style.color='blue'
+            }
+            function green(){
+                var green=document.querySelectorAll(".green")
+                green.forEach(function(element){
+                    element.style.color='green'
+                })
+            }
+            function red(){
+                var red=document.querySelectorAll(".red")
+                red.forEach(function(element){
+                    element.style.color='red'
+                })
+            }
+            function blue(){
+                var blue=document.querySelectorAll(".blue")
+                blue.forEach(function(element){
+                    element.style.color='blue'
+                })
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button id ="beforeThis" onclick="changeCon1()">Create H1</button>
+        <button onclick="addHeadings()">Create 2 H3</button>
+        <button onclick="addDivs()">Create DIVS</button>
+        <button onclick="addStudents()">Add Students</button>
+        <button onclick="addCopy()">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+            function changeCon1(){
+                var para = document.createElement('h1');
+                    para.textContent = "MASAI"
+                var heading = document.querySelector('#headings')
+                heading.appendChild(para)
+            }
+
+            function addHeadings(){
+                var para1 = document.createElement('h3');
+                    para1.textContent = "A Transformation in education!";
+                var para2 = document.createElement('h3');
+                    para2.textContent = "Learn to earn, pay when you get.";
+                var heading = document.querySelector('#headings')
+                    heading.appendChild(para1)
+                    heading.appendChild(para2)        
+            }
+            function addDivs(){
+                for(i =1; i < 11; i++){
+                    var divs = document.createElement('div'); 
+                    divs.textContent = "Content " + i ;
+                    document.querySelector('#headings').appendChild(divs)
+                }  
+            }
+            function addStudents(){
+                for(i = 0; i< students.length; i++){
+                    var names = document.createElement('li');
+                    names.textContent =students[i]
+                    document.querySelector('#vikings').appendChild(names)
+                }
+            }
+            function addCopy(){
+                var copyRt = document.createElement('p')
+                copyRt.textContent = "@ masai 2019"
+                var body = document.querySelector('body')
+                var btn = document.querySelector('#beforeThis')
+                body.insertBefore(copyRt, btn)
+            }
+
+        </script>
+    </body>
+</html>
