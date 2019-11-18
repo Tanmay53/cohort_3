@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id="var1">
+	<input type="text" name = "num2" id="var2">
+	<p id="exp"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="mul1"></p>
+	<input type="text" id="mul">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="valid"/>
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+            var exp =1
+            var value1 =document.getElementById("var1").value
+            var value2 = document.getElementById("var2").value
+            for(var i =0;i<=value2;i++)
+                exp *= Number(value1)
+            document.getElementById("exp").innerHTML=exp
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+            sum =0
+            limit =document.getElementById("mul").value
+            for(i=0;i<=limit;i++){
+                if(i%3==0 && i%5==0)
+                sum+=i
+            }
+            document.getElementById("mul1").innerHTML=sum
+                
+
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+            // validity = true
+            checkEmail=document.getElementById("valid").value
+            if(checkEmail.includes("@") && checkEmail.includes("."))
+                alert("Valid")
+            else
+                alert("Invalid")
+		}
+	</script>
+</body>
+</html>

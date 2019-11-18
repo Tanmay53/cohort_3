@@ -1,0 +1,145 @@
+
+ /* first heading */
+#one{
+   background: darkcyan;
+   font-size: 50px;
+   text-align: center;   
+}
+
+
+.rj{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: cyan;
+    border: 2px solid violet;
+    
+}           
+
+
+.rja div{
+    /* display: flex; */
+    /* flex-flow: row; */
+    /* background: coral;
+    border: 2px solid red; */
+    /* flex-direction: column; */
+    /* flex-flow: row wrap; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .one{
+display: flex;
+font-size: 20px;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+#two div{
+
+display: flex;
+font-size: 20px;
+flex-direction: row;
+justify-content: start; 
+/* justify-content: space-evenly; */
+
+
+    /* display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto; */
+/* 
+    justify-content: space-evenly;
+    font-size: 10px; */
+ */
+/* .rj{
+display: grid;
+grid-template-rows: auto;
+grid-template-columns: auto auto;
+background: cyan;
+
+margin: 20px;
+border: 2px solid red;
+padding: 5px;
+
+height: 600px;
+width: 1800px;
+
+font-size: 20px;
+}
+
+
+
+#hundred{
+    text-align: center;
+}
+
+#nintynine{
+    text-align: center;
+}
+
+.rj1{
+display: grid;
+grid-template-rows: auto;
+grid-template-columns: auto auto auto auto auto;
+}
+
+#seven{
+    text-align: left;
+}
+
+
+#hundred ~ div{
+
+    display: grid;
+} */

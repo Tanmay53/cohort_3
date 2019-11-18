@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id = "num1">
+	<input type="text" name = "num2" id = "num2">
+	<p id="exp"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id = "mul"></p>
+	<input type="text" id = "mulLim">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id = "email">
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+			var a = document.getElementById("num1").value
+			var b = document.getElementById("num2").value
+
+			var prod = a*b
+			console.log('Product of',a,b,'is',prod)
+
+			var expVal = a
+
+			for(var i=1;i<b;i++){
+				expVal = expVal*a
+			}
+			
+			document.getElementById("exp").innerHTML = expVal
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+			var limit = document.getElementById("mulLim").value
+			sum = 0
+			for(var i=0;i<=limit;i++){
+				if(i%3 == 0 && i%5 == 0){
+					sum += i
+				}
+			}
+			document.getElementById("mul").innerHTML = sum
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+			var email = document.getElementById("email").value
+
+			function indexOf(array,char){
+
+				var count = 0
+				var indexPos = []
+				var returnArray = []
+
+				for(var i=0;i<array.length;i++){
+					if(array[i] === char){
+						count++
+						indexPos.push(i)
+					}
+				}
+
+				returnArray.push(count)
+				returnArray.push(indexPos)
+
+				//console.log(returnArray)
+				return returnArray
+			}
+
+			function checkAtSign(str){
+
+				var arr = indexOf(str,'@')
+				//console.log(arr)
+
+				var index = arr[0]
+				//console.log(index)
+
+				var posArray = arr[1]
+				//console.log(posArray[0])
+
+				if(posArray[0] == 0){
+					//console.log('Invalid email. @ found at first position.')
+					return -3
+				}
+				else if(index == 1){
+					//console.log('Found @ at index',index)
+					return posArray[0]
+				}
+				else if(index > 1){
+					//console.log('Multiple @ signs found')
+					return -2
+				}
+				else{
+					//console.log('@ not found')
+					return -1
+				}
+			}
+
+			function split(inputString,splitCharacter){
+
+			//console.log(inputString)
+
+			var tempWord = ''
+			var tempArray = []
+
+			for(var i = 0; i < inputString.length; i++){
+				
+				if(inputString[i] != splitCharacter){
+
+					tempWord += inputString[i]
+
+				}
+				else{
+
+					if(tempWord.length > 0){
+						tempArray.push(tempWord)
+					}
+
+					tempWord = ''
+
+				}
+			}
+
+			if(tempWord.length > 0){
+
+				tempArray.push(tempWord)
+
+			}
+
+			return tempArray
+			}
+
+			function checkLettersValidity(str){
+				var letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-.'
+
+				notFound = true
+
+				//console.log(str)
+				for(var i=0;i<str.length;i++){
+					for(var j=0;j<letters.length;j++){
+						if(str[i] === letters[j]){
+							notFound = false
+							//console.log('1',str[i],notFound)
+							break
+						}
+						else{
+							notFound = true
+							//console.log('2',str[i],notFound)
+						}
+					}
+					//console.log(i,str[i],notFound)
+					if(notFound){
+						//console.log('Invalid email. Invalid letters found')
+						return -2
+					}
+				}
+			}
+
+			function checkTwoDots(str){
+				for(var i=0;i<str.length-1;i++){
+					if(str[i] == str[i+1] && str[i] == '.'){
+						//console.log('Invalid email. 2 dots(.) found simultaneously')
+						return -3
+					}
+				}
+			}
+
+			function checkBefore(str){
+				if(str[0] == '.'){
+					//console.log('Invalid email. Dot(.) found at first position')
+					return -1
+				}
+
+				if(checkLettersValidity(str) < 0){
+					//invalid characters found
+					return -2
+				}
+
+				if(checkTwoDots(str) < 0){
+					//2 dots found simultaneously
+					return -3
+				}
+			}
+
+			function checkAfter(str){
+				if(str[0] == '.'){
+					return -1
+				}
+				var afterParts = split(str,'.')
+				//console.log(afterParts)
+
+				domainCheck = afterParts[afterParts.length-1]
+				//console.log(domainCheck,typeof(domainCheck))
+
+				if(domainCheck != 'com' && domainCheck != 'org' && domainCheck != 'net'){
+					return -2
+				}
+			}
+
+			function hasEmail(str){
+				//console.log(str)
+
+				var returnCodeAtSign = checkAtSign(str)
+
+				switch(returnCodeAtSign){
+					case -1: //console.log('Not a valid email. @ sign missing.')
+							return false
+					case -2: //console.log('Not a valid email. Multiple @ signs found.')
+							return false
+					case -3: //console.log('Invalid email. @ found at first position.')
+							return false
+				}
+
+				var splits = split(str,'@')
+				//console.log(splits)
+
+				var beforeAt = splits[0]
+				var afterAt = splits[1]
+
+				//console.log(beforeAt,afterAt)
+
+				var returnCodeBefore, returnCodeAfter
+
+				returnCodeBefore = checkBefore(beforeAt)
+				switch(returnCodeBefore){
+					case -1: //console.log('Invalid email. Dot(.) found at first position')
+							return false
+					case -2: //console.log('Invalid email. Invalid letters found')
+							return false
+					case -3: //console.log('Invalid email. 2 dots(.) found simultaneously')
+							return false
+				}
+
+				returnCodeAfter = checkAfter(afterAt)
+				switch(returnCodeAfter){
+					case -1: //console.log('Invalid email. Dot(.) immediately after @.')
+							return false
+					case -2: //console.log('Invalid domain.')
+							return false
+				}
+
+				//console.log('Congrats! It is a valid email.')
+				return true
+			}
+
+			if(hasEmail(email)){
+				alert("valid",email)
+			}
+			else{
+				alert("Invalid",email)
+			}
+		}
+	</script>
+</body>
+</html>

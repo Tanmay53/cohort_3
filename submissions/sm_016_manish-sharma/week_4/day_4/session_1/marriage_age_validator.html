@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coding Session 1!</title>
+</head>
+
+<body>
+    <h1>Marriage Age Validator</h1>
+    <select id="selectG">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <input type="text" id='inYear'>
+    <button onclick="ageCal()">Eligibility calculator</button>
+
+    <script type="text/javascript">
+        function ageCal() {
+            var gender = document.getElementById("selectG").value
+            var year = document.getElementById("inYear").value
+            var age = 2019 - Number(year)
+            if (gender == 'male') {
+                if (age >= 21) {
+                    alert('Legal age for marriage')
+                }
+                else {
+                    alert('Not a legal age for marriage')
+                }
+            }
+            else if (gender == 'female') {
+                if (age >= 18) {
+                    alert('Legal age for marriage')
+                }
+                else {
+                    alert('Not a legal age for marriage')
+                }
+            }
+        }
+
+    </script>
+</body>
+
+
+</html>

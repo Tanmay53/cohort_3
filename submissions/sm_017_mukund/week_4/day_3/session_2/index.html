@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>index</title>
+    </head>
+    <body>
+        <p id='drive'></p>
+        <button onclick="older()">older than 18</button>
+        <button onclick="younger()">younger than 18</button>
+        <button onclick="exact()">exactly 18</button>
+        <input type="text" name="color" id="color">
+        <button onclick="color()" id="bColor">Click here to change my color</button>
+        <select id="continent_select">
+            <option></option>
+            <option value="India">India</option>
+            <option value="United States of America">United States of America</option>
+            <option value="China">China</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Australia">Australia</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Cananda">Cananda</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Sweden">Sweden</option>
+        </select>
+        <button onclick="continent()" id="continent">Find continent</button>
+        <script>
+            function older(){
+                document.getElementById('drive').innerHTML='You can drive in India!'
+            }
+            function younger(){
+                document.getElementById('drive').innerHTML='You can\'t drive in India!'
+            }
+            function exact(){
+                document.getElementById('drive').innerHTML='You are just old enough to drive in India!'
+            }
+            function color(){
+                document.getElementById('bColor').style.background=document.getElementById('color').value
+            }
+            function continent(){
+                cont=document.getElementById('continent_select').value;
+
+                switch (cont){
+                    case 'India':
+                        alert('The continent is Asia')
+                        break;
+                    case 'United States of America':
+                        alert('The continent is North America')
+                        break;
+                    case 'China':
+                        alert('The continent is Asia')
+                        break;
+                    case 'Nepal':
+                        alert('The continent is Asia')
+                        break;
+                    case 'Australia':
+                        alert('The continent is Australia')
+                        break;
+                    case 'France':
+                        alert('The continent is Europe')
+                        break;
+                    case 'Germany':
+                        alert('The continent is Europe')
+                        break;
+                    case 'South Africa':
+                        alert('The continent is Africa')
+                        break;
+                    case 'Nigeria':
+                        alert('The continent is Africa')
+                        break;
+                    case 'Mexico':
+                        alert('The continent is North America')
+                        break;
+                    case 'Argentina':
+                        alert('The continent is South America')
+                        break;
+                    case 'Brazil':
+                        alert('The continent is South America')
+                        break;
+                    case 'Cananda':
+                        alert('The continent is North America')
+                        break;
+                    case 'Singapore':
+                        alert('The continent is Asia')
+                        break;
+                    case 'Sweden':
+                        alert('The continent is Europe')
+                        break;     
+                    default:
+                        alert('Select any country')                                                       
+
+                }
+            }
+        </script>
+    </body>
+</html>
