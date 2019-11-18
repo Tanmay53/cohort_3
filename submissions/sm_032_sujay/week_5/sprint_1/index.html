@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Judgement Page</title>
+
+<h1>It's Better to sweat during practice, than to bleed in the War</h1>
+<h3>Results- Shows your yesterday, To make a better tommorrow!</h3>
+
+<link rel="stylesheet" type="text/css" href="sprint1.css">
+</head>
+
+<body>
+
+
+    <div>
+
+    </div>
+
+    <div id="student">
+        <div id="sName">
+        <label for="nam">Enter Your Name</label>
+    <input type="text" name="name" id="studName">
+
+        </div>
+
+      <div id='sGrades'>
+   Which Grade
+    <select id="grades">
+        <option value="">--</option>
+        <option value="8">VII</option>
+        <option value="9">IX</option>
+        <option value="10">X</option>
+      </select>  
+      </div>
+    </div>
+
+
+<div class='scores'>
+     
+         
+      <label for="S">Science</label>
+      <input type="text" name="sMarks" id="science">
+           
+            
+      <label for="M">Math</label>
+      <input type="text" name="mMarks" id="math">
+    
+
+      <label for="E">English</label>
+      <input type="text" name="eMarks" id="english">
+      
+      <label for="H">History</label>
+      <input type="text" name="hMarks" id="history">
+      
+      <label for="G">Geography</label>
+      <input type="text" name="gMarks" id="geography">
+
+</div>
+
+
+
+<div id='dtotal'>
+        <button onclick="calcTotal()" id='total'>Check your Total Score</button>
+</div>
+
+
+<div id='davg'>
+        <button onclick="calcAvg()" id='avg'>Check out Average Score</button>
+</div>
+
+<div>
+        <button onclick="resetAll()" id='rst'>Reset Scores/Add new</button>
+</div>
+
+<script src="sprint1.js"></script>    
+</body>
+
+</html>
