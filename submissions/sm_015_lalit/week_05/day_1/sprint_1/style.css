@@ -1,0 +1,101 @@
+.parentgrid {
+        /* border: 5px solid black; */
+        display: grid;
+        grid-template-areas: 
+        "xheader xheader xheader"
+        "xcontent xcontent xnavbar"
+        "xfooter xfooter xfooter"
+        ;
+
+}
+.header {
+    /* border: 5px solid black; */
+    grid-area: xheader;
+
+}
+
+.content {
+    /* border: 5px solid black; */
+    grid-area: xcontent;
+    margin-bottom: 20px;
+    padding-bottom: 12%;
+    text-align: center;
+      
+}
+.navbar {
+    /* border: 5px solid black; */
+     grid-area: xnavbar;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     text-align: center;
+     align-items: center;
+     margin-bottom: 20px;
+     padding-bottom: 12%;
+}
+
+.footer {
+    /* border: 5px solid black; */
+    grid-area: xfooter;
+    background: black;
+
+}
+
+#headerContent {
+    font-size: 37px;
+    text-align: center;
+
+}
+
+#contentHead {
+    font-size: 18px;
+}
+
+
+.tnote {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    padding: 3px;
+    margin-bottom: 3px;
+}
+
+#buttonfinal {
+    margin: 15px;
+}
+
+input:valid{
+    border: 1px solid green;
+}
+
+input:invalid{
+    border: 1px solid red;
+}
+
+table {
+    border: 1px solid black;
+    text-align: center;
+    margin-left: 23%;
+}
+
+button:hover {
+    background: black;
+    color: white;
+    padding: 1%;
+}
+
+@media (max-width:768px) {
+    .parentgrid {
+        grid-template-areas:
+        "xheader xheader xheader"
+        "xcontent xcontent xcontent"
+        "xnavbar xnavbar xnavbar"
+        "xfooter xfooter xfooter"
+    }
+    table {
+        margin-left: 1%; 
+    }
+}
