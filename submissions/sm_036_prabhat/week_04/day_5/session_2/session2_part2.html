@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Session_2</title>
+    <style>
+        #box {
+            height: 400px;
+            width: 600px;
+            background: rgb(39, 172, 224);
+            border-radius: 5px;
+            margin: 150px;
+        }
+
+        #btn {
+            height: 70px;
+            width: 150px;
+            background: rgb(233, 76, 76);
+            border-radius: 5px;
+            margin-left: 400px;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <button id="btn">SUBMIT</button>
+    </div>
+    <script>
+        //Random Number function
+        var blueBox = document.getElementById("box");
+        var submit = document.getElementById("btn");
+        
+        function random(number){
+        return Math.floor(Math.random()*number);
+        }
+
+        // Change the buttons text color random value
+        function changeColor (){
+            var randomColor = "rgb("+ random(255)+"," + random(255)+ "," + random(255) +")";
+            submit.style.background = randomColor; 
+        }
+        blueBox.addEventListener("mouseover", changeColor);
+
+        // For keeping Original Button color 
+        function keepColor(){
+            submit.style.background = "rgb(233, 76, 76)";
+        }
+        blueBox.addEventListener("mouseout", keepColor);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body class="container">
+    <div class="grid grid-box ">
+      <!-- student registration box -->
+      <div class="registration-box">
+        <h2 class="heading h2">STUDENT DETAILS</h2>
+        <hr />
+        <div class="input-box">
+          <label for="name">NAME</label><br />
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="input-box">
+          <label for="grade">GRADE/CLASS</label><br />
+          <select name="grade" id="grade">
+            <option value="1">GRADE 1</option>
+            <option value="2">GRADE 2</option>
+            <option value="3">GRADE 3</option>
+            <option value="4">GRADE 4</option>
+            <option value="5">GRADE 5</option>
+          </select>
+        </div>
+        <div class="marks-box">
+          <h3 class="heading h3">STUDENT MARKS</h2>
+          <hr />
+          <div class="input-box">
+            <label for="">SCIENCE</label>
+            <input type="text" name="science" id="" maxlength="3" />
+          </div>
+          <div class="input-box">
+            <label for="">MATHS</label>
+            <input type="text" name="price" id="" maxlength="3" />
+          </div>
+          <div class="input-box">
+            <label for="">ENGLISH</label>
+            <input type="text" name="science" id="" maxlength="3" />
+          </div>
+          <div class="input-box">
+            <label for="">HISTORY</label>
+            <input type="text" name="price" id="" maxlength="3" />
+          </div>
+          <div class="input-box">
+            <label for="">GEOGRAPHY</label>
+            <input type="text" name="price" id="" maxlength="3" />
+          </div>
+        </div>
+        <hr />
+        <button class="add-btn" id="addBtn" value="ad" onclick="addStudent()">
+          ADD STUDENT
+        </button>
+      </div>
+      <!-- marks table box -->
+      <div class="flex-row table-box">
+        <h2 class="heading h2">FILTER STUDENT</h2>
+        <hr>
+        <div class="input-box">
+          <label for="">SELECT GRADE</label>
+          <select name="grade" id="grade" onchange="filterData()">
+            <option value="" disabled selected>SELECT GRADE 1</option>
+            <option value="1">GRADE 1</option>
+            <option value="2">GRADE 2</option>
+            <option value="3">GRADE 3</option>
+            <option value="4">GRADE 4</option>
+            <option value="5">GRADE 5</option>
+          </select>
+        </div>
+        <hr/>
+        <h2 class="heading h2">MARKS TABLE</h2>
+        <hr/>
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2">NAME</th>
+              <th rowspan="2">GRADE</th>
+              <th colspan="6">MARKS</th>
+            </tr>
+            <tr>
+              <th>Science</th>
+              <th>Math</th>
+              <th>English</th>
+              <th>History</th>
+              <th>Geography</th>
+              <th>TOTAL</th>
+            </tr>
+          </thead>
+          <tbody id="marksTable"></tbody>
+        </table>
+        <hr/>
+        <h2 class="heading h2">CLASS AVERAGE</h2>
+        <p id="avgMarks"></p>
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>
