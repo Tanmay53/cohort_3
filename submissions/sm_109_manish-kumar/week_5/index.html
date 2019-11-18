@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Record</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<!--record accept-->
+
+	<div class="mainblock">
+		<h2>Student Data</h2>
+		<table id="studentrecord">
+			<tr>
+				<td><b>NAME :</b></td>
+				<td><input type="text" name="name" placeholder="Name" id="name"></td>
+			</tr>
+
+			<tr>
+				<td><b>GRADE :</b></td>
+				<td><input type="text" name="grade" placeholder="Grade" id="grade"></td>
+			</tr>
+
+			<tr>
+				<td><b>SCIENCE :</b></td>
+				<td><input type="text" name="science" placeholder="Science Marks" id="science"></td>
+			</tr>
+
+			<tr>
+				<td><b>MATH :</b></td>
+				<td><input type="text" name="math" placeholder="Math Marks" id="math"></td>
+			</tr>
+
+			<tr>
+				<td><b>ENGLISH :</b></td>
+				<td><input type="text" name="english" placeholder="English Marks" id="english"></td>
+			</tr>
+
+			<tr>
+				<td><b>HISTORY :</b></td>
+				<td><input type="text" name="history" placeholder="History Marks" id="history"></td>
+			</tr>
+
+			<tr>
+				<td><b>GEOGRAPHY :</b></td>
+				<td><input type="text" name="geography" placeholder="Geography Marks" id="geo"></td>
+			</tr>
+		</table>
+
+		<button class="btn" onclick="butto()">Submit</button>
+	</div>
+	<div class="mainblock">
+		<h2>Track Record</h2>
+		<table>
+			<tr>
+			<td id="findname"><b>NAME :</b></td>
+			<td><input type="text" name="name"></td>
+			</tr>
+		</table>
+		<button class="btn" onclick="showme()">Find</button>
+
+		<p>or</p>
+
+			<table>
+			<tr>
+			<td><b>GRADE :</b></td>
+			<td><input type="text" name="grade"></td>
+			</tr>
+		</table>
+		<button class="btn">Find</button>
+	</div>
+
+	<div class="mainblock">
+		<p id="printhere"></p>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
