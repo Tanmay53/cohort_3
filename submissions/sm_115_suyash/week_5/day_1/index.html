@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Average Marks</title>
+  <script src="app.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="para-container">
+      <h1>Student Data</h1>
+    </div>
+    <h3>Add New Student</h3>
+      <form action="#" id="form1">
+        <table id="form-input">
+          <tbody>
+            <tr>
+              <td>Name : </td>
+              <td><input type="text" id="name" placeholder="Enter Name"></td>
+            </tr>
+            <tr>
+              <td>Standrad : </td>
+              <td><input type="text" id="standard" placeholder="Enter Class 1 to 4"></td>
+            </tr>
+            <tr>
+              <td>Marks : </td>
+              <td><input type="number" placeholder="Maths" id="maths"></td>
+              <td><input type="number" placeholder="Science" id="science"></td>
+              <td><input type="number" placeholder="English" id="english"></td>
+              <td><input type="number" placeholder="History" id="history"></td>
+              <td><input type="number" placeholder="Geography" id="geography"></td>
+        
+            </tr>
+          </tbody>
+        </table>
+        <button id="add_student" type="submit" onclick="studentData()">Add Student</button>
+      </form>
+      <select name="grade" id="select-grade">
+        <option value="select">Select Grade</option>
+        <option value="">Grade 1</option>
+        <option value="">Grade 2</option>
+        <option value="">Grade 3</option>
+        <option value="">Grade 4</option>
+      </select>
+  </div>
+  <div id="result">
+    <table id="table2">
+      <thead id="thead2">
+        <tr>
+          <th>Name</th>
+          <th>Total</th>
+          <th>Average</th>
+        </tr>
+      </thead>
+      <tbody id="tbody2"></tbody>
+    </table>
+  </div>
+</body>
+</html>
