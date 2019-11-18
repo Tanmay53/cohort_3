@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .mainDiv {
+            height: 500px;
+            width: 800px;
+
+            border-radius: 20px;
+            background: #4c9bd8
+        }
+
+        .mainDiv>button {
+            float: right;
+            margin: 400px 80px 100px 200px;
+            height: 50px;
+            width: 200px;
+            border-radius: 10px;
+            background: red;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainDiv" id="mainDiv">
+        <button type="submit" id="button">SUBMIT</button>
+    </div>
+    <script>
+        var mainDiv = document.getElementById("mainDiv")
+
+        function colorChange() {
+            document.getElementById("button").style.background = "green";
+        }
+        function colorBack() {
+            document.getElementById("button").style.background = "red";
+        }
+        mainDiv.addEventListener('mouseover', colorChange)
+        mainDiv.addEventListener('mouseout', colorBack)
+    </script>
+</body>
+
+</html>
