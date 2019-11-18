@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,100i,400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-heading">
+        <h4>Add Student</h4>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter Name" required />
+          </div>
+          <div class="form-control">
+            <label for="name">Grades</label>
+            <input
+              type="text"
+              placeholder="Enter Grade"
+              id="standard"
+              required
+            />
+            <span class="alert-text">enter your grades Ex : A,B,C,D F</span>,
+          </div>
+          <div class="form-control">
+            <label for="name">Marks</label>
+            <input type="text" placeholder="Science" id="s" required />
+            <input type="text" placeholder="Math" id="m" required />
+            <input type="text" placeholder="English" id="e" required />
+            <input type="text" placeholder="History" id="h" required />
+            <input type="text" placeholder="Geography" id="g" required />
+          </div>
+          <div class="form-control">
+            <input
+              type="submit"
+              value="Add Data"
+              id="addStudent"
+              class="btn-primary"
+            />
+
+            <select name="grade" id="grade">
+              <option value="all">All</option>
+              <option value="8">8 Grade</option>
+              <option value="9">9 Grade</option>
+              <option value="10">10 Grade</option>
+              <option value="11">11 Grade</option>
+              <option value="12">12 Grade</option>
+            </select>
+            <input
+              type="submit"
+              value="Show Sum"
+              id="showSum"
+              class="btn-primary"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <section class="data-form card">
+      <table id="showData">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Math</th>
+            <th>Physics</th>
+            <th>English</th>
+            <th>Geography</th>
+            <th>History</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="showDatatable"></tbody>
+      </table>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

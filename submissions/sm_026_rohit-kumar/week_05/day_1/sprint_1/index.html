@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Analytics</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="create-new">
+                <h1>Create New Student</h1>
+                <div class = "name-grade">
+                    <div id="name">Name:</div>
+                    <input id="txtName" type="text" placeholder="Enter Your Name">
+                    <div>Grade:</div>
+                    <select id="grade">
+                        <option value="--">select</option>
+                        <option value="IX">IX</option>
+                        <option value="X">X</option>
+                        <option value="XII">XI</option>
+                        <option value="XII">XII</option>
+                    </select>
+                </div>
+            </div>
+            <div class="marks-entry">
+                <div>Math:</div>
+                <input id="txtMath" type="text" placeholder="Enter Marks">
+                <div>Science:</div>
+                <input id="txtScience" type="text" placeholder="Enter Marks">
+                <div>English:</div>
+                <input id="txtEnglish" type="text" placeholder="Enter Marks">
+                <div>History:</div>
+                <input id="txtHistory" type="text" placeholder="Enter Marks">
+                <div>Geography:</div>
+                <input id="txtGeography" type="text" placeholder="Enter Marks">
+                
+                <div></div>
+                <button type="submit" onclick="validate()">Add Student</button>
+            </div>
+            <div id="student-details">
+                <h1>Student Details</h1>
+                <div class="pick-display">
+                    <div>Grade:</div>
+                    <select id="grade-pick" onchange="update()">
+                        <option value="--">select</option>
+                        <option value="IX">IX</option>
+                        <option value="X">X</option>
+                        <option value="XII">XI</option>
+                        <option value="XII">XII</option>
+                    </select>
+                </div>
+                <div id="display">
+                    <table id="display-table">
+                        <tr>
+                            <th>Subject</th>
+                            <th>Total</th>
+                            <th>Average</th>
+                        </tr>
+                    </table>
+                </div>
+                <h2 id="msg"></h2>
+            </div>
+        </div>
+    </body>
+</html>

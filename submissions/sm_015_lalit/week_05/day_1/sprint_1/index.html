@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Students Data Portal</title>
+</head>
+<body>
+<div class="parentgrid">
+    <div class="header"><p id="headerContent">Students Data Portal</p></div>
+    <div class="content"><p id="contentHead">Enter Student Data below </p>
+        <input type="text" placeholder="Name" id="Name" required><br>
+        <input type="text" placeholder="Grade" id="Grade" required><br>
+        <input type="number" placeholder="Science Marks" id="Science" required><br>
+        <input type="number" placeholder="Maths Marks" id="Maths" required><br>
+        <input type="number"placeholder="English Marks" id="English" required><br>
+        <input type="number" placeholder="History Marks" id="History" required><br>
+        <input type="number" placeholder="Geography Marks" id="Geography" required><br>
+        <button onclick="addtodb()" type="submit" id="buttonfinal">Add to database</button>
+        <br>
+        <br>
+        <table id="xtable">
+            <tr>
+                <th>Name</th>
+                <th>Grade</th>
+                <th>Science</th>
+                <th>Maths</th>
+                <th>English</th>
+                <th>History</th>
+                <th>English</th>
+            </tr>
+            <tr>
+                    <td>Sample</td>
+                    <td>5</td>
+                    <td>43</td>
+                    <td>35</td>
+                    <td>52</td>
+                    <td>59</td>
+                    <td>68</td>
+                </tr>
+                <tr>
+                        <td id="inputcol1"></td>
+                        <td id="inputcol2"></td>
+                        <td id="inputcol3"></td>
+                        <td id="inputcol4"></td>
+                        <td id="inputcol5"></td>
+                        <td id="inputcol6"></td>
+                        <td id="inputcol7"></td>
+                    </tr>
+
+                <tr>
+
+                </tr>
+        </table>
+ 
+
+    </div>
+    <div class="navbar"><h4>Select the grade to display</h4>
+            <button>Grade 5</button>
+            <button>Grade 6</button>
+            <button>Grade 7</button>
+            <button>Grade 8</button>
+            <button>Grade 9</button>
+
+
+
+    </div>
+    <div class="footer"><p class="tnote"> Made with 💓 at Masai School</p></div>
+</div>
+    <script src="script.js"></script>   
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New Students</title>
+        <style = type="text/css">
+        body{
+            background-size:cover;
+            background-color:#B3E5FC;
+		}
+         .flex-box{
+			 display:flex;
+			 flex-direction: row;
+		 }
+
+		 .flex-box div{
+			 height: 30px;
+			 width: 500px;
+			 background: rgba(48, 68, 68, 0.342);
+			 margin-left: 20px;
+			 border-radius: 50px;
+			 text-align:center;
+			 color: azure;
+			 font-family: Arial, Helvetica, sans-serif;
+			 font-size: 25px;
+		 }
+		 .grid{
+                display:grid;
+                grid-template-rows: 50px 50px 50px 50px 50px 50px;
+                grid-template-columns: 100px 100px 100px 100px;
+                grid-gap:1px;
+                margin-left:150px;
+                margin-top:100px;
+				text-align: center;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				color: rgba(36, 35, 35, 0.801);
+				justify-content: center;
+            }
+            .grid div{
+                background:rgba(115, 125, 126, 0.356);
+				border-radius: 20px;
+            }
+			.total{
+				margin-top: 50px;
+				color: rgb(102, 92, 79);
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+			
+		<div class="flex-box">
+			<div style="color: rgb(83, 78, 72);background: cadetblue;height:55px;width:500px">Detailes of the student:</div>
+			<div>Name:......</div>
+			<div>Class:....</div>
+			<div>City:......</div>
+			<div>DOB:.......</div>
+		</div>
+		<div class="grid">
+			<div>Sl.no</div>
+			<div>Subject</div>
+			<div>Total Marks</div>
+			<div>Marks Obtained</div>
+			<div>1</div>
+			<div>Science</div>
+			<div>100</div>
+			<div>80</div>
+			<div>2</div>
+			<div>Math</div>
+			<div>100</div>
+			<div>70</div>
+			<div>3</div>
+			<div>English</div>
+			<div>100</div>
+			<div>85</div>
+			<div>4</div>
+			<div>History</div>
+			<div>100</div>
+			<div>65</div>
+			<div>5</div>
+			<div>Geography</div>
+			<div>100</div>
+			<div>75</div>
+		</div>
+		
+		   <p id="fullname">Total</p>
+		   <p id="total">Average Marks</p>
+		   <p id="final">Final result</p>
+		   <p id="percentage">percentage</p>
+			<button onclick="setFullName()">TOTAL MARKS</button>
+			<button onclick="total()">AVERAGE MARKS</button>
+			<button onclick="final()">FINAL RESULTS</button>
+			<button onclick="percentage()">PERCENTAGE</button>
+			<script type="text/javascript">
+				 function setFullName() {
+				document.getElementById("fullname").innerHTML = 375;
+				   }
+				   function total() {
+				document.getElementById("total").innerHTML = 75;
+				   }
+				   function final(){
+				document.getElementById("final").innerHTML = "First Class with distinction";
+				   }
+				   function percentage(){
+				document.getElementById("percentage").innerHTML = "75%";
+				   }
+			</script>
+			<form action="index.html">
+					<input type="submit" value="Go back"/>
+				</form>
+				
+	</body>
+	</html>
