@@ -1,0 +1,74 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  padding: 2rem;
+}
+.card {
+  background: #fff;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+}
+.card .card-heading h4 {
+  font-size: 1.4rem;
+  color: #212f3c;
+}
+.form-control {
+  padding: 1rem 0;
+}
+.form-control input {
+  padding: 0.6rem;
+  margin: 0rem 0.5rem;
+}
+.right {
+  background: black !important;
+  color: #fff !important;
+}
+.btn-primary {
+  border: 2px solid #212f3c;
+  border-radius: 5px;
+  color: #212f3c;
+  background: transparent;
+  padding: 1rem 1.8rem;
+}
+.form-control select {
+  padding: 0.4rem 4rem;
+  background: #fff;
+  border: 2px solid #212f3c;
+  color: #212f3c;
+}
+.form-control select option:nth-child(even) {
+  background: #5d6d7e;
+  color: white;
+}
+
+.alert-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+#showData {
+  width: 100%;
+}
+#showData th {
+  background: #5d6d7e;
+  color: #fff;
+  padding: 1rem;
+}
+
+#showData .tdata:nth-child(even) {
+  background: #212f3d;
+  color: #fff;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+#showData .tdata:nth-child(odd) {
+  background: #2e4053;
+  padding: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+}
