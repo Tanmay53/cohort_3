@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Session 2</title>
+    </head>
+    <body>
+        <script>
+            var bodyElem = document.querySelector('body');
+            function randomNumber() {
+                return Math.floor(Math.random()*255);
+            }
+            function changeBodyColor() {
+                var color = 'rgb('+randomNumber()+','+randomNumber()+','+randomNumber()+')';
+                bodyElem.style.backgroundColor = color;
+            }
+            window.addEventListener('resize', changeBodyColor);
+        </script>
+    </body>
+</html>
