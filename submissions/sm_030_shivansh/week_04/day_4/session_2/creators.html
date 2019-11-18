@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>Practise Creators</title>
+</head>
+
+<body>
+    <div id="headings">
+    </div>
+    <div id="cont">
+    </div>
+    <ul id="vikings">
+        <li>Priyanshu</li>
+    </ul>
+    <button onclick="masai()" id="btn">Create H1</button>
+    <button onclick="tagLine()">Create 2 H3</button>
+    <button onclick="createDivs()">Create DIVS</button>
+    <button onclick="addStudents()">Add Students</button>
+    <button onclick="addCopy()">Add Copyright</button>
+    <script>
+        var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
+
+        //function to create heading masai
+        function masai() {
+            var ele = document.createElement("h1");
+            ele.textContent = "Masai";
+            var head = document.querySelector("#headings");
+            head.appendChild(ele);
+        }
+
+        // function to create 2 h3 haedings inside div having id #headings
+        function tagLine() {
+
+            var ele1 = document.createElement("h3");
+            var ele2 = document.createElement("h3");
+
+            ele1.textContent = "A Transformation in education!";
+            ele2.textContent = "Learn to earn, pay when you get.";
+
+            var head = document.querySelector("#headings");
+            head.appendChild(ele1);
+            head.appendChild(ele2);
+        }
+
+        //function to create 10 divs with content 1 to 10 inside  div having id cont
+
+        function createDivs() {
+
+            var ele = document.getElementById("cont");
+
+            for (var i = 1; i <= 10; i++) {
+                var divs = document.createElement("div");
+                divs.textContent = "Content " + i;
+
+                ele.appendChild(divs);
+
+
+            }
+        }
+
+        //function to add given students from array to given list
+
+        function addStudents() {
+
+            var ele = document.getElementById("vikings");
+            for (var i = 0; i < students.length; i++) {
+
+                var lis = document.createElement("li");
+                lis.textContent = students[i];
+                ele.appendChild(lis);
+            }
+
+        }
+
+        //function to add copy right 
+        function addCopy() {
+            var para = document.createElement("p");
+            para.textContent = "@ masai 2019";
+            var btn = document.querySelector("button");
+            var bodyEle = document.querySelector("body");
+
+            bodyEle.insertBefore(para, btn);
+        }
+    </script>
+</body>
+
+</html>
