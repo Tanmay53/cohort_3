@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en-us" >
+  <head>
+    <title>sprint_1</title>
+    <style>
+    @media only screen and (min-width: 600px) {
+    body{
+   background-image:url("https://i.pinimg.com/originals/7e/bf/e4/7ebfe43d7b260145615d7b549aa32228.jpg")
+   }
+   .header{
+     height:200x;
+     width:1000px;
+     background-color:black;
+     border-radius:10px;
+     margin:10px;
+     float:left;
+     color:yellow;
+     text-align:center;
+   }
+   #about{
+     height:50px;
+     width:100px;
+     float:left;
+     background-color:pink;
+     font-size:20px;
+     border-radius:5px;
+   }
+   .box1{
+     height:800px;
+     width:250px;
+     background-color:black;
+     color:orange;
+     border-radius:10px;
+     margin:10px;
+     float:left;
+     border:2px solid black;
+   }
+   .box2{
+     height:800px;
+     width:800px;
+     background-color:black;
+     border-radius:10px;
+     margin:10px;
+     float:left;
+   }
+   #line{
+     clear:left;
+   }
+   .flex-box1 {
+     display: flex;
+     border: 1px ;
+     margin: 10px;
+   }
+   .flex-box1 div {
+     margin: 10px;
+     padding: 10px;
+     height:300px;
+     width:300px;
+     border: 1px solid black;
+     background:lightgreen;
+     margin:30px;
+     }
+   .flex-box2 {
+     display: flex;
+     border: 1px ;
+     margin: 10px;
+     
+   }
+   .flex-box2 div {
+     margin: 10px;
+     padding: 10px;
+     height:300px;
+     width:300px;
+     border: 1px solid black;
+     background:lightgreen;
+     margin:30px;
+     
+     }
+   #usrname{
+     color:white;
+   }
+   #cost{
+     height:50px;
+     width:100px;
+     float:left;
+     background-color:grey;
+     font-size:20px;
+     border-radius:5px;
+   }
+   #cart{
+     height:50px;
+     width:200px;
+     float:left;
+     background-color:black;
+     font-size:20px;
+     border-radius:5px;
+   }
+   h2{
+     margin-top:20px;
+     text-align:center;
+   }
+   #navigation{
+     height:50px;
+     color:white;
+   }
+   #zoom {
+     transition: transform .3s; 
+     width: 300px;
+     height: 200px;
+     
+   }
+   
+   #zoom:hover {
+     transform: scale(1.5);
+   }
+   } 
+   
+   @media only screen and (min-width: 768px){
+   body{
+   background-image:url("https://i.pinimg.com/originals/7e/bf/e4/7ebfe43d7b260145615d7b549aa32228.jpg")
+   }
+   .header{
+     height:200x;
+     width:100%;
+     background-color:black;
+     border-radius:10px;
+     margin:10px;
+     float:left;
+     color:yellow;
+     text-align:center;
+   }
+   #about{
+     height:50px;
+     width:100px;
+     float:left;
+     background-color:pink;
+     font-size:20px;
+     border-radius:5px;
+   }
+   .box1{
+     height:800px;
+     width:250px;
+     background-color:black;
+     color:orange;
+     border-radius:10px;
+     margin:10px;
+     float:left;
+     border:2px solid black;
+   }
+   .box2{
+     height:800px;
+     width:800px;
+     background-color:black;
+     border-radius:10px;
+     margin:10px;
+     float:left;
+   }
+   #line{
+     clear:left;
+   }
+   .flex-box1 {
+     display: flex;
+     border: 1px ;
+     margin: 10px;
+   }
+   .flex-box1 div {
+     margin: 10px;
+     padding: 10px;
+     height:300px;
+     width:300px;
+     border: 1px solid black;
+     background:lightgreen;
+     margin:30px;
+     }
+   .flex-box2 {
+     display: flex;
+     border: 1px ;
+     margin: 10px;
+     
+   }
+   .flex-box2 div {
+     margin: 10px;
+     padding: 10px;
+     height:300px;
+     width:300px;
+     border: 1px solid black;
+     background:lightgreen;
+     margin:30px;
+     
+     }
+   #usrname{
+     color:white;
+   }
+   #cost{
+     height:50px;
+     width:100px;
+     float:left;
+     background-color:grey;
+     font-size:20px;
+     border-radius:5px;
+   }
+   #cart{
+     height:50px;
+     width:200px;
+     float:left;
+     background-color:black;
+     font-size:20px;
+     border-radius:5px;
+   }
+   h2{
+     margin-top:20px;
+     text-align:center;
+   }
+   #navigation{
+     height:50px;
+     color:white;
+   }
+   #zoom {
+     transition: transform .3s; 
+     width: 300px;
+     height: 200px;
+     
+   }
+   
+   #zoom:hover {
+     transform: scale(1.5);
+   }
+   }
+    </style>
+  </head>
+  <body>
+     <div class= header>
+       <h1>welcome to beer world.......!</h1>
+  <nav id=navigation>
+
+  <button> <a href="about.html">About Us</a> </button>
+  <button><a href="page4.html">signup</a></button>
+  <button><a href="">Contact us</a></button>
+</nav> 
+  <label id=usrname  ><b>Username</b></label>
+    <input type="text" placeholder="Enter Username">
+
+    <label id=usrname ><b>Password</b></label>
+   <input type="password" placeholder="Enter Password">
+   <button type="submit">Login</button>
+    </div>
+   <div class=box1 id=line>
+     <p>
+       <img src="https://png.pngtree.com/png-clipart/20190603/ourlarge/pngtree-big-sale-60-offer-tag-png-image_1422628.jpg" alt="offer" height="140" width="100%">
+     </p>
+     <h1>  Hurryup!!!!!!! <br>
+       Make life more and more fun..! </h1>
+ 
+     <pr>
+       <img src="http://2.bp.blogspot.com/_TUbRWLhsAGE/S0Fmplso4fI/AAAAAAAAAAc/BMVRYt29wR4/w1200-h630-p-k-no-nu/Beer+Explosion.jpg" alt="chill" height="400px" width="100%"> 
+   </pr>
+   <h2> lets sit and relax now.......!</h2>  
+    </div>
+    <div class=box2>
+    <div class="flex-box1">
+    <div class=flex-box1 id=line>  <p id=zoom >
+        <img src="https://www.kingfisherworld.com/sites/default/files/banner-mobile_0.jpg" alt="kingfisher" height="200" width="300">
+     <button id=cost >price:110</button>   
+   <button id=cart >add to cart</button>   
+      </p> </div>
+    <div class=flex-box>
+    <p id=zoom > <img src="https://sm.askmen.com/askmen_in/photo/default/ultra-max_zcpn.jpg" alt="ulta-max" height="200" width="300">
+    <button id=cost >price:170</button>   
+   <button id=cart >add to cart</button>        
+      
+      </p>
+      </div> 
+      </div>
+    <div class="flex-box2">
+    <div class=flex-box id=line>
+      <p id=zoom >
+        <img src="https://stmed.net/sites/default/files/tuborg-wallpapers-30791-3231833.jpg" alt="tuborg" height="230" width:"300">
+     <button id=cost >price:130</button>   
+   <button id=cart >add to cart</button>         
+      </p>
+      </div>
+    <div class=flex-box>
+      <p id=zoom >
+        <img src="https://www.drinkpreneur.com/wp-content/uploads/2019/07/www.drinkpreneur.com-budweiser-launches-deep-golden-lager-maxresdefault.jpg" alt="budweiser" height="230" width="300">
+   <button id=cost >price:150</button>   
+   <button id=cart >add to cart</button>    
+      </p>
+      </div>  
+    </div>  
+  </body>
+</html>

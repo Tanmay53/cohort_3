@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            .box-flex {
+                display: flex;
+
+                padding: 10px;
+            }
+
+            .box1 {
+                background-color: aqua;
+
+                justify-content: center;
+
+                /* margin: 10px 25%; */
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .box1 h1 {
+                color: blue;
+                margin: 0px;
+            }
+
+            .box1 h2 {
+                margin: 0px;
+            }
+            .section2 {
+                width: 75%;
+                margin: 0 auto;
+                flex-direction: row;
+            }
+
+            .box2 div {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .box2 img {
+                width: 100px;
+                height: 100px;
+            }
+
+            #sal {
+                color: red;
+                font-size: 30px;
+            }
+            #salman {
+                margin-top: 30px;
+                font-size: 24px;
+                padding-top: 30px;
+            }
+
+            .box3 {
+                background-color: red;
+                flex-direction: row;
+
+                padding: 0px;
+            }
+
+            .box3 div {
+                margin: 0px;
+                width: 650px;
+                padding: 10px;
+                flex-grow: 1;
+            }
+            .box3 .white {
+                margin-top: 10px;
+                color: white;
+                font-size: 30px;
+            }
+            .right_align {
+                border-left: 10px solid black;
+                text-align: right;
+            }
+
+            @media (min-width: 400px) {
+                #verticle {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                /*#verticle img{
+                       width: 400px;
+                   } */
+            }
+
+            @media (min-width: 700px) {
+                .box1 {
+                    width: 300px;
+                    margin: 0 auto;
+                }
+                .box1 img {
+                    width: 200px;
+                    height: 200px;
+                    display: block;
+                    margin: 0 auto;
+                }
+                #verticle {
+                    flex-direction: row;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="create()">Create Page</button>
+        <script>
+            var body;
+            function create() {
+                body = document.getElementsByTagName("body");
+                body[0].innerHTML = "";
+                var div, img, h1, h2, cont;
+                cont = document.createElement("div");
+                cont.setAttribute("class", "box-flex box1");
+                img = document.createElement("img");
+                img.setAttribute(
+                    "src",
+                    "https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg"
+                );
+                h1 = document.createElement("h1");
+                h1.textContent = "Linus Torvalds";
+                h2 = document.createElement("h2");
+                h2.textContent = "The creator of Linux & Git";
+                cont.appendChild(img);
+                cont.appendChild(h1);
+                cont.appendChild(h2);
+                body = document.getElementsByTagName("body");
+                body[0].appendChild(cont);
+
+                // section sal khan
+                salKhan();
+            }
+            function salKhan() {
+                var div, img, cont;
+                cont = document.createElement("div");
+                cont.setAttribute("class", "box-flex section2");
+                cont.setAttribute("id", "verticle");
+                img = document.createElement("img");
+                img.setAttribute(
+                    "src",
+                    "https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/khan.jpg"
+                );
+                div = document.createElement("div");
+                div.appendChild(img);
+                var box2 = document.createElement("div");
+                box2.setAttribute("class", "box2");
+
+                var head = document.createElement("div");
+                head.textContent = "Sal Khan";
+                head.setAttribute("id", "sal");
+                var sub = document.createElement("div");
+                sub.textContent =
+                    "Salman Khan is the founder of the Khan Academy which has a mission of providing a free world-class education for anyone, anywhere.";
+                sub.setAttribute("id", "salman");
+                box2.appendChild(head);
+                box2.appendChild(sub);
+                cont.appendChild(div);
+                cont.appendChild(box2);
+                body = document.getElementsByTagName("body");
+                body[0].appendChild(cont);
+
+                footer();
+            }
+            function footer() {
+                var box3 = document.createElement("div");
+                box3.setAttribute("class", "box-flex box3");
+                var head = document.createElement("div");
+                head.textContent = "Ken Thompson";
+                head.setAttribute("class", "white");
+                var sub = document.createElement("div");
+                sub.textContent = "Dennis Ritchie";
+                sub.setAttribute("class", "white right_align");
+                box3.appendChild(head);
+                box3.appendChild(sub);
+                body[0].appendChild(box3);
+                var head2 = document.createElement("div");
+                head2.textContent =
+                    "Designed and Implemented the original Unix operating system";
+                var sub2 = document.createElement("div");
+                sub2.setAttribute("class", "right_align");
+                sub2.textContent = "the creator of C programming Language";
+                var box32 = document.createElement("div");
+                box32.setAttribute("class", "box-flex box3");
+                box32.appendChild(head2);
+                box32.appendChild(sub2);
+                body[0].appendChild(box32);
+            }
+        </script>
+    </body>
+</html>
