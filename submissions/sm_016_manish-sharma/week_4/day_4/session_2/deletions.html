@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Practise Deletions</title>
+</head>
+
+<body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <div id="headings">
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+    </div>
+    <div id="cont">
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+    </div>
+    <hr />
+    <button onclick="remh1()">Remove H1</button>
+    <button onclick="remh3()">Remove H3</button>
+    <button onclick="remh5()">Remove H5</button>
+    <button onclick="remRed()">Remove Red</button>
+    <button onclick="remDiv()">Remove DIVS</button>
+    <script>
+        function remh1() {
+            var h1 = document.querySelector('h1')
+            var body = document.querySelector('body')
+            body.removeChild(h1)
+        }
+        function remh3() {
+            for (i = 1; i < 3; i++) {
+                var h3 = document.querySelector('h3')
+                var body = document.querySelector('body')
+                body.removeChild(h3)
+            }
+        }
+        function remh5() {
+            var allh5 = document.querySelectorAll("body h5")
+            for (i = 0; i < allh5.length; i++) {
+                var h5 = document.querySelector('h5')
+                var body = document.getElementById("headings")
+                body.removeChild(h5)
+            }
+        }
+        function remRed(){
+            var red = document.querySelectorAll("#cont > .red")
+            var body = document.getElementById('cont')
+            for(i=0;i<red.length;i++){
+                body.removeChild(red[i])
+            }
+        }
+        function remDiv(){
+            var div= document.querySelectorAll("#cont > div")
+            var body = document.getElementById('cont')
+            for(i=0;i<div.length;i++)
+            body.removeChild(div[i])
+        }
+
+    </script>
+</body>
+
+</html>
