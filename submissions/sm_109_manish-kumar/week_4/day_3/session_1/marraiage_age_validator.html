@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>age calculator</title>
+	<style>
+		div{
+			margin-left: 200px;
+			margin-top: 100px;
+		}
+		#gender{
+			margin-left: 15px;
+		}
+		#age{
+			margin-left: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		Name <input type="text" name="name" id="name">
+		Gender <select id="gender">
+			<option value="">--</option>
+			<option value="male">M</option>
+			<option value="female">F</option>
+			</select>
+		Age <input type="text" name="age" id ="age">
+
+		<button onclick="valid()">Check Validity</button>
+	</div>
+
+	<script type="text/javascript">
+		function valid(){
+			name = document.getElementById("name").value
+			gen = document.getElementById("gender").value
+			if(gen == "male"){
+				curr_age = document.getElementById("age").value
+				if(curr_age >= 21){
+					alert("hello " + name + " you are eligible");
+					}
+				else{
+					alert("hello " + name + " you are not eligible");
+					}
+				}
+			else{
+				curr_age = document.getElementById("age").value
+				if(curr_age >= 18){
+					alert("hello " + name + " you are eligible");
+				}
+				else{
+					alert("hello " + name + " you are not eligible");
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

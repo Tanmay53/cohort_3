@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SPRINT 1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Abril+Fatface|Alfa+Slab+One|Acme|Orbitron|Righteous&display=swap"
+        rel="stylesheet">
+    <style>
+    </style>
+</head>
+
+<body>
+    <header>MASAI SR. SEC. SCHOOL</header>
+    <div class="main1">
+        <div class="main12">
+            <label>Name
+                <input type="text" id="name">
+            </label>
+            <label>Grade
+                <select id='grade'>
+                    <option value="5th">FIFTH</option>
+                    <option value="6th">SIXTH</option>
+                    <option value="7th">SEVENTH</option>
+                    <option value="8th">EIGHTH</option>
+                </select>
+            </label>
+            <label>Subject
+                <select id='subject'>
+                    <option>Science</option>
+                    <option>Math</option>
+                    <option>English</option>
+                    <option>History</option>
+                    <option>Geography</option>
+                </select>
+            </label>
+            <label>Marks
+                <input type="text" id="marks">
+            </label>
+        </div>
+        <div>
+            <label class="button">Create Entries
+                <button onclick="entry()">ADD</button>
+            </label>
+        </div>
+    </div>
+
+
+    <div class="main2">
+        <div class="top1">
+            <div class="head">Name</div>
+            <hr id='hr1'>
+        </div>
+        <div class="top2">
+
+            <label class="head grade2">Grade
+                <select id="grade21" onclick="sortImp()">
+                    <option value="5th">FIFTH</option>
+                    <option value="6th">SIXTH</option>
+                    <option value="7th">SEVENTH</option>
+                    <option value="8th">EIGHTH</option>
+                </select>
+            </label>
+            <hr id='hr2'>
+
+
+        </div>
+        <div class="top3">
+            <div class="head">Subject</div>
+            <hr id='hr3'>
+        </div>
+
+        <div class="top4">
+            <div class="m1 head">Marks</div>
+            <hr id='hr4'>
+        </div>
+
+        <div class="bottom1 head">TOTAL MARKS:</div>
+        <div class="bottom2 head"></div>
+        <div class="bottom3 head">AVERAGE MARKS:</div>
+        <div class="bottom4 head"></div>
+    </div>
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
