@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linus Wiki Page</title>
+
+    <style>
+
+        /* ........CSS ON THE LEFT-SIDE BAR....... */
+        
+        .sidePage{
+            float: left;
+            width: 150px;
+            padding: 20px;
+            border:1px solid cornflowerblue ;
+        }
+        #wikipediaLogo{
+            float: left;
+            height: fit-content;
+            width: 150px;
+            height:150px;
+        }
+        .sidePage a{
+            color: blue;
+            font-size: smaller;
+            padding:5px;
+        }
+        .sidePage h5{
+            color:grey
+        }
+        .sidePage li{
+            list-style-type: none;
+        }
+        .rightElements{
+            clear: left;
+            float:left;
+            width:150px;
+        }
+        #mainPage{
+            height: 150px;
+        }
+        #interaction{
+            height:200px;
+        }
+        #tools{
+            height: 250px;
+        }
+        #wikimedia{
+            height:160px;
+        }
+        #export{
+            height: 150px;
+        }
+
+        
+
+        /* ..............ENTIRE MAIN BLOCK..................... */
+        .mainContainer{
+            width: 1000px;
+            margin: 10px 10px 10px 192px;
+            border-right:1px solid cornflowerblue;
+            border-top:1px solid cornflowerblue;
+            border-bottom:1px solid cornflowerblue;
+        }
+
+        /*........LINUS TORVALDS HEADING........*/
+        #linusName{
+            width:970px;
+            padding: 5px;
+            margin: 30px 10px 10px 10px;
+        }
+        /* <!-- LINUS BIO DATA BLOCK --> */
+        
+        #linusBio{
+            float: right;
+            width:290px;
+            padding: 5px;
+            margin: 20px 10px 10px 10px;
+            border: 1px solid grey;
+        }
+        #linusImg{
+            width:250px;
+            height:290px;
+            margin: 10px 10px 5px 10px;
+            padding: 10px 10px 5px 10px;
+        }
+        #smallFont{
+            padding: 1px 10px 5px 10px;
+            margin: 1px 10px 5px 10px;
+        }
+        #bioData{
+            width: 320px;
+            margin: 1px;
+            font-size: smaller;
+        }
+        .question{
+            font-weight: bold;
+        }
+        .answer{
+            text-align: justify;
+        }
+
+        /* .........DETAILED DESCRIPTION........... */
+        #description{
+            width:650px;
+            margin:25px 10px 10px 10px;
+            padding: 5px;
+        }
+        em{
+            font: bolder;
+        }
+
+        /*.........CONTENT BOX...........*/
+        #contentBox{
+            float:left;
+            width:250px;
+            padding:5px;
+            margin: 40px 10px 10px 10px;
+            border: 1px solid grey;
+        }
+        #contentHeading{
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        /* ............LIFE AND CAREER............. */
+        .newBlock{
+            float: left;
+            margin: 10px;
+            width: 980px;
+        }
+        
+        .biggerHeadings{
+            padding:5px;
+        }
+        .smallerHeading{
+            padding: 1px;
+            font-weight: bold;
+        }
+        /*THE NEXT THREE PARAGRAPHS*/
+        #tor2002{
+            width: 200px;
+            float:right;
+            padding:5px 0px 5px 5px;
+            border: 1px solid cadetblue;
+        }
+        #tor2002img{
+            width: 180px;
+            height:230px;
+            padding:10px;
+        }
+        #tor2002 small{
+            padding:10px
+        }
+        #personalLifeBlock{
+            float: left;
+            width: 750px;
+            margin: 10px;
+        }
+        /* ..........AWARDS AND ACHIEVEMENTS BLOCK....... */
+
+        #awardsBlock{
+            float:right;
+            width: 220px;
+            padding:4px;
+            border:1px solid cadetblue;
+        }
+        #awardsBlock img{
+            width: 200px;
+            height:150px;
+            padding:10px;
+        }
+        #awardsBlock small{
+            padding:7px;
+        }
+        .newBlock table{
+            float:left;
+            width:730px;
+            margin:4px;
+            padding:4px;
+            border:1px solid black;
+        }
+        .newBlock th{
+            border:1px solid black;
+        }
+        .newBlock td{
+            border:1px solid black;
+        }
+        .newBlock a{
+            color:blue;
+        }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- <...........LEFT SIDE BAR...............> -->
+
+    <div class="sidePage">
+        <div>
+            <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-original-577x577/s3/062016/untitled-1_302.png?itok=GxBnTkD4" id="wikipediaLogo"></img>
+        </div>
+
+        <div class="rightElements" id="mainPage">
+            
+            <li><a href="#">Main Page</a></li>
+            <li><a href="#">Contents</a></li>
+            <li><a href="#">Featured Contents</a></li>
+            <li><a href="#">Current Events</a></li>
+            <li><a href="#">Random Article</a></li>
+            <li><a href="#">Donate to wikipedia</a></li>
+            <li><a href="#">Wikipedia Store</a></li>
+                
+        </div>
+
+        <div class="rightElements" id="interaction">
+            
+            <h5>Interaction</h5>
+            <hr>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">About Wikipedia</a></li>
+            <li><a href="#">Community portal</a></li>
+            <li><a href="#">Recent changes</a></li>
+            <li><a href="#">Contact page</a></li>
+            
+        </div>
+        <div class="rightElements" id="tools">
+            <h5>Tools</h5>
+            <hr>
+            <li><a href="#">What links here</a></li>
+            <li><a href="#">Related Changes</a></li>
+            <li><a href="#">Upload file</a></li>
+            <li><a href="#">Special pages</a></li>
+            <li><a href="#">Permanent link</a></li>
+            <li><a href="#">Page information</a></li>
+            <li><a href="#">Wiki data item</a></li>
+            <li><a href="#">cite this page</a></li>
+
+        </div>
+        <div class="rightElements" id="wikimedia">
+            <h5>In other projects</h5>
+            <hr>
+            <li><a href="#">Wikimedia commons</a></li>
+            <li><a href="#">Wikinews</a></li>
+            <li><a href="#">Wikquote</a></li>
+        </div>
+        <div class="rightElements" id="export">
+            <h5>print/export</h5>
+            <hr>
+            <li><a href="#">Create a book</a></li>
+            <li><a href="#">Download as PDF</a></li>
+            <li><a href="#">Printable version</a></li>
+        </div>
+    </div>
+
+    <!-- <.............MAIN PAGE BLOCK................................> -->
+
+    <div class="mainContainer">
+
+        <!-- /*.......LINUS HEADING.......*/ -->
+
+        <div id="linusName">
+            <h1>Linus Torvalds</h1>
+            <hr>
+            <small>From Wikipedia,the free encyclopedia</small>
+        </div>
+
+            <!-- LINUS BIO DATA BLOCK -->
+        <div id="linusBio">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" id="linusImg"></img>
+            <small id="smallFont">Torvalds at linuxCon Europe 2014</small>
+            <table id="bioData">
+                <tr>
+                    <td class="question">Born</td>
+                    <td class="answer">Linus Benedict Torvalds<br>December 28, 1969<br>(age 49)<br>Helsinki, Finland</td>
+                </tr>
+                <tr>
+                    <td class="question">Residence</td>
+                    <td class="answer">Dunthorpe, Oregon, U.S.</td>
+                </tr>
+                <tr>
+                    <td class="question">Nationality</td>
+                    <td class="answer">Finnish,American<br>(naturalized in 2010)</td>
+                </tr>
+                <tr>
+                    <td class="question">Alma mater</td>
+                    <td class="answer">University of Helsinki<br>(M.S)</td>
+                </tr>
+                <tr>
+                    <td class="question">Occupation</td>
+                    <td class="answer">Software Engineer</td>
+                </tr>
+                <tr>
+                    <td class="question">Employer</td>
+                    <td class="answer">Linux Foundation</td>
+                </tr>
+                <tr>
+                    <td class="question">Known for</td>
+                    <td class="answer">Linux, Git, Subsurface</td>
+                </tr>
+                <tr>
+                    <td class="question">Spouse(s)</td>
+                    <td class="answer">Tove Torvalds</td>>
+                </tr>
+                <tr>
+                    <td class="question">Children</td>
+                    <td class="answer">3</td>
+                </tr>    
+                <tr>
+                    <td class="question">Parent(s)</td>
+                    <td class="answer">Nils Torvalds (father)<br>Anna Torvalds (mother)</td>
+                </tr>
+                <tr>
+                    <td class="question">Relatives</td>
+                    <td class="answer">Leo Tornqvist(grandfather)<br>Ole Torvalds(grandfather)</td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <!-- ............DETAILED DESCRIPTION............... -->
+        <div id="description">
+            <p><strong>Linus "Linux" Benedict Torvalds</strong> (/ˈliːnəs ˈtɔːrvɔːldz/ LEE-nəs TOR-vawldz,[5] Finland Swedish: [ˈliːnʉs ˈtuːrvɑlds] (About this soundlisten); born December 28, 1969) is a Finnish-American[2][6] software engineer who is the creator and, historically, the principal developer of the Linux kernel, which is the kernel for Linux operating systems (distributions) and other operating systems such as Android and Chrome OS. He also created the distributed version control system Git and the scuba dive logging and planning software Subsurface. </p>
+            <p>He was honored, along with Shinya Yamanaka, with the 2012 Millennium Technology Prize by the Technology Academy Finland "in recognition of his creation of a new open source operating system for computers leading to the widely used Linux kernel."[7] He is also the recipient of the 2014 IEEE Computer Society Computer Pioneer Award[8] and the 2018 IEEE Masaru Ibuka Consumer Electronics Award.[9]</p>
+        </div>
+
+        <!-- .........CONTENT BOX.............. -->
+        <div id="contentBox">
+            <h4 id="contentHeading">Contents</h4>
+            <ol>
+                <li><a href="#">Life and Career</a>
+                    <ol>
+                        <li><a href="#">Early Years</a></li>
+                        <li><a href="#">Linux</a></li>
+                    </ol>
+                </li>
+                <li><a href="#">The Linus/Linux connection</a></li>
+                <li><a href="#">Authority and Trademark</a></li>
+                <li><a href="#">Personal Life</a></li>
+                <li><a href="#">Awards and achievements</a></li>
+                <li><a href="#">Media recognition</a></li>
+                <li><a href="#">Bibilography</a></li>
+                <li><a href="#">See also</a></li>
+                <li><a href="#">References</a>
+                    <ol>
+                        <li><a href="#">Further Reading</a></li>
+                    </ol>
+                </li>
+                <li><a href="#">External Links</a></li>
+            </ol>
+        </div>
+        <!-- ............LIFE AND CAREER.............. -->
+        <div class="newBlock" >
+            <h4 class="biggerHeadings">Life and career</h4>
+            <hr>
+        </div>
+        <div class="newBlock">
+            <h4 class="smallerHeading">Early years</h4>
+            <p>Torvalds was born in Helsinki, Finland, on December 28, 1969. He is the son of journalists Anna and Nils Torvalds,[10] and the grandson of statistician Leo Törnqvist and of poet Ole Torvalds. Both of his parents were campus radicals at the University of Helsinki in the 1960s. His family belongs to the Swedish-speaking minority. Torvalds was named after Linus Pauling, the Nobel Prize-winning American chemist, although in the book Rebel Code: Linux and the Open Source Revolution, Torvalds is quoted as saying, "I think I was named equally for Linus the Peanuts cartoon character", noting that this makes him half "Nobel Prize-winning chemist" and half "blanket-carrying cartoon character".[11]</p>
+            <p>Torvalds attended the University of Helsinki between 1988 and 1996,[12] graduating with a master's degree in computer science from the NODES research group.[13] His academic career was interrupted after his first year of study when he joined the Finnish Army Uusimaa brigade, in the summer of 1989, selecting the 11-month officer training program to fulfill the mandatory military service of Finland. In the army he held the rank of Second Lieutenant, with the role of a ballistic calculation officer.[14] Torvalds bought computer science professor Andrew Tanenbaum's book Operating Systems: Design and Implementation, in which Tanenbaum describes MINIX, an educational stripped-down version of Unix. In 1990, he resumed his university studies, and was exposed to UNIX for the first time, in the form of a DEC MicroVAX running ULTRIX.[15] His MSc thesis was titled Linux: A Portable Operating System.[16]</p>
+            <p>His interest in computers began with a Commodore VIC-20,[17] at the age of 11 in 1981, initially programming in BASIC, but later by directly accessing the 6502 CPU in machine code. He did not make use of assembly language.[18] After the VIC-20 he purchased a Sinclair QL, which he modified extensively, especially its operating system. "Because it was so hard to get software for it in Finland, Linus wrote his own assembler and editor (in addition to Pac-Man graphics libraries)"[19] for the QL, as well as a few games.[20][21] He wrote a Pac-Man clone named Cool Man. On January 5, 1991[22] he purchased an Intel 80386-based clone of IBM PC[23] before receiving his MINIX copy, which in turn enabled him to begin work on Linux. </p>
+        </div>
+        <div class="newBlock">
+            <h4 class="smallerHeadings">Linux</h4>
+            <p>The first prototypes of Linux were publicly released later that year (1991).[11][24] Version 1.0 was released on March 14, 1994.[25]</p>
+            <p>Torvalds first encountered the GNU Project in 1991, after another Swedish-speaking computer science student, Lars Wirzenius, took him to the University of Technology to listen to free software guru Richard Stallman's speech. Torvalds used Stallman's GNU General Public License version 2 (GPLv2) for his Linux kernel. </p>
+            <p>After a visit to Transmeta in late 1996,[4] Torvalds accepted a position at the company in California, where he would work from February 1997 until June 2003. He then moved to the Open Source Development Labs, which has since merged with the Free Standards Group to become the Linux Foundation, under whose auspices he continues to work. In June 2004, Torvalds and his family moved to Dunthorpe, Oregon,[1] to be closer to the OSDL's Beaverton, Oregon-based headquarters. </p>
+            <p>From 1997 to 1999, he was involved in 86open helping to choose the standard binary format for Linux and Unix. In 1999, he was named by the MIT Technology Review TR100 as one of the world's top 100 innovators under age 35.[26] </p>
+            <p>In 1999, Red Hat and VA Linux, both leading developers of Linux-based software, presented Torvalds with stock options in gratitude for his creation.[27] That same year both companies went public and Torvalds's share value temporarily shot up to roughly US$20 million.[28][29] </p>
+            <p>His personal mascot is a penguin nicknamed Tux,[30] which has been widely adopted by the Linux community as the mascot of the Linux kernel.[31] </p>
+            <p>Although Torvalds believes "open source is the only right way to do software", he also has said that he uses the "best tool for the job", even if that includes proprietary software.[32] He was criticized for his use and alleged advocacy of the proprietary BitKeeper software for version control in the Linux kernel. Torvalds subsequently wrote a free-software replacement for BitKeeper called Git. </p>
+            <p>In 2008, Torvalds stated that he used the Fedora distribution of Linux because it had fairly good support for the PowerPC processor architecture, which he had favored at the time.[33] His usage of Fedora was confirmed in a later 2012 interview.[34] He has also posted updates about his choice of desktop environment, often in response to perceived feature regressions. </p>
+            <p>Currently, the Linux Foundation sponsors Torvalds so he can work full-time on improving Linux.[35] </p>
+            <p>Linus Torvalds is known for disagreeing with other developers on the Linux kernel mailing list.[36] Calling himself a "really unpleasant person", he later explained "I'd like to be a nice person and curse less and encourage people to grow rather than telling them they are idiots. I'm sorry – I tried, it's just not in me."[37][38] His attitude, which Torvalds considers necessary for making his point clear, has drawn criticism from Intel programmer Sage Sharp and systemd developer Lennart Poettering, among others.[39][40] </p>
+            <p>On Sunday, September 16, 2018 the Linux Kernel Code of Conflict was suddenly replaced by a new Code of Conduct based on the Contributor Covenant. Shortly thereafter, in the release notes for Linux 4.19-rc4, Linus apologized for his behavior, calling the personal attacks of the past "unprofessional and uncalled for" and announced a period of "time off" to "get some assistance on how to understand people's emotions and respond appropriately". It soon transpired that these events followed The New Yorker approaching Linus with a series of questions critical of his conduct.[41][42][43] Following the release of Linux 4.19 on October 22, Linus went back to maintaining the kernel.[44] </p>
+        </div>
+
+        <!-- .............THE NEXT THREE PARAGRAPHS.................. -->
+        <div class="newBlock">
+            <h4 class="biggerHeadings">The Linus/Linux Connection</h4>
+            <hr>
+            <small>Main Article:<a href="#">History of Linux and Naming</a></small>
+            <p>Initially, Torvalds wanted to call the kernel he developed Freax (a combination of "free", "freak", and the letter X to indicate that it is a Unix-like system), but his friend Ari Lemmke, who administered the FTP server where the kernel was first hosted for download, named Torvalds's directory linux.[45]</p>
+        </div>
+        
+        <div class="newBlock">
+            <h4 class="biggerHeadings">Authority and Trademark</h4>
+            <hr>
+            <p>As of 2006, approximately two percent of the Linux kernel was written by Torvalds himself.[29] Because thousands have contributed to the Linux kernel, this percentage is one of the largest contributions to it. However, he stated in 2012 that his own personal contribution is now mostly merging code written by others, with little programming.[46] Torvalds retains the highest authority to decide which new code is incorporated into the standard Linux kernel.[47]</p>
+            <p>Torvalds holds the "Linux" trademark[48] and monitors the use of it,[49] chiefly through the Linux Mark Institute. </p>
+        </div>
+        <div class="newBlock">
+            <h4 class="biggerHeadings">Personal Life</h4>
+            <hr>
+            <div id="tor2002">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg" id="tor2002img"></img>
+                <small>Torvalds in 2002</small>
+            </div>
+            <div id="personalLifeBlock">
+                <p>Linus Torvalds is married to Tove Torvalds (née Monni)—a six-time Finnish national karate champion—whom he first met in late 1993. Linus was running introductory computer laboratory exercises for students and instructed the course attendees to send him an e-mail as a test, to which Tove responded with an e-mail asking for a date.[11] Tove and Linus were later married and have three daughters, Patricia Miranda (born 1996), Daniela Yolanda (born 1998), and Celeste Amanda (born 2000),[50] two of whom were born in the United States.[6] The Linux kernel's reboot system call accepts their dates of birth (written in hexadecimal) as magic values.[51][52]</p>
+                <p>Torvalds has described himself as "completely a-religious—atheist", adding that "I find that people seem to think religion brings morals and appreciation of nature. I actually think it detracts from both. It gives people the excuse to say, 'Oh, nature was just created,' and so the act of creation is seen to be something miraculous. I appreciate the fact that, 'Wow, it's incredible that something like this could have happened in the first place.'" He later added that while in Europe religion is mostly a personal issue, in the United States it has become very politicized. When discussing the issue of church and state separation, Torvalds also said, "Yeah, it's kind of ironic that in many European countries, there is actually a kind of legal binding between the state and the state religion."[53] However, in a story about the March LinuxWorld Conference titled "Linus the Liberator", Torvalds is quoted as saying "There are like two golden rules in life. One is 'Do unto others as you would want them to do unto you.' For some reason, people associate this with Christianity. I'm not a Christian. I'm agnostic. The other rule is 'Be proud of what you do.'"[54]</p>
+            </div>
+        </div>
+        <div class="newBlock">
+            <p>In 2010, Torvalds became a United States citizen and registered to vote in the United States. He is unaffiliated with any U.S. political party, saying, "I have way too much personal pride to want to be associated with any of them, quite frankly."[6] </p>
+            <p>Linus developed an interest in scuba diving in the early 2000s and went on to achieve numerous certifications, which later led to him creating the Subsurface project.[55] </p>
+        </div>
+        <!-- ...........AWARDS AND ACHIEVEMENTS BLOCK............... -->
+        <div class="newBlock">
+            <h4 class="biggerHeadings">Awards and achievements</h4>
+            <hr>
+            <div id="awardsBlock">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Linus-Torvalds_IEEE_Ibuka_Award_2018.jpg"></img>
+                <small>Linus Torvalds receiving 2018 IEEE Masaru Ibuka Consumer Electronics Award from ICCE 2018 Conference Chair Saraju P. Mohanty and IEEE President James A. Jefferies at ICCE 2018 on January 12, 2018 in Las Vegas</small>
+            </div>
+            <table>
+                <thead>
+                    <th colspan="3">Awards and achievements</th>
+                    
+                </thead>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Award</th>
+                        <th>Notes</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2018</td>
+                        <td>IEEE Masaru Ibuka Consumer Electronics Award </td>
+                        <td>IEEE Masaru Ibuka Consumer Electronics Award is conferred by the Institute of Electrical and Electronics Engineers for outstanding contributions to consumer electronics technology has been named in honor the co-founder and honorary chairman of Sony Corporation, Masaru Ibuka. 2018 Ibuka award was conferred to Linus Torvalds "For his leadership of the development and proliferation of Linux."[9]</td>
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>IEEE Computer Pioneer Award </td>
+                        <td>On April 23, 2014, the Institute of Electrical and Electronics Engineers named Torvalds as the 2014 recipient of the IEEE Computer Society's Computer Pioneer Award. The Computer Pioneer Award was established in 1981 by the IEEE Computer Society Board of Governors to recognize and honor the vision of those whose efforts resulted in the creation and continued vitality of the computer industry. The award is presented to outstanding individuals whose main contribution to the concepts and development of the computer field was made at least 15 years earlier.[56]</td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>Internet Hall of Fame</td>
+                        <td>On April 23, 2012, at Internet Society's Global INET conference in Geneva, Switzerland, Torvalds was one of the inaugural inductees into the Internet Hall of Fame, one of ten in the Innovators category and thirty-three overall inductees.[57]</td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>Millennium Technology Prize </td>
+                        <td>On April 20, 2012, Torvalds was declared one of two winners of that year's Millennium Technology Prize,[58] along with Shinya Yamanaka.[59] The honor is widely described as technology's equivalent of the Nobel Prize. </td>
+                    </tr>
+                    <tr>
+                        <td>2010</td>
+                        <td>C&C Prize </td>
+                        <td>He was awarded the C&C Prize by the NEC Corporation in 2010 for "contributions to the advancement of the information technology industry, education, research, and the improvement of our lives".[60] </td>
+                    </tr>
+                    <tr>
+                        <td>2008</td>
+                        <td>Hall of Fellows </td>
+                        <td>In 2008, he was inducted into the Hall of Fellows of the Computer History Museum in Mountain View, California, "for the creation of the Linux kernel and the management of open source development of the widely used Linux operating system."[61][62] </td>
+                    </tr>
+                    <tr>
+                        <td>2005</td>
+                        <td>Vollum Award </td>
+                        <td>In August 2005, Torvalds received the Vollum Award from Reed College.[63] </td>
+                    </tr>
+                    <tr>
+                        <td>2003</td>
+                        <td>Linus (Moon)</td>
+                        <td>In 2003, the naming of the asteroid moon Linus was motivated in part by the fact that the discoverer was an enthusiastic Linux user. Although the naming proposal referred to the mythological Linus, son of the muse Calliope and the inventor of melody and rhythm, the name was also meant to honor Linus Torvalds, and Linus van Pelt, a character in the Peanuts comic strip.[64] </td>
+                    </tr>
+                    <tr>
+                        <td>2001</td>
+                        <td>Takeda Award</td>
+                        <td>In 2001, he shared the Takeda Award for Social/Economic Well-Being with Richard Stallman and Ken Sakamura. </td>
+                    </tr>
+                    <tr>
+                        <td>2000</td>
+                        <td>Lovelace Medal</td>
+                        <td>In 2000, he was awarded the Lovelace Medal from the British Computer Society.[65] </td>
+                    </tr>
+                    <tr>
+                        <td>1998</td>
+                        <td>EFF Pioneer Award </td>
+                        <td>In 1998, Torvalds received an EFF Pioneer Award.[66] </td>
+                    </tr>
+                    <tr>
+                        <td>1997</td>
+                        <td>Academic Honors </td>
+                        <td>In 1997, Torvalds received his master's degree (Laudatur Grade) from the Department of Computer Science at the University of Helsinki. Two years later he received honorary doctor status at Stockholm University, and in 2000, he received the same honor from his alma mater.[67] 
+                            <p>University of Helsinki has named an auditorium after Torvalds and his computer is on display at the Department of Computer Science. </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1996</td>
+                        <td>9793 Torvalds (Asteroid) </td>
+                        <td>In 1996, the asteroid 9793 Torvalds was named after him.[68] </td>
+                    </tr>
+                    <tr>
+                        <td>1995</td>
+                        <td>Running Linux on AlphaStation </td>
+                        <td>In the period 1994–1999 Torvalds developed versions of Linux on early AlphaServer systems made available to him by the engineering department of Digital Equipment Corporation. Compaq software engineers developed special Linux kernel modules.[69] Linux distributions that ran on AlphaServer systems were Red Hat 7.2.[70] and Gentoo Linux. </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- .............THE LAST THREE BLOCKS............ -->
+        
+        <div class="newBlock">
+            <h4 class="biggerHeadings">Media Recognition</h4>
+            <hr>
+            <p>Time magazine has recognized Torvalds multiple times: </p>
+            <ul>
+                <li>In 2000, he was 17th in their Time 100: The Most Important People of the Century poll.[71]</li>
+                <li>In 2004, he was named one of the most influential people in the world by Time magazine.[72]</li>
+                <li>In 2006, the magazine's Europe edition named him one of the revolutionary heroes of the past 60 years.[27]</li>
+            </ul>
+            <p>InfoWorld presented him with the 2000 Award for Industry Achievement.[73] In 2005, Torvalds appeared as one of "the best managers" in a survey by BusinessWeek.[74] In 2006, Business 2.0 magazine named him one of "10 people who don't matter" because the growth of Linux has shrunk Torvalds's individual impact.[75] </p>
+            <p>In summer 2004, viewers of YLE (the Finnish Broadcasting Company) placed Torvalds 16th in the network's 100 Greatest Finns. In 2010, as part of a series called The Britannica Guide to the World's Most Influential People, Torvalds was listed among The 100 Most Influential Inventors of All Time (ISBN 9781615300037).[76] </p>
+            <p>On October 11, 2017, the Linux company SUSE made a song titled "Linus Said".[77] </p>
+        </div>
+        <div class="newBlock">
+            <h4 class="biggerHeadings">Bibilography</h4>
+            <hr>
+            <ul>
+                <li>Torvalds, Linus; Diamond, David (2001). Just for Fun: The Story of an Accidental Revolutionary. New York City, United States: HarperCollins. ISBN 0-06-662072-4.[78]</li>
+                <li>Himanen, Pekka: The Hacker Ethic and the Spirit of the Information Age. Prologue: Linus Torvalds, the epilogue: Manuel Castells. Random House, 2001. ISBN 951-0-25417-7.</li>
+                <li>Moody, Glyn: Rebel Code. Engl. the beginning of work: Rebel Code. Eng. Riikka Toivanen and Heikki Karjalainen. In January 2001. ISBN 951-31-2003-1.</li>
+                <li>Nikkanen, Tuula: The Linux story. Satku, 2000. ISBN 951-762-990-7.</li>
+            </ul>
+        </div>
+        <div class="newBlock">
+            <h4 class="biggerHeadings">See also</h4>
+            <hr>
+            <ul>
+                <li><a href="#">Linus's law</a></li>
+                <li><a href="#">Tanenbaum–Torvalds debate</a></li>
+                <li><a href="#">Tux</a></li>
+                <li><a href="#">List of computer pioneers</a></li>
+            </ul>
+
+        </div>
+
+            
+        
+
+</div>
+
+</body>
+</html>

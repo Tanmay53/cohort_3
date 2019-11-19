@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.JS.10.1 !-->
+  <h1>Change the buttons text color random value</h1>
+  <button id="btn1">Click here to change my color</button>
+
+  <!-- FSD.JS.10.2 !-->
+  <h1 id="h1">My color should change when I double click the button!</h1>
+  <button id="btn2">Double Click here to change the color of the h1 tag !</button>
+  
+  <!-- FSD.JS.10.3 !-->
+  <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="btn3">Click here to change my color!</button>
+  
+  <script>
+    btn1.addEventListener("click", function() {
+      this.style.color = "red";
+    });
+
+    btn2.addEventListener("dblclick", function() {
+      document.getElementById('h1').style.color = "yellow";
+    });
+    
+    var count = 0;
+
+    function random(number) {
+      return Math.floor(Math.random()*number);
+    }
+    
+    var count = 0;
+    function randomColor() {
+      count++;
+      if(count > 2) {
+        btn3.removeEventListener('click', randomColor);
+        return;
+      }
+      
+      var randColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      btn3.style.color = randColor;
+    }
+
+    btn3.addEventListener('click', randomColor);
+  </script>
+</body>
+</html>
