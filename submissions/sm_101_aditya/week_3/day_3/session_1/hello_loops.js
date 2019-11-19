@@ -1,5 +1,9 @@
 var i = 0
-while(i<10){
-    i++
-    console.log("Masai School")
+    function tenTimes(){
+        while(i<=10){
+            i++
+            console.log("Hello Masai")
+        }
+    
     }
+tenTimes()
