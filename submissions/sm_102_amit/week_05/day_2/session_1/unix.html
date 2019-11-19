@@ -1,0 +1,226 @@
+<html>
+  <head>
+    <title>Unix</title>
+    <style type="text/css">
+      #box {
+        width: 1200px;
+        margin: 50px auto;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        font-family: "Courier New", Courier, monospace;
+      }
+      .flex-container {
+        display: flex;
+      }
+      .flex {
+        flex: 1;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-right {
+        text-align: right;
+      }
+      .img-align {
+        float: right;
+      }
+      .padding {
+        padding: 25px;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .thin {
+        font-weight: lighter;
+      }
+      .header {
+        margin: 0 auto;
+        background: #e3dadb;
+        width: 600px;
+      }
+      .header h2 {
+        color: #12317d;
+        font-size: 50px;
+        margin-bottom: 0px;
+      }
+      .header p {
+        color: #000000;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 35px;
+        margin-top: 10px;
+      }
+      .body {
+        height: 200px;
+      }
+      .body-box {
+        flex-grow: 2;
+      }
+      .body-box-heading {
+        color: #d43a1d;
+        font-size: 40px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+      }
+      .footer {
+        background: #d35520;
+        height: 150px;
+      }
+      .footer-heading {
+        color: #ffffff;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 30px;
+      }
+      .v-border {
+        width: 10px;
+        height: 140px;
+        background: #000000;
+      }
+
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        #box {
+          width: 100%;
+          margin: 0px auto;
+        }
+        .flex-container {
+          flex-direction: column;
+        }
+        .padding {
+          padding: 20px 0;
+        }
+        .text-right,
+        .text-left {
+          text-align: center;
+        }
+        .img-align {
+          float: none;
+          margin: 0 auto;
+        }
+        .header {
+          width: 100%;
+        }
+        .header h2 {
+          font-size: 30px;
+        }
+        .header p {
+          font-size: 25px;
+        }
+        .body {
+          height: 100%;
+          text-align: center;
+        }
+        .footer {
+          height: 100%;
+          text-align: center;
+        }
+        .v-border {
+          width: 100%;
+          height: 10px;
+          background: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="createPage()">Create Page</button>
+  </body>
+  <script>
+    function createPage() {
+      var body = document.querySelector("body");
+      var rootDiv = document.createElement("div");
+      rootDiv.setAttribute("id", "box");
+      topDiv = topBox();
+      middleDiv = middleBox();
+      bottomDiv = bottomBox();
+      rootDiv.appendChild(topDiv);
+      rootDiv.appendChild(middleDiv);
+      rootDiv.appendChild(bottomDiv);
+      body.appendChild(rootDiv);
+    }
+
+    function topBox() {
+      var div1 = document.createElement("div");
+      var div2 = document.createElement("div");
+      var img = document.createElement("img");
+      var h2 = document.createElement("h2");
+      var p = document.createElement("p");
+      img.setAttribute(
+        "src",
+        "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg"
+      );
+      h2.textContent = "Linus Torvalds";
+      p.textContent = "The creator of Linux & Git";
+      div1.setAttribute("class", "flex-container");
+      div2.setAttribute("class", "header padding text-center");
+      div2.appendChild(img);
+      div2.appendChild(h2);
+      div2.appendChild(p);
+      div1.appendChild(div2);
+      return div1;
+    }
+    function middleBox() {
+      var div1 = document.createElement("div");
+      var div2 = document.createElement("div");
+      var div3 = document.createElement("div");
+      var img = document.createElement("img");
+      var h2 = document.createElement("h2");
+      var p = document.createElement("p");
+      img.setAttribute(
+        "src",
+        "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg"
+      );
+      img.setAttribute("class", "img-align padding");
+      img.style.height = "150px";
+      h2.setAttribute("class", "body-box-heading");
+      h2.textContent = "Sal Khan";
+      p.textContent =
+        "Salman Khan is the founder of the Khan Academy which has a mission of providing a free world-class education to anyone, anywhere.";
+      div1.setAttribute("class", "flex-container body padding");
+      div2.setAttribute("class", "flex");
+      div3.setAttribute("class", "flex body-box padding");
+      div2.appendChild(img);
+      div3.appendChild(h2);
+      div3.appendChild(p);
+      div1.appendChild(div2);
+      div1.appendChild(div3);
+      return div1;
+    }
+    function bottomBox() {
+      var div1 = document.createElement("div");
+      var div2 = document.createElement("div");
+      var div3 = document.createElement("div");
+      var div4 = document.createElement("div");
+      var h3_1 = document.createElement("h3");
+      var h3_2 = document.createElement("h3");
+      var p_1 = document.createElement("p");
+      var p_2 = document.createElement("p");
+      h3_1.setAttribute("class", "footer-heading");
+      h3_2.setAttribute("class", "footer-heading");
+      h3_1.textContent = "Ken Thompson";
+      h3_2.textContent = "Dennis Ritchie";
+      p_1.textContent =
+        "Designed and Implemented the original Unix operating system";
+      p_2.textContent = "The creator of C Programming Language";
+
+      div1.setAttribute("class", "flex-container footer padding");
+      div2.setAttribute("class", "flex");
+      div3.setAttribute("class", "v-border");
+      div4.setAttribute("class", "flex text-right");
+
+      div2.appendChild(h3_1);
+      div2.appendChild(p_1);
+      div4.appendChild(h3_2);
+      div4.appendChild(p_2);
+      div1.appendChild(div2);
+      div1.appendChild(div3);
+      div1.appendChild(div4);
+      return div1;
+    }
+  </script>
+</html>
