@@ -1,0 +1,83 @@
+/* Add new entry page */
+
+body{
+ background-color: rgb(214, 212, 212);
+}
+
+.container-add-new-entry-page div {
+display: grid;
+ grid-template-rows: repeat(1, 70px);
+ grid-template-columns: repeat(3, 200px);
+ /* border: 1px solid rgb(66, 63, 63); */
+ clear: left;
+ margin-left: 25%;
+ margin-right: 25%;
+ grid-gap: 20px;
+ font-size: 22px;
+ text-align: right;
+ border-radius: 10px;
+}
+
+#add-name{
+height: 30px;
+font-size: 20px;
+}
+
+#record-button {
+text-align: center;
+margin-left: 200px;
+width: 200px ;
+font-size: 30px;
+border-radius: 10px;
+}
+
+h1 {
+text-align: center;
+}
+
+#add-section, #add-grade, #add-exam-type {
+height: 30px;
+font-size: 20px;
+}
+
+
+
+/* Display Record Added */
+
+.displayRecordAdded {
+/* margin-left: 120px; */
+margin-right: 120px;
+}
+
+#first-row-display tr td{
+ border: 4px double black;
+ text-align: center;
+}
+
+
+.add-marks input {
+height: 50px;
+width: 180px;
+font-size: 20px;
+text-align: center;
+}
+
+td{
+font-size: 20px;
+border: 1px solid darkslategrey;
+width: 120px;
+text-align: center;
+/* margin-left: 120px; */
+/* margin-right: 120px; */
+}
+
+#select-student-name{
+text-align: center;
+font-size: 20px;
+margin-left: 40%;
+}
+
+#show-details-button{
+font-size: 16px;
+margin-left: 43%;
+}
