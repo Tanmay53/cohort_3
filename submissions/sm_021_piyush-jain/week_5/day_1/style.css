@@ -1,0 +1,64 @@
+body {
+    background-image: url(https://i.ytimg.com/vi/4dx5NIDEjtI/maxresdefault.jpg);
+    background-attachment: fixed;
+    color: white;
+}
+
+#heading {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.Database {
+    width: 300px;
+    border: 2px solid black;
+    height: 400px;
+    margin-left: 300px;
+    background-color: black;
+}
+
+.Database>div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+button {
+    margin-left: 100px;
+}
+
+table {
+    border: 2px solid black;
+    height: 100px;
+    padding: 10px;
+    background-color: white;
+    margin-top: 60px;
+    text-align: center;
+    color: black;
+    clear: both;
+}
+
+th {
+    border: 2px solid black;
+    background-color: blue;
+}
+
+td {
+    height: 20px;
+    width: 30px;
+    border: 2px solid black;
+    background-color: orange;
+}
+
+#average1 {
+    background-color: yellow;
+}
+
+#maximum1 {
+    background-color: green;
+}
+
+#minimum1 {
+    background-color: red;
+}

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Session2PART2</title>
+    </head>
+    <style>
+     #cont{
+         width:500px;
+         height:500px;
+         margin-left:400px;
+         background-color:red;
+         border-radius: 5%;
+     }
+     button{
+        position: absolute;
+       
+            top: 60%;
+            left: 60%;
+            background:pink;
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            border-color: white;
+
+     }
+         </style>
+    <body>
+
+            <div id="cont">
+            <button>Submit</button>
+            </div>
+            <script>
+            
+            var mouse = document.getElementById("cont")
+            mouse.addEventListener("mouseover", function() {
+            document.querySelector('button').style.background = "green";
+        });
+
+        var nomouse = document.getElementById("cont")
+            mouse.addEventListener("mouseleave", function() {
+            document.querySelector('button').style.background = "pink";
+        });
+
+
+            </script>
+
+
+
+
+    </body>
+</html>
