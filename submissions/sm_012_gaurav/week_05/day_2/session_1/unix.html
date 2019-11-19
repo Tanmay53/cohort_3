@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <link rel="stylesheet" type="text/css" href="unixStyle.css">
+    </head>
+    <body>
+       <button onclick="createPage()">Create Page</button>
+       <script>
+           var bodyElem = document.querySelector('body');
+           function createPage() {
+               var button = document.querySelector('button');
+               bodyElem.removeChild(button);
+               createFirstDiv();
+               createSecondDiv();
+           }
+           function createFirstDiv() {
+                var flexBox = document.createElement('div');
+                flexBox.setAttribute('class','flex-box');
+                var flexBox1 = document.createElement('div');
+                flexBox1.setAttribute('class','flex-box1');
+                var linusImg = document.createElement('img');
+                linusImg.setAttribute('class','img');
+                linusImg.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg');
+                linusImg.setAttribute('alt','Linus');
+                flexBox1.appendChild(linusImg);
+                var h1 = document.createElement('h1');
+                h1.textContent = "Linus Torvalds";
+                flexBox1.appendChild(h1);
+                var h2 = document.createElement('h2');
+                h2.textContent = "The creator of Linux & Git";
+                flexBox1.appendChild(h2);
+                var flexBox2 = document.createElement('div');
+                flexBox2.setAttribute('class','flex-box2');
+                var salImg = document.createElement('img');
+                salImg.setAttribute('class','img');
+                salImg.setAttribute('alt','Salman');
+                salImg.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/khan.jpg');
+                flexBox2.appendChild(salImg);
+                var flexBox3 = document.createElement('div');
+                flexBox3.setAttribute('class','flex-box3');
+                var salh1 = document.createElement('h1');
+                salh1.textContent = "Sal Khan";
+                salh1.setAttribute('style','color:red');
+                var salP = document.createElement('p');
+                salP.textContent = `Salman Khan is the founder of the Khan Academy which has a mission of providing 
+                                    a free world-class education to anyone, anywhere.`
+                flexBox3.appendChild(salh1);
+                flexBox3.appendChild(salP);
+                flexBox2.appendChild(flexBox3);
+                flexBox.appendChild(flexBox1);
+                flexBox.appendChild(flexBox2);
+                bodyElem.appendChild(flexBox);
+           }
+           function createSecondDiv() {
+               var flexBox4 = document.createElement('div');
+               flexBox4.setAttribute('class','flex-box4');
+               var flexBox5 = document.createElement('div');
+               flexBox5.setAttribute('class','flex-box5');
+               var kenh1 = document.createElement('h1');
+               kenh1.textContent = "Ken Thompson";
+               kenh1.setAttribute('style','color:white');
+               var kenh4 = document.createElement('h4');
+               kenh4.textContent = "Designed and implemented the original Unix Operating System";
+               flexBox5.appendChild(kenh1);
+               flexBox5.appendChild(kenh4);
+               var flexBox6 = document.createElement('div');
+               flexBox6.setAttribute('class','flex-box6');
+               var dennish1 = document.createElement('h1');
+               dennish1.textContent = "Dennis Ritchie";
+               var dennish4 = document.createElement('h4');
+               dennish4.textContent = "The creator of C Programming Language";
+               flexBox6.appendChild(dennish1);
+               flexBox6.appendChild(dennish4);
+               var blackDiv =  document.createElement('div');
+               blackDiv.setAttribute('id','blackdiv');
+               flexBox4.appendChild(flexBox5);
+               flexBox4.appendChild(blackDiv);
+               flexBox4.appendChild(flexBox6);
+               bodyElem.appendChild(flexBox4);
+           }
+       </script>
+    </body>
+</html>
