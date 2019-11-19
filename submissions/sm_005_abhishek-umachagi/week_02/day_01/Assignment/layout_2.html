@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>layout_2</title>
+    <style>
+        body {
+           text-align: center;
+           margin-top:100px;
+           margin-left:300px;
+       }
+    .box{
+       background:rgb(3, 85, 85);
+       float:left;
+       margin:15px;
+       height:100px;
+       width:100px;
+       border-radius:3px;
+       }
+       #box1{
+        background:rgb(3, 85, 85);
+       float:left;
+       margin:15px;
+       height:100px;
+       width:300px;
+       border-radius:3px;
+       }
+       .box1{
+           clear:left;
+       }
+       #box2{
+           clear:left;
+       }
+       </style>
+       </head>
+       <body>
+           <div>
+           <div class="box"></div>
+           <div id="box1"></div>
+           <div class="box"></div>
+           </div>
+           <div>
+               <div class="box1" id="box1"></div>
+               <div class="box"></div>
+               <div class="box"></div>
+           </div>
+           <div>
+               <div>
+                    <div id="box2" class="box"></div>
+                    <div class="box"></div>
+                    <div id="box1"></div>
+               </div>
+           </div>
+       </body>
+    </html>
