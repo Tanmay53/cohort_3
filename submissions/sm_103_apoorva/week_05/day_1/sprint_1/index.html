@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="backgroundBody">
+    <h1 style="margin-left: 450px;">Marks & Grade Calculator</h1>
+    <div id="inputContainer" class="floatleft">
+        <h2 class="azure" style="text-align: center;">Student Input</h3>
+        <h3 class="azure floatleft"style="margin: 20px;">Name:</h3>
+        <input type="text" style="margin: 20px 10px 10px 58px;" id="name"  placeholder="Enter Name of Student">
+        <div class="clearBoth"></div>
+        <h3 class="azure floatleft"style="margin: 17px;">Standard:</h3>
+        <input type="number" style="margin: 20px 10px 10px 35px;" id="standard"  placeholder="Enter Standard">
+        <div class="clearBoth"></div>
+        <h3 class="azure floatleft"style="margin: 17px;">Science:</h3>
+        <input type="number" style="margin: 20px 10px 10px 53px;" id="science"  placeholder="Enter Marks Obtained">
+        <div class="clearBoth"></div>
+        <h3 class="azure floatleft"style="margin: 17px;">Maths:</h3>
+        <input type="number" style="margin: 20px 10px 10px 60px;" id="maths"  placeholder="Enter Marks Obtained">
+        <div class="clearBoth"></div>
+        <h3 class="azure floatleft"style="margin: 17px;">English:</h3>
+        <input type="number" style="margin: 20px 10px 10px 50px;" id="english"  placeholder="Enter Marks Obtained">
+        <div class="clearBoth"></div>
+        <h3 class="azure floatleft"style="margin: 17px;">History:</h3>
+        <input type="number" style="margin: 20px 10px 10px 50px;" id="History"  placeholder="Enter Marks Obtained">
+        <div class="clearBoth"></div>
+        <h3 class="azure floatleft"style="margin: 17px;">Geography:</h3>
+        <input type="number" style="margin: 20px;" id="geography"  placeholder="Enter Marks Obtained">
+        <div class="clearBoth"></div>
+        <button onclick="submitData()" style="margin: 50px 0px 20px 170px;">Enter Data</button>
+    </div>
+    <div id="filterData">
+            <h2 class="azure " style="text-align: center;">Show Data:</h2>
+            <h3 class="azure floatleft"style="margin: 20px;">Standard:</h3>
+            <input type="number" style="margin: 20px;" id="check"  placeholder="Enter Standard">
+            <button onclick=ShowData()>Show Data</button>
+    </div>
+
+
+
+   <script src="scripts.js"></script> 
+</body>
+</html>
