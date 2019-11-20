@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>Practise Attributes</title>
+    <style type="text/css">
+      .class-h1 {
+        color: red;
+      }
+      .class-h3 {
+        color: green;
+      }
+      .class-h5 {
+        color: orange;
+      }
+      .class-div {
+        color: yellow;
+        font-size: 20px;
+        margin: 10px;
+      }
+      .class-p {
+        border: 1px solid black;
+        padding: 5px;
+      }
+      #test-2 {
+        font-size: 30px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div id="box">
+      <div>First DIV</div>
+      <div>Second DIV</div>
+      <div>Third DIV</div>
+    </div>
+    <div>Fourth DIV</div>
+    <div id="cont">
+      <p>First P</p>
+      <p>Second P</p>
+      <p>Third P</p>
+    </div>
+    <div id="temp">
+      <p>Test P1</p>
+      <p>Test P2</p>
+      <p>Test P3</p>
+    </div>
+    <hr />
+    <button id="changeH1">Change H1</button>
+    <button id="changeH3">Change H3</button>
+    <button id="changeH5">Change H5</button>
+    <button id="changeDiv">Change DIV</button>
+    <button id="changeP">Change P</button>
+    <button id="setID">Set ID</button>
+    <script>
+      var changeH1 = document.getElementById("changeH1");
+      var changeH3 = document.getElementById("changeH3");
+      var changeH5 = document.getElementById("changeH5");
+      var changeDiv = document.getElementById("changeDiv");
+      var changeP = document.getElementById("changeP");
+      var setID = document.getElementById("setID");
+
+      changeH1.addEventListener("click", chngH1);
+      changeH3.addEventListener("click", chngH3);
+      changeH5.addEventListener("click", chngH5);
+      changeDiv.addEventListener("click", chngDiv);
+      changeP.addEventListener("click", chngP);
+      setID.addEventListener("click", setId);
+
+      function chngH1() {
+        var firstH1 = document.querySelector("h1");
+        firstH1.setAttribute("class", "class-h1");
+      }
+
+      function chngH3() {
+        var allH3 = document.querySelectorAll("h3");
+
+        allH3.forEach(function(e) {
+          e.setAttribute("class", "class-h3");
+        });
+      }
+
+      function chngH5() {
+        var allH5 = document.querySelectorAll("h5");
+
+        allH5.forEach(function(e) {
+          e.setAttribute("class", "class-h5");
+        });
+      }
+
+      function chngDiv() {
+        var allBoxDivs = document.getElementById("box").querySelectorAll("div");
+        allBoxDivs.forEach(function(e) {
+          e.setAttribute("class", "class-div");
+        });
+      }
+
+      function chngP() {
+        var allParaDiv = document.getElementById("cont").querySelectorAll("p");
+        allParaDiv.forEach(function(e) {
+          e.setAttribute("class", "class-p");
+        });
+      }
+
+      function setId() {
+        var allPara = document.getElementById("temp").querySelectorAll("p");
+        allPara[1].setAttribute("id", "test-2");
+      }
+    </script>
+  </body>
+</html>
