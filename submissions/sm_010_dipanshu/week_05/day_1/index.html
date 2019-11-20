@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Report Card
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body class="body">
+    <h1>Student Record Keeper</h1>
+
+    <div id="dataDiv">
+      Name:
+      <input
+        type="text"
+        id="studentName"
+        placeholder="Enter student name"
+        class="inp-item"
+      />
+      Grade:
+      <select id="studentGrade">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <button id="enterDataBtn" class=".inp-button">Enter Data</button>
+    </div>
+
+    <div id="marksDiv" style="visibility: hidden;">
+      <p>Enter Marks</p>
+      <div>
+        Science:
+        <input type="number" id="mScience" class="inp-item" />Maths:
+        <input type="number" id="mMaths" class="inp-item" /> English:
+        <input type="number" id="mEnglish" class="inp-item" />
+        History:
+        <input type="number" id="mHistory" class="inp-item" />
+        Geography:
+        <input type="number" id="mGeography" class="inp-item" />
+      </div>
+      <button id="createRecordBtn">Create</button>
+    </div>
+
+    <hr />
+    <div id="displayDataDiv"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

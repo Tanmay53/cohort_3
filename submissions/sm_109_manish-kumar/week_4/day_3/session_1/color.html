@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color</title>
+</head>
+<body>
+	<h1 class="h1 a1">MASAI H1</h1>
+	<h2 class="h1 a2">MASAI H2</h2>
+	<h3 class="h1 a1">MASAI H3</h3>
+	<h4 class="h1 a2">MASAI H4</h4>
+
+	<div class="c1">school d1</div>
+	<div class="c1">school d2</div>
+	<div class="c1">school d3</div>
+
+	<p class="p1">coding p1</p>
+	<p class="p1">coding p2</p>
+	<p class="p1">coding p3</p>
+
+	<hr>
+	<button onclick="heading1()">Change Heading Color</button>
+	<button onclick="headingOdd()">Change Odd Heading</button>
+	<button onclick="headingEven()">Change Even Heading</button>
+	<button onclick="div()">Change DIVS</button>
+	<button onclick=" Para()">Change Paragraph</button>
+
+	<script>
+		function heading1(){
+			var x = document.getElementsByClassName('h1');
+			x[0].style.color = "red";
+			x[1].style.color = "red";
+			x[2].style.color = "red";
+			x[3].style.color = "red";
+		}
+		function headingOdd(){
+			var x = document.getElementsByClassName('h1 a1');
+			x[0].style.color = "blue";
+			x[1].style.color = "blue";
+		}
+		function headingEven(){
+			var x = document.getElementsByClassName('h1 a2');
+			x[0].style.color = "green";
+			x[1].style.color = "green";
+		}
+		function div(){
+			var x = document.getElementsByClassName('c1');
+			x[0].style.color = "yellow";
+			x[1].style.color = "yellow";
+			x[2].style.color = "yellow";
+		}
+		function Para(){
+			var x = document.getElementsByClassName('p1');
+			x[0].style.color = "teal";
+			x[1].style.color = "teal";
+			x[2].style.color = "teal";
+		}
+	</script>
+</body>
+</html>
