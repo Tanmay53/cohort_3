@@ -1,0 +1,193 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+    .wrapper{
+        display:flex;
+        width: auto;
+        height: auto;    
+        margin:auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .upper{
+        justify-content: center;
+        background-color: rgb(226, 214, 214);
+        width: 450px;
+        height: 350px;
+        padding:10px;
+        margin:auto;
+        margin-bottom: 30px;
+
+    }
+    .middle{
+        display: flex;
+        width: 800px;
+        height: 200px;
+        margin:auto;
+        margin-bottom: 30px;
+
+    }
+    .lower{
+        display: flex;
+         width:1100px;
+         height:180px;
+         margin:auto;
+         background-color: tomato;
+         padding:7px;
+    }
+    .middle-div{
+        flex-direction: row;
+        margin-left:20px;
+    }
+    .lower-div{
+        flex-direction: row;
+        margin-left:10px;
+        padding:10px;
+    }  
+
+    #img1{
+        
+       display: block;
+        margin: auto;
+    }
+    #linus{
+        font-size: 35px;
+        text-align: center;
+        font-style: bold;
+        color:blue;
+    }
+    #linus-intro{
+        font-size: 25px;
+        text-align: center;
+    }
+    #salman{
+        text-align: left;
+        color:brown;
+        margin-bottom: 20px;
+        font-size:30px;
+        margin-top:0px;
+        font-style:bold;
+
+    }
+    #salman-intro{
+        font-size:20px;
+    }
+    .title{
+        color:white;
+        font-size: 25px;
+
+    }
+    .desc{
+       font-size: 20px;
+    }
+    .right{
+        text-align: right;
+    }
+    #first{
+        border-right: 10px solid black;
+        flex-basis:500px;
+    }
+        </style>
+    </head>
+    <body>
+       <button onclick="create()">Create Unix Layout</button>
+    
+      
+       <script>
+            function create(){
+                var container = document.querySelector('body');
+
+                var wrap = document.createElement('div');
+                wrap.setAttribute('class', 'wrapper');
+                container.appendChild(wrap);
+
+                var upper1 = document.createElement('div');
+                upper1.setAttribute('class', 'upper');
+                wrap.appendChild(upper1);
+
+                var img = document.createElement('img');
+                img.setAttribute('id', 'img1');
+                img.setAttribute('width', '150px');
+                img.setAttribute('src', "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg")
+                upper1.appendChild(img);
+
+                var p1 = document.createElement('p');
+                p1.innerHTML = "Linus Trovalds";
+                p1.setAttribute('id', 'linus');
+                upper1.appendChild(p1);
+
+                var p2 = document.createElement('p')
+                p2.innerHTML = "The Creator of Linux and Git";
+                p2.setAttribute('id', 'linus-intro');
+                upper1.appendChild(p2);
+
+                var middle1 = document.createElement('div');
+                middle1.setAttribute('class', 'middle');
+                // middle1.style.background = "red";
+                wrap.appendChild(middle1);
+ 
+                var img1 = document.createElement('img');
+                // img1.setAttribute('class', 'middle');
+                img1.setAttribute('width', '150px');
+                img1.setAttribute('src', "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg")
+                middle1.appendChild(img1);
+
+                
+                var middleDiv = document.createElement('div');
+                middleDiv.setAttribute('class', 'middle-div');
+                middle1.appendChild(middleDiv);
+
+                var p3 = document.createElement('p');
+                p3.innerHTML = "Sal Khan";
+                p3.setAttribute('id', 'salman');
+                middleDiv.appendChild(p3);
+
+                var p4 = document.createElement('p')
+                p4.innerHTML = "Salman Khan is the founder of the Khan Academy which has a mission <br>of providing a free world-class education for anytime, anywhere.";
+                p4.setAttribute('id', 'salman-intro');
+                middleDiv.appendChild(p4);
+
+
+                var lower1 = document.createElement('div');
+                lower1.setAttribute('class', 'lower');
+                wrap.appendChild(lower1);
+
+                var lowerDiv1 = document.createElement('div');
+                lowerDiv1.setAttribute('class', 'lower-div');
+                lowerDiv1.setAttribute('id', 'first');
+                lower1.appendChild(lowerDiv1);
+
+
+                var p5 = document.createElement('p');
+                p5.innerHTML = "Ken Thompson";
+                p5.setAttribute('class', 'title');
+                lowerDiv1.appendChild(p5);
+
+                var p6 = document.createElement('p')
+                p6.innerHTML = "Designed and implemented the<br>original Unix operating system";
+                p6.setAttribute('class', 'desc');
+                lowerDiv1.appendChild(p6);
+
+                var lowerDiv2 = document.createElement('div');
+                lowerDiv2.setAttribute('class', 'lower-div');
+                lowerDiv2.style.width = '500px';
+                lower1.appendChild(lowerDiv2);
+
+                var p7 = document.createElement('p');
+                p7.innerHTML = "Dennis Ritche";
+                p7.setAttribute('class', 'title right');
+
+                // p7.setAttribute('class', 'right');
+                lowerDiv2.appendChild(p7);
+
+                var p8 = document.createElement('p')
+                p8.innerHTML = "The creator of C programming Language";
+                p8.setAttribute('class', 'desc right');
+                // p8.setAttribute('class', 'right');
+                lowerDiv2.appendChild(p8);
+
+            }
+       </script>
+    </body>
+</html>
