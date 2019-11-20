@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <title>Unix</title>
+    <style>
+      .heading {
+        font-family: "Courier New", Courier, monospace;
+        margin: 20px auto;
+      }
+      .h1 {
+        font-size: 50px;
+      }
+      .h2 {
+        font-size: 40px;
+      }
+      .h3 {
+        font-size: 30px;
+      }
+      .center {
+        text-align: center;
+      }
+      .container {
+        width: 100%;
+        margin: 50px auto;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        border: 1px solid #000000;
+      }
+      .flex {
+        display: flex;
+      }
+      .flex-box {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #000000;
+      }
+      .input-box input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid #000000;
+        border-radius: 0px;
+        font-size: 30px;
+        margin: 5px 0;
+      }
+      .add-btn {
+        float: right;
+        background: #000000;
+        color: #ffffff;
+        font-size: 25px;
+        padding: 10px;
+      }
+      .table table {
+        width: 100%;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .table table td,
+      .table table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      .table table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .table table tr:hover {
+        background-color: #ddd;
+      }
+
+      .table table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: royalblue;
+        color: white;
+      }
+      .flex-column {
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FORM to add -->
+    <div class="container flex">
+      <div class="flex-box">
+        <h2 class="heading h2">ADD PRODUCT</h2>
+        <hr />
+        <div class="input-box">
+          <label for="">PRODUCT</label><br />
+          <input type="text" name="product" id="product" />
+        </div>
+        <div class="input-box">
+          <label for="">PRICE</label><br />
+          <input type="text" name="price" id="price" />
+        </div>
+        <div class="input-box">
+          <label for="">QUANTITY</label><br />
+          <input type="text" name="quantity" id="quantity" />
+        </div>
+        <button class="add-btn" onclick="addProduct()">
+          ADD PRODUCT
+        </button>
+      </div>
+      <!-- TABLE -->
+      <div class="flex-box table">
+        <h2 class="heading h2">PRODUCT CART</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>PRODUCT NAME</th>
+              <th>PRICE</th>
+              <th>QUANTITY</th>
+            </tr>
+          </thead>
+          <tbody id="productTable"></tbody>
+        </table>
+      </div>
+      <!-- SETTINGS -->
+      <div class="flex-box">
+        <h2 class="heading h2">SETTINGS</h2>
+        <hr />
+        <div class="input-box">
+          <label for="">FONT SIZE</label><br />
+          <select name="" id="size">
+            <option value="20px">22px</option>
+            <option value="22px">24px</option>
+            <option value="24px">26px</option>
+            <option value="26px">28px</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <label for="">FONT COLOR</label><br />
+          <select name="" id="color">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="brown">Brown</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <label for="">BACKGROUND</label><br />
+          <select name="" id="background">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="brown">Brown</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var size = document.getElementById("size");
+      size.addEventListener("change", changeSize);
+
+      var color = document.getElementById("color");
+      color.addEventListener("change", changeColor);
+
+      var background = document.getElementById("background");
+      background.addEventListener("change", changeBackground);
+
+      function addProduct() {
+        // form validation
+        var table = document.querySelector("#productTable");
+        var product = document.getElementById("product");
+        var price = document.getElementById("price");
+        var quantity = document.getElementById("quantity");
+
+        if (product.value == "" || quantity.value == "" || price.value == "") {
+          alert("Empty Field!");
+          return false;
+        }
+        var row = addRow();
+        table.appendChild(row);
+      }
+
+      function addRow() {
+        var tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td>" +
+          product.value +
+          "</td><td>" +
+          price.value +
+          "</td><td>" +
+          quantity.value +
+          "</td>";
+        return tr;
+      }
+
+      function changeSize() {
+        var size = event.target.value;
+        var tr = document.querySelector(".table table");
+        tr.style.fontSize = size;
+      }
+
+      function changeColor() {
+        var color = event.target.value;
+        var tr = document.querySelector(".table table");
+        tr.style.color = color;
+      }
+
+      function changeBackground() {
+        var background = event.target.value;
+        var tr = document.querySelector(".table table tr:nth-child(even)");
+        tr.style.background = background;
+      }
+    </script>
+  </body>
+</html>
