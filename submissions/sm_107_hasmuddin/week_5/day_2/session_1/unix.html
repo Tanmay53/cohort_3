@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>Unix</title>
+    <style></style>
+  </head>
+  <body>
+    <button>Create Page</button>
+    <script>
+      btn = document.querySelector("button");
+      btn.addEventListener("click", addPage);
+
+      function addPage() {
+        bodyEle = document.querySelector("body");
+        main = document.createElement("div");
+        main.setAttribute(
+          "style",
+          "display: flex; align-items:center; justify-content:center; flex-direction:column"
+        );
+
+        //first box linux with headings;
+        box = document.createElement("div");
+        box.setAttribute(
+          "style",
+          "display:flex; flex-direction:column; width:300px; background:burlywood; align-items:center;justify-content:center"
+        );
+
+        // box element pic, linus, linusDesc
+        pic = document.createElement("img");
+        pic.setAttribute(
+          "src",
+          "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg"
+        );
+        pic.setAttribute(
+          "style",
+          "width:100px; text-align: center; margin-top:10px; "
+        );
+        linus = document.createElement("h2");
+        linus.textContent = "Linus Torvalds";
+        linus.setAttribute("style", "color:blue");
+
+        linusDesc = document.createElement("h2");
+        linusDesc.textContent = "The creator of Linux & Git";
+        linusDesc.setAttribute("style", "color:black");
+
+        //skkhan element img, h2 , p
+        skhan = document.createElement("div");
+        skhan.setAttribute(
+          "style",
+          "display:grid; grid-template-columns:repeat(1, 1fr); grid-template-rows:repeat(2, 1fr);"
+        );
+
+        //  skhan elements
+        skpic = document.createElement("img");
+        skpic.setAttribute(
+          "src",
+          "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg"
+        );
+        skpic.setAttribute(
+          "style",
+          "grid-area:1/1/span 2/span 1; width:100px; margin:10px 10px 0 0"
+        );
+        skName = document.createElement("h2");
+        skName.textContent = "Sal Khan";
+        skName.setAttribute(
+          "style",
+          " grid-area:1/2/span 1/ span 1; color:red;"
+        );
+        skDesc = document.createElement("p");
+        skDesc.textContent =
+          "Salman khan is the founder of the Khan Academy which has a mission of providing a free world-class education for anyone, anywhere.";
+
+        //bottom box
+        bottom = document.createElement("div");
+        bottom.setAttribute(
+          "style",
+          'display:grid; width:650px; grid-template-areas:"head col head2" "para  col para2"; border:1px solid black; background:orange;margin:auto;margin-top:10px;'
+        );
+        kenName = document.createElement("h2");
+        kenName.textContent = "Ken Thompson";
+        kenName.setAttribute("style", "grid-area:head; margin:10px;");
+
+        kenDesc = document.createElement("p");
+        kenDesc.textContent = "The creator of C programming Language.";
+        kenDesc.setAttribute("style", "grid-area:para2; margin:10px;");
+
+        den = document.createElement("h2");
+        den.textContent = "Dennis Ritchie";
+        den.setAttribute("style", "grid-area:head2; margin:10px;");
+
+        denDesc = document.createElement("p");
+        denDesc.textContent =
+          "Designed and implemented the original unix operating system.";
+        denDesc.setAttribute("style", "grid-area:para; margin:10px;");
+
+        col = document.createElement("div");
+        col.setAttribute(
+          "style",
+          "margin:10px 40px; grid-area:col; width:5px; background:black; height:120px;"
+        );
+        bottomBoxes = [kenName, kenDesc, den, denDesc, col];
+        for (var r = 0; r < bottomBoxes.length; r++) {
+          bottom.appendChild(bottomBoxes[r]);
+        }
+        //skhan box
+        skAll = [skpic, skName, skDesc];
+        for (var m = 0; m < skAll.length; m++) {
+          skhan.appendChild(skAll[m]);
+        }
+        //all three div append to main and main is append in body
+
+        bodyEle.appendChild(main);
+
+        boxes = [pic, linus, linusDesc];
+        for (var i = 0; i < boxes.length; i++) {
+          box.appendChild(boxes[i]);
+        }
+
+        allMainBoxes = [box, skhan, bottom];
+        for (var j = 0; j < allMainBoxes.length; j++) {
+          main.appendChild(allMainBoxes[j]);
+        }
+      }
+    </script>
+  </body>
+</html>
