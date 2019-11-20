@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button id='h1' onclick="clickH1()">Create H1</button>
+        <button onclick="clickH3()">Create 2 H3</button>
+        <button onclick="clickDiv()">Create DIVS</button>
+        <button onclick="clickStu()">Add Students</button>
+        <button onclick="clickCpy()">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+            
+            function clickH1(){
+                var h1=document.createElement('h1')
+                var h= document.getElementById("headings").appendChild(h1)
+                h.textContent='Masai'
+                }
+            function clickH3()    {
+                var h3=document.createElement('h3')
+                var h4=document.createElement('h3')
+                var h31= document.getElementById("headings").appendChild(h3)
+                h31.textContent='A Transformation in education!'
+                var h32= document.getElementById("headings").appendChild(h4)
+                h32.textContent='Learn to earn, pay when you get.'
+
+            }
+            function clickDiv(){
+                for(i=1;i<11;i++){
+                    var d=document.createElement('div')
+                    var div= document.getElementById("cont").appendChild(d)
+                    div.textContent=i
+                }
+            }
+            function clickStu(){
+                for(i=0;i<students.length;i++){
+                    var list=document.createElement('li')
+                    var li= document.getElementById('vikings').appendChild(list)
+                    li.textContent=students[i]
+                }
+            }
+            function clickCpy(){
+                var para= document.createElement('p')
+                var h1=document.getElementById('h1')
+                var p= document.querySelector('body').insertBefore(para,h1)
+                p.textContent='@ masai 2019'
+            }
+
+        </script>
+    </body>
+</html>
