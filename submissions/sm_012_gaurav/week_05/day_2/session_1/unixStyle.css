@@ -1,0 +1,122 @@
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-box * {
+    font-family: sans-serif;
+}
+.flex-box1 {
+    width: 30%;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.flex-box1 * {
+    margin: 8px;
+}
+.flex-box1 h1 {
+    color: blue;
+    margin: 5px;
+}
+.img {
+    width: 150px;
+    height: 200px;
+    margin-top: 20px;
+}
+.flex-box2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 20%;
+    
+}
+.flex-box3 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.flex-box3 h1 {
+    color: red;
+}
+.flex-box4 {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10% 10px 10%;
+    background-color: orange;
+    flex-wrap: wrap;
+}
+.flex-box4 div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    margin: 1%;
+}
+.flex-box4 h1 {
+    color: white;
+}
+.flex-box5 {
+    text-align: left;
+}
+.flex-box6 {
+    text-align: right;
+}
+#blackdiv {
+    background-color: black;
+    width: 1%;
+    margin: 1% 17.5% 1% 17.5%;
+}
+@media (max-width: 600px) {
+    .flex-box1 h1 {
+        font-size: 20px;
+    }
+    .flex-box h2 {
+        font-size: 15px;
+    }
+    .flex-box2 {
+        flex-direction: column;
+    }
+    .flex-box3 {
+        margin-left: 0px;
+    }
+    .flex-box3 h1 {
+        font-size: 20px;
+    }
+    .flex-box3 p {
+        font-size: 10px;
+    }
+    .img {
+        width: 75px;
+        height: 100px;
+    }
+    .flex-box4 {
+        flex-direction: column;
+    }
+    .flex-box4 h1 {
+        font-size: 20px;
+    }
+    .flex-box4 h4 {
+        font-size: 10px; 
+    }
+    .flex-box4 div {
+        width: 100%;
+    }
+    .flex-box5 {
+        text-align: center;
+    }
+    .flex-box6 {
+        text-align: center;
+    }
+    #blackdiv {
+        height: 10px;
+        width: 90%;
+        margin: 10% 5% 10% 5%;
+    }
+}

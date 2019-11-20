@@ -1,0 +1,261 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <style type="text/css">
+        .class1 {
+            background: lightgrey;
+            height: 270px;
+            width: 400px;
+            margin: auto;
+
+        }
+
+        .imgclass {
+            margin: 20px auto auto 155px;
+            height: 130px;
+            width: 90px;
+
+        }
+
+        .class3text {
+            color: darkblue;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+
+        }
+
+        .class4text2 {
+            text-align-last: center;
+            font-size: 22px;
+            margin-top: 10px;
+
+        }
+
+        .classpadding {
+            padding-top: 35px;
+            margin-left: 30%;
+
+        }
+
+        .imgclass2 {
+            float: left;
+            height: 110px;
+
+        }
+
+        .class5text3 {
+            color: red;
+            font-size: 30px;
+            padding-left: 20px;
+            float: left;
+            font-weight: bold;
+            margin-top: 0px;
+
+        }
+
+        .class6text4 {
+            color: black;
+            font-size: 12px;
+            padding-top: 15px;
+
+
+
+
+        }
+
+        .classfooter {
+            margin-left: 13%;
+            margin-top: 125px;
+            ;
+            clear: left;
+            background: orange;
+            height: 120px;
+            width: 80%;
+            margin-right: 10%;
+
+        }
+
+        .classfooter1 {
+            font-size: 25;
+            padding: 15px;
+            color: white;
+            width: 47%;
+            float: left;
+
+        }
+
+        .classfooterblack {
+            font-size: 13px;
+            color: black;
+            margin-top: 24px;
+
+        }
+
+        .classfooterstick {
+            background: black;
+            height: 80px;
+            width: 1%;
+            margin-top: 20px;
+            float: left;
+
+        }
+
+        .classpadding2 {
+            font-size: 25px;
+            padding: 15px;
+            color: white;
+            float: right;
+
+        }
+
+        .classfooterp {
+            text-align: right;
+            margin-top: 0px;
+
+        }
+
+        .classfooterp2 {
+            font-size: 13px;
+            color: black;
+            margin-top: 0px;
+
+        }
+
+        @media (max-width:968px) {
+            .classfooter {
+                background: black
+            }
+
+            .classfooterstick {
+                background: orange
+            }
+
+            .classfooterblack {
+                color: white
+            }
+
+            .class5text3 {
+                color: teal
+            }
+
+            .class3text {
+                color: red;
+            }
+
+            ;
+
+            .classfooterp2 {
+                color: yellow
+            }
+
+            .class1 {
+                background: white;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <button onclick="dynamicUnix()">Create Page</button>
+    <button onclick="cleanUnix()">Clear Page</button>
+    <script>
+        function dynamicUnix() {
+            var parentdiv1 = document.createElement("div")
+            parentdiv1.setAttribute("class", "class1")
+            document.body.appendChild(parentdiv1)
+
+            var linuspic = document.createElement("img")
+            linuspic.setAttribute("src",
+                "https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg"
+            )
+            linuspic.setAttribute("class", "imgclass")
+            parentdiv1.appendChild(linuspic)
+
+            var linustexth = document.createElement("div")
+            linustexth.setAttribute("class", "class3text")
+            linustexth.textContent = "Linus Torvalds"
+            parentdiv1.appendChild(linustexth)
+
+            var linustext = document.createElement("div")
+            linustext.setAttribute("class", "class4text2")
+            linustext.textContent = "The creator of Linux & Git"
+            parentdiv1.appendChild(linustext)
+
+            var parentdiv2 = document.createElement("div")
+            parentdiv2.setAttribute("class", "classpadding")
+            document.body.appendChild(parentdiv2)
+
+            var salpic = document.createElement("img")
+            salpic.setAttribute("src",
+                "https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/khan.jpg"
+            )
+            salpic.setAttribute("class", "imgclass2")
+            parentdiv2.appendChild(salpic)
+
+            var saltexth = document.createElement("div")
+            saltexth.setAttribute("class", "class5text3")
+            saltexth.innerHTML = "Sal Khan"
+            document.body.appendChild(saltexth)
+
+            var saltext = document.createElement("div")
+            saltext.setAttribute("class", "class6text4")
+            saltext.innerHTML = "Salman Khan is the founder of the Khan Academy which has a mission" + '<br>' +
+                "of providing a free world-class education for anyone, anywhere."
+            saltexth.appendChild(saltext)
+
+            var parentdiv3 = document.createElement("div")
+            parentdiv3.setAttribute("class", "classfooter")
+            document.body.appendChild(parentdiv3)
+
+
+            var kenThomp = document.createElement("div")
+            kenThomp.setAttribute("class", "classfooter1")
+            kenThomp.innerHTML = "Ken Thompson"
+            parentdiv3.appendChild(kenThomp)
+
+            var kenThompText = document.createElement("div")
+            kenThompText.setAttribute("class", "classfooterblack")
+            kenThompText.innerHTML = "Designed and Implemented the" + '<br>' + "original Unix operating system"
+            kenThomp.appendChild(kenThompText)
+
+            var blackStick = document.createElement("div")
+            blackStick.setAttribute("class", "classfooterstick", "box")
+            parentdiv3.appendChild(blackStick)
+
+            var padding2 = document.createElement("div")
+            padding2.setAttribute("class", "classpadding2")
+            parentdiv3.appendChild(padding2)
+
+            var dennisRit = document.createElement("p")
+            dennisRit.setAttribute("class", "classfooterp")
+            dennisRit.innerHTML = "Dennis Ritchie"
+            padding2.appendChild(dennisRit)
+
+            var dennisRitText = document.createElement("p")
+            dennisRitText.setAttribute("class", "classfooterp2")
+            dennisRitText.innerHTML = "The creator of C Programming Language"
+            padding2.appendChild(dennisRitText)
+        }
+
+        function cleanUnix() {
+            var bigB = document.querySelector("body")
+            bigB.innerHTML = ""
+            var btn = document.createElement("button")
+            btn.innerHTML= "Create Unix"
+            btn.setAttribute("onclick","dynamicUnix()")
+            document.body.appendChild(btn)
+            var btn2 = document.createElement("button")
+            btn2.innerHTML= "Clean Unix"
+            btn2.setAttribute("onclick","cleanUnix()")
+            document.body.appendChild(btn2)
+
+        }
+    </script>
+</body>
+
+</html>
