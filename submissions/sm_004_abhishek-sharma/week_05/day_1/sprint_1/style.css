@@ -1,11 +1,5 @@
 body {
     padding: 20px 150px;
-    background-image: url(/home/skynet/repos/cohort_3/submissions/sm_004_abhishek-sharma/week_05/day_1/sprint_1/resources/bodyBackground.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
 }
 
 h1{
@@ -13,10 +7,6 @@ h1{
     color:#FF6F00;
 }
 #studForm {
-    background-image: url(/home/skynet/repos/cohort_3/submissions/sm_004_abhishek-sharma/week_05/day_1/sprint_1/resources/formBackground.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     padding: 40px 25px 20px 50px;
     margin: 50px 150px;
     width: 600px;
