@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>Practise Attributes</title>
+        <style type="text/css">
+            .class-h1 {
+                color: red
+            }
+            .class-h3 {
+                color: green;
+            }
+            .class-h5 {
+                color: orange;
+            }
+            .class-div {
+                color: yellow;
+                font-size: 20px;
+                margin: 10px;
+            }
+            .class-p {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #test-2 {
+                font-size: 30px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div id="box">
+            <div>First DIV</div>
+            <div>Second DIV</div>
+            <div>Third DIV</div>
+        </div>
+        <div>Fourth DIV</div>
+        <div id="cont">
+            <p>First P</p>
+            <p>Second P</p>
+            <p>Third P</p>
+        </div>
+        <div id="temp">
+            <p>Test P1</p>
+            <p>Test P2</p>
+            <p>Test P3</p>
+        </div>
+        <hr/>
+        <button onclick="h1btn()">Change H1</button>
+        <button onclick="h3btn()">Change H3</button>
+        <button onclick="h5btn()">Change H5</button>
+        <button onclick="divbtn()">Change DIV</button>
+        <button onclick="pbtn()">Change P</button>
+        <button onclick="idbtn()">Set ID</button>
+        <script>
+        function h1btn()
+            {
+              var H1btn=document.querySelector("h1");
+              H1btn.setAttribute("class","class-h1")
+            }
+
+            //--------------h3--------------
+
+            function h3btn()
+            {
+              var H3btn=document.querySelectorAll("h3");
+              for(var i=0;i<H3btn.length;i++)
+              {
+                    H3btn[i].setAttribute("class","class-h3")
+              }
+            }
+
+//----------------------------h5------------------------------
+
+function h5btn()
+            {
+              var H5btn=document.querySelectorAll("h5");
+              for(var i=0;i<H5btn.length;i++)
+              {
+                    H5btn[i].setAttribute("class","class-h5")
+              }
+            }
+
+
+//----------------------------------div--------------
+
+function divbtn()
+{
+    var divchnge=document.getElementById("box")
+    divchnge.setAttribute("class","class-div")
+}
+           
+//-------------------------p----------------------
+
+function pbtn()
+{
+    var pchnge=document.getElementById("cont")
+    pchnge.setAttribute("class","class-p")
+}
+
+// ---------------------------------id-p-------------------------
+
+function idbtn()
+{
+             elem  = document.getElementById("temp").querySelectorAll("p")[1]
+                //alert(elem.innerHTML)
+                elem.setAttribute('id', 'test-2')
+  
+}
+    
+        </script>
+    </body>
+</html>
