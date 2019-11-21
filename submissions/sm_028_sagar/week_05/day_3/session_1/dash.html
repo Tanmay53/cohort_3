@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dash</title>
+</head>
+
+<body>
+
+    <script>
+        var body = document.querySelector('body');
+        var user = sessionStorage.getItem("temp_username")
+        var h1 = document.createElement('h1');
+        h1.textContent = user || "no user";
+        body.appendChild(h1);
+
+        //checking current date
+        var time = new Date();
+        console.log(time);
+        console.log(time.getMinutes(), time.getHours());
+        timeString_login = time.getHours() + " : " + time.getMinutes() + " : " + time.getSeconds();
+
+
+        setTimeout(function() {
+            alert("Your session is timed out");
+            window.location.replace("index.html");
+        }, 500000)
+
+        //append p for login
+        var login_time = document.createElement('p');
+        login_time.textContent = "Login time : " + timeString_login;
+        body.appendChild(login_time);
+
+        //append p for logout
+        var logout_time = document.createElement('p');
+        timeString_logout = time.getHours() + " : " + (time.getMinutes()) + " : " + (time.getSeconds() + 10);
+        logout_time.textContent = "Logout time : " + timeString_logout;
+        body.appendChild(logout_time);
+        var endtime = (time.getSeconds() + 10);
+        localStorage.setItem("endtime", endtime);
+
+        console.log('end time ', endtime);
+        console.log('time ', (time.getSeconds()));
+
+
+        //check sessionStorage
+        if (sessionStorage.temp_username == null) {
+            console.log('check here')
+            window.location.replace("index.html");
+        }
+    </script>
+</body>
+
+</html>

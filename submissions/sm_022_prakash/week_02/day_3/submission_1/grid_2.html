@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+
+<head>
+    <title>grid 2</title>
+    <style>
+        .box {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 50px 50px;
+            width: 50%;
+            row-gap: 20px;
+            column-gap: 10px;
+        }
+
+        .class1 {
+            background: red;
+            grid-area: 1 / 1 / span 1/span 4
+        }
+
+        .class2 {
+            background: green;
+            grid-area: 2/1/span 1/span 1;
+            height: 100px;
+        }
+
+        .class3 {
+            background: blue;
+            grid-area: 2/2/span 1/ span 3;
+            height: 100px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <div class="box" id="row3">
+            <div class="class1"></div>
+            <div class="class2"></div>
+            <div class="class3"></div>
+        </div>
+</body>

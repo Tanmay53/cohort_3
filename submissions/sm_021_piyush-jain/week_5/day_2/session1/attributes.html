@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>Practise Attributes</title>
+        <style type="text/css">
+            .class-h1 {
+                color: red;
+            }
+            .class-h3 {
+                color: green;
+            }
+            .class-h5 {
+                color: orange;
+            }
+            .class-div {
+                color: yellow;
+                font-size: 20px;
+                margin: 10px;
+            }
+            .class-p {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #test-2 {
+                font-size: 30px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div id="box">
+            <div>First DIV</div>
+            <div>Second DIV</div>
+            <div>Third DIV</div>
+        </div>
+        <div>Fourth DIV</div>
+        <div id="cont">
+            <p>First P</p>
+            <p>Second P</p>
+            <p>Third P</p>
+        </div>
+        <div id="temp">
+            <p>Test P1</p>
+            <p>Test P2</p>
+            <p>Test P3</p>
+        </div>
+        <hr>
+        <button onclick="changeH1()">Change H1</button>
+        <button onclick="allH3()">Change H3</button>
+        <button onclick="allH5()">Change H5</button>
+        <button onclick="changeDivs()">Change DIV</button>
+        <button onclick="changeParas()">Change P</button>
+        <button onclick="changeids()">Set ID</button>
+        <script>
+            //function changing the first h1 present
+                function changeH1() 
+                {
+                    var h11 = document.querySelector('h1');
+                    h11.setAttribute('class', 'class-h1');
+                }
+        //function changing the all h3 present
+                function allH3() {
+                    var bodyElem = document.querySelector('body');
+                    var h31 = document.querySelectorAll('h3');
+                    for (i = 0; i < h31.length; i++) 
+                    {
+                        h32 = h31[i];
+                        h32.setAttribute('class', 'class-h3');
+                    }
+                }
+        //function changing the all h5 present
+                function allH5() {
+                    var bodyElem = document.querySelector('body');
+                    var h51 = document.querySelectorAll('h5');
+                    for (i = 0; i < h51.length; i++) 
+                    {
+                        h52 = h51[i];
+                        h52.setAttribute('class', 'class-h5');
+                    }
+                }
+        // chaning divs preseent in id box
+                function changeDivs() {
+                    var bodyElem = document.querySelector('box');
+                    var div1 = document.querySelectorAll('#box div');
+                    for (i = 0; i < div1.length; i++) 
+                    {
+                        div2 = div1[i];
+                        div2.setAttribute('class', 'class-div');
+                    }
+                }
+        // changing pi present in id cont
+                function changeParas() {
+                    var bodyElem = document.querySelector('cont');
+                    var p1 = document.querySelectorAll('#cont p');
+                    for (i = 0; i < p1.length; i++) 
+                    {
+                        p2 = p1[i];
+                        p2.setAttribute('class', 'class-p');
+                    }
+                }
+        //changing property for id temp impacting all p tags
+                function changeids() {
+                    var bodyElem = document.querySelector('temp');
+                    var ids = document.querySelectorAll('#temp p');
+                    for (i = 0; i < ids.length; i++) 
+                    {
+                        ids2 = ids[1];
+                        ids2.setAttribute('id', 'test-2');
+                    }
+                }
+                </script>
+    </body>
+</html>
