@@ -1,0 +1,193 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            .cont{
+                   display: flex;
+                   flex-direction: column;
+                   width: 1000px;
+                   height: 1000px;
+                   margin: auto;
+            }
+           .class1{
+                   display: flex;
+                   flex-direction: column;
+                   width: 400px;
+                   height: 300px;
+                   background-color:thistle;
+                   margin-top: 20px;
+                   margin: auto;
+                   
+
+           }
+           #img{
+                 height: 150px;
+                 width: 100px;
+           }
+           .class1 div{
+                        margin: auto;
+
+           }
+           #id1{
+                 color: blue;
+                 font-size:30px;
+                 font-weight: bold;
+           }
+           #imgSal{
+                    height: 120px;
+                    width: 80px;
+           }
+           
+           .class2{
+                    display: flex;
+                    flex-direction: column;
+                    width: 800px;
+                    height: 150px;
+                    flex-wrap:wrap;
+                    margin: 10px auto;
+                    
+                   
+           }
+           .class2 div{
+                         margin: auto;
+           }
+           #id2{
+                 margin: 5px;
+                 color: red;
+           }
+        .class3{
+                 display: flex;
+                 flex-direction: row;
+                 width: 900px;
+                 height: 110px;
+                 background-color: chocolate;
+                 justify-content: space-evenly;
+                 margin: auto;
+                 
+        }
+        .class3 div{
+                      margin: 5px;
+        }
+        #id3,#id6{
+            color: cornsilk;
+        }
+        #id4{
+              margin: 10px 0px;
+              background-color: black;
+              height: 80px;
+              width: 5px;
+        }
+        #id5 > h3{
+              text-align: right;
+        }
+        </style>
+    </head>
+    <body>
+       
+       <button  id="btnCreate">Create Page</button>
+
+       <script>
+           function createPage(){
+              var btnCreate = document.getElementById('btnCreate');
+              //main container//
+
+               var cont = document.createElement('div')
+               cont.setAttribute('class','cont');
+               var body = document.querySelector('body');
+               body.appendChild(cont);
+
+               //first subcontainer//
+               var cont1 = document.createElement('div')
+               cont1.setAttribute('class', 'class1')
+               cont.appendChild(cont1);
+
+               //image1//
+               var cont11 = document.createElement('div')
+               cont1.appendChild(cont11);
+               var img = document.createElement('img')
+               img.setAttribute('src', "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg");
+               img.setAttribute('id','img')
+               cont11.appendChild(img);
+               img.setAttribute('alt', 'Linus Torvalds')
+
+               //text//
+               var cont12 = document.createElement('div');
+               cont12.setAttribute('id','id1')
+               cont1.appendChild(cont12);
+               cont12.textContent = 'Linus Torvalds'
+
+               //text//
+               var cont13 =document.createElement('div');
+               cont1.appendChild(cont13);
+               var p = document.createElement('p');
+               cont13.appendChild(p);
+               p.textContent = 'The creator of Linux & Git'
+             
+               //second subcontainer//
+               var cont2 = document.createElement('div');
+               cont2.setAttribute('class','class2');
+               cont.appendChild(cont2);
+               
+               //image2//
+               var cont21 = document.createElement('div');
+               cont2.appendChild(cont21);
+               var imgSal = document.createElement('img');
+               imgSal.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg');
+               imgSal.setAttribute('id','imgSal');
+               cont21.appendChild(imgSal);
+
+               //text//
+               var cont22 = document.createElement('div');
+               cont2.appendChild(cont22);
+               var h2 = document.createElement('h2');
+               h2.textContent = 'Sal Khan';
+               h2.setAttribute('id', 'id2');
+               var p = document.createElement('p');
+               p.innerHTML = 'Salman khan is the founder of the Khan Academy which has a mission <br>of providing a free world class education for anyone, anywhere.'
+               cont22.appendChild(h2);
+               cont22.appendChild(p);
+
+               //third container//
+               var cont3 = document.createElement('div');
+               cont.appendChild(cont3);
+               cont3.setAttribute('class', 'class3');
+
+               //text//
+               var cont31 = document.createElement('div');
+               cont3.appendChild(cont31);
+               var h3 = document.createElement('h3');
+               h3.textContent = 'Ken Thompson';
+               h3.setAttribute('id', 'id3');
+               var p = document.createElement('p');
+               p.innerHTML = 'Designed and implemented the<br> original Unix operatin system';
+
+               //appending the child to its parent//
+               cont31.appendChild(h3);
+               cont31.appendChild(p);
+
+               //empty div//
+               var cont32 = document.createElement('div');
+               cont32.setAttribute('id', 'id4');
+               cont3.appendChild(cont32);
+
+               //text//
+               var cont33 = document.createElement('div');
+               cont33.setAttribute('id', 'id5');
+               cont3.appendChild(cont33);
+
+               var h3 = document.createElement('h3');
+               h3.textContent = 'Dennis Ritchie';
+               h3.setAttribute('id', 'id6');
+               var p = document.createElement('p');
+               p.textContent = 'The creator of C Programming Language';
+
+                //appending the child to its parent//
+                cont33.appendChild(h3);
+                cont33.appendChild(p);
+
+                btnCreate.removeEventListener('click', createPage);
+            }
+            btnCreate.addEventListener('click', createPage);
+       </script>
+    </body>
+</html>

@@ -1,5 +1,5 @@
-function passwordVerify(obj, password){
-    if(obj.passwrod === password){
+function passwordVerify(obj, password) {
+    if (obj.passwrod === password) {
         return true
     }
     else
@@ -7,9 +7,9 @@ function passwordVerify(obj, password){
 }
 
 var user = {
-    name : "Abhishek",
-    email : "abhishek.sharma1597@gmail.com",
-    passwrod : "abhi1504"
+    name: "Abhishek",
+    email: "abhishek.sharma1597@gmail.com",
+    passwrod: "abhi1504"
 }
 
 console.log(passwordVerify(user, "abhi1503")) // false
