@@ -1,8 +1,8 @@
 function userDetails(name, email, password) {
     var details = {
-        Name : name,
-        Email : email,
-        Password : password
+        Name: name,
+        Email: email,
+        Password: password
     }
     return details
 }
