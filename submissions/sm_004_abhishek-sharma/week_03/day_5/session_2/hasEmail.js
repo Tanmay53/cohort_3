@@ -5,34 +5,30 @@ function validEmail(mail) {
     return (check1 && check2 && check3)
 }
 
-function checkSymbol(str){
-    if(str[0] == "@" || str[0] == "." || str[0] == "-" )
+// Checks @ '.' '-' at the start of email-id
+// Checks for consecutive dots and multiple @
+function checkSymbol(str) {
+    if (str[0] == "@" || str[0] == "." || str[0] == "-")
         return false
     var count = 0
-    for(var i = 0; i < str.length; i++){
-        if(str[i] == "." && str[i+1] == ".")
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] == "." && str[i + 1] == ".")
             return false
-        if(str[i] == "@"){
+        if (str[i] == "@") {
             count++
         }
     }
-    if(count == 1)
+    if (count == 1)
         return true
-    else 
-        return false
-}
-
-function firstElement(str){
-    if(str[0] == "@" || str[0] == ".")
-        return false
     else
-        return true
+        return false
 }
 
-function validCharacters(str){
+// Checks for individual character validation
+function validCharacters(str) {
     var count = 0
-    for(var i = 0; i < str.length; i++){
-        switch(str[i]){
+    for (var i = 0; i < str.length; i++) {
+        switch (str[i]) {
             case 'a':
             case 'A':
             case 'b':
@@ -98,26 +94,27 @@ function validCharacters(str){
             case '-':
             case '.':
             case '@':
-            case '_':continue
-            default : count++
+            case '_': continue
+            default: count++
         }
     }
-    if(count > 0)
+    if (count > 0)
         return false
-    else 
+    else
         return true
 }
 
-function checkTlds(mail){
-    var len = mail.length , tld = ""
-    function getTld(mail){
-        for(var i = 0; i < len; i++){
-            if(mail[i] == "@"){
-                if(mail[i+1] == ".")
+// Checks for top-level-domain validation
+function checkTlds(mail) {
+    var len = mail.length, tld = ""
+    function getTld(mail) {
+        for (var i = 0; i < len; i++) {
+            if (mail[i] == "@") {
+                if (mail[i + 1] == ".")
                     return false
-                for(var j = i+2; j < len; j++){
-                    if(mail[j] == "."){
-                        for(var k = j; k < len; k++){
+                for (var j = i + 2; j < len; j++) {
+                    if (mail[j] == ".") {
+                        for (var k = j; k < len; k++) {
                             tld += mail[k]
                         }
                         return tld
@@ -127,7 +124,7 @@ function checkTlds(mail){
         }
     }
     var tld = getTld(mail)
-    if(tld == ".com" ||tld == ".org" ||tld == ".net" ||tld == ".in")
+    if (tld == ".com" || tld == ".org" || tld == ".net" || tld == ".in")
         return true
     else
         return false

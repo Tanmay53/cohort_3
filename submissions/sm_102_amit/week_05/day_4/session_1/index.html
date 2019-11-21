@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container flex-row">
+      <div class="flex-box">
+        <h1>Click the button to add a new customer!</h1>
+        <button onclick="addCustomerForm()">Add customer</button>
+        <hr />
+        <div id="customerForm">
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" class="input-box" />
+
+          <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" class="input-box" />
+
+          <label for="dob">DOB</label>
+          <input type="text" name="dob" class="input-box" />
+
+          <label for="balance">Balance</label>
+          <input type="text" name="balance" class="input-box" />
+
+          <label for="acc-number">Account Number</label>
+          <input type="text" name="acc-number" class="input-box" />
+
+          <label for="acc-holder">Account Holder (Comma Seprated)</label>
+          <input type="text" name="acc-holder" class="input-box" />
+          <hr />
+          <button name="submit" id="submitData">Submit</button>
+        </div>
+      </div>
+
+      <div class="flex-box">
+        <!-- FSD.W4.3.1_3 !-->
+        <h1>Click here to print all customers!</h1>
+        <button id="displayData">Print Customers</button>
+        <hr />
+        <div id="displayContainer"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
