@@ -1,0 +1,18 @@
+body{
+    margin: auto;
+    padding: auto;
+}
+.flex-box{
+    border: 1 px dashed red;
+    display: flex;
+    flex-flow: row wrap;
+}
+.flex-box  div{
+    height: 100px;
+    width: 100px;
+    background: teal;
+    border:1px solid teal;
+    flex-basis: auto;
+    margin: 10px;
+    padding: 10px;
+}
