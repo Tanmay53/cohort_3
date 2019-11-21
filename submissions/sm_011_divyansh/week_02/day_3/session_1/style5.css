@@ -1,0 +1,27 @@
+#grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 150px 500px;
+    grid-template-rows: 100px  300px;
+      grid-gap: 20px;
+  }
+  
+  #areaA {
+    background-color: red;
+    grid-area: 1/1/1/span 2;
+    border-radius:6px;
+  }
+  
+  #areaB {
+    background-color: lime;
+    grid-area: 2/1/2/span 1;
+    border-radius:6px;
+  }
+      
+  
+  
+  #areaC {
+    background-color: seagreen;
+    border-radius:6px;
+  }
+  
