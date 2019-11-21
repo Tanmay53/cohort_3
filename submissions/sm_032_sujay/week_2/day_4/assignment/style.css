@@ -1,0 +1,183 @@
+.header a{
+    float:right;
+    margin:20px;
+    text-decoration: none;
+    color:darkslategray;
+}
+.header button{
+ border:1px solid red;
+ background-color:white;
+ color:red;
+ float:right;
+ margin-top: 18px;
+ height:25px;
+ margin-right:25px;
+ margin-left:20px;
+}
+.bgimg img{
+    width:1345px;
+}
+.bgimg h1{
+    position:relative;
+    top:-500px;
+    left:580px;
+    font-size:60px;
+    color:white;
+}
+.bgimg p{
+    position:relative;
+    top:-490px;
+    left:440px;
+    font-size:45px;
+    color:white;
+
+}
+.bph{
+    display:flex;
+    flex-direction:row;
+    margin-right:20px;
+    margin-top:-280px;
+    margin-left:160px;
+    margin-bottom:50px;
+    
+}
+.build img{
+    height:220px;
+    width:220px;
+    margin-right:45px;
+
+}
+.pay img{
+    height:220px;
+    width:220px;
+    margin-right:45px;
+
+}
+.dev img{
+    height:220px;
+    width:220px;
+    margin-right:45px;
+}
+.build h1{
+ font-size:20px;
+ margin-right:45px;
+}
+.build p{
+ font-size:15px;
+ margin-right:45px;
+ 
+}
+.pay h1{
+    font-size:20px;
+    margin-right:45px;
+   }
+   .pay p{
+    font-size:15px;
+    margin-right:45px;
+   }
+   .dev h1{
+    font-size:20px;
+    margin-right:45px;
+   }
+   .dev p{
+    font-size:15px;
+    margin-right:45px;
+   }
+
+
+   .uniqueNum{
+       display:grid;
+       grid-template-rows:200px 200px;
+       grid-template-columns: 380px 380px;
+       row-gap:60px;
+       column-gap:60px;
+       margin-left:260px;
+       margin-top:60px;
+       
+      
+   }
+   .unique{
+    background:linear-gradient(130deg,blue,lightblue);
+    color:white;
+
+   }
+   .uniqueNum div{
+       background-color:white;
+       color:blue;
+       font-size:50px;
+       text-align:center;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .partner{
+       display:flex;
+       flex-direction:row;
+       
+   }
+   .partner img{
+       margin:50px;
+       height:60px;
+       width:120px;
+   }
+   .hiring p{
+       text-align:center;
+       font-size:45px;
+       font-family:Arial, Helvetica, sans-serif;
+
+   }
+
+   .payop{
+    background:linear-gradient(130deg,blue,lightblue);
+    color:white;
+    border:1px solid black;
+    height:550px;
+   }
+   .payop p{
+       text-align:center;
+       font-size:40px;
+       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   .option{
+       display:flex;
+       flex-direction:row;
+       margin:20px;
+       
+
+   }
+
+   .option div{
+       height:100px;
+       width:250px;
+       margin:120px;
+   }
