@@ -14,6 +14,15 @@ function Customers(fname, lname, dob, balance, accNumber, shAccHolder) {
   this.balance = balance;
   this.accNumber = accNumber;
   this.shAccHolder = shAccHolder;
+  this.displayCustomer = function displayCustomer(obj) {
+    var str = "";
+    for (key in obj) {
+      if (key != "displayCustomer") {
+        str += `${key} : ${obj[key]} \n`;
+      }
+    }
+    return str;
+  };
 }
 
 // Input Field Details
@@ -79,17 +88,10 @@ function display() {
     var h4 = document.createElement("h4");
     h4.innerText = `User ${index + 1}`;
     var p = document.createElement("pre");
-    p.innerHTML = displayCustomer(val);
+    p.innerHTML = val.displayCustomer(val);
     div.appendChild(h4);
     div.appendChild(p);
   });
   displayContainer.appendChild(div);
 }
 // display Customer
-function displayCustomer(obj) {
-  var str = "";
-  for (key in obj) {
-    str += `${key} : ${obj[key]} \n`;
-  }
-  return str;
-}
