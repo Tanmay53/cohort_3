@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Market</title>
+        <style>
+            #cont {
+                display: flex;
+            }
+            #cont div{
+                display: grid;
+                gap: 20px;
+                grid-template-columns: repeat(2, 200px);
+            }
+            #btn {
+                width: 100px;
+                margin-left: 100px;
+            }
+            #dataTable {
+                margin-top: 50px;
+                display: grid;
+                grid-template-columns: repeat(3, 200px);
+            }
+
+        </style>
+    </head>
+    <body>
+       <!-- FORM to add -->
+       <div id="cont">
+            <div class="flex">
+                <div>
+                    Product:
+                </div>
+                <input type="text" id="prod" placeholder="Enter Product Name">
+            </div>
+            <div class="flex">
+                <div>
+                    Price:
+                </div>
+                <input type="text" id="price" placeholder="Enter Price">
+            </div>
+            <div class="flex">
+                <div> 
+                    Quantity
+                </div>
+                <input type="text" id="quant" placeholder="Enter Quantity">
+            </div>
+            <button id="btn" onclick="addRecord()">ADD</button>
+       </div>   
+       <!-- TABLE -->
+       <div id="dataTable">
+            <div>
+               <div>Product</div>
+            </div>
+            <div>
+                <div>Price</div>
+            </div>
+            <div>
+               <div>Qty</div>
+            </div>
+       </div>
+       <!-- SETTINGS -->
+       <div>
+           <!-- Settings -->
+       </div>
+       <script src="script.js"></script>
+    </body>
+</html>
