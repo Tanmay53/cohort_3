@@ -1,0 +1,81 @@
+/* for wikipedia logo */
+
+.one{
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+    background: aquamarine;
+    width: 200px;
+    float: left;
+}
+
+#a1{
+    height: 160px;
+    width: 160px;
+}
+
+.oneA{
+    padding: 5px;
+    /* background:grey; */
+} 
+.oneA ~ a {
+    padding: 5px;
+    /* background:grey; */
+}
+
+a:hover{
+    text-decoration: ;
+}
+
+.inter{
+    background: grey;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.inter ~ div{
+    background: grey;
+    padding: 5px;
+    margin-top: 5px;
+
+}
+
+.two{
+background: lightcoral;
+display: flex;
+float: right;
+}
+
+.two div{
+    padding: 5px;
+}
+
+
+.three{
+background: rgb(197, 154, 154);
+display: flex;
+float: right;
+}
+
+.three div{
+    padding: 5px;
+}
+
+ #c2{
+    margin-right: 1200px;
+}
+
+
+.four{
+    font-size: 50px;
+    float: left;
+    background: salmon;
+}
+
+#d1{
+    margin-left: 20px;
+
+}
+
+
+
