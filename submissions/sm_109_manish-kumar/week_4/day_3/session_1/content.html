@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>content</title>
+</head>
+<body>
+	<h1 class="he" id="st"><b>Hello</b></h1>
+	<p class="he" id="nd">MASAI</p>
+	<P class="he" id="rd">School</P>
+
+	<hr>
+
+	<button onclick="fName()">FIRSTNAME</button>
+	<button onclick="lName()">LASTNAME</button>
+	<button onclick="flName()">FULLNAME</button>
+	<button onclick="reset()">RESET</button>
+
+	<script>
+		function fName(){
+			document.getElementById("st").innerHTML = "MANISH";
+			}
+			function lName(){
+			document.getElementById("nd").innerHTML = "KUMAR";
+			}
+			function flName(){
+			document.getElementById("rd").innerHTML = "MANISH KUMAR";
+			}
+			function reset(){
+				var x = document.getElementsByClassName('he');
+				x[0].innerHTML = "Hello";
+				x[1].innerHTML = "MASAI";
+				x[2].innerHTML = "School";
+			}
+	</script>
+</body>
+</html>
