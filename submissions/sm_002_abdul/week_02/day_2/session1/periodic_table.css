@@ -1,0 +1,146 @@
+/* .........OVERALL BODY OF PERIODIC TABLE....... */
+
+#container{
+    width:900px;
+}
+/* <........TOP HEADING PART.........> */
+#heading{
+    width: 900px;
+    align-content: center;
+    padding:0px 12% 0px 12%;
+}
+
+/* <.........PERIODIC TABLE MIDPART...........> */
+#periodicTable{
+    width:900px;
+}
+
+.box{
+    width: 38px;
+    height:38px;
+    margin: 4px;
+    border:2px solid black;
+}
+.noBorder{
+    border: border 0px;
+}
+
+/* .........COLUMN 1............... */
+
+#column1{
+    float: left;
+}
+#hydrogen{
+    background: red;
+    text-align: center;
+}
+.olive{
+    background: olivedrab;
+}
+/* ..............COLUMN 2................. */
+#column2{
+    float:left;
+}
+.secondCol{
+    margin-top: 50px;
+}
+
+.salmon{
+    text-align: center;
+    background: salmon;
+}
+/* ................COLUMN 3................... */
+#column3{
+    float: left;
+}
+.thirdCol{
+    margin-top: 234px;
+}
+.pink{
+    background: pink;
+    width: 34px;
+    height:34px;
+    border:4px solid black;
+}
+
+
+/* <!-- .............SILICON BLOCK ................... -->  */
+
+#siliconBlock{
+    float: left;
+    width: 150px;
+}
+#siliconBox{
+    height: 100px;
+    width:100px;
+    float: left;
+    border: 2px solid black;
+    background: olivedrab;
+    margin:16px 0px 16px 0px;
+}
+#number{
+    float:right;
+    font-size: smaller;
+}
+#si{
+    clear:right;
+    float: left;
+    font-size: xx-large;
+    padding:5%;
+}
+#smallText{
+    clear: left;
+    font-size: smaller;
+    padding:1%;
+}
+
+.siBlueColumn{
+    float: left;
+}
+.firstBlue{
+    margin-top:8px !important;
+}
+.blue{
+    background: blue;
+} 
+/* ..............BLUE BOXES BLOCK................. */
+.blueColumn{
+    float: left;
+}
+.firstBl{
+    margin-top: 144px !important;
+}
+/* ............RIGHTSIDE BLOCK..................... */
+.rightColumn{
+    float:left;
+}
+.firstRight{
+    margin-top: 50px !important;
+}
+.purple{
+    background: purple ;
+}
+.orangeRed{
+    background: orangered;
+}
+.dimGray{
+    background: dimgray;
+}
+.limeGreen{
+    background: limegreen;
+}
+.magenta{
+    background: magenta;
+}
+.gold{
+    background: gold;
+}
+
+
+
+
+
+
+
+
+
