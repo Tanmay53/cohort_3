@@ -40,16 +40,25 @@ a:hover{
 
 }
 
+/* for top 1st flex box */
 .two{
 background: lightcoral;
 display: flex;
-float: right;
+/* float: right; */
+
 }
 
 .two div{
     padding: 5px;
+    /* float: right; */
+    
 }
 
+#b1{
+    margin-left:1250px ;  
+    /* float: right; */
+}
+/* for top 1st flex box end here*/
 
 .three{
 background: rgb(197, 154, 154);
@@ -65,17 +74,34 @@ float: right;
     margin-right: 1200px;
 }
 
-
+/* for linus torvalds heading */
 .four{
+    display: flex;
     font-size: 50px;
     float: left;
     background: salmon;
+    /* clear: left; */
 }
 
 #d1{
     margin-left: 20px;
+    width: 1635px;
+}
+/* linus torvalds heading end here  */
 
+.five{
+display: flex;
+background:red;
+/* flex-direction: row; */
+/* float: right; */
+float: left;
+/* clear: left; */
+width: 1630px;
+margin-left: 20px;
+padding: 5px;
 }
 
-
-
+.six{
+    display: flexbox;
+    background: skyblue;
+}
