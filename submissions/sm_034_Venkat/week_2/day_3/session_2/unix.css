@@ -10,6 +10,9 @@
     width:400px;
     margin:auto;     
   }
+  .row1 p {
+    font-size: 18px;
+  }
 h1 {
     color : red
   }
@@ -38,7 +41,6 @@ h1 {
   display:grid;
   grid-template-columns:150px 500px ;
   grid-template-rows:auto auto;
-  grid-grew:2;
   grid-column-gap:25px;
   margin:100px;
   margin-top:30px;

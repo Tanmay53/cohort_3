@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>layout 2</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      .yellow {
+        background: yellow;
+        height: 100px;
+      }
+      .red {
+        background: red;
+        height: 500px;
+      }
+      .green {
+        background: green;
+        height: 500px;
+      }
+      @media (max-width: 768px) {
+        .red {
+          height: 300px;
+          margin-top: 10px;
+        }
+        .green {
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-group form-row">
+        <div class="col-12 col-lg-12 col-md-12 my-5">
+          <div class="yellow">
+            <h1>Navigation</h1>
+          </div>
+        </div>
+      </div>
+      <div class="form-group form-row">
+        <div class="col-12 col-lg-6 col-md-6 order-3">
+          <div class="red"><h2>LEFT BOX</h2></div>
+        </div>
+        <div class="col-lg-6 col-12 col-md-6 order-2">
+          <div class="green"><h2>RIGHT BOX</h2></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

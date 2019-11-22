@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Session2</title>
+    </head>
+    <style>
+        body {
+            background:yellow;
+        }
+    </style>
+    <body>
+        <script>
+         function random(number) {
+              return Math.floor(Math.random()*number);
+            }
+            
+            
+            function changeColor() {
+                var randColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+                document.querySelector("body").style.background = randColor
+            }
+       // window.onresize=changeColor
+       //both of them will work
+        window.addEventListener('resize', changeColor)
+        
+        
+        
+        </script>
+    </body>
+</html>

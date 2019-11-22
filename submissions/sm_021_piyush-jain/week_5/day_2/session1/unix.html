@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+        .class1 {
+            background-color: rgb(175, 170, 170);
+            margin-left: 350px;
+            width: 350px;
+            padding: 10px;
+            border: 2px solid black;
+            height: 250px;
+        }
+        #img1 {
+            height: 175px;
+            width: 225px;
+            margin-left: 20px;
+        }
+        #figcpt {
+            color: teal;
+            text-align: center;
+            font-size: 20px;
+        }
+        #p1 {
+            text-align: center;
+        }
+        .class2 {
+            clear: both;
+            margin-left: 150px;
+            height: 150px;
+            width: 800px;
+            margin:25px 0px 15px 150px; 
+        }
+        #id2 {
+            height: 150px;            
+            margin-left: 180px;
+            width: 150;
+            float: left;
+        }
+        #id4 {
+            margin-left: 350px;
+            width: 600px;
+        }
+        #id1 {
+            color: maroon;
+            margin-left: 350px;
+        }
+        .bottom{
+            height: 150px;
+            width: 1000px;
+            clear: both;
+            margin-top: 40px;
+            margin-left: 160px;
+            background-color: orangered;
+            display: grid;
+            grid-template-columns: 450px 10px 450px;
+            grid-template-rows: 50px 50px;
+            grid-gap: 30px;
+        }
+
+        #bottom1{
+            color: white;
+            margin: 10px 0px 0px 10px;
+        }
+        #bottom2{
+             grid-area: 1/2/3/3;
+             background-color: black;
+             margin-top: 10px;
+        }
+        #bottom3{
+            color: white;
+            margin: 10px 0px 0px 0px;
+            text-align:right
+        }
+        #bottom4{
+            margin: 10px 0px 0px 10px;
+        }
+        #bottom5{
+            margin: 10px 0px 0px 0px;
+            text-align:right
+        }
+        
+        </style>
+    </head>
+    <body>
+       <button id="btn"onclick="Create()">Create Page</button>
+       <script>
+            function Create(){
+                var button1=document.getElementById('btn')
+                var bodyElem=document.querySelector('body');
+                var div1=document.createElement('div');
+                div1.setAttribute('class','class1');
+                div1.innerHTML='<figure><img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg"id="img1" /><figcaption id="figcpt">Linus Torvalds</figcaption><p id="p1">The creator of Linux and Git</p></figure>'
+                var div2=document.createElement('div');
+                div2.setAttribute('class','class2');
+                div2.innerHTML='<img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg"id="id2"/><p id="id1"><b>Sal Khan</b></p><p id="id4">Salman Khan is the founder of Khan academy which has a mission of providing free worldclass education for anyone,anywhere.</p>'
+                var div3=document.createElement('div')
+                div3.setAttribute('class','bottom');
+                div3.innerHTML='<div id="bottom1">Ken Thompson</div><div id="bottom2"></div><div id="bottom3">Dennis Ritchie</div><div id="bottom4">Design and implemented the<br>original unix operating system</div><div id="bottom5">The creator of C Language</div>'
+                bodyElem.insertBefore(div1,button1);
+                bodyElem.insertBefore(div2,button1);
+                bodyElem.insertBefore(div3,button1);
+            }
+        </script>
+    </body>
+</html>

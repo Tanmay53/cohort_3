@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>alert</title>
+</head>
+<body>
+	<h2 id="test"></h2>
+	<button onclick= "changeFirst()">First Name</button>
+	<button onclick= "changeSecond()">Last Name</button>
+	<button onclick= "changeFull()">Full Name</button>
+	<script>
+		function changeFirst(){
+			alert(document.getElementById("test").innerHTML = "manish");
+		}
+		function changeSecond(){
+			alert(document.getElementById("test").innerHTML);
+		}
+		function changeFull(){
+			alert(document.getElementById("test").innerHTML);
+		}
+	</script>
+</body>
+</html>

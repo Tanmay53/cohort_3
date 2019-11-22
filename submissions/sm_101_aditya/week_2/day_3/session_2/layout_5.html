@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout_5</title>
+        <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 150px 600px;
+            grid-template-rows: 50px 300px;
+            grid-gap: 20px;
+            border: 1px black;
+            padding: 10px;
+        }
+        #item1{
+            grid-area: 1 / 1 / span 1 / span 2;
+            background: red;
+        }
+        #item2{
+            
+            background: rgb(46, 214, 40);
+        }
+        #item3{
+            
+            background: rgb(6, 212, 240);
+        }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div id="item1"></div>
+            <div id="item2"></div>
+            <div id="item3"></div>
+        </div>
+
+    </body>
+</html>

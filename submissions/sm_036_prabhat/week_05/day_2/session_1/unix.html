@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <style>
+        .boxLinus {
+            height: 350px;
+            width: 500px;
+            background: lightcoral;
+            margin: 50px 650px;
+        }
+
+        .textCenter {
+            text-align: center;
+        }
+
+        .colBlue {
+            color: blue;
+            text-align: center;
+        }
+
+        .colRed {
+            color: red;
+        }
+
+        .colWhite {
+            color: lightcyan;
+        }
+
+        .fontSize_25 {
+            font-size: 25px;
+        }
+
+        .fontSize_20 {
+            font-size: 20px;
+        }
+
+        .fontSize_35 {
+            font-size: 35px;
+        }
+
+        .floatleft {
+            float: left;
+        }
+
+        .marginLeft_80 {
+            margin-left: 80px;
+        }
+
+        .marginLeft_20 {
+            margin-left: 20px;
+        }
+
+        .marginLeft_140 {
+            margin-left: 140px;
+        }
+
+        .marginLeft_250 {
+            margin-left: 250px;
+        }
+
+        .marginRight_20 {
+            margin-right: 20px;
+        }
+
+        .margin_20px {
+            margin: 20px 170px;
+        }
+
+        .padding {
+            padding: 20px;
+        }
+
+        .footer {
+            height: 200px;
+            width: 1500px;
+            margin: 50px 170px;
+            background: indianred;
+        }
+
+        .smallBlackBox {
+            height: 150px;
+            width: 15px;
+            background: black;
+            margin-top: -160px;
+            margin-left: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="createPage()">Create Page</button>
+    <script>
+        function createPage() {
+            // Creating Linux Div
+            var body = document.querySelector('body');
+            var boxLinus = document.createElement('div');
+            boxLinus.setAttribute('class','boxLinus');
+            body.appendChild(boxLinus); 
+            // Appending Image
+            var img = document.createElement('img');
+            img.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg');
+            img.setAttribute('class','margin_20px');
+            img.style.height = '180px';
+            img.style.width = '150px';
+            boxLinus.appendChild(img);
+            // Apeending H1
+            var linusH1 = document.createElement('h1');
+            linusH1.innerHTML = "Linus Torvalds";
+            linusH1.setAttribute('class', 'colBlue');
+            boxLinus.appendChild(linusH1);
+            // AppenndingH3
+            var linusH3 = document.createElement('h3');
+            linusH3.innerHTML = "The Creator of Linux & Git";
+            linusH3.setAttribute('class', 'textCenter');
+            boxLinus.appendChild(linusH3);
+            // Sal khan Image
+            var boxSal = document.createElement('div');
+            // boxLinus.setAttribute('class','floatleft');
+            body.appendChild(boxSal); 
+            // Sal Image
+            var imgSal = document.createElement('img');
+            imgSal.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg');
+            imgSal.setAttribute('class','marginLeft_250');
+            imgSal.style.height = '180px';
+            imgSal.style.width = '150px';
+            boxSal.appendChild(imgSal);
+            // Sal Content
+            var salContent = document.createElement('div');
+            // salContent.setAttribute('class',"floatleft ")
+            salContent.style.float ='right'
+            salContent.style.marginRight ='400px'
+            salContent.setAttribute('class', 'marginLeft_80');
+            boxSal.appendChild(salContent);
+            // creating h1
+            var salH1 = document.createElement('h1');
+            salH1.setAttribute('class','colRed')
+            salH1.innerHTML="Sal Khan"
+            salContent.appendChild(salH1);
+             // creating p
+            var salp = document.createElement('p');
+            salp.setAttribute('class','fontSize_25')
+            salp.innerHTML ="Salman Khan is the founder of the Khan Academy which has a mission <br> of providing a free world-class education for anyone, anywhere."
+            salContent.appendChild(salp);
+            // Creating footer
+            var footerDiv = document.createElement('div');
+            footerDiv.setAttribute('class', 'footer');
+            body.appendChild(footerDiv);
+            // 1st div
+            var firstDiv = document.createElement('div');
+            footerDiv.appendChild(firstDiv);
+            // 1st para
+            var firstPara = document.createElement('p');
+            firstPara.setAttribute('class', 'padding')
+            firstPara.style.color ="white";
+            firstPara.style.fontSize ="35px";
+            firstPara.textContent= 'Ken Thompson';
+            firstDiv.appendChild(firstPara);
+            // 2nd para
+            var secondPara = document.createElement('p');
+            secondPara.setAttribute('class', 'padding');
+            secondPara.setAttribute('class','marginLeft_20');
+            secondPara.style.color ="white";
+            secondPara.style.fontSize ="20px";
+            secondPara.innerHTML= 'Designed and Implemented the <br> original Unix operating system';
+            firstDiv.appendChild(secondPara);
+            // 2st div
+            var secondDiv = document.createElement('div');
+            secondDiv.style.marginTop = '-200px';
+            secondDiv.style.float = 'right';
+            footerDiv.appendChild(secondDiv);
+            // 1st para
+            var para1 = document.createElement('p');
+            para1.setAttribute('class', 'marginLeft_140');
+            para1.style.color ="white";
+            para1.style.fontSize ="35px";
+            para1.textContent= 'Dennis Ritche';
+            secondDiv.appendChild(para1);
+            // 2nd para
+            var para2 = document.createElement('p');
+            para2.setAttribute('class', 'padding');
+            para2.setAttribute('class','marginRight_20');
+            para2.style.color ="white";
+            para2.style.fontSize ="20px";
+            para2.innerHTML= 'The creator of C Programming Language';
+            secondDiv.appendChild(para2);
+            // 3rd Div
+            var thirdDiv = document.createElement('div');
+            thirdDiv.setAttribute('class','smallBlackBox')
+            footerDiv.appendChild(thirdDiv);
+
+        }
+    </script>
+</body>
+
+</html>

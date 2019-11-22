@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>grid_4.html</title>
+    </head>
+    <style>
+        .cont{
+            display:grid;
+            margin:20px;
+            grid-gap:20px;
+            grid-template-rows: 50px 50px 50px 50px ;
+            grid-template-columns: 50px 50px 50px 50px ;
+            justify-content:center;
+
+             } 
+        .cont div {
+            background: #7fff00;
+        }
+        #class2{
+            background:#7fff00 ;
+            grid-area: 1 / 2 / 1 /4;
+        }
+        #class4{
+            background:#7fff00 ;
+            grid-area: 2 / 1 / 2 /3;
+        }
+        #class9{
+            background:#7fff00 ;
+            grid-area: 3 / 3 / 3 /5;
+        }
+        
+
+          
+    </style>
+    <body>
+        <div class="cont">
+        <div></div>
+        <div  id="class2"></div>
+        <div></div>
+        <div id="class4"></div>
+        <div></div>
+        <div></div>
+         <div></div>
+        <div ></div>
+        <div id="class9"></div>
+        
+
+        </div>
+    </body>
+</html>
