@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>layout_3</title>
+    <style>
+        div {
+            box-sizing: border-box;
+        }
+
+        #navb {
+            background-color: orange;
+            height: 50px;
+            width: 760px;
+            font-size: 31px;
+            margin: 10px;
+        }
+
+        #lb {
+            height: 490px;
+            width: 510px;
+            float: left;
+            background-color: green;
+            margin: 10px;
+            font-size: 25px
+        }
+
+        .flex div {
+            height: 150px;
+            width: 230px;
+            background: lime;
+            float: left;
+            margin: 10px;
+            font-size: 22px
+        }
+
+        @media only screen and (max-width: 800px) {
+            #navb {
+                width: 600px;
+            }
+
+            #lb {
+                width: 600px;
+                height: 250px;
+            }
+
+            .flex div {
+                width: 187px;
+                height: 120px
+            }
+        }
+
+        @media only screen and (max-width:660px) {
+            #navb {
+                width: 450px
+            }
+
+            #lb {
+                width: 450px;
+                height: 250px
+            }
+
+            .flex div {
+                width: 450px;
+                height: 150px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navb">Navigation Bar</div>
+    <div id="lb">LEFT BOX</div>
+    <div class="flex">
+        <div id="rb1">RIGHT BOX 1</div>
+        <div id="rb2">RIGHT BOX 2</div>
+        <div id="rb3">RIGHT BOX 3</div>
+    </div>
+</body>
+
+</html>

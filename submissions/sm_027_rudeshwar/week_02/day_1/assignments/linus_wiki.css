@@ -1,5 +1,4 @@
 /* for wikipedia logo */
-
 .one{
     display: flex;
     flex-direction: column;
@@ -18,14 +17,13 @@
     padding: 5px;
     /* background:grey; */
 } 
-.oneA ~ a {
+.oneA ~ a{
     padding: 5px;
     /* background:grey; */
 }
-
-a:hover{
-    text-decoration: ;
-}
+/* a:hover{
+    text-decoration: ; do later
+} */
 
 .inter{
     background: grey;
@@ -37,45 +35,105 @@ a:hover{
     background: grey;
     padding: 5px;
     margin-top: 5px;
-
 }
 
+/* START for 1st flex box from top */
 .two{
 background: lightcoral;
 display: flex;
-float: right;
+justify-content: flex-end;
 }
-
 .two div{
-    padding: 5px;
+    padding: 5px;   
 }
+/* END 1st flex box from top */
 
 
+/* START for 2nd flex box from top*/
 .three{
-background: rgb(197, 154, 154);
+background: rgb(235, 101, 101);
 display: flex;
-float: right;
+justify-content: flex-start;
+float: left;
 }
 
 .three div{
     padding: 5px;
 }
 
- #c2{
-    margin-right: 1200px;
-}
-
-
 .four{
-    font-size: 50px;
-    float: left;
+    background: rgb(197, 154, 154);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.four div{
+      padding: 5px;
+}
+/* END for 2nd flex box from top*/
+
+
+
+/* Start for Linus Torvalds heading */
+.five{
+    display: flex;
     background: salmon;
+    font-size: 50px;
+    padding: 10px;
+    flex-basis: auto;
+} 
+/* END Linus Torvalds heading end here  */
+
+
+.six{
+display: flex;
+background:red;
+padding: 10px;
+} 
+
+
+
+.seven{
+   
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 14;
+    padding: 5px;
+    border: 5px solid black;
+    border: 10px solid rgb(216, 224, 102);
+    background: rgb(25, 147, 195);
+    width: 300px;
+    height: 800px;
+    float: right;
 }
 
-#d1{
-    margin-left: 20px;
+#g1{
+    grid-area: 1/1/span 1/span 2;
+    /* border: 1px solid red; */
+}
 
+#g2{
+    grid-area: 2/1/span 1/span 2;
 }
 
 
+#g3{
+    grid-area: 3/1/span 1/span 2;
+}
 
+.ten{
+display: grid;
+grid-template-columns: 1;
+grid-template-rows: 10;
+border: 1px solid black;
+float: left;
+background: rgb(189, 183, 183);
+clear: inherit;
+
+}
+
+.eleven{
+float: inherit;
+background: lightpink;
+
+}
