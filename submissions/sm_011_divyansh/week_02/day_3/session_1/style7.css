@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+      grid-gap: 20px;
+  }
+  .grid div{
+    background:seagreen;
+    border-radius:5px;
+    
+  }
+  #id2{
+    grid-area:1/2/1/4;
+  }
+  #id4{
+    grid-area:2/1/2/3
+  }
+  #id9{
+     grid-area:3/2/3/4
+  }
+  

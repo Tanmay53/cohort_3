@@ -24,7 +24,7 @@
 display: grid;
 grid-template-rows: auto auto auto auto auto auto auto;
 grid-template-columns: 100px 100px 100px;
-background:lightblue;
+/* background:lightblue; */
 grid-row-gap: 10px;
 grid-column-gap: 10px;
 width: 330px;
@@ -44,7 +44,7 @@ width: 330px;
 } 
 
 #a2{
-    background:lightblue;
+    /* background:lightblue; */
     width: 100px;
     /* border: 1px solid black; */
     width: 100px;
@@ -52,7 +52,7 @@ width: 330px;
 } 
 
 #a3{
-    background:lightblue;
+    /* background:lightblue; */
     /* border: 1px solid black; */
     width: 100px;
     height: 100px;
@@ -75,7 +75,7 @@ width: 330px;
 } 
 
 #a6{
-    background:lightblue;
+    /* background:lightblue; */
     /* border: 1px solid black; */
     width: 100px;
     height: 100px;
@@ -100,7 +100,7 @@ width: 330px;
 } 
 
 #a9{
-    background:lightblue;
+    /* background:lightblue; */
     width: 100px;
     /* border: 1px solid black; */
     width: 100px;
@@ -124,7 +124,7 @@ width: 330px;
 } 
 
 #a12{
-    background:lightblue;
+    /* background:lightblue; */
    
     /* border: 1px solid black; */
     width: 100px;
@@ -152,7 +152,7 @@ width: 330px;
 
 
 #a15{
-    background:lightblue;
+    /* background:lightblue; */
     width: 100px;
     height: 100px;
     /* border: 1px solid black; */
@@ -224,18 +224,11 @@ margin-top: -750px;
 
 
 
-
-
-
-
-
-
-
 .two{
 display: grid;
 grid-template-rows: auto auto auto auto ;
 grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-background:lightblue;
+/* background:lightblue; */
 grid-row-gap: 10px;
 grid-column-gap: 10px;
 width: 990px;
@@ -252,68 +245,8 @@ margin-top: -440px;
 
 }
 
-#b2{
-    background:rgb(17, 17, 182);
-    width: 100px;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
 
-}
-#b3{
-    background:rgb(17, 17, 182);
-    width: 100px;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-
-}
-
-#b4{
-    background:rgb(17, 17, 182);
-    width: 100px;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-
-}
-
-#b5{
-    background:rgb(17, 17, 182);
-    width: 100px;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-
-}
-#b6{
-    background:rgb(17, 17, 182);
-    width: 100px;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-
-}
-
-#b7{
-    background:rgb(17, 17, 182);
-    width: 100px;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-
-}
-
-#b8{
-    background:rgb(17, 17, 182);
-    width: 100px;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-
-}
-#b9{
-    background:rgb(17, 17, 182);
+.rj ~ div{ background:rgb(17, 17, 182);
     width: 100px;
     border: 1px solid black;
     width: 100px;
@@ -322,3 +255,461 @@ margin-top: -440px;
 
 
 
+
+
+
+.three{
+
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px ;
+    /* background:lightblue; */
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    width: 670px;
+    margin-left: 1340px;
+    margin-top: -770px;
+    
+}
+
+
+
+
+#c1{
+    /* background:lightblue; */
+    width: 100px;
+    /* border: 1px solid black; */
+    width: 100px;
+    height: 100px;
+
+}
+
+#c2{
+    /* background:lightblue; */
+    width: 100px;
+    /* border: 1px solid black; */
+    width: 100px;
+    height: 100px;
+
+}
+#c3{
+    /* background:lightblue; */
+    width: 100px;
+    /* border: 1px solid black; */
+    width: 100px;
+    height: 100px;
+
+}
+
+#c4{
+    /* background:lightblue; */
+    width: 100px;
+    /* border: 1px solid black; */
+    width: 100px;
+    height: 100px;
+
+}
+
+#c5{
+    /* background:lightblue; */
+    width: 100px;
+    /* border: 1px solid black; */
+    width: 100px;
+    height: 100px;
+
+}
+#c6{
+    background:rgb(250, 250, 135);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c7{
+    background:rgb(115, 44, 182);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+#c8{
+    background:rgb(54, 131, 31);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c9{
+    background:rgb(54, 131, 31);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c10{
+    background:rgb(54, 131, 31);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c11{
+    background:red;
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c12{
+    background:rgb(250, 250, 135);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c13{
+    background:rgb(231, 109, 27);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c14{
+    background:rgb(115, 44, 182);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+
+
+
+
+#c15{
+    background:rgb(54, 131, 31);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c16{
+    background:rgb(54, 131, 31);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c17{
+    background:red;
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c18{
+    background:rgb(250, 250, 135);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c19{
+    background:rgb(231, 109, 27);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c20{
+    background:rgb(115, 44, 182);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c21{
+    background:rgb(115, 44, 182);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+
+
+
+
+#c22{
+    background:rgb(54, 131, 31);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c23{
+    background:red;
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c24{
+    background:rgb(250, 250, 135);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c25{
+    background:rgb(231, 109, 27);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c26{
+    background:rgb(231, 109, 27);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c27{
+    background:rgb(115, 44, 182);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c28{
+    background:rgb(115, 44, 182);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+
+
+
+#c29{
+    background:red;
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c30{
+    background:rgb(250, 250, 135);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c31{
+    background:rgb(231, 109, 27);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c32{
+    background:rgb(231, 109, 27);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c33{
+    background:rgb(231, 109, 27);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c34{
+    background:rgb(115, 44, 182);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c35{
+    background:red;
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+
+
+
+#c36{
+    background:rgb(250, 250, 135);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c37{
+    background:rgb(100, 79, 79);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c38{
+    background:rgb(100, 79, 79);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c39{
+    background:rgb(100, 79, 79);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c40{
+    background:rgb(100, 79, 79);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+#c41{
+    background:rgb(100, 79, 79);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+#c42{
+    background:rgb(100, 79, 79);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+.four{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px ;
+    /* background:lightblue; */
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    
+    margin-left: 400px;
+    margin-top: 100px;
+    margin-right: 150px;
+    
+}
+
+
+.four > div{
+    background:rgb(51, 58, 10);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+
+}
+
+.five ~ div{
+    background:rgb(51, 58, 10);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+.six ~ div{
+
+    background:rgb(162, 177, 81);
+    width: 100px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+#d1{
+font-size: 50px;
+color: white;
+}
+
+#d2{
+    font-size: 50px;
+    color: black;
+}
+#d3
+{
+    font-size: 50px;
+    color: black;
+}

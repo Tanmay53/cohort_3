@@ -1,0 +1,46 @@
+#container{
+    display: grid;
+    grid-gap: 25px;
+    grid-template-rows: 70px 600px;
+    grid-template-columns: 200px 800px;
+    margin:10%;
+    padding: 10%;
+}
+#red{
+    background: red;
+    grid-area: 1/1/span 1/span 2;
+}
+#lime{
+    background: lime;
+    grid-area: 2/1/span 1/span 1;
+    margin-bottom: 10px;
+}
+#teal{
+    background: teal;
+    grid-area: 2/2/span 1/span 1;
+}
+@media only screen and (max-width:600px){
+    #container{
+        background: magenta;
+    }
+}
+@media only screen and (min-width:600px){
+    #container{
+        background: violet;
+    }
+}
+@media only screen and (min-width:768px){
+    #container{
+        background: limegreen;
+    }
+}
+@media only screen and (min-width:992px){
+    #container{
+        background: pink;
+    }
+}
+@media only screen and (min-width:1200px){
+    #container{
+        background: yellow;
+    }
+}
