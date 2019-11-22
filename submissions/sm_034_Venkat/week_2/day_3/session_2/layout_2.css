@@ -11,3 +11,26 @@
  #rectangle{
     width:250px
   }
+  @media (max-width: 600px) {
+    .parent {
+   background: blue ;
+   }
+ }
+ 
+ @media (min-width: 600px) {
+ .parent {
+   background: red;
+ }
+ } 
+ 
+ @media (min-width: 768px) {
+ .parent {
+   background: greenyellow;
+ }
+ } 
+ 
+ @media (min-width: 992px) {
+   .parent {
+     background: black;
+   }
+ } 
