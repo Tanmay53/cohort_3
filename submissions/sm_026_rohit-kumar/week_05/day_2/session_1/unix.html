@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+        </style>
+    </head>
+    <body>
+       <button onclick="createPage()">Create Page</button>
+
+        <script type="text/javascript">
+            function addHeader(container) {
+                var header = document.createElement('div')
+                    // ccreate image , heading, paragraph
+                    var image1 = document.createElement('img')
+                        image1.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg')
+                        image1.setAttribute('alt', 'Linux Torvalds')
+                        image1.setAttribute('height', '150px')
+                        header.appendChild(image1)
+                
+                    var heading = document.createElement('h2')
+                        heading.textContent = 'Linus Torvalds'
+                        heading.style.color = "blue"
+                        header.appendChild(heading)
+                        
+                    var para = document.createElement('p')
+                        para.textContent = 'The creator of Linux & Git'
+                        para.style.color = "green"
+                        para.fontSize = "30px"
+                        heading.appendChild(para)
+                    //styling
+                    header.style.width = "50%"
+                    header.style.background = "cyan"
+                    header.style.textAlign = "center"
+                    header.marginLeft = "auto"
+                    header.marginRight = "auto"    
+                container.appendChild(header)
+            }
+
+            function addSection(container) {
+                var section = document.createElement('div')
+                    // create image, heading, paragraph
+                    var image2 = document.createElement('img')
+                        image2.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg')
+                        image2.setAttribute('alt', 'Salman Khan')
+                        image2.setAttribute('height', '150px')
+
+                        //styling
+                        image2.style.float = "left"
+                        image2.style.marginRight = "20px"
+                        section.appendChild(image2)
+                        
+
+
+                    var heading = document.createElement('h2')
+                        heading.textContent = 'Sal Khan'
+                        section.appendChild(heading)
+
+                    var para = document.createElement('p')
+                        para.textContent = 'Salman Khan is the founder of the Khan Academy which has' 
+                                        + 'a mission of providing a free world-class education for everyone, anywhere.'
+        
+                        section.appendChild(para)
+                    
+                    //styling
+                    section.style.width = "80%"
+                    section.style.marginLeft = "auto"
+                    section.style.marginRight = "auto"
+                container.appendChild(section)
+            }
+
+            function addFooter(container) {
+                var footer = document.createElement('div')
+                footer.style.marginTop = "30px"
+                footer.style.background = "red"
+                footer.style.padding = "20px"
+
+                container.appendChild(footer)
+
+                var firstDiv = document.createElement('div')
+                    var heading = document.createElement('h3')
+                        heading.textContent = 'Ken Thompson'
+                        heading.style.color = "white"
+                        firstDiv.appendChild(heading)
+                    
+                    var para = document.createElement('p')
+                        para.textContent = 'Designed and Implemented the original Unix operating system.'
+                        firstDiv.appendChild(para)
+
+                        firstDiv.style.display = "inline-block"
+                footer.appendChild(firstDiv)
+
+
+                var secDiv = document.createElement('div')
+                    var heading = document.createElement('h3')
+                        heading.textContent = 'Dennis Ritchie'
+                        heading.style.color = "white"
+                        secDiv.appendChild(heading)
+                    
+                    var para = document.createElement('p')
+                        para.textContent = 'The creator of C Programming Languages.'
+                        secDiv.appendChild(para)
+
+                        secDiv.style.display = "inline-block"
+
+                        //styling
+                        secDiv.style.textAlign = "right"
+                        secDiv.style.marginLeft = "20px"
+                        secDiv.style.borderLeft = "3px solid black"
+                        secDiv.style.paddingLeft = "20px"
+                footer.appendChild(secDiv)
+            }
+
+            function createPage() {
+                // get reference to body
+                body = document.querySelector('body')
+                //body.setAttribute('style', 'background: yellow')
+                
+                var container  = document.createElement('div')
+                container.style.width = "80%"
+                container.style.height = "500px"
+                body.appendChild(container)
+                //alert('working')
+
+                addHeader(container)
+
+                addSection(container)
+
+                temp_div = document.createElement('div')
+                temp_div.style.clear = "both"
+                container.appendChild(temp_div)
+
+                addFooter(container)
+            }
+       </script>
+    </body>
+</html>
