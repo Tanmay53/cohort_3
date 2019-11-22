@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .cont{
+            height:600px;
+            background:rgb(98, 147, 189);
+            display:flex
+        }
+        .login{
+            height:400px;
+            background: rgb(56, 28, 82);
+            width:300px;
+            margin:auto;
+            border-radius: 20px;
+            border:dotted 3px brown;
+            display:flex;
+            flex-direction: column;
+        }
+        .login div{
+            margin:20px;
+
+        }
+        #submit{
+           display: flex;
+           justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="login">
+            <div>
+                <div>Username:</div>
+                <div><input id='user' type='textbox'></div>
+            </div>
+            <div>
+                    <div>Password:</div>
+                    <div><input id='key' type='password'></div>
+                </div>
+                <div id='submit'><button id='sub'>Submit</div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+       
+   
+    
+</body>
+</html>
