@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <style>
+        .overAll {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .row_2 {
+            height: 320px;
+        }
+
+        .row_1 {
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            margin: 0% 35%;
+            background: #e3dadb;
+            text-align: center;
+
+        }
+
+        .row_1 div {
+            flex-grow: 1;
+        }
+
+        .row_1 div:first-child {
+            flex-grow: 3;
+        }
+
+        .row_1 div:nth-of-type(2) h1 {
+            color: #1d3484;
+        }
+
+        .row_1 img {
+            margin: 5% 30%;
+            height: 300px;
+            width: 250px;
+        }
+
+        .row_2_1 {
+            margin: 1% 25%;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .row_2_1 h2 {
+            color: #d84613;
+            font-size: 40px;
+        }
+
+        .row_2_1 div {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .row_2_1 div:last-child {
+            flex-grow: 4;
+            text-align: left;
+        }
+
+        .row_3 {
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            margin: 0 5%;
+
+        }
+
+        .row_3 div {
+            border: 2px solid red;
+            flex-grow: 1;
+            margin: 10px 0;
+            background: #d35512
+        }
+
+        .row_3 div:first-child {
+            text-align: left;
+            padding: 0 0 0 2%;
+            border-right: 5px solid #311303;
+        }
+
+        .row_3 div:last-child {
+            text-align: right;
+            padding: 0 2% 0 0;
+        }
+
+        .row_3 h1 {
+            color: white;
+        }
+
+/*media */
+        @media (max-width:996px) {
+            .row_1 img {
+                margin: 2%;
+                height: 200px;
+                width: 150px;
+            }
+            .row_3 {
+                flex-direction: column;
+            }
+            .row_2 {
+                height: 600px;
+            }
+            .row_2_1 {
+                flex-direction: column;
+            }
+            .row_2 div {
+                height: 200px;
+            }
+            .row_3 {
+                height: 400px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="openPage()" id="btm">Create Page</button>
+    <script>
+        function openPage() {
+            var bodyEle = document.querySelector("body")
+            var newDiv = document.createElement("div")
+            bodyEle.appendChild(newDiv)
+            newDiv.setAttribute("class", "overAll")
+            var overAllDiv = document.querySelector(".overAll")
+            for (i = 0; i < 3; i++) {
+                var newDiv = document.createElement("div")
+                overAllDiv.appendChild(newDiv)
+            }
+            var row1 = document.querySelector(".overAll div:nth-of-type(1)")
+            row1.setAttribute("class", "row_1")
+            var row2 = document.querySelector(".overAll div:nth-of-type(2)")
+            row2.setAttribute("class", "row_2")
+            var row3 = document.querySelector(".overAll div:nth-of-type(3)")
+            row3.setAttribute("class", "row_3")
+            for (i = 0; i < 3; i++) {
+                var newDiv = document.createElement("div")
+                row1.appendChild(newDiv)
+            }
+            var linusImg = document.querySelector(".row_1 div:first-child")
+            linusImg.innerHTML = "<img src= 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg'/>"
+            var linuName = document.querySelector(".row_1 div:nth-of-type(2)")
+            linuName.innerHTML = "<h1>Linus Torvalds</h1>"
+            var linuDetail = document.querySelector(".row_1 div:nth-of-type(3)")
+            linuDetail.innerHTML = "<h2>The Creater of Linux & Git</h2>"
+            var button = document.getElementById("btm")
+            bodyEle.insertBefore(overAllDiv, button)
+            var newDiv3 = document.createElement("div")
+            var row_2Div = document.querySelector(".row_2")
+            row_2Div.appendChild(newDiv3)
+            var row2Div = document.querySelector(".row_2 div")
+            row2Div.setAttribute("class", "row_2_1")
+            for (i = 0; i < 2; i++) {
+                var newDiv4 = document.createElement("div")
+                row2Div.appendChild(newDiv4)
+            }
+            document.querySelector(".row_2_1 div:first-child").innerHTML = "<img src='https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/khan.jpg  ' />"
+            document.querySelector(".row_2_1 div:last-child").innerHTML = "<h2>Sal Khan</h2><br>    <h3>Salman Khan is the founder of the Khan Academy which has a misiion of providein a free world class education for any one,anywhere.</h3>"
+
+            var row3 = document.querySelector(".row_3")
+            for (i = 0; i < 2; i++) {
+                var newDiv4 = document.createElement("div")
+                row3.appendChild(newDiv4)
+            }
+
+            document.querySelector(".row_3 div:first-child").innerHTML = "<h1>Ken Thompson<h1><h3>Designed and Implemented the orginal Unix operating system</h3>"
+            document.querySelector(".row_3 div:last-child").innerHTML = "<h1>Dennis Ritchie<h1><h3>The creator of C programming Language</h3>"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet"  href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+    <div id="heading">STUDENT DATABASE</div><br><br>
+    <div class="Database">
+        <div class="Grade_select">
+            <select id="Grade_select">
+                <option value="Grade">Grade</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <!-- Table for Entering the student data -->
+        <div>
+            <label>NAME:</label><br>
+            <input type="text" id="name" placeholder="Enter student name">
+        </div>
+        <div>
+            <label>SCIENCE:</label><br>
+            <input type="text" id="science_marks" placeholder="Science marks">
+        </div>
+        <div>
+            <label>MATH:</label><br>
+            <input type="text" id="math_marks" placeholder="Math marks">
+        </div>
+        <div>
+            <label>ENGLISH:</label><br>
+            <input type="text" id="english_marks" placeholder="English marks">
+        </div>
+        <div>
+            <label>HISTORY:</label><br>
+            <input type="text" id="history_marks" placeholder="History marks">
+        </div>
+        <div>
+            <label>GEOGRAPHY:</label><br>
+            <input type="text" id="geography_marks" placeholder="Geography marks">
+        </div>
+        <!-- Buttons for the functions -->
+        <button onclick="Enter()">ENTER</button>
+        <button onclick="Reset()">RESET</button>
+    </div>
+    <table id="table">
+        <tr>
+            <th>GRADE</th>
+            <th>NAME</th>
+            <th>SCIENCE</th>
+            <th>MATH</th>
+            <th>ENGLISH</th>
+            <th>HISTORY</th>
+            <th>GEOGRAPHY</th>
+            <th>MINIMUM</th>
+            <th>AVERAGE</th>
+            <th>MAXIMUM</th>
+        </tr>
+    </table>
+<!-- Separate table creation for filtered class -->
+    <!-- <div class="Filter_grade">
+        <select id="Filter_grade">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div> -->
+    <!-- <table id="table2">
+        <tr>
+            <th>GRADE</th>
+            <th>NAME</th>
+            <th>SCIENCE</th>
+            <th>MATH</th>
+            <th>ENGLISH</th>
+            <th>HISTORY</th>
+            <th>GEOGRAPHY</th>
+            <th id="">MINIMUM</th>
+            <th>AVERAGE</th>
+            <th>MAXIMUM</th>
+        </tr>
+    </table> -->
+    <!-- <button onclick="Filter_grade()">Filter_grade</button> -->
+</body>
+
+</html>

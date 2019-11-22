@@ -25,8 +25,8 @@
 
     <!-- These elements below are for FSD.W3.3.1_3-->
     <h1>Check if the users email is valid!</h1>
-    <label for="Email">Email</label>
-    <input type="text" />
+    <label for="email">Email</label>
+    <input type="text" id="email">
     <button onclick="validateEmail()">Check Email!</button>
     <!-- These elements above are for FSD.W3.3.1_3-->
     <script type="text/javascript">
@@ -62,6 +62,64 @@
         }
         //Write javascript for FSD.W3.3.1_3 here
         function validateEmail() {
+            var email = document.getElementById("email").value;
+            //spliting the email id by @ into two parts username and domain like-shivansh and gmail.com
+
+            var first_split = email.split("@");
+
+            //spliting the firstSplit[1] by . into two parts like gmail  and com
+            var sec_split = first_split[1].split(".");
+
+            //var splitting firstSplit[1] by . into two parts
+            var third_split = first_split[0].split(".");
+
+
+
+
+
+            //checking whether the @ is present or not
+            if (first_split.length < 2) {
+                alert("Invalid Email!");
+
+            }
+
+            //checking whether the @ is present at starting or end
+            else if (first_split[0] === "" || first_split[0] === "")
+                alert("Invalid Email!");
+
+            //checking whether . is present in domain part
+            else if (sec_split.length < 2)
+                alert("Invalid Email!");
+
+            //checing if more than 1 "." is present
+            else if (sec_split.length > 2) {
+                alert("Invalid Email!");
+                // break;
+            }
+
+
+            //checking if "." is present at last or just after @
+            else if (sec_split[0] === "" || sec_split[1] === "")
+                alert("Invalid Email!");
+
+            //checking if tld is valid or not  
+            else if (sec_split[1].length < 2)
+                alert("Invalid Email!");
+
+            //if "." present at first place or just before @
+            else if (third_split[0] === "" || third_split[0] === "")
+                alert("Invalid Email!");
+
+            //if moe than one present "." 
+            else if (third_split.length > 2)
+                alert("Invalid Email!");
+
+            else
+                alert("Valid Email!");
+
+            document.getElementById("email").value = "";
+
+
         }
     </script>
 </body>

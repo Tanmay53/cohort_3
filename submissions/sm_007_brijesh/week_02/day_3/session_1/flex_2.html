@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>flex_2</title>
+    <style>
+        .flex-box {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+
+        .flex-box div {
+            background-color: darkcyan;
+            height: 100px;
+            width: 100px;
+            margin-left: 20px;
+        }
+
+        body {
+            margin-left: 500px;
+            margin-top: 250px;
+        }
+
+        .rec {
+            flex-basis: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-box">
+        <div> </div>
+        <div class="rec"> </div>
+        <div> </div>
+    </div>
+    <div class="flex-box">
+        <div class="rec"> </div>
+        <div> </div>
+        <div> </div>
+    </div>
+    <div class="flex-box">
+        <div> </div>
+        <div> </div>
+        <div class="rec"> </div>
+    </div>
+
+</body>
+
+</html>

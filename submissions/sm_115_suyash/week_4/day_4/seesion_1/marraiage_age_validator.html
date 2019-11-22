@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Marriage Eligibility</title>
+</head>
+<body>
+  <select name="name" id="select-box">
+    <option value="--">Gender</option>
+    <option value="Female">Female</option>
+    <option value="Female">Male</option>
+    <option value="Other">Other</option>
+  </select>
+  <input type="number" id="age" placeholder="Enter Birth Year">
+  <button type="submit" onclick="marriageCalculate()">Check Eligibility</button>
+  <script>
+    function marriageCalculate() {
+      var year = document.getElementById('age').value
+      var check = 2019 - year
+      if(check >= 18) {
+        alert('Congrats! You Are Eligible')
+      }
+      else {
+        alert('Sorry! Under Age')
+      }
+    }
+  </script>
+</body>
+</html>
