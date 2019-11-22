@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .form {
+            margin: 8% 40%;
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            font-size: 30px;
+            padding: 30px;
+            padding-top: 9 0px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        label {
+            margin: 5%;
+        }
+
+        input {
+            /* margin: 20%; */
+            width: 90%;
+            height: 50px;
+            margin: 2% 10% 0% 6%;
+            border-radius: 10px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        button {
+            margin-left: 25%;
+            width: 50%;
+            height: 40px;
+            background: #6ec352;
+            color: white;
+            font-size: 20px;
+            border: none;
+            box-shadow: 5px 5px 5px #888888;
+        }
+
+        p {
+            font-size: 15px;
+            color: red;
+            margin-left: 30px;
+        }
+
+        #name {
+            margin-bottom: 10%;
+        }
+
+        .header {
+            text-align: right;
+        }
+
+        h3 {
+            color: blue;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <a href="/home/surya_k/coding/week_5/day_3/Session_1/admin.html">
+                <h3>Admin</h3>
+            </a>
+        </div>
+        <div class="form">
+            <label>UserName</label>
+            <br>
+            <input type="text" placeholder="please enter your username" id="name">
+            <br>
+            <label>Password</label>
+            <br>
+            <input type="text" placeholder="please enter your username" id="password">
+            <br>
+            <p class="note"></p>
+            <br>
+            <button onclick="login()">Sign In</button>
+
+        </div>
+    </div>
+    <script>
+        var arralogin = []
+        var objLogin = {
+            username: [],
+            password: [],
+            time: []
+        }
+        function login() {
+            var user = document.getElementById("name").value
+            var password = document.getElementById("password").value
+            objLogin.username[objLogin.username.length] = user
+            objLogin.password[objLogin.password.length] = password
+            objLogin.time[objLogin.time.length] = Date()
+            localStorage.setItem("userenter", JSON.stringify(objLogin))
+            console.log(objLogin)
+            // predefined usename and passwords
+            var obj = {
+                username: ["SuryaTeja", "Teja1994", "surya"],
+                Password: ["surya472", "surya11472", "tej"],
+            }
+            var x = ""
+            for (i = 0; i < obj.username.length; i++) {
+                if (obj.username[i] == user && obj.Password[i] == password) {
+                    console.log("surya")
+                    x = obj.username[i]
+                    newPage(x)
+                }
+            }
+        }
+        //for dash.html
+        function newPage(name) {
+            console.log()
+            localStorage.setItem("user", name)
+            location.replace("dash.html")
+            window.open("dash.html")
+        }
+
+    </script>
+</body>
+</htm>
