@@ -1,0 +1,107 @@
+/* for wikipedia logo */
+
+.one{
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+    background: aquamarine;
+    width: 200px;
+    float: left;
+}
+
+#a1{
+    height: 160px;
+    width: 160px;
+}
+
+.oneA{
+    padding: 5px;
+    /* background:grey; */
+} 
+.oneA ~ a {
+    padding: 5px;
+    /* background:grey; */
+}
+
+a:hover{
+    text-decoration: ;
+}
+
+.inter{
+    background: grey;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.inter ~ div{
+    background: grey;
+    padding: 5px;
+    margin-top: 5px;
+
+}
+
+/* for top 1st flex box */
+.two{
+background: lightcoral;
+display: flex;
+/* float: right; */
+
+}
+
+.two div{
+    padding: 5px;
+    /* float: right; */
+    
+}
+
+#b1{
+    margin-left:1250px ;  
+    /* float: right; */
+}
+/* for top 1st flex box end here*/
+
+.three{
+background: rgb(197, 154, 154);
+display: flex;
+float: right;
+}
+
+.three div{
+    padding: 5px;
+}
+
+ #c2{
+    margin-right: 1200px;
+}
+
+/* for linus torvalds heading */
+.four{
+    display: flex;
+    font-size: 50px;
+    float: left;
+    background: salmon;
+    /* clear: left; */
+}
+
+#d1{
+    margin-left: 20px;
+    width: 1635px;
+}
+/* linus torvalds heading end here  */
+
+.five{
+display: flex;
+background:red;
+/* flex-direction: row; */
+/* float: right; */
+float: left;
+/* clear: left; */
+width: 1630px;
+margin-left: 20px;
+padding: 5px;
+}
+
+.six{
+    display: flexbox;
+    background: skyblue;
+}
