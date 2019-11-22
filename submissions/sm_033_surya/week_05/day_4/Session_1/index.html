@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<style>
+  p {
+    white-space: pre-line;
+  }
+</style>
+
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <h1>Click the button to add a new customer!</h1>
+  <div>
+    <div>
+      <div><label>FirstName</label></div>
+      <input type="text" class="firstName">
+    </div>
+
+    <div>
+      <div><label>LastName</label></div>
+      <input type="text" class="lastName">
+    </div>
+
+    <div>
+      <div><label>DateOfBirth</label></div>
+      <input type="text" class="dateOfBirth">
+    </div>
+
+    <div>
+      <div><label>Balance</label></div>
+      <input type="text" class="balance">
+    </div>
+    <div>
+      <div><label>AccountNumber</label></div>
+      <input type="text" class="accountNumber">
+    </div>
+    <div>
+      <div><label>Shared Account Holder</label></div>
+      <input type="text" class="sharedAcc">
+    </div>
+  </div>
+
+  <button onclick="add()">Add customer</button>
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! </h1>
+  <button onclick="printCustomers()">Print Customers</button>
+  <div id="displayContainer"></div>
+  <script>
+    var customerArr = []
+    function Customers(firstName, lastName, dateOfBirth, balance, accountNumber, sharedAccountHolders) {
+      this.firstName = firstName
+      this.lastName = lastName
+      this.dateOfBirth = dateOfBirth
+      this.balance = balance
+      this.accountNumber = accountNumber
+      this.sharedAccountHolders = [sharedAccountHolders]
+      this.getdetails = function () {
+        var output = ""
+        for (key in this) {
+          output += key + ":" + this[key] + '\n'
+          if (key == "sharedAccountHolders")
+            break;
+        }
+        return output
+      }
+
+    }
+    function add() {
+      var firstName = document.querySelector(".firstName").value
+      var lastName = document.querySelector(".lastName").value
+      var dateOfBirth = document.querySelector(".dateOfBirth").value
+      var balance = Number(document.querySelector(".balance").value)
+      var AccountNumber = Number(document.querySelector(".accountNumber").value)
+      var sharedAccountHolders = document.querySelector(".sharedAcc").value
+      var customer = new Customers(firstName, lastName, dateOfBirth, balance, AccountNumber, sharedAccountHolders)
+      console.log(customer.getdetails())
+      customerArr.push(customer)
+      console.log(customerArr)
+    }
+    function printCustomers() {
+      console.log(customerArr)
+      var divLocation = document.getElementById("displayContainer")
+      divLocation.innerHTML = ""
+      for (i = 0; i < customerArr.length; i++) {
+        var divLocation = document.getElementById("displayContainer")
+        var displayPara = document.createElement('p')
+        displayPara.textContent = customerArr[i].getdetails()
+        displayContainer.appendChild(displayPara)
+      }
+    }
+  </script>
+</body>
+
+</html>
