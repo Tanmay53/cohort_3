@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+      <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <div class="container1">
+  <h1>Click the button to add a new customer!</h1>
+  <div class="allInput">
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" id="firstName">
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName" id="lastName">
+    <label for="dob">Date of Birth</label>
+    <input type="text" name="dob" id="dob">
+
+    <label for="balance">Balance</label>
+    <input type="text" name="balance" id="balance">
+    <label for="acNumber">Account Number</label>
+    <input type="text" name="acNumber" id="acNumber">
+    <label for="acHolder">shared Account Holders </label>
+    <input type="text" name="acHolder" id="acHolder" placeholder=" Seperated by comma ,">
+    <button onclick='addCustomer()'>Add customer</button>
+  </div>
+</div>
+<div class="container2">
+ 
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! <h1>
+  <button id="printCustomer">Print Customers</button>  
+  <div id="displayContainer">
+
+  
+  
+  </div>
+</div>
+
+  <script src="script.js">
+  
+  </script>
+</body>
+</html>
