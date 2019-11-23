@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="htag"></h1>
+   
+    <p id='logintime'></p>
+    <p id='timer'></p>
+    <button id="lg">logout</button>
+    <script>
+        var htag=document.getElementById('htag')
+        var userN=localStorage.getItem('userName')
+        htag.innerHTML=userN
+        var ltime=document.getElementById('logintime')
+        lt=localStorage.getItem('logintime')
+        ltime.innerHTML=('Login time :'+lt)
+        var logout=document.getElementById('lg')
+        var timer=document.getElementById('timer')
+        var tms=localStorage.getItem('timeinms')
+        var timeremains=Math.floor((parseInt(tms)+300001-parseInt(Date.now()))/60000)
+       timer.innerHTML='Session remaining time : '+timeremains+' mins.'
+       // timer.innerHTML=hms
+       function logOut(){
+          var oldlocation="http://127.0.0.1:5500/index.html";
+         location=oldlocation;
+
+        }
+
+      if(timeremains==3)
+      {
+          logOut()
+      }
+
+        
+
+        logout.addEventListener('click',logOut)
+    </script>
+</body>
+</html>
