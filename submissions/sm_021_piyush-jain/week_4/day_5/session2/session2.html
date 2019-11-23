@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var body1=document.querySelector('body')
+function random(number){
+  return Math.floor(Math.random()*number);
+}
+function switchColor(){
+    var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+    body1.style.backgroundColor=randomColor;
+}
+window.addEventListener('resize', switchColor);
+    </script>
+</body>
+</html>
