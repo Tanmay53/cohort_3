@@ -40,6 +40,9 @@
         .backgroundRed {
             background-image: linear-gradient( 248.1deg,  rgba(255,200,69,1) -0.1%, rgba(48,195,158,1) 100.5% );
         }
+        .garadtable {
+            background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(222,168,248,1) 0%, rgba(168,222,248,1) 21.8%, rgba(189,250,205,1) 35.6%, rgba(243,250,189,1) 52.9%, rgba(250,227,189,1) 66.8%, rgba(248,172,172,1) 90%, rgba(254,211,252,1) 99.7% );
+        }
         tr {
             display: flex;
             border-collapse: collapse;
@@ -141,8 +144,29 @@
             tableHead.innerHTML = ""
             var divs = document.createElement("div");
             divs.setAttribute('class', "backgroundRed");
-            divs.innerHTML="<table><tr><td>Product</td><td>Price</td><td>Quantity</td><td>Total</td></tr></table>"
             tableHead.appendChild(divs);
+
+            var table = document.createElement('table');
+            tableHead.appendChild(table);
+            
+            var tblRow = document.createElement("tr");
+            tblRow.setAttribute('class', "garadtable");
+            tableHead.appendChild(tblRow);
+
+            var tblTd1 = document.createElement("td");
+            tblTd1.innerHTML = "Product"
+            tblRow.appendChild(tblTd1);
+            var tblTd2 = document.createElement("td");
+            tblTd2.innerHTML = "Price"
+            tblRow.appendChild(tblTd2);
+            var tblTd3 = document.createElement("td");
+            tblTd3.innerHTML = "Quantity"
+            tblRow.appendChild(tblTd3);
+            var tblTd4 = document.createElement("td");
+            tblTd4.innerHTML = "Total"
+            tblRow.appendChild(tblTd4);
+            
+           
             
             for(var i = 0; i < data.length; i++){
                 var table = document.createElement('table');

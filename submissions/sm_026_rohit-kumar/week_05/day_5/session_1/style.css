@@ -1,0 +1,34 @@
+.bg-red {
+    background: red;
+}
+
+.bg-yellow{
+    background: yellow;
+}
+
+.bg-green{
+    background: green;
+}
+.bg-blue {
+    background: blue;
+}
+
+.bg-purple {
+    background: purple;
+}
+
+.height-100 {
+    height: 100px;
+}
+
+.height-400 {
+    height: 450px;
+}
+
+.height-150 {
+    height: 150px;
+}
+
+.height-x {
+    height: 100%;
+}
