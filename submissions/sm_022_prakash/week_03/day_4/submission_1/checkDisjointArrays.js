@@ -11,7 +11,6 @@ for (i=0;i<arr1.length;i++){
         else {
             (arr1[i]!==arr2[j])
             output = true
-            break;
         
     }
     // console.log(count, diff)
