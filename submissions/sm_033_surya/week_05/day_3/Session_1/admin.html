@@ -1,0 +1,112 @@
+<html>
+<style>
+    .table {
+        border: 3px solid blue;
+        margin: 2% 20%;
+    }
+
+    tr {
+        border-radius: 20px;
+    }
+
+    td {
+        border: 2px solid black;
+
+        text-align: center;
+
+    }
+
+    .tablehide {
+        display: none;
+
+    }
+    .out,
+    .list,
+    .username,
+    button {
+        margin-left: 30%
+    }
+
+    td {
+        width: 200px;
+    }
+
+    .overall {
+        margin: 5% 20%
+    }
+</style>
+
+<body>
+    <div class="overall">
+
+        <h1 class="out">Users try to login</h1>
+        <ol class="list"> </ol>
+        <select class="username" id="user">
+        </select>
+        <button onclick="userNames()">search</button>
+        <div>
+            <table class="tablehide">
+                <tr>
+                    <td>User</td>
+                    <td>Password</td>
+                    <td>Time Of Login</td>
+                </tr>
+            </table>
+        </div>
+     </div>
+
+
+
+    <script>
+        var input = JSON.parse(localStorage.getItem("userenter"))
+        console.log(input)
+        var obj = {}
+        var userDup = input.username
+        for (i = 0; i < userDup.length; i++) {
+            obj[userDup[i]] = userDup[i]
+        }
+        var uniqueUsers = Object.values(obj)
+        for (i = 0; i < uniqueUsers.length; i++) {
+            var ul = document.querySelector(".list")
+            var li = document.createElement("li")
+            li.innerHTML = uniqueUsers[i]
+            ul.appendChild(li)
+        }
+
+        var uniqueUsers = Object.values(obj)
+        for (i = 0; i < uniqueUsers.length; i++) {
+            var ul = document.querySelector(".username")
+            var li = document.createElement("option")
+            li.innerHTML = uniqueUsers[i]
+            ul.appendChild(li)
+        }
+        function userNames() {
+            var tableShows = document.querySelector("table")
+            tableShows.setAttribute("class", "table")
+            var table = document.querySelector(".table")
+            var tr = document.querySelectorAll(".table > tr")
+            for (i = 0; i < tr.length; i++) {
+                table.removeChild(tr[i])
+            }
+            var user = document.getElementById("user").value
+            for (i = 0; i < input.username.length; i++)
+                if (input.username[i] == user) {
+                    var table = document.querySelector(".table")
+                    var tr = document.createElement("tr")
+                    table.appendChild(tr)
+                    var td = document.createElement("td")
+                    td.innerHTML = input.username[i]
+                    tr.appendChild(td)
+                    var td = document.createElement("td")
+                    td.innerHTML = input.password[i]
+                    tr.appendChild(td)
+                    var td = document.createElement("td")
+                    td.innerHTML = input.time[i]
+                    tr.appendChild(td)
+                }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>layout_3.html</title>
+    </head>
+    <style>
+    .cont{
+            display:grid;
+            margin:20px;
+            grid-gap:20px;
+            grid-template-rows: 100px 100px 100px 100px ;
+            grid-template-columns: 100px 100px 100px 100px ;
+            justify-content:center;
+
+             } 
+             .cont div{
+                 background:royalblue;
+             }
+             #div1{
+                 background: white;
+                 grid-area: 1 / 2 / 1 / 5;
+             }
+             #div2{
+                 background: white;
+                 grid-area: 2 / 3 / 2 / 5;
+             }
+             #div3{
+                 background: white;
+                 grid-area: 3 / 4 / 3 / 5;
+             }
+             @media (max-width:600px){
+            body{
+                background:palevioletred;
+            }
+             
+       </style>
+       <body>
+       <div class= "cont">
+       <div></div>
+      <div id="div1"></div>
+       <div></div>
+      <div></div>
+      <div id="div2"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div id="div3"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      </body>
+      </html>

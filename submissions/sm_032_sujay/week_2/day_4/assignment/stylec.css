@@ -1,0 +1,114 @@
+.header a{
+    float:right;
+    margin:20px;
+    text-decoration: none;
+    color:darkslategray;
+}
+.header button{
+ border:1px solid red;
+ background-color:white;
+ color:red;
+ float:right;
+ margin-top: 18px;
+ height:25px;
+ margin-right:25px;
+ margin-left:20px;
+}
+
+   .footer a{
+       float:left;
+       margin-left:80px;
+       margin-top:60px;
+       text-decoration: none;
+       color:blue;
+
+   }
+   .footer img{
+       float:right;
+       margin:30px;
+       height:50px;
+       width:50px;
+   }
+
+   .details{
+       background:linear-gradient(130deg,midnightblue,skyblue);
+        border:1px solid skyblue;
+        color:white;
+        margin-top:30px;
+        
+   }
+   .fdetails1{
+       display:grid;
+       grid-template-rows:repeat(5,70px) ;
+       grid-template-columns: 400px 400px;
+       margin-left:150px;
+   }
+   .details h1{
+    margin-left:150px;
+    
+   }
+   #dp{
+    margin-left:150px;
+       font-size:22px;
+   }
+   .fdetails2{
+    display:grid;
+    grid-template-rows:repeat(2,150px) ;
+    grid-template-columns: 300px 300px 300px;
+    margin-left:220px;
+    column-gap: 80px;
+    row-gap:30px;
+    
+    }
+    .fdetails2 h2{
+       text-align:center;
+        font-size:22px;
+    }
+    .fdetails2 p{
+        text-align:center;
+        font-size:18px;
+        
+    }
+    .details button{
+       margin-left: 690px;
+    }
+    #mid{
+        grid-area: 2/1/ 2/span 3 ;
+    }
+    .ccc{
+        display:grid;
+        grid-template-columns: 320px 320px 320px ;
+        grid-template-rows: repeat(3,140px);
+        row-gap: 40px;
+        column-gap:30px;
+        margin-bottom:60px;
+        margin-left:80px;
+       
+    }
+    .ccc > div{
+        border-left: 4px solid slategrey;
+        margin-left: 20px;
+    }
+    .ssc{
+        display:grid;
+        grid-template-columns: 320px 320px 320px ;
+        grid-template-rows: repeat(2,140px);
+        row-gap: 40px;
+        column-gap:30px;
+        margin-left:80px;
+
+    }
+    .ssc  div{
+        border-left: 4px solid slategrey;
+        margin-left: 20px;
+       
+    }
+    .ssc h2{
+        color:slategray;
+    }
+    .ccc h2{
+        color:slategray;
+    }
+    #study{
+        text-align: center;
+    }
