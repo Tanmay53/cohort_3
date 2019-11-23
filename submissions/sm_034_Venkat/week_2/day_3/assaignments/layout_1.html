@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>layout_1_big</title>
+    <style>
+        .flex2 {
+            display: flex;
+            margin: 5px;
+        }
+
+        .r1 {
+            background: yellow;
+            padding: 20px;
+            width: 890px;
+            font-size: 30px;
+            margin: 20px 20px 5px 20px
+        }
+
+        .r2c1 {
+            background: lime;
+            height: 300px;
+            width: 450px;
+            margin: 15px;
+            font-size: 20px
+        }
+
+        .r2c2 {
+            background: orange;
+            font-size: 20px;
+            width: 450px;
+            margin: 15px;
+            height: 300px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .flex2 {
+                flex-direction: column;
+                height:400px;
+            }
+            .r1 {
+                width: 405px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="r1">Navigation</div>
+    </div>
+    <div class="flex2">
+        <div class="r2c1">LEFT BOX</div>
+        <div class="r2c2">RIGHT BOX</div>
+    </div>
+</body>
+
+</html>

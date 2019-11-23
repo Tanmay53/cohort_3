@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>layout_1</title>
+        <style>
+            .grid{
+                display:grid;
+                grid-template-rows: repeat(3,200px);
+                grid-template-columns: repeat(4,200px);
+                grid-gap:20px;
+                
+            }
+            #box1{
+                grid-area:2 / 1 / span 2/ span 2;
+                background:rgb(204, 20, 7);
+            }
+            #box2{
+                grid-area:2 / 3 /span 2/ span 2;
+                background:green;
+            }
+            #box3{
+                grid-area:1 / 1 /span 1 /span 4;
+                background:rgb(245, 245, 7);
+            }
+            @media(max-width:700px){
+                 .grid{
+                     display:grid;
+                     grid-template-rows:100px 200px 200px;
+                     grid-template-columns: 200px;
+                     grid-gap:20px;
+                 }
+                 .grid div{
+                     background:yellow;
+                 }
+                 #box1{
+                     grid-area:2 / 1 / span 1/ span 4;
+                     background:red;
+                 }
+                 #box2{
+                     grid-area:3 / 1 / span 1/ span 4;
+                     background:green;
+                 }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div id="box1">LEFT BOX</div>
+            <div id="box3">Navigation</div>
+            <div></div>
+            <div></div>
+            <div id="box2">RIGHT BOX</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>
