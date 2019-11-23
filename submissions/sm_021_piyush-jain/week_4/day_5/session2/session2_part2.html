@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+    #container{
+        height: 300px;
+        width: 300px;
+        background-color: rgb(54, 54, 150);
+        margin: 100px;
+    }
+    #container>button{
+        height: 50px;
+        width: 80px;
+        background-color: red;
+        position: relative;
+        top: 240px;
+        left: 150px;
+        color: white;
+    }
+    </style>
+</head>
+<body>  
+    <div id="container">
+        <button id="button">Submit</button>
+    </div>
+    <script>
+        var mousetarget = document.getElementById('container');
+        var button=document.querySelector('button')
+        mousetarget.addEventListener('mouseover',e =>{
+           button.style.backgroundColor = "green";
+        });
+        mousetarget.addEventListener('mouseout',e =>{
+           button.style.backgroundColor = "red";
+        });
+    </script>
+</body>
+</html>
