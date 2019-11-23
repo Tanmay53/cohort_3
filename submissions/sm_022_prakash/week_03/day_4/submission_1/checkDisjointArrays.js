@@ -10,8 +10,7 @@ for (i=0;i<arr1.length;i++){
         }
         else {
             (arr1[i]!==arr2[j])
-            output = true
-            break;
+            output = true          
         
     }
     // console.log(count, diff)
@@ -25,4 +24,4 @@ else{
 }
 return;
 }
-disjointArrays([1,2,3,4],[5,6,7,8])
+disjointArrays([1,2,3,4],[5,4,6,7,8])
