@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-7">
+          <h3>Billing Address</h3>
+          <div class="row">
+            <div class="col">
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col">
+                      <label for="inputFirstName">First name</label>
+                      <input id="inputFirstName" type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="form-group col">
+                      <label for="inputLastName">Last name</label>
+                      <input id="inputLastName" type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
+                </form>
+              </div> <!-- first inside col-->
+            </div> <!-- first inside row ends here-->
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                    <label for="inputUsername">Username</label>
+                    <input id="inputUsername" type="text" class="form-control" placeholder="Username">
+                </div>                        
+              </div>
+            </div> <!-- second inside row ends here-->
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                    <label for="inputEmail">Email <span class="text-muted">(Optional)</span></label>
+                    <input id="inputEmail" type="text" class="form-control" placeholder="you@example.com">
+                </div>                        
+              </div>
+            </div> <!-- third inside row ends here-->
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                    <label for="inputAddr1">Address</label>
+                    <input id="inputAddr1" type="text" class="form-control" placeholder="1234 Main St">
+                </div>                        
+              </div>
+            </div> <!-- forth inside row ends here-->
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                    <label for="inputAddr2">Address 2 <span class="text-muted">(Optional)</span> </label>
+                    <input id="inputAddr2" type="text" class="form-control" placeholder="Apartment or suite">
+                </div>                        
+              </div>
+            </div> <!-- fifth inside row ends here-->
+            <div class="row">
+              <div class="col form-row">
+                <div class="col">
+                  <div class="form-group">
+                      <label for="inputState">Country</label>
+                      <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                      <label for="inputState">State</label>
+                      <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                      <label for="">Zip</label>
+                      <input id="inputUsername" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>  <!-- three contorl ends-->
+            <div class="row">
+              <div class="col">
+                <hr>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input id="checkFirst" type="checkbox">
+                    <label for="checkFirst">Shipping address is the same as my billing address</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="checkSecond" type="checkbox">
+                    <label for="checkSecond">Save this information for next time</label>
+                  </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                  <h3>Payment</h3>
+                  <div class="form-group">
+                    <div class="check-group">
+                      <input type="radio" id="radioCredit">
+                      <label for="radioCredit">Credit Card</label>
+                    </div>
+                    <div class="check-group">
+                      <input type="radio" id="radioCredit">
+                      <label for="radioCredit">Debit Card</label>
+                    </div>
+                    <div class="check-group">
+                      <input type="radio" id="radioCredit">
+                      <label for="radioCredit">Paypal</label>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col">
+                          <label for="inputFirstName">Name of card</label>
+                          <input id="inputFirstName" type="text" class="form-control">
+                        </div>
+                        <div class="form-group col">
+                          <label for="inputLastName">Credit card number</label>
+                          <input id="inputLastName" type="text" class="form-control">
+                        </div>
+                      </div>
+                    </form>
+                  </div> <!-- first inside col-->
+            </div>
+          </div>
+          <div class="col-4"> <!--amazon box-->
+            <div class="h3 text-muted d-flex justify-content-between">Your cart <span class="badge badge-pill badge-secondary">3</span> </div>
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                      <p class="h5">Product name</p>
+                      <p class="small text-muted" >Brief description</p>
+                    </div>
+                    <span>$12</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                      <p class="h5">Second product</p>
+                      <p class="small text-muted" >Brief description</p>
+                    </div>
+                    <span>$8</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                      <p class="h5">Third item</p>
+                      <p class="small text-muted" >Brief description</p>
+                    </div>
+                    <span>$5</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                      <p class="h5 text-danger">Promo code</p>
+                      <p class="small text-danger">EXAMPLECODE</p>
+                    </div>
+                    <span>-$5</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                      <p class="h5">Total (USD)</p>
+                    </div>
+                    <span> <b>$20</b></span>
+                </li>
+              </ul>
+              <div class="card">
+                <div class="d-flex justify-content-between">
+                    <input type="text">
+                    <button class="btn btn-secondary" placeholder="Promo code" >Redeem</button>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
