@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-us">
+<html>
+  <head>
+ <title>layout_1.html</title>
+ <style>
+@media only screen and (min-width: 992px) {
+#layout1{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns:100%;
+  
+  padding: 20px;
+}
+
+#layout1 div {
+  background:yellow;
+  height:100px;
+  color:grey;
+  font-size:60px
+}
+#layout2{
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 57% 40% ;
+  grid-template-rows:auto; 
+  padding: 20px;
+  color:grey;
+  font-size:60px
+}
+#red{
+  height:500px;
+  background:red;
+}
+#green{
+  height:500px;
+  background:green;
+}
+}
+@media only screen and (max-width: 992px) {
+ #layout1{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns:100%;
+  
+  padding: 20px;
+}
+#layout1 div {
+  background:yellow;
+  height:100px;
+  color:grey;
+  font-size:60px
+}
+#layout2{
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 100% ;
+  */
+  padding: 20px;
+  color:grey;
+  font-size:60px
+}
+#red{
+  height:500px;
+  background:red;
+}
+#green{
+  height:500px;
+  background:green;
+} 
+}
+
+ </style>
+   </head>
+   <body>
+    <div id ="layout1" >
+     <div>Navigation</div>
+    </div>
+    <div id ="layout2">
+      <div id ="red" >LEFT BOX</div>
+      <div id ="green" >RIGHT BOX</div>
+    </div>
+  </body>
+</html>
