@@ -1,0 +1,37 @@
+#container{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-rows: 900px;
+    grid-template-columns: 300px 300px 300px 300px;
+    padding:5%;
+    margin: 5%;   
+}
+#container div{ 
+    background: teal;
+}
+
+@media only screen and (max-width:600px){
+    div{
+        background: yellow ;
+    }
+}
+@media only screen and (min-width:600px){
+    div{
+        background: red ;
+    }
+}
+@media only screen and (min-width:768px){
+    div{
+        background: violet ;
+    }
+}
+@media only screen and (min-width:992px){
+    div{
+        background: magenta ;
+    }
+}
+@media only screen and (max-width:1200px){
+    div{
+        background: green ;
+    }
+}
