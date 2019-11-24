@@ -1,0 +1,78 @@
+        .container {
+            display: grid;
+            grid-template-areas:
+                "main main side"
+                "main main side"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+            ;
+            /* border: 5px solid black; */
+            height: 600px;
+        }
+
+        .main {
+            grid-area: main;
+            display: flex;
+            flex-direction: column;
+            /* border: 5px solid black; */
+            justify-content: space-evenly;
+            height: 250px;
+            text-align: center;
+            align-items: center;
+            
+        }
+
+        .main button {
+            width: 200px;
+            height: 40px;
+        }
+
+        .side {
+            grid-area: side;
+            display: flex;
+            flex-direction: column;
+            /* border: 5px solid black; */
+            justify-content: space-evenly;
+            height: 250px;
+            align-items: center;
+
+            
+        }
+
+        .side button {
+            padding: 10px;
+            width: 180px;
+        }
+
+        .tablediv {
+            grid-area: tablediv;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            /* border: 5px solid black; */
+        }
+
+        table {
+            border: 5px solid black;
+            text-align: center;
+            width: 600px;
+        }
+
+        th {
+            border: 5px solid black;
+            text-align: center;
+        }
+
+        td {
+            border: 5px solid red;
+            text-align: center;
+        }
+
+        tr {
+            border: 5px solid green;
+            text-align: center;
+        }
