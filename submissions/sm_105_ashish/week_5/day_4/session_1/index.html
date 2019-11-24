@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-5 mt-2 text-center border">
+                <form>
+                    <div class="form-row">
+                        <div class="col-12 m-2 display-5">Enter Customer's details.</div>
+                        <div class="col-6">
+                            <label for="firstName" class="col-form-label">First Name:</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                        </div>
+                        <div class="col-6">
+                            <label for="lastName" class="col-form-label">Last Name:</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                        </div>
+                        <div class="col-6">
+                            <label for="dateofbirth" class="col-form-label">Date of birth:</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="dateOfBirth" placeholder="dd/mm/yyyy">
+                        </div>
+                        <div class="col-6">
+                            <label for="balance" class="col-form-label">Balace:</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="balance" placeholder="amount">
+                        </div>
+                        <div class="col-6">
+                            <label for="accountno" class="col-form-label">Account no:</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="accountNo" placeholder="account no">
+                        </div>
+                        <div class="col-6">
+                            <label for="shareaccountholders" class="col-form-label">Share Account holders:</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="shareAccountHolders" placeholder="name1,mame2">
+                        </div>
+                    </div>
+                
+                 <p class="m-2">Click the button to add a new customer!</p>
+                </form>
+                <button  id="btn" class="mb-2">Add customer</button>
+            </div>
+            <div class="col-2 text-center border mt-2">
+                <p class="m-2"> Click here to print all customers! <p>
+                <button id="btn2" class="m-2">Print Customers</button>  
+            </div>
+            <!-- FSD.W4.3.1_3 !-->
+            <div class="col-5 text-center border mt-2">
+                        <div id="displayContainer" class="m-2"> Display</div>
+            </div>     
+         </div>
+    </div>
+  <script src="example.js">
+  </script>    
+</body>
+</html>
