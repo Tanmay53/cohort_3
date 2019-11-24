@@ -28,7 +28,8 @@ function addDetail(){
    var showdata=document.getElementById('selectmenu').value
    var showName=document.getElementById('single')
    var show=''
-  studentArr.forEach(function(ele){if(showdata==ele.STD)
+  studentArr.forEach(function(ele){
+      if(showdata==ele.STD)
        {
            for(key in ele){
             show=show+key+':'+ele[key]+'<br>'
