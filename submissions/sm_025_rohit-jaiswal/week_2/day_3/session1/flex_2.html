@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex 2</title>
+    <style>
+      .cont {
+        margin: auto;
+        display: flex;
+        width: 470px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .cont div {
+        background: green;
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+      }
+      .basis-div {
+        flex-basis: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div></div>
+      <div class="basis-div"></div>
+      <div></div>
+      <div class="basis-div"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="basis-div"></div>
+    </div>
+  </body>
+</html>
