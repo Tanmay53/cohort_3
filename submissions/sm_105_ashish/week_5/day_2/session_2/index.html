@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            .cont{
+                display:flex;
+                background:mediumaquamarine;
+                height:600px;
+            }
+            #form{
+                flex:2;
+                border:solid 2px brown;
+            
+            }
+            #table{
+                flex:4;
+                border:solid 2px brown;
+            }
+            #setting{
+                flex:1;
+                border:solid 2px brown;
+            }
+            #flex{
+               display:flex;
+               flex-direction: column;
+            }
+            #flex div{
+                margin:15px;
+                font-size: 20px;
+            }
+            .title{
+                border: 2px dotted rgb(176, 145, 206);
+                text-align: center;
+                margin:10px;
+                color: blueviolet;
+            }
+            #subbutton{
+               width:80px;
+               margin:auto;
+               margin-top:50px;
+            }
+            #setting button{
+                margin:20px;
+            }
+            .table-flex{
+                display:flex;
+            }
+            .table-flex div{
+                flex:1;
+                margin:2px;
+                border:1px solid black;
+                
+                text-align: center;
+            }
+            .flexs{
+                display:flex;
+                flex-direction: column;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class='cont'>
+       <!-- FORM to add -->
+       
+       <div id='form'>
+            <div class='title'><h3>Add Your products</h3></div> 
+           
+           <form id='flex'>
+          <div>Product</div>
+           <div ><input id='item' type="text" placeholder="Enter Item"></div>
+          <div>Price</div>
+           <div><input id='price' type="text" placeholder="Enter Price"></div>
+           <div>Quantity</div>
+           <div><input id='qns'type="text" placeholder="Enter Quantity"></div>
+           <button id='subbutton' >Submit</button>
+        </form>
+       </div>   
+       <!-- TABLE -->
+       <div id='table'>
+           <div class='title'><h3>Table</h3></div> 
+            <div class="table-flex">
+           <div>Product</div>
+           <div>Price</div>
+           <div>Quantity</div>
+           <div>Total</div>
+           </div>
+         
+       </div>
+       <!-- SETTINGS -->
+       <div id='setting' >
+           <div class='title'><h3>Settings</h3></div>
+           <div class='flexs'>
+               <button id="fs">Change font size</button>
+               <button id="fc">Change font color</button>
+               <button id="ar">Change background color of alternate row</button>
+           </div>
+       </div>
+    </div>
+    <script>
+        //Creating an empty array for storing data
+        var prodarr=[]
+        var sub=document.getElementById('subbutton')
+        
+        //creating event handler function for submit button to get data.
+        function getData(){
+            event.preventDefault()
+        var item=document.getElementById('item').value
+       var price=document.getElementById('price').value
+         var qns=document.getElementById('qns').value
+         var total=Number(price)*Number(qns)
+         
+         //creating object for storing value
+        var prod={
+        //  Serial:count,
+         Product:item,
+         Price:price,
+         Quantity:qns,
+         Total:total
+         }
+        //pushing data inside created array
+         prodarr.push(prod)
+         var tb=document.getElementById('table')
+         var divs=document.createElement('div')
+         divs.setAttribute('class','table-flex')
+         tb.appendChild(divs)
+         for(var i=0;i<prodarr.length;i++)
+         {
+             for(key in prodarr[i] )
+             {
+                 var child=document.createElement('div')
+                 child.innerHTML=prodarr[i][key]
+                 divs.append(child)
+             }
+         }
+         document.getElementById('item').value=''
+         document.getElementById('price').value=''
+         document.getElementById('qns').value=''
+ 
+         prodarr.shift()
+        }
+        sub.addEventListener('click',getData)
+        var tbtext=document.getElementsByClassName('table-flex')
+        var fs=document.getElementById('fs')
+        var fc=document.getElementById('fc')
+        var ar=document.getElementById('ar')
+        function fontSize(){
+            for(var i=0;i<tbtext.length;i++)
+            {
+                tbtext[i].style.fontSize='20px'
+            }
+           
+        }
+        fs.addEventListener('click',fontSize)
+        function fontColor(){
+            for(var i=0;i<tbtext.length;i++)
+            {
+                tbtext[i].style.color='blue'
+            }
+           
+        }
+        fc.addEventListener('click',fontColor)
+        function alternateColor(){
+            for(var i=1;i<tbtext.length;i+=2)
+            {
+                tbtext[i].style.background='chartreuse'
+            }
+           
+        }
+        ar.addEventListener('click',alternateColor)
+    </script>
+    </body>
+</html>

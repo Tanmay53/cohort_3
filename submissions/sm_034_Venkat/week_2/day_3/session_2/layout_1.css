@@ -1,10 +1,34 @@
 .main {
     display: flex;
     justify-content: center;
+    background:green
   }
-  .main div{
+.main div{
     height:400px;
     width:100px;
     background:orange;
     border:20px solid white;
   }
+@media (max-width: 600px) {
+   .main{
+  background: blue ;
+  }
+}
+
+@media (min-width: 600px) {
+.main {
+  background: red;
+}
+} 
+
+@media (min-width: 768px) {
+.main {
+  background: lime;
+}
+} 
+
+@media (min-width: 992px) {
+  .main {
+    background: black;
+  }
+}

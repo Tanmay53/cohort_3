@@ -1,12 +1,13 @@
 /* for wikipedia logo */
-
 .one{
-    display: flex;
+    display: flex   ;
     flex-direction: column;
     padding: 10px; 
-    background: aquamarine;
+    background: rgb(118, 156, 137);
     width: 200px;
+    border: 5px solid black;
     float: left;
+    height: 5000px;
 }
 
 #a1{
@@ -18,13 +19,9 @@
     padding: 5px;
     /* background:grey; */
 } 
-.oneA ~ a {
+.oneA ~ a{
     padding: 5px;
     /* background:grey; */
-}
-
-a:hover{
-    text-decoration: ;
 }
 
 .inter{
@@ -37,71 +34,144 @@ a:hover{
     background: grey;
     padding: 5px;
     margin-top: 5px;
-
 }
 
-/* for top 1st flex box */
+
+
+/* START for 1st flex box from top */
 .two{
 background: lightcoral;
 display: flex;
-/* float: right; */
-
+justify-content: flex-end;
 }
-
 .two div{
-    padding: 5px;
-    /* float: right; */
-    
+    padding: 5px;   
 }
+/* END of 1st flex box from top */
 
-#b1{
-    margin-left:1250px ;  
-    /* float: right; */
-}
-/* for top 1st flex box end here*/
 
+/* START for 2nd flex box from top*/
 .three{
-background: rgb(197, 154, 154);
+background: rgb(235, 101, 101);
 display: flex;
-float: right;
+justify-content: flex-start;
+float: left;
 }
 
 .three div{
     padding: 5px;
 }
 
- #c2{
-    margin-right: 1200px;
-}
-
-/* for linus torvalds heading */
 .four{
+    background: rgb(197, 154, 154);
     display: flex;
-    font-size: 50px;
-    float: left;
-    background: salmon;
-    /* clear: left; */
+    justify-content: flex-end;
 }
 
-#d1{
-    margin-left: 20px;
-    width: 1635px;
+.four div{
+      padding: 5px;
 }
-/* linus torvalds heading end here  */
+/* END for 2nd flex box from top*/
 
+
+
+/* Start for Linus Torvalds heading */
 .five{
-display: flex;
-background:red;
-/* flex-direction: row; */
-/* float: right; */
-float: left;
-/* clear: left; */
-width: 1630px;
-margin-left: 20px;
-padding: 5px;
-}
+    display: flex;
+    background: salmon;
+    font-size: 50px;
+    padding: 10px;
+    flex-basis: auto;
+} 
+/* END Linus Torvalds heading end here  */
+
 
 .six{
-    display: flexbox;
-    background: skyblue;
+display: flex;
+background:red;
+padding: 10px;
+} 
+
+
+
+.seven{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 14;
+    padding: 5px;
+    border: 5px solid black;
+    border: 10px solid rgb(216, 224, 102);
+    background: rgb(25, 147, 195);
+    width: 300px;
+    height: 800px;
+    float: right;
 }
+
+#g1{
+    grid-area: 1/1/span 1/span 2;
+    /* border: 1px solid red; */
+}
+
+#g2{
+    grid-area: 2/1/span 1/span 2;
+}
+
+
+#g3{
+    grid-area: 3/1/span 1/span 2;
+}
+
+
+.test{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .testA{
+    border: 5px solid black
+} */
+
+.ten{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    background: lightpink;
+    float: left;
+    width: 250px;
+}
+
+.eleven{
+    display: flex;
+    flex-direction: row;
+    background: blueviolet;
+    float: left;
+}
+
+#aa1{
+    height: 177px;
+    width: 241px;
+    float: right;
+}
+
+
+#t3{
+    text-align: center;
+}
+
+
+.media{
+
+padding-left:5px;
+
+}
+
+#lt1{
+
+    float:right;
+}
+
+
+
+
+
