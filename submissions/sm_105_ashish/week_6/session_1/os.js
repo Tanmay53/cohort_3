@@ -1,41 +1,38 @@
-function getUserData(displayFunction){
-    var val=document.querySelector('.myselect').value
-    var result = null;
-    var xhr = new XMLHttpRequest(); 
-    xhr.open('GET', 'http://localhost:8080/codenames/'+val);
-    xhr.send()
-    xhr.onload = function (){
-      if(xhr.status == 200){
-        result = xhr.response;
-        console.log(JSON.parse(result))
-        displayFunction(result);
-      }
-      else{
-        console.log("Error Code is:" + xhr.status);
-      }
-    } 
-  }
-  
-  // This function will check the input to see if it is null and print the input to a p tag if it is not null.
-  var printUserData = function (input){
-    var body = document.querySelector('.dpage');
-    var display = document.createElement('div');
-    displayBtn.setAttribute('class',"col-5 m-3")
-    if(input == null){ // checking if the input is null
-      display.textContent = "Error! No user data received or invalid request!";
-      //It will print an error if the input is null
+var sData=document.querySelector('.myselect')
+function getUserData(){
+  event.preventDefault()
+  var newdata=null
+  var sd=document.querySelector('.myselect').value
+  var xhr = new XMLHttpRequest(); 
+  xhr.open('GET','http://localhost:8080/codenames/'+sd);
+  xhr.send()
+  xhr.onload = function (){
+    if(xhr.status==200){
+       newdata=JSON.parse(xhr.response)
+      printUserData(newdata)
+      console.log(newdata)
     }
     else{
-      display.textContent = input;
-      //Otherwise it will display the text
+      console.log("Error Code is:" + xhr.status)
     }
-    body.append(display);
   }
-  
-  //Button and listener for the `click here to print the user data!` button
-  var displayBtn = document.querySelector('#printUsers')
-  displayBtn.addEventListener('click',function(){
-    getUserData(printUserData);
-  });
- 
- 
+}
+sData.addEventListener('click',getUserData)
+ var prnt=document.getElementById('printUsers')
+ var tab=document.getElementById('tb')
+
+ function printUserData(res){
+   tab.innerHTML=''
+    res.codenames.forEach(function(ele){ 
+    var tr=document.createElement('tr')
+    var td1=document.createElement('td')
+    var td2=document.createElement('td')
+    td1.textContent=ele.version
+    td2.textContent=ele.name
+    tr.appendChild(td1)
+    tr.appendChild(td2)
+    
+    tab.appendChild(tr)
+ })
+}
+prnt.addEventListener('click',printUserData)
