@@ -15,4 +15,4 @@ function avg(limit, divisor) {
   // console.log(count)
   console.log(avg)
 }
-avg(29, 3)
+avg()

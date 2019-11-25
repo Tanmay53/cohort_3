@@ -4,6 +4,5 @@ function numbers(limit) {
   for (i = 0; i < limit; i++) {
     console.log(i)
   }
-  // console.log(limit)
 }
 numbers()
