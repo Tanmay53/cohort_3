@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Production data</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+        body {
+            background-size:cover;
+            background-image: linear-gradient(to right top, #182306, #1e3d2a, #265850, #387379, #5a8da2, #6695b8, #7d9bcb, #9e9ed9, #ad8fd7, #c17ccd, #d765b9, #e9499c);
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form-row my-2 border border-info shadow-lg p-4 mb-5 bg-white rounded">
+        <!-- input field -->
+        <div class="col-lg-5 col-md-12 border">
+          <h1 class="text-white border bg-dark text-center">Add Product</h1>
+          <div class="container">
+            <div class="form-group">
+              <div class="form-row">
+                <label for="product" class="text-danger h4">Product</label>
+                <input
+                  type="text"
+                  id="product"
+                  class="form-control"
+                  placeholder="Product Name"
+                />
+                <label for="price" class="text-danger h4 my-3">Price</label>
+                <input
+                  type="text"
+                  id="price"
+                  class="form-control"
+                  placeholder="Price"
+                />
+                <label for="qty" class="text-danger h4 my-3">Quantity</label>
+                <input
+                  type="text"
+                  id="qty"
+                  class="form-control"
+                  placeholder="Quantity"
+                />
+                <button class="btn btn-outline-primary my-3 px-5" id="addItem">
+                  <img
+                    src="https://img.icons8.com/office/40/000000/plus-math.png"
+                    class="mx-3"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- table -->
+        <div class="col-lg-5 col-md-12 border overflow-auto" style="height:34rem">
+          <table class="table overflow-auto" id="table">
+              <tr class="bg-primary border border-dark text-white">
+                <th scope="col" class="border border-dark">Product Name</th>
+                <th scope="col" class="border border-dark">Price</th>
+                <th scope="col" class="border border-dark">Quantity</th>
+              </tr>
+            </thead>
+            <!-- insert items here -->
+            <!-- tr 
+            td -->
+          </table>
+        </div>
+
+        <!-- setting -->
+        <div class="col-lg-2 col-md-12  border">
+          <h2 class="bg-dark text-white text-center">
+            Settings
+            <span
+              ><img
+                src="https://img.icons8.com/ios-glyphs/30/000000/money-bag-1.png"
+                class="bg-white"
+            /></span>
+          </h2>
+          <div class="form-group">
+            <div class="form-row">
+              <!-- font size -->
+              <div class="box border p-2 my-2 col-md-12 col-lg-12">
+                <label for="fontSize" class="h4 text-info"
+                  >Font Size
+                  <span
+                    ><img
+                      src="https://img.icons8.com/carbon-copy/50/000000/resize-diagonal.png"/></span
+                ></label>
+                <select name="fontSize" class="custom-select" id="fontSize">
+                  <option value="_" class="text-danger" disabled selected>Font Size </option>
+                 <option value="16px">16px</option>
+                  <option value="18px">18px</option>
+                  <option value="20px">20px</option>
+                  <option value="22px">22px</option>
+                  <option value="24px">24px</option>
+                  <option value="26px">26px</option>
+                  <option value="28px">28px</option>
+                  <option value="30px">30px</option>
+                </select>
+              </div>
+              <!-- font color -->
+              <div class="box border p-2 my-2 col-md-12 col-lg-12">
+                <label for="fontColor" class="text-danger"
+                  >Font Color
+                  <span
+                    ><img
+                      src="https://img.icons8.com/clouds/100/000000/color-dropper.png"
+                  /></span>
+                </label>
+                <select name="fontColor" class="custom-select" id="fontColor">
+                  <option value="_" class="text-danger" disabled selected>Font Color </option>
+                  <option value="black">Black</option>
+                  <option value="red">Red</option>
+                  <option value="blue">Blue</option>
+                  <option value="green">Green</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="pink">Pink</option>
+                  <option value="grey">Grey</option>
+                </select>
+              </div>
+              <!-- change bg color alternate -->
+              <div class="box border p-2 my-2 col-md-12 col-lg-12">
+                <label for="bgColor" class="h3 my-3 text-success "
+                  >Bg Color
+                  <span
+                    ><img
+                      src="https://img.icons8.com/officel/40/000000/rgb-circle-1.png"
+                  /></span>
+                </label>
+                <select name="bgColor" class="custom-select" id="bgColor">
+                  <option value="_" class="text-danger" disabled selected>BG Color </option>
+                  <option value="maroon">Maroon</option>
+                  <option value="blue">Blue</option>
+                  <option value="green">Green</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="red">Red</option>
+                  <option value="pink">Pink</option>
+                  <option value="grey">Grey</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
