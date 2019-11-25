@@ -5,10 +5,11 @@
         </style>
     </head>
     <body>
-       <button onclick="createPage()">Create Page</button>
+       <button id="btnCreate" onclick="createPage()">Create Page</button>
 
         <script type="text/javascript">
             function addHeader(container) {
+                
                 var header = document.createElement('div')
                     // ccreate image , heading, paragraph
                     var image1 = document.createElement('img')
@@ -29,10 +30,11 @@
                         heading.appendChild(para)
                     //styling
                     header.style.width = "50%"
+                    //header.style.paddingLeft = "200px"
                     header.style.background = "cyan"
                     header.style.textAlign = "center"
-                    header.marginLeft = "auto"
-                    header.marginRight = "auto"    
+                    header.style.marginLeft = "auto"
+                    header.style.marginRight = "auto"
                 container.appendChild(header)
             }
 
@@ -111,6 +113,9 @@
             }
 
             function createPage() {
+
+                btnCreate = document.getElementById('btnCreate')
+                btnCreate.style.display = 'none'
                 // get reference to body
                 body = document.querySelector('body')
                 //body.setAttribute('style', 'background: yellow')
