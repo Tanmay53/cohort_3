@@ -1,0 +1,189 @@
+<html>
+    <style>
+    #linus-div
+    {
+        width:500px;
+        background-color:grey;
+        text-align: center;
+        margin:auto;
+        height:300px;
+    }
+    #linus-div img{
+        margin-top:20px;
+        width:200px;
+        height:150px;
+    }
+    #linus-div h1{
+        color:blue;
+        font-weight: bold;
+    }
+    #linus-div h3{
+        padding:10px;
+    }
+    #sal-div{
+        width:800px;
+        margin-left: 200px;
+    }
+    #sal-div img
+    {
+        margin-right: 20px;
+        float: left;
+        float:left;
+        height:150px;
+    }
+    #sal-div h1
+   {
+    
+     font-weight: bold;
+     color:red;
+     margin-left:30px;
+   }   
+   #sal-div h2
+   {
+       margin-left:30px;
+   }
+   #footer {
+       margin-top:80px;
+        margin-left:50px;
+        background:red;
+        height: 110px;
+        width: 1150px;
+      }
+    #heading11
+    {
+    
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-family: arial;
+        color: white;
+        padding:20px;
+      }
+   
+    #subdiv
+    {
+        margin-left:40px;
+    }
+     
+      #den-div {
+        text-align: right;
+        width: 420px;
+        margin-top: -60px;
+        margin-right: 20px;
+        font-size: 20px;
+        float:right;
+        color: white;
+      }
+      #subdiv2
+    {
+        margin-right:20px;
+        float:right;
+        margin-top: -30px;
+
+        
+    }
+   
+ 
+ </style>
+
+    <body>
+        <button id="btn">CREATE PAGE</button>
+        <script>
+            var body=document.querySelector("body")
+
+            function part1()
+            {
+                var linusdiv=document.createElement('div');
+                linusdiv.setAttribute('id','linus-div');
+                body.appendChild(linusdiv);
+
+                //creating imag
+                var linusimag=document.createElement('img');
+            linusimag.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg');
+            linusimag.setAttribute('alt','linus-image');
+            linusdiv.appendChild(linusimag);
+
+             //creating heading h1
+   var h1=document.createElement('h1');
+            h1.textContent= "LINUS TORVALDS";
+            linusdiv.appendChild(h1);
+
+              //creating heading h1
+   var h3=document.createElement('h3');
+            h3.textContent= "The creator of Unix and Git ";
+            linusdiv.appendChild(h3);
+            
+            }    
+
+
+           //second function
+           function part2()
+           {
+               var saldiv=document.createElement('div')
+               saldiv.setAttribute('id','sal-div')
+               body.appendChild(saldiv)
+              
+              //creating imag of sal
+               var salimg=document.createElement('img')
+               salimg.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg')
+               salimg.setAttribute('alt',"sal-image")
+               saldiv.appendChild(salimg)
+
+               //creating heading part 
+               var h1=document.createElement('h1');
+               h1.textContent="Sal Khan";
+               saldiv.appendChild(h1);
+
+               //p part
+               var h3=document.createElement('h3');
+               h3.textContent="Salman khan is the founder of the Khan Academy which has a mission of providing a free world-class education for anyone, anywhere.";
+               saldiv.appendChild(h3);
+           }
+ 
+        function part3()
+        {
+            var footerdiv=document.createElement('div');
+            footerdiv.setAttribute('id','footer');
+            body.appendChild(footerdiv);
+
+
+        //creating left part
+        var heading1 = document.createElement('div');
+                heading1.setAttribute('id', 'heading11');
+                heading1.textContent = "Ken Thompson";
+                footerdiv.appendChild(heading1);
+
+       var subDiv = document.createElement('div');
+       subDiv.setAttribute('id','subdiv');
+        subDiv.textContent = "Designed and Implemented the original Unix operating system.";
+         footerdiv.appendChild(subDiv);
+
+        //creating right part
+        var denDiv = document.createElement('div');
+                denDiv.setAttribute('id', 'den-div');
+                denDiv.textContent = "Dennis Ritchie"
+                footerdiv.appendChild(denDiv);
+              
+              var subdiv2= document.createElement('div');
+              subdiv2.setAttribute('id','subdiv2');
+                subdiv2.textContent = "The creator of C programming language";
+                footerdiv.appendChild(subdiv2);
+
+        }
+        
+        
+        
+        
+        
+        function createpage()
+        {
+            part1();
+            part2();
+            part3();
+        }
+btn.addEventListener('click',createpage);
+        
+        
+        </script>
+    </body>
+</html>

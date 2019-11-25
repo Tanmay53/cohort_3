@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cont"></div>
+    <input  id="name" type="text" placeholder="name"/>
+    <input id="age" type="text" placeholder="age"/>
+    <button id="sub">Submit</button>
+    <script>
+        var arr=[]
+      
+     
+      var sub=document.getElementById('sub')
+      function submit(){
+         event.preventDefault()
+          var fname=document.getElementById('name').value
+          var myage=document.getElementById('age').value
+          function Student(name,age){
+          this.Name=name;
+          this.Age=age;
+          }
+        Student =new Student(fname,myage)
+        //console.log(Student)
+        arr.push(Student)
+        console.log(arr)
+      }
+      sub.addEventListener('click',submit)
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+body {
+    display: flex;
+}
+#inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+button {
+    font-size: 1.2rem;
+    color: brown;
+}

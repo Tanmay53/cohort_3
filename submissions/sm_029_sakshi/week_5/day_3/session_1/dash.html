@@ -1,0 +1,42 @@
+<html>
+    <style>
+    .time{
+        color:red;
+        font-size:20px;
+         }
+    .timer{
+        color:salmon;
+        font-size:25px;
+    }
+    body{
+        background-color: yellow;
+    }
+    </style>
+    <body>
+<h1 class="user" id="user"></h1>
+<p class="time"></p></p>
+<p class="timeout()"></p>
+<button onclick="reset()">logout</button>
+
+<script>
+
+
+var userName = localStorage.getItem("user")
+        document.getElementById("user").innerHTML = userName
+        var newvar = new Date();
+        var hour = Number(newvar.getHours())
+        var min = parseInt(newvar.getMinutes())
+        var sec = Number(newvar.getSeconds())
+        var x = 0
+        document.querySelector(".time").innerHTML = hour + ":" + min + ":" + sec
+        console.log(hour + " : " + min)
+       
+
+
+
+
+
+
+</script>
+</body>
+</html>
