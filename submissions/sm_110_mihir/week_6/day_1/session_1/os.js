@@ -11,7 +11,9 @@ function getOSData(display, os) {
     xhr.onload = function() {
         if (xhr.status == 200) {
             display(JSON.parse(xhr.response));
-        } else console.log("Error status:", xhr.response);
+        } else {
+            console.log("Error status:", xhr.response);
+        }
     };
 }
 
@@ -20,6 +22,7 @@ var printOSData = function(response) {
     var codenames = response.codenames;
     var body = document.getElementById("body");
     body.innerHTML = "";
+
     codenames.forEach(function(ele) {
         console.log(ele.version);
         var tr = document.createElement("tr");

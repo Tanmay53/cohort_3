@@ -14,25 +14,29 @@
     </head>
     <body>
         <div class="container ">
-            <div class="col-6">
-                <select class="custom-select">
-                    <option selected>check out OS version</option>
-                    <option value="android">Android</option>
-                    <option value="ubuntu">Ubuntu</option>
-                    <option value="windows">Windows</option>
-                    <option value="macos">macos</option>
-                </select>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <select class="custom-select">
+                        <option selected>check out OS version</option>
+                        <option value="android">Android</option>
+                        <option value="ubuntu">Ubuntu</option>
+                        <option value="windows">Windows</option>
+                        <option value="macos">macos</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Version</th>
-                            <th scope="col">Name</th>
-                        </tr>
-                    </thead>
-                    <tbody id="body"></tbody>
-                </table>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Version</th>
+                                <th scope="col">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body"></tbody>
+                    </table>
+                </div>
             </div>
             <script src="os.js"></script>
         </div>
