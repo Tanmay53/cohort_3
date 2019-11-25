@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        Students data Form
+      </div>
+      <div class="studentData">
+        <div class="pInfo">
+          <label>Name:<input placeholder="Enter Your Name" id="fname"/></label>
+          <h2>
+            Grade:<select id="fGrade">
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </h2>
+          <label>
+            Marks:<br /><input placeholder="Science" id="fSci" /><br />
+            <input type="text" placeholder="Maths" id="fMath" /><br />
+            <input type="text" placeholder="English" id="fEng" /><br />
+            <input type="text" placeholder="History" id="fHis" /><br />
+            <input type="text" placeholder="Geography" id="fGeo" /><br />
+          </label>
+          <button type="button" id="Sbutton">Submit</button>
+        </div>
+
+        <div class="showData">
+          <select id="grade1">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <tbody id="table"></tbody>
+
+          <button id="info">Show Data</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
