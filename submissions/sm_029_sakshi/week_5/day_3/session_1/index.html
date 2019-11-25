@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <title></title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        .form {
+         
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            font-size: 30px;
+            padding: 30px;
+            padding-top: 9 0px;
+            margin-left:550px;
+        }
+       
+        input {
+           
+        
+            height: 50px;
+           
+            border-radius: 10px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        button {
+            margin-left: 15%;
+            width: 80%;
+            height: 40px;
+            background:green;
+            color: white;
+            font-size: 10px;
+            
+        }
+        p {
+            font-size: 15px;
+            color: red;
+            margin-left: 30px;
+        }
+        #name {
+            margin-bottom: 10%;
+        }
+        .header {
+            text-align: right;
+        }
+        h3 {
+            color: blue;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="header">
+            <a href="/home/surya_k/coding/week_5/day_3/Session_1/admin.html">
+                <h3>Admin</h3>
+            </a>
+        </div>
+        <div class="form">
+            <label>UserName</label>
+            <br>
+            <input type="text" id="name">
+            <br>
+            <label>Password</label>
+            <br>
+            <input type="text" id="password">
+            <br>
+            <p class="note"></p>
+            <br>
+            <button onclick="login()">Sign In</button>
+
+        </div>
+        </div>
+
+        <script>
+            var objsignin={
+                username:[],
+                password:[]
+            }
+        function login()
+        {
+            var users=document.getElementById("name").value
+            var passwrds=document.getElementById("password").value
+            objsignin.username[objsignin.username.length]=users
+            objsignin.password[objsignin.password.length]=passwrds
+            localStorage.setItem("userentry",objsignin)
+            var obj={
+                username:["sakshi","sonia","pinky"],
+                password:["sakshi26","sonia26","pinky20"]
+            }
+            x=" "
+            for(var i=0;i<obj.password.length;i++)
+            {
+                if(obj.username[i]==users && obj.password[i]==passwrds)
+                {
+                    x=obj.username[i]
+                    newpage(x)
+                }
+                if(obj.username[i]!==users && obj.password[i]!==passwrds)
+                {
+                    alert("invalid user")
+
+                }
+
+
+            }
+
+
+        }
+         
+        function newpage(name)
+        {
+            localStorage.setItem("user",name)
+            location.assign("file:///home/sakshi/coding/week_5/day_3/session_1/dash.html");
+            //window.open("dash.html")
+        }
+        
+        
+        
+        
+        
+        
+        
+        </script>
+</body>
+</html>
