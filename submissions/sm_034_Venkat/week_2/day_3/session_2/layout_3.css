@@ -8,4 +8,27 @@
     height:100px;
     width:100px;
     margin:25px 
-    }  
+    }
+    @media (max-width: 600px) {
+      .square{
+     background: blue ;
+     }
+   }
+   
+   @media (min-width: 600px) {
+   .square {
+     background: red;
+   }
+   } 
+   
+   @media (min-width: 768px) {
+   .square {
+     background: greenyellow;
+   }
+   } 
+   
+   @media (min-width: 992px) {
+     .square {
+       background: black;
+     }
+   } 
