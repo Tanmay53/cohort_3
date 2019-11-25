@@ -1,0 +1,14 @@
+body{
+    margin: auto;
+    padding: auto;
+}
+.grid{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+}
+.grid div{
+    background: teal;
+    border:2px solid teal;
+}

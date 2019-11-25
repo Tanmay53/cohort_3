@@ -1,0 +1,215 @@
+<html>
+<head>
+    <title>Unix</title>
+    <style>
+        .flex {
+            display: flex;
+
+        }
+
+        .flex > div {
+            flex: 3;
+            border: 1px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        input {
+            float: right;
+            height: 25px;
+            width: 200px;
+        }
+        button {
+            height: 35px;
+            width: 200px;
+            margin-left:auto;
+            margin-right:auto;
+            display:block;
+        }
+        select {
+            height: 35px;
+            width: 200px;
+            margin-left:auto;
+            margin-right:auto;
+            display:block;
+        }
+
+        .textCenter {
+            text-align: center;
+        }
+        .backgroundRed {
+            background-image: linear-gradient( 248.1deg,  rgba(255,200,69,1) -0.1%, rgba(48,195,158,1) 100.5% );
+        }
+        .garadtable {
+            background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(222,168,248,1) 0%, rgba(168,222,248,1) 21.8%, rgba(189,250,205,1) 35.6%, rgba(243,250,189,1) 52.9%, rgba(250,227,189,1) 66.8%, rgba(248,172,172,1) 90%, rgba(254,211,252,1) 99.7% );
+        }
+        tr {
+            display: flex;
+            border-collapse: collapse;
+        }
+        tr > td { 
+            flex: 4;
+            border: 1px solid black;
+        }
+        span {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <!-- FORM to add -->
+        <div>
+            <div class="textCenter">Add</div>
+            <br>
+            <div>
+                <label>Product</label>
+                <input id="product" type="text">
+            </div>
+            <br>
+            <div>
+                <label>Price</label>
+                <input id="price" type="number">
+            </div>
+            <br>
+            <div>
+                <label>Quantity</label>
+                <input id="quantity" type="number">
+            </div>
+            <br>
+            <div>
+                <button onclick="addDetail()">Add Product</button>
+                <br>
+                <button onclick="showDetail()">Show Product</button>
+            </div>
+        </div>
+        <!-- TABLE -->
+        <div>
+            <div class="textCenter">Table</div>
+            <div id="table" class="textCenter"></div>
+        </div>
+        <!-- SETTINGS -->
+        <div>
+            <div class="textCenter">Settings</div>
+            <br>
+            <div>
+                <select id="selVal">
+                    <option value="1">Change font size</option>
+                    <option value="2">Change font color</option>
+                    <option value="3">Change background color</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input id="val" type="text">
+            </div>
+            <br>
+            <div>
+                <button id="selectOption()" onclick="selectOption()">Select</button>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script>
+        var data = [];
+        function addDetail(){
+            var prod = document.getElementById("product").value;
+            console.log(prod)
+            var priceVal = document.getElementById("price").value;
+            var price = Number(priceVal);
+            var quantity = document.getElementById("quantity").value;
+            var quant = Number(quantity);
+            var total = price*quant;
+
+            var obj = {
+                prod : prod,
+                price : price,
+                quant : quant,
+                total : total,
+            }
+            data.push(obj);
+            console.log(data)
+            resetText();
+        }
+        function resetText(){
+            document.getElementById("product").value = "";  
+            document.getElementById("price").value = "";
+            document.getElementById("quantity").value = "";
+        }
+        var count = 0;
+        function showDetail(){
+            var tableHead = document.getElementById('table');
+            tableHead.innerHTML = ""
+            var divs = document.createElement("div");
+            divs.setAttribute('class', "backgroundRed");
+            tableHead.appendChild(divs);
+
+            var table = document.createElement('table');
+            tableHead.appendChild(table);
+            
+            var tblRow = document.createElement("tr");
+            tblRow.setAttribute('class', "garadtable");
+            tableHead.appendChild(tblRow);
+
+            var tblTd1 = document.createElement("td");
+            tblTd1.innerHTML = "Product"
+            tblRow.appendChild(tblTd1);
+            var tblTd2 = document.createElement("td");
+            tblTd2.innerHTML = "Price"
+            tblRow.appendChild(tblTd2);
+            var tblTd3 = document.createElement("td");
+            tblTd3.innerHTML = "Quantity"
+            tblRow.appendChild(tblTd3);
+            var tblTd4 = document.createElement("td");
+            tblTd4.innerHTML = "Total"
+            tblRow.appendChild(tblTd4);
+            
+           
+            
+            for(var i = 0; i < data.length; i++){
+                var table = document.createElement('table');
+                tableHead.appendChild(table);
+                var tablerow = document.createElement('tr');
+                tablerow.style.border = "10";
+                tableHead.appendChild(tablerow);
+
+                var td1 = document.createElement('td');
+                td1.innerHTML = data[i].prod;
+                tablerow.appendChild(td1)
+                var td2 = document.createElement('td');
+                td2.innerHTML = data[i].price;
+                tablerow.appendChild(td2)
+                var td3 = document.createElement('td');
+                td3.innerHTML = data[i].quant;
+                tablerow.appendChild(td3)
+                var td4 = document.createElement('td');
+                td4.innerHTML = data[i].total;
+                tablerow.appendChild(td4);
+                // console.log(data[i].price)
+
+                if(i % 2 == 0){
+                    tablerow.setAttribute('class','backgroundRed');
+                }
+            }   
+        }
+        function selectOption(){
+            console.log(56)
+            var input = document.getElementById("val").value;
+            var selectVal = document.getElementById('selVal').value;
+            var table = document.getElementById('table');
+            if (selectVal == "1"){
+                table.style.fontSize =input;
+            }
+            if (selectVal == "2"){
+                table.style.color =input;
+            }
+            if (selectVal == "3"){
+                table.style.background =input;
+            }
+        }
+    </script>
+</body>
+
+</html>

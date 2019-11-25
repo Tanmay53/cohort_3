@@ -1,0 +1,261 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+         .cont{
+               display: flex;
+               flex-direction: column;
+               width: 1100px;
+               margin: auto;
+               font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         }
+           .box1{
+               display: flex;
+               flex-direction: column;
+               width:450px;
+               height:300px;
+               background: lightgrey;
+               margin: auto;
+               margin-top: 20px;
+                }
+           .box2{
+               display: flex;
+              flex-direction: row;
+               width:680px ;
+               height:150px;
+               margin: auto;
+               margin-top: 30px;
+               text-align: start;
+           }
+           #ph > .ph1 {
+               color: darkblue;
+               font-size: 30px;
+           }
+           .box3{
+               display:flex;
+               background:orangered;
+               width:900px;
+               height:140px;
+               margin: auto;
+               flex-direction: row;
+             }
+             .box3 > div  {
+                 width:450px;
+                 height:120px;
+                 margin-top: 10px;
+                 background-color: orangered;
+             }
+          #ph {
+               margin: auto;
+               width:350px;
+               margin-top: 10px;
+               text-align: center;
+           }
+           #sal {
+               margin-left: 20px;
+               margin-top: 0px;
+           }
+           #sal > .sh1 {
+                margin-top: 0px;
+                color:red;
+                font-size: 30px;
+           }
+           .b1 {
+               border-right:solid 8px black;
+           }
+           .b1 > .a1 {
+               color: white;
+               margin-left: 20px;
+               margin-top: 0px;
+               font-size: 20px;
+           }
+           .b1 > p {
+             margin-left: 20px;
+             margin-right: 20px;
+           }
+           .b2{
+               text-align: right;
+               border: none;
+           }
+           .img1 {
+               width:100px;
+               height:150px;
+           }
+           .img2 {
+             width:100px;
+               height:130px; 
+           }
+           @media(max-width: 590px){
+             .cont{
+             display: flex;
+             flex-direction: column;
+             width: 550px;
+             margin: auto;
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         }
+           .box1{
+               display: flex;
+               flex-direction: column;
+               width:225px;
+               height:160px;
+               background: darkolivegreen;
+               margin: auto;
+               margin-top: 10px;
+           }
+           .box2 {
+               display: flex;
+              flex-direction: row;
+               width:480px ;
+               height:150px;
+               margin: auto;
+               margin-top: 15px;
+               text-align: start;
+           }
+           #ph > .ph1
+           {
+               color: rgb(63, 63, 133);
+               font-size: 10px;
+           }
+           .box3 {
+               display:flex;
+               background:rgb(59, 19, 4);
+               width:450px;
+               height:90px;
+               margin: auto;
+               flex-direction: row;
+             }
+             .box3 > div  {
+                 width:225px;
+                 height:80px;
+                 margin-top: 5px;
+                 background-color: rgb(177, 81, 46);
+             }
+          
+           #ph {
+               margin: auto;
+               width:175px;
+               margin-top: 1px;
+               text-align: center;
+           }
+           #sal{
+                 
+               margin-left: 10px;
+               margin-top: 0px;
+           }
+           #sal > .sh1 {
+                margin-top: 0px;
+                color:red;
+                font-size: 10px;
+           }
+           .b1 {
+               border-right:solid 4px black;
+           }
+           .b1 > .a1 {
+               color: white;
+               margin-left: 10px;
+               margin-top: 0px;
+               font-size: 20px;
+           }
+           .b1 > p{
+             margin-left: 10px;
+             margin-right: 10px;
+           }
+           .b2 {
+               text-align: right;
+               border: none;
+           }  
+           .img1 {
+               width:50px;
+               height:75px;
+               margin-top: 5px;
+           }
+           .img2{
+             width:100px;
+               height:100px; 
+           }
+           .pp {
+               font-size: 12px;
+           }
+        }
+    
+         </style>
+    </head>
+    <body>
+
+       <button id='create'>Create Page</button>
+       <script>
+           var crt=document.getElementById('create')
+           var bdy=document.querySelector('body')
+           function createPage()
+           {
+            var cont=document.createElement('div')
+           cont.setAttribute('class','cont')
+           bdy.appendChild(cont)
+           var box1=document.createElement('div')
+           box1.setAttribute('class','box1')
+           cont.appendChild(box1)
+           var ph=document.createElement('div')
+           ph.setAttribute('id','ph')
+           box1.appendChild(ph)
+           var img1=document.createElement('img')
+           img1.setAttribute('class','img1')
+           img1.setAttribute('alt','linus')
+           img1.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg')
+           ph.appendChild(img1)
+           var ph1=document.createElement('p')
+           ph1.setAttribute('class','ph1')
+           ph1.innerHTML='<b>Linus Torvalds</b>'
+           ph.appendChild(ph1)
+           var ph2=document.createElement('p')
+           ph2.setAttribute('class','ph2')
+           ph2.innerHTML='The creator of linux and Git.'
+           ph.appendChild(ph2)
+           var box2=document.createElement('div')
+           box2.setAttribute('class','box2')
+           cont.appendChild(box2)
+           var img2=document.createElement('img')
+           img2.setAttribute('class','img2')
+           img2.setAttribute('alt','sal khan')
+           img2.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/khan.jpg')
+           box2.appendChild(img2)
+           var sal=document.createElement('div')
+           sal.setAttribute('id','sal')
+           box2.appendChild(sal)
+           var sh1=document.createElement('p')
+           sh1.setAttribute('class','sh1')
+           sh1.innerHTML='<b>Sal khan</b>'
+           sal.appendChild(sh1)
+           var sh2=document.createElement('p')
+           sh2.innerHTML="Salman khan the a founder of khan acadmey which has a mission <br> of providing a free world-class education for any one, anywhere."
+           sal.appendChild(sh2)
+           var box3=document.createElement('div')
+           box3.setAttribute('class','box3')
+           cont.appendChild(box3)
+           var b1=document.createElement('div')
+           b1.setAttribute('class','b1')
+           box3.appendChild(b1)
+           var a1=document.createElement('p')
+           a1.setAttribute('class','a1')
+           a1.innerHTML="Ken Thompson" 
+           b1.appendChild(a1)
+           var pp=document.createElement('pp')
+           pp.innerHTML="Designed and implemented the <br> original unix sysyem."
+           b1.appendChild(pp)
+           var b2=document.createElement('div')
+           b2.setAttribute('class','b1 b2')
+           box3.appendChild(b2)
+           var a2=document.createElement('p')
+           a2.setAttribute('class','a1')
+           a2.innerHTML="Dennis Ritchie" 
+           b2.appendChild(a2)
+           var pp=document.createElement('pp')
+           pp.innerHTML="The creator of c programming language."
+           b2.appendChild(pp)
+           crt.removeEventListener('click',createPage)
+           }
+           crt.addEventListener('click',createPage)
+          
+
+       </script>
+    </body>
+</html>
