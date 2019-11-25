@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript 10</title>
+</head>
+
+<body>
+    <!-- FSD.JS.10.1 !-->
+    <h1>Change the buttons text color random value</h1>
+    <button id="btn-1">Click here to change my color</button>
+    <button id="btn-2">Click me to change my color to an array value!</button>
+
+    <!-- FSD.JS.10.2 !-->
+    <h1 id="h1">My color should change when I double click the button!</h1>
+    <button id="btn-3">Double Click here to change the color of the h1 tag !</button>
+
+    <!-- FSD.JS.10.3 !-->
+    <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+    <button id="btn-4">Click here to change my color!</button>
+
+    <script type="text/javascript">
+
+        // random color #JS 10.1
+        var button1 = document.getElementById("btn-1");
+
+        button1.addEventListener("click", function () {
+            button1.style.color = "rgb(" + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ")";
+
+        });
+
+        //array of color  #JS 10.1 Bonus challenge
+        var colors = ["red", "green", "blue", "orange", "purple", "cyan", "darkgreen"];
+        var button2 = document.querySelector("#btn-2");
+        var i = 0;
+        button2.addEventListener("click", function () {
+            button2.style.color = colors[i];
+            i++;
+        });
+
+        // double click  event //JS 10.2 
+        var h1 = document.querySelector("#h1");
+        var dbl = document.querySelector("#btn-3");
+
+        dbl.addEventListener("dblclick", function () {
+            h1.style.color = "rgb(" + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ")";
+
+        });
+
+        //JS 10.3 remove event listener
+        var button3 = document.getElementById("btn-4");
+        var i = 0;
+
+
+
+        // adding the event listerner on double click
+        button3.addEventListener("click ", function twiceChange() {
+            button3.style.backgroundColor = "rgb(" + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ", " + Math.floor(Math.random() * 256) + ")";
+            i++;
+
+            //remove event listener after twice click
+            if (i === 2)
+                button3.removeEventListener("click", twiceChange);
+        });
+
+
+
+
+        // text font changing on mouse hover
+        button3.addEventListener("mouseover", function () {
+            button3.style.fontSize = "" + Math.floor(Math.random() * 40) + "px";
+        })
+        button3.addEventListener("mouseout", function () {
+            button3.style.fontSize = "14px";
+        })
+
+
+    </script>
+</body>
+
+</html>

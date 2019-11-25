@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="script.js"></script>
+  <style type="text/css">
+    .cust-entry{
+      width: 50%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 10px;
+    }
+    .display {
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <h1>Click the button to add a new customer!</h1>
+  <div class="cust-entry">
+    <div>First name : </div>
+    <input type="text" id="inputFirstname">
+    <div>Last name : </div>
+    <input type="text" id="inputLastname">
+    <div>Date of birth : </div>
+    <input type="text" id="inputDob">
+    <div>Balance : </div>
+    <input type="text" id="inputBalance">
+    <div>Account number : </div>
+    <input type="text" id="inputAccno">
+    <div>Shared Acc. holders : </div>
+    <input type="text" id="inputAccHolders">
+    <div></div>
+    <button onclick="addCustomer()">Add customer</button>
+  </div>
+  
+  <h2>Following customer added..</h2>
+  <p id="display">
+    "rohit\nmohit"
+  </p>
+
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! </h1>
+  <button onclick="printCustomer()">Print Customers</button>  
+  <div id="displayContainer"> </div>
+  
+
+  <script>
+    
+  </script>
+</body>
+</html>
