@@ -1,11 +1,13 @@
 /* for wikipedia logo */
 .one{
-    display: flex;
+    display: flex   ;
     flex-direction: column;
     padding: 10px; 
-    background: aquamarine;
+    background: rgb(118, 156, 137);
     width: 200px;
+    border: 5px solid black;
     float: left;
+    height: 5000px;
 }
 
 #a1{
@@ -21,9 +23,6 @@
     padding: 5px;
     /* background:grey; */
 }
-/* a:hover{
-    text-decoration: ; do later
-} */
 
 .inter{
     background: grey;
@@ -37,6 +36,8 @@
     margin-top: 5px;
 }
 
+
+
 /* START for 1st flex box from top */
 .two{
 background: lightcoral;
@@ -46,7 +47,7 @@ justify-content: flex-end;
 .two div{
     padding: 5px;   
 }
-/* END 1st flex box from top */
+/* END of 1st flex box from top */
 
 
 /* START for 2nd flex box from top*/
@@ -94,7 +95,6 @@ padding: 10px;
 
 
 .seven{
-   
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 14;
@@ -121,19 +121,57 @@ padding: 10px;
     grid-area: 3/1/span 1/span 2;
 }
 
-.ten{
-display: grid;
-grid-template-columns: 1;
-grid-template-rows: 10;
-border: 1px solid black;
-float: left;
-background: rgb(189, 183, 183);
-clear: inherit;
 
+.test{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .testA{
+    border: 5px solid black
+} */
+
+.ten{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    background: lightpink;
+    float: left;
+    width: 250px;
 }
 
 .eleven{
-float: inherit;
-background: lightpink;
+    display: flex;
+    flex-direction: row;
+    background: blueviolet;
+    float: left;
+}
+
+#aa1{
+    height: 177px;
+    width: 241px;
+    float: right;
+}
+
+
+#t3{
+    text-align: center;
+}
+
+
+.media{
+
+padding-left:5px;
 
 }
+
+#lt1{
+
+    float:right;
+}
+
+
+
+
+
