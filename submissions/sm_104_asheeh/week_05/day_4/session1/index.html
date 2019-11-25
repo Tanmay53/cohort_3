@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Constructor</title>
+        <style>
+                .container{
+                    display: flex;
+                    flex-direction: row;
+                    border: solid black;
+                    flex-basis: 300px;
+                    margin: 20px;
+                    
+
+                }
+
+                .inputCont{
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 100px;
+                   /* width: 300px;*/
+                   margin: auto;
+                   border:solid black;
+                   
+                }
+
+                #displayContainer1{
+                    border: solid red;
+                }
+
+                #displayContainer{
+                    display: flex;
+                    flex-basis: 700px;
+                    border: solid black;
+                    text-align: center;
+                    font-size:40px;
+                    font-weight: 200;
+                    flex-direction: column;
+                    
+                }
+
+
+               /* #btnPrintCustomer{
+                    margin: 100px 100px;
+                    
+                    height: 30px;
+                }*/
+        </style>
+    </head>
+<body>
+    <div class="container">
+  <!-- FSD.W4.3.1_1 !-->
+  <div class="inputCont">
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" id="firstN" />
+
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" id="lastN"/>
+
+      <label for="dateOfBirth">Date of birth</label>
+      <input type="text" name="dateOfBirth" id="dob"/>
+
+      <label for="balance"> Balance</label>
+      <input type="text" name="balance" id="balance" />
+
+      <label for="accountNumber">Account Number </label>
+      <input type="text" name="accountNumber" id="accNum" />
+
+      <label for="sharedAccountHolders">Shared Account Holders</label>
+      <input type="text" name="sharedAccountHolders" id="sharedAccHolders"/>
+
+  <h1>Click the button to add a new customer!</h1>
+  <button id="addcustomer">Add customer</button>
+</div>
+
+<!--display container-->
+
+  <div id="displayContainer1">
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! </h1>
+  <button id="btnPrintCustomer">Print Customers</button>  
+  </div>
+  
+  <div id="displayContainer">Display List </div>
+  
+</div>
+  <script>
+            var customerArr = []
+            function Customers(firstName, lastName, dateOfBirth, balance, accountNumber, sharedAccountHolders){
+                this["First Name"] = firstName
+                this["Last Name"] = lastName
+                this["Date Of Birth"] = dateOfBirth
+                this["Balance"] = balance
+                this["Account Number"] = accountNumber
+                this["Shared Account Holders"] = sharedAccountHolders
+               
+                }
+                
+           
+           //Add customer function// 
+            function addCustomer(){
+               
+                event.preventDefault();
+                var fn = document.getElementById("firstN").value;
+                var ln = document.getElementById("lastN").value;
+                var dob =document.getElementById("dob").value;
+                var bal =document.getElementById("balance").value;
+                var accNum = document.getElementById("accNum").value;
+                var sharedAccHolders=document.getElementById("sharedAccHolders").value;
+                
+                var c1 = new Customers(fn, ln, dob, bal, accNum, [sharedAccHolders])
+                customerArr.push(c1);
+                console.log(customerArr);
+
+                document.getElementById("firstN").value = '';
+
+                document.getElementById("lastN").value = '';
+
+                document.getElementById("dob").value = '';
+
+                document.getElementById("balance").value = '';
+                document.getElementById("accNum").value = '';
+
+                document.getElementById("sharedAccHolders").value = ''
+
+
+               
+            }
+            addcustomer.addEventListener('click', addCustomer);
+            
+            var btnD = document.getElementById("btnPrintCustomer")
+            Customers.displayDetails = function (){
+            customerArr.forEach(function(ele){
+                var str = ""
+                for(key in ele)
+                {
+                    str = str + key + ":" + ele[key] + "\n"
+                    var display = document.getElementById("displayContainer")
+                    var pTag = document.createElement("p");
+                    pTag.innerHTML = str
+                    display.appendChild(pTag);
+                    str = ""
+                }
+            })
+              customerArr = [];      
+                
+            }
+            btnD.addEventListener("click", Customers.displayDetails);
+
+            
+           
+
+  </script>
+</body>
+</html>
