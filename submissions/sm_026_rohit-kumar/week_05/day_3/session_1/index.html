@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <script type="text/javascript" src="script.js"></script>
+        <style type="text/css">
+            body{
+                font-family : Montserrat-Medium,sans-serif;
+            }
+
+            .wrapper {
+                width: 600px;
+                margin-left:auto;
+                margin-right: auto;
+                margin-top: 30px;
+            }
+
+            input[type=button] {
+                width: 200px;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-gap: 10px;
+                border: 1px solid #C2C8CE;
+                border-radius: 5px;
+                padding: 10px;
+                
+            }
+            
+            #button-row {
+                grid-column: span 2;
+                text-align: right;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function onUnload() {
+                clearLocalStorage()
+            }
+        </script>
+
+    </head>
+    <body onload="onLoad()" onunload="onUnLoad()">
+        <div class="wrapper">
+            <div class='grid-container'>
+                <div>username</div>
+                <input id="txtUsername" type="text" placeholder="Enter username">
+                <div>password</div>
+                <input id="txtPassword" type="text" placeholder="Enter password">
+                <div id="button-row"><button onclick="validate()">log in !</button></div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function onLoad() {
+                main()
+            }
+                        
+            
+
+            function validate() {
+                username = document.getElementById('txtUsername').value 
+                password = document.getElementById('txtPassword').value
+
+                res = isValidUser(username, password)
+                //alert(res.status)
+                if(res.status == true) {
+                    // log login attempt
+                    loginAttempt({"username" : username, "time" : Date.now(), "status" : "passed"})
+                    saveLogins(username, res.role)
+                    
+                    // if admin then redirect to admin.html
+                    if(res.role == 1) {
+                        window.location.replace('admin.html')
+                    }
+                    else {
+                        window.location.replace('dash.html')
+                    }
+                }
+                else {
+                    // log login attempt
+                    alert('Please enter valid username and password !')
+                    saveLoginAttempt({"username" : username, "time" : Date.now(), "status" : "failed"})
+                    
+                } 
+            }    
+
+            function saveLogins(username, role) {
+                window.localStorage.setItem('username', username)
+                window.localStorage.setItem('role', role)
+                window.localStorage.setItem('milliSec', Date.now())
+            }
+        </script>
+    </body>
+</html>

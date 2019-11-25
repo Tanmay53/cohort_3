@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login Form</title>
+  </head>
+  <body></body>
+</html>
+
+var username = document.getElementById("user"); var password =
+document.getElementById("password"); var submit =
+document.getElementById("submit"); submit.addEventListener("click", auth);
+document.addEventListener("DOMContentLoaded", setItemLocalStorage); function
+setItemLocalStorage() { localStorage.setItem("user", "admin");
+localStorage.setItem("password", "admin"); } function auth(e) {
+e.preventDefault(); var user = localStorage.getItem("user"); var pass =
+localStorage.getItem("password"); var min = localStorage.getItem("minute"); if
+(user === username.value && pass === password.value) { window.location.href =
+"/dash.html"; } else { alert("Login Credentials dont match"); } }

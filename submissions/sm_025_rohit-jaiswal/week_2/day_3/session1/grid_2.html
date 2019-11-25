@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grid 2</title>
+  <style>
+    #cont {
+      display: grid;
+      grid-template-columns: 200px 500px;
+      grid-template-rows: 50px 400px;
+      grid-gap: 20px;
+      justify-content: center;
+    }
+    #cont div {
+      background: green;
+    }
+    #cont div:first-child {
+      grid-column: 1 / span 2;
+      background: red;
+    }
+    #cont div:last-child {
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="cont">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

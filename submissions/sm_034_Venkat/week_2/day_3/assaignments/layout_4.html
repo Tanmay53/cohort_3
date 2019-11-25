@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>layout_4</title>
+    <style>
+        #nav {
+            background-color: yellow;
+            width: auto;
+            height: 50px;
+            font-size: 30px;
+            margin: 10px;
+            padding: 10px
+        }
+
+        .grid {
+            display: grid;
+            margin: 10px;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-gap: 15px;
+        }
+
+        .grid div {
+            height: 200px;
+            background-color: lime;
+            width: 200px;
+            font-size: 25px;
+            float: left;
+        }
+
+        #b2 {
+            background-color: orange;
+        }
+
+        #b3 {
+            background-color: green;
+        }
+
+        #b4 {
+            background-color: red;
+        }
+
+        @media (max-width:768px) {
+            #nav {
+                width: 620px;
+            }
+
+            .grid {
+                grid-auto-rows: auto auto;
+                grid-template-columns: auto auto;
+            }
+
+            #b1,
+            #b2,
+            #b3,
+            #b4 {
+                width: 300px;
+                height: 200px
+            }
+
+            #b3 {
+                grid-area: 1 /2;
+            }
+        }
+
+        @media (max-width:600px) {
+            #nav {
+                width: 400px;
+            }
+
+            .grid {
+                grid-auto-rows: auto auto auto auto;
+                grid-template-columns: 400px;
+            }
+
+            #b1,
+            #b2,
+            #b3,
+            #b4 {
+                width: 420px;
+                height: 150px
+            }
+
+            #b2 {
+                grid-row: 3;
+            }
+
+            #b3 {
+                grid-area: 4;
+            }
+
+            #b4 {
+                grid-area: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">Navigation</div>
+    <div class="grid">
+        <div id="b1">BOX1</div>
+        <div id="b2">BOX2</div>
+        <div id="b3">BOX3</div>
+        <div id="b4">BOX4</div>
+    </div>
+</body>
+
+</html>

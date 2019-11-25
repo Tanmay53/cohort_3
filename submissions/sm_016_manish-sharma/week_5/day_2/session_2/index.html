@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <title>Table</title>
+    <style>
+        body {
+            background: thistle;
+            display: grid;
+            grid-template-rows: 10% 80%;
+            grid-template-columns: 80% 15%;
+            grid-template-areas: "d1 d1"
+                "d2 d3";
+        }
+
+        .div1 {
+            grid-area: d1;
+        }
+
+        .div2 {
+            grid-area: d2;
+        }
+
+        .div3 {
+            grid-area: d3;
+        }
+
+        .topRow {
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium';
+            text-align: center;
+        }
+
+        td {
+            padding: 0px 20px 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- FORM to add -->
+    <div class="div1">
+
+        <label>Add Product
+            <input type="text" id='product'>
+        </label>
+        <label>Add Price
+            <input type="text" id='price'>
+        </label>
+        <label>Add Quantity
+            <input type="text" id='qty'>
+        </label>
+        <label>Create Entries
+            <button onclick="createEntries()">ADD</button>
+        </label>
+
+    </div>
+    <!-- TABLE -->
+    <div class='div2'>
+        <table id='table'>
+            <tr class="topRow">
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+            </tr>
+        </table>
+    </div>
+    <!-- SETTINGS -->
+    <div class="'div3'">
+        Settings
+        <br>
+        <br>
+        <button onclick="fontSize()">Change font size</button>
+        <button onclick="fontColor()">Change font color</button>
+        <button onclick="background()">Change background color of alternate row</button>
+    </div>
+</body>
+
+
+<script>
+    function createEntries() {
+        var table = document.getElementById('table')
+
+        var tr = document.createElement('tr')
+        table.appendChild(tr)
+
+        var td1 = document.createElement('td')
+        var td2 = document.createElement('td')
+        var td3 = document.createElement('td')
+
+        td1.textContent = document.getElementById('product').value
+        td2.textContent = document.getElementById('price').value
+        td3.textContent = document.getElementById('qty').value
+
+        tr.appendChild(td1)
+        tr.appendChild(td2)
+        tr.appendChild(td3)
+    }
+
+    function fontSize() {
+        row = document.querySelectorAll("#table  tr")
+        for (i = 1; i < row.length; i++) {
+            row[i].style.fontSize = i * 10
+        }
+
+    }
+
+    function fontColor() {
+        row = document.querySelectorAll("#table  tr")
+        for (i = 1; i < row.length; i++) {
+            for (j = 0; j < 3; j++) {
+                row[i].querySelectorAll('td')[j].style.color = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')'
+            }
+        }
+
+    }
+    function background() {
+        row = document.querySelectorAll("#table  tr")
+        for (i = 1; i < row.length; i++) {
+            if (i % 2 != 0) {
+                row[i].style.background = 'red'
+            }
+            else {
+                row[i].style.background = 'blue'
+            }
+        }
+
+    }
+
+</script>
+
+</html>
