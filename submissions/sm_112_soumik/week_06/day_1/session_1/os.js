@@ -21,6 +21,7 @@ function createUrl(url) {
       th.innerText = data.os;
       table.appendChild(tr);
       tr.appendChild(th);
+      console.log(data.codenames);
       data.codenames.forEach(function(ele) {
         var tr = document.createElement("tr");
         for (key in ele) {
