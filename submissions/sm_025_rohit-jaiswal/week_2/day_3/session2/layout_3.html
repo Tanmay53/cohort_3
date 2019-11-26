@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title> Layout_3 </title>
+    <style>
+        .box {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-basis: 500px;
+        }
+
+        .box>div {
+            background: coral;
+            width: 100px;
+            margin: 10px;
+            height: 100px;
+
+        }
+
+        @media (max-width:800px) {
+            .box div {
+                background: cornflowerblue;
+                flex-direction: column;
+                flex-basis: 1200px;
+            }
+        }
+
+        @media (max-width:600px) {
+            .box div {
+                background: green;
+                flex-direction: column;
+                flex-basis: inherit;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+        <div></div>
+    </div>
+
+    <div class="box">
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+
+</html>

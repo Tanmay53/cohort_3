@@ -1,0 +1,53 @@
+.header a{
+    float:right;
+    margin:20px;
+    text-decoration: none;
+    color:darkslategray;
+}
+.header button{
+ border:1px solid red;
+ background-color:white;
+ color:red;
+ float:right;
+ margin-top: 18px;
+ height:25px;
+ margin-right:25px;
+ margin-left:20px;
+}
+
+   .footer a{
+       float:left;
+       margin-left:80px;
+       margin-top:60px;
+       text-decoration: none;
+       color:blue;
+
+   }
+   .footer img{
+       float:right;
+       margin:30px;
+       height:50px;
+       width:50px;
+   }
+
+   .numbers{
+    display:grid;
+    grid-template-rows:150px 150px;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 35px ;
+    margin-left:200px;
+
+   }
+   .numbers h2{
+       color:midnightblue;
+       text-align:center;
+
+   }
+   
+   #center{
+       text-align:center;
+   }
+   #end{
+       margin-left:200px;
+   }
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="flex-row">
+        <div class="flex-col border">
+            <h3>Add Items</h3>
+            <div class="flex-row">
+                <p>Product:</p>
+                <input type="text" id="product" placeholder="Enter Product Name">
+            </div>
+            <div class="flex-row">
+                <p>Price:</p>
+                <input type="number" id="price" placeholder="Enter Price">
+            </div>
+            <div class="flex-row">
+                <p>Quantity:</p>
+                <input type="number" id="quantity" placeholder="Enter Quantity">
+            </div>
+            <button id="addItem">Add Item</button>
+        </div>
+        <div class="flex-col border" id="items">
+            <h3>All Items</h3>
+            <div class="flex-row">
+                <p>S. No.</p>
+                <p>Product</p>
+                <p>Price</p>
+                <p>Quantity</p>
+            </div>
+        </div>
+        <div class="flex-col border" id="settings">
+            <h3>Settings</h3>
+            <div class="flex-row">
+                <p>Font Size:</p>
+                <input type="number" id="fontsize" placeholder="Enter Font Size">
+                <button id="changefontsize">Change Font Size</button>
+            </div>
+            <div class="flex-row">
+                <p>Font Color:</p>
+                <input type="text" id="fontcolor" placeholder="Enter Font Color">
+                <button id="changefontcolor">Change Font Color</button>
+            </div>
+            <div class="flex-row">
+                <p>Background Color:</p>
+                <input type="text" id="backgroundcolor" placeholder="Enter Background Color">
+                <button id="changebgcolor">Change Background Color</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+#cont{
+    display:grid;
+    grid-gap: 25px;
+    grid-template-columns:200px 700px ;
+    grid-template-rows: 50px 300px;
+    padding: 20px;
+
+}
+#red{
+    background: red;
+    grid-area: 1/1/1/span 2;
+}
+#lime{
+    background: lime;
+    grid-area: 2/1/span 5/1;
+    margin: 5px;
+}
+#teal{
+    background: teal;
+    grid-area: 2/2/span 6/2;
+    margin: 5px;
+}

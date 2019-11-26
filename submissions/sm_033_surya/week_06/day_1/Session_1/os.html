@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    #table,
+    td,
+    tr {
+        border: 1px solid black
+    }
+
+    #hiddenTable {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col m-3">
+                <!-- <input type="text" id = "osName"> -->
+                <!-- <input type="submit" id = "load"> -->
+                <select id="picklist" class="col-3 text-center btn btn-Primary">
+                    <option value="windows">windows</option>
+                    <option value="ubuntu">ubuntu</option>
+                    <option value="android">android</option>
+                    <option value="macos">macos</option>
+                </select>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-4"></div>
+            <div class="col-4 mx-4">
+                <table id="hiddenTable" class="table table-dark text-center">
+                    <thead>
+                        <tr>
+                            <td>OS_Name</td>
+                            <td>Version</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    <script src="os.js"></script>
+</body>
+
+</html>
