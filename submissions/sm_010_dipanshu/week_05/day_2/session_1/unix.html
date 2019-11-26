@@ -1,0 +1,236 @@
+<html>
+  <head>
+    <title>Unix</title>
+    <style>
+      .cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .linus {
+        background: #e3dadb;
+        width: 500px;
+        text-align: center;
+      }
+
+      .linus img {
+        width: 125px;
+        margin: 20px;
+      }
+
+      .linus :nth-child(2) {
+        font-size: 40px;
+        color: #050085;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .linus :last-child {
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+
+      .sal {
+        display: grid;
+        grid-template-columns: auto 580px;
+        grid-template-rows: 50px auto;
+        margin: 50px;
+      }
+
+      .sal :first-child {
+        width: 150px;
+        grid-area: 1/1 / span 2/1;
+        margin-right: 20px;
+      }
+
+      .sal :nth-child(2) {
+        text-align: left;
+        color: #d3000e;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .sal :last-child {
+        text-align: justify;
+      }
+
+      .footer {
+        display: flex;
+        flex-direction: row;
+        background: #d35500;
+        height: 120px;
+        padding: 10px;
+        width: 1000px;
+      }
+
+      .footer > div:first-child,
+      .footer > div:last-child {
+        flex-grow: 1;
+      }
+
+      .head {
+        color: white;
+        font-size: 30px;
+        margin: 10px;
+      }
+
+      .tail {
+        color: white;
+        font-size: 30px;
+        text-align: right;
+        margin: 10px;
+      }
+
+      .head-desc {
+        margin: 10px;
+      }
+
+      .tail-desc {
+        margin: 10px;
+        margin-top: 30px;
+        text-align: right;
+      }
+
+      .footer > div:nth-child(2) {
+        width: 5px;
+        background: black;
+      }
+
+      @media (max-width: 800px) {
+        .cont {
+          border: 5px green dashed;
+        }
+
+        .linus {
+          background: crimson;
+        }
+
+        .sal {
+          background: yellow;
+        }
+
+        .footer {
+          width: auto;
+        }
+      }
+    </style>
+  </head>
+  <body id="body">
+    <button id="create">Create Page</button>
+    <script>
+      var createBtn = document.getElementById("create");
+      createBtn.addEventListener("click", createPage);
+
+      function createPage() {
+        var body = document.getElementById("body");
+
+        //parent-div
+        var cont = document.createElement("div");
+        cont.setAttribute("class", "cont");
+        body.appendChild(cont);
+
+        //linus-div
+        var linusDiv = document.createElement("div");
+        linusDiv.setAttribute("class", "linus");
+        cont.appendChild(linusDiv);
+
+        //linus-div-img
+        var linusImg = document.createElement("img");
+        linusImg.setAttribute(
+          "src",
+          "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg"
+        );
+        linusImg.setAttribute("alt", "Linus");
+
+        //linus-div-name
+        var linusNameDiv = document.createElement("div");
+        linusNameDiv.textContent = "Linus Torvalds";
+
+        //linus-div-desc
+        var linusDescDiv = document.createElement("div");
+        linusDescDiv.textContent = "The creator of Linux & Git";
+
+        linusDiv.appendChild(linusImg);
+        linusDiv.appendChild(linusNameDiv);
+        linusDiv.appendChild(linusDescDiv);
+
+        //sal-div
+        var salDiv = document.createElement("div");
+        salDiv.setAttribute("class", "sal");
+        cont.appendChild(salDiv);
+
+        //sal-div-img-cont
+        var salImgDiv = document.createElement("div");
+        cont.appendChild(salDiv);
+
+        //sal-div-img
+        var salImg = document.createElement("img");
+        salImg.setAttribute(
+          "src",
+          "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg"
+        );
+        salImg.setAttribute("alt", "Sal");
+
+        //sal-div-name
+        var salNameDiv = document.createElement("div");
+        salNameDiv.textContent = "Sal Khan";
+
+        //sal-div-desc
+        var salDescDiv = document.createElement("div");
+        salDescDiv.textContent =
+          "Salman Khan is the founder of the khan academy which has a mission of providing a free world-class education for anyone, anywhere.";
+
+        salDiv.appendChild(salImgDiv);
+        salImgDiv.appendChild(salImg);
+        salDiv.appendChild(salNameDiv);
+        salDiv.appendChild(salDescDiv);
+
+        //footer-cont
+        var footer = document.createElement("div");
+        footer.setAttribute("class", "footer");
+        cont.appendChild(footer);
+
+        //footer-left-pane
+        var leftFooter = document.createElement("div");
+
+        var head = document.createElement("div");
+        head.setAttribute("class", "head");
+        head.textContent = "Ken Thompson";
+
+        var headDesc1 = document.createElement("div");
+        headDesc1.setAttribute("class", "head-desc");
+        headDesc1.textContent = "Designed and Implemented the";
+
+        var headDesc2 = document.createElement("div");
+        headDesc2.setAttribute("class", "head-desc");
+        headDesc2.textContent = "original Unix Operating System";
+
+        //footer-middle-separator
+        var separatorDiv = document.createElement("div");
+
+        //footer-right-pane
+        var rightFooter = document.createElement("div");
+
+        var tail = document.createElement("div");
+        tail.setAttribute("class", "tail");
+        tail.textContent = "Dennis Ritchie";
+
+        var tailDesc = document.createElement("div");
+        tailDesc.setAttribute("class", "tail-desc");
+        tailDesc.textContent = "The creator of C Programming Language";
+
+        footer.appendChild(leftFooter);
+        leftFooter.appendChild(head);
+        leftFooter.appendChild(headDesc1);
+        leftFooter.appendChild(headDesc2);
+
+        footer.appendChild(separatorDiv);
+
+        footer.appendChild(rightFooter);
+        rightFooter.appendChild(tail);
+        rightFooter.appendChild(tailDesc);
+      }
+    </script>
+  </body>
+</html>

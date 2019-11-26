@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Student report
+        </title>
+        <link rel="stylesheet" type='text/css' href="style.css">
+
+
+    </head>
+    <body>
+           <div class="cont">
+               <div class='header'><br>WELCOME TO PRIMARY SCHOOL STUDENT PORTAL</div>
+               <div class="create">
+                   <form>
+                   <table class='table1'>
+                       <tr>
+                           <th colspan="2">Enter your data</th>
+                       </tr>
+                       <tr>
+                           <td>Name:</td>
+                           <td><input id="name" type="text";placeholeder='your Name'></td>
+                       </tr>
+                       <tr>
+                           <td>Standard:</td>
+                           <td>
+                               <select id='std'>
+                                   <option value="1'st">1'st</option>
+                                   <option value="2'nd">2'nd</option>
+                                   <option value="3'rd">3'rd</option>
+                                   <option value="4'th">4'th</option>
+                                   <option value="5'th">5'th</option>
+                               </select>
+                           </td>
+                       </tr>
+                       <tr>
+                           <th colspan="2">Enter your marks below</th>
+                       </tr>
+                       <tr>
+                          <td>Science</td>
+                          <td><input id="science" type='text'></td>
+                       </tr>
+                       <tr>
+                           <td>Math</td>
+                           <td><input id='math' type='text'></td>
+                        </tr>
+                        <tr>
+                            <td>English</td>
+                            <td><input id='english'type='text'></td>
+                        </tr>
+                        <tr>
+                            <td>History</td>
+                            <td><input  id='history'type='text'></td>
+                        </tr>
+                        <tr>
+                            <td>Geography</td>
+                            <td><input id='geography' type='text'></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" ><input type="submit" value="Submit" onclick="submitData()"></th>
+                        </tr>
+                   </table></form>
+                   <table>
+                       <tr>
+                           <td>Filter By Std:</td>
+                           <td>
+                   <select id="selectmenu">
+                       <option value="1'st">1'st</option>
+                       <option value="2'nd">2'nd</option>
+                       <option value="3'rd">3'rd</option>
+                       <option value="4'th">4'th</option>
+                       <option value="5'th">5'th</option>
+                    </select>
+                </td>
+                <td><input type="submit" onclick="addDetail()" value='Get list'/></td>
+                </tr>
+                </table>
+               </div>
+               <div class="report">
+                   <h1>Student's performance</h1>
+                   <div id='single'></div>
+                   <div class="gradewise">
+                       <table class='detail'>
+                           <tr>
+                                <td>Student's Name</td>
+                                <td> Average Marks</td>
+                                <td>Total Marks</td>
+                                <td>Grade</td>
+                           </tr>
+                      
+                    </table>
+                   </div>
+               </div>
+
+           </div>
+     <script src="script.js"></script>
+    </body>
+</html>

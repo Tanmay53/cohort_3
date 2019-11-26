@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Assignment Sprint-2</title>
+
+ <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+ </head>
+</head>
+
+<body>
+ <br>
+ <h1>Enter below details to create new Student..</h1>
+ <br><br>
+ <br>
+ <div class="container-add-new-entry-page">
+  <div>
+   Name: <br> <input type="text" name="name" value="" id="add-name" placeholder="Enter Name" required><br>
+  </div>
+
+  <div>
+   Grade: <br>
+   <select name="grade" id="add-grade" required>
+    <option value="I">I</option>
+    <option value="II">II</option>
+    <option value="III">III</option>
+    <option value="IV">IV</option>
+    <option value="V">V</option>
+    <option value="VI">VI</option>
+    <option value="VII">VII</option>
+    <option value="VIII">VIII</option>
+    <option value="IX">IX</option>
+    <option value="X">X</option>
+   </select>
+
+   <br>
+  </div>
+
+  <div class="add-marks">
+   <input type="text" id="add-science-marks" placeholder="Science Marks" maxlength="3">
+   <input type="text" id="add-maths-marks" placeholder="Maths Marks" maxlength="3">
+   <input type="text" id="add-english-marks" placeholder="English Marks" maxlength="3">
+   <input type="text" id="add-history-marks" placeholder="History Marks" maxlength="3">
+   <input type="text" id="add-geography-marks" placeholder="Geography Marks" maxlength="3">
+  </div>
+  <br>
+  <br>
+  <div>
+   <button id="record-button" onclick="recordData()">
+    Record
+   </button>
+  </div>
+
+ </div>
+ <br><br><br>
+
+ <div class="displayRecordAdded">
+  <table id="first-row-display">
+   <tr>
+    <td>Name</td>
+    <td>Grade
+     <select id="filter-by-grade">
+      <option id="filter-by-grade-1" value="I" onclick="filterByGrade()">I</option>
+      <option id="filter-by-grade-2" value="II" onclick="filterByGrade()">II</option>
+      <option id="filter-by-grade-3" value="III" onclick="filterByGrade()">III</option>
+      <option id="filter-by-grade-4" value="IV" onclick="filterByGrade()">IV</option>
+      <option id="filter-by-grade-5" value="V" onclick="filterByGrade()">V</option>
+      <option id="filter-by-grade-6" value="VI" onclick="filterByGrade()">VI</option>
+      <option id="filter-by-grade-7" value="VII" onclick="filterByGrade()">VII</option>
+      <option id="filter-by-grade-8" value="VIII" onclick="filterByGrade()">VIII</option>
+      <option id="filter-by-grade-9" value="IX" onclick="filterByGrade()">IX</option>
+      <option id="filter-by-grade-10" value="X" onclick="filterByGrade()">X</option>
+     </select>
+    </td>
+    <td>Science</td>
+    <td>Maths</td>
+    <td>English</td>
+    <td>History</td>
+    <td>Geography</td>
+    <td>Average</td>
+    <td>Total</td>
+   </tr>
+  </table>
+ </div>
+
+ <script src="script.js"></script>
+</body>
+
+</html>

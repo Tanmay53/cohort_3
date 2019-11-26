@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout_2</title>
+        <style>
+        #grid{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 100px 100px 100px 100px ;
+    grid-template-rows: 100px 100px 100px ;
+  background: white;
+  padding: 10px;
+  
+}
+#grid div {
+  background: teal;
+}
+#item2{
+  grid-area: 1  / 2 / span 1 / span 2 ;
+}
+#item4{
+  grid-area: 2 / 1 / span 1 / span 2 ;
+}
+#item9{
+  grid-area: 3 / 3 / span 1 / span 2;
+}
+#margin{
+    margin: 200px;
+}
+        </style>
+    </head>
+    <body>
+        <div id="margin">
+        <div id="grid">
+            <div></div>
+            <div id="item2"></div>
+            <div></div>
+            <div id="item4"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div id="item9"></div>
+            </div>
+        </div>
+    </body>
+</html>

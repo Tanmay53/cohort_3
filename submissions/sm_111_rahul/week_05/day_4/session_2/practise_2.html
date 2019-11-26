@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice 2 Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="background-color:#F8F9FA">
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-8">
+                <form>
+                    <div>
+                        <h3>Billing address</h3><br>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First name">
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="userName">Username</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">@</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="email">Email<span class="text-muted">(Optional)</span></label>
+                            <input type="email" class="form-control" placeholder="abc@gmail.com">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="add1">Address</label>
+                            <input type="text" class="form-control" placeholder="123 main street">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="add2">Address<span class="text-muted">(Optional)</span></label>
+                            <input type="text" class="form-control" placeholder="city">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select class="custom-select my-1 mr-sm-2" id="country">
+                                    <option selected>Choose...</option>
+                                    <option value="1">India</option>
+                                    <option value="2">USA</option>
+                                    <option value="3">Sri Lanka</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group ">
+                                <label for="state">State</label>
+                                <select class="custom-select my-1 mr-sm-2" id="country">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Bihar</option>
+                                    <option value="2">U.P</option>
+                                    <option value="3">Kerela</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="zip">Zip</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               Shipping address is same as the billing address
+                           </label>
+                    </div>
+                    <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                               Save this information for the next time
+                            </label>
+                    </div>
+                    <hr>
+                    <h1 class="display-5">Payment</h1>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                        <label class="custom-control-label" for="exampleRadios1">
+                            Credit card
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="custom-control-label" for="exampleRadios2">
+                            Debit card
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                        <label class="custom-control-label" for="exampleRadios3">
+                            PayPal
+                        </label>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="nameOnCard">Name on card</label>
+                            <input type="text" class="form-control" id="nameOnCard" placeholder="">
+                            <small id="" class="form-text text-muted">Full name as displayed on card</small>
+                        </div>
+                        <div class="form-group col">
+                            <label for="creditCardNo">Credit card number</label>
+                            <input type="text" class="form-control" id="creditCardNo" placeholder="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <h3 class="text-muted col">Your cart<span class="badge badge-pill badge-dark float-right">3</span></h3>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div> Product name<br><small>Brief description</small></div> <span class="text-muted">$12</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div> Second product <br><small>Brief description</small></div><span class="text-muted">$8</span>
+                        </li>
+                        <li class="list-group-item  d-flex justify-content-between align-items-center">
+                            <div> Third item <br><small>Brief description</small></div><span class="text-muted">$5</span>
+                        </li>
+                        <li class="list-group-item text-success d-flex justify-content-between align-items-center">
+                            <div> Promo code <br><small>Example code</small></div><span class=" text-success">-$5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Total(USD)<span class="font-weight-bold">$20</span>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                    <div class="input-group mb-3 p-2 border col">
+                        <input type="text" class="form-control" placeholder="Promo code" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-dark" type="button">Redeem</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
