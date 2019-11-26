@@ -1,0 +1,90 @@
+@media only screen and (min-width: 992px){
+    #container{
+        display:grid;
+        grid-gap: 20px;
+        grid-template-columns: 400px 200px;
+        grid-template-rows: 50px 100px 100px 100px;
+        margin: 10px;
+        padding:10px;
+    }
+    #navigation{
+        background: yellow;
+        grid-area: 1/1/2/3;
+    }
+    #leftBox{
+        background: red;
+        grid-area: 2/1/5/2;
+    }
+    .right{
+        background: lime;
+    }
+    #box1{
+        grid-area: 2/2/3/3;
+    }
+    #box2{
+        grid-area: 3/2/4/3;
+    }
+    #box3{
+        grid-area: 4/2/5/3;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    #container{
+        display:grid;
+        grid-gap: 20px;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 50px 100px 100px 100px;
+        margin: 10px;
+        padding:10px;
+    }
+    #navigation{
+        background: yellow;
+        grid-area: 1/1/2/4;
+    }
+    #leftBox{
+        background: red;
+        grid-area: 2/1/5/4;
+    }
+    .right{
+        background: lime;
+    }
+    #box1{
+        grid-area: 5/1/6/2;
+    }
+    #box2{
+        grid-area: 5/2/6/3;
+    }
+    #box3{
+        grid-area: 5/3/6/4;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    #container{
+        display:grid;
+        grid-gap: 20px;
+        grid-template-columns: auto;
+        grid-template-rows: 50px repeat(5,100px);
+        margin: 10px;
+        padding:10px;
+    }
+    #navigation{
+        background: yellow;
+        grid-area: 1/auto/2/auto;
+    }
+    #leftBox{
+        background: red;
+        grid-area: 2/auto/4/auto;
+    }
+    .right{
+        background: lime;
+    }
+    #box1{
+        grid-area: 4/auto/5/auto;
+    }
+    #box2{
+        grid-area: 5/auto/6/auto;
+    }
+    #box3{
+        grid-area: 6/auto/7/auto;
+    }
+}

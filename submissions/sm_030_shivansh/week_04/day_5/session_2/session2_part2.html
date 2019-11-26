@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript 10.5</title>
+    <style>
+        .cointainer {
+            background-color: blue;
+            height: 500px;
+        }
+
+        button {
+            padding: 20px;
+            width: 250px;
+            float: right;
+            margin: 400px 20px 20px 0;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cointainer">
+        <button>Submit</button>
+    </div>
+
+    <script type="text/javascript">
+        var element = document.querySelector(".cointainer");
+
+
+        element.addEventListener("mouseover", mouseOver);
+        element.addEventListener("mouseout", mouseOut);
+
+        function mouseOver() {
+            document.querySelector("button").style.backgroundColor = "red";
+        }
+
+        function mouseOut() {
+            document.querySelector("button").style.backgroundColor = "green";
+        }
+    </script>
+</body>
+
+</html>

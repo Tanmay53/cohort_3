@@ -1,30 +1,35 @@
-var username = localStorage.getItem("username");
-var userEle = document.getElementById("username");
-var date = new Date();
-var hour = date.getHours();
-var minutes = date.getMinutes();
-sessionStorage.setItem("hour", hour);
-sessionStorage.setItem("minutes", minutes);
-
-console.log(hour, minutes);
-if (username == "mihir") {
-    userEle.textContent = username;
+// event.preventDefault();
+var userEle = document.getElementById("usernameDash");
+var username = sessionStorage.getItem("sessionUser");
+var password = sessionStorage.getItem("sessionPass");
+// redirect to login page if user not validated
+if (username == null) {
+    alert("please login");
+    window.location.href = "index.html";
+} else {
+    var date = new Date();
+    var currMin = date.getMinutes();
+    var loginHr = sessionStorage.getItem("hour");
+    var loginMin = sessionStorage.getItem("minutes");
     var loginTimeEle = document.getElementById("loginTime");
-    loginTimeEle.textContent =
-        "Login Time :- HRS: " + hour + " | Minutes: " + minutes;
-    var endTime = document.getElementById("endTime");
-    var endMin = Number(sessionStorage.getItem("minutes")) + 5;
-    if (endMin < sessionStorage.getItem("minutes"))
-        endTime.textContent =
-            "Session End Time= HRS: " +
-            localStorage.getItem("hour") +
-            "   | Mins: " +
-            endMin;
-    else {
+    var endTime = sessionStorage.getItem("endTime");
+    var endEle = document.getElementById("endTime");
+    if (currMin < endTime) {
+        userEle.textContent = "Howdy, " + username;
+        console.log("hello");
+        loginTimeEle.textContent =
+            "Login Time :- HRS: " + loginHr + " | Minutes: " + loginMin;
+        endEle.textContent =
+            "End time:- HRS:" + loginHr + "| Minutes: " + endTime;
+    } else {
         alert("Session expired");
+        sessionStorage.removeItem("minutes");
+        sessionStorage.clear();
         window.location.href = "index.html";
     }
-} else {
-    alert("wrong username");
+}
+
+function logout() {
+    sessionStorage.clear();
     window.location.href = "index.html";
 }
