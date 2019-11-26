@@ -1,0 +1,35 @@
+body {
+  padding: 2%;
+}
+
+.allContainer {
+  display: flex;
+  flex-basis: 2;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+label {
+  display: flex;
+  /* border: 1px dashed brown; */
+  width: 400px;
+  font-size: 20px;
+}
+
+p {
+  padding: 2%;
+  white-space: pre-line;
+  border: 2px solid grey;
+}
+
+input {
+  border-radius: 5px;
+  height: 30px;
+  font-size: 20px;
+}
+
+button {
+  border-radius: 5px;
+  height: 30px;
+}
