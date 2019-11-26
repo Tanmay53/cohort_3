@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <style>
+        body>div {
+            width: max-content;
+            margin: 20px auto;
+            font-size: 30px;
+        }
+        
+        input {
+            padding: 10px 20px;
+        }
+        
+        p {
+            text-align: center;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        div {
+            padding: 12px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <div>
+            <p>Enter Details</p>
+        </div>
+        <div>
+            <input type="text" name="username" id="username" placeholder="Enter username" required>
+        </div>
+        <div>
+            <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+        <div>
+            <input type="submit" name="submit" class="btn btn-success" id="submit" value="Submit">
+        </div>
+
+    </div>
+
+    <script>
+        var btn = document.getElementById('submit');
+        btn.addEventListener('click', getData);
+
+        // localStorage.setItem("username", "masaischool");
+        // localStorage.setItem("password", "masai");
+
+
+        function getData() {
+            console.log('check')
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            sessionStorage.setItem("temp_username", username);
+
+            console.log(username, password)
+
+            if (username == localStorage.username && password == localStorage.password) {
+                console.log("inside valid cond")
+                window.location.replace("dash.html");
+
+            } else {
+                alert("wrong credentials")
+            }
+        }
+    </script>
+</body>
+
+</html>

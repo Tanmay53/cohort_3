@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            table , td
+            {
+                border:2px solid black;
+            }
+            #btnn
+            {
+                width:50px;
+                height:30px;
+                background-color:blue;
+            }
+            input 
+            {
+            height: 30px;
+            border-radius:20px;
+            } 
+            body
+            {
+             display:flex;
+             width:95%;
+             height:350px;
+             justify-content: space-between;
+            }
+            body > div {
+            border : 2px solid red;
+            border-radius: 30px;
+            padding:20px;
+            justify-content: space-between;
+        }
+        .form>div,
+        .setting>div {
+            margin: 10px;
+            }
+            td {
+            width: 300px;
+            text-align: center;
+        }
+        body> div:nth-of-type(1) button
+        {
+          margin-left:80px;
+        }
+    
+  
+        </style>
+    </head>
+    <body>
+       <!-- FORM to add -->
+       <div class="form">
+            
+            <div class="product">
+                <div>Product name</div>
+                <input type="text" id="product1">
+            </div>
+            <div class="price">
+                    <div>Price</div>
+                    <input type="number" id="price1">
+            </div>
+            <div class="Quantity">
+                    <div>No of quantity</div>
+                    <input type="number" id="quantity1">
+            </div>
+        <button id="btnn" onclick="add()">ADD</button>
+        </div>
+        
+
+
+       </div>   
+       <!-- TABLE -->
+
+       <div>
+        
+            <table class="table" id="tbl">
+                <tr>
+                    <td>PRODUCT</td>
+                    <td>PRICE</td>
+                    <td>QUANTITY</td>
+                </tr>
+            </table>
+       </div>
+       <!-- SETTINGS -->
+       <div class="setting">
+           Settings
+           <div class="name">
+               <div>FONT SIZE</div>
+               <input type="text" id="font"> 
+               <button onclick="changefontsize()">Chnage font size</button>
+           </div>
+           <div class="price">
+                <div>FONT COLOR</div>
+                <input type="text" id="fontcolor"> 
+                <button onclick="Chnagefontcolor()">change font color</button>
+            </div>
+            <div class="Quantity">
+                    <div>BACKGROUND COLOR</div>
+                    <input type="text" id="backclr"> 
+                    <button onclick="Chnagebackgroundcolor()">change backgroundcolor</button>
+            </div>
+       </div>
+
+       <script>
+       var array=[]
+       var obj={}
+
+       function add()
+       {
+           
+        var productInput = document.getElementById("product1").value;
+        var priceInput = document.getElementById("price1").value
+        var quantityInput = document.getElementById("quantity1").value
+        obj = {
+                product: productInput,
+                price: priceInput,
+                 quantity: quantityInput
+             }
+
+        array.push(obj)
+        createtable(obj)
+
+       }
+
+       function createtable(obj)
+       {
+           var table=document.querySelector(".table")
+           //firse row,,now we have to make 3 colm for prod price and quntity
+           var tr=document.createElement("tr")
+           table.appendChild(tr)
+
+           //1st col
+           var td=document.createElement("td")
+           td.innerHTML=obj.product
+           tr.appendChild(td)
+
+           //2nd child
+           var td=document.createElement("td")
+           td.innerHTML=obj.price
+           tr.appendChild(td)
+
+           //3rd col
+           var td=document.createElement("td")
+           td.innerHTML=obj.quantity
+           tr.appendChild(td)
+       }
+   
+   function changefontsize()
+   {
+       var table1=document.querySelector(".table")
+       var font1=document.getElementById("font").value
+       table1.style.fontSize=font1
+   }
+
+   function Chnagefontcolor()
+   {
+       var table1=document.querySelector(".table")
+       var color1=document.getElementById("fontcolor").value
+       table1.style.color=color1
+   }
+
+   function Chnagebackgroundcolor()
+   {
+   for (i = 0; i <= array.length; i++) 
+            {
+                if(i%2==1)
+                {
+                    var bgcolor = document.getElementById("backclr").value
+                    var td = document.querySelectorAll("tr")
+                    td[i].style.background = bgcolor
+                }
+            
+            }
+   }
+  
+       
+       
+       
+       </script>
+    </body>
+</html>

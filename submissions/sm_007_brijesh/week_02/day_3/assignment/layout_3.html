@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        .grid {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 100px 100px 100px;
+        }
+
+        body {
+            margin-top: 200px;
+            margin-left: 200px;
+        }
+
+        .yellow {
+            background: yellow;
+            grid-area: 1/1/2/4;
+        }
+
+        .red {
+            background: red;
+            grid-area: 2/1/5/3;
+        }
+
+        .green1 {
+            background: green;
+            grid-area: 2/3/3/4;
+
+        }
+
+        .green2 {
+            background: green;
+            grid-area: 3/3/4/4;
+        }
+
+        .green3 {
+            background: green;
+            grid-area: 4/3/5/4;
+        }
+
+        @media screen and (max-width:1024px) {
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 60px 300px 150px;
+                grid-gap: 15px;
+            }
+
+            .yellow {
+                background: yellow;
+                grid-area: 1/1/2/4;
+            }
+
+            .red {
+                background: red;
+                grid-area: 2/1/3/4;
+            }
+
+            .green1 {
+                background: green;
+                grid-area: 3/1/4/2;
+            }
+
+            .green2 {
+                background: green;
+                grid-area: 3/2/4/2;
+            }
+
+            .green3 {
+                background: green;
+                grid-area: 3/3/4/4;
+            }
+
+        }
+
+
+        @media screen and (max-width:900px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 240px;
+                grid-template-rows: 60px 240px 130px 130px 130px;
+                grid-gap: 15px;
+            }
+
+            .yellow {
+                background: yellow;
+                grid-area: 1/1/2/2;
+            }
+
+            .red {
+                background: red;
+                grid-area: 2/1/3/2;
+            }
+
+            .green1 {
+                background: green;
+                grid-area: 3/1/4/2;
+            }
+
+            .green2 {
+                background: green;
+                grid-area: 4/1/5/2;
+            }
+
+            .green3 {
+                background: green;
+                grid-area: 5/1/6/2;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="grid">
+        <div class="yellow">Navigation</div>
+        <div class="red">Left Box</div>
+        <div class="green1"> RightBox 1</div>
+        <div class="green2">RightBox 2</div>
+        <div class="green3">RightBox 3</div>
+    </div>
+</body>
+
+</html>

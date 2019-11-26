@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+  margin-top: 0.5rem;
+}
+.flex > div {
+  padding: 0 2rem;
+}
+.flex > div > div > label {
+  margin: 0.3rem;
+}
+.flex > div > div > input {
+  padding: 0.5rem;
+  width: 50%;
+  margin: 0.5rem;
+}
+#displayContainer div h4 {
+  margin-top: 1rem;
+}

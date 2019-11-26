@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>layout_6.html</title>
+    </head>
+    <style>
+        .cont {
+            display:grid;
+            margin:20px;
+            grid-gap:20px;
+            grid-template-rows: 150px 150px 150px 150px;
+            grid-template-columns: 150px 150px 150px 150px;
+            justify-content:center;
+
+             } 
+        .cont div {
+            background:purple;
+        }
+        #class8{
+            background-color: white;
+            grid-area:2/4/2/5;
+        }
+        
+        #class11{
+            background-color: white;
+            grid-area:3/3/3/5;
+        }
+        #class13{
+            background-color: white;
+            grid-area:4/2/4/5;
+        }
+        @media (max-width:1024px){
+            body{
+                background:red;
+            }
+        }
+        
+
+    </style>
+    <body>
+        <div class="cont">
+            <div ></div>
+            <div ></div>
+            <div></div>
+            <div></div>
+            <div ></div>
+            <div></div>
+            <div ></div>
+            <div id="class8"></div>
+            <div ></div>
+            <div ></div>
+            <div id="class11"></div>
+            <div></div>
+            <div id="class13"></div>
+             </div>
+    
+    </body>
+</html>

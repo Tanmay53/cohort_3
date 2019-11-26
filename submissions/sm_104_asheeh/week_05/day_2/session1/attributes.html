@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Practise Attributes</title>
+        <style type="text/css">
+            .class-h1 {
+                color: red
+            }
+            .class-h3 {
+                color: green;
+            }
+            .class-h5 {
+                color: orange;
+            }
+            .class-div {
+                color: yellow;
+                font-size: 20px;
+                margin: 10px;
+            }
+            .class-p {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #test-2 {
+                font-size: 30px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div id="box">
+            <div>First DIV</div>
+            <div>Second DIV</div>
+            <div>Third DIV</div>
+        </div>
+        <div>Fourth DIV</div>
+        <div id="cont">
+            <p>First P</p>
+            <p>Second P</p>
+            <p>Third P</p>
+        </div>
+        <div id="temp">
+            <p>Test P1</p>
+            <p id="p2">Test P2</p>
+            <p>Test P3</p>
+        </div>
+        <hr/>
+        <button onclick="changeH1()">Change H1</button>
+        <button id="btnH3">Change H3</button>
+        <button onclick="btnH5()">Change H5</button>
+        <button id='btnDiv'>Change DIV</button>
+        <button id="btnP">Change P</button>
+        <button id='btnP2'>Set ID</button>
+        <script>  
+        function changeH1(){
+            var H1 = document.querySelector('h1');
+            H1.setAttribute('class', 'class-h1')
+        }
+        var btnH3=document.getElementById('btnH3');
+
+        function changeH3(){
+            var H3 = document.querySelectorAll('h3');
+            for(var i=0 ; i<H3.length ; i++)
+            {
+            H3[i].setAttribute('class', 'class-h3')
+         } 
+        }
+        btnH3.addEventListener('click',changeH3) 
+
+        function btnH5(){
+            var H5 = document.querySelectorAll('h5');
+            for(var i=0 ; i<H5.length ; i++)
+            {
+                H5[i].setAttribute('class', 'class-h5');
+            }
+        }
+
+        var btnDiv = document.getElementById('btnDiv');
+        function changeDiv(){
+            var Div = document.querySelectorAll('#box div');
+            for(var i=0 ; i<Div.length ; i++)
+            {
+                Div[i].setAttribute('class', 'class-div');
+            }
+            
+        }  
+        btnDiv.addEventListener('click', changeDiv)
+
+        var btnP = document.getElementById('btnP');
+        function changeP(){
+            var para = document.querySelectorAll('#cont p');
+            for(var i=0 ; i<para.length ; i++)
+            {
+                para[i].setAttribute('class', 'class-p');
+            }
+        }
+        btnP.addEventListener('click', changeP);
+
+        var btnP2 = document.getElementById('btnP2');
+        function changeP2(){
+            var p2 = document.getElementById('p2');
+            p2.setAttribute('id', 'test-2');
+        }
+        btnP2.addEventListener('click', changeP2);
+        </script>
+    </body>
+</html>

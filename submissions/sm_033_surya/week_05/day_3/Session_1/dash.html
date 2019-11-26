@@ -1,0 +1,69 @@
+<html>
+<style>
+    *{
+        text-align: center;
+    }
+    .timer {
+        color: red;
+        font-size: 40px;
+    }
+</style>
+
+<body>
+
+    <h1 class="user" id="user"></h1>
+    <p class="time"></p>
+    <p class="timer"></p>
+    <p class="timeout"></p>
+    <button onclick="pagereset()">Logout</button>
+
+    <script>
+        var userName = localStorage.getItem("user")
+        document.getElementById("user").innerHTML = userName
+        var newvar = new Date();
+        var hour = Number(newvar.getHours())
+        var min = parseInt(newvar.getMinutes())
+        var sec = Number(newvar.getSeconds())
+
+        var x = 0
+        document.querySelector(".time").innerHTML = hour + ":" + min + ":" + sec
+        console.log(hour + " : " + min)
+        var timeout = 5 + parseInt(min)
+        if (timeout > 60) {
+            timeout = timeout - 60
+            hour = hour + 1
+        }
+        console.log(timeout)
+        document.querySelector(".timeout").innerHTML = hour + ":" + timeout + ":" + sec
+
+        var timer = setTimeout(function () {
+            pagereset()
+        }, 300000)
+        var inter = setInterval(function () {
+            coundown()
+
+        }, 1000)
+
+        function pagereset() {
+            location.replace("index.html")
+        }
+        var j = 4
+        var i = 60
+
+        function coundown() {
+            x = i--
+            // console.log(x)
+            document.querySelector(".timer").innerHTML = "Timeout with in :" + j + "min :" + x + "sec"
+            if (x == 1) {
+                j--
+                i = 60
+                console.log(j)
+            }
+            if (j == -1) {
+                clearInterval(inter)
+            }
+        }
+    </script>
+</body>
+
+</html>

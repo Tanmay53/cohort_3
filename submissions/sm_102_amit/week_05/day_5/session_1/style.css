@@ -1,0 +1,26 @@
+.yellow {
+  background: yellow;
+}
+.red {
+  background: red;
+}
+.green {
+  background: green;
+}
+.purple {
+  background: purple;
+}
+.grey {
+  background: grey;
+}
+.box {
+  height: 600px;
+}
+.small-box {
+  height: 193px;
+}
+@media only screen and (max-width: 768px) {
+  .box {
+    height: 300px;
+  }
+}
