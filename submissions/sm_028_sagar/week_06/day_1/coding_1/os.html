@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Os</title>
+    <style>
+        div {
+            width: max-content;
+            margin: 10px auto;
+        }
+        
+        div * {
+            margin: 10px;
+        }
+        
+        table td {
+            border: 1px solid black;
+            font-size: 20px;
+        }
+        
+        #os_name {
+            border: none;
+            font-size: 25px;
+        }
+        
+        #submit {
+            padding: 10px 15px;
+            background: rgba(53, 180, 30, 0.733);
+            border: 1px solid rgb(27, 124, 27);
+            border-radius: 4px;
+        }
+        
+        #os {
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="os">Select Operating System:</label>
+        <select name="os" id="os">
+                <option value="android">android</option>
+                <option value="ubuntu">ubuntu</option>
+                <option value="windows">windows</option>
+                <option value="macos">macos</option>    
+         </select>
+    </div>
+    <div>
+        <table id="cont">
+            <tr>
+                <td id="os_name"></td>
+            </tr>
+            <tr>
+                <td id="version">Version</td>
+                <td id="name">Name</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="./os.js"></script>
+</body>
+
+</html>
