@@ -1,0 +1,14 @@
+body{
+    margin-top:100px;
+    margin-left:250px;
+}
+.flux {
+    display:flex;
+}
+.flux div {
+   background-color:navy;
+   width:100px;
+   height:100px;
+   margin:20px;
+   border-radius:5px;
+}

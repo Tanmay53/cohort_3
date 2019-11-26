@@ -1,14 +1,16 @@
-var game=['foosball is fun']
-var char='o'
+var game='foosball'
+var c='o'
 
-var are = []
+var arr = []
 
-for(i=0;i<game.length;i++)
-{
-    if(char==game[i])
+function splitMadi (string,char){
+    for(i=0;i<string.length;i++)
     {
-       are.push(char)
+        if(string[i]!=c)
+        {
+            arr.push(string[i])
+        }
     }
-}
-console.log(are)
-///////TRY Again
+    console.log(arr)
+}splitMadi(game,c)
+
