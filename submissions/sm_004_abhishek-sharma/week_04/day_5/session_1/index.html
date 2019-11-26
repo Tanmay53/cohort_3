@@ -9,7 +9,7 @@
   <!-- FSD.JS.10.2 !-->
   <h1 id="changeH1">My color should change when I double click the button!</h1>
   <button id="doubleClickChange">Double Click here to change the color of the h1 tag !</button>
-  
+
   <!-- FSD.JS.10.3 !-->
   <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
   <button id="changeColorTwice">Click here to change my color!</button>
@@ -26,18 +26,19 @@
     var changeArrayColor = document.getElementById("changeArrayColor")
     var changeSize = document.getElementById("changeSize")
 
-    function random(number){
-      return Math.floor(Math.random()*number);
+    function random(number) {
+      return Math.floor(Math.random() * number);
     }
+    
     // For single click change button color to random
-    function switchColor(){
+    function switchColor() {
       var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
       changeBtnColor.style.backgroundColor = randomColor;
     }
     changeBtnColor.addEventListener('click', switchColor);
 
     // For double Click change random color of above H1 text
-    function doubleSwitchColor(){
+    function doubleSwitchColor() {
       var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
       changeH1.style.color = randomColor;
     }
@@ -45,17 +46,17 @@
 
     // Changes button random color only Twice
     var count = 0
-    function switchColorTwice(){
+    function switchColorTwice() {
       count++
       var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
       buttonTwice.style.backgroundColor = randomColor
-      if(count == 2)
+      if (count == 2)
         buttonTwice.removeEventListener('click', switchColorTwice)
     }
     buttonTwice.addEventListener('click', switchColorTwice);
 
     // Change size of text inside button to random value
-    function changeTextSize(){
+    function changeTextSize() {
       var randomSize = random(50)
       console.log(randomSize)
       changeSize.style.fontSize = randomSize + "px";
@@ -64,14 +65,14 @@
 
     // Change button color to an array value
     var position = 0
-    function switchArrayColor(){
-        changeArrayColor.style.backgroundColor = colors[position]
-        position++
-        if(position == colors.length)
-          position = 0
-      }
+    function switchArrayColor() {
+      changeArrayColor.style.backgroundColor = colors[position]
+      position++
+      if (position == colors.length)
+        position = 0
+    }
     changeArrayColor.addEventListener('click', switchArrayColor)
-  
+
   </script>
 </body>
 </html>
