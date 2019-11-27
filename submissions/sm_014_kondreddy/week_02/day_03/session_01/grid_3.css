@@ -1,0 +1,19 @@
+body {
+    margin-top:200px;
+    margin-left:400px;
+}
+ .class1 {
+    display:grid;
+    grid-template-rows:100px 100px 100px 100px;
+    grid-template-columns:100px 100px 100px 100px;
+    grid-gap:30px;
+    border-radius:10px;
+ }
+ .class1 > div {
+    background-color:rebeccapurple;
+    
+    border-radius:10px;
+}
+.class1 .white {
+    background-color:white;
+}
