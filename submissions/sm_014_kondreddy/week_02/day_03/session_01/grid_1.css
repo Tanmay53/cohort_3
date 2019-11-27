@@ -1,0 +1,15 @@
+body {
+    margin-top:150px;
+    margin-left:350px;
+}
+.grid{
+    display:grid;
+    grid-gap:30px;
+    grid-template-rows:auto auto;
+    grid-template-columns:100px 100px 100px 100px 100px;
+}
+.grid div {
+    background-color:blueviolet;
+    height:120px;
+    border-radius:5px;
+}
