@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings"></div>
+        <div id="cont"></div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button>Create H1</button>
+        <button>Create 2 H3</button>
+        <button id="div">Create DIVS</button>
+        <button id="students">Add Students</button>
+        <button id="copyright">Add Copyright</button>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                // your code goes here
+                $("button:nth-of-type(1)").click(function() {
+                    $("#headings").text("MASAI");
+                });
+
+                $("button:nth-of-type(2)").click(function() {
+                    $("#headings").append(
+                        "<h3>A Transformation in education!</h3><h3>Learn to earn, pay when you get.</h3>"
+                    );
+                });
+
+                $("#div").click(function() {
+                    for (var i = 1; i <= 10; i++) {
+                        $("#cont").append("<div>" + i + "</div>");
+                    }
+                });
+
+                // add students
+                $("#students").click(function() {
+                    students.forEach(function(ele) {
+                        $("ul li:nth-child(1)").after("<li>" + ele + "</li>");
+                    });
+                });
+
+                $("#copyright").click(function() {
+                    $("button:nth-of-type(1)").before("<p>@ masai 2019</p>");
+                });
+            });
+            var students = [
+                "Ajay",
+                "Akshay",
+                "Anusha",
+                "Chandrashekhara",
+                "Haren",
+                "Hasaan",
+                "Mahesh",
+                "Mousumi",
+                "Pavan",
+                "Rahul",
+                "Sumanta",
+                "Venkatesh",
+                "Vetrival",
+                "Vijayendra"
+            ];
+        </script>
+    </body>
+</html>
