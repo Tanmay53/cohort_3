@@ -1,0 +1,22 @@
+ body { 
+ margin-top:100px;
+ margin-left:200px;
+}
+.cont1 {
+    display:grid;
+    grid-auto-rows:100px ;
+    grid-template-columns:100px 100px 100px 100px;
+    grid-gap:20px;
+}
+.cont1 > div {
+   background-color:navy;
+}
+.cont1 #box1 {
+    grid-area:1/ 2 /1 /4;
+}
+.cont1 #box2 {
+    grid-area:2/ 1 /2 /3;
+}
+.cont1 #box3 {
+    grid-area:3/ 3 /3 /5;
+}
