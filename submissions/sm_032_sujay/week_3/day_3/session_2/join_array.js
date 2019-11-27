@@ -1,9 +1,10 @@
 
-var arrS=['mart','mear','mile','hit']
+var arrS=['mart','mear','mile']
 var charS='s'
-
+var superb = ''
 
 for(var j=0;j<arrS.length;j++)
 {
-    console.log(charS+arrS[j])
+    superb += charS+arrS[j]
 }
+console.log(superb)
