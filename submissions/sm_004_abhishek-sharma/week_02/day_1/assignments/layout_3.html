@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Layout 3(using class & id)</title>
+	<style type="text/css">
+		body {
+			padding: 25px 300px;
+		}
+
+		.block {
+			padding: 20px;
+			margin: 20px;
+			clear: left;
+		}
+
+		.box {
+			background-color: #14868C;
+			width: 100px;
+			height: 100px;
+			float: left;
+			margin: 0px 20px;
+		}
+
+		.mr {
+			margin: 0px 20px 0px 0px;
+		}
+
+		.ml {
+			margin: 0px 0px 0px 20px;
+		}
+
+		.m1 {
+			margin: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="block">
+		<div class="box m1"></div>
+	</div>
+	<div class="block">
+		<div class="box mr"></div>
+		<div class="box ml"></div>
+	</div>
+	<div class="block">
+		<div class="box mr"></div>
+		<div class="box"></div>
+		<div class="box ml"></div>
+	</div>
+	<div class="block">
+		<div class="box mr"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box ml"></div>
+	</div>
+
+
+</body>
+
+</html>
