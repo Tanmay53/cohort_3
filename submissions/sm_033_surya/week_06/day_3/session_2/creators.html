@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Practise Creators</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="headings">
+    </div>
+    <div id="cont">
+    </div>
+    <ul id="vikings">
+        <li>Priyanshu</li>
+    </ul>
+    <button id="createH1">Create H1</button>
+    <button id="createH3">Create 2 H3</button>
+    <button id="createDiv">Create DIVS</button>
+    <button id="add">Add Students</button>
+    <button id="addCopyright">Add Copyright</button>
+    <script>
+        var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
+        $("#createH1").click(function () {
+            var header = document.createElement("h1")
+            header.textContent = "MASAI"
+            $("#headings").append(header)
+
+        })
+        $("#createH3").click(function () {
+            var header = document.createElement("h3")
+            header.textContent = "A Transformation in education!"
+            $("#headings").append(header)
+            var header = document.createElement("h3")
+            header.textContent = "Learn to earn, pay when you get."
+            $("#headings").append(header)
+
+        })
+        $("#createDiv").click(function () {
+            for (i = 1; i <= 10; i++) {
+                var divEle = document.createElement("div")
+                divEle.textContent = "Content " + i
+                $("#cont").append(divEle)
+
+            }
+        })
+        $("#add").click(function () {
+            for (i = 0; i < students.length; i++) {
+                var listEle = document.createElement("li")
+                listEle.textContent = students[i]
+                $("#vikings").append(listEle)
+            }
+        })
+        $("#addCopyright").click(function () {
+            var divEle = document.createElement("div")
+            divEle.textContent = "@copyrights masaischool"
+            $("#createH1").before(divEle)
+        })
+    </script>
+</body>
+
+</html>
