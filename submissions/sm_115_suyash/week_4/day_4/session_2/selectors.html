@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <title>Practise Selectors</title>
+</head>
+
+<body>
+  <h1>First H1</h1>
+  <h1>Second H1</h1>
+  <h3>First H3</h3>
+  <h3>Second H3</h3>
+  <h5>First H5</h5>
+  <h5>Second H5</h5>
+  <h5>Third H5</h5>
+  <div class="green">First DIV</div>
+  <div class="red">Second DIV</div>
+  <div class="blue">Third DIV</div>
+  <p class="green">First P</p>
+  <p class="red">Second P</p>
+  <p class="blue">Third P</p>
+  <hr />
+  <button onclick="chnageH1()">Change H1</button>
+  <button onclick="chnageH3()">Change H3</button>
+  <button onclick="chnageH5()">Change H5</button>
+  <button onclick="chnageDiv1()">Change Green</button>
+  <button onclick="chnageDiv2()">Change Red</button>
+  <script>
+      <button onclick="chnageDiv3()">Change Blue</button>
+    function chnageH1() {
+      document.querySelector('h1').style.color = "red"
+    }
+
+    function chnageH3() {
+      var val = document.querySelectorAll('h3')
+      for(i=0;i<val.length;i++) {
+        val[i].style.color = 'green'
+      }
+    }
+
+    function chnageH5() {
+      var val = document.querySelectorAll('h5')
+      for(i=0;i<val.length;i++) {
+        val[i].style.color = 'blue'
+      }
+    }
+
+    function chnageDiv2() {
+      var val = document.querySelectorAll('.red')
+      for(i=0;i<val.length;i++) {
+        val[i].style.color = 'red'
+      }
+    }
+
+    function chnageDiv1() {
+      var val = document.querySelectorAll('.green')
+      for(i=0;i<val.length;i++) {
+        val[i].style.color = 'green'
+      }
+    }
+
+    function chnageDiv3() {
+      var val = document.querySelectorAll('.blue')
+      for(i=0;i<val.length;i++) {
+        val[i].style.color = 'blue'
+      }
+    }
+  </script>
+</body>
+
+</html>

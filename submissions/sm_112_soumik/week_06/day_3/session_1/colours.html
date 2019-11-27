@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colours</title>
+  </head>
+  <body>
+    <h1 id="head1" class="red">MASAI H1</h1>
+    <h2 id="head2" class="green">MASAI H2</h2>
+    <h3 id="head3" class="red">MASAI H3</h3>
+    <h4 id="head4" class="red">MASAI H4</h4>
+    <h4 id="head5" class="green">MASAI H4</h4>
+    <div id="con1" class="red">School C1</div>
+    <div id="con2" class="green">School C2</div>
+    <div id="con3" class="red">School C3</div>
+    <p id="para1" class="green">Coding P1</p>
+    <p id="para2" class="red">Coding P2</p>
+    <p id="para3" class="green">Coding P3</p>
+    <hr />
+    <button id="changeH1">Change H1</button>
+    <button id="changeH2">Change H2</button>
+    <button id="changeH3">Change H3</button>
+    <button id="changeH4">Change H4</button>
+    <button id="changeDiv">Change DIVS</button>
+    <button id="changeP">Change Paragraph</button>
+    <button id="changeRed">Change Red</button>
+    <button id="changeGreen">Change Green</button>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#changeH1").click(function() {
+        $("#head1").css("font-size", "70px");
+      });
+      $("#changeH2").click(function() {
+        $("#head2").css("font-size", "32px");
+        $("#head2").css("padding", "5px");
+      });
+      $("#changeH3").click(function() {
+        $("#head3").css("background", "black");
+        $("#head3").css("color", "white");
+      });
+      $("#changeH4").click(function() {
+        $("h4").css("border", "2px solid black");
+        $("h4").css("margin", "10px 0px");
+      });
+      $("#changeDiv").click(function() {
+        $("div").css("padding", "6px 8px");
+      });
+      $("#changeP").click(function() {
+        $("p").css("color", "blue");
+        $("p").css("font-weight", "bold");
+      });
+      $("#changeRed").click(function() {
+        $(".red").css("backgroundColor", "red");
+      });
+      $("#changeGreen").click(function() {
+        $(".green").css("backgroundColor", "green");
+      });
+    });
+  </script>
+</html>

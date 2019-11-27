@@ -1,0 +1,27 @@
+.heading {
+  font-size: 14px;
+}
+
+.sub-heading {
+  font-size: 13px;
+}
+.para {
+  font-size: 14px;
+}
+/* template 3 */
+.ibarra {
+  font-family: "Ibarra Real Nova", serif;
+}
+/* template 4 */
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.fw-900 {
+  font-weight: 900;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-300 {
+  font-weight: 300;
+}

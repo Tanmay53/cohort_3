@@ -1,0 +1,96 @@
+#mainBlock{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    padding: 20px;
+}
+
+/* <!-- ..........LINUS TORVALDS BLOCK............ --> */
+
+#linus{
+    background: lightsteelblue;
+    display:flex;
+    flex-flow:column wrap;
+    margin: 0% 26% 0% 26%;
+}
+#linusImg{
+    height:150px;
+    width:100px;
+}
+#linus div{
+    margin:0% 20% 0% 20%;
+    align-self: center;
+    text-align: center;
+}
+#linus h2{
+    color: navy;
+}
+
+/* <!-- ............SAL KHAN BLOCK................. --> */
+#sal{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 100px 700px;
+    justify-self: center;
+}
+#salImg{
+    height: 200px;
+    width:100px;
+}
+#salImgBlock{
+    grid-area: 1/1/span3/2;
+}
+#salName{
+    grid-area: 1/2/span1/3;
+    color: red;
+}
+#salDescrip{
+    grid-area: 2/2/span2/3;
+    align-self: center;
+}
+
+/* ..............C PROGRAMMING BLOCK.................... */
+
+#unixC{
+    display:grid;
+    grid-gap: 10px;
+    grid-template-rows: 120px;
+    grid-template-columns: 450px 15px 450px;
+    background: orangered;
+    padding: 10px;
+    justify-self: center;
+}
+#unixC h3{
+    color:white;
+}
+#ken{
+    grid-area: 1/1/span 1/span 1;
+    justify-self: center;
+    width: 450px;
+} 
+#black{
+    grid-area: 1/2/span 1/span 1;
+    height: 100px;
+    width: 10px;
+    background: black;
+    margin: 10px;
+}
+#dennis{
+    grid-area: 1/3/span 1/span 1;
+    justify-self: center;
+    width: 450px;
+}
+#dennis{
+    text-align: right !important;
+}
+
+
+
+
+
+
+
+
+

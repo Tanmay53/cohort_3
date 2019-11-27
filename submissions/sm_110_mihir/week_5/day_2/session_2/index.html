@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>settings</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 border">
+                    <h2 class="text-primary">Insert Product</h2>
+                    <div class="form-group ">
+                        <label for="name">Product Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            placeholder="name"
+                        />
+                        <label for="price">Price</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="price"
+                            placeholder="price"
+                        />
+                        <label for="qty">Quantity</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="qty"
+                            placeholder="Quantity"
+                        />
+                        <button
+                            type="submit"
+                            onclick="add()"
+                            class="btn-primary my-2 btn-block"
+                        >
+                            Insert
+                        </button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Product Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body"></tbody>
+                    </table>
+                </div>
+                <div class="col-2 list-group">
+                    <h3 class="text-primary list-group-item my-2">Settings</h3>
+                    <button class="btn-primary" onclick="size()">
+                        Change Font-Size
+                    </button>
+                    <button
+                        class="btn-primary list-group-item active my-2"
+                        onclick="color()"
+                    >
+                        Change Font-Color
+                    </button>
+                    <button
+                        class="btn-primary list-group-item active my-2"
+                        onclick="alternate()"
+                    >
+                        Change background color of alternate rows
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
