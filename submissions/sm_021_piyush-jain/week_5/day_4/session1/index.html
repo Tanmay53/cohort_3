@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    p{
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <div>
+    <label>First Name</label><br>
+    <input type="text" id="Fname"><br>
+    <label>Last Name</label><br>
+    <input type="text" id="Lname"><br>
+    <label>DOB</label><br>
+    <input type="text" id="dob"><br>
+    <label>Balance</label><br>
+    <input type="text" id="balance"><br>
+    <label>Account Number</label><br>
+    <input type="text" id="accno"><br>
+    <label>Account Shareholders</label><br>
+    <input type="text" id="accshare">
+  </div>
+  <h1>Click the button to add a new customer!</h1>
+  <button onclick="addCust()">Add customer</button>
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! </h1>
+  <button onclick="display()">Print Customers</button>
+  <div id="displayContainer"> </div>
+
+
+  <script>
+    var Custarr = []
+    function Customer(fname, lname, dob, balance, accno, accshare) {
+      this.FirstName = fname,
+        this.LastName = lname,
+        this.Dob = dob,
+        this.Balance = balance,
+        this.Accno = accno,
+        this.Accshare = [accshare],
+        this.output = function () {
+          var detail = ' '
+          for (key in this) {
+            detail += key + ":" + this[key] + "\n"
+            if (key == 'Accshare')
+              break;
+          }
+          // console.log(detail)
+          return detail;
+        }
+    };
+    function addCust() {
+      var fname = document.getElementById('Fname').value;
+      var lname = document.getElementById('Lname').value;
+      var dob = document.getElementById('dob').value;
+      var balance = document.getElementById('balance').value;
+      var accno = document.getElementById('accno').value;
+      var accshare = document.getElementById('accshare').value;
+      var obj = new Customer(fname, lname, dob, balance, accno, accshare);
+      Custarr.push(obj)
+      console.log(Custarr)
+    }
+
+    function display() {
+      var div1 = document.querySelector('#displayContainer');
+      div1.innerHTML = '';
+      for (var i = 0; i < Custarr.length; i++) {
+        var p1 = document.createElement('p');
+        p1.textContent = Custarr[i].output();
+        div1.appendChild(p1);
+      }
+
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OS Page</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container p-5">
+      <div class="row jumbotron">
+        <div class="col-md-8 offset-md-2">
+          <div class="form-group">
+            <label for="operating_system" class="font-weight-bold">
+              Select OS Name
+            </label>
+            <select class="form-control" id="operating_system">
+              <option value="">Select OS</option>
+              <option value="android">Android</option>
+              <option value="ubuntu">Ubuntu</option>
+              <option value="windows">Windows</option>
+              <option value="macos">Mac OS</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-8 offset-md-2">
+          <table
+            class="table table-dark table-bordered table-striped table-hover"
+            id="table"
+          ></table>
+        </div>
+      </div>
+    </div>
+    <script src="os.js"></script>
+  </body>
+</html>
