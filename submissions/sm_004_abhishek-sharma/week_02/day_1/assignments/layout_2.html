@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout 2(using class & id)</title>
+	<style type="text/css">
+		body{
+			padding: 50px 250px;
+		}
+		.box {
+			background-color: #14868C; 
+			height: 100px;  
+			float: left;
+			width: 100px;
+			margin: 0px 20px;
+		}
+		.size1 {
+			width: 300px;
+		}
+		.size2 {
+			width: 340px;
+			margin: 0px 10px 0px 0px; 
+		}
+		.mr {
+			margin: 0px 20px 0px 0px;
+		}
+		.ml {
+			margin: 0px 0px 0px 20px;
+		}
+		.block {
+			margin: 20px; 
+			padding: 40px; 
+			clear: left;
+		}
+		.b2m1{
+			margin: 0px 10px 0px 0px;
+		}
+		.b2m2{
+			margin: 0px 10px; 
+		}
+		.b2m3{
+			margin: 0px 0px 0px 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="block">
+		<div class="box mr"></div>
+		<div class="box size1"></div>
+		<div class="box ml"></div>		
+	</div>
+
+	<div class="block">
+		<div class="box size2 b2m1"></div>
+		<div class="box b2m2"></div>
+		<div class="box b2m3"></div>
+	</div>
+
+	<div class="block">
+		<div class="box mr"></div>
+		<div class="box"></div>
+		<div class="box size1 ml"></div>		
+	</div>
+</body>
+</html>

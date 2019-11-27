@@ -15,8 +15,15 @@
   <body>
     <h2>Register Form</h2>
     <div class="container-fluid p-5">
-      <form>
+      <form id="form">
         <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input
+              type="email"
+              class="form-control"
+              id="name"
+              placeholder="Enter email"
+            />
           <label for="exampleInputEmail1">Email address</label>
           <input
             type="email"
@@ -55,7 +62,7 @@
           placeholder="username"
         />
     </div>
-        <button type="submit" class="btn btn-primary" onclick="signUp()">
+        <button type="button" class="btn btn-primary" onclick="signup()">
           Submit
         </button>
       </form>

@@ -1,4 +1,4 @@
-var string = ' AAB  BB 3/KDSO'; //given string
+var string = ' Sagar Kadu   '; //given string
 var givenChar = ' '; //given character
 
 //invoking function
