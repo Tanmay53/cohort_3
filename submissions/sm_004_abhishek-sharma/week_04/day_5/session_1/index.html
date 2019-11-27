@@ -25,11 +25,11 @@
     var colors = ["red", "green", "blue", "orange", "grey", "purple", "pink"]
     var changeArrayColor = document.getElementById("changeArrayColor")
     var changeSize = document.getElementById("changeSize")
-
+    
     function random(number) {
       return Math.floor(Math.random() * number);
     }
-    
+
     // For single click change button color to random
     function switchColor() {
       var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
