@@ -1,10 +1,190 @@
 <html>
-    <head>
-        <title>Unix</title>
-        <style>
-        </style>
-    </head>
-    <body>
-       <button>Create Page</button>
-    </body>
+
+<head>
+    <title>Unix</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            padding: 0px 25px;
+        }
+
+        .box1 {
+            width: 400px;
+            height: 300px;
+            background-color: #EDEDED;
+            margin: 20px 400px;
+        }
+
+        .img1 {
+            height: 150px;
+            width: 100px;
+            margin: 20px 150px;
+        }
+
+        .l1 {
+            color: blue;
+            margin: 0px 90px;
+        }
+
+        .l2 {
+            font-size: 26px;
+            margin: 20px 50px;
+        }
+
+        .box2 {
+            margin: 40px 0px;
+            padding: 0px 290px;
+        }
+
+        .block1 {
+            margin-right: 30px;
+            float: left;
+        }
+
+        .img2 {
+            height: 125px;
+            width: 100px;
+        }
+
+        .l3 {
+            color: red;
+        }
+
+        .box3 {
+            background-color: #C53B00;
+            height: 150px;
+            padding: 0px 25px;
+            margin: 80px 40px;
+        }
+
+        .block2 {
+            float: left;
+            width: 550px;
+
+        }
+
+        .separator {
+            float: left;
+            background-color: black;
+            margin: 20px 0px;
+            width: 8px;
+            height: 100px;
+        }
+
+        .block3 {
+            float: right;
+        }
+
+        .l4 {
+            color: white;
+            font-size: 24px;
+        }
+
+        .l5 {
+            margin-top: 90px;
+            clear: right;
+        }
+        button{
+            margin: 0px 540px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="createPage">Create Page</button>
+
+    <script>
+        var bodyElem = document.querySelector("body")
+        var createBtn = document.getElementById("createPage")
+
+        function createBox1() {
+            var container1 = document.createElement("div")
+            container1.setAttribute("class", "box1")
+            bodyElem.insertBefore(container1, createBtn)
+
+            var linusImg = document.createElement("img")
+            linusImg.setAttribute("class", "img1")
+            linusImg.setAttribute("src", "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg")
+            linusImg.setAttribute("alt", "Linus pic")
+            container1.appendChild(linusImg)
+
+            var firstH1 = document.createElement("h1")
+            firstH1.setAttribute("class", "l1")
+            firstH1.innerHTML = "Linus Torvalds"
+            container1.appendChild(firstH1)
+
+            var firstPara = document.createElement("p")
+            firstPara.setAttribute("class", "l2")
+            firstPara.innerHTML = "The creator of Linux & Git"
+            container1.appendChild(firstPara)
+        }
+
+        function createBox2(){
+            var container2 = document.createElement("div")
+            container2.setAttribute("class", "box2")
+            bodyElem.insertBefore(container2, createBtn)
+
+            var imageDiv = document.createElement("div")
+            imageDiv.setAttribute("class", "block1")
+            var salImg = document.createElement("img")
+            salImg.setAttribute("class", "img2")
+            salImg.setAttribute("src", "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg")
+            salImg.setAttribute("alt", "Sal Khan pic")
+            imageDiv.appendChild(salImg)
+            container2.appendChild(imageDiv)
+
+            var contentDiv = document.createElement("div")
+            var firstH1 = document.createElement("h1")
+            firstH1.setAttribute("class", "l3")
+            firstH1.innerHTML = "Sal Khan"
+            var firstPara = document.createElement("p")
+            firstPara.innerHTML = "Salman Khan is the founder of the Khan Academy which has a mission of providing a free world-class education for everyone, anywhere."
+            contentDiv.appendChild(firstH1)
+            contentDiv.appendChild(firstPara)
+            container2.appendChild(contentDiv)
+        }
+
+        function createBox3(){
+            var container3 = document.createElement("div")
+            container3.setAttribute("class", "box3")
+            bodyElem.insertBefore(container3, createBtn)
+
+            var leftBlock = document.createElement("div")
+            leftBlock.setAttribute("class", "block2")
+            var firstPara = document.createElement("p")
+            firstPara.setAttribute("class", "l4")
+            firstPara.innerHTML = "Ken Thompson"
+            var secondPara = document.createElement("p")
+            secondPara.innerHTML = "Designed and Implemented the original Unix operating system"
+            leftBlock.appendChild(firstPara)
+            leftBlock.appendChild(secondPara)
+            container3.appendChild(leftBlock)
+
+            var blockSeparator = document.createElement("div")
+            blockSeparator.setAttribute("class", "separator")
+            container3.appendChild(blockSeparator)
+
+            var rightBlock = document.createElement("div")
+            rightBlock.setAttribute("class", "block3")
+            var thirdPara = document.createElement("p")
+            thirdPara.setAttribute("class", "l4 block3")
+            thirdPara.innerHTML = "Dennis Ritchie"
+            var fourthPara = document.createElement("p")
+            fourthPara.setAttribute("class", "l5")
+            fourthPara.innerHTML = "The creator of C Programming Language"
+            rightBlock.appendChild(thirdPara)
+            rightBlock.appendChild(fourthPara)
+            container3.appendChild(rightBlock)
+        }
+
+        function createLinux() {
+            createBox1()
+            createBox2()
+            createBox3()
+            createBtn.removeEventListener("click", createLinux)
+        }
+        createBtn.addEventListener("click", createLinux)
+    </script>
+</body>
+
 </html>
