@@ -1,9 +1,18 @@
-function str(string) {
-    var string= string || 'AyzB';
-    var str1= string.slice(2,3).toUpperCase();
-    var str2=string.slice(3).toLowerCase();
-    var str3=string.slice(0,1).toLowerCase();
-    var str4=string.slice(1,2).toUpperCase();
-console.log(str1+str2+str3+str4)
+function strg(string) {
+    var string = string || 'AyzB';
+    var c = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var s = 'abcdefghijklmnopqrstuvwxyz';
+    var str = ''
+    for (i = 0; i < string.length; i++) {
+        for (j = 0; j < c.length; j++) {
+            if (string[i] === c[j]) {
+                str = str + s[25 - j]
+            }
+            else if (string[i] === s[j]) {
+                str = str + c[25 - j]
+            }
+        }
+    }
+    console.log(str)
 }
-str('MjeU')
+strg('AvYfkjGR')
