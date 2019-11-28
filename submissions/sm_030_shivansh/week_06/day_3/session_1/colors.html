@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Colours</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1 id="head1" class="red">MASAI H1</h1>
+    <h2 id="head2" class="green">MASAI H2</h2>
+    <h3 id="head3" class="red">MASAI H3</h3>
+    <h4 class="head4 green">MASAI H4</h4>
+    <h4 class="head4 green">MASAI H4</h4>
+    <div class="con red">School C1</div>
+    <div class="con green">School C2</div>
+    <div class="con red">School C3</div>
+    <p id="para1" class="red">Coding P1</p>
+    <p id="para2" class="green">Coding P2</p>
+    <p id="para3" class="red">Coding P3</p>
+    <hr>
+    <button id="changeH1">Change H1</button>
+    <button id="changeH2">Change H2</button>
+    <button id="changeH3">Change H3</button>
+    <button id="changeH4">Change H4</button>
+    <button id="divs">Change DIVS</button>
+    <button id="changePara">Change Paragraph</button>
+    <button id="Red">Change Red</button>
+    <button id="Green">Change Green</button>
+
+    <script>
+
+        // changing h1
+        $("#changeH1").click(function () {
+            $("#head1").css("font-size", "70px");
+        });
+
+        //changing h2
+        $("#changeH2").click(function () {
+
+            $("#head2").css("font-size", "32px");
+            $("#head2").css("padding", "10px");
+        });
+
+        //changing h3
+        $("#changeH3").click(function () {
+            $("#head3").css({ "background-color": "black", "color": "white" });
+        });
+
+        //change h4
+        $("#changeH4").click(function () {
+            $(".head4").css({ "border": "2px solid black", "margin": "10px 0" })
+        })
+
+
+        // change all div
+        $("#divs").click(function () {
+            $(".con").css({ "margin": "6px 8px" });
+        });
+
+        //change all paragraph
+        $("#changePara").click(function () {
+            $("#para1").css({ "color": "purple", "font-weight": "bold" });
+            $("#para2").css({ "color": "purple", "font-weight": "bold" });
+            $("#para3").css({ "color": "purple", "font-weight": "bold" });
+        });
+
+        //change color to red
+        $("#Red").click(function () {
+            $(".red").css("color", "red");
+        })
+
+        //change color to grenn
+        $("#Green").click(function () {
+            $(".green").css({ "color": "green" });
+        })
+
+
+    </script>
+</body>
+
+</html>
