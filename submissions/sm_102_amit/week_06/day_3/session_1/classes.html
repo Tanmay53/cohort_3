@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Practise Attributes</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style type="text/css">
+      .class-h1 {
+        color: red;
+      }
+      .class-h3 {
+        color: green;
+        border: 2px solid black;
+      }
+      .class-h5 {
+        color: orange;
+      }
+      .class-div {
+        color: yellow;
+        font-size: 20px;
+        margin: 10px;
+      }
+      .class-odd {
+        color: black;
+        background: white;
+      }
+      .class-even {
+        background: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5 class="class-h3">First H5</h5>
+    <h5 class="class-h3">Second H5</h5>
+    <h5 class="class-h3">Third H5</h5>
+    <div id="test-2" class="class-div">MASAI School</div>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>
+    <hr />
+    <button id="changeH1">Change H1</button>
+    <button id="changeH3">Change H3</button>
+    <button id="changeH5">Change H5</button>
+    <button id="changeDiv">Change DIV</button>
+    <button id="changeP">Change P</button>
+    <script>
+      $(document).ready(function() {
+        $("#changeH1").on("click", function() {
+          $("h1:first").addClass("class-h1");
+        });
+        $("#changeH3").on("click", function() {
+          $("h3").addClass("class-h3");
+        });
+        $("#changeDiv").on("click", function() {
+          $("#test-2").removeClass("class-div");
+        });
+        $("#changeH5").on("click", function() {
+          $("h5").removeClass("class-h3");
+          $("h5").addClass("class-h5");
+        });
+        $("#changeP").on("click", function() {
+          $("p").addClass(function(index) {
+            if (index % 2 == 0) {
+              return "class-even";
+            } else {
+              return "class-odd";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
