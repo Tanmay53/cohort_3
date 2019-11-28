@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Content Manipulation</title>
+        </head>
+        <body>
+            <h1 id="firstname">Hello</h1>
+            <div id="lastname">MASAI</div>
+            <p id="fullname">School</p>
+            <hr/>
+            <button id="btn1">FIRSTNAME</button>
+            <button id="btn2">LASTNAME</button>
+            <button id="btn3">FIRSTNAME NAME</button>
+            <button id="btn4">RESET DEFAULTS</button>
+            <!-- Clicking the buttons should show the values in the respective place holders
+            the reset button should set the values to the original values -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#btn1').click(function(){
+                $('#firstname').text("Ashish")
+                })
+                $('#btn2').click(function(){
+                $('#lastname').text("Kumar")
+                })
+                $('#btn3').click(function(){
+                $('#fullname').text('Ashish Kumar')
+                })
+                $('#btn4').click(function(){
+                $('#firstname').text("Hello")
+                $('#lastname').text("MASAI")
+                $('#fullname').text("School")
+                })
+        });
+      </script>
+        </body>
+        </html>
+</body>
+</html>

@@ -1,19 +1,18 @@
-var name="Masai"
-var splitcharac='s'
-var arr
+var name="Masaischoolisamazing"
+var splitchar="s"
 var i=0
-
-console.log(typeof(name[i]))
-
+var arr1=[]
+var arr2=[] 
 for(i=0;i<=name.length-1;i++)
 {
-    // for(j=0;j<=name.length-1;j++)
-    // {
-    console.log(name[i])
-    if('s'==name[i])
-    {
-      console.log(typeof(s))
-        break
-    }
-    // }
+  
+  if(name[i]=="s")
+  {
+    console.log('')
+  }
+  else{
+    arr2=arr1+name[i] 
+    console.log(arr2)
+  }
 }
+console.log(typeof(arr2))//string
