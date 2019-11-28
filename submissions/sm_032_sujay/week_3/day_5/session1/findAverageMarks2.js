@@ -1,26 +1,21 @@
 student = {
     name:'name',
     marks: [50,30,100,80],
-    average: function ()
-    // write code here
-    {
-        sum=0
-        avg=0
-    for(var i=1;i<= this.marks.length-1;i++)
-    {
-    sum+= this.marks[i]
-    avg= sum/i
+    average: function (){
+         // write code here
+    var sum = 0
+    var avg = 0
+    for (var i = 0; i <= this.marks.length - 1; i++) {
+        sum += this.marks[i]
+        avg = sum / (i+1)
+        // console.log(sum,i)
 
     }
     console.log(avg)
-    
-}
 
 }
-        
-       
-
+}
+   
 function avgMarks(obj){
-      
-    student.average()
+    obj.average()
 }avgMarks(student)
