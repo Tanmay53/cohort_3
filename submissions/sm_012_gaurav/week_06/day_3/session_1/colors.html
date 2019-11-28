@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Colours</title>
+</head>
+
+<body>
+    <h1 id="head1" class="red">MASAI H1</h1>
+    <h2 id="head2" class="green">MASAI H2</h2>
+    <h3 id="head3" class="red">MASAI H3</h3>
+    <h4 id="head4" class="green">MASAI H4</h4>
+    <h4 id="head5" class="green">MASAI H4</h4>
+    <div id="con1" class="red">School C1</div>
+    <div id="con2" class="green">School C2</div>
+    <div id="con3" class="red">School C3</div>
+    <p id="para1" class="red">Coding P1</p>
+    <p id="para2" class="green">Coding P2</p>
+    <p id="para3" class="red">Coding P3</p>
+    <hr>
+    <button id="changeh1">Change H1</button>
+    <button id="changeh2">Change H2</button>
+    <button id="changeh3">Change H3</button>
+    <button id="changeh4">Change H4</button>
+    <button id="changedivs">Change DIVS</button>
+    <button id="changeps">Change Paragraph</button>
+    <button id="changered">Change Red</button>
+    <button id="changegreen">Change Green</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#changeh1').click(function() {
+                $('h1').css("font-size","70px");
+            });
+            $('#changeh2').click(function() {
+                $('h2').css({"font-size":"32px","padding":"10px"});
+            });
+            $('#changeh3').click(function() {
+                $('h3').css({"background-color":"black","color":"white"});
+            });
+            $('#changeh4').click(function() {
+                $('h4').css({"border":"2px solid black","margin":"10px 0px"});
+            });
+            $('#changedivs').click(function() {
+                $('div').css({"padding":"6px 8px"});
+            });
+            $('#changeps').click(function() {
+                $('p').css({"color":"purple","font-weight":"bold"});
+            });
+            $('#changered').click(function() {
+                $('.red').css("color","red");
+            });
+            $('#changegreen').click(function() {
+                $('.green').css({"background-color":"green","color":"white"});
+            });
+        });
+    </script>
+</body>
+
+</html>
