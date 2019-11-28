@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+       
+    <input type="text" name="name" id="name">
+    <select id="gender">
+        <option value="">--</option>
+        <option value="male">M</option>
+        <option value="female">F</option>
+    </select>
+    <input type="text" name="email" id="email">
+    <input type="text" name="mobile" id="mobile">
+    <hr>
+    <h1 id="dName">NAME</h1>
+    <h2 id="dGender">GENDER</h2>
+    <h3 id="dEmail">EMAIL</h3>
+    <h4 id="dMobile">MOBILE</h4>
+    <hr>
+    <button id="btn1">NAME</button>
+    <button id="btn2">GENDER</button>
+    <button id="btn3">EMAIL</button>
+    <button id="btn4">MOBILE</button>
+    <button id="btn5">RESET FORM</button>
+    <button id="btn6">RESET DISPLAY</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#btn1').click(function(){
+                    var a=$('#name').val()
+                    $('#dName').text(a)
+                })
+                $('#btn2').click(function(){
+                    var b=$('#gender').val()
+                    $('#dGender').text(b)
+                })
+                $('#btn3').click(function(){
+                    var c=$('#email').val()
+                    $('#dEmail').text(c)
+                })
+                $('#btn4').click(function(){
+                    var d=$('#mobile').val()
+                    $('#dMobile').text(d)
+                })
+                $('#btn5').click(function(){
+                    $('#mobile').val('')
+                    $('#name').val('')
+                    $('#gender').val('')
+                    $('#email').val('')  
+                })
+                $('#btn6').click(function(){
+                    $('#dMobile').text('MOBILE')
+                    $('#dName').text('NAME')
+                    $('#dGender').text('GENDER')
+                    $('#dEmail').text('EMAIL') 
+                })
+
+            });
+        </script>
+         
+</body>
+</html>

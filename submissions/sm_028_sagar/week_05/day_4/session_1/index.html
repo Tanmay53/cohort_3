@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>coding session</title>
+
+    <style>
+        .cont {
+            display: flex;
+        }
+        
+        .cont>div {
+            margin: 20px;
+        }
+        
+        input {
+            font-size: 15px;
+            padding: 10px 20px;
+        }
+        
+        .input_cont * {
+            display: block;
+            margin: 20px;
+        }
+        
+        h1 {
+            padding: 10px;
+        }
+        
+        p {
+            white-space: pre-line;
+            margin: 20px 20px;
+            font-size: 20px;
+            width: 300px;
+            font-weight: 100;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="cont">
+        <div>
+            <!-- FSD.W4.3.1_1 !-->
+            <h1>Click the button to add a new customer!</h1>
+            <div class="input_cont">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" class="customer" placeholder="Enter firstName">
+
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" class="customer" placeholder="Enter lastName">
+
+                <label for="dob">Date of Birth</label>
+                <input type="text" name="dob" class="customer" placeholder="dd-mm-yyyy">
+
+                <label for="balance">Balance</label>
+                <input type="number" name="balance" class="customer" placeholder="Enter balance">
+
+                <label for="accNo">Account Number</label>
+                <input type="number" name="accNo" class="customer" placeholder="Account No">
+
+                <label for="share_accHolder">Shared Account Holders</label>
+                <input type="text" name="share_accHolder" class="customer" placeholder="add account Holders">
+
+                <label for="add_customer"></label>
+                <button name="add_customer" id="add_customer">Add customer</button>
+
+            </div>
+        </div>
+        <!-- FSD.W4.3.1_3 !-->
+        <div>
+            <h1> Click here to print all customers!
+                <h1>
+                    <input type="button" id="print_cust" value="Print Customers">
+                    <div id="displayContainer"> </div>
+        </div>
+    </div>
+
+
+    <script>
+        //global customer arr
+        var customerArr = [];
+
+        //Customer constructor  
+        function Customer(firstName, lastName, dob, balance, accNo, shareAccHolder) {
+            this.firstName = firstName,
+                this.lastName = lastName,
+                this.dob = dob,
+                this.balance = balance,
+                this.accNo = accNo,
+                this.shareAccHolder = shareAccHolder,
+                this.getDetails = function() {
+
+                    var output = '';
+                    for (key in this) {
+                        output += key + " : " + this[key] + "\n";
+                        if (key == 'shareAccHolder') break;
+                    }
+                    return output;
+                }
+        }
+
+        //creating event on add customer button
+        var add_customer_btn = document.getElementById('add_customer');
+        add_customer_btn.addEventListener('click', create_customer);
+
+        //creating customer
+        function create_customer() {
+            var input = document.querySelectorAll('.customer'); //input from all input fields
+            var newCustomer = new Customer();
+            var i = 0;
+            for (key in newCustomer) {
+                if (newCustomer[key] == undefined) {
+                    if (key !== 'shareAccHolder') {
+                        newCustomer[key] = input[i].value;
+                    } else {
+                        newCustomer[key] = input[i].value.split(',');
+                    }
+                    input[i].value = '';
+                    i++;
+                }
+            }
+            customerArr.push(newCustomer);
+            console.log(customerArr) //check for new customer           
+        }
+
+        //adding event on print customer button
+        var print_cust_btn = document.getElementById('print_cust');
+        print_cust_btn.addEventListener('click', display_customer);
+
+
+        //displaying customer
+        function display_customer() {
+            var div = document.getElementById('displayContainer');
+            div.innerHTML = '';
+            for (var i = 0; i < customerArr.length; i++) {
+                var para = document.createElement('p');
+                para.textContent = customerArr[i].getDetails();
+                div.appendChild(para);
+            }
+        }
+    </script>
+</body>
+
+</html>

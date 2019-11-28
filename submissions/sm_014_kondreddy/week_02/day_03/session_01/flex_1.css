@@ -1,0 +1,14 @@
+body {
+    margin-top:100px;
+    margin-left:250px;
+}
+#flexbox {
+    display:flex;
+}
+#flexbox div {
+    background-color:darkslategray;
+    width:120px;
+    height:500px;
+    margin:30px;
+    border-radius:5px;
+}
