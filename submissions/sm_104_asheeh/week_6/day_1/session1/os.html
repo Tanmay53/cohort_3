@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <style>
+            /* .container{
+                        display: flex;
+                        margin:200px auto;
+            }
+            
+            .container #box1{
+                  display: flex;
+                  flex: 1;
+                  border: solid black;
+                  height: 500px;
+                  width: 200px;
+                  background-color: red;
+            }
+            .container #box2{
+                display: flex;
+                  flex: 1;
+                  float: right;
+                  border: solid black;
+                  height: 500px;
+                  width: 200px;
+            } */
+
+            .box{
+                 height: 500px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 border border-primary box">
+    
+                    <div class="form-group">
+                            <label for="select_os">Select Your OS</label>
+                            <select class="form-control" id="select">
+                              <option value="android">android</option>
+                              <option value="ubuntu">ubuntu</option>
+                              <option value="windows">windows</option>
+                              <option value="macos">macos</option>
+                            </select>
+                          </div>
+                          <button type="submit" id="btnDisplay" class="btn btn-primary">Display Version</button>
+            </div>
+            
+            <div class="col-6 border border-primary box">
+                <!-- <button type="submit" id="btnDisplay1" class="btn btn-primary">Display Version</button> -->
+                <h1>Display Details</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Version</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tBody"></tbody>
+                </table>
+            </div>
+        </div>
+    
+    
+    </div>
+    <script src="os.js"></script>
+    </body>
+</html>
