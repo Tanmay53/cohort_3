@@ -17,10 +17,10 @@ function disjoint(a,b)
     }
     if( (Object.keys(check).length) == (a.length+b.length))
     {
-        console.log('It is a disjoint Array')
+        console.log('True')
     }
     else{
-        console.log("It aint disjoint yo!")
+        console.log("False")
     }
 
 }disjoint(arr1,arr2)
