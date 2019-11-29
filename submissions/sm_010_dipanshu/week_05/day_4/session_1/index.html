@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Constructors</title>
+    <style>
+      p {
+        white-space: pre-line;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FSD.W4.3.1_1 !-->
+    <h1>Click the button to add a new customer!</h1>
+    <div>
+      <label for="fname"></label>
+      <input type="text" id="fname" placeholder="First name" />
+
+      <label for="lname"></label>
+      <input type="text" id="lname" placeholder="Last name" />
+
+      <label for="dob"></label>
+      <input type="text" id="dob" placeholder="Date of birth" />
+
+      <label for="bal"></label>
+      <input type="text" id="bal" placeholder="Balance" />
+
+      <label for="accNum"></label>
+      <input type="text" id="accNum" placeholder="Account number" />
+
+      <label for="sharedAccHol"></label>
+      <input
+        type="text"
+        id="sharedAccHol"
+        placeholder="Shared account holders"
+      />
+    </div>
+    <button id="addCust">Add customer</button>
+
+    <!-- FSD.W4.3.1_3 !-->
+    <h1>Click here to print all customers!</h1>
+    <button id="printCust">Print Customers</button>
+    <div id="displayContainer"></div>
+
+    <script>
+      var addCust = document.getElementById("addCust");
+      addCust.addEventListener("click", addCustomer);
+      var printCust = document.getElementById("printCust");
+      printCust.addEventListener("click", printCustomers);
+
+      var customerArr = [];
+
+      function addCustomer() {
+        var inputs = document.querySelectorAll("input");
+        inp = [];
+        for (var i = 0; i < inputs.length; i++) {
+          inp.push(inputs[i].value);
+          inputs[i].value = ""
+        }
+        if (
+          inp[0] != "" &&
+          inp[1] != "" &&
+          inp[2] != "" &&
+          inp[3] != "" &&
+          inp[4] != "" &&
+          inp[5] != ""
+        ) {
+          obj = new AddCustomer(
+            inp[0],
+            inp[1],
+            inp[2],
+            inp[3],
+            inp[4],
+            inp[5].split(",")
+          );
+          console.log("object created", obj);
+          customerArr.push(obj);
+          console.log(customerArr);
+        }
+      }
+
+      function AddCustomer(fname, lname, dob, bal, accNum, sharedAccHol) {
+        this.firstName = fname;
+        this.lastName = lname;
+        this.dateOfBirth = dob;
+        this.balance = bal;
+        this.accountNumber = accNum;
+        this.sharedAccountHolders = [sharedAccHol];
+
+        this.displayDetails = function() {
+          str =
+            "First Name :" +
+            this.firstName +
+            "\n" +
+            "Last Name :" +
+            this.lastName +
+            "\n" +
+            "date of birth :" +
+            this.dateOfBirth +
+            "\n" +
+            "Balance :" +
+            this.balance +
+            "\n" +
+            "Account Number :" +
+            this.accountNumber +
+            "\n" +
+            "Shared Account Holders :" +
+            this.sharedAccountHolders.join(",") +
+            "\n";
+
+          return str;
+        };
+      }
+
+      function printCustomers() {
+        cont = document.getElementById("displayContainer");
+        cont.innerHTML = ""
+        customerArr.forEach(function(e) {
+          para = document.createElement("p");
+          para.textContent = e.displayDetails();
+          cont.appendChild(para)
+        });
+      }
+    </script>
+  </body>
+</html>

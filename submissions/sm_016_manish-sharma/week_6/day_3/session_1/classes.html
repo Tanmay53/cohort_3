@@ -1,6 +1,5 @@
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <title>Practise Attributes</title>
         <style type="text/css">
             .class-h1 {
@@ -27,6 +26,7 @@
                 color: white;
             }
         </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <h1>First H1</h1>
@@ -48,35 +48,31 @@
         <p>9</p>
         <p>10</p>
         <hr/>
-        <button id="changeh1">Change H1</button>
-        <button id="changeh3">Change H3</button>
-        <button id="changeh5">Change H5</button>
-        <button id="changediv">Change DIV</button>
-        <button id="changep">Change P</button>
+        <button id='h1'>Change H1</button>
+        <button id='h3'>Change H3</button>
+        <button id='h5'>Change H5</button>
+        <button id='divs'>Change DIV</button>
+        <button id='p'>Change P</button>
         <script>   
-        $("#changeh1").click(function(){
-            $("h1:first").addClass("class-h1")
+        $('#h1').click(function(){
+            $('h1:first').addClass('class-h1')
         })
-        $("#changeh3").click(function(){
-            $("h3").addClass("class-h3")
+        $('#h3').click(function(){
+            $('h3').addClass('class-h3')
+        })  
+        $('#divs').click(function(){
+            $('#test-2').removeClass()
+        })  
+        $('#h5').click(function(){
+            $('h5').removeClass('class-h3')
+        })  
+        $('#h5').click(function(){
+            $('h5').addClass('class-h5')
+        })         
+        $('#p').click(function(){
+            $('p:nth-child(even)').addClass('class-even')
+            $('p:nth-child(odd)').addClass('class-odd')
         })
-        $("#changeh5").click(function(){
-            $("h5").removeClass("class-h3")
-            $("h5").addClass("class-h5")
-        })  
-        $("#changediv").click(function(){
-            $("#test-2").removeClass("class-div")
-        })  
-        $("#changep").click(function(){
-            $("p").addClass(function(i){
-                if (i%2==0){
-                    return "class-even"
-                }
-                else {
-                    return "class-odd"
-                }
-            })
-        })    
         </script>
     </body>
 </html>
