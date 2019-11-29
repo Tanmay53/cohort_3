@@ -1,4 +1,3 @@
-
 function addRecord() {
     var product = document.getElementById('prod')
     var price = document.getElementById('price')
@@ -14,3 +13,4 @@ function addRecord() {
     }
 
 }
+
