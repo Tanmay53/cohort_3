@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <style type="text/css">
+            .section {
+                width:50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+        <script type="text/javascript">
+            function onLoad() {
+                //alert('workingg')
+                userName = localStorage.getItem('username')
+                milliSec = Number(localStorage.getItem('milliSec'))
+                
+                let expiryTime = milliSec + (5*60*1000)
+                let minutes    = Math.round(((expiryTime - Date.now())/(1000 * 60)) * 100) / 100
+
+                if(minutes <= 0) {
+                    // redirect to index page
+                    logout()
+                }
+
+                //let minutes = Math.floor((Date.now() ) - milliSec + (5*60*1000) / (1000*60))
+                document.getElementById('user-name').innerHTML = userName
+                document.getElementById('login-time').innerHTML = new Date(milliSec)
+                document.getElementById('expire-time').innerHTML =  "Session expires in " + minutes + " minutes !"// new Date(expiryTime)
+            }
+
+            function logout() {
+                //alert('loggoin out')
+                //clearLocalStorage()
+                window.location.replace('index.html')
+            }
+
+            function onUnload() {
+                clearLocalStorage()
+            }
+        </script>
+    </head>
+    <body onload="onLoad()" onunload="onUnload()">
+        <div id="wrapper">
+            <div class="section">
+                <h2 id='user-name'>user name</h2>
+                <p id='login-time'>login time</p>
+                <p id='expire-time'>expire time</p>
+                <button onclick="logout()">log out !</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Window Resize</title>
+</head>
+
+<body>
+    <p>Window height: <span id="height"></span></p>
+    <p>Window width: <span id="width"></span></p>
+    <script>
+        const heightOutput = document.querySelector('#height');
+        const widthOutput = document.querySelector('#width');
+        var bodyElem = document.querySelector('body')
+
+        // Random function
+        function random(number) {
+            return Math.floor(Math.random() * number);
+        }
+
+        function changeColor(windowHeight, windowWidth){
+            var Height = 0, Width = 0
+            var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            if(Height != windowHeight || Width != windowWidth){
+                bodyElem.style.backgroundColor = randomColor
+            }
+        }
+
+        function reportWindowSize() {
+            heightOutput.textContent = window.innerHeight;
+            widthOutput.textContent = window.innerWidth;
+            changeColor(heightOutput.textContent, widthOutput.textContent )
+        }
+
+        window.addEventListener('resize', reportWindowSize);
+
+    </script>
+</body>
+</html>
