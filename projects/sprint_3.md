@@ -10,3 +10,5 @@
 | sm_106 | Deepanshu  | Currency Converter  | [github](https://github.com/dipanshuraz/masai-sprint-3) |
 | sm_115 | Suyash     | Calendar Index      | [github](https://github.com/SuyashMishra-dev/masai-projects)|
 | sm_107 | Hasmuddin  | Meal DB             | [github](https://github.com/hasmuddinansari/sprint-3)|
+| sm_112 | Soumik     | Open Movie Database | [github](https://github.com/Acharya-soumik/projects/tree/master/sprint-3)|
+
