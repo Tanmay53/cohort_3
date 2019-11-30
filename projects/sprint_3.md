@@ -15,3 +15,4 @@
 | sm_036 | Prabhat    | Meal DB             | [github](https://github.com/PrabhatKrRanjan/masai-sprint-3)|
 | sm_010 | Dipanshu   | Dog API             | [github](https://github.com/dipanshusabharwal/masai-sprint-3)|
 | sm_020 | Piyush     | Open Movie Database | [github](https://github.com/piush2611/masai-sprint-3)|
+| sm_016 | Manish Sh  | DOG API             | [github](https://github.com/Manishsharma203/masai-sprint-3) |
