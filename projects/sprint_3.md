@@ -22,3 +22,4 @@
 | sm_021 | Piyush Jain | Cocktail Db         | [github](https://github.com/Piyu97/masai-sprint-3)                           |
 | sm_114 | Sudhir Singh| Movie DB            | [github](https://github.com/Sudhirsin/projects/tree/master/masai/sprint-3)   |
 | sm_105 | Ashish kum  | Currency Convertor  | [github](https://github.com/Ashish379k/masai-sprint-3)                       |
+| sm_012 | Gaurav Arya | Rick & Morty        | [github](https://github.com/gauravarya12/masai-sprint-3)                     |
