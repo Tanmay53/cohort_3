@@ -4,3 +4,4 @@
 | sm_010 | Dipanshu              | Wine                  | [github](https://github.com/dipanshusabharwal/masai-sprint-1)|
 | sm_016 | Manish Sharma         | Football              | [github](https://github.com/Manishsharma203/masai-sprint-1)  |
 | sm_015 | Lalit Sheoran         | Camera                | [github](https://github.com/lalitsheoran/masai-sprint-1)     |
+| sm_028 | Sagar Kadu            | Fruits                | [github](https://github.com/sagarkadu16/masai-sprint-1)      |

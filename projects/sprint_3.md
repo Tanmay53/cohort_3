@@ -17,3 +17,4 @@
 | sm_020 | Piyush     | Open Movie Database | [github](https://github.com/piush2611/masai-sprint-3)|
 | sm_016 | Manish Sh  | DOG API             | [github](https://github.com/Manishsharma203/masai-sprint-3) |
 | sm_015 | Lalit      | Rick & Morty        | [github](https://github.com/lalitsheoran/masai-sprint-3) |
+| sm_028 | Sagar      | Open Movie Database | [github](https://github.com/sagarkadu16/masai-sprint-3) |
