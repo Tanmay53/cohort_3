@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button id="createH1">Create H1</button>
+        <button id="createH3">Create 2 H3</button>
+        <button id="createDiv">Create DIVS</button>
+        <button id="addStudent">Add Students</button>
+        <button id="addCopy">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+           
+            var button1=document.getElementById('createH1');
+            button1.addEventListener('click',function(){
+            var h11=document.createElement('h1');
+            h11.textContent="MASAI";
+            $('#headings').append(h11);
+            });
+
+            var button2=document.getElementById('createH3');
+            button2.addEventListener('click',function(){
+            var h31=document.createElement('h3');
+            h31.textContent="A Transformation in education!";
+            $('#headings').append(h31);
+            var h32=document.createElement('h3');
+            h32.textContent="Learn to earn, pay when you get.";
+            $('#headings').append(h32);
+            });
+
+            var button3=document.getElementById('createDiv');
+            button3.addEventListener('click',function(){
+                for(var i=0;i<10;i++){
+                    var divEle=document.createElement('div');
+                    divEle.textContent="Content"+(i+1);
+                    $('#cont').append(divEle);
+                }
+            });
+
+            var button4=document.getElementById('addStudent')
+            button4.addEventListener('click',function(){
+            for(var i=0;i<students.length;i++)
+            {
+                var li1=document.createElement('li');
+                li1.textContent=students[i];
+                console.log(li1.textContent)
+                $('#vikings').append(li1);
+            }
+            });
+            
+            var button5=document.getElementById('addCopy');
+            button5.addEventListener('click',function(){
+            var p1=document.createElement('p');
+            p1.textContent="@ masai 2019";
+            $('#createH1').before(p1);  
+            });
+
+        </script>
+    </body>
+</html>
