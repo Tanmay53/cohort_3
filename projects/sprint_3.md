@@ -12,4 +12,4 @@
 | sm_107 | Hasmuddin  | Meal DB             | [github](https://github.com/hasmuddinansari/sprint-3)|
 | sm_112 | Soumik     | Open Movie Database | [github](https://github.com/Acharya-soumik/projects/tree/master/sprint-3)|
 | sm_026 | Rohit      | Meals DB            | [github](https://github.com/rohit1234990/masai-sprint-3)|
-
+| sm_036 | Prabhat    | Meals DB            | [github](https://github.com/PrabhatKrRanjan/masai-sprint-3)|
