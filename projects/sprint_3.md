@@ -11,5 +11,5 @@
 | sm_115 | Suyash     | Calendar Index      | [github](https://github.com/SuyashMishra-dev/masai-projects)|
 | sm_107 | Hasmuddin  | Meal DB             | [github](https://github.com/hasmuddinansari/sprint-3)|
 | sm_112 | Soumik     | Open Movie Database | [github](https://github.com/Acharya-soumik/projects/tree/master/sprint-3)|
-| sm_026 | Rohit      | Meals DB            | [github](https://github.com/rohit1234990/masai-sprint-3)|
-| sm_036 | Prabhat    | Meals DB            | [github](https://github.com/PrabhatKrRanjan/masai-sprint-3)|
+| sm_026 | Rohit      | Meal DB             | [github](https://github.com/rohit1234990/masai-sprint-3)|
+| sm_036 | Prabhat    | Meal DB             | [github](https://github.com/PrabhatKrRanjan/masai-sprint-3)|
