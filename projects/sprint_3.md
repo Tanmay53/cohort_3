@@ -13,3 +13,4 @@
 | sm_112 | Soumik     | Open Movie Database | [github](https://github.com/Acharya-soumik/projects/tree/master/sprint-3)|
 | sm_026 | Rohit      | Meal DB             | [github](https://github.com/rohit1234990/masai-sprint-3)|
 | sm_036 | Prabhat    | Meal DB             | [github](https://github.com/PrabhatKrRanjan/masai-sprint-3)|
+| sm_010 | Dipanshu   | Dog API             | [github](https://github.com/dipanshusabharwal/masai-sprint-3)|
