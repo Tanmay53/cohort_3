@@ -20,3 +20,4 @@
 | sm_028 | Sagar       | Open Movie Database | [github](https://github.com/sagarkadu16/masai-sprint-3)                      |
 | sm_009 | Chinmay     | Currency Converter  | [github](https://github.com/chinmaykude/masai-sprint-3/)                     |
 | sm_021 | Piyush Jain | Cocktail Db         | [github](https://github.com/Piyu97/masai-sprint-3)                           |
+| sm_114 | Sudhir Singh | Movie DB           | [github](https://github.com/Sudhirsin/masai-sprint-3)
