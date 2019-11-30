@@ -9,3 +9,4 @@
 | sm_103 | Apoorva    | Currency Coverter   | [github](https://github.com/krsnaapoorv/projects/tree/master/masai-sprint-3)|
 | sm_106 | Deepanshu  | Currency Converter  | [github](https://github.com/dipanshuraz/masai-sprint-3) |
 | sm_115 | Suyash     | Calendar Index      | [github](https://github.com/SuyashMishra-dev/masai-projects)|
+| sm_107 | Hasmuddin  | Meal DB             | [github](https://hasmuddinansari.github.io/sprint-3)|
