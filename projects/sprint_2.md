@@ -7,3 +7,4 @@
 | sm_015 | Lalit                 | Snake & Ladder 	     | [github](https://github.com/lalitsheoran/masai-sprint-2)     |
 | sm_008 | chaitanya             | Bill Generator        | [github](https://github.com/nvchaitanya/masai-sprint-2)          |
 | sm_034 | Venkat                | Marks Recorder        | [github](https://github.com/Venkatasubbu913/masai-week-4/tree/master/week_4) |
+| sm_020 | Piyush Saudagare      | Expense Manager       | [github](https://github.com/piush2611/masai_sprint_2)        |
