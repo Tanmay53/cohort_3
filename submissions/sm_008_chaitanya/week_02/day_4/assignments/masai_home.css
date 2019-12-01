@@ -1,0 +1,366 @@
+ .flex-box1{
+    display:flex; 
+    padding:5px; 
+}
+.flex-box1 div{
+    font-family: sans-serif;
+    margin-left:20px;
+}
+.log{
+    margin-left:30px;
+}
+.top2{
+    padding-left:1350px;
+}
+.fees{
+    border:1px solid red;
+    border-radius:5%;
+    color:red;
+    padding-top:7px;
+    padding-left:2px;
+}  
+.big{
+    background-image: url('https://www.masaischool.com/static/posters/banner_1.jpg');
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+.big h1{
+    color:white;
+    padding:140px 20px 00px 1020px ;
+    font-size:70px;
+    font-weight:normal;
+    font-family:sans-serif;
+}
+.big p{
+    color:white;
+    font-size:50px;
+    font-family:sans-serif;
+    margin-left:830px;
+    padding-bottom:300px;
+}
+.flex-box2{
+    display:flex;
+    margin-left:1%;
+    margin-top:80px;
+}
+#three{
+    flex-wrap:wrap;
+}
+.flex-box2 div{
+    flex-basis:33%;
+}
+.image{
+    height:200px;
+    width:200px;
+    margin-left:180px;
+}
+.one h2{
+    font-family:sans-serif;
+    font-weight:normal;
+    font-size:25px;
+    text-align:center;
+}
+.one p{
+    text-align:center;
+    font-size:18px;
+    margin-left:40px;
+    font-style:normal;
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(14,14,14);
+}
+.unique{
+    background-image:url('https://digitalsynopsis.com/wp-content/uploads/2017/07/beautiful-color-ui-gradients-backgrounds-endless-river.png');
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    display:grid;
+    grid-template-rows: 50px 220px 220px;
+    grid-template-columns:420px 420px;
+    grid-gap:30px;
+    margin-top:60px;
+    justify-content:center;
+    padding-top:80px;
+    padding-bottom:60px;
+}
+.what{
+    grid-area:1 / 1 / span 1/span 2;
+    font-size:40px;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:1;
+    margin-left:15%;
+}
+.white{
+    background:white;
+}
+.white .para1{
+    font-size:80px;
+    color:blue;
+    text-align:center;
+    font-weight:normal;
+    font-family:'Times New Roman', Times, serif;
+    margin-top:5px;
+    padding:10px;
+    margin-bottom:0px;
+}
+.white .small{
+    font-size:20px;
+}
+.white .para2{
+    font-size:25px;
+    text-align:center;
+    color:grey;
+}
+.campus{
+    margin-top:80px;
+    margin-bottom:50px;
+    margin:0;
+}
+.campus h1{
+    text-align:center;
+    font-weight:normal;
+    font-size:40px;
+}
+.campus p{
+    text-align:center;
+    font-size:23px;
+}
+.flex-box3{
+    display:flex;
+    justify-content:center;
+}
+.flex-box3 div{
+    border:1px solid silver; 
+    border-radius:5px;
+    padding:20px;
+    margin:15px;
+}
+.schoolphoto{
+    height:400px;
+    width:600px;
+}
+.flex-box4{
+    display:flex;
+    font-size:20px;
+}
+.flex-box4 p{
+    margin:0;
+    padding-left:500px;
+}
+.course{
+    text-align:center;
+    font-family: sans-serif;
+    margin-top:100px;
+}
+.course h1{
+    font-weight:normal;
+    font-size:40px;
+}
+.flex-box5{
+    display:flex;
+    justify-content:stretch;
+    padding-left:280px;
+}
+.flex-box5 .grid-box1{
+    padding-left:30px;
+    margin-top:30px;
+}
+.grid-box1{
+    display:grid;
+    grid-template-rows:70px 150px 150px 70px;
+    grid-template-columns:300px 300px;
+    grid-gap:20px;
+}
+.line1{
+    grid-area:1/1/span 1/ span 2;
+    background-image:url('https://digitalsynopsis.com/wp-content/uploads/2017/07/beautiful-color-ui-gradients-backgrounds-endless-river.png');
+    color:white;
+    font-size:30px;
+    text-align:center;
+    padding:10px;
+    font-family: sans-serif;
+}
+.commonline{
+    background:white;
+    font-family: sans-serif;
+}
+.commonline p{
+    text-align:center;
+}
+.commonline h1{
+    text-align:center;
+    font-weight:normal;
+}
+.line2{
+    grid-area:2/1/span 1/span 1;
+}
+.line6{
+    grid-area:4/1/span 1/span 2;
+}
+.line6 .click{
+    padding:20px;
+    border-radius:30px;
+    background:grey;
+    margin-left:465px;
+    font-size:20px;
+    color:white;
+}
+.line7{
+    grid-area:4/1/span 1/span 2;
+}
+.line7 .click{
+    padding:20px;
+    border-radius:30px;
+    background:white;
+    margin-left:385px;
+    font-size:20px;
+    color:grey;
+    border:1px solid grey;
+}
+.hiring p{
+    font-size:40px;
+    font-family:sans-serif;
+    text-align:center;
+    margin-top:150px;
+}
+.flex-box6{
+    display:flex;
+}
+.flex-box6 .comp{
+    padding-left:50px;
+}
+.grid-box2{
+    background-image:url('https://digitalsynopsis.com/wp-content/uploads/2017/07/beautiful-color-ui-gradients-backgrounds-endless-river.png');
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-size:100% 100%;
+    display:grid;
+    grid-template-rows:60px 400px 60px;
+    grid-template-columns:500px 500px;
+    grid-gap:30px;
+    margin-top:50px;
+    justify-content:center;
+    padding-bottom:80px;
+}
+.money{
+    grid-area: 1 / 1 /span 1 /span 2;
+    color:white;
+    font-size:50px; 
+    padding-top:60px;
+    font-family: Arial;
+    padding-left:320px;
+}
+.pay{
+    background:white;
+    margin-top:80px;
+    text-align:center;
+}
+.pay h2{
+    color:grey;
+    font-weight:normal;
+}
+.pay h3{
+    font-size:25px;
+    font-weight:normal;
+}
+.pay h4{
+    color:blue;
+    font-size:30px;
+    margin:0;
+}
+.feemethod1 p{
+    color:red;
+    font-size:20px;
+}
+.feemethod2 p{
+    font-size:20px;
+}
+.bluetxt{
+    color:blue;
+}
+.moredetails{
+    grid-area:3 / 1 / span 1/ span 2;
+    margin-left:430px;
+    margin-right:450px;
+    margin-top:20px;
+    border:2px solid white;
+    border-radius:50px;
+    font-size:20px;
+    padding-bottom:60px;
+    color:white;
+    text-align:center;
+}
+.admissionprocess{
+    margin-top:80px;
+    text-align:center;
+}
+.admissionprocess h1{
+    font-weight:normal;
+    font-size:40px;
+}
+.admissionprocess p{
+    font-size:20px;
+}
+.admissionprocess h2{
+    font-size:30px;
+    font-weight:normal;
+}
+.flex-box7{
+    display:flex;
+    margin-left:250px;
+    text-align:center;
+}
+.flex-box7 div{
+    padding-left:200px;
+}
+.interview{
+    height:58%;
+    width:30%;
+    background-image: linear-gradient(to right, rgb(70,62,125), rgb(68,203,188));
+    padding:15px 45px;
+    border-radius:50%;
+    margin:0;
+}
+.flex-box7 p{
+    color:grey;
+    font-size:30px;
+    margin:0;
+}
+.flex-box7 h2{
+    font-weight:normal;
+}
+#interview {
+    margin-left:350px;
+}
+#interview .move{
+    margin-left:120px;
+}
+.apply{
+    text-align:center;
+    margin-top:80px;
+    color:white;
+    background:rgb(220,62,69);
+    margin-left:840px;
+    margin-right:840px;
+    font-size:20px;
+    border-radius:50px;
+    padding:1px 
+}
+.footer{
+    display:flex;
+    margin-left:350px;
+    margin-top:80px;
+}
+.footer p{
+    padding-left:50px;
+    color:blue;
+}
+.media{
+    margin-left:500px;
+}
+.social{
+    height:40px;
+    width:40px;
+    padding-left:40px;
+}
+
