@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container p-3">
+      <div class="form-group p-3 bg-light col-8 mx-auto shadow-lg mt-3 border border-info rounded">
+        <div>
+          <label for="name" class="mb-3 text-info">Name</label>
+          <input id="name" class="form-control mb-4" type="text" name="Name" />
+        </div>
+
+        <div>
+          <label for="email" class="mb-3 text-info">Email</label>
+          <input
+            id="email"
+            class="form-control mb-4"
+            type="email"
+            name="Email"
+          />
+        </div>
+
+        <div>
+          <label for="password" class="mb-3 text-info">Password</label>
+          <input
+            id="password"
+            class="form-control mb-4"
+            type="password"
+            name="Password"
+          />
+        </div>
+
+        <div>
+          <label for="username" class="mb-3 text-info">Username</label>
+          <input
+            id="username"
+            class="form-control mb-4"
+            type="text"
+            name="Username"
+          />
+        </div>
+
+        <div>
+          <label for="mobile" class="mb-3 text-info">Mobile</label>
+          <input
+            id="mobile"
+            class="form-control mb-4"
+            type="number"
+            name="Mobile"
+          />
+        </div>
+
+        <div>
+          <label for="description" class="mb-3 text-info">Description</label>
+          <input
+            id="description"
+            class="form-control mb-4"
+            type="text"
+            name="Description"
+          />
+        </div>
+
+        <button
+          id="submit"
+          class="btn btn-primary btn-block"
+          onclick="callApi()"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>
