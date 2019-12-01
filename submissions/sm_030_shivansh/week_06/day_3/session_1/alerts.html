@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Showing Alerts</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Clicking the buttons should show the alerts with respective content -->
+    <button id="f-name">FIRSTNAME</button>
+    <button id="l-name">LASTNAME</button>
+    <button id="full-name">FIRSTNAME LASTNAME</button>
+
+    <script>
+        //alerting the message inside id f-name
+        $("#f-name").click(function () {
+            alert(document.getElementById("f-name").innerHTML);
+        });
+
+        //alerting the message inside id l-name
+        $("#l-name").click(function () {
+            alert(document.getElementById("l-name").innerHTML);
+        });
+
+        //alerting the content of id full-name
+        $("#full-name").click(function () {
+            alert(document.getElementById("full-name").innerHTML);
+        })
+
+    </script>
+</body>
+
+</html>

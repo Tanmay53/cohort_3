@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Hello, world!</title>
+
+    <style type="text/css">
+        #wrapper {
+            margin-top:150px;
+        }
+
+        .grp-mobile, .grp-email, .grp-register, .grp-details {
+            display: none;
+        }
+
+    </style>
+  </head>
+  <body>
+        <div id="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-7">
+                        <div id="error" class="alert alert-danger" role="alert">
+                            Please enter your name !
+                        </div>
+                    </div>
+                    <div class="col-7 grp-form">
+                        <formm>
+                            <div class="form-group grp-name">
+                                <label for="inputName">NAME</label>
+                                <input id="inputName" class="form-control">
+                            </div>
+                            <div class="form-group grp-email" id="grp-email-id">
+                                <label for="inputEmail">EMAIL</label>
+                                <input id="inputEmail" class="form-control">
+                            </div>
+                            <div class="form-group grp-mobile" id="grp-mobile-id">
+                                <label for="inputMobile">MOBILE</label>
+                                <input id="inputMobile" class="form-control">
+                            </div>
+                            <button id="btnRegister" class="grp-register btn btn-dark">REGISTER</button>
+                        </formm>
+                    </div>
+                <div class="offset-1 col-4 bg-dark grp-details">
+                    <div class="row ">
+                        <div class="col">
+                            <h4 class="text-white">NAME</h4>
+                            <h1 id="name" class="text-white">MASAI</h1>
+                        </div>
+
+                        <div class="col">
+                            <h4 class="text-white">EMAIL</h4>
+                            <h1 id="email" class="text-white">email@masaischool.com</h1>
+                        </div>
+
+                        <div class="col">
+                            <h4 class="text-white">MOBILE</h4>
+                            <h1 id="mobile" class="text-white">9876543210</h1>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- 1st row ends here -->
+    
+            </div> <!-- container ends here -->
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/JavaScript" src="script.js"></script>
+    <script type="text/JavaScript">
+        //build dictionary for name validation
+        buildValidCharDict() // for name validation
+        //buildDictionary()    // for email validation
+        $(document).ready(function () {
+            // validating name
+            $('#inputName').keyup(function () {
+                if(validateName($(this).val()) && ($(this).val()).length > 3 && ($(this).val()).length < 10) {
+                    $('#error').hide() //html('Invalid Name !')
+                    $('#grp-email-id').removeClass('grp-email')
+                }
+                else {
+                    $('#error').show()
+                    $('#error').html('Invalid Name !')
+                    $('#grp-email-id').addClass('grp-email')
+                }
+            })
+            // validating email
+            $('#inputEmail').keyup(function() {
+                if(emailValidator($(this).val())) {$('#error').hide() //html('Invalid Name !')
+                    $('#grp-mobile-id').removeClass('grp-mobile')
+                }
+                else {
+                    $('#error').show()
+                    $('#error').html('Invalid Email !')
+                    $('#grp-mobile-id').addClass('grp-mobile')
+                }
+            })
+
+            // validating mobile
+            $('#inputMobile').keyup(function() {
+                //alert(Number($(this).val()))
+                if ((!(isNaN(Number($(this).val())))) && ($(this).val()).length == 10 ) {
+                    $('#error').hide() //html('Invalid Name !')
+                    $('#btnRegister').removeClass('grp-register')
+                    
+                }
+                else {
+                    $('#error').show()
+                    $('#error').html('Invalid Mobile !')
+                    $('#btnRegister').addClass('grp-register')
+                }
+            })
+
+            $('#btnRegister').click(function () {
+                $('.grp-form').hide()
+                $('.grp-details').show()
+
+                $('#name').text($('#inputName').val())
+                $('#email').text($('#inputEmail').val())
+                $('#mobile').text($('#inputMobile').val())
+            })
+            
+        }) // important
+    </script>            

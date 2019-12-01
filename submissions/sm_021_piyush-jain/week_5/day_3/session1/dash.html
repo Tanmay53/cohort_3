@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        var d = new Date();
+        var name = localStorage.getItem('correctName')
+        var h11 = document.createElement('h1')
+        h11.innerText = name
+        var body1 = document.querySelector('body')
+        body1.appendChild(h11);
+        var p1 = document.createElement('p')
+        p1.innerText = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
+        body1.appendChild(p1)
+        var addsession = Number(d.getMinutes() + 5);
+        console.log(addsession)
+        d.setMinutes(addsession)
+        var p2 = document.createElement('p')
+        p2.innerText = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
+        body1.appendChild(p2)
+        var btn = document.createElement('button')
+        btn.innerText = "LogOut";
+        btn.setAttribute('id', 'bttn');
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+        body1.appendChild(btn);
+        var Logout = document.getElementById('bttn');
+        Logout.addEventListener('click', Logoutnow);
+        setTimeout(function return1() {
+            location = "file:///home/piyush/coding/week_5/day_3/session1/index.html";
+        }, 3000000000000)
+        function Logoutnow() {
+            location = "file:///home/piyush/coding/week_5/day_3/session1/index.html";
+        }
+
+    </script>
+</body>
+
+</html>

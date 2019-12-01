@@ -1,48 +1,51 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-  <title>Grid 3</title>
-  <style>
-    body {
-      display: grid;
-    }
-    body, html {
-      height: 100%;
-    }
-    #cont {
-      display: grid;
-      grid-template-columns: 100px 100px 100px 100px;
-      grid-template-rows: 100px 100px 100px 100px;
-      grid-gap: 20px;
-      align-content: center;
-      justify-content: center;
-    }
-    #cont div {
-      background: green;
-    }
-    #cont div:nth-child(8) {
-      grid-area: 3/1/4/2;
-    }
-    #cont div:nth-child(9) {
-      grid-area: 3/2/4/3;
-    }
-    #cont div:last-child {
-      grid-area: 4/1/4/1;
-    }
-  </style>
+    <title>
+        Grid_3
+    </title>
+    <style>
+        #cont {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 100px 100px 100px 100px;
+            padding: 20px;
+            justify-content: start;
+            margin: 350px;
+        }
+
+        #cont>div {
+            background: blue;
+            height: 100px;
+            width: 100px;
+        }
+
+        #id1 {
+            visibility: hidden;
+        }
+    </style>
 </head>
+
 <body>
-  <div id="cont">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+    <div id="cont">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="id1"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="id1"></div>
+        <div id="id1"></div>
+        <div></div>
+        <div></div>
+        <div id="id1"></div>
+        <div id="id1"></div>
+        <div id="id1"></div>
+        <div></div>
+    </div>
 </body>
+
 </html>

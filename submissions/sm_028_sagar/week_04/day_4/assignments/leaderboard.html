@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>leaderboard</title>
+    <style>
+        .leaderboard {
+            width: 500px;
+            height: 900px;
+            box-shadow: 2px 3px 5px rgb(200, 200, 200);
+            margin: 20px auto;
+            background: rgb(241, 237, 237);
+        }
+        
+        .flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .flex>div {
+            margin: 10px;
+        }
+        
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+        .mm_box {
+            width: 150px;
+            height: 90px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        
+        .number {
+            font-size: 25px;
+        }
+        
+        .text {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .score_box {
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 0px auto;
+        }
+        
+        .digit>div {
+            width: 70px;
+            height: 70px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .enter {
+            border: 2px solid black;
+            width: 100%;
+            height: 70px;
+            text-align: center;
+            font-size: 30px;
+            padding-top: 14px;
+            background: black;
+            color: white;
+        }
+        
+        input {
+            margin: 10px 30px;
+            width: 70%;
+            height: 70%;
+            font-size: 30px;
+            border: 2px solid gray;
+            background: gray;
+            text-align: center;
+        }
+        
+        a {
+            text-decoration: none;
+            color: unset;
+        }
+        
+        .red {
+            background: red;
+        }
+        
+        .green {
+            background: green;
+        }
+        
+        .gray {
+            background: gray;
+        }
+        
+        .leaf {
+            background: rgb(128, 163, 29);
+        }
+        
+        .orange {
+            background: rgb(255, 145, 0);
+        }
+        
+        .purple {
+            background: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="leaderboard column">
+        <div class="min-max flex">
+            <div>
+                <div class="mm_box red">
+                    <p id="min" class="number">43</p>
+                </div>
+                <div>
+                    <p class="text">MIN</p>
+                </div>
+            </div>
+            <div>
+                <div class="mm_box green">
+                    <p id="max" class="number">2019</p>
+                </div>
+                <div>
+                    <p class="text">MAX</p>
+                </div>
+            </div>
+        </div>
+        <div class="score">
+            <div class="text">Score</div>
+            <div class="score_box gray">
+                <input id="valueBox" type="text" placeholder="#" value="">
+            </div>
+        </div>
+        <div class="keys">
+            <div class="flex digit">
+                <div class="dig leaf"> 1</div>
+                <div class="dig orange"> 2</div>
+                <div class="dig leaf"> 3</div>
+            </div>
+            <div class="flex digit">
+                <div class="dig orange"> 4</div>
+                <div class="dig orange"> 5</div>
+                <div class="dig orange"> 6</div>
+            </div>
+            <div class="flex digit">
+                <div class="dig leaf"> 7</div>
+                <div class="dig orange"> 8</div>
+                <div class="dig leaf"> 9</div>
+            </div>
+            <div class="flex digit">
+                <div class="dig purple"> 0</div>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="enter">ENTER</div>
+        </div>
+    </div>
+
+    <script>
+        var digits = document.querySelectorAll('.dig');
+        var enter = document.querySelector('.enter');
+        var input = document.getElementById('valueBox');
+
+
+        for (var i = 0; i < digits.length; i++) {
+            digits[i].addEventListener('click', function() {
+                displayDigit(this.textContent)
+            })
+        }
+
+        //function for entering digit in input box
+        function displayDigit(digit) {
+            var ini = input.value + digit;
+            input.value = withoutSpace(ini);
+
+        }
+
+
+        enter.addEventListener('click', hitEnter)
+
+        function hitEnter() {
+            logic()
+            var input = document.getElementById('valueBox');
+            input.value = '';
+        }
+
+        //logic part
+        function logic() {
+            var value = Number(input.value);
+            console.log(typeof value);
+            var min = Number(document.getElementById('min').textContent)
+            var max = Number(document.getElementById('max').textContent)
+            if (value > min && value < max) {
+                document.getElementById('min').textContent = value;
+            } else if (value >= max) {
+                document.getElementById('max').textContent = value;
+            }
+        }
+
+        function withoutSpace(data) {
+            // console.log(data.split(' '))
+            var s = ''
+            for (var i = 0; i < data.length; i++) {
+                if (data[i] === ' ') {
+                    continue;
+                }
+                s += data[i]
+            }
+            return s;
+        }
+    </script>
+
+</body>
+
+</html>
