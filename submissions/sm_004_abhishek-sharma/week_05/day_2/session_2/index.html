@@ -1,66 +1,88 @@
 <html>
     <head>
-        <title>Market</title>
+        <title>Item Market</title>
         <style>
-            #cont {
-                display: flex;
-            }
-            #cont div{
+            #container {
                 display: grid;
-                gap: 20px;
+                grid-template: 350px 250px / repeat(2, 640px);
+            }
+            #container > div{
+                border: 2px solid black;
+            }
+            #formInput > h3 {
+                text-align: center;
+            }
+            #formInput {
+                display: grid;
+                grid-template-rows: repeat(4, 60px);
+            }
+            #formInput div {
+                display: grid;
                 grid-template-columns: repeat(2, 200px);
+                margin: 20px 125px;
             }
-            #btn {
-                width: 100px;
-                margin-left: 100px;
-            }
-            #dataTable {
-                margin-top: 50px;
+
+            #displayTable {
                 display: grid;
-                grid-template-columns: repeat(3, 200px);
+                grid-area: 1 / 2 / span 2 / 2;
+                grid-template-columns: repeat(3, 150px);
+                grid-template-rows: repeat(10, 50px);
+                text-align: center;
+                padding: 20px 100px 0px;
             }
+            #displayTable > div {
+                border: 2px solid red;
+                padding-top: 15px;
+            }
+            #displayTable .header {
+                padding: 0px;
+            }
+
+            #addItem {
+                width: 100px;
+                height: 30px;
+                margin: 20px 225px;
+            }
+
+            /* .centerValue {
+                padding-top : 15px;
+            } */
+
+
 
         </style>
     </head>
     <body>
-       <!-- FORM to add -->
-       <div id="cont">
-            <div class="flex">
+        <div id="container">
+            <!-- FORM to add -->
+            <div id="formInput">
+                <h3>Add Products To Basket</h3>
                 <div>
-                    Product:
+                    <label for="product">Products:</label>
+                    <input type="text" id="product">
                 </div>
-                <input type="text" id="prod" placeholder="Enter Product Name">
-            </div>
-            <div class="flex">
                 <div>
-                    Price:
+                    <label for="price">Price:</label>
+                    <input type="text" id="price">
                 </div>
-                <input type="text" id="price" placeholder="Enter Price">
-            </div>
-            <div class="flex">
-                <div> 
-                    Quantity
+                <div>
+                    <label for="quantity">Quantity:</label>
+                    <input type="text" id="quantity">    
                 </div>
-                <input type="text" id="quant" placeholder="Enter Quantity">
+                <button id="addItem">Submit</button>
+            </div>   
+            <!-- TABLE -->
+            <div id="displayTable">
+                <!-- Your Basket -->
+                <div class="header"><h3>Product</h3></div>
+                <div class="header"><h3>Price</h3></div>
+                <div class="header"><h3>Quantity</h3></div>
             </div>
-            <button id="btn" onclick="addRecord()">ADD</button>
-       </div>   
-       <!-- TABLE -->
-       <div id="dataTable">
-            <div>
-               <div>Product</div>
+            <!-- SETTINGS -->
+            <div id="changeSettings">
+            Settings
             </div>
-            <div>
-                <div>Price</div>
-            </div>
-            <div>
-               <div>Qty</div>
-            </div>
-       </div>
-       <!-- SETTINGS -->
-       <div>
-           <!-- Settings -->
-       </div>
-       <script src="script.js"></script>
+        </div>
+    <script src="script.js"></script>
     </body>
 </html>
