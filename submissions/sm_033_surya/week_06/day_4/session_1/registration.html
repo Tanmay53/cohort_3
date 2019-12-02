@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-6">
+                <label>NAME</label>
+                <input type="text" class="form-control border border-dark" id="name" placeholder="Enter Name"></input>
+                <p id="nameSub" class="text-danger"></p>
+                <br>
+                <label class="hidden emailLab">EMAIL</label>
+                <input type="text" class="form-control border border-dark hidden email" id="email"
+                    placeholder="Enter Email"></input>
+                <p id="emailSub" class="text-danger"></p>
+                <br>
+                <label class="hidden mobileLab">MOBILE</label>
+                <input type="text" class="form-control border border-dark hidden" id="mobile"
+                    placeholder="Enter Mobilr No."></input>
+                <p id="mobileSub" class="text-danger"></p>
+                <br>
+                <button class="btn btn-dark col-12 my-3" id="submit">REGISTER</button>
+            </div>
+            <div class="col-6 bg-dark p-3">
+                <div class="row m-3">
+                    <h3 class="text-white">NAME</h3>
+                </div>
+                <div class="row m-3">
+                    <h1 class="text-white" id="nameDis"></h1>
+                </div>
+                <div class="row m-3">
+                    <h3 class="text-white">EMAIL</h3>
+                </div>
+                <div class="row m-3">
+                    <h4 class="text-white" id="emailDis"></h4>
+                </div>
+
+                <div class="row m-3">
+                    <h3 class="text-white">MOBILE</h3>
+                </div>
+                <div class="row m-3">
+                    <h2 class="text-white" id="mobileDis"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script>
+
+        $("#name").keyup(function () {
+            var len = $(this).val().length
+            if ($(this).val().length < 3 || $(this).val().length > 10) {
+                $("#nameSub").html("Invalid Username")
+                $(".emailLab,#email").hide()
+                $("#nameDis").html("")
+            }
+            else {
+                $("#nameSub").html("")
+                $(".emailLab,#email").show()
+                var name = $(this).val()
+                $("#nameDis").html(name)
+            }
+        })
+        $("#email").keyup(function () {
+            var data = $(this).val()
+            var out = emailCheck(data)
+            console.log(out)
+            if (out == true) {
+                $(".mobileLab, #mobile").show()
+                $("#emailSub").html("")
+                var email = $(this).val()
+                $("#emailDis").html(email)
+            }
+            else {
+                $("#emailSub").html("Invalid Email")
+                $("#emailDis").html("")
+                $(".mobileLab,#mobile").hide()
+            }
+        })
+        $("#mobile").keyup(function () {
+            if ($(this).val().length != 10) {
+                $("#mobileSub").html("Invalid Mobile Number")
+                $("#mobileDis").html("")
+            }
+            else {
+                $("#mobileSub").html("")
+                var mobile = $(this).val()
+                $("#mobileDis").html(mobile)
+            }
+        })
+
+        function emailCheck(data) {
+            console.log(data)
+            var j = 0
+            var count = 0
+            var out = 0
+            for (i = 0; i < data.length; i++) {
+
+                if (data[i] == "@") {
+                    count++
+                }
+            }
+            if (data[0] == "." || isNaN(Number(data[0])) == false || count != 1 || data[data.length - 1] == ".") {
+                console.log("Invalid")
+                out = 1
+                return false
+                count = 0
+            }
+            else {
+                var dotvalue = dot(data)
+                var spec = specialChar(data)
+
+                if (dotvalue == true && spec == true) {
+                    console.log("Valid")
+                    return true
+                    out = 0
+                }
+                else {
+                    console.log("invalid")
+                    out = 1
+                    return false
+                }
+            }
+
+
+            function dot(data) {
+                var count = 0
+                //    console.log(data)
+                for (i = 0; i < data.length; i++) {
+                    // console.log(data[i])
+                    if (data[i] == "." && data[i + 1] == "." && i + 1 != data.length) {
+                        count++;
+                    }
+                    if (data[i] == "." && (data[i - 1] == "@" || data[i + 1] == "@")) {
+                        count++;
+                    }
+                }
+                // console.log(count)
+                if (count == 0) {
+                    count = 0
+                    return true;
+                }
+                else {
+                    count = 0
+                    return false;
+
+                }
+
+
+            }
+            function specialChar(data) {
+                var arra = ["!", "#", "$", "%", "^", "&", "*", "(", ")", "+", "{", "}", "?", "/", "|"]
+                var obj = {}
+                var count_1 = 0
+                var sum = 0
+
+                for (i = 0; i < data.length; i++) {
+                    obj[data[i]] = 1
+                }
+                // console.log(Object.keys(obj))
+                for (i = 0; i < arra.length; i++) {
+                    if (obj[arra[i]] != undefined) {
+
+                        count_1 = 1
+                    }
+                    else {
+                        count_1 = 0;
+                    }
+                    sum = sum + count_1
+                }
+                if (sum == 1) {
+                    sum = 0
+                    return false
+                }
+                else {
+                    sum = 0
+                    return true
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
