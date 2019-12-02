@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <select id="user">User</select>
+    <option></option>
+    <button onclick="getData()">GetData</button>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Login Time</th>
+        </tr>
+    </table>
+    <script>
+        var data = localStorage.getItem('database');
+        var database1 = JSON.parse(data)
+        for (key in database1) {
+            var arr = Object.keys(database1);
+            var users = document.querySelector('select');
+            var option1 = document.createElement('option');
+            option1.textContent = database1[key][0]
+            users.appendChild(option1)
+        }
+        function getData() {
+            var selectUser = document.getElementById('user').value;
+            for (key in database1) {
+                if (database1[key][0] == selectUser) {
+                    var table1 = document.querySelector('table');
+                    var tr1 = document.createElement('tr')
+                    tr1.innerHTML = '<td>' + database1[key][0] + '<td>' + database1[key][2]
+                    table1.appendChild(tr1)
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
