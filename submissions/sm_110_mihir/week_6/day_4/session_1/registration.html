@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>registration jquery</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container w-50">
+            <form>
+                <div class="form-group">
+                    <h1>Registration</h1>
+                    <label for="name" id="lName">Name</label>
+                    <input type="text" id="name" class="form-control mb-1" />
+                    <label for="email" id="lemail">Email</label>
+                    <input type="text" id="email" class="form-control mb-1" />
+                    <label for="mobile" id="lmobile">Mobile</label>
+                    <input type="text" id="mobile" class="form-control" />
+                    <button class="form-control mt-2 btn-primary" id="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+            <div id="display" class="bg-dark text-white p-4">
+                <h3>NAME</h3>
+                <h2 id="dName"></h2>
+                <h3>EMAIL</h3>
+                <h2 id="dEmail"></h2>
+                <h3>MOBILE</h3>
+                <h2 id="dMobile"></h2>
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            // email validation
+            function split_char(str) {
+                var arr = [];
+                for (var i = 0; i < str.length; i++) arr[i] = str[i];
+                return arr;
+            }
+            // check for email's top level domain in the limited list
+            function checkTld(str) {
+                // reject single letter tld
+                if (str.length < 3) return false;
+                // Tld list not exhaustive
+                var icannTld = [
+                    ".com",
+                    ".in",
+                    ".co",
+                    ".gov",
+                    ".ai",
+                    ".io",
+                    ".au",
+                    ".nl",
+                    "",
+                    ".ca",
+                    ".jp",
+                    ".edu",
+                    ".net",
+                    ".biz",
+                    ".it",
+                    "",
+                    ".ae",
+                    ".ac",
+                    ".airbus",
+                    ".apple",
+                    "analytics",
+                    ".org"
+                ];
+                for (var i = 0; i < icannTld.length; i++)
+                    if (str == icannTld[i]) return true;
+                return false;
+            }
+            // check for valid email with given filtering criterias
+            function validEmail(email) {
+                email = split_char(email);
+                var countDot = 0,
+                    countAt = 0,
+                    posDot,
+                    posAt,
+                    tld = "";
+                for (i = 0; i < email.length; i++) {
+                    // check for whitespace
+                    if (email[i] != " ") {
+                        // check for valid character
+                        if (
+                            (email[i] >= "a" && email[i] <= "z") ||
+                            (email[i] >= 0 && email[i] <= 9) ||
+                            email[i] == "-" ||
+                            email[i] == "_" ||
+                            email[i] == "@" ||
+                            email[i] == "."
+                        ) {
+                            // console.log('success')
+                            if (email[i] == "@") {
+                                countAt++;
+                                posAt = i;
+                                // @ only 1 allowed, not at the start
+                                if (countAt > 1 || i == 0) return false;
+                            }
+                            if (email[i] == ".") {
+                                // . not at the start
+                                if (i == 0) return false;
+                                // . cannot be after @
+                                if (i == posAt + 1) return false;
+                                countDot++;
+                                // if . repeats
+                                if (countDot > 1) {
+                                    // check double dot
+                                    if (i == posDot + 1) return false;
+                                    // check tld - top level domain
+                                    if (checkTld(tld) == false) return false;
+                                    // tld is checked and reset
+                                    tld = "";
+                                }
+                                posDot = i;
+                            }
+                            if (countDot) {
+                                tld += email[i];
+                            }
+                        } else return false;
+                    } else return false;
+                }
+                // check last tld
+                if (checkTld(tld) == false) return false;
+                // check for @ and .
+                if (countDot && countAt) return true;
+                else return false;
+            }
+
+            function validateMobile(mobile) {
+                if (mobile.length != 10 || parseInt(mobile) == NaN)
+                    return false;
+
+                console.log(mobile);
+                return true;
+            }
+
+            $(document).ready(function() {
+                $("input,label,button").hide();
+                $("#display").hide();
+                $("#name,#lName").show();
+            });
+
+            var name, email, mobile;
+            $("#name").keyup(function() {
+                name = $("#name").val();
+                if (name.length > 2 && name.length < 11) {
+                    $("#name").removeClass("text-danger ");
+                    $("#name").addClass(
+                        "text-black font-weight-bold bg-success"
+                    );
+                    $("#lemail").show();
+                    $("#email").show();
+                } else {
+                    $("#name").removeClass(
+                        "font-weight-bold text-black bg-success"
+                    );
+                    $("#name").addClass("text-danger");
+                    $("#lemail").hide();
+                    $("#email").hide();
+                }
+            });
+
+            $("#email").keyup(function() {
+                email = $("#email").val();
+                if (validEmail(email)) {
+                    $("#email").removeClass("text-danger");
+                    $("#email").addClass(
+                        "text-black font-weight-bold bg-success"
+                    );
+                    $("#lmobile").show();
+                    $("#mobile").show();
+                } else {
+                    $("#email").removeClass(
+                        "font-weight-bold text-black bg-success "
+                    );
+                    $("#email").addClass("text-danger");
+                    $("#lmobile").hide();
+                    $("#mobile").hide();
+                }
+            });
+
+            $("#mobile").keyup(function() {
+                mobile = $("#mobile").val();
+                if (validateMobile(mobile)) {
+                    $("#mobile").removeClass("text-danger");
+                    $("#mobile").addClass(
+                        "text-black font-weight-bold bg-success"
+                    );
+                    $("#submit").show();
+                } else {
+                    $("#mobile").removeClass(
+                        "font-weight-bold text-black bg-success"
+                    );
+                    $("#mobile").addClass("text-danger ");
+                    $("#submit").hide();
+                }
+            });
+            $("#submit").click(function() {
+                event.preventDefault();
+                console.log(name, email, mobile);
+                $("form").hide();
+                $("#dName").text(name);
+                $("#dEmail").text(email);
+                $("#dMobile").text(mobile);
+                $("#display").show();
+            });
+        </script>
+    </body>
+</html>

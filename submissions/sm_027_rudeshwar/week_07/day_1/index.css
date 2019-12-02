@@ -1,0 +1,178 @@
+#head{
+    color:red;
+    text-align: center;
+    font-size: 100px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#image{
+    /* background: ; */
+    background:
+    url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+    /* background-size: cover;  */
+    /* background-repeat:no-repeat ; */
+}
+
+
+#head1{
+    color:rgb(49, 14, 245);
+    text-align:left;
+    font-size: 80px;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------- */
+
+
+.zero
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    font-size: 50px;
+    background: lightslategray;
+}
+
+#name{
+    background: rgb(243, 127, 49);
+    grid-area: 1/1/span 1/ span 1;
+}
+#category{
+    background: rgb(218, 146, 30);
+}
+
+.price{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto;
+}
+#pricehead{
+    text-align: center;
+    background: rgb(180, 29, 3);
+    
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------------------------------------------------------ */
+.one
+{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto auto ;
+    /* height: 100px; */
+    background: yellowgreen;
+}
+#dairyimage{
+    height: 150px;
+    width: 400px;
+}
+
+#dairy1{
+    color: rgb(226, 28, 61);
+    font-size: 70px;
+    width:200px ;
+}
+
+.items1{
+    font-size: 70px;
+    width: 400px; 
+}
+/* ------------------------------------------------------------------------- */
+
+.two
+{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto auto;
+    /* height: 100px; */
+    background: yellow;
+}
+#fruitsimage{
+    height: 200px;
+    width: 400px;
+}
+#fruits1{
+    color: rgb(226, 28, 61);
+    font-size: 70px;
+    width:400px ;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+
+.three
+{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto auto;
+    /* height: 100px; */
+    background: skyblue;
+}
+#vegetableimage{
+    height: 200px;
+    width: 400px;
+}
+#vegetable1{
+    color: rgb(226, 28, 61);
+    font-size: 50px;
+    width:400px ;
+
+}
+
+
+/* --------------------------------------------------------------------------------------------------- */
+
+
+.four
+{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto auto;
+    background: lightgoldenrodyellow;
+}
+#pulsesimage{
+    height: 200px;
+    width: 400px;
+}
+#pulses1{
+    color: rgb(226, 28, 61);
+    font-size: 70px;
+    width:400px ;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+
+.five
+{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto auto;
+    /* height: 100px; */
+    background: lightpink;
+}
+#snacksimage{
+    height: 200px;
+    width: 400px;
+}
+#snacks1{
+    color: rgb(226, 28, 61);
+    font-size: 70px;
+    width:400px ;
+}
+
+/* ---------------------------------------------------------------------------- */
+label{
+    font-size: 30px;
+}
+
+.calculate{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto;
+
+}

@@ -1,66 +1,144 @@
-<html>
-    <head>
-        <title>Market</title>
-        <style>
-            #cont {
-                display: flex;
-            }
-            #cont div{
-                display: grid;
-                gap: 20px;
-                grid-template-columns: repeat(2, 200px);
-            }
-            #btn {
-                width: 100px;
-                margin-left: 100px;
-            }
-            #dataTable {
-                margin-top: 50px;
-                display: grid;
-                grid-template-columns: repeat(3, 200px);
-            }
+<!DOCTYPE html>
+<html lang="en">
 
-        </style>
-    </head>
-    <body>
-       <!-- FORM to add -->
-       <div id="cont">
-            <div class="flex">
-                <div>
-                    Product:
-                </div>
-                <input type="text" id="prod" placeholder="Enter Product Name">
-            </div>
-            <div class="flex">
-                <div>
-                    Price:
-                </div>
-                <input type="text" id="price" placeholder="Enter Price">
-            </div>
-            <div class="flex">
-                <div> 
-                    Quantity
-                </div>
-                <input type="text" id="quant" placeholder="Enter Quantity">
-            </div>
-            <button id="btn" onclick="addRecord()">ADD</button>
-       </div>   
-       <!-- TABLE -->
-       <div id="dataTable">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Item Market</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template: 350px 250px / 500px 780px;
+        }
+
+        #container>div {
+            border: 2px solid black;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #formInput {
+            display: grid;
+            grid-template-rows: repeat(4, 60px);
+        }
+
+        #formInput div {
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
+            margin: 20px 25px;
+        }
+
+        #displayTable {
+            display: grid;
+            grid-area: 1 / 2 / span 2 / 2;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(10, 75px);
+            text-align: center;
+            padding: 20px 100px 0px;
+        }
+
+        #displayTable>div {
+            border: 2px solid rgba(0, 217, 255, 0.479);
+            padding-top: 15px;
+        }
+
+        #displayTable .header {
+            padding: 0px;
+        }
+
+        #addItem {
+            width: 100px;
+            height: 30px;
+            margin: 20px 150px;
+        }
+
+        #changeSettings {
+            display: grid;
+            grid-template-rows: repeat(3, 60px);
+        }
+
+        #changeSettings div {
+            display: grid;
+            gap: 50px;
+            grid-template-columns: 100px 200px;
+            margin: 10px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- FORM to add -->
+        <div id="formInput">
+            <h3>Add Products To Basket</h3>
             <div>
-               <div>Product</div>
+                <label for="product">Products:</label>
+                <input type="text" id="product">
             </div>
             <div>
-                <div>Price</div>
+                <label for="price">Price:</label>
+                <input type="text" id="price">
             </div>
             <div>
-               <div>Qty</div>
+                <label for="quantity">Quantity:</label>
+                <input type="text" id="quantity">
             </div>
-       </div>
-       <!-- SETTINGS -->
-       <div>
-           <!-- Settings -->
-       </div>
-       <script src="script.js"></script>
-    </body>
+            <button id="addItem">Submit</button>
+        </div>
+
+        <!-- TABLE -->
+        <div id="displayTable">
+            <div class="header" id="productColumn">
+                <h3>Product</h3>
+            </div>
+            <div class="header" id="priceColumn">
+                <h3>Price</h3>
+            </div>
+            <div class="header" id="quantityColumn">
+                <h3>Quantity</h3>
+            </div>
+        </div>
+        <!-- SETTINGS -->
+        <div id="changeSettings">
+            <h3>Settings</h3>
+            <div>
+                <select name="fontSize" id="fontSize">
+                    <option value=" ">--</option>
+                    <option value="14px">14px</option>
+                    <option value="16px">16px</option>
+                    <option value="18px">18px</option>
+                    <option value="20px">20px</option>
+                    <option value="22px">22px</option>
+                    <option value="24px">24px</option>
+                </select>
+                <button id="changeSize">Change Font Size</button>
+            </div>
+            <div>
+                <select name="fontColor" id="fontColor">
+                    <option value=" ">--</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="orange">Orange</option>
+                </select>
+                <button id="changeTextColor">Change Font Color</button>
+            </div>
+            <div>
+                <select name="bgColor" id="bgColor">
+                    <option value=" ">--</option>
+                    <option value="black">Black</option>
+                    <option value="grey">Grey</option>
+                    <option value="brown">Brown</option>
+                    <option value="#14868C">Blue</option>
+                </select>
+                <button id="changeBgColor">Change Background Color</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>

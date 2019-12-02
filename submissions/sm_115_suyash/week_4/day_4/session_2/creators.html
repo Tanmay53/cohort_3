@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <title>Practise Creators</title>
+</head>
+
+<body>
+  <div id="headings">
+  </div>
+  <div id="cont">
+  </div>
+  <ul id="vikings">
+    <li>Priyanshu</li>
+  </ul>
+  <p id="copyRight"></p>
+  <button onclick="creatH1()">Create H1</button>
+  <button onclick="creatH3()">Create 2 H3</button>
+  <button onclick="creatDivs()">Create DIVS</button>
+  <button onclick="creatStudent()">Add Students</button>
+  <button onclick="addRight()">Add Copyright</button>
+  <script>
+    function creatH1(){
+      var div = document.getElementById('headings')
+      var h1 = document.createElement('h1')
+      h1.innerText = 'Masai School'
+      div.appendChild(h1)
+  }
+    function creatH3() {
+      var div = document.getElementById('headings')
+      var h3_1 = document.createElement('h3')
+      var h3_2 = document.createElement('h3')
+      h3_1.innerText = 'A Transformation in education!'
+      h3_2.innerText = 'Learn to earn, pay when you get.'
+      div.appendChild(h3_1)
+      div.appendChild(h3_2)
+  }
+    function creatDivs() {
+      for(i=1;i<=10;i++) {
+        var div = document.getElementById('cont')
+        var my_div = document.createElement('div')
+        my_div.innerText = 'Content' + i
+        div.appendChild(my_div)
+      }
+  }
+    function creatStudent() {
+      var div = document.getElementById('vikings')
+      for(i=0;i<students.length;i++) {
+        var li_$ = document.createElement('li')
+        li_$.innerText = students[i]
+        div.appendChild(li_$)
+      }
+  }
+    function addRight() {
+      var div = document.getElementById('copyRight')
+      var copy = document.createElement('h1')
+      copy.innerText = '@ masai 2019'
+      div.appendChild(copy)
+    }
+    
+
+    var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="login.js"></script>
+        <style type="text/css">
+            #grid {
+                width: 30%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-gap: 5px;
+                margin-bottom: 100px;
+            }
+
+            tr td:first-child {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="grid">
+                <div>Username</div> <input id="inputUsername" type="input" placeholder="Enter Username">
+                <div>Password</div> <input id="inputPassword" type="input" placeholder="Enter Password">
+                <div></div> <button id="btnSubmit" onclick="login()">Submit</button>
+
+            </div>
+            <h4>Student Profile</h4>
+            <hr>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <div id="name"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <div id="email"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td>
+                        <div id="username"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile:</td>
+                    <td>
+                        <div id="mobile"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desciption:</td>
+                    <td>
+                        <div id="description"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
