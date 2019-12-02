@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout 4 - Media Queries</title>
+    <style>
+        #container {
+            display: grid;
+            grid-gap: 25px;
+        }
+
+        #container div {
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            #container {
+                margin: 150px 25px;
+                gap: 10px;
+                grid-template: repeat(2, 50px) / repeat(5, 50px);
+
+            }
+
+            #container div {
+                background-color: salmon;
+            }
+        }
+
+        @media (min-width: 600px) {
+            #container {
+                margin: 150px 100px;
+                gap: 20px;
+                grid-template: repeat(2, 75px) / repeat(5, 75px);
+
+            }
+
+            #container div {
+                background-color: lawngreen;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #container {
+                margin: 150px 125px;
+                grid-template: repeat(2, 100px) / repeat(5, 100px);
+
+            }
+
+            #container div {
+                background-color: orange;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #container {
+                margin: 150px 200px;
+                grid-template: repeat(2, 125px) / repeat(5, 125px);
+            }
+
+            #container div {
+                background-color: blueviolet;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            #container {
+                margin: 150px 200px;
+                gap: 30px;
+                grid-template: repeat(2, 150px) / repeat(5, 150px);
+            }
+
+            #container div {
+                background-color: #14868C;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+
+</html>
