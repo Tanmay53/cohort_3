@@ -11,3 +11,4 @@
 | sm_028 | Sagar Kadu            | Fruits                | [github](https://github.com/sagarkadu16/masai-sprint-1)      |
 | sm_012 | Gaurav Arya           | Rockets               | [github](https://github.com/gauravarya12/masai-sprint-1)     |
 | sm_020 | Piyush Saudagare      | Bikes                 | [github](https://github.com/piush2611/masai-sprint1)         |
+| sm_030 | Shivansh Singh        | Linux                 | [github](https://github.com/shiv-ansh/masai-sprint-1 )       | 
