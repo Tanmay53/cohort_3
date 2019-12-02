@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practise Creators</title>
+</head>
+
+<body>
+    <div id="headings">
+    </div>
+    <div id="cont">
+    </div>
+    <ul id="vikings">
+        <li>Priyanshu</li>
+    </ul>
+    <button id="createh1">Create H1</button>
+    <button id="createh3">Create 2 H3</button>
+    <button id="createdivs">Create DIVS</button>
+    <button id="addstudents">Add Students</button>
+    <button id="addcopyright">Add Copyright</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
+        $(document).ready(function() {
+            $('#createh1').click(function() {
+                var h1 = document.createElement('h1');
+                h1.textContent = "MASAI";
+                $('#headings').append(h1);
+            });
+            $('#createh3').click(function() {
+                var h31 = document.createElement('h3');
+                h31.textContent = "A Transformation in education!";
+                var h32 = document.createElement('h3');
+                h32.textContent = "Learn to earn, pay when you get.";
+                $('#headings').append(h31);
+                $('#headings').append(h32);
+            });
+            $('#createdivs').click(function() {
+                for (var i = 0; i < 10; i++) {
+                    var div = document.createElement("div");
+                    div.textContent = "Content "+(i+1);
+                    $('#cont').append(div);
+                }
+            });
+            $('#addstudents').click(function() {
+                for (var i = 0; i < students.length; i++) {
+                    var li = document.createElement('li');
+                    li.textContent = students[i];
+                    $('#vikings').append(li);
+                }
+            });
+            $('#addcopyright').click(function() {
+                var p = document.createElement('p');
+                p.textContent = "@ masai 2019";
+                $('#createh1').before(p);
+            });
+        });
+    </script>
+</body>
+
+</html>

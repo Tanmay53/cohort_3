@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Practise Creators</title>
+  </head>
+  <body>
+    <div id="headings"></div>
+    <div id="cont"></div>
+    <ul id="vikings">
+      <li>Priyanshu</li>
+    </ul>
+    <button>Create H1</button>
+    <button>Create 2 H3</button>
+    <button>Create DIVS</button>
+    <button>Add Students</button>
+    <button>Add Copyright</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+      var students = [
+        "Ajay",
+        "Akshay",
+        "Anusha",
+        "Chandrashekhara",
+        "Haren",
+        "Hasaan",
+        "Mahesh",
+        "Mousumi",
+        "Pavan",
+        "Rahul",
+        "Sumanta",
+        "Venkatesh",
+        "Vetrival",
+        "Vijayendra"
+      ];
+      //append child
+      $("button:nth-of-type(1)").click(function() {
+        var ele = document.createElement("h1");
+        ele.textContent = "MASAI";
+        $("#headings").append(ele);
+      });
+
+      //   2 div append
+
+      $("button:nth-of-type(2)").click(function() {
+        var ele2 = document.createElement("h3");
+        var ele3 = document.createElement("h3");
+        ele2.textContent = "A Transformation in education!";
+        ele3.textContent = "Learn to earn, pay when you get";
+        $("#headings").append(ele2);
+        $("#headings").append(ele3);
+      });
+
+      //append div 1 to 10
+      $("button:nth-of-type(3)").click(function() {
+        for (var i = 1; i <= 10; i++) {
+          div = document.createElement("div");
+          div.textContent = "Content " + i;
+          $("#cont").append(div);
+        }
+      });
+
+      //   list
+      $("button:nth-of-type(4)").click(function() {
+        for (var i = 0; i < students.length; i++) {
+          li = document.createElement("li");
+          li.textContent = students[i];
+          $("#vikings").append(li);
+        }
+      });
+      //before
+
+      $("button:nth-of-type(5)").click(function() {
+        p = document.createElement("p");
+        p.textContent = "@ masai 2019";
+        $("button:nth-of-type(1)").before(p);
+      });
+    </script>
+  </body>
+</html>

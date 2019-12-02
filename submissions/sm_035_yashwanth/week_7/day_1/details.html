@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Results</title>
+    <style>
+      body{
+  background-image:url("https://img3.stockfresh.com/files/l/loraliu/m/94/975902_stock-photo-grunge-paint-multicolor-background-for-design-illustration-retr.jpg");
+  }
+.main {
+  display: flex;
+  border: 1px ;
+  margin: 10px;
+}
+
+.main div {
+  margin: 10px;
+  padding: 10px;
+  height:400px;
+  width:100%;
+  border: 1px solid black;
+  background-color:black;
+}
+   #cart{
+     height:50px;
+     width:300px;
+     float:left;
+     background-color:black;
+     font-size:20px;
+     border-radius:5px;
+     margin-top:30px;
+     color:white;
+   }
+#form{
+  color:white;
+}
+#form{
+  color:pink;
+}
+.foater{
+  font-size:30px;
+  height:100px;
+  width:500px;
+}
+#size{
+  height:50px;
+  font-size:20px
+}
+    
+    </style>
+      </head>
+  <body>
+    <div class="main">
+      <div> 
+        <label id=form ><b>Fruits :</b></label>
+         <input type="text" placeholder="Fruits"> 
+      <button>
+        <label id="category">select:</label>
+       <select name="category" >
+         <option value=></option>
+         <option value=>Apple</option>
+         <option value=>promoganate</option>
+         <option value=>Grapes</option>
+         <option value="">orange</option>
+        </select>
+        </button> 
+        <button>
+        <label id="category">No.of items:</label>
+        <select name="No. of items:">
+           <option value=>1</option>
+          <option value=>2</option>
+          <option value=>3</option>
+          <option value=>4</option>
+           <option value=>5</option>
+          </button>
+         <label id=form ></label>
+        <input type="text" placeholder="Total Price for Fruits"> 
+        </select>
+      
+      <button id=cart >add to cart</button> 
+      </div>
+      <div>
+        <label id=form ><b>Vegetables:</b></label>
+        <input type="text" placeholder="Vegetables">  
+          <button>
+        <label id="category">select:</label>
+       <select name="category" >
+         <option value=></option>
+         <option value=>Carrot</option>
+         <option value=>Tomato</option>
+         <option value=>potato</option>
+         <option value="">Cauli-Flower</option>
+        </select>
+      </button>
+        <button>
+           <label id="category">No.of items:</label>
+          <select name="No. of items:">
+           <option value=>1</option>
+          <option value=>2</option>
+          <option value=>3</option>
+          <option value=>4</option>
+           <option value=>5</option>
+          </button>
+          <label id=form ></label>
+        <input type="text" placeholder="Total Price for Vegetables">  
+        </select>
+   <button id=cart >add to cart</button> 
+      </div>
+      <div>
+        <label id=form ><b>Pulses:</b></label>
+        <input type="text" placeholder="Pulses"> 
+          <button>
+        <label id="category">select:</label>
+       <select name="category" >
+         <option value=></option>
+         <option value=>Brown-Chick Peas</option>
+         <option value=>Split red lentils</option>
+         <option value=>Split green gram</option>
+        </select>
+      </button>
+        <button>
+           <label id="category">No.of items:</label>
+          <select name="No. of items:">
+           <option value=>1</option>
+          <option value=>2</option>
+          <option value=>3</option>
+          <option value=>4</option>
+           <option value=>5</option>
+          </button>
+           <label id=form ></label>
+        <input type="text" placeholder="Total Price for Pulses"> 
+        </select>
+        
+        <button id=cart >add to cart</button> 
+        
+      </div>
+     </div>
+    </div>
+  <div class=foater>
+              <label>TOTAL:</label>
+        <input id=size type="text" placeholder="Total Price of all items">  
+               <button id=cart >Buy Now</button> 
+  </div>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Urban-Clap</title>
+    <style>
+        .background {
+            background-image: url('https://res.cloudinary.com/urbanclap/image/upload/fl_progressive:steep/v1490770948/2x_1.jpg');
+            background-size: cover;
+            background-blend-mode: darken;
+            height: 400px;
+        }
+        
+        .back-text {
+            color: rgb(92, 87, 87);
+            text-shadow: 0.5px 0.5px 0.5px rgb(144, 144, 144);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand " href="#"> <img class="w-50" src="https://res.cloudinary.com/urbanclap/image/upload/v1490682269/web-assets/Logo-new.png" alt="urbanclap"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                    </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <li class="nav-item">
+                                <a class="nav-link " href="#">About Us<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Become A Professional</a>
+                            </li>
+                        </div>
+                        <div class="d-flex">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Login / Sign Up</a>
+                            </li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+    </nav>
+
+    <div class="background">
+        <h1 class="font-weight-bolder text-center pt-5 back-text">Your Service Expert in Banglore</h1>
+        <h4 class="font-weight-bold text-center mt-2 back-text">Get instant access to reliable and affordable services</h4>
+        <div class="d-flex justify-content-center mt-5">
+            <div class="btn-group">
+                <button type="button" class="btn bg-white dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Delhi
+                    </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Delhi</a>
+                    <a class="dropdown-item" href="#">-</a>
+                </div>
+            </div>
+            <div class="d-flex flex-column">
+                <input type="text" class="bg-white border py-3 px-5" placeholder="Search for a service">
+                <small class="text-secondary">Eg. Salon at Home, Plumber, Refrigerator Repair</small>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light py-5">
+        <div class="container d-flex justify-content-between">
+            <div>salon at Home</div>
+            <div>Massage at Home</div>
+            <div> Appliance & Electronic Repair</div>
+            <div> Cleaning</div>
+            <div>Electrician,Plumber,Carpenter</div>
+            <div> Fitness & Yoga</div>
+        </div>
+    </div>
+    <div class="container mt-5 border">
+        <h4 class="font-weight-bold">Recommended Services</h4>
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="10000">
+                    <img src="https://via.placeholder.com/150" class="d-inline w-25 rounded" alt="...">
+                    <img src="https://via.placeholder.com/150" class="d-inline w-25 rounded" alt="...">
+                    <img src="https://via.placeholder.com/150" class="d-inline w-25 rounded" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="https://via.placeholder.com/150" class="d-inline w-25 rounded" alt="...">
+                    <img src="https://via.placeholder.com/150" class="d-inline w-25 rounded" alt="...">
+                    <img src="https://via.placeholder.com/150" class="d-inline w-25 rounded" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5 p-2 border">
+        <h4 class="font-weight-bold">Fitness & Yoga</h4>
+        <div>
+            <img src="https://via.placeholder.com/150" class="d-inline w-25 rounded" alt="...">
+            <img src="https://via.placeholder.com/150" class="d-inline w-25 rounded" alt="...">
+        </div>
+    </div>
+    <div class="container d-flex justify-content-around mt-3 p-5 bg-light border">
+        <div>
+            <img src="https://via.placeholder.com/200" alt="image">
+        </div>
+        <div class="d-flex flex-column justify-content-around">
+            <h1>Get the UrbanClap app</h1>
+            <p>Enter your mobile number to receive the app download link</p>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">+91</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <div class="row">
+            <div class="col-5 p-4 text-right border">
+                <h5 class="font-weight-bold">High Quality & Trusted Professionals</h5>
+                <p>We provide only verified, background <br> checked and high quality professionals</p>
+            </div>
+            <div class="col-2 p-4 text-center border">
+                <h5 class="font-weight-bold">Matched to Your Needs</h5>
+                <p>We match you with the right professionals <br> with the right budget</p>
+            </div>
+            <div class="col-5 p-4 text-left border">
+                <h5 class="font-weight-bold">Hassle Free Service Delivery</h5>
+                <p>Super convenient, guaranteed service from <br> booking to delivery</p>
+            </div>
+        </div>
+    </div>
+    <div class="row bg-light">
+        <div class="col-5 text-right">
+            <p class="display-4 text-secondary">5 million</p>
+            <p class="text-secondary">CUSTOMERS SERVED</p>
+        </div>
+        <div class="col-2 text-center">
+            <p class="display-4 text-secondary">25000</p>
+            <p class="text-secondary">TRAINED PROFESSIONALS</p>
+        </div>
+        <div class="col-5">
+            <p class="display-4 text-secondary">4.7</p>
+            <p class="text-secondary">AVERAGE RATING</p>
+        </div>
+
+    </div>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
