@@ -1,0 +1,57 @@
+.nav {
+    text-align: center;
+    font-size: 22px;
+    color: rgb(7, 255, 243);
+    background-image: url(https://images.unsplash.com/photo-1542223189-67a03fa0f0bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60);
+}
+.main {
+    background-image: url(https://images.unsplash.com/photo-1535202610320-919f9b13de77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60);
+    padding-bottom: 15px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-auto-rows: 22px;
+    background-color: rgb(252, 195, 157);
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 5px;
+    grid-gap:1px;
+}
+#disAvg {
+    grid-area: 5/ 4;
+}
+#total {
+    grid-row: 6;
+}
+#disTotal {
+    grid-area: 6/ 4;
+}
+.table {
+    margin: 15px 0px;
+}
+.last {
+    display: grid;
+    grid-template-columns: 61% 30%;
+    grid-auto-rows: 22px;
+    background-color: rgb(184, 250, 121);
+    font-size: 16px;
+    width:45%;
+}
+.last > div:nth-child(2n+1) {
+    border:1px solid rgb(120, 228, 120);
+    text-align: center;
+}
+.last > div:nth-child(2){
+    text-align: center;
+}
+@media (max-width:800px) {
+    .grid {
+        grid-auto-columns: auto;
+    }
+    .last {
+        grid-auto-columns: auto;
+        width:70%
+    }
+}
