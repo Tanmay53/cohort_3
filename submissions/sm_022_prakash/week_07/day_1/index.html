@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sprint-2 Evaluation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <section id="mainsection">
+        <div id="entries" class="entries">
+            <div>
+                <label for="Item_Name">Item Name: </label>
+                <input type="text" placeholder="Enter your item Name" name="item" id="item">
+            </div>
+            <div>
+                <label for="category">Category: </label>
+                <select class="category">
+                    <option value="dairy">Dairy</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="pulses">Pulses</option>
+                </select>
+            </div>
+            <div>
+                <label for="Item_Name">Price: </label>
+                <input type="number" placeholder="price" min=1 name="price" id="price">
+            </div>
+            <div>
+                    <button class="button" onclick="addItems()">Add to Cart</button>
+            </div>
+        </div>
+        <br>
+        <!-- <div>
+            <table>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+
+            </table> -->
+
+
+  <div class="flex-box" id="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+      <div class="display-box" id="box2">
+            <div>Item</div>
+            <div>Category</div>
+            <div>Amount</div> 
+          </div>
+
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>

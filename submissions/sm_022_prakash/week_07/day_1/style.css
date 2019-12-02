@@ -1,0 +1,28 @@
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .item-box{
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      margin: 10px;
+      height: 50px;
+      width: 200px;
+      padding: 10px;
+      border: 1px dashed red;
+  }
+  .display-box{
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 100px 100px 100px;
+      grid-gap:5px;
+      border:1px dashed red;
+  }
+
