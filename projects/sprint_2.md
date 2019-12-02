@@ -10,3 +10,6 @@
 | sm_020 | Piyush Saudagare      | Expense Manager       | [github](https://github.com/piush2611/masai_sprint_2)        |
 | sm_014 | kondreddy		 | Bill Generator	 | [github](https://github.com/gangireddy4712/masai-week-4/tree/master/project.md)
 | sm_029 | Sakshi Sinha          | Marks Recorder	  | [github](https://sakshisinha.github.io/masai-sprint-2/)
+| sm_030 | Shivansh Singh        | Expense Manager  | [github](https://github.com/shiv-ansh/masai-sprint-2)              |
+| sm_011 | Divyansh Srivastava       | Health Advisor  |  [github]( https://github.com/divyansh1234/masai-sprint2)
+|
