@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            font-size: 15px;
+        }
+
+        .form {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        .form>div {
+            margin: 30px 0px 30px 0px;
+        }
+
+        .form>button {
+            text-align: center;
+            background-color: black;
+            color: white;
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <label>Username:</label>
+            <input type="text" id="Uname" placeholder="Enter your name">
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="text" id="Pname" placeholder="Enter your Password">
+        </div>
+        <button id="Login" onclick="login()">LOGIN</button>
+    </div>
+</body>
+<script>
+    var div1 = document.querySelector('div')
+    div1.setAttribute('class', 'form')
+    var btn = document.querySelector('button')
+    btn.setAttribute('id', 'btn')
+    var logins = {}
+    var k = 0
+    function login(_logins) {
+        var Dummy = {
+            user: ["piyush", "piyush1", "surya"],
+            pswd: ["jain", "jain", "teja"]
+        }
+
+        var OOA = []
+        var name = document.getElementById('Uname').value;
+        var pswd = document.getElementById('Pname').value;
+        var flag = 0;
+        for (var i = 0; i < Dummy.user.length || Dummy.pswd.length; i++) {
+            var date1 = new Date();
+            var time = date1.toLocaleTimeString('it-IT');
+            if ((Dummy.user[i] === name) && (Dummy.pswd[i] === pswd)) {
+                console.log("Correct Credentials");
+                flag = 1;
+                OOA[0] = name
+                OOA[1] = pswd
+                OOA[2] = time
+                logins[k] = OOA;
+                ++k;
+                break;
+            }
+        }
+        if (flag == 0) {
+            console.log("Wrong Credentials")
+        }
+        else {
+            Dashpage(name);
+        }
+        console.log(logins)
+        var json = JSON.stringify(logins)
+        localStorage.setItem('database', json)
+    }
+
+    function Dashpage(name) {
+        localStorage.setItem('correctName', document.getElementById('Uname').value)
+        location = "file:///home/piyush/coding/week_5/day_3/session1/dash.html"
+    }
+
+</script>
+
+
+</html>
