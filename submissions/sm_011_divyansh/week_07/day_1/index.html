@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Groccery Data</title>
+    <link rel="stylesheet" type="text/css" href="groccery.css" />
+    <script src="groccery.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Groccery Items</h1>
+
+
+
+        Item Name:<input type="text" id="ItemName" placeholder="Enter Item name" class=".inp" />
+
+        <select id="category">
+            <option value="Dairy">Dairy</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Pulses">Pulses</option>
+            <option value="Snacks">Snacks</option>
+
+        </select><br><br>
+        Price:<input type="number" id="ItemPrice" placeholder="Enter Price" class=".inp" /><br><br>
+
+        <button id="submit" onclick="submit()" class=".inp">Add</button>
+        <button onclick="resetData()" class=".inp">clear</button>
+        <button id="newRecord" onclick="newRecord()" class=".inp">AddMore</button>
+
+        <marquee>
+            <h2><i>Handle groccery data Easily</i></h2>
+        </marquee>
+
+    </div>
+
+    
+        
+            <img
+                src="https://2.bp.blogspot.com/--O4pTt1KoKE/Wv7bkZEY1gI/AAAAAAAAAYc/1vrOd4MVZgo-JhHF73EphvyAfQwv4NKNwCLcBGAs/s1600/myths%2Bof%2Bsuperfoods.gif">
+            <p id="display"></p>
+            <p id="display2"></p>
+        
+        <div class="steps">
+            <h2>Steps to follow:</h2><br>
+            <p>1)First enter the data</p><br>
+            <p>2)then click on Add button</p><br>
+            <p>3)then clear the data using clear button</p><br>
+            <p>4)again enter the new values</p><br>
+            <p>5)then click on AddMore button to add new data</p><br>
+        </div>
+    
+
+</body>
+
+</html>
