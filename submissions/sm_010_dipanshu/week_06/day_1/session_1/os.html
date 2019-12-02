@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Different Operating Systems</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-secondary">
+    <div class="container mt-5">
+      <div class="col text-center">
+        <select name="sel" id="selOs" class="custom-select sm bg-primary shadow-lg text-warning">
+          <option value="" class="bg-light"></option>
+          <option value="android" class="bg-light text-danger">Android</option>
+          <option value="ubuntu" class="bg-light text-danger">Ubuntu</option>
+          <option value="windows" class="bg-light text-danger">Windows</option>
+          <option value="macos" class="bg-light text-danger">macOS</option>
+        </select>
+      </div>
+    </div>
+    <div class="container mt-5" id="display-cont"></div>
+    <script src="os.js"></script>
+  </body>
+</html>
