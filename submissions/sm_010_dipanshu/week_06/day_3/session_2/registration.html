@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+  </head>
+  <body>
+    <input type="text" name="name" id="name" />
+    <select id="gender">
+      <option value="">--</option>
+      <option value="male">M</option>
+      <option value="female">F</option>
+    </select>
+    <input type="text" name="email" id="email" />
+    <input type="text" name="mobile" id="mobile" />
+    <hr />
+    <h1 id="dName">NAME</h1>
+    <h2 id="dGender">GENDER</h2>
+    <h3 id="dEmail">EMAIL</h3>
+    <h4 id="dMobile">MOBILE</h4>
+    <hr />
+    <button id="showName">NAME</button>
+    <button id="showGender">GENDER</button>
+    <button id="showEmail">EMAIL</button>
+    <button id="showMobile">MOBILE</button>
+    <button id="resetForm">RESET FORM</button>
+    <button id="resetDisplay">RESET DISPLAY</button>
+    <!-- Clicking the buttons shows the respective values in the designated locations
+	The reset will change back to the original values when the page is loaded -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $("#showName").click(function() {
+        var name = $("#name").val();
+        $("#dName").text(name);
+      });
+
+      $("#showGender").click(function() {
+        var gender = $("#gender").val();
+        $("#dGender").text(gender);
+      });
+
+      $("#showEmail").click(function() {
+        var email = $("#email").val();
+        $("#dEmail").text(email);
+      });
+
+      $("#showMobile").click(function() {
+        var mobile = $("#mobile").val();
+        $("#dMobile").text(mobile);
+      });
+
+      $("#resetForm").click(function() {
+        $("#name").val("");
+        $("#gender").val("");
+        $("#email").val("");
+        $("#mobile").val("");
+      });
+
+	  $("#resetDisplay").click(function() {
+        $("#dName").text("Name");
+        $("#dGender").text("Gender");
+        $("#dEmail").text("Email");
+        $("#dMobile").text("Mobile");
+      });
+    </script>
+  </body>
+</html>

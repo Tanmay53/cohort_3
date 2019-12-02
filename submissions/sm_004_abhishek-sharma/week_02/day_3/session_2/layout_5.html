@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout 5 - Media Queries</title>
+    <style>
+        #container {
+            display: grid;
+            gap: 25px;
+            margin: 20px 50px;
+        }
+
+        #container div {
+            border-radius: 5px;
+        }
+
+        #block2 {
+            margin: 0px 0px 10px 10px;
+        }
+
+        #block1 {
+            background: red;
+            grid-area: 1/1/1/span 2;
+        }
+
+        @media (max-width: 600px) {
+            #container {
+                grid-template: 30px 250px / 75px 200px;
+
+            }
+
+            #block2 {
+                background: rgb(240, 172, 140);
+            }
+
+            #block3 {
+                background: rgb(141, 226, 43);
+            }
+        }
+
+        @media (min-width: 600px) {
+            #container {
+                grid-template: 40px 300px / 150px 350px;
+            }
+
+            #block2 {
+                background: khaki;
+            }
+
+            #block3 {
+                background: blueviolet;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #container {
+                grid-template: 40px 350px / 200px 475px;
+            }
+
+            #block2 {
+                background: black;
+            }
+
+            #block3 {
+                background: hotpink;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #container {
+                grid-template: 50px 400px / 225px 675px;
+            }
+
+            #block2 {
+                background: orchid;
+            }
+
+            #block3 {
+                background: greenyellow;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            #container {
+                grid-template: 50px 500px / 300px 800px;
+            }
+
+            #block2 {
+                background: lightgreen;
+            }
+
+            #block3 {
+                background: #14868C;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="block1"></div>
+        <div id="block2"></div>
+        <div id="block3"></div>
+    </div>
+
+
+</body>
+
+</html>
