@@ -1,0 +1,20 @@
+body { background-image: url(green-chameleon-s9CC2SKySJM-unsplash.jpg);
+
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    flex-flow:column;
+    flex-wrap: wrap;
+
+}
+ .flex1{
+flex-basis: auto;
+}
+ h1{
+     font-size: 40px;
+     font-variant-caps: titling-caps;
+}

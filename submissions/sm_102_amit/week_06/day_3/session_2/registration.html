@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  </head>
+  <body>
+    <input type="text" name="name" id="name" />
+    <select id="gender">
+      <option value="">--</option>
+      <option value="male">M</option>
+      <option value="female">F</option>
+    </select>
+    <input type="text" name="email" id="email" />
+    <input type="text" name="mobile" id="mobile" />
+    <hr />
+    <h1 id="dName">NAME</h1>
+    <h2 id="dGender">GENDER</h2>
+    <h3 id="dEmail">EMAIL</h3>
+    <h4 id="dMobile">MOBILE</h4>
+    <hr />
+    <button id="printName">NAME</button>
+    <button id="printGender">GENDER</button>
+    <button id="printEmail">EMAIL</button>
+    <button id="printMobile">MOBILE</button>
+    <button id="resetForm">RESET FORM</button>
+    <button id="resetDisplay">RESET DISPLAY</button>
+    <!-- Clicking the buttons shows the respective values in the designated locations
+    The reset will change back to the original values when the page is loaded -->
+    <script>
+      $(document).ready(function() {
+        // function 1
+        $("#printName").on("click", function() {
+          var name = $("#name").val();
+          if (name != "") {
+            $("#dName").css("text-transform", "capitalize");
+            $("#dName").append("<span class='text'>: " + name + "</span>");
+          } else {
+            alert("Empty Field!");
+          }
+        });
+        // function 2
+        $("#printGender").on("click", function() {
+          var gender = $("#gender").val();
+          if (gender != "") {
+            $("#dGender").css("text-transform", "capitalize");
+            $("#dGender").append("<span class='text'>: " + gender + "</span>");
+          } else {
+            alert("Empty Field!");
+          }
+        });
+        // function 3
+        $("#printEmail").on("click", function() {
+          var email = $("#email").val();
+          if (email != "") {
+            $("#dEmail").append("<span class='text'>: " + email + "</span>");
+          } else {
+            alert("Empty Field!");
+          }
+        });
+        // function 4
+        $("#printMobile").on("click", function() {
+          var mobile = $("#mobile").val();
+          if (mobile != "") {
+            $("#dMobile").append("<span class='text'>: " + mobile + "</span>");
+          } else {
+            alert("Empty Field!");
+          }
+        });
+        // function 5
+        $("#resetForm").on("click", function() {
+          $("#name,#gender,#email,#mobile").each(function() {
+            $(this).val("");
+          });
+        });
+        // function 6
+        $("#resetDisplay").on("click", function() {
+          $("#dName,#dGender,#dEmail,#dMobile").each(function() {
+            $(this)
+              .find("span")
+              .remove();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

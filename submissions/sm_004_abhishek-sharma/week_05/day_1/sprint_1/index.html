@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Marks Recorder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <script type="text/javascript" src="script.js" defer></script>
+    <h1>STUDENT MARKS RECORDER</h1>
+    <form action="" id="studForm">
+        <div><label for="name">Name</label></div>
+        <div></div>
+        <div><input type="text" id="name"></div>
+        <div><label for="grade">Grade</label></div>
+        <div></div>
+        <div>
+            <select name="grade" id="grade">
+                <option value="">--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+        <div><label for="science">Science</label></div>
+        <div></div>
+        <div><input type="text" class="marks" id="science"></div>
+        <div><label for="maths">Maths</label></div>
+        <div></div>
+        <div><input type="text" class="marks" id="maths"></div>
+        <div><label for="english">English</label></div>
+        <div></div>
+        <div><input type="text" class="marks" id="english"></div>
+        <div><label for="history">History</label></div>
+        <div></div>
+        <div><input type="text" class="marks" id="history"></div>
+        <div><label for="geography">Geography</label></div>
+        <div></div>
+        <div><input type="text" class="marks" id="geography"></div>
+        <div></div>
+        <button id="btn" onclick="recordData()">Submit</button>
+        <div></div>
+    </form>
+
+    <table id="displayTable">
+        <tr>
+            <td><h3>Name</h3></td>
+            <td><h3>Grade</h3></td>
+            <td><h3>Science</h3></td>
+            <td><h3>Maths</h3></td>
+            <td><h3>English</h3></td>
+            <td><h3>History</h3></td>
+            <td><h3>Geography</h3></td>
+            <td><h3>Total</h3></td>
+            <td><h3>Average</h3></td>
+        </tr>
+    </table>
+</body>
+</html>

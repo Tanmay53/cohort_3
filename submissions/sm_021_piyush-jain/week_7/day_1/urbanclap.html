@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>UrbanClap masai</title>
+    <style>
+        .brandImage {
+            height: 70px;
+        }
+
+        .floating>div {
+            float: left;
+        }
+
+        .mainBg {
+            height: 450px;
+            width: 100%;
+            visibility: inherit;
+            z-index: 2;
+        }
+
+        h1,
+        h3 {
+            position: absolute;
+            top: 125px;
+            left: 300px;
+            color: black;
+        }
+
+        h3 {
+            top: 200px;
+            left: 400px;
+        }
+
+        .btn-pos {
+            position: absolute;
+            top: 300px;
+            left: 500px;
+
+        }
+
+        .images {
+            margin-left: 60px;
+            height: 100px;
+            width: 125px;
+        }
+
+        .images1 {
+            /* margin-left: 60px; */
+            height: 150px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row py-2 conatiner-fluid fixed-top bg-white">
+        <div class="col-lg-2 px-5"><img class="brandImage"
+                src="data:image/png;base64,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"
+                alt="urbanclap" /></div>
+        <div class="col-lg-8 floating">
+            <div class="px-4 py-3 ">About Us</div>
+            <div class="px-4 py-3">Blog</div>
+            <div class="px-4 py-3">Become a professional</div>
+        </div>
+        <div class=" col-lg-2 px-4 py-3">Login/Sign Up</div>
+    </div><br>
+    <div class="container-fluid ">
+
+        <div><img class="mainBg "
+                src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive:steep/v1490770948/2x_1.jpg"></div>
+        <h1 class="display-4 text-white">Your Service Expert in Bangalore</h1>
+        <h3 class="text-white lead">Get instant access to reliable and affordable services</h3>
+        <div class="row btn-pos">
+            <div class="dropdown ">
+                <button class="btn btn-secondary dropdown-toggle border  text-center" type="button" id="dropdownMenu1"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Delhi</button>
+            </div>
+            <div><input type="text"></div>
+        </div>
+    </div>
+    <div class="container bg-primary border-secondary floating">
+        <div class="col-lg-2 col-sm-12"><img class="images"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX////4+PgAAACEhIS7u7uYmJjv7+/8/Py2trZeXl7y8vL19fXs7Oz6+vpsbGzR0dGioqI4ODh4eHimpqZPT0+JiYl+fn5VVVXj4+NZWVlnZ2ebm5vY2NiQkJDf39/ExMRFRUXJyclISEglJSUwMDCurq4YGBgaGhooKCgyMjILCws8PDyYs3zXAAADv0lEQVR4nO3Y13ajOhSAYYEopldjg41xnSTj93+/Qw+OyUwyaefi/y6yQIK9tIWaIwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAzxWES7nUt92Ne9E7yborcJJSLsPte+OI9RDo4vaR20Drz279362zc5Hpy9U+8dpmHlOrkWe7tnqXR5kuo+vinXFEtV91gWSXVLC6Sj07p9qXZfKaQO4Mx1Ps8NQmUT1pttGwzbb6nG8dzzHK34f3xRGXKJgGMh79XRMojoIvTGaWafYX/r7p/Cq9GZDxYz/Gnqz3xRGX1XRAmn5qtBfOY/ax9n7ARVXqv9r1JkM17C926luHVxdHJOk0Q0e99FfBqfpQMz+gzzDfTcoqdbgzn8qh0NHGgRYs7FfiiKRwJ4XJecjXfQrvXvkm4a8uw7Ww7WHEhaeh1vT94dKQeZ9ikPvTNKZxROgbk0AyHapta/nZLX8jz/eb5lwKLZFZWHVdHu+HarN8nohubLUpBlZ8n2AfR+hxlWR1oO4JqxjqHflTE1E7Nault/mdZ5tQpkU7HYt8rE9WzwPSjZuvGOQzCfZxhLJ8sLIwzFK/HefHeKhXdN/5ohT+zC1kO7gOm6DORNlmVvMVV+PQFOEkwzrFdLtN5xIc4ogq2daZOIHfDuSzHB5Qyp/J0ClX3Zridfu12F6bxc8ap89thsKO0zS+X2We4wiln4KHqFk7r2NX/VSGi9OLzcCIy7qJxXEsSIqb+kBV57buuzj1R03qQPvxbU+X4gdUvy4vSsxNM7rk43hf+NPqdeT70f0Z8z5OPSGz+lsXq+He+JG1VFOTl0XeZuk1X2qYauZ12vXbqM7Xj16ex2fiCEWG9TfUzkMg97r5lDa/h6mpdz0v3LzdmMcmu+rk7B2kcZ2+F6c3A3U2jtgdm3Frjq9vH7/9TOOFp5mGVdd2QsVRv5wUuTdUmfU20Zba9aZhjm/MxxGLfdMNpp9364tj+d7MU1/J3TxoQmk1DQiC5oTsaKlsW+SmcTPb3MtkXTHksE24sTTm4wj70Ow6wl4c9fZ+l7a/otb66dt/W2zUh1K2srrdRnmMN/VGHZX9MhLkKz0Mi2iyRCrBuMSsA2U+jnBlGm+SML7qfW8cVlYdyNp//7k70LRFr/4epntIljLTDuOetVsss3Lx946/jSPMdZXU2WpjF5i7yzLTF2/5Z8GXc2zjxb3yypN/Ztr27ZngXwMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8L/wHqog02VaGGEAAAAAASUVORK5CYII=">
+        </div>
+        <div class="col-lg-2 col-sm-12"><img class="images"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX////4+PgAAACEhIS7u7uYmJjv7+/8/Py2trZeXl7y8vL19fXs7Oz6+vpsbGzR0dGioqI4ODh4eHimpqZPT0+JiYl+fn5VVVXj4+NZWVlnZ2ebm5vY2NiQkJDf39/ExMRFRUXJyclISEglJSUwMDCurq4YGBgaGhooKCgyMjILCws8PDyYs3zXAAADv0lEQVR4nO3Y13ajOhSAYYEopldjg41xnSTj93+/Qw+OyUwyaefi/y6yQIK9tIWaIwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAzxWES7nUt92Ne9E7yborcJJSLsPte+OI9RDo4vaR20Drz279362zc5Hpy9U+8dpmHlOrkWe7tnqXR5kuo+vinXFEtV91gWSXVLC6Sj07p9qXZfKaQO4Mx1Ps8NQmUT1pttGwzbb6nG8dzzHK34f3xRGXKJgGMh79XRMojoIvTGaWafYX/r7p/Cq9GZDxYz/Gnqz3xRGX1XRAmn5qtBfOY/ax9n7ARVXqv9r1JkM17C926luHVxdHJOk0Q0e99FfBqfpQMz+gzzDfTcoqdbgzn8qh0NHGgRYs7FfiiKRwJ4XJecjXfQrvXvkm4a8uw7Ww7WHEhaeh1vT94dKQeZ9ikPvTNKZxROgbk0AyHapta/nZLX8jz/eb5lwKLZFZWHVdHu+HarN8nohubLUpBlZ8n2AfR+hxlWR1oO4JqxjqHflTE1E7Nault/mdZ5tQpkU7HYt8rE9WzwPSjZuvGOQzCfZxhLJ8sLIwzFK/HefHeKhXdN/5ohT+zC1kO7gOm6DORNlmVvMVV+PQFOEkwzrFdLtN5xIc4ogq2daZOIHfDuSzHB5Qyp/J0ClX3Zridfu12F6bxc8ap89thsKO0zS+X2We4wiln4KHqFk7r2NX/VSGi9OLzcCIy7qJxXEsSIqb+kBV57buuzj1R03qQPvxbU+X4gdUvy4vSsxNM7rk43hf+NPqdeT70f0Z8z5OPSGz+lsXq+He+JG1VFOTl0XeZuk1X2qYauZ12vXbqM7Xj16ex2fiCEWG9TfUzkMg97r5lDa/h6mpdz0v3LzdmMcmu+rk7B2kcZ2+F6c3A3U2jtgdm3Frjq9vH7/9TOOFp5mGVdd2QsVRv5wUuTdUmfU20Zba9aZhjm/MxxGLfdMNpp9364tj+d7MU1/J3TxoQmk1DQiC5oTsaKlsW+SmcTPb3MtkXTHksE24sTTm4wj70Ow6wl4c9fZ+l7a/otb66dt/W2zUh1K2srrdRnmMN/VGHZX9MhLkKz0Mi2iyRCrBuMSsA2U+jnBlGm+SML7qfW8cVlYdyNp//7k70LRFr/4epntIljLTDuOetVsss3Lx946/jSPMdZXU2WpjF5i7yzLTF2/5Z8GXc2zjxb3yypN/Ztr27ZngXwMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8L/wHqog02VaGGEAAAAAASUVORK5CYII=">
+        </div>
+        <div class="col-lg-2 col-sm-12"><img class="images"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX////4+PgAAACEhIS7u7uYmJjv7+/8/Py2trZeXl7y8vL19fXs7Oz6+vpsbGzR0dGioqI4ODh4eHimpqZPT0+JiYl+fn5VVVXj4+NZWVlnZ2ebm5vY2NiQkJDf39/ExMRFRUXJyclISEglJSUwMDCurq4YGBgaGhooKCgyMjILCws8PDyYs3zXAAADv0lEQVR4nO3Y13ajOhSAYYEopldjg41xnSTj93+/Qw+OyUwyaefi/y6yQIK9tIWaIwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAzxWES7nUt92Ne9E7yborcJJSLsPte+OI9RDo4vaR20Drz279362zc5Hpy9U+8dpmHlOrkWe7tnqXR5kuo+vinXFEtV91gWSXVLC6Sj07p9qXZfKaQO4Mx1Ps8NQmUT1pttGwzbb6nG8dzzHK34f3xRGXKJgGMh79XRMojoIvTGaWafYX/r7p/Cq9GZDxYz/Gnqz3xRGX1XRAmn5qtBfOY/ax9n7ARVXqv9r1JkM17C926luHVxdHJOk0Q0e99FfBqfpQMz+gzzDfTcoqdbgzn8qh0NHGgRYs7FfiiKRwJ4XJecjXfQrvXvkm4a8uw7Ww7WHEhaeh1vT94dKQeZ9ikPvTNKZxROgbk0AyHapta/nZLX8jz/eb5lwKLZFZWHVdHu+HarN8nohubLUpBlZ8n2AfR+hxlWR1oO4JqxjqHflTE1E7Nault/mdZ5tQpkU7HYt8rE9WzwPSjZuvGOQzCfZxhLJ8sLIwzFK/HefHeKhXdN/5ohT+zC1kO7gOm6DORNlmVvMVV+PQFOEkwzrFdLtN5xIc4ogq2daZOIHfDuSzHB5Qyp/J0ClX3Zridfu12F6bxc8ap89thsKO0zS+X2We4wiln4KHqFk7r2NX/VSGi9OLzcCIy7qJxXEsSIqb+kBV57buuzj1R03qQPvxbU+X4gdUvy4vSsxNM7rk43hf+NPqdeT70f0Z8z5OPSGz+lsXq+He+JG1VFOTl0XeZuk1X2qYauZ12vXbqM7Xj16ex2fiCEWG9TfUzkMg97r5lDa/h6mpdz0v3LzdmMcmu+rk7B2kcZ2+F6c3A3U2jtgdm3Frjq9vH7/9TOOFp5mGVdd2QsVRv5wUuTdUmfU20Zba9aZhjm/MxxGLfdMNpp9364tj+d7MU1/J3TxoQmk1DQiC5oTsaKlsW+SmcTPb3MtkXTHksE24sTTm4wj70Ow6wl4c9fZ+l7a/otb66dt/W2zUh1K2srrdRnmMN/VGHZX9MhLkKz0Mi2iyRCrBuMSsA2U+jnBlGm+SML7qfW8cVlYdyNp//7k70LRFr/4epntIljLTDuOetVsss3Lx946/jSPMdZXU2WpjF5i7yzLTF2/5Z8GXc2zjxb3yypN/Ztr27ZngXwMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8L/wHqog02VaGGEAAAAAASUVORK5CYII=">
+        </div>
+        <div class="col-lg-2 col-sm-12"><img class="images"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX////4+PgAAACEhIS7u7uYmJjv7+/8/Py2trZeXl7y8vL19fXs7Oz6+vpsbGzR0dGioqI4ODh4eHimpqZPT0+JiYl+fn5VVVXj4+NZWVlnZ2ebm5vY2NiQkJDf39/ExMRFRUXJyclISEglJSUwMDCurq4YGBgaGhooKCgyMjILCws8PDyYs3zXAAADv0lEQVR4nO3Y13ajOhSAYYEopldjg41xnSTj93+/Qw+OyUwyaefi/y6yQIK9tIWaIwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAzxWES7nUt92Ne9E7yborcJJSLsPte+OI9RDo4vaR20Drz279362zc5Hpy9U+8dpmHlOrkWe7tnqXR5kuo+vinXFEtV91gWSXVLC6Sj07p9qXZfKaQO4Mx1Ps8NQmUT1pttGwzbb6nG8dzzHK34f3xRGXKJgGMh79XRMojoIvTGaWafYX/r7p/Cq9GZDxYz/Gnqz3xRGX1XRAmn5qtBfOY/ax9n7ARVXqv9r1JkM17C926luHVxdHJOk0Q0e99FfBqfpQMz+gzzDfTcoqdbgzn8qh0NHGgRYs7FfiiKRwJ4XJecjXfQrvXvkm4a8uw7Ww7WHEhaeh1vT94dKQeZ9ikPvTNKZxROgbk0AyHapta/nZLX8jz/eb5lwKLZFZWHVdHu+HarN8nohubLUpBlZ8n2AfR+hxlWR1oO4JqxjqHflTE1E7Nault/mdZ5tQpkU7HYt8rE9WzwPSjZuvGOQzCfZxhLJ8sLIwzFK/HefHeKhXdN/5ohT+zC1kO7gOm6DORNlmVvMVV+PQFOEkwzrFdLtN5xIc4ogq2daZOIHfDuSzHB5Qyp/J0ClX3Zridfu12F6bxc8ap89thsKO0zS+X2We4wiln4KHqFk7r2NX/VSGi9OLzcCIy7qJxXEsSIqb+kBV57buuzj1R03qQPvxbU+X4gdUvy4vSsxNM7rk43hf+NPqdeT70f0Z8z5OPSGz+lsXq+He+JG1VFOTl0XeZuk1X2qYauZ12vXbqM7Xj16ex2fiCEWG9TfUzkMg97r5lDa/h6mpdz0v3LzdmMcmu+rk7B2kcZ2+F6c3A3U2jtgdm3Frjq9vH7/9TOOFp5mGVdd2QsVRv5wUuTdUmfU20Zba9aZhjm/MxxGLfdMNpp9364tj+d7MU1/J3TxoQmk1DQiC5oTsaKlsW+SmcTPb3MtkXTHksE24sTTm4wj70Ow6wl4c9fZ+l7a/otb66dt/W2zUh1K2srrdRnmMN/VGHZX9MhLkKz0Mi2iyRCrBuMSsA2U+jnBlGm+SML7qfW8cVlYdyNp//7k70LRFr/4epntIljLTDuOetVsss3Lx946/jSPMdZXU2WpjF5i7yzLTF2/5Z8GXc2zjxb3yypN/Ztr27ZngXwMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8L/wHqog02VaGGEAAAAAASUVORK5CYII=">
+        </div>
+        <div class="col-lg-2 col-sm-12"><img class="images"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX////4+PgAAACEhIS7u7uYmJjv7+/8/Py2trZeXl7y8vL19fXs7Oz6+vpsbGzR0dGioqI4ODh4eHimpqZPT0+JiYl+fn5VVVXj4+NZWVlnZ2ebm5vY2NiQkJDf39/ExMRFRUXJyclISEglJSUwMDCurq4YGBgaGhooKCgyMjILCws8PDyYs3zXAAADv0lEQVR4nO3Y13ajOhSAYYEopldjg41xnSTj93+/Qw+OyUwyaefi/y6yQIK9tIWaIwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAzxWES7nUt92Ne9E7yborcJJSLsPte+OI9RDo4vaR20Drz279362zc5Hpy9U+8dpmHlOrkWe7tnqXR5kuo+vinXFEtV91gWSXVLC6Sj07p9qXZfKaQO4Mx1Ps8NQmUT1pttGwzbb6nG8dzzHK34f3xRGXKJgGMh79XRMojoIvTGaWafYX/r7p/Cq9GZDxYz/Gnqz3xRGX1XRAmn5qtBfOY/ax9n7ARVXqv9r1JkM17C926luHVxdHJOk0Q0e99FfBqfpQMz+gzzDfTcoqdbgzn8qh0NHGgRYs7FfiiKRwJ4XJecjXfQrvXvkm4a8uw7Ww7WHEhaeh1vT94dKQeZ9ikPvTNKZxROgbk0AyHapta/nZLX8jz/eb5lwKLZFZWHVdHu+HarN8nohubLUpBlZ8n2AfR+hxlWR1oO4JqxjqHflTE1E7Nault/mdZ5tQpkU7HYt8rE9WzwPSjZuvGOQzCfZxhLJ8sLIwzFK/HefHeKhXdN/5ohT+zC1kO7gOm6DORNlmVvMVV+PQFOEkwzrFdLtN5xIc4ogq2daZOIHfDuSzHB5Qyp/J0ClX3Zridfu12F6bxc8ap89thsKO0zS+X2We4wiln4KHqFk7r2NX/VSGi9OLzcCIy7qJxXEsSIqb+kBV57buuzj1R03qQPvxbU+X4gdUvy4vSsxNM7rk43hf+NPqdeT70f0Z8z5OPSGz+lsXq+He+JG1VFOTl0XeZuk1X2qYauZ12vXbqM7Xj16ex2fiCEWG9TfUzkMg97r5lDa/h6mpdz0v3LzdmMcmu+rk7B2kcZ2+F6c3A3U2jtgdm3Frjq9vH7/9TOOFp5mGVdd2QsVRv5wUuTdUmfU20Zba9aZhjm/MxxGLfdMNpp9364tj+d7MU1/J3TxoQmk1DQiC5oTsaKlsW+SmcTPb3MtkXTHksE24sTTm4wj70Ow6wl4c9fZ+l7a/otb66dt/W2zUh1K2srrdRnmMN/VGHZX9MhLkKz0Mi2iyRCrBuMSsA2U+jnBlGm+SML7qfW8cVlYdyNp//7k70LRFr/4epntIljLTDuOetVsss3Lx946/jSPMdZXU2WpjF5i7yzLTF2/5Z8GXc2zjxb3yypN/Ztr27ZngXwMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8L/wHqog02VaGGEAAAAAASUVORK5CYII=">
+        </div>
+        <div class="col-lg-2 col-sm-12"><img class="images"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX////4+PgAAACEhIS7u7uYmJjv7+/8/Py2trZeXl7y8vL19fXs7Oz6+vpsbGzR0dGioqI4ODh4eHimpqZPT0+JiYl+fn5VVVXj4+NZWVlnZ2ebm5vY2NiQkJDf39/ExMRFRUXJyclISEglJSUwMDCurq4YGBgaGhooKCgyMjILCws8PDyYs3zXAAADv0lEQVR4nO3Y13ajOhSAYYEopldjg41xnSTj93+/Qw+OyUwyaefi/y6yQIK9tIWaIwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAzxWES7nUt92Ne9E7yborcJJSLsPte+OI9RDo4vaR20Drz279362zc5Hpy9U+8dpmHlOrkWe7tnqXR5kuo+vinXFEtV91gWSXVLC6Sj07p9qXZfKaQO4Mx1Ps8NQmUT1pttGwzbb6nG8dzzHK34f3xRGXKJgGMh79XRMojoIvTGaWafYX/r7p/Cq9GZDxYz/Gnqz3xRGX1XRAmn5qtBfOY/ax9n7ARVXqv9r1JkM17C926luHVxdHJOk0Q0e99FfBqfpQMz+gzzDfTcoqdbgzn8qh0NHGgRYs7FfiiKRwJ4XJecjXfQrvXvkm4a8uw7Ww7WHEhaeh1vT94dKQeZ9ikPvTNKZxROgbk0AyHapta/nZLX8jz/eb5lwKLZFZWHVdHu+HarN8nohubLUpBlZ8n2AfR+hxlWR1oO4JqxjqHflTE1E7Nault/mdZ5tQpkU7HYt8rE9WzwPSjZuvGOQzCfZxhLJ8sLIwzFK/HefHeKhXdN/5ohT+zC1kO7gOm6DORNlmVvMVV+PQFOEkwzrFdLtN5xIc4ogq2daZOIHfDuSzHB5Qyp/J0ClX3Zridfu12F6bxc8ap89thsKO0zS+X2We4wiln4KHqFk7r2NX/VSGi9OLzcCIy7qJxXEsSIqb+kBV57buuzj1R03qQPvxbU+X4gdUvy4vSsxNM7rk43hf+NPqdeT70f0Z8z5OPSGz+lsXq+He+JG1VFOTl0XeZuk1X2qYauZ12vXbqM7Xj16ex2fiCEWG9TfUzkMg97r5lDa/h6mpdz0v3LzdmMcmu+rk7B2kcZ2+F6c3A3U2jtgdm3Frjq9vH7/9TOOFp5mGVdd2QsVRv5wUuTdUmfU20Zba9aZhjm/MxxGLfdMNpp9364tj+d7MU1/J3TxoQmk1DQiC5oTsaKlsW+SmcTPb3MtkXTHksE24sTTm4wj70Ow6wl4c9fZ+l7a/otb66dt/W2zUh1K2srrdRnmMN/VGHZX9MhLkKz0Mi2iyRCrBuMSsA2U+jnBlGm+SML7qfW8cVlYdyNp//7k70LRFr/4epntIljLTDuOetVsss3Lx946/jSPMdZXU2WpjF5i7yzLTF2/5Z8GXc2zjxb3yypN/Ztr27ZngXwMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8L/wHqog02VaGGEAAAAAASUVORK5CYII=">
+        </div>
+    </div><br>
+    <div class=" container">
+        <div class="font-weight-bold">Recommended Services</div>
+        <div class="row floating">
+            <div class="col-lg-3 col-sm-12 p-4">
+                <figure><img class="images1"
+                        src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_24ad7c60.png">
+                    <figcaption>Salon at home for women</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-3 col-sm-12 p-4">
+                <figure><img class="images1"
+                        src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_24ad7c60.png">
+                    <figcaption>Salon at home for women</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-3 col-sm-12 p-4">
+                <figure><img class="images1"
+                        src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_24ad7c60.png">
+                    <figcaption>Salon at home for women</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-3 col-sm-12 p-4">
+                <figure><img class="images1"
+                        src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_24ad7c60.png">
+                    <figcaption>Salon at home for women</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class=" container">
+        <div class="font-weight-bold">Wedding Services</div>
+        <div class="row floating">
+            <div class="col-lg-3 col-sm-12 p-4">
+                <figure><img class="images1"
+                        src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_24ad7c60.png">
+                    <figcaption>Makeup and HairStyling</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class=" container">
+        <div class="font-weight-bold">Fitness and Yoga</div>
+        <div class="row floating">
+            <div class="col-lg-3 col-sm-12  p-4">
+                <figure><img class="images1"
+                        src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_24ad7c60.png">
+                    <figcaption>Makeup and HairStyling</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-3 col-sm-12 p-4">
+                <figure><img class="images1"
+                        src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_24ad7c60.png">
+                    <figcaption>Makeup and HairStyling</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class=" container">
+        <div class="font-weight-bold">Massage at home</div>
+        <div class="row floating">
+            <div class="col-lg-3 col-sm-12  p-4">
+                <figure><img class="images1"
+                        src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_24ad7c60.png">
+                    <figcaption>Makeup and HairStyling</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-3 col-sm-12 p-4">
+                <figure><img class="images1"
+                        src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive,t_medium_res_template/categories/category_v2/category_24ad7c60.png">
+                    <figcaption>Makeup and HairStyling</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class=" bg-secondary container">
+        <div class="row">
+            <div class="offset-lg-3 pt-5 pb-1 col-lg-3"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8LIQtNQxmODt2tFIZU0PhT2bG9YTs4E-hOwtYjAmakNTEUHEI&s">
+            </div>
+            <div class="offset-lg-1 col-lg-5">
+                <div class="pt-5 ">
+                    <h4>Get the UrbanClap app</h4>
+                </div>
+                <div class="">Enter your mobile number to receive the app download link</div>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-3">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 p-4 border border-secondary">
+                <div>High Quality & Trusted Professionals</div>
+                <div>We provide only verified, background checked and high quality professionals</div>
+            </div>
+            <div class="col-lg-4 col-sm-12 p-4 border border-secondary">
+                <div>Matched to Your Needs</div>
+                <div>We match you with the right professionals with the right budget</div>
+            </div>
+            <div class="col-lg-4 col-sm-12 p-4 border border-secondary">
+                <div>Hassle Free Service Delivery</div>
+                <div>Super convenient, guaranteed service from booking to delivery</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row bg-secondary">
+            <div class="col-lg-4 text-center text-white col-sm-12">
+                <div class="display-4">5 million</div>
+                <div>Customers Served</div>
+            </div>
+            <div class="col-lg-4  text-center text-white col-sm-12">
+                <div class="display-4">25,000</div>
+                <div>Trained Professionals</div>
+            </div>
+            <div class="col-lg-4 text-center text-white col-sm-12">
+                <div class="display-4">4.7</div>
+                <div>Average Rating</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-3 bg-primary">
+        <div class="container">
+            <div class="row text-white">Related services in Bangalore</div>
+            <div class="row text-center text-white pt-2 flex-row">
+                <div>Carpenter</div>
+                <div class="mx-3">Electrician</div>
+                <div class="mx-3">Massage for Men</div>
+                <div class="mx-3">Packers and movers</div>
+                <div class="mx-3">Pest control</div>
+                <div class="mx-3">Plumber</div>
+            </div>
+            <div class="row text-center text-white pt-3 flex-row">
+                <div>Carpenter</div>
+                <div class="mx-3">Electrician</div>
+                <div class="mx-3">Massage for Men</div>
+                <div class="mx-3">Packers and movers</div>
+                <div class="mx-3">Pest control</div>
+                <div class="mx-3">Plumber</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white">
+        <div class="container">
+            <div class="row flex-row">
+                <div>About Us</div>
+                <div class="mx-3">Terms & Conditions</div>
+                <div class="mx-3">Privacy Policy</div>
+                <div class="mx-3">Blog</div>
+                <div class="mx-3">Reviews</div>
+            </div>
+            <hr>
+            <div class="row">Serving in</div>
+            <div class="row">Aus</div>
+            <div class="row">Sydeney</div>
+            <div class="row">India</div>
+            <div class="row text-center text-white pt-2 flex-row">
+                <div>Ahemdabad</div>
+                <div class="mx-3">Bangalore</div>
+                <div class="mx-3">Chennai</div>
+                <div class="mx-3">Chandigarh</div>
+                <div class="mx-3">Jaipur</div>
+                <div class="mx-3">Hyderabad</div>
+            </div>
+            <div class="row text-center text-white pt-2 flex-row">
+                <div>vadodara</div>
+                <div class="mx-3">Vishakaptanam</div>
+                <div class="mx-3">lucknow</div>
+            </div>
+            <div class="row">UAE</div>
+            <div class="row">
+                <div>Dubai</div>
+                <div class="mx-3">Abu Dubai</div>
+            </div>
+            <hr>
+
+        </div>
+    </div>
+</body>
+
+</html>

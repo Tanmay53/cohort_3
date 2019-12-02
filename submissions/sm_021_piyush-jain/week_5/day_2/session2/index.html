@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Unix</title>
+<link rel="stylesheet"  href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+    <!-- FORM to add -->          
+    <div class="form">
+        <div>
+            <label>Product:</label><br>
+            <input type="text" id="prd" placeholder="Product" />
+        </div>
+        <div>
+            <label>Price:</label><br>
+            <input type="text" id="price" placeholder="Price" />
+        </div>
+        <div>
+            <label>Quantity:</label><br>
+            <input type="text" id="qty" placeholder="Quantity" />
+        </div>
+        <button type="addData" onclick="addData()">ADD</button>
+    </div>
+
+    <!-- TABLE -->
+    <div id="entry">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qty</th>
+            </tr>
+        </table>
+    </div>
+    <!-- SETTINGS -->
+    <div class="changeForm">Change Settings<br><br>
+        <div>
+            <label>Font-size:</label><br>
+            <input type="text" id="fsize" /><br>
+            <button onclick="changeFsize()">Font-size</button>
+        </div>
+        <div>
+            <label>Font-color:</label><br>
+            <input type="text" id="fcolor" /><br>
+            <button onclick="changeFcolor()">Font-color</button>
+        </div>
+        <div>
+            <label>Bgcolor:</label><br>
+            <input type="text" id="bgcolor" /><br>
+            <button onclick="changebgcolor()">Bgcolor</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Registration</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button id="updateName">NAME</button>
+	<button id="updateGen">GENDER</button>
+	<button id="updateEmail">EMAIL</button>
+	<button id="updateMobile">MOBILE</button>
+	<button id="resetForm">RESET FORM</button>
+	<button id="resetDisp">RESET DISPLAY</button>
+	<!-- Clicking the buttons shows the respective values in the designated locations
+	The reset will change back to the original values when the page is loaded -->
+	<script>
+		var detail1 = 0, detail2 = 0, detail3 = 0, detail4 = 0
+		var button1 = document.getElementById('updateName');
+		button1.addEventListener('click', function () {
+			var name = $('#name').val();
+			name = name.split("")
+			console.log(name)
+			if (name.length > 2) {
+				name = name.join("")
+				console.log(name)
+				$('#dName').text(name);
+			}
+
+		});
+		// console.log(detail1);
+		var button2 = document.getElementById('updateGen');
+		button2.addEventListener('click', function () {
+			var gen = $('#gender').val();
+			console.log(gen)
+			if (gen === "male" || gen === "female")
+				$('#dGender').text(gen);
+
+		});
+		var button3 = document.getElementById('updateEmail');
+		button3.addEventListener('click', function () {
+			var email = $('#email').val();
+			function emailcheck(email) {
+				function errorcheck(email) {
+					email = email.split("")
+					var count = 0
+					var count1 = 0
+					var flag = 1;
+					for (var i = 0; i < email.length; i++) {
+						if (email[0] == '@' || email[0] == '.' || email[0] == '_' || email[0] == '0' || email[0] == '1' || email[0] == '2' || email[0] == '3' || email[0] == '4' || email[0] == '5' || email[0] == '6' || email[0] == '7' || email[0] == '8' || email[0] == '9' || email[0] == '*' || email[0] == '#' || email[0] == '!') {
+							flag = 0;
+							break;
+						}
+						if (email[i] == '.')
+							count += 1;
+						if (email[i] == '@')
+							count1 += 1;
+						if (email[i] == '@') {
+							if (email[i + 1] == '.') {
+								flag = 0
+								break;
+							}
+						}
+					}
+					if (count1 > 1 || count > 1 || count == 0 || count1 == 0) {
+						flag = 0
+					}
+					return flag;
+				}
+				// function used to find the actual occurence of '.'
+				function tldstart(email) {
+					var tldi = 0
+					for (var i = 0; i < email.length; i++) {
+						if (email[i] == '.')
+							tldi = i
+						else
+							continue;
+					}
+					return tldi
+				}
+
+				// function to check valid tlds
+				function tldcheck(a) {
+					var str = ""
+					for (var i = a + 1; i < email.length; i++) {
+						// console.log(email[i])
+						str += email[i]
+					}
+					// console.log(str)
+					if (str == "com" || str == "edu" || str == "edu" || str == "org")
+						return 1
+					else
+						return 0
+
+				}
+
+				if (errorcheck(email) == 1) {
+					var tld = tldstart(email)
+					var correct = tldcheck(tld)
+					if (correct == 1)
+					// alert("Valid Email")
+					{
+						$('#dEmail').text(email);
+						return true
+					}
+					else
+						// alert('Invalid Email')
+						return false
+				}
+				else
+					// alert("Invalid Email")
+					return false
+			}
+			var detail3 = emailcheck(email);
+			console.log(detail3);
+		});
+		var button4 = document.getElementById('updateMobile');
+		button4.addEventListener('click', function () {
+			var mobile = $('#mobile').val();
+			// mobile=mobile.length;
+			mobile = mobile.split("");
+			console.log(mobile);
+			if (mobile.length == 10) {
+				mobile = mobile.join("")
+				$('#dMobile').text(mobile);
+			}
+
+
+		});
+		var button5 = document.getElementById('resetForm');
+		button5.addEventListener('click', function () {
+			document.getElementById('name').value = "";
+			document.getElementById('gender').value = "--";
+			document.getElementById('email').value = "";
+			document.getElementById('mobile').value = "";
+
+		});
+		var button6 = document.getElementById('resetDisp');
+		button6.addEventListener('click', function () {
+			document.getElementById('dName').textContent = "NAME";
+			document.getElementById('dGender').textContent = "GENDER";
+			document.getElementById('dEmail').textContent = "EMAIL";
+			document.getElementById('dMobile').textContent = "MOBILE";
+
+
+		});
+	</script>
+</body>
+
+</html>

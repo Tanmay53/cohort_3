@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                "main main side"
+                "main main side"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+                "tablediv tablediv tablediv"
+            ;
+            /* border: 5px solid black; */
+            height: 600px;
+        }
+
+        .main {
+            grid-area: main;
+            display: flex;
+            flex-direction: column;
+            /* border: 5px solid black; */
+            justify-content: space-evenly;
+            height: 250px;
+            text-align: center;
+            align-items: center;
+            
+        }
+
+        .main button {
+            width: 200px;
+            height: 40px;
+        }
+
+        .side {
+            grid-area: side;
+            display: flex;
+            flex-direction: column;
+            /* border: 5px solid black; */
+            justify-content: space-evenly;
+            height: 250px;
+            align-items: center;
+
+            
+        }
+
+        .side button {
+            padding: 10px;
+            width: 180px;
+        }
+
+        .tablediv {
+            grid-area: tablediv;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            /* border: 5px solid black; */
+        }
+
+        table {
+            border: 5px solid black;
+            text-align: center;
+            width: 600px;
+        }
+
+        th {
+            border: 5px solid black;
+            text-align: center;
+        }
+
+        td {
+            border: 5px solid red;
+            text-align: center;
+        }
+
+        tr {
+            border: 5px solid green;
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            
+                <input id="product" type="text" placeholder="Price">
+      
+                
+                <input id="price" type="text" placeholder="Product">
+
+                
+                <input id="quantity" type="text" placeholder="Quantity">
+            
+            <button onclick="createEntry()">Submit to database</button>
+
+        </div>
+        <div class="side">Sidebar
+            <button onclick="changefontSize()">Change font size</button>
+            <button onclick="changefontColor()">Change font color</button>
+            <button onclick="changebgColor()">Change bg color</button>
+        </div>
+        <div class="tablediv">
+            <table id="parentTable">
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+
+            </table>
+
+
+        </div>
+    </div>
+</body>
+<script>
+function createEntry(){
+    var parentTable=document.getElementById("parentTable")
+    var newtr=document.createElement("tr")
+    parentTable.appendChild(newtr)
+    
+    var td1=document.createElement('td')
+    var td2=document.createElement('td')
+    var td3=document.createElement('td')
+
+    td1.textContent=document.getElementById('product').value
+    td2.textContent=document.getElementById('price').value
+    td3.textContent=document.getElementById('quantity').value
+
+
+    newtr.appendChild(td1)
+    newtr.appendChild(td2)
+    newtr.appendChild(td3)
+    
+}
+function changefontSize(){
+   var trAll= document.querySelectorAll("tr")
+   for (i=1;i<trAll.length;i++){
+       trAll[i].style.fontSize= (i*10)+"px"
+   }
+}
+function changebgColor(){
+    val1=Math.floor(Math.random()*100);
+    val2=Math.floor(Math.random()*255);
+    val3=Math.floor(Math.random()*255);
+   var trAll= document.querySelectorAll("tr")
+   for (i=1;i<trAll.length;i++){
+       if (i%2==0){
+       trAll[i].style.background= "rgb("+val1+","+val2+","+val3+")"}
+       else {trAll[i].style.background= "rgb("+val2+","+val1+","+val3+")" }
+   }
+}
+function changefontColor(){
+    val1=Math.floor(Math.random()*100);
+    val2=Math.floor(Math.random()*255);
+    val3=Math.floor(Math.random()*255);
+
+   var trAll= document.querySelectorAll("tr")
+   for (i=1;i<trAll.length;i++){
+       trAll[i].style.color= "rgb("+val1+","+val2+","+val3+")"
+   }
+}
+
+
+
+
+
+
+
+</script>
+
+</html>

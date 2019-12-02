@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+        .div1 {
+            width: 1350px;
+        }
+        .div2 {
+            background: lightblue;
+            width: 400px;
+            height: 270px;
+            margin: 5px 0px 0px 450px;
+        }
+        .div3 {
+            background: saddlebrown;
+            width: 1250px;
+            height: 140px;
+            margin-left: 50px;
+        }
+        .div4 {
+            background: black;
+            width: 10px;
+            height: 90px;
+            margin-left: 220px;
+            margin-top: 30px;
+        }
+        .div5 {
+            width: 350px;
+            margin-left: 40px;
+            margin-right:50px;
+        }
+        .div6 {
+            width: 580px;
+            margin-left: 50px;
+        }
+        .div7 {
+            margin-left: 300px;
+            margin-top: 20px;
+        }
+        .img {
+            height: 130px;
+            width: auto;
+        }
+        .text1 {
+            font-size: 25px;
+            color: white;
+        }
+        .text2 {
+            font-size: 18px;
+        }
+        .text3 {
+            text-align: right;
+        }
+        .text4 {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 5px;
+            color: blue;
+        }
+        .text5 {
+            font-size: 25px;
+            text-align: center;
+        }
+        .h1 {
+            height: 285px;
+        }
+        .h2 {
+            height: 200px;
+            margin-top:5px;
+        }
+        .fl {
+            float: left;
+        }
+        .fr {
+            float: right;
+        }
+        .cr {
+            color: red;
+        }
+        .mr1 {
+            margin: 10px 0px 0px 150px;
+        }
+        </style>
+    </head>
+    <body>
+       <button class="button" onclick="createPage()">Create Page</button>
+    </body>
+
+    <script>
+    function createPage(){
+        //creating top 2 parent divs
+        var body = document.querySelector('body')
+
+        var div1 = document.createElement('div')
+        div1.setAttribute('class','div1 h1')
+        body.appendChild(div1)
+
+        var div12 = document.createElement('div')
+        div12.setAttribute('class','div1 h2')
+        body.appendChild(div12)
+        
+
+        //creating 3rd parent div
+        var div3 = document.createElement('div')
+        div3.setAttribute('class','div3')
+        body.appendChild(div3)
+
+        //creating elements in top division
+        var divOne= document.getElementsByClassName('div1')[0]
+        var div2 = document.createElement('div')
+        div2.setAttribute('class','div2 fl')
+        divOne.appendChild(div2)
+
+       var divT= document.getElementsByClassName('div2')[0]
+       var mr1= document.createElement('div')
+       mr1.setAttribute('class','mr1')
+       divT.appendChild(mr1)
+
+       var p1=document.createElement('p')
+       var p2=document.createElement('p')
+       p1.setAttribute('class','text4')
+       p1.textContent='Linus Torvalds'
+       p2.setAttribute('class','text5')
+       p2.textContent='The creator of Linux and Git' 
+       divT.appendChild(p1)
+       divT.appendChild(p2)
+
+       mrOne =document.getElementsByClassName('mr1')[0]
+       var img1 =document.createElement('img')
+       img1.setAttribute('class','img')
+       img1.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg')
+       mrOne.appendChild(img1)
+
+
+       //creating elements in mid division
+       var divTwo = document.getElementsByClassName('div1')[1]
+       var div7= document.createElement('div')
+       div7.setAttribute('class','fl div7')
+       divTwo.appendChild(div7)
+
+       var divSeven=document.getElementsByClassName('div7')[0]
+       var mr2=document.createElement('img')
+       mr2.setAttribute('class','img')
+       mr2.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg')
+       divSeven.appendChild(mr2)
+
+       var div6= document.createElement('div')
+       div6.setAttribute('class','fl div6')
+       divTwo.appendChild(div6)
+
+       var divSix= document.getElementsByClassName('div6')[0]
+       var h1= document.createElement('h1')
+       var p3 = document.createElement('p')
+       h1.setAttribute('class','cr')
+       p3.setAttribute('class','text2')
+       h1.textContent='Sal Khan'
+       p3.textContent='Salman Khan is the founder of Khan Academy which has a mission of providing a free world-class education for anyone, anywhere.'
+       divSix.appendChild(h1)
+       divSix.appendChild(p3)
+
+       //creating elements in lower division
+
+       var divThree= document.getElementsByClassName('div3')[0]
+       
+       var div51=document.createElement('div')
+       var div52=document.createElement('div')
+       var div4= document.createElement('div')
+
+       div51.setAttribute('class','fl div5')
+       div4.setAttribute('class','fl div4')
+       div52.setAttribute('class','fr div5')
+
+       divThree.appendChild(div51)
+       divThree.appendChild(div52)
+       divThree.appendChild(div4)
+
+       divF1=document.getElementsByClassName('div5')[0]
+       p4=document.createElement('p')
+       p5=document.createElement('p')
+       p4.setAttribute('class','text1')
+       p5.setAttribute('class','text2')
+       p4.textContent='Ken Thompson'
+       p5.textContent='Designed and Implemented the original Unix operating system.'
+       divF1.appendChild(p4)
+       divF1.appendChild(p5)
+
+       divF2=document.getElementsByClassName('div5')[1]
+       p6=document.createElement('p')
+       p7=document.createElement('p')
+       p6.setAttribute('class','text1 text3')
+       p7.setAttribute('class','text2 text3')
+       p6.textContent='Dennis Ritchie'
+       p7.textContent='The creator of C programming language.'
+       divF2.appendChild(p6)
+       divF2.appendChild(p7)
+
+    }
+    
+    </script>
+</html>

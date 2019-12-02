@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <h1>Click the button to add a new customer!</h1>
+  <div class="allentry">
+      <div>
+          <div>
+              <label>FIRST NAME</label>
+              <input type="text" class="fname" >
+          </div>
+      </div>
+      <div>
+        <div>
+            <label>LAST NAME</label>
+            <input type="text" class="lname">
+        </div>
+    </div>
+    <div>
+        <div>
+            <label>DATE OF BIRTH</label>
+            <input type="text" class="dob">
+        </div>
+    </div>
+    <div>
+        <div>
+            <label>BALANCE</label>
+            <input type="text" class="bal">
+        </div>
+    </div>
+    <div>
+        <div>
+            <label>ACCOUNT NUMBER</label>
+            <input type="text" class="accno">
+        </div>
+    </div>
+    <div>
+        <div>
+            <label>SHARED ACCOUNT HOLDERS</label>
+            <input type="text" class="sharedacc">
+        </div>
+    </div>
+  </div>
+  <button onclick="addcustomer()">Add customer</button>
+
+<h2>customer added</h2>
+<p id="displayinfo"> display new customer </p>
+
+
+
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! <h1>
+  <button onclick="printCustomer()">Print Customers</button>  
+  <div id="displayContainer"> </div>
+  
+
+  <script>
+    customerArr=[]
+    function getaccholder()
+    {
+
+    }
+  function Customer(fname, lname, DOB, balance,AccNumber, Accholder)
+  {
+
+    this.fname = fname
+    this.lname  = lname 
+    this.DOB= DOB
+    this.balance = balance
+    this.AccNumber = AccNumber
+    this.Accholder=[Accholder]
+    this.displaydetails=function(){
+        
+   return "Firstname:"+this.fname+ "<br>"+
+        "Lastname:"+this.lname + "<br>"+
+        "DOB:"+this.DOB + "<br>"+
+        "balance:"+this.balance+"<br>"+
+        "account no:"+this.AccNumber+"<br>"+
+        "account holders:"+this.Accholder
+    
+    }
+}
+
+function addcustomer()
+{
+    
+    display=document.getElementById("displayinfo")
+
+    firstname=document.querySelector(".fname").value
+    //console.log(firstname)
+    lastname=document.querySelector(".lname").value
+    dateofbirth=document.querySelector(".dob").value
+    balance=document.querySelector(".bal").value
+    accnumber=document.querySelector(".accno").value
+    //alert(balance)
+    accholders=document.querySelector(".sharedacc").value
+    //alert(accholders)
+ newcustomer=new Customer(firstname,lastname,dateofbirth,accnumber,balance,accholders)
+    //alert(newcustomer.displaydetails())
+    display.innerHTML=newcustomer.displaydetails()
+    
+    customerArr.push(newcustomer)
+}
+
+function printCustomer()
+{
+//alert("fgh")
+
+displayContainer = document.getElementById('displayContainer')
+    for(var i = 0; i < customerArr.length; i++) 
+    {
+        elem = document.createElement("h6")
+        elem.innerHTML = customerArr[i].displaydetails()
+        displayContainer.appendChild(elem)
+
+    }
+
+}
+  </script>
+</body>
+</html>

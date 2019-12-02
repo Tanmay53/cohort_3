@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Layout_2.html</title>
+    </head>
+    <style>
+    .cont{
+            display:grid;
+            margin:20px;
+            grid-gap:20px;
+            grid-template-rows: 100px 100px 100px 100px ;
+            grid-template-columns: 100px 100px 100px 100px ;
+            justify-content:center;
+
+             } 
+        .cont div {
+            background:red;
+        }
+        #class2{
+            background:red ;
+            grid-area: 1 / 2 / 1 /4;
+        }
+        #class4{
+            background:red;
+            grid-area: 2 / 1 / 2 /3;
+        }
+        #class9{
+            background:red;
+            grid-area: 3 / 3 / 3 /5;
+        }
+        @media (max-width:600px){
+            body{
+                background:palevioletred;
+            }
+    
+    
+    </style>
+    <body>
+            <div class="cont">
+                    <div></div>
+                    <div  id="class2"></div>
+                    <div></div>
+                    <div id="class4"></div>
+                    <div></div>
+                    <div></div>
+                     <div></div>
+                    <div ></div>
+                    <div id="class9"></div>
+                    
+            
+                    </div>
+
+
+    </body>
+</html>

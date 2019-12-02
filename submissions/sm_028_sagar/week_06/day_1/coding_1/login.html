@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <style>
+        #userDetails {
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            margin: 10px auto;
+        }
+        
+        .tags {
+            width: max-content;
+            margin: 10px auto;
+        }
+        
+        input,
+        p {
+            margin: 5px;
+            padding: 10px 15px;
+            text-align: center;
+        }
+        
+        #status {
+            width: max-content;
+            margin: 10px auto;
+        }
+        
+        table td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>Person Details</p>
+        <form id="userDetails">
+            <input type="text" name="username" class="formEle rm" placeholder="username" required>
+            <input type="password" name="password" class="formEle rm" placeholder="password" required>
+            <input class="rm" type="submit" value="Login">
+        </form>
+    </div>
+
+    <table id="status">
+
+    </table>
+    <div class="tags">
+        <a href="./login.html">Logout</a><br>
+        <a href="./register.html">Register new person</a>
+    </div>
+
+    <script src="./login.js"></script>
+</body>
+
+</html>

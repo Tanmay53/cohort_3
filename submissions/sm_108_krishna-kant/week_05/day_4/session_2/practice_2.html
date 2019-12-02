@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div class="row m-3">
+        <div class="col-8">
+          <h3>Billing address</h3>
+          <form>
+            <div class="form-row">
+              <div class="col bg-light form-group">
+                <label for="fname">First name</label>
+                <input type="text" id="fname" class="form-control" />
+              </div>
+              <div class="col bg-light form-group">
+                <label for="lname">Last name</label>
+                <input type="text" id="lname" class="form-control" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col bg-light form-group">
+                <label for="username">Username</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">@</div>
+                  </div>
+                  <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col bg-light form-group">
+                <label for="email">Email</label>
+                <span class="text-muted">(Optional)</span>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="you@example.com"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col bg-light form-group">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  placeholder="1234 Main St"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col bg-light form-group">
+                <label for="address2">Address 2</label>
+                <span class="text-muted">(Optional)</span>
+                <input
+                  type="text"
+                  id="address2"
+                  placeholder="Apartment or suite"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <label for="select">Country</label>
+                <select name="country" id="country" class="custom-select">
+                  <option value="Choose">Choose...</option>
+                  <option value="india">India</option>
+                  <option value="india">India</option>
+                  <option value="india">India</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <label for="select">State</label>
+                <select name="state" id="state" class="custom-select">
+                  <option value="Choose">Choose...</option>
+                  <option value="india">India</option>
+                  <option value="india">India</option>
+                  <option value="india">India</option>
+                </select>
+              </div>
+              <div class="col-3 form-group">
+                <label for="zip">Zipcode</label>
+                <input type="text" class="form-control" id="zip" />
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-12 form-group custom-control custom-checkbox">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="smb"
+                  />
+                  <label class="custom-control-label" for="smb"
+                    >Shipping address is the same as billing address</label
+                  >
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="si" />
+                  <label class="custom-control-label" for="si"
+                    >Save the information for the next time</label
+                  >
+                </div>
+              </div>
+            </div>
+            <hr />
+            <h3>Payment</h3>
+            <div class="row">
+              <div class="col-12 form-group">
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    name="radio-stacked"
+                    class="custom-control-input"
+                    id="cc"
+                  />
+                  <label for="cc" class="custom-control-label"
+                    >Credit Card</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    name="radio-stacked"
+                    class="custom-control-input"
+                    id="dc"
+                  />
+                  <label for="dc" class="custom-control-label"
+                    >Debit Card</label
+                  >
+                </div>
+                <div class="custom-control custom-radio">
+                  <input
+                    type="radio"
+                    name="radio-stacked"
+                    class="custom-control-input"
+                    id="pp"
+                  />
+                  <label for="pp" class="custom-control-label">Paypal</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col bg-light form-group">
+                <label for="fname">Name on Card</label>
+                <input type="text" id="fname" class="form-control" />
+                <small class="text-muted"
+                  >full name as displayed on card
+                </small>
+              </div>
+              <div class="col bg-light form-group">
+                <label for="lname">Credit Card number</label>
+                <input type="text" id="lname" class="form-control" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-4">
+          <h3 class="text-muted">
+            Your cart
+            <span class="badge badge-secondary badge-pill float-right">3</span>
+          </h3>
+          <ul class="list-group py-3">
+            <li class="list-group-item d-flex justify-content-between w-100">
+              <div>
+                <h6 class="mb-1">Product name</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between w-100">
+              <div>
+                <h6 class="mb-1">Second Product</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$8</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between w-100">
+              <div>
+                <h6 class="mb-1">Third item</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between w-100">
+              <div>
+                <h6 class="mb-1 text-success">Promo code</h6>
+                <small class="text-success">EXAMPLE CODE</small>
+              </div>
+              <span class="text-muted text-success">-$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between w-100">
+              <div>
+                <h6 class="mb-1">Total USD</h6>
+              </div>
+              <span class="font-weight-bold">$20</span>
+            </li>
+          </ul>
+          <div class="card">
+            <div class="input-group card-body p-2">
+              <input
+                type="text"
+                placeholder="Promo code"
+                class="form-control"
+              />
+              <div class="input-group-append">
+                <span class="input-group-text bg-secondary text-white"
+                  >Reedem</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BootStrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+/* for 1st grid */
+.one{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto ;
+    background: rgb(180, 182, 168);
+    padding: 20px;
+    /* border: 5px solid red; */
+    margin-top: 30px;
+    margin-left: 600px ;
+    margin-right: 600px;
+  }
+
+  #a1{
+    height: 160px;
+    background:none;
+}
+
+
+/* for image */
+  #aa1{
+    height: 150px;
+    width: 100px;
+    margin-left:300px;
+    /* border: 5px solid green; */
+    background: blue;
+}
+
+/* for linus torvalds */
+#a2{
+    /* border: 1px solid red; */
+    height: 40px;
+    width: 200px;
+    margin-left: 250px;
+    margin-top:30px ;
+    grid-area: 2 / 1 / span 1/ span 1 ;
+    /* background: burlywood; */
+    font-size: 30px;
+    text-align: center;
+    color: darkblue;
+  }
+
+  /* for 2nd line */
+  #a3{
+    margin-left: 200px;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+ .two{
+display: grid;
+grid-template-columns: auto auto;
+grid-template-rows: auto  ;
+/* background: rgb(136, 156, 23); */
+margin-left: 300px;
+margin-right: 300px;
+ }
+
+ #bb1{
+height: 150px;
+
+
+ }
+
+ /* for Sal Khan */
+ #b2{
+    /* background: darkorange; */
+    font-size: 30px;
+    color: red;
+    margin-right: 200px;
+    margin-left: -400px;
+ }
+
+ #b3{
+     /* background: darkslategray; */
+     margin-left: -400px;
+     margin-right: 200px;
+ }
+
+
+.three{
+    display: grid;
+    background:rgb(253, 115, 2);
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto ;
+    height: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px;
+}
+
+#c1{
+/* background: rgb(136, 156, 23); */
+background:rgb(253, 115, 2);
+color: white;
+font-size: 20px;
+
+margin-right: 20px;
+/* padding: 20px; */
+}
+#ca1{
+    margin-top: 20px;
+}
+
+#c2{
+    background: black;
+    width: 10px;
+    grid-area: 1 / 2 / span 2 / span 1;
+
+}
+
+#c3{
+/* background: yellow; */
+background:rgb(253, 115, 2);
+text-align: right;
+/* padding: 20px; */
+font-size: 20px;
+color: white;
+}
+
+#c4{
+    /* background: yellowgreen; */
+    background:rgb(253, 115, 2);
+    /* padding: 20px; */
+}
+
+#c5{
+
+    /* background: blue; */
+    background:rgb(253, 115, 2);
+    text-align: right;
+    /* padding: 20px; */
+}
+
