@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>State City Selectors</title>
+  </head>
+  <body>
+    <select id="state"></select>
+    <button id="next">Next</button>
+    <select id="city"></select>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+      window.onload = populateStateSelector;
+
+      var state_cities = [
+        { state: "Karnataka", cities: ["Bangalore", "Mysore"] },
+        { state: "Tamil Nadu", cities: ["Chennai", "Tanjore"] }
+      ];
+
+      function populateStateSelector() {
+        $("#state").html("");
+
+        state_cities.forEach(function(e) {
+          var option = document.createElement("option");
+          option.textContent = e["state"];
+          $("#state").append(option);
+        });
+      }
+
+      $("#state").change(function() {
+        $("#city").html("");
+      });
+
+      $("#next").click(function() {
+        $("#city").html("");
+
+        state_cities.forEach(function(e) {
+          if (e["state"] == $("#state").val()) {
+            cities = e["cities"];
+            cities.forEach(function(f) {
+              var option = document.createElement("option");
+              option.textContent = f;
+              $("#city").append(option);
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

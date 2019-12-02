@@ -1,17 +1,13 @@
-function checkSubsetArrays(firstArray,secondArray){
-    if (secondArray.length>=firstArray.length){
-        subsetArray=[]
-        for (j=0;j<secondArray.length;j++){
-            for (i=0;i<firstArray.length;i++){
-                if (firstArray[i]===secondArray[j]){
-                    subsetArray[subsetArray.length]=firstArray[i] 
-                }
-            }
+function checkSubsetArrays(array1,array2){
+    var isSubset=true;
+
+    for (var i=0;i<array1.length;i++){
+        if (array2.indexOf(array1[i])===-1){
+            isSubset=false;
+            return isSubset;
         }
-        console.log(subsetArray)
-        
     }
-    // return false
+    return isSubset; 
 }
 
-checkSubsetArrays([1,2,3,4],[1,2,3,4,5,6,7,8])
+console.log(checkSubsetArrays([1,2,3],[1,2,3,4,5,6]))
