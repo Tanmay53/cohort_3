@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>admin</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2>Users who Attempted Login</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Username</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body">
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <h2>Login Time</h2>
+                    <h3 class="text-primary"></h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Login Time in Mins</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="showLoginTime"></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="adminapp.js"></script>
+    </body>
+</html>

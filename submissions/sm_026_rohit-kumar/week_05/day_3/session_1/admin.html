@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin</title>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript">
+
+            function removeElements() {
+                var table = document.getElementById('table')
+                elems = table.querySelectorAll('div') 
+
+                for(var i = 4; i < elems.length; i++)
+                    table.removeChild(elems[i])
+            }
+            function onLoad() {
+                if(localStorage.getItem("username") == null) {
+                    window.location.replace('index.html')
+                }
+                else{
+
+                    logins = JSON.parse(localStorage.getItem('loginfo'))
+                    //var logins = // baad me
+
+                    var seenUsername = {}
+                    var table = document.getElementById('glance')
+                    for(var i = 0; i < logins.length; i++) {
+                        // if seen username already continue
+                        if(seenUsername[logins[i]["username"]] == undefined) {
+                            seenUsername[logins[i]["username"]] = true
+                        } 
+                        else {
+                            continue
+                        }
+
+                        let d = new Date(Number((logins[i]["time"])))
+                        let dStr = d.getDay() + ', ' + d.getMonth() + ', ' + d.getFullYear() + " - " + d.getHours() + ':' + d.getMinutes()
+ 
+                        //"<td>" + new Date(Number((logins[i]["time"]))). getDay() + ', ' + + "</td>"
+                        divSno    = document.createElement('div')
+                        divUname  = document.createElement('div')
+                        divDetails = document.createElement('button')
+                        //divTime   = document.createElement('div')
+                        //divStatus = document.createElement('div')
+                        
+                        divSno.innerHTML    = (i + 1)
+                        divUname.innerHTML  = logins[i]["username"]
+                        divDetails.innerHTML = "details"
+                        divDetails.style.background = "cyan"
+                        divDetails.style.padding = "5px"
+                        divDetails.setAttribute("onclick", "test('" +logins[i]["username"] + "')")
+                        //divTime.innerHTML   = dStr
+                        //divStatus.innerHTML = logins[i]["status"]
+
+                        glance.appendChild(divSno)
+                        glance.appendChild(divUname)
+                        glance.appendChild(divDetails)
+                        //table.appendChild(divTime)
+                        //table.appendChild(divStatus) 
+                        //alert(elem.innerHTML) 
+                    } 
+                }
+            }
+            function test (email) {
+                removeElements()
+                var table = document.getElementById('table')
+                var count = 1
+                    for(var i = 0; i < logins.length; i++) {
+
+                        if(logins[i]["username"] != email)
+                            continue
+
+                        let d = new Date(Number((logins[i]["time"])))
+                        //alert(d)
+                        //milliSec = Number(localStorage.getItem('milliSec'))
+                        //let dStr = d.getDay() + ', ' + d.getMonth() + ', ' + d.getFullYear() + " - " + d.getHours() + ':' + d.getMinutes()
+ 
+                        //"<td>" + new Date(Number((logins[i]["time"]))). getDay() + ', ' + + "</td>"
+                        divSno    = document.createElement('div')
+                        divUname  = document.createElement('div')
+                        divTime   = document.createElement('div')
+                        divStatus = document.createElement('div')
+                        
+                        divSno.innerHTML    = count
+                        divUname.innerHTML  = logins[i]["username"]
+                        divTime.innerHTML   = d //dStr
+                        divStatus.innerHTML = logins[i]["status"]
+
+                        table.appendChild(divSno)
+                        table.appendChild(divUname)
+                        table.appendChild(divTime)
+                        table.appendChild(divStatus) 
+                        //alert(elem.innerHTML) 
+                        count++
+                    } 
+            }
+
+            function onUnload() {
+                clearLocalStorage()
+            }
+         </script> 
+         <style type="text/css">
+            #glance{
+                width: 30%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                grid-gap: 5px;
+                margin-bottom:100px
+            }
+            #table{
+                width: 50%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                grid-gap: 5px;
+            }
+            .box{
+                font-weight: bold;
+                font-size: 20px;
+            }
+         </style>
+    </head>
+    <body onload="onLoad()" onunload="onUnload()">
+        <div id="wrapper">
+          <h2>Admin Page</h2>  
+          <div id="glance">
+            <div class="box">S.No</div>
+            <div class="box">Username</div>
+            <div class= "box"> Details</div>
+          </div>
+
+
+          <h3>Complete Details</h3>
+          <hr>
+          <div id="table">
+              <div class="box">S.No</div>
+              <div class="box">Username</div>
+              <div class="box">Time</div>
+              <div class="box">Status</div>
+          </div>
+        </div>
+    </body>
+</html>
