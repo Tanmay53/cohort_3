@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grocery Data</title>
+    <style>
+        body {
+            display: flex;
+            margin: 100px 300px;
+
+            height: 600px;
+        }
+        .form {
+            background-color: blueviolet;
+            flex: auto;
+            padding: 30px;
+        }
+        .form > div {
+            margin: 20px;
+        }
+        .display {
+            background-color: chocolate;
+            flex: auto;
+            padding: 30px;
+        }
+        tr > td {
+            width: 150px;
+        }
+        button {
+            border-radius: 50px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <div>
+            <label for="">Product : </label>
+            <input type="text" placeholder="Product name" id="product">
+        </div>
+        <div>
+            <label for="">Price : </label>
+            <input type="text" placeholder="Price of product" id="price">
+        </div>
+        <div>
+            <label for="">Quantity :</label>
+            <input type="text" placeholder="Quantity" id="quantity">
+        </div>
+        <button onclick="submit()">Submit</button> 
+    </div>
+    <div class="display">
+        <table id="table">
+            <tr>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var product = document.getElementById("product").value
+        var price = document.getElementById("price").value
+        var qnt = document.getElementById("quantity").value
+        var table = document.getElementById('table')
+
+        function submit() {
+            var newRow = document.createElement('tr');
+            var dataOfProduct = document.createElement("td")
+            dataOfProduct.textContent = product;
+            var dataOfPrice = document.createElement('td')
+            dataOfPrice.textContent = price;
+            var dataOfQuantity = document.createElement("td")
+            dataOfQuantity.textContent = qnt;
+            newRow.appendChild(dataOfProduct)
+            newRow.appendChild(dataOfPrice)
+            newRow.appendChild(dataOfQuantity)
+            table.appendChild(newRow)
+            
+        }
+    </script>
+</body>
+
+</html>

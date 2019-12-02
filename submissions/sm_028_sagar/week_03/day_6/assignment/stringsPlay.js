@@ -1,9 +1,9 @@
 var input = 'sAgaR  KAdu' //string input
 
 //invoke function
-console.log(camelCase(input))
-console.log(snakeCase(input))
-console.log(hypenCase(input))
+// console.log(camelCase(input))
+// console.log(snakeCase(input))
+// console.log(hypenCase(input))
 
 
 
@@ -127,7 +127,7 @@ function verifyCapitalLetter(letter) {
 
 
 
-var a = ' sagar      kadu ';
+var a = ' sagar      kadu';
 removeSpace(a);
 
 //remove space and add * instead
@@ -135,13 +135,11 @@ function removeSpace(string) {
 
     var arr = convertStringToArray(string);
     var str = '';
-    for (var i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length - 1; i++) {
         if (arr[i] === ' ') {
             if (arr[i + 1] !== ' ') {
                 str = str + upperCase(arr[i + 1]);
                 i++;
-                continue;
-            } else {
                 continue;
             }
         }
@@ -156,5 +154,34 @@ function convertStringToArray(str) {
     for (var i = 0; i < str.length; i++) {
         arr.push(str[i]);
     }
+    return arr;
+}
+
+
+
+//function for split array
+function split_arr(string) {
+    givenChar = ' ';
+    var i = 0;
+    var temp = [];
+    for (var i = 0; i < string.length; i++) {
+        temp.push(string[i]);
+    }
+    // console.log(temp);
+
+    var tempString = '';
+    var arr = [];
+    for (var i = 0; i < temp.length; i++) {
+
+        if (temp[i] === givenChar) {
+            // console.log(givenChar)
+            arr.push(tempString);
+            tempString = '';
+            continue;
+        }
+
+        tempString = tempString + temp[i];
+    }
+    arr.push(tempString);
     return arr;
 }
