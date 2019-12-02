@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grocery</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <div>
+            <div><h1>Grocery Items</h1></div>
+            <div id="opt">
+                <div>Select Category</div>
+                <label for="Grocery-Item"><b> Select Item : </b></label>
+                <select name="Grocery" id="Grocery">
+                        <option value="dairy">Dairy</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="vegitables">Vegetables</option>
+                        <option value="pulses">Pulses</option>
+                        <option value="snacks">Snacks</option>
+                </select>
+                <br>
+                <button onclick="show()" id="search">Search</button>
+            </div>
+        </div>
+        <div>
+            <!--dairy-->
+        <div>
+            <div id="cat">            
+            <button onclick="dairy()">Dairy Products</button>
+            <button onclick="fruits()">Fruits</button> 
+            <button onclick="veg()">Vegitables</button>
+            <button onclick="pulse()">Pulses</button>
+            <button onclick="snack()">Snacks</button>
+            </div> 
+
+                <div id="groce" class="gI">Items</div>
+            
+        </div>
+    </body>
+</html>

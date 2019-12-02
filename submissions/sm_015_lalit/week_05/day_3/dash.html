@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .formParent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+
+        body {
+            background: #00e676;
+        }
+
+        .form {
+            display: flex;
+            align-self: center;
+            flex-direction: column;
+            /* border: 5px solid black; */
+            height: 300px;
+            width: 450px;
+            text-align: center;
+            background:#e8f5e9;
+            /* box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.8); */
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        button {
+            width: 80px;
+            margin-left: 41%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dash</title>
+</head>
+<body>
+    <div>
+        <div class="formParent">
+            <div class="form">
+                <h1 id=heading></h1>
+                <div>Login time<p id="login">p1</p></div>
+                <div>Max Logout time<p id="logout">p2</p></div>
+                <button onclick="logoutsession()">Logout</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+function loaduser(){
+ input=localStorage.getItem('user')
+ var user = JSON.parse(input)
+ console.log(user)
+ var tophead=document.getElementById("heading")
+ tophead.textContent=user.name
+ var logintime=document.getElementById("login")
+ logintime.textContent=user.login
+ var logouttime=document.getElementById("logout")
+ logouttime.textContent=user.logout
+ setTimeout(function(){
+    window.location.href = "index.html"
+ },300000)
+}
+window.onload =loaduser()
+function logoutsession(){
+    window.location.href = "index.html"
+}
+</script>
+</html>
