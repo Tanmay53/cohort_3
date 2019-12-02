@@ -1,0 +1,22 @@
+.img1{
+    max-height: 50px;
+    width:150px;
+}
+.main1{
+    background-image: url('https://res.cloudinary.com/urbanclap/image/upload/fl_progressive:steep/v1490770948/2x_1.jpg');
+    background-size: cover;
+    background-position: 20%;
+    }
+.backdrop{
+    backdrop-filter: brightness(70%);
+} 
+    
+.icon{
+    max-height: 70px;
+}
+.card-img{
+    max-width: 300px;
+}
+.mobile-img{
+    max-height: 300px;
+}
