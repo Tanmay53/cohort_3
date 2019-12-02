@@ -1,0 +1,73 @@
+.backgnd{
+    background-image:url('https://media.istockphoto.com/photos/supermarket-aisle-with-empty-green-shopping-cart-picture-id817240836?k=6&m=817240836&s=612x612&w=0&h=I_77CJZV_tl3kdN-R1yav7jIa4lOs4JgqZZH4OyXT_s=');
+    background-size:cover;
+}
+.heading{
+    text-align:center;
+    font-size:40px;
+    font-weight:normal;
+    background:black;
+    color:white;
+    margin-left:250px;
+    margin-right:250px;
+    border-radius:10px;
+}
+.heading:hover{
+    color:red;
+    background:none;
+}
+.formbar{
+    margin-top:20px;
+    font-size:30px;
+    text-align:center;
+}
+.typebar{
+    font-size:20px;
+    border-radius:10px;
+}
+.submit{
+    text-align:center;
+    margin-top:10px;
+}
+.submitbar{
+    text-align:center;
+    color:red;
+    font-size:20px;
+    background:white;
+    padding:5px;
+}
+.cartbar{
+    text-align:center;
+    color:green;
+    font-size:20px; 
+}
+.item{
+    font-size:30px;
+}
+.grid-box{
+    display:grid;
+    grid-template-rows:repeat(5,1fr);
+    grid-template-columns:repeat(4,1fr);
+    background-image: linear-gradient(to right,rgb(254,196,136), rgb(152,152,152));
+    background:cover;
+    padding-left:10px;
+    text-align:center;
+    margin-top:20px;  
+}
+.selectbar{
+    font-size:20px;
+}
+.last{
+    grid-area:5 / 4 /span 1/span 1;
+}
+.indvsub{
+    text-align:center;
+}
+.genbar{
+    text-align:center;
+    color:white;
+    font-size:40px; 
+    background:black;
+    padding:10px;
+    border-radius:10px;
+}
