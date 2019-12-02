@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <style>
+    #displayContainer {
+      white-space: pre-line;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    <!-- FSD.W4.3.1_1 !-->
+    <div class="col">
+      <h1>Click the button to add a new customer!</h1>
+      <div id="forms">
+        <div>
+          <label>First name</label>
+          <input type="text" class="inputs">
+        </div>
+        <div>
+          <label>Last name</label>
+          <input type="text" class="inputs">
+        </div>
+        <div>
+          <label>Date of birth</label>
+          <input type="text" class="inputs">
+        </div>
+        <div>
+          <label>Balance</label>
+          <input type="text" class="inputs">
+        </div>
+        <div>
+          <label>Account number</label>
+          <input type="text" class="inputs">
+        </div>
+        <div>
+          <label>Shared account holders</label>
+          <input type="text" class="inputs">
+        </div>
+      </div>
+      <button onclick="addC()">Add customer</button>
+      <!-- FSD.W4.3.1_3 !-->
+      <h1> Click here to print all customers! <h1>
+          <div class="btn btn-primary" onclick="print()">Print Customers</div>
+    </div>
+    <div class="col h6" id="displayContainer"> </div>
+
+  </div>
+  <script>
+    customerArr = []
+    function addC() {
+      var selInput = document.getElementsByClassName('inputs')
+      var input = []
+      for (i = 0; i < selInput.length; i++) {
+        if (i == 5) {
+          var str = selInput[i].value.split(',')
+          input.push(str)
+        }
+
+        input.push(selInput[i].value)
+      }
+
+      function person(array) {
+        this.firstname = array[0]
+        this.lastname = array[1]
+        this.dob = array[2]
+        this.balance = array[3]
+        this.account = array[4]
+        this.shared = array[5]
+        this.displayDetails = function () {
+          var per = ''
+          for (key in this) {
+            if (key == 'displayDetails') {
+              continue
+            }
+            else {
+              out = key + ':' + this[key]
+            }
+            // console.log(out)
+            per = per + out + '\n'
+          }
+          // console.log(out)
+          return per
+        }
+      }
+      var copy = new person(input)
+      customerArr.push(copy)
+      copy = []
+
+      console.log(customerArr)
+      for (i = 0; i < selInput.length; i++) {
+        selInput[i].value = ''
+      }
+    }
+
+    function print() {
+      selDiv = document.getElementById('displayContainer')
+      // var p1 = document.createElement('p')
+      // selDiv.appendChild(p1)
+
+      for (i = 0; i < customerArr.length; i++) {
+        var p1 = document.createElement('p')
+        selDiv.appendChild(p1)
+        p1.textContent = customerArr[i].displayDetails()
+      }
+    }
+
+
+
+  </script>
+</body>
+
+</html>
