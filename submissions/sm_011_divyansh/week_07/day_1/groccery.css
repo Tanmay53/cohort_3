@@ -1,0 +1,43 @@
+
+body{
+    background-color: tan;
+}
+.header{
+    text-align: center;
+     margin-top: 0px;
+     background-color: blue;
+     height:230px;
+     padding-top:0px;
+}
+img{
+    background-repeat: no repeat;
+    height:530px;
+    width:560px;
+    margin-top:20px;
+    margin-left:20px;
+    float:left;
+    
+}
+#display{
+    float:left;
+    margin:20px 10px;
+    color:black
+}
+#display2{
+    
+    margin:20px 10px;
+    color:black
+    float:left;
+}
+.inp{
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 50px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+  }
+ .steps{
+     float:right;
+ }
+ 
