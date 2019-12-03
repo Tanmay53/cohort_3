@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Urban Clap</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style type="text/css">
+        #inputBox {
+            height: 100px;
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar pl-5 pr-5">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://res.cloudinary.com/urbanclap/image/upload/v1490682269/web-assets/Logo-new.png"
+          height="35"
+        />
+      </a>
+      <a class="nav-item nav-link text-muted" href="#">About Us</a>
+      <a class="nav-item nav-link text-muted" href="#">Blog</a>
+      <a class="nav-item nav-link text-muted" href="#">Become A Professional</a>
+      <a class="nav-item nav-link text-muted" href="#">Login/Sign Up</a>
+    </nav>
+    <div class="card bg-dark text-dark">
+        <img src="https://res.cloudinary.com/urbanclap/image/upload/fl_progressive:steep/v1490770948/2x_1.jpg" class="card-img" alt="">
+        <div class="card-img-overlay text-center">
+            <h1 class="card-title display-4">Your Service Expert in Bangalore</h1>
+            <p class="card-text lead">Get instant access to reliable and affordable service.</p>
+            <div class="row mt-5">
+                <div class="col-2 ml-auto">
+                <select class="custom-select">
+                    <option selected>Delhi</option>
+                    <option>Sydney</option>
+                    <option>Ahmedabad</option>
+                    <option>Bangalore</option>
+                    <option>Jaipur</option>
+                </select>
+                </div>
+                <div class="col-6 mr-auto text-left" id="inputBox">
+                <input type="text" class="form-control ml-3" placeholder="Search for a service">
+                <small class="text-muted ml-3">Eg. Salon at Home, Plumber, Refrigerator Repair</small>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
