@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>User Details</title>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1 class="text-center">List of Users</h1>
+        <button onclick="callApi()" class="btn-info btn-lg mb-4">Call API</button>
+    </div>
+    <div class="parent"></div>
+    <div class="table">
+        <div class="row text-center">
+            <span class="border border-dark p-2 col">Id</span>
+            <span class="border border-dark p-2 col">First Name</span>
+            <span class="border border-dark p-2 col">Last Name</span>
+            <span class="border border-dark p-2 col">Email</span>
+            <span class="border border-dark p-2 col">Avatar</span>
+
+        </div>
+    </div>
+
+    <!-- bootstrap source file -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        function callApi() {
+            var xhr = new XMLHttpRequest();
+
+            // This configures the object to perform a GET request to the given url
+            // Notice how we pass page=2
+            xhr.open('GET', 'https://reqres.in/api/users?page=1');
+
+
+            // This will send the GET request to the server.
+            xhr.send();
+
+            // This function will be called after the information is retrieved
+            xhr.onload = function () {
+                // The HTTP 200 code is returned when your request is successful so we check for that
+                if (xhr.status == 200) {
+                    // Print the response from the server after a successful request
+                    // console.log(xhr.response)
+                    var divs = document.querySelector(".parent");
+                    var para = document.createElement("p");
+                    para.innerHTML = "";
+                    para.innerHTML = xhr.response;
+                    divs.appendChild(para);
+
+                    // arranging in the form  of table
+                    var obj = JSON.parse(xhr.response);
+                    var arr = obj.data;
+                    console.log(arr);
+
+                    //looping through each  element of the array
+                    // for (var i = 0; i < arr.length; i++) {
+                    //     var divs = document.createElement("div");
+
+                    // }
+                }
+                else {
+                    console.log("Error Code is:" + xhr.status)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

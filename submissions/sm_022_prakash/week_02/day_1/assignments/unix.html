@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout 6</title>
+    <style>
+        .linus_h {
+            height: 270px;
+            width: 330px;
+            background: cyan;
+            margin: 10px 450px 10px 450px;
+        }
+
+        div>img {
+            height: 120px;
+            width: 85px;
+            margin: 15px 15px 15px 100px;
+        }
+
+        div>h1 {
+            color: blue;
+            margin-top: -5px;
+        }
+
+        div>h2 {
+            color: black;
+            margin-top: -10px;
+        }
+
+        .divider {
+            margin: 40px 150px 40px 150px;
+            float: left;
+        }
+
+        .sal_div {
+
+            width: 800px;
+            margin: 15px 20px 30px 20px;
+        }
+
+        .sal_div>h2 {
+            color: red;
+        }
+
+        .sal_div>p {
+            color: black
+        }
+
+        .last_box {
+            background: orangered;
+            padding: 20px;
+            clear: both;
+            height: 100px;
+            width: 1200px;
+            margin: 30px;
+
+        }
+
+        .last_box .ken {
+            border-right: 5px solid black;
+            float: left;
+            width: 600px;
+        }
+
+        .last_box~h2 {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <div class="linus_h">
+            <div>
+                <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg"
+                    alt="linus" />
+            </div>
+            <h1>Linus Toravalds</h1>
+            <h2>Creator of Linux & Git</h2>
+
+        </div>
+        <div class="divider">
+            <div style="float:left;">
+                <img src="https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg"
+                    alt="salmnan khan" style="height: 100px;width: 85px;" />
+
+            </div>
+            <div class="sal_div">
+                <h2>Sal Khan</h2>
+                <p>
+                    Salaman khan is the founder of the khan academy which has a mission on
+                    providing a free world class education for anyone , anywhere
+
+                </p>
+
+            </div>
+
+        </div>
+        <div>
+
+            <div class="last_box">
+                <div class="ken">
+                    <h2>Ken Thomson</h2>
+                    <p>Design and implemented the &nbsp; original Unix Operating System</p>
+                </div>
+                <div style="float: right;">
+                    <h2 style="color: white;text-align: right;">Dennis Riychie</h2>
+                    <p>The creator of the c Programming language</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
