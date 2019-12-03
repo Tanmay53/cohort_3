@@ -1,0 +1,109 @@
+*{
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    margin: 0px;
+}
+
+/* Nav Bar */
+
+.marginLeft_30 {
+    margin-left: 30px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.navBar {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: white;
+}
+
+.marginTop_15 {
+    margin-top: 15px;
+    text-decoration: none;
+    color: rgb(46, 43, 43);
+}
+
+/* FEE ISA */
+.FeesandISA {
+    margin-right: 30px;
+    width: 110px;
+    border: 1px solid #dc3545;;
+    border-radius: 5px;
+    color: #dc3545;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+/* Background */
+
+.gradient {
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    padding: 50px;
+}
+
+.container {
+    color: white;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.font40 {
+    font-size: 40px;
+}
+.font31 {
+    font-size: 26px;
+}
+
+.gridCourse {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+   
+}
+
+.left35 {
+    margin-left: 35px;
+}
+
+.location1 {
+    display: grid;
+    grid-template-rows: auto  auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    text-align: center;
+}
+
+.location2 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-gap: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+.apply {
+    height: 35;
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    padding: 10px;
+    border-radius: 30px;
+    width: 150px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.containerCoding {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.textCenter {
+    text-align: center;
+}
