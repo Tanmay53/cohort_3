@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input id="inputE1" type="text" name = "num1">
+	<input id="inputE2" type="text" name = "num2">
+	<p id="outputE"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="output35"></p>
+	<input id="input35" type="text">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input id="inputEmail" type="text" />
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+	function emailverifier(inputmail) {
+    len = inputmail.length
+    result1 = "False"
+    count = 0
+    for (i = 0; i < len; i++) {
+        if (inputmail[i] == "@") {
+            count++
+        }
+    }
+    if (count == 0) {
+        console.log(inputmail, ":", result1)
+        return
+    }
+
+    for (i = 0; i < len; i++) {
+        if (inputmail[i] == " " || inputmail[i] == "~" || inputmail[i] == "!" || inputmail[i] == "#" || inputmail[i] == "$" || inputmail[i] == "%" || inputmail[i] == "^" || inputmail[i] == "&" || inputmail[i] == "*" || inputmail[i] == "(" || inputmail[i] == ")" || inputmail[i] == "+" || inputmail[i] == "=" || inputmail[i] == "<" || inputmail[i] == ">" || inputmail[i] == "," || inputmail[i] == "/" || inputmail[i] == "?" || inputmail[i] == ":" || inputmail[i] == ";" || inputmail[i] == "'" || inputmail[i] == '"' || inputmail[i] == "{" || inputmail[i] == "}" || inputmail[i] == "[" || inputmail[i] == "]" || inputmail[i] == "|" || inputmail[i] == "\\") {
+            console.log(inputmail, ":", result1)
+            return
+        }
+        if (inputmail[i] == "@" && i != 0 && i < len - 4 && inputmail.indexOf("@", (inputmail.indexOf("@")) + 1) == -1) {
+            result1 = "True"
+        }
+    }
+    inputverified1 = inputmail.split("@")
+    firstpart = inputverified1[0]
+    lastpart = inputverified1[1]
+    lenlastpart = lastpart.length
+    lenfirstpart = firstpart.length
+    count2 = 0
+    for (i = 0; i < lenlastpart; i++) {
+        if (lastpart[i] == ".") {
+            count2++
+        }
+    }
+    if (count2 == 0) {
+        result1 = "False"
+        console.log(inputmail, ":", result1)
+        return
+    }
+    for (i = 0; i < lenfirstpart; i++) {
+        if (firstpart[i] == "." && i == 0 || firstpart[i] == "." && i == (lenfirstpart - 1) || firstpart[i] == "." && firstpart[i + 1] == ".") {
+            result1 = "False"
+            console.log(inputmail, ":", result1)
+            return
+        }
+        if (firstpart[i] == "-" && i == 0 || firstpart[i] == "." && i == lenfirstpart - 1 || firstpart.indexOf("-", (firstpart.indexOf("-")) + 1) !== -1) {
+            result1 = "False"
+            console.log(inputmail, ":", result1)
+            return
+        }
+        if (firstpart[i] == "_" && i == 0 || firstpart[i] == "_" && i == lenfirstpart - 1 || firstpart.indexOf("_", (firstpart.indexOf("_")) + 1) !== -1) {
+            result1 = "False"
+            console.log(inputmail, ":", result1)
+            return
+        }
+    }
+    for (i = 0; i < lenlastpart; i++) {
+        if (lastpart[i] == "." && i == 0 || lastpart[i] == "." && i >= (lenlastpart - 2) || lastpart[i] == "." && lastpart[i + 1] == ".") {
+            result1 = "False"
+            console.log(inputmail, ":", result1)
+            return
+        }
+        if (lastpart[i] == "-" && i == 0 || lastpart[i] == "." && i >= (lenlastpart - 2) || lastpart.indexOf("-", (lastpart.indexOf("-")) + 1) !== -1) {
+            result1 = "False"
+            console.log(inputmail, ":", result1)
+            return
+        }
+        if (lastpart[i] == "_" && i == 0 || lastpart[i] == "_" && i >= (lenlastpart - 2) || lastpart.indexOf("_", (lastpart.indexOf("_")) + 1) !== -1) {
+            result1 = "False"
+            console.log(inputmail, ":", result1)
+            return
+        }
+    }
+    return result1
+}
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+		var input1=document.getElementById("inputE1").value
+		var input2=document.getElementById("inputE2").value
+		var output=document.getElementById("outputE")
+		sol=1
+		for (i=0;i<input2;i++){
+			sol*=Number(input1)
+		}
+		output.textContent=sol
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+			var limit=document.getElementById("input35").value
+			var output=document.getElementById("output35")
+			sum=0
+			for (i=0;i<=limit;i++){
+				if (i%3==0 && i%5==0){
+					sum+=i
+				}
+			}
+			output.textContent=sum
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+		var inEmail=document.getElementById("inputEmail").value
+		if (emailverifier(inEmail)=="True"){
+			alert("Valid Email!")
+		}else{alert("Invalid Email!")}	
+		}
+	</script>
+</body>
+</html>

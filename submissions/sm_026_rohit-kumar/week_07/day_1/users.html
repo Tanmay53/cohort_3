@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Users</title>
+  </head>
+  <body>    
+    <div id="wrapper">
+        <div class="container">
+            <div id="holder" class="row">
+
+            </div>
+        </div>
+        <div id="btnHolder"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function createCard(user) {
+              //alert(user['id'])
+            let divCard = $('<div><div>')
+                divCard.addClass('card')
+
+                // add header
+                let divHeader = $('<div><div>')
+                    divHeader.addClass('card-header')
+                    divHeader.html('ID : ' + user['id'])
+                divCard.append(divHeader)
+
+                // add body
+                let divBody = $('<div><div>')
+                    divBody.addClass('card-body')
+
+                    let img = $('<img></img>')
+                    img.addClass('img imgfluid')
+                    img.attr('src', user['avatar'])
+
+                    let p = $('<p></p>')
+                    let str = '<b>Username : </b>' + user['first_name'] + ' ' + user['last_name'] + '<br>' +
+                              '<b>Email : </b>' + user['email'] + '<br>'
+                    p.html(str)
+                    divBody.append(img)
+                    divBody.append(p)
+                divCard.append(divBody)
+
+            let wrapper = $('<div></div>')
+            wrapper.addClass('col-4 mb-3')
+            wrapper.append(divCard)
+            return wrapper
+        }
+         
+        function createPagination(response) {
+            $('#btnHolder *').remove()
+            var pages = Number(response['total_pages'])
+            for(let i = 0; i < pages; i++) {
+                let btn = $("<button onclick='alert(" + (i+1) + ")'>1</button>")
+                //alert('working')
+                btn.addClass('btn btn-primary mx-1')
+                btn.html(i+1)
+                $('#btnHolder').append(btn)
+            }
+        }
+
+
+        function requestUser(id) {
+            $.ajax({
+                url: "https://reqres.in/api/users?page=" + id,
+                type: "GET",
+                success: function(response){
+                    // create buttions for pagination
+                    //$('#btnHolder').append('<button>1</button>')
+
+                    createPagination(response)
+
+                    // create userview
+                    $('#holder:nth-child(n)').remove()
+                     for(var i = 0; i < response['data'].length; i++) {
+                        let card = createCard(response['data'][i])
+                        $('#holder').append(card)
+                    } 
+                    
+                    
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            $.ajax({
+                url: "https://reqres.in/api/users?page=1",
+                type: "GET",
+                success: function(response){
+                    // create buttions for pagination
+                    //$('#btnHolder').append('<button>1</button>')
+                    createPagination(response)
+
+                    // create userview
+                     for(var i = 0; i < response['data'].length; i++) {
+                        let card = createCard(response['data'][i])
+                        $('#holder').append(card)
+                    } 
+                    
+                    
+                }
+            });
+        })
+    
+    </script>
+</body>
+</html>
