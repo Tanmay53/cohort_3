@@ -87,13 +87,26 @@ function printUsers(type = "all") {
     });
 }
 function userRow(ele) {
-    $("tbody").append(`<tr><td>${ele.fname} ${ele.lname}</td>
+    $("tbody")
+        .append(`<tr><td><button id="btn-${ele.username}"><i class="fas fa-trash-alt"></i></button></td>
+                            <td>${ele.fname} ${ele.lname}</td>
                            <td>${ele.username}</td>
                            <td>${ele.userType}</td> 
                            <td>${ele.email}</td>     
                            <td>${ele.address}</td>     
                            <td>${ele.phone}</td>     
                         </tr>`);
+
+    // add eventlistener to delete buttons
+    $("#btn-" + ele.username).click(function() {
+        console.log("delete clicked");
+        allUsers.forEach(function(obj, index) {
+            if (obj.username == ele.username) {
+                allUsers.splice(index, 1);
+            }
+        });
+        printUsers($("#filter-user").val());
+    });
 }
 
 $("#sortNameAsc").click(function() {
@@ -118,13 +131,6 @@ $("#sortUsernameDsc").click(function() {
     console.log(allUsers);
     printUsers($("#filter-user").val());
 });
-
-// function printSortedData(arrNames) {
-//     $("tbody").empty();
-//     arrNames.forEach(function(ele) {
-//         $("tbody").append(`<tr><td>${ele}</td></tr>`);
-//     });
-// }
 
 function compareNameAsc(a, b) {
     const userA = a.fname;
@@ -161,3 +167,5 @@ function compareUsernameDsc(a, b) {
     else if (userA < userB) comparison = 1;
     return comparison;
 }
+
+// delete object
