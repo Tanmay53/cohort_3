@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Signup Form</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 p-3">
+          <div>
+            <form>
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  placeholder="Enter Name"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input
+                  type="text"
+                  id="lname"
+                  placeholder="Enter Name"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="username">User Name</label>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Enter Username"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Enter password"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter Email"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  placeholder="Enter Address"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone No</label>
+                <input
+                  type="number"
+                  id="phone"
+                  placeholder="Enter Number"
+                  class="form-control"
+                />
+              </div>
+              <select name="auth" id="auth" class="form-control">
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+              </select>
+              <div class="form-group mt-2">
+                <input
+                  type="submit"
+                  value="Submit"
+                  id="submit"
+                  class="btn btn-success"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-6 p-3">
+          <div class="form-group">
+            <select name="userlist" id="user-list" class=" form-control">
+              <option value="Choose user">Choose User</option>
+              <option value="All">All</option>
+            </select>
+            <small class="text-info">Choose to Show Data</small>
+          </div>
+          <div class="display-data p-3 mt-2"></div>
+          <h3 class="text-info">
+            Users Data List
+          </h3>
+          <div>
+            <button class="btn  btn-primary sort" value="Asc">
+              Sort Ascending
+            </button>
+            <button class="btn  btn-primary sort" value="Desc">
+              Sort Descending
+            </button>
+            <button class="btn  btn-primary sort" value="Admin">
+              Show Admin
+            </button>
+            <button class="btn  btn-primary sort" value="User">
+              Show User
+            </button>
+          </div>
+          <table class="table mt-4">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8985a3179d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

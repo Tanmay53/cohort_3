@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script> -->
+    <style>
+        /* div {
+            border: 2px solid black
+        } */
+        .hidden {
+            display: none
+        }
+        .lineDelete{
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-5 offset-4 formIn">
+                <div class="row">
+                    <div class="col-12">
+                        <label>First Name</label><br>
+                        <input class="col-12" id="fName" type="text"></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Last Name</label><br>
+                        <input class="col-12" id="lName" type="text"></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>User Name</label><br>
+                        <input class="col-12" id="uName" type="text"></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Password</label><br>
+                        <input class="col-12" id="password" type="password"></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Email</label><br>
+                        <input class="col-12" id="email" type="text"></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Address</label><br>
+                        <input class="col-12" id="address" type="text"></input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>Phone Number</label><br>
+                        <input class="col-12" id="phoneNumber" type="text"></input>
+                    </div>
+                </div>
+                <div class="row p-3">
+                    <div class="col-12">
+                        <select id="type" class="col-12 btn btn-primary">
+                            <option value="User">User</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                    <button  id="submit" class="col-6 btn btn-success">Register</button>
+                    <button class="allUsers col-5 btn btn-light" id="alluser">AllUsers</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="dataDiv logoutBtn">
+            <div class="row">
+                <div class="col-12">
+                    <button class="logout offset-9 btn btn-dark">Logout</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="data"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tableDiv">
+            <div class="row">
+                <div class="col-12"></div>
+                <button class="btn btn-success goBack">Back</button>
+            <select class="selectType btn btn-dark">
+                <option value="All">All</option>
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+            </select>
+            <!-- <duv class="row"> -->
+                <!-- <div class="col-12"> -->
+                    <button id="sorting" class="btn btn-light">A-Z</button>
+                    <button id="reversing" class="btn btn-light">Z-A</button>
+                </div>
+            </duv>
+            <table class="tableForm table">
+
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+
+</html>

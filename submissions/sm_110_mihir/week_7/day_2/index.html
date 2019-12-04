@@ -106,7 +106,7 @@
                         </button>
                     </form>
                 </div>
-                <div class="col-4 border">
+                <div class="col-2 border">
                     <h1 class="bg-light">Select Users</h1>
                     <select
                         name="sel-users"
@@ -115,7 +115,7 @@
                     ></select>
                     <ul id="user-details" class="list-unstyled"></ul>
                 </div>
-                <div class="col-4" border>
+                <div class="col-6" border>
                     <h1 class="bg-light">User List</h1>
                     <div class="row">
                         <div class="col">
@@ -128,26 +128,35 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="form-inline">
-                                <label for="sort">Sort</label>
-                                <select name="sort" id="sort">
-                                    <option selected>Choose...</option>
-
-                                    <option value="asc">Ascending order</option>
-                                    <option value="dsc"
-                                        >Descending order</option
-                                    >
-                                </select>
-                            </div>
-                        </div>
                     </div>
                     <div class="row">
                         <!-- table to display userlist -->
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Name</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">
+                                        Name
+                                        <button id="sortNameAsc">
+                                            <i class="fas fa-sort-up"></i>
+                                        </button>
+                                        <button id="sortNameDsc">
+                                            <i class="fas fa-sort-down"></i>
+                                        </button>
+                                    </th>
+                                    <th scope="col">
+                                        username
+                                        <button id="sortUsernameAsc">
+                                            <i class="fas fa-sort-up"></i>
+                                        </button>
+                                        <button id="sortUsernameDsc">
+                                            <i class="fas fa-sort-down"></i>
+                                        </button>
+                                    </th>
+                                    <th scope="col">userType</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Phone</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
@@ -159,5 +168,9 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="script.js"></script>
+        <script
+            src="https://kit.fontawesome.com/2ccced269b.js"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
