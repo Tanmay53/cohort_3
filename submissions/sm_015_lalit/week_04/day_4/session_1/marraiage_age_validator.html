@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marriage age Calculator</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Marriage age Calculator</h2>
+    <div style="margin-left: 42%;margin-top:5%">
+       Select Gender <select id="findGender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select></div>
+        <div style="margin-left: 43%;margin-top:5%">
+        <input type="number" name="" id="inputY" placeholder="Enter Birth Year here">
+    </div>
+    <button style="margin-left: 46%;margin-top:5%" onclick="legalage()">Submit</button>
+    
+</body>
+<script>
+function legalage(){
+    var gender=document.getElementById("findGender").value 
+    var age=document.getElementById("inputY").value
+    var pAge=2019-Number(age)
+    console.log(pAge)
+    if (gender=="Female"){
+        if (pAge>=18){
+            alert("Valid legal age to get married")
+        }
+        else {alert("Invalid legal age to get married")}
+    }
+    if (gender=="Male"){
+        if (pAge>=21){
+            alert("Valid legal age to get married")
+        }
+        else {alert("Invalid legal age to get married")}
+    }
+}
+</script>
+</html>
