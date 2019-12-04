@@ -90,63 +90,63 @@ Fill the colour of all the elements
 
 1. #id1
 ```
-
+black
 ```
 2. #id2
 ```
-
+blue
 ```
 3. #id3
 ```
-
+purple
 ```
 4. #id4
 ```
-
+blue
 ```
 5. #id5
 ```
-
+black
 ```
 6. #id6
 ```
-
+blue
 ```
 7. #id7
 ```
-
+purple
 ```
 8. #id8
 ```
-
+blue
 ```
 9. #id9
 ```
-
+black
 ```
 10. #id10
 ```
-
+blue
 ```
 11. #id11
 ```
-
+purple
 ```
 12. #id12
 ```
-
+blue
 ```
 13. #id13
 ```
-
+black
 ```
 14. #id14
 ```
-
+blue
 ```
 15. #id15
 ```
-
+purple
 ```
 
 
