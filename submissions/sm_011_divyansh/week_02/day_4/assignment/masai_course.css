@@ -1,0 +1,82 @@
+.nav{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    
+  }
+  .buttons{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .buttons>div{
+    margin:10px;
+    color:grey;
+  }
+  #bt4{
+    border:2px solid pink;
+    border-radius:8px;
+    height:30px;
+    padding-top:5px;
+    margin-top:4px;
+    color:red;
+  }
+  .bluebox{
+    height:850px;
+    width:100%;
+      background-color:#0288D1; ;
+  }
+  .div1 h1{
+     
+      color:white;
+  }
+  .div1 p{
+    color:white;
+    font-weight: 100;
+    font-size:23px;
+   
+  }
+  .div1{
+      margin-left:500px;
+      padding-top:10px;
+  }
+  .div2{
+      display:flex;
+      justify-content: space-between;
+      width:50%;
+      margin-left:400px;
+  }
+  .div2 h2{
+      color:white;
+      font-weight: 500;
+
+  }
+  .div3{
+      display:flex;
+      justify-content: space-between;
+      width:50%;
+      margin-left: 400px;
+  }
+  .div3>div{
+      color:white;
+  }
+  .div3 p{
+      font-size: 20px;
+  }
+  .div4{
+      text-align:center;
+      color:white;
+  }
+  .div4 p{
+      font-size:25px;
+      font-weight: 520;
+      color:white;
+  }
+  .div5{
+        margin-left:859px;
+      border-radius: 19px;
+      color:white;
+      border:2px solid white;
+      width:10%;
+      text-align: center;
+      height:35px;
+      padding-top:10px;

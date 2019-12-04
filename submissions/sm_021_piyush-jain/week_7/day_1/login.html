@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="form">
+        <label>Name</label><br>
+        <input id="name" type="text"><br>
+        <label>Password</label><br>
+        <input id="pswd" type="text"><br>
+        <button>Submit</button>
+    </div>
+    <div id="token1">Token</div>
+    <script>
+        var button = document.querySelector('button')
+        button.addEventListener('click', function () {
+            var name = document.getElementById('name').value;
+            var pswd = document.getElementById('pswd').value;
+            console.log(name, pswd)
+            var obj = {
+                email: name,
+                password: pswd
+            }
+            send(obj);
+        });
+        function send(obj) {
+            var json = JSON.stringify(obj)
+            console.log(json);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", 'https://reqres.in/api/login');
+            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            xhr.send(json);
+            xhr.addEventListener('load', function () {
+                if (xhr.status <= 200) {
+                    console.log(xhr.response);
+                    document.getElementById('token1').textContent=xhr.response
+                }
+                else {
+                    console.log("Error Code is:" + xhr.status);
+                }
+            });
+            xhr.addEventListener('error', function (event) {
+                console.log('Error in HTTP request!')
+            });
+        }
+    </script>
+</body>
+
+</html>
