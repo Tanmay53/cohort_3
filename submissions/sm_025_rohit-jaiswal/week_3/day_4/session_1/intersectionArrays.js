@@ -1,5 +1,5 @@
-    var a = [1, 5, 3]
-    var b = [3, 3, 6]
+    var a = [1, 5, 3, 6]
+    var b = [1, 6]
     var arr = []
 
     function intersectionArrays(a, b) {
