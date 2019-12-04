@@ -10,6 +10,8 @@ function add_item() {
     var price = document.getElementById('price').value;
     var qty = document.getElementById('qty').value;
 
+    console.log(product, price, qty)
+
     obj = {
         product: product,
         price: price,
@@ -34,11 +36,11 @@ function create_table(obj) {
         var div = document.createElement('div');
         div.setAttribute("class", "settings")
         div.textContent = obj[key];
+        console.log("check test", obj[key]);
         parent.appendChild(div);
     }
     table.appendChild(parent)
     add_settings();
-
 }
 
 
@@ -49,7 +51,7 @@ set_submit.addEventListener('click', add_settings)
 //add settings:
 function add_settings() {
 
-    var ele = document.getElementsByClassName('settings');
+    var ele = document.querySelectorAll('.settings');
     var font_size = Number(document.getElementById('font-size').value);
     var color = document.getElementById('color').value;
     var back_color = document.getElementById('back_color').value;
