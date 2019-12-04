@@ -1,0 +1,94 @@
+.nav{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    
+  }
+  .buttons{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .buttons>div{
+    margin:10px;
+    color:grey;
+  }
+  #bt4{
+    border:2px solid pink;
+    border-radius:8px;
+    height:30px;
+    padding-top:5px;
+    margin-top:4px;
+    color:red;
+  }
+  .bluebox{
+    height:850px;
+    width:100%;
+      background-color:#0288D1; ;
+  }
+  .div1 h1{
+     
+    color:white;
+    font-family: sans-serif;
+    font-weight: 450;
+    font-size: 50px;
+}
+.div1 p{
+  color:white;
+  font-weight: lighter;
+  font-size:33px;
+  padding-left: 310px;
+  font-family: serif;
+ 
+}
+.div1{
+    margin-left:500px;
+    padding-top:10px;
+}
+.grid{
+    display:grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 380px;
+    width:50%;
+    grid-gap:30px;
+    margin-left:400px;
+}
+.grid>div{
+    background-color: white;
+    border-radius: 7px;
+}
+.grid p{
+    text-align:center;
+    padding-top:10px;
+}
+#p1{
+    color:grey;
+    font-size:22px;
+}
+hr{
+    font-weight: lighter;
+    
+}
+#p2{
+    font-size:25px;
+    font-family: sans-serif;
+}
+#p3{
+    color:blue;
+    font-size:33px;
+}
+#p4{
+    color:red;
+    font-size:17px;
+}
+#p5{
+    font-size:21px;
+    font-family: serif;
+    font-weight: 520;
+    
+}
+span{
+  color:blue;
+
+}
+
+}

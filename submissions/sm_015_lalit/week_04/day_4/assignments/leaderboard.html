@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leaderboard</title>
+</head>
+
+<body>
+    <div style="height: 80%;width: 40%;border:1px solid white;margin: 0px auto;">
+        <div style="float: left;">
+            <div id="min"
+                style="cursor: pointer;background: red;height: 80px;width: 190px;border: 3px solid black;font-size: 55px;text-align: center;">
+                43</div>
+            <div style="height: 40px;width: 190px;margin-top: 11px;text-align: center;font-size: 40px;">MIN</div>
+        </div>
+        <div style="float: right;">
+            <div id="max"
+                style="cursor: pointer;background: green;height: 80px;width: 190px;border: 3px solid black;font-size: 55px;text-align: center;">
+                45</div>
+            <div style="height: 40px;width: 190px;margin-top: 11px;text-align: center;font-size: 40px;">MAX</div>
+        </div>
+        <div style="margin-top: 20%;margin-left: 18%;margin-right: 18%;;">
+            <p style="text-align: center;font-size: 45px;margin-bottom: 0px;">SCORE</p>
+            <div style="height: 110px;width: 100%;background: grey;border: 2px solid black;text-align: right;">
+                <p id="inputView" style="margin-top:20px;margin-right: 1px;padding: 0px;font-size: 85px;">#</p>
+            </div>
+            <div style="display: flex; justify-content: space-around;margin-top: 22px;">
+                <div id="digit1"
+                    style="cursor: pointer;height: 70px;width: 70px;background: green;margin: 10px 10px;border: 2px solid black;font-size: 50px;text-align: center;">
+                    1</div>
+                <div id="digit2"
+                    style="cursor: pointer;height: 70px;width: 70px;background: orange;margin: 10px 10px;border: 2px solid black;font-size: 50px;text-align: center;">
+                    2</div>
+                <div id="digit3"
+                    style="cursor: pointer;height: 70px;width: 70px;background: green;margin: 10px 10px;border: 2px solid black;font-size: 50px;text-align: center;">
+                    3</div>
+            </div>
+            <div style="display: flex; justify-content: space-around;margin-top: 22px;">
+                <div id="digit4"
+                    style="cursor: pointer;height: 70px;width: 70px;background: orange;margin: 10px 10px;border: 2px solid black;font-size: 50px;text-align: center;">
+                    4</div>
+                <div id="digit5"
+                    style="cursor: pointer;height: 70px;width: 70px;background: orange;margin: 10px 10px;border: 2px solid black;font-size: 50px;text-align: center;">
+                    5</div>
+                <div id="digit6"
+                    style="cursor: pointer;height: 70px;width: 70px;background: orange;margin: 10px 10px;border: 2px solid black;font-size: 50px;text-align: center;">
+                    6</div>
+            </div>
+            <div style="display: flex; justify-content: space-around;margin-top: 22px;">
+                <div id="digit7"
+                    style="cursor: pointer;height: 70px;width: 70px;background: green;margin: 10px 10px;border: 2px solid black;font-size: 50px;text-align: center;">
+                    7</div>
+                <div id="digit8"
+                    style="cursor: pointer;height: 70px;width: 70px;background: orange;margin: 10px 10px;border: 2px solid black;font-size: 50px;text-align: center;">
+                    8</div>
+                <div id="digit9"
+                    style="cursor: pointer;height: 70px;width: 70px;background: green;margin: 10px 10px;border: 2px solid black;font-size: 50px;text-align: center;">
+                    9</div>
+            </div>
+            <div style="display: flex; justify-content: space-around;margin-top: 22px;">
+                <div style="height: 70px;width: 70px;background: white;margin: 10px 10px"></div>
+                <div id="digit0"
+                    style="cursor: pointer;height: 70px;width: 70px;background: green;margin: 10px 10px;border: 2px solid black;color: white;font-size: 50px;text-align: center;">
+                    0</div>
+                <div style="height: 70px;width: 70px;background: white;margin: 10px 10px"></div>
+            </div>
+            <div id="enter"
+                style="cursor: pointer;height: 70px;width: 100%;background: black;border: 2px solid black;color: white;font-size: 50px;text-align: center;">
+                ENTER</div>
+        </div>
+    </div>
+</body>
+<script>
+    var inputDigit = ""
+    $("#digit9").click(function () {
+        $("#digit9").text(9)
+        var x = $("#digit9").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    $("#digit8").click(function () {
+        $("#digit8").text(8)
+        var x = $("#digit8").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    $("#digit7").click(function () {
+        $("#digit7").text(7)
+        var x = $("#digit7").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    $("#digit6").click(function () {
+        $("#digit6").text(6)
+        var x = $("#digit6").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    $("#digit5").click(function () {
+        $("#digit5").text(5)
+        var x = $("#digit5").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    $("#digit4").click(function () {
+        $("#digit4").text(4)
+        var x = $("#digit4").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    $("#digit3").click(function () {
+        $("#digit3").text(3)
+        var x = $("#digit3").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    $("#digit2").click(function () {
+        $("#digit2").text(2)
+        var x = $("#digit2").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    $("#digit1").click(function () {
+        $("#digit1").text(1)
+        var x = $("#digit1").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    $("#digit0").click(function () {
+        $("#digit0").text(0)
+        var x = $("#digit0").text()
+        if (inputDigit.length < 5) {
+            inputDigit += x
+        }
+
+        $("#inputView").text(inputDigit)
+    })
+    min = Number($("#min").text())
+    max = Number($("#max").text())
+
+    $("#enter").click(function () {
+        console.log(inputDigit)
+        if (Number(inputDigit) >= min && Number(inputDigit) <= max) {
+            $("#inputView").text("")
+
+        }
+        if (Number(inputDigit) < min) {
+            $("#min").text(Number(inputDigit))
+            min = Number($("#min").text())
+
+        }
+        if (Number(inputDigit) > max) {
+            $("#max").text(Number(inputDigit))
+            max = Number($("#max").text())
+
+        }
+        $("#inputView").text("")
+        inputDigit = ""
+
+    })
+</script>
+
+</html>
