@@ -11,6 +11,11 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <style>
+      th {
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -46,12 +51,34 @@
               <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Email</th>
+                <th
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Click to Sort"
+                  class="email"
+                >
+                  Email
+                  <i
+                    id="email-toggle"
+                    class="text-danger fas fa-chevron-circle-down"
+                  ></i>
+                </th>
                 <th>Gender</th>
                 <th>English</th>
                 <th>Math</th>
                 <th>Science</th>
-                <th>Total Marks</th>
+                <th
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Click to Sort"
+                  class="total"
+                >
+                  Total Marks
+                  <i
+                    id="total-toggle"
+                    class="text-danger fas fa-chevron-circle-down"
+                  ></i>
+                </th>
               </tr>
             </thead>
             <tbody class="tbody"></tbody>
@@ -77,6 +104,10 @@
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8985a3179d.js"
       crossorigin="anonymous"
     ></script>
     <script src="app.js"></script>
