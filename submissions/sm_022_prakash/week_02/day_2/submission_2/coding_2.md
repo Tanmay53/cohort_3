@@ -157,41 +157,41 @@ Fill the specificity score for the selectors
 
 1. `div`
 ```
-
+1
 ```
 2. `p + div`
 ```
-
+2
 ```
 3. `.class1 + p`
 ```
-
+11
 ```
 4. `#id1 > div + p`
 ```
-
+111
 ```
 5. `#id1 ~ .class1 > li > a[title]`
 ```
-
+100+ 10+ 1+1
 ```
 6. `nav > a:hover::before`
 ```
-
+4
 ```
 7. `ul#primary-nav li.active`
 ```
-
+1 + 100 + 1
 ```
 8. `li:first-child h2 .title`
 ```
-   
+ 2 + 1 + 10 
 ```
 9. `#nav .selected > a:hover`
 ```
-
+100+ 10 + 1 + 1
 ```
 10. `#heading nav ul li.disabled`
 ```
-
+100 + 1 + 1 + 1 + 1
 ```
