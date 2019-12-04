@@ -1,0 +1,138 @@
+<html>
+<style>
+    .outer-cont {
+        display: flex;
+        justify-content: center;
+    }
+
+    .inner-cont {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 40px;
+    }
+
+    #result {
+        background: black;
+        color: white;
+        padding: 10px;
+        min-width: 400px;
+    }
+
+    #NameError,
+    #EmailError,
+    #MobileError {
+        color: red;
+    }
+
+    .inner-cont div {
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+
+    #display {
+        background: black;
+        color: white;
+        padding: 10px;
+        min-width: 400px;
+        height:350px;
+    }
+
+
+    .regis {
+        background-color: black;
+        color: white;
+        margin-top: 20px;
+        height: 40px;
+    }
+    input{
+        padding:4px;
+        width:250px;
+        height: 30px;
+    }
+    @media (max-width:600px) {
+        .outer-cont{
+            flex-direction: column;
+        }
+        
+    }
+</style>
+
+<body>
+
+    <div class="outer-cont">
+        <div class="inner-cont">
+            <div>NAME</div>
+            <input type="text" id="name">
+            <div id="NameError"></div>
+            <div>EMAIL</div>
+            <input type="email" id="email">
+            <div id="EmailError"></div>
+            <div>MOBILE</div>
+            <input type="number" id="mobile">
+            <div id="MobileError"></div>
+            <button class="regis" onclick="register()">REGISTER</button>
+        </div>
+        <div class="inner-cont" id="display">
+            <div>NAME</div>
+            <div id="namedisp"></div>
+            <div>EMAIL</div>
+            <div id="emaildisp"></div>
+            <div>MOBILE</div>
+            <div id="mobiledisp"></div>
+        </div>
+    </div>
+    <script>
+
+        // ----------------check for name-------------------
+        function validatename(name1)
+        {
+            if(name1.length>3 && name1.length<10)
+            {
+                return true
+            }
+            return false
+        }
+        function validatemobile(mobile1)
+        {
+         if(mobile1.length==10)
+         {
+             return true
+         }   
+         return false         
+        }
+
+        function register() {
+            var name1 = document.getElementById("name").value
+            var nameinput=document.getElementById("name")
+            var email1 = document.getElementById("email").value
+            var mobile1 = document.getElementById("mobile").value
+            var mobileinput=document.getElementById("mobile")
+            var nameelem=document.getElementById("namedisp")
+            var emailelem=document.getElementById("emaildisp")
+            var mobileelem=document.getElementById("mobiledisp")
+            var NameError=document.getElementById("NameError")
+            var MobileError=document.getElementById("MobileError")
+
+            if(validatename(name1))
+            {
+                nameelem.innerHTML=name1
+                nameinput.value=" "
+            }
+            else{
+                NameError.innerHTML="enter a valid name"
+            }
+
+            if(validatemobile(mobile1))
+            {
+                mobileelem.innerHTML=mobile1
+                mobileinput.value=" "
+            }
+            else{
+                MobileError.innerHTML="enter a valid mobile number"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
