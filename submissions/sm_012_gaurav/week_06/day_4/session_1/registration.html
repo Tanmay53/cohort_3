@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-5 mr-auto">
+                <form>
+                    <div class="form-group">
+                        <label for="name">NAME</label>
+                        <input type="text" class="form-control" id="nameInput">
+                        <small class="text-danger" id="nameError">The Name should have length between 3 and 10.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" class="form-control" id="emailInput">
+                        <small class="text-danger" id="emailError">The Email is not valid.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">MOBILE</label>
+                        <input type="number" class="form-control" id="mobileInput">
+                        <small class="text-danger" id="mobileError">The mobile number is not valid.</small>
+                    </div>
+                    <button class="btn btn-dark w-100 text-center" id="registerBtn">Register</button>
+                </form>
+            </div>
+            <div class="col-5 p-5 bg-dark text-white">
+                <h3>NAME</h3>
+                <h2 id="name" class="mb-5"></h2>
+                <h3 class="mt-5">EMAIL</h3>
+                <h2 id="email" class="mb-5"></h2>
+                <h3 class="mt-5">MOBILE</h3>
+                <h2 id="mobile"></h2>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        //Function to find index of first occurance of a charater in a string.
+        function indexOf(str, char) {
+            var index = -1;
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == char) {
+                    index = i;
+                    break;
+                }
+            }
+            return index;
+        }
+
+        //Function to return count of a char in a string.
+        function countChar(str, char) {
+            var cnt = 0;
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == char) {
+                    cnt++;
+                }
+            }
+            return cnt;
+        }
+
+
+        //Function to split string through a character.
+        function splitString(str, char) {
+            var arr = [];
+            var s = '';
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] != char) {
+                    s += str[i];
+                }
+                else {
+                    if (s.length != 0) {
+                        arr.push(s);
+                        s = '';
+                    }
+                }
+            }
+            if (s.length != 0) {
+                arr.push(s);
+            }
+            return arr;
+        }
+
+
+        //Function to check if tld starts with dot or not.
+        function tldDot(str) {
+            if (str[0] == '.') {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+
+        //Function to check if tld is valid or not.
+        function tldValid(str) {
+            var arr = splitString(str, '.');
+            tld = arr[arr.length - 1];
+            if (tld === 'com' || tld === 'org' || tld === 'net') {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+
+        //Function to check if anything other than character, digit, underscore or hyphen is present or not. If present return false else return true.
+        function charCheck(str) {
+            var allowed = 'abcdefghijklmnopqrstuvwxyz0123456789_.-';
+            var flag = true;
+            for (var i = 0; i < str.length; i++) {
+                if (indexOf(allowed, str[i]) == -1) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+
+        //Function to check if double dots are present or not in the string.
+        function doubleDots(str) {
+            var flag = false;
+            for (var i = 0; i < str.length - 1; i++) {
+                if (str[i] == '.' && str[i + 1] == '.') {
+                    flag = true;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+
+        //Function to check if email is valid or not.
+        function isValid(email) {
+            var flag = true;
+            if (indexOf(email, '@') == -1) {
+                flag = false;
+            }
+            else if (email[0] == '@' || email[0] == '.') {
+                flag = false;
+            }
+            else if (countChar(email, '@') != 1) {
+                flag = false;
+            }
+            else {
+                var arr = splitString(email, '@');
+                var firstPart = arr[0];
+                var secondPart = arr[1];
+                if (firstPart[firstPart.length - 1] == '.') {
+                    flag = false;
+                }
+                if (tldDot(secondPart)) {
+                    flag = false;
+                }
+                if (!tldValid(secondPart)) {
+                    flag = false;
+                }
+                if (!charCheck(firstPart)) {
+                    flag = false;
+                }
+                if (doubleDots(firstPart)) {
+                    flag = false;
+                }
+            }
+            return flag;
+        }
+        $(document).ready(function () {
+            $('#registerBtn').hide();
+            $($('.col-5')[1]).hide();
+            $('.form-group').each(function (index) {
+                if (index == 0) {
+                    $(this).children('small').hide();
+                }
+                else {
+                    $(this).hide();
+                }
+            });
+            $('#nameInput').keyup(function () {
+                if ($(this).val().length >= 3 && $(this).val().length <= 10) {
+                    $(this).addClass('border-success');
+                    $($('.form-group')[1]).show();
+                    $($('.form-group')[1]).children('small').hide();
+                    $(this).next().hide();
+                }
+                else {
+                    $(this).removeClass('border-success');
+                    $(this).next().show();
+                    $(this).parent().next().hide();
+                }
+            });
+            $('#emailInput').keyup(function () {
+                if(isValid($(this).val())) {
+                    $(this).addClass('border-success');
+                    $($('.form-group')[2]).show();
+                    $($('.form-group')[2]).children('small').hide();
+                    $(this).next().hide();
+                }
+                else {
+                    $(this).removeClass('border-success');
+                    $(this).next().show();
+                    $(this).parent().next().hide();
+                }
+            });
+            $('#mobileInput').keyup(function () {
+                if($(this).val().length === 10) {
+                    $(this).addClass('border-success');
+                    $('#registerBtn').show();
+                    $(this).next().hide();
+                }
+                else {
+                    $(this).removeClass('border-success');
+                    $(this).next().show();
+                    $(this).parent().next().hide();
+                }
+            });
+            $('#registerBtn').click(function(e) {
+                e.preventDefault();
+                $('#name').text($('#nameInput').val());
+                $('#email').text($('#emailInput').val());
+                $('#mobile').text($('#mobileInput').val());
+                $($('.col-5')[1]).show();
+                $(this).parent().hide();
+            });
+        });
+    </script>
+</body>
+
+</html>
