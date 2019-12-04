@@ -14,9 +14,7 @@
             var size = Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])).length;
             console.log(size)
 
-            for(var i=0; i<size; i++){
-                    $('#tbody').append("<tr><th>" +  Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])[i])[0] + "</th><td>" + Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])[i])[2] +"</td><td>" +Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])[i])[3]+ "</td><td>" +Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])[i])[1]+ "</td></tr>")
-            }
+            displayData(JSON.parse(xhr.response))
         }
         else{
             console.log("Error Code is:" + xhr.status)
@@ -38,12 +36,7 @@
                 var page = []; 
                 page.push(JSON.parse(xhr.response))
                 console.log(JSON.parse(xhr.response)) // Print the response from the server after a successful request
-                var size = Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])).length;
-                console.log(size)
-
-                for(var i=0; i<size; i++){
-                        $('#tbody').append("<tr><th>" +  Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])[i])[0] + "</th><td>" + Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])[i])[2] +"</td><td>" +Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])[i])[3]+ "</td><td>" +Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])[i])[1]+ "</td></tr>")
-                }
+                displayData(JSON.parse(xhr.response))
             }
             else{
                 console.log("Error Code is:" + xhr.status)
@@ -55,3 +48,12 @@
       $('#tbody').empty();
       xhr.onload();
   })
+
+    // Print Data   
+    var displayData = (function(data){
+        var size = Object.values(Object.values((Object.values(JSON.parse(xhr.response)))[4])).length;
+        console.log(size)
+        for(var i=0; i<size; i++){
+            $('#tbody').append("<tr><th><img src="+'"'+ Object.values(Object.values((Object.values(data))[4])[i])[4]+'"'+">" + "</th>"+"<td>" + Object.values(Object.values((Object.values(data))[4])[i])[0] + "</td><td>" + Object.values(Object.values((Object.values(data))[4])[i])[2] +"</td><td>" +Object.values(Object.values((Object.values(data))[4])[i])[3]+ "</td><td>" +Object.values(Object.values((Object.values(data))[4])[i])[1]+ "</td></tr>")
+        }
+    })

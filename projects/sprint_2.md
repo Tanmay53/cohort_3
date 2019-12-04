@@ -12,4 +12,4 @@
 | sm_029 | Sakshi Sinha          | Marks Recorder	  | [github](https://sakshisinha.github.io/masai-sprint-2/)
 | sm_030 | Shivansh Singh        | Expense Manager  | [github](https://github.com/shiv-ansh/masai-sprint-2)              |
 | sm_011 | Divyansh Srivastava       | Health Advisor  |  [github]( https://github.com/divyansh1234/masai-sprint2)
-|
+| am_022 | Prakash Peram 	| Expense Manager 	| [github](https://github.com/prakashperam/masai-sprint-2)
