@@ -1,0 +1,127 @@
+<html>
+    <style>
+    .outer-flex{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+ .cont-grid{
+            width: 300px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            text-align: center;
+            grid-gap:10px;
+        }
+.cont-grid div{
+            border: 2px solid black;
+            height: 40px;
+            background: green;
+            padding: 10px;
+            font-size: 2rem;
+        }
+        button{
+            padding: 10px;
+            background: green;
+            font-size: 2rem;
+        }
+        .cont-grid2{
+            grid-template-columns: auto auto;
+            
+        }
+        .cont-grid2 div{
+            width: 100px;
+        }
+ .cont-grid div:first-child{
+      background: red;
+        }
+.cont-grid #score
+{
+  width:auto;
+  grid-area:1/1/1/4;
+    background-color:grey;
+}
+.cont-grid .zero
+{
+  grid-area:5/2/5/3;
+    background-color:purple;
+}
+.cont-grid .enter
+{
+  grid-area:6/1/6/4;
+  color:white;
+  background-color:black;
+}
+.orange
+{
+  background-color:orange;
+}
+    
+    
+    </style>
+    <body>
+            <div class="outer-flex">
+                    <div class="cont-grid cont-grid2">
+                       <div class="box" id="box1"></div>
+                          <div class="box" id="box2"></div>
+                          <h2>MIN</h2>
+                          <h2>MAX</h2>
+                      </div>
+                <h2 >SCORE</h2>
+                  
+                  <div class="cont-grid">
+                   <div id="score">#</div>
+                                  <button  onclick="getvalue()">1</button>
+                                  <button class="orange" onclick="getvalue()">2</button>
+                                  <button onclick="getvalue()">3</button>
+                                  <button class="orange" onclick="getvalue()">4</button>
+                                  <button class="orange" onclick="getvalue()">5</button>
+                                  <button class="orange" onclick="getvalue()">6</button>
+                                  <button onclick="getvalue()">7</button>
+                                  <button class="orange" onclick="getvalue()">8</button>
+                                  <button onclick="getvalue()">9</button>
+                                  <button class="zero" onclick="getvalue()">0</button>
+                            <button class="enter" onclick="calculate()">ENTER</button>
+                      </div>
+                  </div>
+
+                  <script>
+                  
+                  
+                 
+                  var total="",maxvalue=0,minvalue=400
+        var score=document.getElementById("score")
+        function getvalue(){
+            var num=event.target.innerHTML;
+            total+=num
+            score.innerHTML=total
+        }
+        function calculate(){
+            var minimum=document.getElementById("box1")
+            var maximum=document.getElementById("box2")
+            total=parseInt(total)
+            if(total>maxvalue){
+                maxvalue=total
+                maximum.innerHTML=total
+            }
+            if(total<minvalue){
+                minvalue=total
+                minimum.innerHTML=total
+            }
+            score.innerHTML='#'
+            total=""
+        }
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  </script>
+    </body>
+</html>
