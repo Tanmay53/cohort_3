@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta http-equiv="X-UA-Compatible" content="ie=edge" charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>layout 2</title>
+    <style>
+
+@media only screen and (min-width: 600px){  
+    .grid_box{
+        display: grid;
+        grid-template-rows: 100px 100px 100px 100px 100px 100px;
+        grid-template-columns: 100px 100px 100px 100px 100px 100px;
+        row-gap: 10px;
+        margin-left:25%;
+        font-size: 25px;
+    }
+    #box1{
+        grid-area: 1/ 1/ 1 /6;
+        background:green;
+    }
+    #box2{
+        grid-area: 2/1/4/6;
+        background: aqua;
+    }   
+    #box3{
+        grid-area: 4/1/6/6;
+        background: red;
+    }
+}
+.grid_box{
+        display: grid;
+        grid-template-rows: 100px 100px 100px 100px 100px 100px;
+        grid-template-columns: 100px 100px 100px 100px 100px 100px;
+        row-gap: 10px;
+        margin-left:25%;
+        font-size: 25px;
+        column-gap: 10px;
+    }
+    #box1{
+        grid-area: 1/ 1/ 1 /6;
+        background:green;
+    }
+    #box2{
+        grid-area: 2/1/6/3;
+        background: aqua;
+    }   
+    #box3{
+        grid-area: 2/3/6/6;
+        background: red;
+    }
+
+
+    
+    </style>
+</head>
+<body>
+    <div class="grid_box">
+<div id="box1">Navigation</div>
+<div id="box2">Left Box</div>
+<div id="box3">Right Box</div>
+</div>
+</body>
+
+</html>
