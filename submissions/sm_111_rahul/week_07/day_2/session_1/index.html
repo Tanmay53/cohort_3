@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>index</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row bg-dark d-flex flex-row justify-content-center">
+            <div class="col-3 bg-info m-4 p-4">
+                <div class="form-group col m-2 p-2">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="form-control input" id="fname" placeholder="First Name">
+                </div>
+                <div class="form-group col m-2 p-2">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control input" id="lname" placeholder="Last Name">
+                </div>
+                <div class="form-group col m-2 p-2">
+                    <label for="userN">User Name</label>
+                    <input type="text" class="form-control input" id="userN" placeholder="Username">
+                </div>
+                <div class="form-group col m-2 p-2">
+                    <label for="pass">Password</label>
+                    <input type="password" class="form-control input" id="pass" placeholder="Password">
+                </div>
+                <div class="form-group col m-2 p-2">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control input" id="email" placeholder="Email">
+                </div>
+                <div class="form-group col m-2 p-2">
+                    <label for="add">Address</label>
+                    <input type="text" class="form-control input" id="add" placeholder="Address">
+                </div>
+                <div class="form-group col m-2 p-2">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" class="form-control input" id="phone" placeholder="Phone Number">
+                </div>
+                <div class="m-2 p-2 col">
+                    <select class="custom-select" id="userType">
+                        <option selected>select user/admin</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="btn btn-warning float-right" id="register">Register</button>
+                </div>
+            </div>
+            <div class="col-2 bg-info m-4 p-2">
+                <div class="form-group p-2">
+                    <label for="selectUsers" class="col-form-label-lg"> </label>
+                    <select class="custom-select p-2" id="selectUsers">
+                        <option selected>Select Users</option>
+                    </select>
+                </div>
+                <div id="displayUsers">
+
+                </div>
+            </div>
+            <div class="col-6 bg-light m-4 p-2">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4 ">
+                        <select class="custom-select bg-danger text-white" id="sortUsers">
+                            <option selected>Sort Users</option>
+                            <option>Ascending</option>
+                            <option>Descending</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <select class="custom-select bg-danger text-white" id="selectUsers">
+                            <option selected>Filter Users</option>
+                            <option>All</option>
+                            <option>Users</option>
+                            <option>Admins</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
