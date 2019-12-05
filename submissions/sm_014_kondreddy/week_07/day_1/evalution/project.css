@@ -1,0 +1,60 @@
+
+.nav {
+    overflow:auto;
+    background-color:lightblue;
+  }
+  .nav  li {
+      list-style-type:none;
+      
+  }
+  .nav a {
+    float: left;
+    font-size:30px;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .first {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .first .btn {
+    font-size: 30px;  
+    color:blue;
+    padding: 14px 16px;
+    margin:0;
+    text-decoration: none;
+  }
+  
+  .nav a:hover, .first:hover .btn {
+    background-color:orangered;
+    text-decoration:none;
+  }
+  
+  .content {
+    display: none;
+    position: absolute;
+    background-color:lightskyblue;
+    min-width: 160px;
+  }
+  
+  .content a {
+    float: none;
+    color:deeppink;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .content a:hover {
+    background-color: rgb(69, 212, 12);
+  }
+  
+  .first:hover .content {
+    display: block;
+  }
+  

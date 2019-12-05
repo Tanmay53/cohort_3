@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body class="backgnd">
+    <div class="main">
+        <div class="heading">
+            <h1>Welcome to More Departmental Stores</h1>
+            <p>Visakhapatnam,Andhra Pradesh</p>
+        </div>
+        <div class="order">
+            <form class="formbar">
+                Category :
+                <select name="name" id="food" class="typebar">
+                    <option value="Dairy">Choose category</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Pulses">Pulses</option>
+                    <option value="Snacks">Snacks</option>
+                </select>
+
+            </form>
+            <div class="submit">
+                <button class="submitbar">Submit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            Fruits :
+            <select name="name" id="food" class="typebar">
+                <option value="Apple">select</option>
+                <option value="Apple">Apple</option>
+                <option value="Banana">Banana</option>
+                <option value="Pineapple">Pineapple</option>
+                <option value="Sapota">Sapota</option>
+                <option value="Guvva">Guvva</option>
+            </select>
+            <div class="grid-box">
+                <div>Name of the Fruit</div>
+                <div>Quantity</div>
+                <div>Price/kg</div>
+                <div>Amount</div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><button class="submitbar" onclick="show1()">Confirm</button></div>
+                <div class="last"><input type="text" class="selectbar" placeholder="Total Amount on Fruits"></div>
+            </div>
+            <div class="submit">
+                <button class="cartbar">Add to Cart</button>
+            </div>
+        </div>
+
+
+        <div class="item">
+            Dairy :
+            <select name="name" id="food" class="typebar">
+                <option value="1">select</option>
+                <option value="2">Cow Milk</option>
+                <option value="3">Curd</option>
+                <option value="4">Ghee</option>
+                <option value="5">Butter Milk</option>
+                <option value="6">Lassy</option>
+            </select>
+            <div class="grid-box">
+                <div>Name of the Item</div>
+                <div>Quantity</div>
+                <div>Price</div>
+                <div>Amount</div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><button class="submitbar" onclick="show1()">Confirm</button></div>
+                <div class="last"><input type="text" class="selectbar" placeholder="Total Amount on Dairy items "> </div>
+            </div>
+            <div class="submit">
+                <button class="cartbar">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            Vegetables :
+            <select name="name" id="food" class="typebar">
+                <option value="1">select</option>
+                <option value="2">Beetroot</option>
+                <option value="3">Onion</option>
+                <option value="4">Cucumber</option>
+                <option value="5">Tomato</option>
+                <option value="6">Brinjal</option>
+            </select>
+            <div class="grid-box">
+                <div>Name of the Item</div>
+                <div>Quantity</div>
+                <div>Price/kg</div>
+                <div>Amount</div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><button class="submitbar" onclick="show1()">Confirm</button></div>
+                <div class="last"><input type="text" class="selectbar" placeholder="Total Amount on Vegetables "> </div>
+            </div>
+            <div class="submit">
+                <button class="cartbar">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item">
+            Pulses :
+            <select name="name" id="food" class="typebar">
+                <option value="1">select</option>
+                <option value="2">Green gram</option>
+                <option value="3">Red Gram</option>
+                <option value="4">Chickpeas</option>
+                <option value="5">Pea</option>
+                <option value="6">Sago</option>
+            </select>
+            <div class="grid-box">
+                <div>Name of the Item</div>
+                <div>Quantity</div>
+                <div>Price/kg</div>
+                <div>Amount</div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><button class="submitbar" onclick="show1()">Confirm</button></div>
+                <div class="last"><input type="text" class="selectbar" placeholder="Total Amount on pulses "></div>
+            </div>
+            <div class="submit">
+                <button class="cartbar">Add to Cart</button>
+            </div>
+        </div>
+
+
+        <div class="item">
+            Snacks :
+            <select name="name" id="food" class="typebar">
+                <option value="1">select</option>
+                <option value="2">Cookies</option>
+                <option value="3">Cakes</option>
+                <option value="4">Chocolates</option>
+                <option value="5">Pastries</option>
+                <option value="6">Sona padi</option>
+            </select>
+            <div class="grid-box">
+                <div>Name of the Item</div>
+                <div>Quantity</div>
+                <div>Price</div>
+                <div>Amount</div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><input type="text" class="selectbar"> </div>
+                <div><button class="submitbar" onclick="show1()">Confirm</button></div>
+                <div class="last"><input type="text" class="selectbar" placeholder="Total Amount on Snacks"> </div>
+            </div>
+            <div class="submit">
+                <button class="genbar" onclick=show1()>Generate Bill</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
