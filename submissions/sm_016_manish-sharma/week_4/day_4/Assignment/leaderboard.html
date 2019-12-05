@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .top1 {
+            height: 100px;
+        }
+
+        .mid1 {
+            height: 100px;
+        }
+
+        .mid2 {
+            height: 80px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row m-5">
+            <div class="col">
+                <div class="col-4 offset-3 bg-danger display-3 text-center top1" id="min">20</div>
+                <h2 class="offset-4">MIN</h2>
+            </div>
+            <div class="col">
+                <div class="col-4 offset-3 bg-success display-3 text-center top1" id="max">200</div>
+                <h2 class="offset-4">MAX</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h2>SCORE</h2>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-3 bg-info text-light display-4 text-center mid1" id='score'>#</div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3 h1 text-center">
+            <div class="col-1 bg-success mid2 keypad">1</div>
+            <div class="col-1 bg-warning mid2 ml-2 keypad">2</div>
+            <div class="col-1 bg-success mid2 ml-2 keypad">3</div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3 h1 text-center">
+            <div class="col-1 bg-warning mid2 keypad">4</div>
+            <div class="col-1 bg-warning mid2 ml-2 keypad">5</div>
+            <div class="col-1 bg-warning mid2 ml-2 keypad">6</div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3 h1 text-center">
+            <div class="col-1 bg-success mid2 keypad">7</div>
+            <div class="col-1 bg-warning mid2 ml-2 keypad">8</div>
+            <div class="col-1 bg-success mid2 ml-2 keypad">9</div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3 h1 text-center">
+            <div class="col-1 bg-success mid2 ml-2 text-light keypad">0</div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+            <div class="col-3 bg-dark mid2 ml-2 text-light h1 text-center" onclick="enter()">ENTER</div>
+        </div>
+    </div>
+
+</body>
+<script>
+    
+    var str=''
+
+    function select() {
+        var score = document.getElementById('score')
+        str=str+this.textContent
+        score.innerHTML = str
+    }
+
+    var keypads = document.getElementsByClassName('keypad')
+    for (i = 0; i < keypads.length; i++) {
+        keypads[i].addEventListener("click", select);
+    }
+    
+    function enter(){
+        console.log(str)
+        var max= document.getElementById('max')
+        var min= document.getElementById('min')
+
+        if(Number(str)>Number(max.textContent)){
+            max.textContent=str
+        }
+        else if(Number(str)<Number(min.textContent)){
+            min.textContent=str
+        }
+
+        score.innerHTML=''
+        str=''
+    }
+
+</script>
+
+</html>
