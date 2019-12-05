@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.total').addEventListener('click', function(e) {
     sortData('total_num');
   });
+  let inputSearch = document.querySelectorAll('.search');
+  inputSearch.forEach(function(input) {
+    input.addEventListener('keyup', function(e) {
+      filterData(e.target.value, e.target.id);
+    });
+  });
 });
 
 // Callback For Ajax Request of JSON File
@@ -99,6 +105,39 @@ function changePage(event) {
     populateTable(pageObject);
   }
 }
+
+function filterData(query, id) {
+  let filteredStudents = [];
+  if (id == 'srchName') {
+    console.log(id);
+    studentData.forEach(student => {
+      if (student.first_name.toLowerCase().startsWith(query)) {
+        console.log(student.first_name);
+        filteredStudents.push(student);
+      }
+    });
+  } else if (id == 'srchDomain') {
+    console.log(id);
+    studentData.forEach(student => {
+      let cs = student.email.split('@');
+      if (cs[1].startsWith(query)) {
+        console.log(student.first_name);
+        filteredStudents.push(student);
+      }
+    });
+  } else if (id == 'srchEmail') {
+    console.log(id);
+    studentData.forEach(student => {
+      if (student.email.startsWith(query)) {
+        console.log(student.first_name);
+        filteredStudents.push(student);
+      }
+    });
+  }
+  currentData = filteredStudents;
+  populateTable(filteredStudents);
+}
+
 let toggler = 1;
 //Sorting of Data
 function sortData(parameter) {
@@ -108,8 +147,7 @@ function sortData(parameter) {
     var toggle = document.querySelector('#total-toggle');
   }
 
-  let sortedData = sortObject(currentData, parameter, toggler);
-
+  let sortedData = sortObject(studentData, parameter, toggler);
   populateTable(sortedData);
   if (toggler == 1) {
     toggle.classList.remove('fa-chevron-circle-down');
