@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <!-- FSD.JS.10.1 !-->
+  <h1>Change the buttons text color random value</h1>
+  <button id='b1'>Click here to change my color</button>
+  <button id='bonus1'>Click me to change my color to an array value!</button>
+
+  <!-- FSD.JS.10.2 !-->
+  <h1 id='h1'>My color should change when I double click the button!</h1>
+  <button id='b2'>Double Click here to change the color of the h1 tag !</button>
+
+  <!-- FSD.JS.10.3 !-->
+  <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id='b3'>Click here to change my color!</button>
+
+  <script>
+
+    var ArrColors=['red', 'green' ,'blue','orange','brown','pink','black','yellow','white','gold','red' ]
+    // 10.1
+    var b1 = document.getElementById('b1')
+    function button1(){
+      col = 'rgb(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ')'
+      this.style.color=col
+    }
+    b1.addEventListener('click',button1)
+
+    // Bonus 1
+    var bonus1 = document.getElementById('bonus1')
+    i=0
+    function bonusOne(){
+      this.style.backgroundColor=ArrColors[i]
+      i++
+    }
+    bonus1.addEventListener('click',bonusOne)
+      
+
+   // 10.2
+    var b2 = document.getElementById('b2')
+    function button2(){
+      var h1= document.getElementById('h1')
+      col = 'rgb(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ')'
+      h1.style.color=col
+    }
+    b2.addEventListener('dblclick',button2)
+    
+
+    // 10.3
+    var b3 = document.getElementById('b3')
+    function button3(){
+      col = 'rgb(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ')'
+      this.style.color=col
+      i++
+      if(i>1){
+        b3.removeEventListener('click',button3)
+      }
+    }
+    b3.addEventListener('click',button3)
+
+    // Bonus 2
+    function bonusTwo(){
+      this.style.fontSize= Math.floor(Math.random()*40) +'px'
+    }
+    b3.addEventListener('mouseover',bonusTwo)
+
+  </script>
+
+
+</body>
+
+</html>
