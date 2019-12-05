@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <title>Unix</title>
+    <head>
+
+        <style type="text/css">
+        .pic1{
+            background-color:lightgrey;
+            margin-left:400px;
+            height:50px;
+            width:200px;
+            padding:120px;
+            }
+        #founder1{
+            background-image :url("https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg");
+            background-repeat : no-repeat;
+            background-size:100px ;
+            background-position: right 50% bottom 85%;
+        }
+        #name1{
+            font-size:23px;
+            color:blue;
+            margin-top:65px;
+            text-align:center;
+        }
+        #desc1{
+            font-size:18px;
+              }
+        #salPic{
+            height:120px;
+            margin-left:300px;
+            margin-top:40px;
+        }
+        
+        #name2{
+            color:red;
+            position:relative;
+            top:-140px;
+            left:420px;
+
+        }
+        #desc2{
+            position:relative;
+            top:-134px;
+            left: 420px;
+        }
+        #orange{
+            background-color:orangered;
+            padding:60px;
+            height:20px;
+            margin-left:40px;
+            margin-right:40px;
+            position:relative;
+            top:-100px;
+        }
+        #name3{
+            position:relative;
+            top:-50px;
+            left:-20px;
+            color:white;
+            font-size:20px;
+        }
+        #name4{
+            font-size:20px;
+            position:relative;
+            top:-120px;
+            right:-1020px;
+            color:white;
+            
+        }
+        #desc3{
+            font-size:14px;
+            position:relative;
+            top:-40px;
+            left:-20px;
+        }
+
+        #desc4{
+            font-size:14px;
+            position:relative;
+            top:-110px;
+            right:-900px;
+            
+
+
+        }
+        #line div{
+            padding:5px;
+            height:90px;
+            width:1px;
+            background-color:black;
+            position:relative;
+            top:-220px;
+            left:650px;
+        }
+
+        
+        </style>
+
+    </head>
+    <body>
+
+
+            
+
+           <button id ='magic' onclick="creator()">Create Page</button>
+
+           <script>
+           function creator()
+           {
+             var inBody= document.querySelector('body')
+             var oneDiv= document.createElement('div')
+             inBody.appendChild(oneDiv) 
+             oneDiv.setAttribute('class','pic1')
+             oneDiv.setAttribute('id','founder1')
+             
+             
+             var oneH = document.createElement('h1')
+             oneH.textContent="Linus Torvalds"
+             oneDiv.appendChild(oneH)
+             oneH.setAttribute('id','name1')
+
+             var oneP=document.createElement('p')
+             oneP.textContent="The founder of Linux & Git"
+             oneDiv.appendChild(oneP)
+             oneP.setAttribute('id','desc1')
+// second div starts
+
+            var inBody= document.querySelector('body')
+            var twoDiv = document.createElement('div')
+            inBody.appendChild(twoDiv)
+            twoDiv.setAttribute('class','pic2')
+            twoDiv.setAttribute('id','founder2')
+            console.log("SECOND")
+
+            var img=document.createElement('img')
+            twoDiv.appendChild(img)
+            img.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg')
+            img.setAttribute('id','salPic')
+
+            var twoH=document.createElement('h2')
+            twoH.textContent="Sal Khan"
+            twoDiv.appendChild(twoH)
+            twoH.setAttribute('id','name2')
+            
+
+            var twoP=document.createElement('p')
+            twoP.textContent="Salman Khan is the Founnder of Khan Academy which has a mission of provind free world-class for everyone, anywhere"
+            twoDiv.appendChild(twoP)
+            twoP.setAttribute('id','desc2')
+
+
+    // //third div starts here
+
+            var thDiv = document.createElement('div')
+            inBody.appendChild(thDiv)
+            thDiv.setAttribute('id','orange')
+            
+            var para1=document.createElement('p')
+            para1.textContent="Ken Thompson"
+            thDiv.appendChild(para1)
+            para1.setAttribute('id','name3')
+
+            var para2=document.createElement('p')
+            para2.textContent="Designed and operated the original Unix operating System"
+            thDiv.appendChild(para2)
+            para2.setAttribute('id','desc3')
+
+            var para3=document.createElement('p')
+            para3.textContent="Dennis Ritchie"
+            thDiv.appendChild(para3)
+            para3.setAttribute('id','name4')
+
+            var para4=document.createElement('p')
+            para4.textContent="The creator of C Programming Language"
+            thDiv.appendChild(para4)
+            para4.setAttribute('id','desc4')
+    
+    // last part
+
+            var ldiv=document.createElement('div')
+            inBody.appendChild(ldiv)
+            ldiv.setAttribute('id','line')
+
+            var zdiv=document.createElement('div')
+            // var ydiv=document.querySelector('#line > div')
+            ldiv.appendChild(zdiv)
+
+           }
+          
+           </script>
+
+    </body>
+</html>
