@@ -1,0 +1,46 @@
+
+     body{
+            margin:0;
+        }
+     .flex-box{
+            display:column;
+
+    
+        }
+    .flex-box div{
+            width:100%;
+        }
+    #h1{
+            background: mediumseagreen;
+            color:magenta;
+            text-align: center;
+            height:80px;
+        }
+    .img1{
+
+       width:100%;
+       height:auto;
+       margin:0;
+        }
+        .flex-box1{
+            display:column;
+       }
+    .flex-box1 div{
+           background:white;
+       margin-left: 400px;
+       margin-top: -700px;
+       padding: 35px;
+       height:250px;
+       width:400px;
+          
+       }
+
+    .form{
+       background: lightskyblue; 
+       width:380px;
+       height:40px;
+       padding: 10px;
+     } 
+    #button{
+         text-align: center;
+     }
