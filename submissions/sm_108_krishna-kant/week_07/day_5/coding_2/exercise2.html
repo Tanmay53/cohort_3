@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+      //Write your code below this line
+      let tasks = ['Cooking', 'Cleaning', 'Homework', 'Hackerrank', 'React'];
+      let details = {
+        name: 'Krishna Kant Sharma',
+        age: 20,
+        dob: '10-Oct-1999',
+        favC: 'Black'
+      };
+
+      function profile() {
+        return `${details.name} ${details.age} ${details.dob} ${details.favC}`;
+      }
+      let listItem = tasks.map(item => {
+        return <li>{item}</li>;
+      });
+
+      let output = (
+        <div>
+          <h1>My Todo List</h1>
+          <ul>{listItem}</ul>
+          <p>{profile()}</p>
+        </div>
+      );
+      ReactDOM.render(output, document.getElementById('root'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+.box{
+    display:grid;
+  
+    grid-template-columns:120px 120px 120px 120px;
+    grid-template-rows:120px 120px;
+    
+    margin-left:200px;
+    
+    padding-top:50px;
+    height:500px;
+    grid-column-gap:10px;
+    grid-row-gap:30px;
+    gri-gap:10px;
+      
+    
+   
+  }
+  .box>div{
+    
+    
+
+    background:green;
+    border-radius:5px;
+    margin-top:10px;
+    
+  }
+}
+@media(max-width:600px){
+  .box>div{
+    background:blue;
+
+ }
+}

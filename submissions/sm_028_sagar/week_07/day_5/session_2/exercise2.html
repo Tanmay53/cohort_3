@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 2</title>
+</head>
+
+<body>
+    <div id="root"></div>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+        const tasks = ['Workout','Coding','Eating','Sleeping','Practising'];
+        const object = {
+            name : 'Sagar Kadu',
+            Age: 23,
+            dob : '16th Feb 1996',
+            color: 'Deep Blue',
+            display: function(){
+                return <div>
+                    <p>My Name is {this.name}</p>
+                    <p>Age is {this.Age}</p>
+                    <p>Date of Birth : {this.dob}</p>
+                    <p>Favourite Color : {this.color}</p>
+                </div>
+            }
+        }
+        function todo(){
+            let task = ''
+            for(let i = 0; i < 5; i++){
+                let task = React.createElement('li')
+            }
+            return task;
+        }
+
+        const ele = (
+            <div>
+                <h1>My Todo List</h1>
+                <ul>{todo()}</ul>
+                {object.display()}
+            </div>
+        );
+    
+        const root = document.getElementById('root');
+        ReactDOM.render(ele,root)
+    
+    </script>
+</body>
+
+</html>

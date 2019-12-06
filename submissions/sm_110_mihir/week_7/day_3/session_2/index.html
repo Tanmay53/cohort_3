@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>students ES6</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="nav bg-primary text-white p-4">
+            <div class="row">
+                <div class="col">
+                    <form class="input-group">
+                        <select
+                            class="form-control"
+                            name="resultPerPage"
+                            id="resultsPerPage"
+                        >
+                            <option selected>Results per page</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col">
+                    <ul class="pagination" id="pagenav"></ul>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">
+                        First Name
+                        <button id="sort-first_name-asc" class="btn">
+                            <i class="fas fa-sort-up"></i>
+                        </button>
+                        <button id="sort-first_name-dsc" class="btn">
+                            <i class="fas fa-sort-down"></i>
+                        </button>
+                    </th>
+                    <th scope="col">
+                        Last Name
+                        <button id="sort-last_name-asc" class="btn">
+                            <i class="fas fa-sort-up"></i>
+                        </button>
+                        <button id="sort-last_name-dsc" class="btn">
+                            <i class="fas fa-sort-down"></i>
+                        </button>
+                    </th>
+                    <th scope="col">
+                        Email
+                        <button id="sort-email-asc" class="btn">
+                            <i class="fas fa-sort-up"></i>
+                        </button>
+                        <button id="sort-email-dsc" class="btn">
+                            <i class="fas fa-sort-down"></i>
+                        </button>
+                    </th>
+                    <th scope="col">
+                        <select name="gender" id="gender" class="custom-select">
+                            <option selected>Gender</option>
+                            <option value="all">all</option>
+                            <option value="Male">M</option>
+                            <option value="Female">F</option>
+                        </select>
+                    </th>
+                    <th scope="col">
+                        English
+                        <button id="sort-english-asc" class="btn">
+                            <i class="fas fa-sort-up"></i>
+                        </button>
+                        <button id="sort-english-dsc" class="btn">
+                            <i class="fas fa-sort-down"></i>
+                        </button>
+                    </th>
+                    <th scope="col">
+                        Maths
+                        <button id="sort-maths-asc" class="btn">
+                            <i class="fas fa-sort-up"></i>
+                        </button>
+                        <button id="sort-maths-dsc" class="btn">
+                            <i class="fas fa-sort-down"></i>
+                        </button>
+                    </th>
+                    <th scope="col">
+                        Science
+                        <button id="sort-science-asc" class="btn">
+                            <i class="fas fa-sort-up"></i>
+                        </button>
+                        <button id="sort-science-dsc" class="btn">
+                            <i class="fas fa-sort-down"></i>
+                        </button>
+                    </th>
+                    <th scope="col">
+                        Total
+                        <button id="sort-total-asc" class="btn">
+                            <i class="fas fa-sort-up"></i>
+                        </button>
+                        <button id="sort-total-dsc" class="btn">
+                            <i class="fas fa-sort-down"></i>
+                        </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://kit.fontawesome.com/2ccced269b.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>
