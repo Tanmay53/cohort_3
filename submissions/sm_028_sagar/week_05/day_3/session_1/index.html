@@ -69,12 +69,34 @@
             console.log(username, password)
 
             if (username == localStorage.username && password == localStorage.password) {
-                console.log("inside valid cond")
                 window.location.replace("dash.html");
 
+            } else if (username == localStorage.adminName && username == localStorage.adminPass) {
+                window.location.replace("admin.html")
             } else {
                 alert("wrong credentials")
             }
+
+            //storing user data for admin page
+            admin_storeData(username)
+
+        }
+
+        function admin_storeData(username) {
+
+            var time = new Date();
+            timeString_attempt = (time.getHours() - 12) + " : " + time.getMinutes() + " : " + time.getSeconds();
+
+            var obj = {}
+
+            var input = JSON.parse((localStorage.getItem('object')))
+            if (input[username]) {
+                input[username].push(timeString_attempt);
+            } else {
+                obj[username] = [timeString_attempt]
+            }
+            data = JSON.stringify(obj)
+            localStorage.setItem('object', data)
         }
     </script>
 </body>
