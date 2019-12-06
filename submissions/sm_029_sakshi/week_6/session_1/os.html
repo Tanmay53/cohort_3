@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="os.js"></script>
+        <style type="text/css">
+            #grid {
+                margin-top:100px;
+                width: 30%;
+                display: grid;
+                grid-template-columns: 200px 200px;
+                grid-template-rows: auto;
+                grid-gap: 5px;
+                border:4px solid black;
+            }
+            .box {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- android, ubuntu, windows, macos -->
+            <label for="os">Choose OS : </label>
+            <select id="os">
+                <option value='--'>--</option>
+                <option value='android'>android</option>
+                <option value='ubuntu'>ubuntu</option>
+                <option value='windows'>windows</option>
+                <option value='macos'>macos</option>
+            </select>
+            <button id="btnSubmit" onclick="submitClick()" >submit</button>
+            
+            <div id="grid">
+                <div class="box">Name</div>
+                <div class="box">Version</div>
+            </div>
+        </div>
+    </body>
+</html>

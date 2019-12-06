@@ -147,7 +147,7 @@ function sortData(parameter) {
     var toggle = document.querySelector('#total-toggle');
   }
 
-  let sortedData = sortObject(studentData, parameter, toggler);
+  let sortedData = sortObject(currentData, parameter, toggler);
   populateTable(sortedData);
   if (toggler == 1) {
     toggle.classList.remove('fa-chevron-circle-down');

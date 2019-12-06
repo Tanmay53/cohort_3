@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 1</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+        const info = (
+        <div>
+            <h1>My Todo List</h1>
+            <ul>
+                <li>Workout</li>
+                <li>Coding</li>
+                <li>Eating</li>
+                <li>Sleeping</li>
+                <li>Practising</li>
+            </ul>
+            <p> My Name is 'Sagar Kadu' </p>
+            <p> Age is 23</p>
+            <p> Date of Birth : 16th feb 1996</p>
+            <p> Favourite Color : Blue </p>
+        </div>
+        ); const root = document.getElementById('root'); 
+        ReactDOM.render(info, root);
+    </script>
+</body>
+
+</html>
