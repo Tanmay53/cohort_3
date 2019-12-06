@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script type="text/babel">
+            //Write your code below this line
+            let todoItems = [
+                "Cooking",
+                "Cleaning",
+                "Grocery Shopping",
+                "Pay rent",
+                "Learn React"
+            ];
+            const listItems = todoItems.map(item => <li>{item}</li>);
+            const aboutMe = { name: "Mihir", age: "33", favColor: "blue" };
+            function formatMe(obj) {
+                return `I am ${obj.name}, ${obj.age} years of age and my Favourate Color is ${obj.favColor}`;
+            }
+            const todo = (
+                <div>
+                    <h1>My Todo List</h1>
+                    <ul>{listItems}</ul>
+                    <p>{formatMe(aboutMe)}</p>
+                </div>
+            );
+            const root = document.getElementById("root");
+            ReactDOM.render(todo, root);
+        </script>
+    </body>
+</html>
