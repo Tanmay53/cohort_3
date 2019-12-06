@@ -6,7 +6,7 @@ var user = {
 console.log(user)
 console.log(propertyUpdate("skills", "Java Developer"))
 console.log(propertyUpdate("skills", "Web Developer"))
-console.log(propertyUpdate("skills", "Full Stack Developer"))
+console.log(propertyUpdate("bapu", "Full Stack Developer"))
 
 function propertyUpdate(property, value) {
     for (key in user) {

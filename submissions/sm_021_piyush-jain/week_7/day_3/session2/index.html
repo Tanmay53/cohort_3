@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sorting</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-info text-white">
+    <div class="text-dark text-center display-4">DATA FOR SORT / SEARCH</div>
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <select id="choosePage">ChoosePageSize
+                <option>ChoosePageSize</option>
+                <option id="ten" value="ten">10</option>
+                <option id="twentyfive" value="twentyfive">25</option>
+                <option id="fifty" value="fifty">50</option>
+                <option id="hundred" value="hundred">100</option>
+            </select>
+            <select id="pagevalue">
+                <option>ChoosePageValue</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+            </select>
+            <button id="getData" class="bg-dark text-white">Choose Your Result</button>
+        </div>
+        <div class="row">
+        <select id="pageSorter">
+            <option value="fname" id="fname">FirstName</option>
+            <option value="lname">LastName</option>
+            <option value="emailasc">Email Ascending</option>
+            <option value="emaildes">Email Descending</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="total">Total Marks</option>
+        </select>
+        <button id="sortValue1"class="bg-dark text-white">PAGESORT</button>
+        <select id="sorter">
+            <option value="fname" id="fname">FirstName</option>
+            <option value="lname">LastName</option>
+            <option value="emailasc">Email Ascending</option>
+            <option value="emaildes">Email Descending</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="total">Total Marks</option>
+        </select>
+        <button id="sortValue" class="bg-dark text-white">GENERAL SORT</button>
+        </div>
+        <div class="row">
+            <input type="search" id="searchName">
+            <button id="search" class="bg-dark text-white">Search</button>
+        </div>
+    </div>
+    <table class="table"></table>
+</body>
+<script>
+    var data
+    window.addEventListener('load', function () {
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', 'http://localhost:8000/students')
+        xhr.onload = function () {
+            data = xhr.response
+            var result = JSON.parse(data)
+            console.log(result)
+            var button1 = document.getElementById('sortValue')
+            button1.addEventListener('click', sorting)
+            var button3 = document.getElementById('sortValue1')
+            button3.addEventListener('click', pagesorting)
+            var button4 = document.getElementById('search')
+            button4.addEventListener('click', searching)
+
+            function searching() {
+                var name = $('#searchName').val();
+                console.log(name)
+                var count = 0
+                var searchData = []
+                for (var i = 0; i < result.length; i++) {
+                    var flag = 0
+                    for (key in result[i]) {
+                        var str1 = result[i]["first_name"]
+                        var str2 = result[i]["last_name"]
+                        var str3 = result[i]["email"]
+                        if (str1.includes(name) || str2.includes(name) || str3.includes(name)) {
+                            flag = 1
+                        }
+                    }
+                    if (flag == 1) {
+                        searchData.push(result[i])
+                        createTable(searchData)
+                    }
+                }
+            }
+
+            function pagesorting() {
+                var sorter = document.getElementById('pageSorter').value;
+                console.log(sorter)
+                var dataStuff = localStorage.getItem('database')
+                var data = JSON.parse(dataStuff)
+                switch (sorter) {
+                    case "fname":
+                        fnamesorting(data);
+                        break;
+                    case "lname":
+                        lnamesorting(data);
+                        break;
+                    case "emailasc":
+                        emailascsorting(data);
+                        break;
+                    case "emaildes":
+                        emaildessorting(data);
+                        break;
+                    case "male":
+                        malesorting(data);
+                        break;
+                    case "female":
+                        femalesorting(data);
+                        break;
+                    case "totalmarks":
+                        totalmarksorting(data);
+                        break;
+                }
+            }
+
+            function sorting() {
+                var sorter = document.getElementById('sorter').value;
+                console.log(sorter)
+                switch (sorter) {
+                    case "fname":
+                        fnamesorting(result);
+                        break;
+                    case "lname":
+                        lnamesorting(result);
+                        break;
+                    case "emailasc":
+                        emailascsorting(result);
+                        break;
+                    case "emaildes":
+                        emaildessorting(result);
+                        break;
+                    case "male":
+                        malesorting(result);
+                        break;
+                    case "female":
+                        femalesorting(result);
+                        break;
+                    case "totalmarks":
+                        totalmarksorting(result);
+                        break;
+                }
+            }
+            function fnamesorting(result) {
+                console.log(result)
+                result.sort((a, b) => {
+                    return (a.first_name > b.first_name) ? 1 : -1;
+                })
+                createTable(result)
+            }
+            function lnamesorting(result) {
+                console.log(result)
+
+                result.sort((a, b) => {
+                    return (a.last_name > b.last_name) ? 1 : -1;
+                })
+                createTable(result)
+            }
+            function emailascsorting(result) {
+                result.sort((a, b) => {
+                    return (a.email > b.email) ? 1 : -1;
+                })
+                createTable(result)
+            }
+            function emaildessorting(result) {
+                result.sort((a, b) => {
+                    return (a.email < b.email) ? 1 : -1;
+                })
+                createTable(result)
+            }
+            function malesorting(result) {
+                result = result.filter(function (obj) {
+                    return obj.gender == "Male"
+                });
+                createTable(result)
+            }
+            function femalesorting(result) {
+                result = result.filter(function (obj) {
+                    return obj.gender == "Female"
+                });
+                createTable(result)
+            }
+            var button2 = document.getElementById('getData')
+            button2.addEventListener('click', pageResult)
+            function pageResult() {
+                var choosePageResult = document.getElementById('choosePage').value;
+                var number = 0
+                switch (choosePageResult) {
+                    case "ten":
+                        number = 10
+                        break;
+                    case "twentyfive":
+                        number = 25
+                        break;
+                    case "fifty":
+                        number = 50
+                        break;
+                    case "hundred":
+                        number = 100
+                        break;
+                    default:
+                        number = 25;
+                        break;
+
+                }
+
+                console.log(number)
+                var page = document.getElementById('pagevalue').value;
+                var limit = Math.floor(result.length / number);
+
+                if (page <= limit) {
+                    var data = []
+                    var i = (page - 1) * number
+                    for (var i = ((page - 1) * number), j = 0; i < ((page) * number), j < number; i++ , j++) {
+                        data[j] = result[i]
+                    }
+                    localStorage.clear();
+                    localStorage.setItem('database', JSON.stringify(data))
+                    createTable(data)
+                }
+
+            }
+            function createTable(test) {
+                var table1 = document.querySelector('table')
+                table1.innerHTML = "<tr><th>ID</th><th>Fname</th><th>Lname</th><th>Email</th><th>Gender</th><th>English</th><th>Math</th><th>Science</th><th>Total</th></tr>"
+                for (var i = 0; i < test.length; i++) {
+                    var tr1 = document.createElement('tr');
+                    var total = (test[i]["maths"] + test[i]["english"] + test[i]["science"])
+                    tr1.innerHTML = '<td>' + test[i]["id"] + '<td>' + test[i]["first_name"] + '<td>' + test[i]["last_name"] + '<td>' + test[i]["email"] + '<td>' + test[i]["gender"] + '<td>' + test[i]["english"] + '<td>' + test[i]["maths"] + '<td>' + test[i]["science"] + '<td>' + total
+                    table1.appendChild(tr1)
+                }
+            }
+        }
+
+        xhr.send();
+    });
+</script>
+
+</html>
