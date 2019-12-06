@@ -1,0 +1,18 @@
+#container {
+    margin: 100px 350px;
+    display: grid;
+    grid-template-rows: repeat(3, 60px);
+    background-image: linear-gradient(#e66465, #9198e5);
+
+}
+h3, #checkID {
+    text-align: center;
+}
+#container > div {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    margin: 20px 100px;
+}
+.btn{
+    margin: 0px 25px;
+}
