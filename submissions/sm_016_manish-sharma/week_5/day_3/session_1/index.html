@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            background: lightblue;
+        }
+
+        #cont {
+            display: grid;
+            grid-template-areas: "u1  u2"
+                "p1  p2"
+                "l1  l2";
+            grid-gap: 20px;
+            justify-content: center;
+            margin: 150px;
+        }
+
+        #u1 {
+            grid-area: u1;
+        }
+
+        #u2 {
+            grid-area: u2;
+        }
+
+        #p1 {
+            grid-area: p1;
+        }
+
+        #p2 {
+            grid-area: p2;
+        }
+
+        #l1 {
+            grid-area: l1;
+        }
+
+        #l2 {
+            grid-area: l2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='cont'>
+        <label id="u1">Username
+            <input id="u2" type="text" id="username" placeholder="enter your username">
+        </label>
+        <label id="p1">Password
+            <input id="p2" type="text" id="username" placeholder="enter your password">
+        </label>
+        <label id="l1">
+            <button id="l2" onclick="createEntry()">Login</button>
+        </label>
+    </div>
+    <footer>*username for administrators: <b><i>name</i>@admin</b> </footer>
+</body>
+
+
+<script>
+    
+    var datain = sessionStorage.getItem('user')
+    var dataArr = JSON.parse(datain)
+    if(dataArr==undefined){
+        dataArr=[]
+    }
+
+    function createEntry() {
+
+        //taking inputs
+        var user = document.getElementById('u2').value
+        var passw = document.getElementById('p2').value
+
+        var date = new Date()
+        var hours = date.getHours()
+        var mins = date.getMinutes()
+
+        //creating object of input values and setting session storaage
+        // var person = {
+        //     name: user,
+        //     password: passw,
+        //     login: hours + ':' + mins,
+        //     logout: hours + ':' + (mins + Number(5))
+        // }
+
+        function person(n, p, h, m) {
+            this.name = n;
+            this.password = p;
+            this.login = h + ':' + m;
+            this.logout = h + ':' + (m + Number(5));
+        }
+
+
+        var newPerson = new person(user, passw, hours, mins)
+        // dataArr.push(newPerson)
+        // console.log(dataArr)
+
+        // var data = JSON.stringify(newPerson)
+        // sessionStorage.setItem('user', data)
+
+
+        //creating valid user IDs
+        var users = [{
+            name: 'Manish',
+            pass: 1234
+        },
+        {
+            name: 'Lalit',
+            pass: 5678
+        },
+        {
+            name: 'Deepanshu',
+            pass: 9012
+        }]
+
+        var newArr = users.filter(function (ele) {          //selecting the input user ID
+            return ele.name == user
+        })
+
+
+        var admins = [{
+            name: 'Manish@admin',
+            pass: 1234
+        },
+        {
+            name: 'Lalit@admin',
+            pass: 5678
+        },
+        {
+            name: 'Deepanshu@admin',
+            pass: 9012
+        }]
+
+        var newArr2 = admins.filter(function (ele) {
+            return ele.name == user
+        })
+
+        //validating Login IDs
+        var one = Object.keys(newArr)
+        var two = Object.keys(newArr2)
+
+        if (one.length == 0 && two.length == 0) {
+            alert('username/password is wrong')
+            function invalid(n, p) {
+            this.name = n;
+            this.login = 'Invalid user';
+            }
+            var invalidUser= new invalid(user,passw)
+            dataArr.push(invalidUser)
+        }
+        else {
+
+            if (one.length!=0 && user == newArr[0].name && passw == newArr[0].pass) {
+                location.href = 'dash.html'
+                dataArr.push(newPerson)
+
+            }
+            else if (two.length!=0 && user == newArr2[0].name && passw == newArr2[0].pass) {
+                location.href = 'admin.html'
+                dataArr.push(newPerson)
+            }
+        }
+        // console.log(dataArr)
+
+        var data = JSON.stringify(dataArr)
+        sessionStorage.setItem('user', data)
+    }
+</script>
+
+</html>
