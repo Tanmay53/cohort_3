@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="first" />
+    <input type="text" id="second" />
+    <input type="button" id="add" value="ADD" />
+
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+      let addBtn = document.getElementById("add");
+      let first = document.getElementById("first");
+      let second = document.getElementById("second");
+      addBtn.addEventListener("click", function() {
+        let sumBoth = Number(first.value) + Number(second.value);
+        let root = document.getElementById("root");
+        let output = (
+          <div>
+            <h1>{sumBoth}</h1>
+          </div>
+        );
+        ReactDOM.render(output, root);
+      });
+    </script>
+  </body>
+</html>

@@ -34,7 +34,6 @@ class UI {
   }
 
   showRepos(repos) {
-
     let output = '';
     repos.forEach(function(repo) {
       output += `
