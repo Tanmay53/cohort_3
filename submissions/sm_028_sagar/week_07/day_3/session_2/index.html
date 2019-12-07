@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row">
+        <div class="results_per_page col-2 p-5">Select results per page
+            <select name="resultsPerPage px-5" id="results_per_page">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>          
+            </select>
+        </div>
+        <div class="border mt-5 col-8">
+            <nav aria-label="...">
+                <ul class="pagination">
+
+                </ul>
+            </nav>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">first_name
+                            <select name="firstName" id="order">
+                                <option value="asc">asc</option>
+                                <option value="desc">desc</option>
+                            </select>
+                        </th>
+                        <th scope="col">last_name</th>
+                        <th scope="col">email</th>
+                        <th scope="col">gender
+                            <select name="gender" id="gender">
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                                <option value="all">all</option>
+                            </select>
+                        </th>
+                        <th scope="col">english</th>
+                        <th scope="col">maths</th>
+                        <th scope="col">science</th>
+                        <th scope="col">total</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
