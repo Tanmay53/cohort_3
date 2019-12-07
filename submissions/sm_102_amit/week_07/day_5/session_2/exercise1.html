@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+      //Write your code below this line
+      let content = (
+        <div>
+          <h1>My Todo List</h1>
+          <ul>
+            <li>Eat</li>
+            <li>Sleep</li>
+            <li>Code</li>
+            <li>Repeat</li>
+            <li>Repeat Again!</li>
+          </ul>
+          <p>Info: Amit Kumar, 27, 16/01/1993, Blue</p>
+        </div>
+      );
+
+      const root = document.getElementById("root");
+      ReactDOM.render(content, root);
+    </script>
+  </body>
+</html>
