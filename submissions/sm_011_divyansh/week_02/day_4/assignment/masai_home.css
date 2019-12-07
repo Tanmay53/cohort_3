@@ -1,0 +1,143 @@
+.nav{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    
+  }
+  .buttons{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .buttons>div{
+    margin:10px;
+    color:grey;
+  }
+  #bt4{
+    border:2px solid pink;
+    border-radius:8px;
+    height:30px;
+    padding-top:5px;
+    margin-top:4px;
+    color:red;
+  }
+  .banner{
+    background-image: url("https://www.masaischool.com/static/posters/banner_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:800px;
+    width:100%;
+    
+  }
+  .banner>h1{
+    color:white;
+    padding-left:999px;
+    padding-top:200px;
+    font-size:60px;
+    font-family:sans-serif;
+  }
+  span{
+    padding-left: 109px;
+  }
+  .banner>p{
+    color:white;
+    font-size:50px;
+    font-family: serif;
+    padding-left:800px;
+  }
+  .box1{
+    display:grid;
+    grid-template-columns: repeat(3,570px);
+    grid-template-rows: 400px;
+    height:400px;
+    width:100%;
+    
+    margin-top:60px;
+    grid-gap:20px;
+    justify-content: space-between;
+  }
+  .box1>div{
+  
+    
+  }
+  .box1 img{
+    width:250px;
+    height:230px;
+    padding-left:120px;
+
+  }
+  .box1 h2{
+    padding-left:90px;
+    color:#424242;
+    font-family: serif;
+    
+  }
+  .box1 h3{
+    padding-left:50px;
+    color:grey;
+    font-family: serif;
+    
+  }
+  .box2{
+    
+    height:600px;
+    width:100%;
+    background-color:#0288D1;
+  }
+  .box2 h2{
+      color:white;
+      font-family: sans-serif;
+      text-align:center;
+      padding-top:50px;
+      font-size:30px;
+  }
+  .boxes{
+    display:grid;
+    grid-template-columns: 460px 460px;
+    grid-template-rows: 210px 210px;
+     row-gap:23px;
+     
+    height:450px;
+    width:50%;
+  margin-left:529px;
+  justify-content: space-between
+  }
+ .boxes>div{
+   background-color: white;
+   border-radius: 6px;;
+ }
+ .boxes p{
+   color:blue;
+   font-size:30px;
+   text-align: center;
+ }
+ .boxes h3{
+  color:grey;
+  font-size:20px;
+  text-align: center;
+  font-family: sans-serif;
+} 
+@media(max-width:400px)
+{
+  .banner{
+    width:50%;;
+    
+  }
+  .box1{
+    width:50%;;
+    
+  }
+  .boxes{
+    width:30%;
+    grid-template-columns: 160px 160px;
+    grid-template-rows: 210px 210px;
+    
+    justify-content:flex-start;
+    margin-left:0px;
+  }
+  
+  .box2{
+    width:30%;
+    margin-left:0px;
+  }
+}
+  

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Classes</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 p-3">
+          <div>
+            <h5 class="text-info">Car Details</h5>
+            <form>
+              <div class="form-group">
+                <label for="carMake">Car Make</label>
+                <input type="text" class="form-control" id="car-make" />
+              </div>
+              <div class="form-group">
+                <label for="model">Car Model</label>
+                <input type="text" class="form-control" id="model" />
+              </div>
+              <div class="form-group">
+                <label for="topSpeed">Top Speed</label>
+                <input type="text" class="form-control" id="top-speed" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  id="carSubmit"
+                  class="btn btn-primary"
+                  value="Submit"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-4 p-3">
+          <div>
+            <h5 class="text-info">Add Trip Details</h5>
+            <div class="form-group">
+              <label for="carList">Select Your Car</label>
+              <select name="carList" class="form-control" id="car-list">
+                <option value="#">Add Cars To Display</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="distance-travelled">Distance Travelled</label>
+              <input
+                type="text"
+                name="distance-travelled"
+                id="distance-travelled"
+                placeholder="Distance Travelled"
+                class="form-control"
+              />
+              <small class="text-danger">in Hrs : 1 Hour</small>
+            </div>
+            <div class="form-group">
+              <label for="time-taken">Time taken</label>
+              <input
+                type="text"
+                name="time-taken"
+                id="time-taken"
+                placeholder="Time taken"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="submit"
+                value="Submit"
+                class="btn btn-success"
+                id="add-trip-details"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 p-3">
+          <div>
+            <h5 class="text-info">View Trips and Status</h5>
+            <div class="form-group">
+              <label for="carList">Select Your Car</label>
+              <select name="carList" class="form-control" id="car-list-show">
+                <option value="#">Add Cars To Display</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input
+                type="submit"
+                class="btn btn-block btn-secondary"
+                id="show-status"
+                value="Show Status"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="submit"
+                class="btn btn-block btn-secondary"
+                id="show-details"
+                value="Show Details"
+              />
+            </div>
+            <div class="display"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

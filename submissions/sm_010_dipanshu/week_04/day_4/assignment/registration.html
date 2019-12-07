@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Registration
+    </title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 1200px;
+        height: 600px;
+        margin: auto;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .inputPane {
+        width: 50%;
+        height: 100%;
+      }
+
+      .displayPane {
+        width: 50%;
+        height: 100%;
+        background: black;
+        color: white;
+      }
+
+      .input {
+        width: 60%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+
+      .input > label {
+        font-size: 30px;
+        margin-left: 5px;
+      }
+
+      .input > input {
+        margin-top: 20px;
+        font-size: 30px;
+        border: 2px solid black;
+      }
+
+      .input > p {
+        margin-top: 10px;
+        margin-left: 10px;
+        color: red;
+      }
+
+      .firstInput {
+        margin-top: 30px;
+      }
+
+      .register {
+        margin-left: 10%;
+      }
+
+      .button {
+        font-size: 30px;
+        background: black;
+        color: white;
+        padding: 10px;
+      }
+
+      input {
+        padding: 5px;
+      }
+
+      .output {
+        width: 60%;
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+
+      .output > label {
+        font-size: 30px;
+        margin-top: 30px;
+        margin-left: 5px;
+      }
+
+      .output > p {
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      .firstInput > p:nth-child(2) {
+        font-size: 70px;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          flex-direction: column;
+          width: 400px;
+          margin-top: 50px;
+          font-size: 15px;
+        }
+
+        .inputPane {
+          width: 100%;
+        }
+
+        .displayPane {
+          width: 100%;
+          margin-top: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputPane">
+        <div class="input firstInput">
+          <label for="name">NAME</label>
+          <input id="name" type="text" />
+          <p id="nameError"></p>
+        </div>
+
+        <div class="input">
+          <label for="email">EMAIL</label>
+          <input id="email" type="text" />
+          <p id="emailError"></p>
+        </div>
+
+        <div class="input">
+          <label for="mobile">MOBILE</label>
+          <input id="mobile" type="text" />
+          <p id="mobileError"></p>
+        </div>
+
+        <div class="input register">
+          <button class="button" onclick="register()">REGISTER</button>
+        </div>
+      </div>
+      <div class="displayPane">
+        <div class="output firstInput">
+          <label for="name">NAME</label>
+          <p id="userName"></p>
+        </div>
+
+        <div class="output">
+          <label for="email">EMAIL</label>
+          <p id="userEmail"></p>
+        </div>
+
+        <div class="output">
+          <label for="mobile">MOBILE</label>
+          <p id="userMobile"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function register() {
+        var inp = document.querySelectorAll("input");
+
+        var inputs = [];
+
+        for (var i = 0; i < inp.length; i++) {
+          inputs.push(inp[i].value);
+        }
+
+        name = inputs[0];
+        email = inputs[1];
+        mobile = inputs[2];
+
+        var nameError = document.getElementById("nameError");
+        var emailError = document.getElementById("emailError");
+        var mobileError = document.getElementById("mobileError");
+
+        nameFlag = true;
+        emailFlag = true;
+        mobileFlag = true;
+
+        if (name.length < 4 || name.length > 10) {
+          nameFlag = false;
+          if (name.length < 4) {
+            nameError.textContent = "Name too short";
+          } else {
+            nameError.textContent = "Name too long";
+          }
+        }
+
+        var result = hasEmail(email);
+        if (result[0] == 0) {
+          emailFlag = false;
+          emailError.textContent = result[1];
+        }
+
+        if (mobile.length != 10) {
+          mobileFlag = false;
+          mobileError.textContent = "Enter a valid mobile number";
+        }
+
+        if (nameFlag) {
+          nameError.textContent = "";
+        }
+
+        if (emailFlag) {
+          emailError.textContent = "";
+        }
+
+        if (mobileFlag) {
+          mobileError.textContent = "";
+        }
+
+        if (nameFlag && emailFlag && mobileFlag) {
+          for (var i = 0; i < inp.length; i++) {
+            inp[i].value = "";
+          }
+
+          var userName = document.getElementById("userName");
+          var userEmail = document.getElementById("userEmail");
+          var userMobile = document.getElementById("userMobile");
+
+          userName.textContent = name;
+          userEmail.textContent = email;
+          userMobile.textContent = mobile;
+        }
+      }
+
+      function indexOf(array, char) {
+        var count = 0;
+        var indexPos = [];
+        var returnArray = [];
+
+        for (var i = 0; i < array.length; i++) {
+          if (array[i] === char) {
+            count++;
+            indexPos.push(i);
+          }
+        }
+
+        returnArray.push(count);
+        returnArray.push(indexPos);
+
+        //console.log(returnArray)
+        return returnArray;
+      }
+
+      function checkAtSign(str) {
+        var arr = indexOf(str, "@");
+        //console.log(arr)
+
+        var index = arr[0];
+        //console.log(index)
+
+        var posArray = arr[1];
+        //console.log(posArray[0])
+
+        if (posArray[0] == 0) {
+          //console.log('Invalid email. @ found at first position.')
+          return -3;
+        } else if (index == 1) {
+          //console.log('Found @ at index',index)
+          return posArray[0];
+        } else if (index > 1) {
+          //console.log('Multiple @ signs found')
+          return -2;
+        } else {
+          //console.log('@ not found')
+          return -1;
+        }
+      }
+
+      function split(inputString, splitCharacter) {
+        //console.log(inputString)
+
+        var tempWord = "";
+        var tempArray = [];
+
+        for (var i = 0; i < inputString.length; i++) {
+          if (inputString[i] != splitCharacter) {
+            tempWord += inputString[i];
+          } else {
+            if (tempWord.length > 0) {
+              tempArray.push(tempWord);
+            }
+
+            tempWord = "";
+          }
+        }
+
+        if (tempWord.length > 0) {
+          tempArray.push(tempWord);
+        }
+
+        return tempArray;
+      }
+
+      function checkLettersValidity(str) {
+        var letters =
+          "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-.";
+
+        notFound = true;
+
+        //console.log(str)
+        for (var i = 0; i < str.length; i++) {
+          for (var j = 0; j < letters.length; j++) {
+            if (str[i] === letters[j]) {
+              notFound = false;
+              //console.log('1',str[i],notFound)
+              break;
+            } else {
+              notFound = true;
+              //console.log('2',str[i],notFound)
+            }
+          }
+          //console.log(i,str[i],notFound)
+          if (notFound) {
+            //console.log('Invalid email. Invalid letters found')
+            return -2;
+          }
+        }
+      }
+
+      function checkTwoDots(str) {
+        for (var i = 0; i < str.length - 1; i++) {
+          if (str[i] == str[i + 1] && str[i] == ".") {
+            //console.log('Invalid email. 2 dots(.) found simultaneously')
+            return -3;
+          }
+        }
+      }
+
+      function checkBefore(str) {
+        if (str[0] == ".") {
+          //console.log('Invalid email. Dot(.) found at first position')
+          return -1;
+        }
+
+        if (checkLettersValidity(str) < 0) {
+          //invalid characters found
+          return -2;
+        }
+
+        if (checkTwoDots(str) < 0) {
+          //2 dots found simultaneously
+          return -3;
+        }
+      }
+
+      function checkAfter(str) {
+        if (str == undefined) {
+          return -3;
+        }
+
+        if (str[0] == ".") {
+          return -1;
+        }
+        var afterParts = split(str, ".");
+        //console.log(afterParts)
+
+        domainCheck = afterParts[afterParts.length - 1];
+        //console.log(domainCheck,typeof(domainCheck))
+
+        if (
+          domainCheck != "com" &&
+          domainCheck != "org" &&
+          domainCheck != "net"
+        ) {
+          return -2;
+        }
+      }
+
+      function hasEmail(str) {
+        var returnCodeAtSign = checkAtSign(str);
+
+        switch (returnCodeAtSign) {
+          case -1:
+            return [0, "Not a valid email. @ sign missing."];
+
+          case -2:
+            return [0, "Not a valid email. Multiple @ signs found."];
+
+          case -3:
+            return [0, "Invalid email. @ found at first position."];
+        }
+
+        var splits = split(str, "@");
+        //console.log(splits)
+
+        var beforeAt = splits[0];
+        var afterAt = splits[1];
+
+        //console.log(beforeAt,afterAt)
+
+        var returnCodeBefore, returnCodeAfter;
+
+        returnCodeBefore = checkBefore(beforeAt);
+        switch (returnCodeBefore) {
+          case -1:
+            return [0, "Invalid email. Dot(.) found at first position"];
+          case -2:
+            return [0, "Invalid email. Invalid letters found"];
+          case -3:
+            return [0, "Invalid email. 2 dots(.) found simultaneously"];
+        }
+
+        returnCodeAfter = checkAfter(afterAt);
+        switch (returnCodeAfter) {
+          case -1:
+            return [0, "Invalid email. Dot(.) immediately after @."];
+          case -2:
+            return [0, "Invalid domain."];
+          case -3:
+            return [0, "No characters after @ sign"];
+        }
+
+        return [1, "Congrats! It is a valid email."];
+      }
+    </script>
+  </body>
+</html>
