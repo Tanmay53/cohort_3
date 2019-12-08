@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>List Of Users</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      th {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row p-4">
+        <div class="col-lg-12">
+          <div>
+            <div class="d-inline">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h4>List Of Users</h4>
+                </div>
+                <div class="col-lg-3">
+                  <p class="lead text-secondary">Numbers of users to show</p>
+                </div>
+                <div class="col-lg-3">
+                  <select name="max" id="max" class="form-control">
+                    <option value="10" selected>10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div>
+            <form>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="Search By Name"
+                      id="srchName"
+                      class="form-control search"
+                    />
+                    <small class="text-info">Search By Name</small>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">@</div>
+                    </div>
+                    <input
+                      type="text"
+                      placeholder="Search By Domain"
+                      id="srchDomain"
+                      class="form-control search"
+                    />
+                  </div>
+                  <small class="text-info">Search By Domain</small>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="Search By Email"
+                      id="srchEmail"
+                      class="form-control search"
+                    />
+                    <small class="text-info">Search By Email</small>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Click to Sort"
+                  class="email"
+                >
+                  Email
+                  <i
+                    id="email-toggle"
+                    class="text-danger fas fa-chevron-circle-down"
+                  ></i>
+                </th>
+                <th>Gender</th>
+                <th>English</th>
+                <th>Math</th>
+                <th>Science</th>
+                <th
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Click to Sort"
+                  class="total"
+                >
+                  Total Marks
+                  <i
+                    id="total-toggle"
+                    class="text-danger fas fa-chevron-circle-down"
+                  ></i>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination  d-flex justify-space-between">
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8985a3179d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

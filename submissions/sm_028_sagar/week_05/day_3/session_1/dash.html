@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>dash</title>
+    <style>
+        p {
+            border: 1px solid black;
+            padding: 5px;
+            width: max-content;
+        }
+    </style>
 </head>
 
 <body>
+    <button onclick="logout()">Logout</button>
 
     <script>
         var body = document.querySelector('body');
@@ -21,7 +29,8 @@
         var time = new Date();
         console.log(time);
         console.log(time.getMinutes(), time.getHours());
-        timeString_login = time.getHours() + " : " + time.getMinutes() + " : " + time.getSeconds();
+
+        timeString_login = (time.getHours() - 12) + " : " + time.getMinutes() + " : " + time.getSeconds();
 
 
         setTimeout(function() {
@@ -36,19 +45,23 @@
 
         //append p for logout
         var logout_time = document.createElement('p');
-        timeString_logout = time.getHours() + " : " + (time.getMinutes()) + " : " + (time.getSeconds() + 10);
+        timeString_logout = (time.getHours() - 12) + " : " + (time.getMinutes()) + " : " + (time.getSeconds() + 10);
         logout_time.textContent = "Logout time : " + timeString_logout;
         body.appendChild(logout_time);
         var endtime = (time.getSeconds() + 10);
         localStorage.setItem("endtime", endtime);
 
-        console.log('end time ', endtime);
-        console.log('time ', (time.getSeconds()));
+        // console.log('end time ', endtime);
+        // console.log('time ', (time.getSeconds()));
 
 
         //check sessionStorage
         if (sessionStorage.temp_username == null) {
             console.log('check here')
+            window.location.replace("index.html");
+        }
+
+        function logout() {
             window.location.replace("index.html");
         }
     </script>

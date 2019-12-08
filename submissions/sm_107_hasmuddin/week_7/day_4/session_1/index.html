@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Car model</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- car model -->
+    <div class="container">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-lg-4 col-md-8 col-12  border p-4">
+            <h1>Insert Car Model</h1>
+            <input
+              type="text"
+              placeholder="Car make"
+              class="form-control m-2"
+              id="carmake"
+            />
+            <input
+              type="text"
+              placeholder="Model"
+              class="form-control m-2"
+              id="model"
+            />
+            <input
+              type="text"
+              placeholder="Top Speed (km/hr)"
+              class="form-control m-2"
+              id="topSpeed"
+            />
+            <input
+              type="submit"
+              id="submitModel"
+              class="btn btn-success m-2 px-5"
+            />
+          </div>
+
+          <!-- car select  -->
+          <div class="col-lg-4 col-md-8 col-12 border p-4">
+            <h1>Car Trips</h1>
+            <select name="cars" id="cars" class="custom-select m-2">
+              <!-- all cars here -->
+              <option value="--" disabled selected>Select Car</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Time"
+              id="time"
+              class="form-control m-2"
+            />
+            <input
+              type="text"
+              placeholder="Speed (km/hr)"
+              id="speed"
+              class="form-control m-2"
+            />
+            <input
+              type="submit"
+              id="submitTrip"
+              class="btn btn-success m-2 px-5"
+            />
+          </div>
+          <!-- details -->
+          <div class="col-lg-4 col-md-8 col-12 border p-4">
+            <h1>Car Details</h1>
+            <select name="cars" id="carsDetails" class="custom-select m-2">
+              <!-- all cars here -->
+              <option value="--" disabled selected>Select Car</option>
+            </select>
+            <button class="btn btn-info mx-3" id="showCarDetailsBtn">
+              Show Car Details
+            </button>
+            <button class="btn btn-info" id="tripInfoBtn">Trip Info</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- information -->
+    <div class="container">
+      <div class="form-row border">
+        <h1 class="text-info">Car Details</h1>
+      </div>
+      <div class="form-row">
+        <div class="col-6">
+          <h3 class="border text-center bg-dark text-white">Details</h3>
+          <div id="detailsCar" class="col-6"></div>
+        </div>
+        <div class="col-6">
+          <h3 class="text-center bg-dark text-white">Trips Details</h3>
+          <div id="tripsDetails" class="col-6"></div>
+        </div>
+      </div>
+      <!-- info here -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
