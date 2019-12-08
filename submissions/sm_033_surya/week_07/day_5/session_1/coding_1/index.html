@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-
 <body>
     <div class="container">
         <div class="row p-4">
@@ -62,7 +60,6 @@
                 tr.appendChild(td)
                 var td = document.createElement("td")
                 var btn = document.createElement("button")
-                //  btn.setAttribute("value",data.items[i].id)
                 btn.setAttribute("onclick", `showdetails(${data.items[i].id})`)
                 btn.innerHTML = "more Details.."
                 td.appendChild(btn)
@@ -77,5 +74,4 @@
         }
     </script>
 </body>
-
 </html>
