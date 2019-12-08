@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 2</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+      let todoTask = ["Cooking", "Playing", "Homework", "Cleaning", "Dancing"];
+      let person = {
+        name: "Hasmuddin Ansari",
+        age: "21",
+        dob: "20/07/1998",
+        favColor: "Red",
+        display: function() {
+          return `Name : ${this.name},  Age : ${this.age}  DOB : ${this.dob} \n Favorite Color : ${this.favColor}`;
+        }
+      };
+
+      let taskList = todoTask.map(function(item) {
+        return <li>{item}</li>;
+      });
+      var output = (
+        <div>
+          <h1>My Todo List</h1>
+          <ul>{taskList}</ul>
+          <div>{person.display()}</div>
+        </div>
+      );
+      var root = document.getElementById("root");
+      ReactDOM.render(output, root);
+    </script>
+  </body>
+</html>
