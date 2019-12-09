@@ -117,7 +117,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="nameOnCard">Name on card</label>
                             </div>
@@ -139,27 +139,83 @@
                     </div>
                 </div>
 
+                <!-- Your Cart                 -->
+
                 <div class="col-md-4">
-                    <div>
-                        <span class="ml-5 text-muted h3 ">Your cart
-                        </span>
-                        <span class="badge badge-secondary rounded-circle text-right h3">3</span>
+                    <div class="mb-3">
+                        <h3 class="ml-5 text-muted ">Your cart<span
+                                class="badge badge-secondary rounded-circle   float-right mr-3">3</span>
+                        </h3>
+
 
                     </div>
 
 
-                    <div class="card ml-5" style="width: 18rem;">
+                    <div class="ml-5">
 
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">First Product</li>
-                            <li class="list-group-item">Second Product</li>
-                            <li class="list-group-item">Third Product</li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div>
+                                    <h5>First Product</h5>
+                                    <small id="nameOnCardHelp" class="text-muted">
+                                        Brief Description
+                                    </small>
+                                </div>
+                                <span class="h5">$12</span>
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div>
+                                    <h5>Second Product</h5>
+                                    <small id="nameOnCardHelp" class="text-muted">
+                                        Brief Description
+                                    </small>
+                                </div>
+                                <span class=" h5">$8</span>
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div>
+                                    <h5>Third Product</h5>
+                                    <small id="nameOnCardHelp" class="text-muted ">
+                                        Brief Description
+                                    </small>
+                                </div>
+                                <span class=" h5">$5</span>
+                            </li>
+                            <li class="list-group-item text-success d-flex justify-content-between">
+                                <div>
+                                    <h5>Promo Code</h5>
+                                    <small id="nameOnCardHelp" class="text-success">
+                                        EXAMPLECODE
+                                    </small>
+                                </div>
+                                <span class="h5 text-success ">$5</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div>
+                                    <h5>Total (USD)</h5>
+                                </div>
+                                <span class="font-weight-bold h5  ">$20</span>
+                            </li>
+
                         </ul>
+
+
+                        <div class="card mt-5">
+
+                            <div class="input-group card-body p-2">
+
+                                <input type="text" placeholder="Promo code" class="form-control" />
+
+                                <div class="input-group-append">
+                                    <span class="input-group-text bg-secondary text-white">Reedem</span>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
-
-                </div>
-
-            </div>
 
 
 
