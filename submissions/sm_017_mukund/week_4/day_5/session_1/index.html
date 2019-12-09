@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.JS.10.1 ! -->
+  <h1>Change the buttons text color random value</h1>
+  <button id="changeColor">Click here to change my color</button>
+
+  <!-- FSD.JS.10.2 !-->
+  <h1 id="colorDbl">My color should change when I double click the button!</h1>
+  <button id="changeColorDouble">Double Click here to change the color of the h1 tag !</button>
+  
+  <!-- FSD.JS.10.3 !-->
+  <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="changeBackground">Click here to change my color!</button>
+  <script type="text/javascript">
+
+      var changeButton = document.getElementById('changeColor');
+
+      function random(number){
+        return Math.floor(Math.random()*number);
+      }
+
+      function switchColor(){
+          var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+          changeButton.style.color = randomColor
+      }
+
+      changeButton.addEventListener('click', switchColor);
+
+
+      var changeButtonDouble = document.getElementById('changeColorDouble');
+      var changeH1Dbl = document.getElementById('colorDbl')
+
+      function switchColorDouble(){
+          var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+          changeH1Dbl.style.color = randomColor
+      }
+
+      changeButtonDouble.addEventListener('dblclick',switchColorDouble)
+
+
+
+      var changeButtonBackground = document.getElementById('changeBackground');
+      var flag = 0
+
+      function switchBackground(){
+          flag++
+          if( flag == 2 ){
+            changeButtonBackground.removeEventListener('click',switchBackground)
+          }
+          var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+          changeButtonBackground.style.backgroundColor = randomColor
+      }
+
+      changeButtonBackground.addEventListener('click',switchBackground);
+      // changeButtonBackground.onmouseover = mouseover;
+      changeButtonBackground.addEventListener('onmouseover',mouseover);
+
+      function mouseover(){
+        var ran = random(2)
+        changeButtonBackground.style.fontSize = ran
+      }
+      
+  </script>
+</body>
+</html>
