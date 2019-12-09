@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row p-4">
+            <div class="col-3">
+                <label>Please Enter your username</label></div>
+            <div class="col-5">
+                <input class="userIn col-12"></input>
+            </div>
+            <div class="col-3">
+                <button class="input">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="div1"></div>
+    </div>
+    <script>
+        var btn = document.getElementsByClassName("input")[0]
+        btn.addEventListener("click", function () {
+            var user = document.getElementsByClassName("userIn")[0].value
+            if (user == "") {
+                alert("please Enter username")
+            }
+            else {
+                console.log(user);
+                var user = user
+                var mainurl = "https://api.github.com/search/users?q=" + user
+                fetch(mainurl)
+                    .then(res => res.json())
+                    .then(res => {
+                        console.log(res)
+                        document.getElementById("div1").innerHTML = JSON.stringify(res)
+                        displayData(res)
+                        localStorage.setItem("data", JSON.stringify(res))
+                    })
+            }
+        })
+        function displayData(data) {
+            var div = document.getElementById("div1")
+            div.innerHTML = " "
+            var table = document.createElement("table")
+            table.setAttribute("class", "table")
+            var tr = document.createElement("tr")
+            tr.innerHTML = `<td>User Name</td> <td>Profile Link</td><td>Profile Picture</td>`
+            table.appendChild(tr)
+            for (i = 0; i < data.items.length; i++) {
+                var tr = document.createElement("tr")
+                tr.innerHTML = `<td>${data.items[i].login}</td> <td>${data.items[i].html_url}</td>`
+                var td = document.createElement("td")
+                var img = document.createElement("img")
+                img.setAttribute("style", "height:100px;width:100px")
+                img.setAttribute("src", data.items[i].avatar_url)
+                td.appendChild(img)
+                tr.appendChild(td)
+                var td = document.createElement("td")
+                var btn = document.createElement("button")
+                btn.setAttribute("onclick", `showdetails(${data.items[i].id})`)
+                btn.innerHTML = "more Details.."
+                td.appendChild(btn)
+                tr.appendChild(td)
+                table.appendChild(tr)
+                div.appendChild(table)
+            }
+        }
+        function showdetails(id) {
+            location.replace("user_repo.html")
+            localStorage.setItem("userid", id)
+        }
+    </script>
+</body>
+</html>
