@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Admin Page</title>
+    <style>
+        body{
+            background:blueviolet;
+        }
+        #cont{background: wheat;
+            display: grid;
+            grid-template-areas: 'np lp';
+        }
+        #nameList { grid-area: np;font-size: 30px;}
+        #loginList { grid-area:lp;font-size: 30px;}
+    </style>
+</head>
+
+<body>
+    <div id="cont">
+       <div id='nameList'>Name</div>
+       <div id='loginList'>log in</div>
+    </div>
+</body>
+
+
+<script>
+    
+    var dataOut = sessionStorage.getItem('user')
+    var datain = JSON.parse(dataOut)
+    
+    console.log(datain)
+
+    var parent1= document.getElementById('nameList')
+    var parent2=document.getElementById('loginList')
+    
+    
+    // var p1 = document.createElement('p')
+    // p1.textContent=datain.name
+    // var p2 = document.createElement('p')
+    // p2.textContent=datain.login
+
+    function onclic(){
+    
+    for(i=0;i<datain.length;i++){
+    var p1 = document.createElement('p')
+    p1.textContent=datain[i].name
+    var p2 = document.createElement('p')
+    p2.textContent=datain[i].login
+    parent1.appendChild(p1)
+    parent2.appendChild(p2)
+    }
+
+   }
+
+    window.onload=onclic();
+
+</script>
+
+</html>
