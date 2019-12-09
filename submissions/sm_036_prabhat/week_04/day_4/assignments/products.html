@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        #box {
+            display: flex;
+            height: 600px;
+            width: 1400px;
+            margin-top: 40px;
+            margin-left: 150px;
+        }
+
+        label {
+            font-size: 25px;
+            padding: 0px;
+        }
+
+        input {
+            padding: 15px;
+            margin-bottom: 10px;
+            width: 350px;
+            border: 3px solid black;
+        }
+
+        .register {
+            margin-top: 20px;
+            padding: 10px;
+            width: 390px;
+            border: 3px solid black;
+            background: black;
+            color: white;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 150px;
+            border: 3px solid black;
+            background: black;
+            color: white;
+        }
+
+        .input {
+            padding: 50px;
+            height: 450px;
+            width: 450px;
+        }
+
+        .output {
+            padding: 80px;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        table tr td {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        #imgSize {
+            height: 150px;
+            width: 170px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Enter Product Details With Image</h1>
+    <hr>
+    <div id="box">
+        <div class="input">
+            <label>PRODUCT NAME</label><br>
+            <input id="name" type="text"><br>
+
+            <label>PRICE</label><br>
+            <input id="price" type="text"><br>
+
+            <label>IMAGE URL</label><br>
+            <input id="imageurl" type="text"><br>
+
+            <button onsubmit="preventDefault()" id="register" class="register" onclick="register()">SUBMIT
+                DETAILS</button>
+            <button id="update" class="register" onclick="update()">UPDATE DETAILS</button>
+        </div>
+
+        <div id="output">
+            <table id="tableData" border="1">
+                <tr>
+                    <td>NAME</td>
+                    <td>PRICE</td>
+                    <td>IMAGE</td>
+                    <td>EDIT</td>
+                    <td>DELETE</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("output").style.display = "none";
+        document.getElementById("update").style.display = "none";
+
+        function register() {
+            document.getElementById("output").style.display = "block";
+
+            var name = document.getElementById("name").value;
+            var price = document.getElementById("price").value;
+            var imageurl = document.getElementById("imageurl").value;
+
+            var tableData = document.getElementById("tableData");
+
+            // Creating Table To Append Element
+
+            var tr = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var image = document.createElement("img")
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var editButton = document.createElement('button');
+            var td5 = document.createElement('td');
+            var deleteButton = document.createElement('button');
+
+
+            tableData.appendChild(tr);
+            td1.innerHTML = name
+            tr.appendChild(td1);
+            td2.innerHTML = price
+            tr.appendChild(td2)
+            tr.appendChild(td3)
+            td3.appendChild(image)
+            image.setAttribute('src', imageurl)
+            image.setAttribute('id', "imgSize")
+            tr.appendChild(td4)
+            editButton.innerHTML = "EDIT"
+            td4.appendChild(editButton);
+            tr.appendChild(td5)
+            deleteButton.innerHTML = "DELETE"
+            td5.appendChild(deleteButton);
+
+            // Edit Function
+            
+            td4.addEventListener('click', function () {
+                
+                document.getElementById("update").style.display = "block";
+                document.getElementById("register").style.display = "none";
+                var ele = this.parentElement;
+                console.log(ele)
+                document.getElementById('name').value = ele.querySelectorAll('td')[0].innerHTML;
+                document.getElementById('price').value = ele.querySelectorAll('td')[1].innerHTML;
+                document.getElementById('imageurl').value = ele.querySelector('img').src;
+                
+                var updateEle = document.getElementById('update');
+                updateEle.addEventListener('click',function(){
+                    ele.querySelectorAll('td')[0].textContent = document.getElementById("name").value;
+                    ele.querySelectorAll('td')[1].textContent = document.getElementById('price').value;
+                    ele.querySelectorAll('img')[0].src = document.getElementById("imageurl").value;
+                    
+                    document.getElementById("update").style.display = "none";
+                    document.getElementById("register").style.display = "block";
+                })
+                
+            })
+
+            // Delete Function
+    
+            td5.addEventListener('click', function () {
+                this.parentElement.remove()
+    
+            })
+        }
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div id="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                  <span> Entries per page: </span>
+                    <select id="entries" class='form-control'>
+                      <option value='10'>10</option>
+                      <option value='25'>25</option>
+                      <option value='50'>50</option>
+                      <option value='100'>100</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                  <span> Sort by: </span>
+                    <select id="parameter" class='form-control'>
+                      <option value='first_name'>First name</option>
+                      <option value='last_name'>Last name</option>
+                      <option value='email'>Email</option>
+                      <option value='gender'>Gender</option>
+                      <option value='english'>English</option>
+                      <option value='maths'>Maths</option>
+                      <option value='science'>Science</option>
+                      <option value='total'>Total</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                  <span> Order: </span>
+                    <select id="order" class='form-control'>
+                      <option value='asc'>Ascending</option>
+                      <option value='desc'>Descending</option>
+                    </select>
+                </div>
+                <div class="col-1">
+                  <span> Filter: </span>
+                    <select id="filter" class='form-control'>
+                      <option value='all'>All</option>
+                      <option value='male'>Male</option>
+                      <option value='female'>Female</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                  <span> Search by: </span>
+                    <select id="search" class='form-control'>
+                      <option value='--'>Choose..</option>
+                      <option value='Firstname'>Firstname</option>
+                      <option value='Lastname'>Lastname</option>
+                      <option value='Email'>Email</option>
+                      <option value='Domain'>Domain name</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <div>Navigation:</div>
+                    <div id="paginationBar" class="btn-group" role="group" aria-label="Basic example">
+                        
+                    </div>
+                </div>
+                <div class="col-12">
+                  <div class='mt-3' id="display">
+                    
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/JavaScript" src="script.js"></script>
+    <script>
+      $(document).ready(function(){
+        main()
+      })
+
+    </script>
+  </body>
+</html>
