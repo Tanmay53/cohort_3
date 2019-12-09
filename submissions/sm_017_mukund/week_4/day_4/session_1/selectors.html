@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="firsth1()">Change H1</button>
+        <button onclick="allh3()">Change H3</button>
+        <button onclick="allh5()">Change H5</button>
+        <button onclick="changeG()">Change Green</button>
+        <button onclick="changeR()">Change Red</button>
+        <button onclick="changeB()">Change Blue</button>
+        <script type="text/javascript">
+
+            function firsth1(){
+                document.querySelector('h1').style.color = 'red'
+            }
+        
+            function allh3(){
+                var h3 = document.querySelectorAll('h3')
+        
+                for(i=0;i<h3.length;i++){
+                    var h = h3[i]
+                    h.style.color = 'green'
+                }
+            }
+        
+            function allh5(){
+                var h5 = document.querySelectorAll('h5')
+        
+                for(i=0;i<h5.length;i++){
+                    var h = h5[i]
+                    h.style.color = 'blue'
+                }
+            }
+        
+            function changeG(){
+                var G = document.getElementsByClassName('green')
+        
+                for(i=0;i<G.length;i++){
+                    G[i].style.color = 'green'
+                }
+            }
+        
+            function changeB(){
+                var B = document.getElementsByClassName('blue')
+        
+                for(i=0;i<B.length;i++){
+                    B[i].style.color = 'blue'
+                }
+            }
+        
+            function changeR(){
+                var R = document.getElementsByClassName('red')
+        
+                for(i=0;i<R.length;i++){
+                    R[i].style.color = 'red'
+                }
+            }
+        
+        </script>
+    </body>
+</html>

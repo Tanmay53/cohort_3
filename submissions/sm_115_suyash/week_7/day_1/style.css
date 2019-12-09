@@ -1,0 +1,23 @@
+#showcase-img {
+  height: 26rem;
+  background: url('https://res.cloudinary.com/urbanclap/image/upload/fl_progressive:steep/v1490770948/2x_1.jpg') no-repeat center center/cover; 
+}
+#overlay {
+  background: rgba(15, 11, 11, 0.342);
+  height: 100%;
+  width: 100%;
+}
+#input-form {
+  padding: 1.55rem !important;
+}
+.font-size-14px{
+  font-size: .8rem;
+}
+.font-size-20px h2 {
+  font-size: 3rem;
+  color: #bbb;
+}
+.font-size-20px p {
+  font-size: 14px;
+  color: #bbb;
+}

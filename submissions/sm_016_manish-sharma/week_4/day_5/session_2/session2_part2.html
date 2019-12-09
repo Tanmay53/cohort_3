@@ -1,0 +1,46 @@
+
+<html>
+        <head>
+            <title>session2 part2</title>
+            <style>
+                div{
+                    margin-left: 200px;
+                    height: 600px;
+                    width: 600px;
+                    background: lightskyblue;
+                }
+                button{
+                    margin-top: 400px;
+                    margin-left: 400px;
+                    height: 100px;
+                    width: 160px;
+                    background: green;
+                }
+            </style>
+        </head>
+        <body>
+
+            <div>
+                <button>SUBMIT</button>
+            </div>
+    
+        </body>
+            
+        <script>
+            var div=document.querySelector('div')
+            var button=document.querySelector('button')
+            function change(){
+                col = 'rgb(' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ')'
+                button.style.background = col
+            }
+
+            div.addEventListener('mouseenter',change)
+
+            function original(){
+                button.style.background = 'green'
+            }
+
+            div.addEventListener('mouseleave',original)
+            
+        </script>
+    </html>

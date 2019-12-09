@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid bg-dark text-light">
+        <div class="row">
+            <div class="col-6 p-5">
+                <form>
+                    <div class="form-group">
+                        <label for="firstName">First Name<span class="text-muted">(Optional)</span></label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name<span class="text-muted">(Optional)</span></label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address<span class="text-muted">(Optional)</span></label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone No.<span class="text-muted">(Optional)</span></label>
+                        <input type="Number" class="form-control" id="phone" placeholder="Enter Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select class="form-control" id="type">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <button class="btn w-100 text-center btn-primary" id="submitDetails">Submit Details</button>
+                </form>
+            </div>
+            <div class="col-6 p-5">
+                <select id="userSelect" class="custom-select">
+                    <option value="">Select User</option>
+                </select>
+                <div class="col m-5" id="userInfo"></div>
+            </div>
+        </div>
+        <div class="row" id="optionsDiv">
+            <div class="col-2 m-auto">
+                <p>Filter</p>
+                <select id="filterSelect" class="custom-select">
+                    <option value="all">All</option>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <div class="col-2 m-auto">
+                <p>Sort</p>
+                <select id="sortSelect" class="custom-select">
+                    <option value="inc">A-Z</option>
+                    <option value="desc">Z-A</option>
+                </select>
+            </div>
+        </div>
+        <table class="table table-dark mt-2">
+            <thead>
+                <th scope="col">Username</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+                <th scope="col">Delete Button</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

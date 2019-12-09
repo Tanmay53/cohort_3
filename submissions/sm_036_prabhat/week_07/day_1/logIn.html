@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-center display-3 mt-5">Log In</div>
+    </div>
+    <div class="row">
+        <div class="col-2 mx-5"></div>
+        <div class="col-6 mx-5">
+            <form>
+                <div class="form-group">
+                    <label>User Id</label>
+                    <input type="text" class="form-control" id="emailInp" placeholder="User Id">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="text" class="form-control" id="pass" placeholder="Password">
+                </div>
+            </form>
+            <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="container">
+        <div class="mx-5 my-5" id="output1"></div>
+        <div class="mx-5 my-5" id="output"></div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
