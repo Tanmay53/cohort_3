@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-6">
+                <div class="col-12">
+                    <div class="row">
+                        <label class="mx-3">Car </label></div>
+                    <input type="text" class="brand col-12"></input>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <label class="mx-3">Model </label></div>
+                    <input type="text" class="model col-12"></input>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <label class="mx-3">Top Speed </label></div>
+                    <input type="text" class="topSpeed col-12"></input>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <label class="mx-3">Avg Speed </label></div>
+                    <input type="text" class="avgSpeed col-12"></input>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <label class="mx-3">Distance Travelled </label></div>
+                    <input type="text" class="distance col-12"></input>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <label class="mx-3">Trips </label></div>
+                    <input type="text" class="trips col-12"></input>
+                </div>
+                <div class="col-12 text-center">
+                    <button class="submitData btn btn-primary my-3">Submit</button>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="col-12">
+                    <div class="row">
+                        <label class="mx-3">Select Car </label></div>
+                    <select id="pickCar"></select>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <label class="mx-3">Distance </label></div>
+                    <input type="text" id="dist" class="col-12"></input>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <label class="mx-3">Time </label></div>
+                    <input type="text" id="time" class="col-12"></input>
+                </div>
+                <div class="col-12 text-center my-3">
+                    <button class="ridebtn btn btn-success">Submit</button>
+                </div>
+                <div class="statusCar"></div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <button id="allData" class="btn btn-outline-danger my-3">Show All Cars</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="col-12 tableForm">
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
