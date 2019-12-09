@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        #flex, #top-bar {
+            display: flex;
+            margin: 10px;
+        }
+
+        #min-bar, #max-bar, #mid-bar {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #min-score, #max-score {
+            padding: 30px;
+            border: 1px solid black;
+            margin-left: 40px;
+            margin-bottom: 5px;
+        }
+
+        #min-score {
+            background-color: red;
+        }
+
+        #max-score {
+            background-color: green;
+        }
+
+        #curr_score {
+            text-align: center;
+            width: 150px;
+            padding: 20px;
+            margin-top: 5px;
+            border: 1px solid black;
+            background-color: grey;
+        }
+
+        #box #mid-bar {
+            margin-top: 50px;
+        }
+
+        #mid-bar h3 {
+            margin: auto;
+        }
+
+        #line-1, #line-2, #line-3, #line-5, #line-4 {
+            text-align: center;
+        }
+
+        #bottom-bar button {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        #bottom-bar {
+            margin-top: 20px;
+        }
+
+        #line-1 :nth-child(1) {
+            background-color: green;
+        }
+
+        #line-1 :nth-child(3) {
+            background-color: green;
+        }
+
+        #line-3 :nth-child(1) {
+            background-color: green;
+        }
+
+        #line-3 :nth-child(3) {
+            background-color: green;
+        }
+
+        #line-1 :nth-child(2) {
+            background-color: orange;
+        }
+
+        #line-2 :nth-child(1) {
+            background-color: orange;
+        }
+
+        #line-2 :nth-child(2) {
+            background-color: orange;
+        }
+
+        #line-2 :nth-child(3) {
+            background-color: orange;
+        }
+
+        #line-3 :nth-child(2) {
+            background-color: orange;
+        }
+
+        #line-4 :nth-child(1) {
+            background-color: purple;
+        }
+
+        #line-5 button {
+            background-color: black;
+            color: white;
+            width: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="flex">
+        <div id="box">
+            <div id="top-bar">
+                <div id="min-bar">
+                    <div id="min-score">43</div>
+                    <div>MIN</div>
+                </div>
+                <div id="max-bar">
+                    <div id="max-score">2019</div>
+                    <div>MAX</div>
+                </div>
+            </div>
+            <div id="mid-bar">
+                <div>SCORE</div>
+                <h3 id="curr_score">#</h3>
+            </div>
+            <div id="bottom-bar">
+                <div id="line-1">
+                    <button onclick="key_press(1)">1</button>
+                    <button onclick="key_press(2)">2</button>
+                    <button onclick="key_press(3)">3</button>
+                </div>
+                <div id="line-2">
+                    <button onclick="key_press(4)">4</button>
+                    <button onclick="key_press(5)">5</button>
+                    <button onclick="key_press(6)">6</button>
+                </div>
+                <div id="line-3">
+                    <button onclick="key_press(7)">7</button>
+                    <button onclick="key_press(8)">8</button>
+                    <button onclick="key_press(9)">9</button>
+                </div>
+                <div id="line-4">
+                    <button onclick="key_press(0)">0</button>
+                </div>
+                <div id="line-5">
+                    <div>
+                        <button id="enter" onclick="enter_press()">Enter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        current_score = ''
+        var max_score = Number(document.getElementById("max-score").textContent)
+        var min_score = Number(document.getElementById("min-score").textContent)
+
+        function key_press(num) {
+          console.log("key press " + num);
+          current_score = current_score + num;
+          document.getElementById("curr_score").innerHTML = current_score;
+
+        }
+
+        function enter_press() {
+          console.log("Enter");
+          var score = parseInt(current_score);
+
+          document.getElementById("curr_score").innerHTML = "#"
+          current_score = ""
+          update_min_max(score)
+          console.log(score)
+
+        }
+
+
+        function update_min_max(score) {
+          console.log(score)
+          if (score > max_score) {
+            max_score = score;
+            document.getElementById("max-score").textContent = score;
+          } else if (score < min_score) {
+            console.log("update min")
+            min_score = score;
+            document.getElementById("min-score").textContent = score;
+          }
+        }
+
+    </script>
+</body>
+</html>
