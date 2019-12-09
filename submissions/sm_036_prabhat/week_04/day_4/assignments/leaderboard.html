@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leaderboard</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+        .minBox {
+            height: 40px;
+            width: 90px;
+            background: red;
+            border: 2px solid black;
+            margin-left: 40px;
+            text-align: center;
+            padding: 30px;
+        }
+        .maxBox {
+            height: 40px;
+            width: 90px;
+            background: green;
+            margin-left: 100px;
+            border: 2px solid black;
+            padding: 30px; 
+            text-align: center;
+        }
+        #marginLeft200 {
+            margin-left: 200px;
+        }
+        .marginLeft50 {
+            text-align: center;
+        }
+        .marginLeft150 {
+            margin-left: 150px;
+        }
+        .marginTop50 {
+            margin-top: 60px;
+        }
+        .scoreBox {
+            height: 40px;
+            width: 250px;
+            border: 2px solid black;
+            margin-left: 80px;
+            background: grey;
+            text-align: center;
+            border-radius: 5px;
+            padding: 35px;
+        }
+        .button {
+            height: 80px;
+            width: 80px;
+            border: 2px solid black;
+            margin-left: 60px;
+            float: left;
+            border-radius: 5px;
+        }
+        .enter {
+            height: 80px;
+            width: 180px;
+            border: 2px solid black;
+            margin-left: 140px;
+            border-radius: 5px;
+            background: black;
+            color: white;
+        }
+        .colGreen {
+            background: green;
+        }
+        .colOrange {
+            background: orangered;
+        }
+        .colPink {
+            background: rebeccapurple;
+        }
+    </style>
+</head>
+<body> 
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <div id="min" class="minBox">43</div>
+                </td>
+                <td>
+                    <div id="max" class="maxBox">2019</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class=" marginLeft50">MIN</div>
+                </td>
+                <td>
+                    <div class="marginLeft150">MAX</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+   
+    <br>
+    <div id="marginLeft200">SCORE</div>
+    <div id="score" class="scoreBox"></div>
+    <br>
+    <div>
+        <button onclick="btn(1)" class="button colGreen">1</button>
+        <button onclick="btn(2)" class="button colOrange">2</button>
+        <button onclick="btn(3)" class="button colGreen">3</button>
+    </div>
+    <br><br>
+    <div class=" marginTop50">
+        <button onclick="btn(4)" class="button colOrange">4</button>
+        <button onclick="btn(5)" class="button colOrange">5</button>
+        <button onclick="btn(6)" class="button colOrange">6</button>
+    </div>
+    <br><br>
+    <div class="marginTop50">
+        <button onclick="btn(7)" class="button colGreen">7</button>
+        <button onclick="btn(8)" class="button colOrange">8</button>
+        <button onclick="btn(9)" class="button colGreen">9</button>
+    </div>
+    <br><br>
+    <div class="marginTop50">
+        <button onclick="btn(0)" id="marginLeft200" class="button colPink">0</button>
+    </div>
+    <br><br>
+    <div class="marginTop50">
+        <button onclick="btnEnter()" class="enter">ENTER</button>
+    </div>
+
+    <script>
+        
+        function btn(num){
+            var scoresum = document.getElementById("score").innerHTML;
+            scoresum += num;
+            document.getElementById("score").textContent = scoresum;
+        }
+        function btnEnter(){
+            var scoresum = document.getElementById("score").innerHTML;
+            var sum = Number(scoresum);
+            var maxVal = document.getElementById("max").innerHTML;
+            var max = Number(maxVal);
+            var minVal = document.getElementById("min").innerHTML;
+            var min = Number(minVal);
+            console.log(typeof(min))
+            console.log(minVal)
+            console.log(maxVal)
+
+            if(min > sum && max > sum){
+                document.getElementById("min").innerHTML = minVal;
+                document.getElementById("score").innerHTML = "";
+            }
+            else if(min < sum && max > sum){
+                document.getElementById("min").innerHTML = sum;
+                document.getElementById("score").innerHTML = "";
+            }
+            else if(max > sum && sum < max){
+                document.getElementById("max").innerHTML = maxVal;
+                document.getElementById("score").innerHTML = "";
+            }
+            else if(sum > max && sum > min){
+                document.getElementById("max").innerHTML = sum;
+                document.getElementById("score").innerHTML = "";
+            }
+            
+            
+        }
+    </script>
+    
+</body>
+</html>

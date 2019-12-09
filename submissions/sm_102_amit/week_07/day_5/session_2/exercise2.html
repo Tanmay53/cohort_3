@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 2</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+      //Write your code below this line
+      let todo = ["Eat", "Sleep", "Code", "Repeat", "Repeat Again!"];
+      let info = {
+        name: "Amit Kumar",
+        age: 27,
+        dob: "16-01-1993",
+        color: "Blue"
+      };
+      function showInfo(info) {
+        return info.name + " " + info.age + " " + info.dob + " " + info.color;
+      }
+
+      let todoList = todo.map(element => {
+        return <li>{element}</li>;
+      });
+
+      let content = (
+        <div>
+          <h1>My Todo List</h1>
+          <ul>{todoList}</ul>
+          <p>{showInfo(info)}</p>
+        </div>
+      );
+
+      const root = document.getElementById("root");
+      ReactDOM.render(content, root);
+    </script>
+  </body>
+</html>
