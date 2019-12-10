@@ -1,0 +1,11 @@
+#main {
+    width: 400px;
+    margin: auto;
+    background: rgb(13, 30, 105);
+    font-family: "Nunito", sans-serif;
+}
+
+#skill {
+    background: rgb(4, 14, 59);
+    margin-top: 10px;
+}

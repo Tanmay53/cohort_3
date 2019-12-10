@@ -9,7 +9,7 @@
 //         IF VALUE IS LESS THAN 26:
 //             IF VALUE IS LESS THAN 13:
 //                 OUTPUT += INFO[25 - VALUE]
-//             ELSE:
+//                ELSE:
 //                 OUTPUT += INFO[12 - VALUE%13]
 //         ELSE:
 //             IF VALUE IS LESSER THAN 25+13:
@@ -17,14 +17,46 @@
 //             ELSE:
 //                 OUTPUT += INFO[26 + VALUE%(26+13)]
 // RETURN OUTPUT
-var info="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var arr1=[] 
+var str1="AyzB"
+// var b="ZbaY"
+var VALUE
+var OUTPUT=" "
+var INFO="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 function mirrorImage(str1)
 {   
     for(i=0;i<=str1.length-1;i++)
     {   
-        
+        if(INFO.indexOf(str1)<=51)
+        {
+            if(VALUE<26)
+            {
+                if(VALUE<13)
+                {
+                    console.log(OUTPUT += INFO[25 - VALUE])
+                }
+                else
+                {
+                    console.log(OUTPUT += INFO[12 - VALUE%13])
+                }
+            }
+            else
+            {
+                if(VALUE<38)
+                {
+                console.log(OUTPUT += INFO[51 - VALUE%26])
+                }
+                else
+                {
+                console.log(OUTPUT += INFO[26 + VALUE%(39)])
+                }
+            }
+        }
+        else
+        {
+            return -1
+        }
     }
-
-   
+        return OUTPUT
 }
+ans=mirrorImage(str1)//passing str1 to function
+console.log(ans)

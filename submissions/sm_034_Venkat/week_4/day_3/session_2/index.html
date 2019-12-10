@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>index.html(W4D3S2)</title>
+    <style>
+        body{
+            background: lightcoral;
+            font-size: 28px;
+        }
+        div{
+            margin:50px 0px 20px 10px
+        }
+        button, input, select {
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <p id="old"></p>
+        <p id="young"></p>
+        <p id="equal"></p>
+
+        <button onclick="older()">Age > 18</button>
+        <button onclick="Younger()">Age < 18</button> <button onclick="just18()">Age = 18</button>
+        <hr>
+    </div>
+
+    <div class="two">
+        <input type="text" id="colorInput" value="">
+        <button type="button" onclick="changeColor()" id="colorButton">Click here to change my color</button>
+    </div>
+    <hr>
+
+    <div class="three">
+        <select name="countries" id="countrySelect">
+            <option value="India">India</option>
+            <option value="United States Of America">United States Of America</option>
+            <option value="Swedan">Swedan</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Italy">Italy</option>
+            <option value="Germany">Germany</option>
+            <option value="Japan">Japan</option>
+            <option value="China">China</option>
+            <option value="Britan">Britan</option>
+            <option value="Australia">Australia</option>
+            <option value="Canada">Canada</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Egypt">Egypt</option>
+        </select>
+        <button onclick="showContinent()">Find Continent</button>
+    </div>
+
+    <script type="text/javascript">
+        function older() {
+            document.getElementById("equal").innerHTML = "";
+            document.getElementById("young").innerHTML = "";
+            document.getElementById("old").innerHTML = "You can drive in India!"
+        }
+        function Younger() {
+            document.getElementById("old").innerHTML = "";
+            document.getElementById("equal").innerHTML = "";
+            document.getElementById("young").innerHTML = "You can't drive in India,Sorry!"
+        }
+        function just18() {
+            document.getElementById("old").innerHTML = "";
+            document.getElementById("young").innerHTML = "";
+            document.getElementById("equal").innerHTML = "You are just old enough to drive in India!"
+        }
+
+        function changeColor() {
+            var color = (document.getElementById("colorInput").value);
+            document.getElementById("colorButton").style.color = color
+        }
+
+        function showContinent() {
+            var country = (document.getElementById("countrySelect").value);
+            var continent;
+            switch (country) {
+                case 'India':
+                    continent = "The Continent Is Asia";
+                    break;
+                case 'United States Of America':
+                    continent = "The Continent Is North America";
+                    break;
+                case "Swedan":
+                    continent = "The Continent Is Europe";
+                    break;
+                case "Brazil":
+                    continent = "The Continent Is South America";
+                    break;
+                case "Italy":
+                    continent = "The Continent Is Europe";
+                    break;
+                case "japan":
+                    continent = "The Continent Is Asia";
+                    break;
+                case "Australia":
+                    continent = "The Continent Is Australia";
+                    break;
+                case "Egypt":
+                    continent = "The Continent Is Africa";
+                    break;
+                case "South Africa":
+                    continent = "The Continent Is Africa";
+                    break;
+                case "China":
+                    continent = "The Continent Is Asia";
+                    break;
+                case "Germany":
+                    continent = "The Continent Is Europe";
+                    break;
+                case "Britan":
+                    continent = "The Continent Is Europe";
+                    break;
+                case "Canada":
+                    continent = "The Continent Is North America";
+            }
+            alert(continent)
+        }
+    </script>
+</body>
+
+</html>
