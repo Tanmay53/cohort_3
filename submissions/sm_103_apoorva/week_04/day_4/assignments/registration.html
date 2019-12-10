@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W4 D4 A2</title>
+    <style>
+    .container
+    {   
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 50px;
+    }
+    .form
+    {
+        grid-area: 1/1/span 1/span 1;
+        margin-left: 300px;
+    }
+    .output
+    {
+        grid-area: 1/2/span 1/span 1;
+        background-color: black;
+        color: white;
+        width: 350px;
+        font-size: x-large;
+    }
+    #register
+    {
+        background-color: black;
+        color: white;
+        height: 40px;
+        width: 200px;
+        font-size: large;
+    }
+    .text
+    {
+        font-size: x-large;
+    }
+    .input
+    {
+        height: 30px;
+        width: 200px;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <p class="text">NAME</p>
+            <input class="input" type="text" id="name">
+            <p class="text">EMAIL</p>
+            <input class="input" type="email" id="email">
+            <p class="text">MOBILE</p>
+            <input class="input" type="number" id="mobile">
+            <h4 style="color: red;" id="invalid"></h4>
+            <button id="register" onclick="submit()">REGISTER</button>
+        </div>
+        <div class="output">
+            <h3 style="margin-left: 10px;">NAME</h3>
+            <h1 style="margin-left: 10px;" id="printName"></h1>
+            <h3 style="margin-left: 10px;">EMAIL</h3>
+            <h3 style="margin-left: 10px;" id="printEmail"></h3>
+            <h3 style="margin-left: 10px;">MOBILE</h3>
+            <h3 style="margin-left: 10px;" id="printMobile"></h3>
+
+        </div>
+    </div>
+    <script>
+    function submit()
+    {
+        var name =  document.getElementById("name").value
+        var email = document.getElementById("email").value
+        var mobile = document.getElementById("mobile").value
+        console.log(name.length,mobile.length)
+        if(name.length > 3 && name.length < 10 && mobile.length == 10 && (email.includes("@") && (email.includes(".com"))))
+        {
+            document.getElementById("printName").innerHTML = name
+            document.getElementById("printEmail").innerHTML = email
+            document.getElementById("printMobile").innerHTML = mobile
+        }
+
+        else{
+            document.getElementById("invalid").innerHTML = ("Invalid Input!")
+        }
+    }
+    
+    </script>
+</body>
+</html>
