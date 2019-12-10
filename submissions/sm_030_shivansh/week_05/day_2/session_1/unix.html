@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="text-center">
+        <button id="create" class="btn bg-info">Create Page</button>
+        <hr>
+    </div>
+    <div class="container" id="main">
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        var btn = document.getElementById("create");
+
+        btn.addEventListener("click", function () {
+            section1();
+            section2();
+            section3();
+        });
+
+
+
+        //function  to  create section 1 
+        function section1() {
+            var section = document.createElement("section");
+            var div1 = document.createElement("div");
+            var div2 = document.createElement("div");
+            var div3 = document.createElement("div");
+            var img = document.createElement("img")
+            var h1 = document.createElement("h1");
+            var h5 = document.createElement("h5");
+
+            h1.innerHTML = "Linus Torvalds";
+            h5.innerHTML = "The Creator of Liux & Git"
+
+            div1.setAttribute("class", "row justify-content-center m-2");
+            div2.setAttribute("class", "col-12 col-lg-6");
+            div3.setAttribute("class", "m-2 text-center bg-secondary");
+            img.setAttribute("src", "https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg");
+            img.setAttribute("class", "img-fluid m-2");
+            h1.setAttribute("class", "text-primary font-weight-bold");
+            h5.setAttribute("class", "text-dark mb-2")
+
+            div3.appendChild(img);
+            div3.appendChild(h1);
+            div3.appendChild(h5);
+            div2.appendChild(div3);
+            div1.appendChild(div2);
+            section.appendChild(div1);
+            document.body.appendChild(section);
+        }
+
+        //function to  create section  2 of page: sal khan
+        function section2() {
+            var section = document.createElement("section");
+            var div1 = document.createElement("div");
+            var div2 = document.createElement("div");
+            var div3 = document.createElement("div");
+            var div4 = document.createElement("div");
+            var div4 = document.createElement("div");
+            var div5 = document.createElement("div");
+            var div6 = document.createElement("div");
+            var h5 = document.createElement("h5");
+            var p = document.createElement("p");
+
+            var img = document.createElement("img");
+
+            h5.innerHTML = "Sal Khan";
+            p.innerHTML = "Salman Khan is the founder og Khan Academy  which  provide world class education to  anyone, anywhere";
+
+            div1.setAttribute("class", "container");
+            div2.setAttribute("class", "card border-0 m-3");
+            div3.setAttribute("class", "row no-gutters justify-content-center");
+            div4.setAttribute("class", "col-3");
+            img.setAttribute("src", "https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/khan.jpg")
+            img.setAttribute("class", "img-fluid");
+            div5.setAttribute("class", "col-6");
+            div6.setAttribute("class", "card-body");
+            h5.setAttribute("class", "card-title");
+            p.setAttribute("class", "card-text");
+
+            div6.appendChild(h5);
+            div6.appendChild(p);
+            div5.appendChild(div6);
+            div4.appendChild(img);
+            div3.appendChild(div4);
+            div3.appendChild(div5);
+            div2.appendChild(div3);
+            div1.appendChild(div2);
+
+            section.appendChild(div1);
+            document.body.appendChild(section);
+        }
+
+        //function to create section3
+        function section3() {
+            var section = document.createElement("section");
+            var div1 = document.createElement("div");
+            var div2 = document.createElement("div");
+            var div3 = document.createElement("div");
+            var div4 = document.createElement("div");
+            var div5 = document.createElement("div");
+            var div6 = document.createElement("div");
+
+            var head1 = document.createElement("h3");
+            var head2 = document.createElement("h3");
+            var para1 = document.createElement("p");
+            var para2 = document.createElement("p");
+
+            head1.innerHTML = "Ken Thompson";
+            head2.innerHTML = "Dennis Ritchie";
+            para1.innerHTML = "Designed and Implemented the original Unix Operating System";
+            para2.innerHTML = "The creator of C programming Language";
+
+            div1.setAttribute("class", "container");
+            div2.setAttribute("class", "row bg-warning");
+            div3.setAttribute("class", "col-6");
+            div4.setAttribute("class", "col-6");
+
+            div4.appendChild(head2);
+            div4.appendChild(para2);
+
+            div3.appendChild(head1);
+            div3.appendChild(para1);
+
+            div2.appendChild(div3);
+            div2.appendChild(div4);
+            div1.appendChild(div2);
+            section.appendChild(div1);
+
+
+            document.body.appendChild(section);
+        }
+    </script>
+</body>
+
+</html>
