@@ -9,6 +9,7 @@ import Download from './download.js'
 import Search from './search.js'
 import Setting from './settings.js'
 import ContactUs from './contactUs.js'
+import StaticCard from './staticCard.js'
 import './index.css'
 
 class MobDesc extends React.Component{
@@ -47,7 +48,8 @@ class MobDesc extends React.Component{
                     <Download />  
                 </div>
             </div>
-            </div>
+            <StaticCard />
+        </div>
         );
     }
 }
