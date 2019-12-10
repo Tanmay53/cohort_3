@@ -1,12 +1,8 @@
 import React from "react";
-import Join from "./join.js";
-import Settings from "./settings";
-import Login from "./login";
-import Contact from "./contact";
-import Search from "./search";
-import Help from "./help";
-import Home from "./home";
-import Download from "./download";
+import Button from "./button";
+
+const join = { label: "JOIN US", color: "btn-primary" };
+const setting = { label: "SETTINGS", color: "btn-info" };
 
 class App extends React.Component {
     render() {
@@ -14,34 +10,34 @@ class App extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-6">
-                        <Join />
+                        <Button {...join} />
                     </div>
                     <div className="col-6">
-                        <Settings />
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-6">
-                        <Login />
-                    </div>
-                    <div className="col-6">
-                        <Contact />
+                        <Button {...setting} />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-6">
-                        <Search />
+                        <Button label="LOGIN" color="btn-warning" />
                     </div>
                     <div className="col-6">
-                        <Help />
+                        <Button label="CONTACT US" color="btn-danger" />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-6">
-                        <Home />
+                        <Button label="SEARCH" color="btn-success" />
                     </div>
                     <div className="col-6">
-                        <Download />
+                        <Button label="HELP" color="btn-info" />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-6">
+                        <Button label="HOME" color="btn-secondary" />
+                    </div>
+                    <div className="col-6">
+                        <Button label="DOWNLOAD" color="btn-success" />
                     </div>
                 </div>
             </div>
