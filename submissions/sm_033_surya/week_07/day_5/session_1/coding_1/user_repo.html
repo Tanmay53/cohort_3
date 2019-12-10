@@ -1,0 +1,48 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <button class="back">Back</button>
+    <div class="repoes"></div>
+    <script>
+        var data = JSON.parse(localStorage.getItem("data"))
+        console.log(data)
+        var user = localStorage.getItem("userid")
+        var back = document.getElementsByClassName("back")[0]
+        back.addEventListener("click", function () {
+            location.replace("index.html")
+        })
+        for (i = 0; i < data.items.length; i++) {
+            if (data.items[i].id == user) {
+                var url = data.items[i].repos_url
+                console.log(url)
+                fetchdData(url)
+            }
+        }
+        function fetchdData(link) {
+            fetch(link)
+                .then(res => res.json())
+                .then(res => {
+                    displayData(res)
+                })
+        }
+        function displayData(data) {
+            console.log(data)
+            var table = document.createElement("table")
+            table.setAttribute("class", "table")
+            var tr = document.createElement("tr")
+            tr.innerHTML = `<td>Id</td> <td>Name</td><td>Full Name</td><td>Clone_Url</td>`
+            table.appendChild(tr)
+            var div = document.getElementsByClassName("repoes")[0]
+            div.appendChild(table)
+            for (i = 0; i < data.length; i++) {
+                var tr = document.createElement("tr")
+                tr.innerHTML = `<td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].full_name}</td><td>${data[i].clone_url}</td>`
+                table.appendChild(tr)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    table,td{
+        border: 2px solid black;
+        padding: 2px;
+    }
+    td{
+        margin: 2px;
+    }
+    #content{
+        height: 200px;
+        padding: 30px;
+        border: 2px solid grey;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container text-center bg-dark text-white">
+        <label>FirstName</label><br>
+        <input type="text" id="fname"><br>
+        <label>LastName</label><br>
+        <input type="text" id="lname"><br>
+        <label>UserName</label><br>
+        <input type="text" id="Uname"><br>
+        <label>Password</label><br>
+        <input type="text" id="pswd"><br>
+        <label>Email</label><br>
+        <input type="text" id="email"><br>
+        <label>Address</label><br>
+        <input type="text" id="addr"><br>
+        <label>Phone No</label><br>
+        <input type="text" id="phoneno"><br>
+        <label>Type</label><br>
+        <input type="text" id="type"><br>
+        <button onclick="submit()">Submit</button>
+    </div>
+    <div class="container text-center bg-dark text-white">
+        <select id="allUsers">
+            <option>LOGINS</option>
+        </select>
+        <button onclick="getDetails()">Sort Users</button>
+    </div>
+    <div id="content" class="container text-center mt-5 mb-5 lead">DETAILS</div>
+    <div class="container text-center bg-dark text-white">
+        <select id="filtervalue">
+            <option value="user">USER</option>
+            <option value="admin">ADMIN</option>
+        </select>
+        <button onclick="filter1()">Filter</button>
+    </div>
+    <table class="container-fluid text-center bg-dark text-white mt-4">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>username</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phoneno</th>
+        </tr>
+    </table>
+    <script>
+        localStorage.clear();
+        var AOO = []
+        var k = 0;
+        function submit() {
+            var fname = document.getElementById('fname').value || "piyush"
+            var lname = document.getElementById('lname').value || "jain"
+            var Uname = document.getElementById('Uname').value || "Piyush Jain"
+            var pswd = document.getElementById('pswd').value || "Confidential"
+            var email = document.getElementById('email').value || "piyushjain2472@gmail.com"
+            var addr = document.getElementById('addr').value || "bangalore"
+            var phon = document.getElementById('phoneno').value || "906576465"
+            var type = document.getElementById('type').value || "user"
+            var content = document.getElementById('content').value || "xxxxxxxxxx"
+            content.textContent="DETAILS"
+            
+            var user = {
+                fname: fname,
+                lname: lname,
+                Uname: Uname,
+                pswd: pswd,
+                email: email,
+                addr: addr,
+                phoneno: phon,
+                type: type
+            }
+            function fillInfo(user) {
+                return `<div>
+                    <div> Hello ${user.fname + user.lname}, welcome back </div>
+                    <div>Your Registered email is ${user.email}</div>
+                    <div> Registered address is ${user.addr}</div>
+                    <div> Registered phoneno is ${user.phoneno}</div>
+                </div>`
+            }
+            var doc = document.getElementById('content')
+            doc.innerHTML = fillInfo(user)
+            console.log(user["type"])
+            if (user["type"] == "admin") {
+                doc.style.backgroundColor = "black";
+                doc.style.color = "white";
+            }
+            else {
+                doc.style.backgroundColor = "red";
+                doc.style.color = "white";
+            }
+
+            AOO[k] = user;
+            k++;
+            var selected = document.querySelector('select');
+            var option1 = document.createElement('option');
+            option1.textContent = fname;
+            $(option1).value = fname;
+            console.log(option1.value);
+            selected.appendChild(option1)
+            localStorage.setItem('data', JSON.stringify(AOO))
+            document.getElementById('fname').value=""
+            document.getElementById('lname').value="" 
+            document.getElementById('Uname').value="" 
+            document.getElementById('pswd').value="" 
+            document.getElementById('email').value=""
+            document.getElementById('addr').value =""
+            document.getElementById('phoneno').value=""
+            document.getElementById('type').value =""
+            document.getElementById('content').value=""
+        }
+        function getDetails() {
+            // var userRequested = document.getElementById('allUsers').value;
+            var data = localStorage.getItem('data');
+            var test = JSON.parse(data)
+            function sort() {
+                test.sort((a, b) => {
+                    return (a.fname > b.fname) ? 1 : -1;
+                })
+                createTable(test)
+                console.log(test)
+            }
+            sort(test)
+        }
+        function filter1() {
+            var data = localStorage.getItem('data');
+            var test = JSON.parse(data)
+            var filler = document.getElementById('filtervalue').value;
+            var result = test.filter(function (obj) {
+                return obj.type === filler;
+
+            })
+            createTable(result)
+        }
+
+        function createTable(test) {
+            var table1 = document.querySelector('table')
+            table1.innerHTML = "<tr><th>FirstName</th><th>LastName</th><th>username</th><th>Email</th><th>Address</th><th>Phoneno</tr>"
+            for (var i = 0; i < test.length; i++) {
+                var tr1 = document.createElement('tr');
+                tr1.innerHTML = '<td>' + test[i]["fname"] + '<td>' + test[i]["lname"] + '<td>' + test[i]["Uname"] + '<td>' + test[i]["email"] + '<td>' + test[i]["addr"] + '<td>' + test[i]["phoneno"] + '<td>'
+                table1.appendChild(tr1)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

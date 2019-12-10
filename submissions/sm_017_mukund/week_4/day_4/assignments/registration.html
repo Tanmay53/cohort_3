@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        #flex {
+            display: flex;
+            margin: 40px;
+        }
+
+        #left div, #right div {
+            margin: 15px;
+        }
+
+        #right, #register {
+            background-color: black;
+            color: white;
+            width: 250px;
+        }
+
+        #register {
+            width: 200px;
+        }
+
+        /* div, h1 {
+            border: 2px solid red;
+        } */
+
+        input {
+            border: 1px solid black;
+        }
+
+        #appName, #appEmail, #appMobile {
+            visibility: hidden;
+            color: red;
+            font-weight: bold;
+        }
+
+        @media (max-width: 900px) {
+
+            #flex {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="flex">
+        <div id="left" class="box">
+            <form>
+                <div>
+                    <label for="name">NAME</label>
+                </div>
+                <div>
+                    <input type="text" id="name" minlength="4" maxlength="10" required>
+                </div>
+                <div id="appName">Invalid Name</div>
+                <div>
+                    <label for="e-mail">EMAIL</label>
+                </div>
+                <div>
+                    <input type="email" id="e-mail" required>
+                </div>
+                <div id="appEmail">Invalid E-mail</div>
+                <div>
+                    <label for="mobile">MOBILE</label>
+                </div>
+                <div>
+                    <input type="number" id="mobile" minlength="10" maxlength="10" required>
+                </div>
+                <div id="appMobile">Invalid Number</div>
+            </form>
+            <div>
+                <button id="register" onclick="register()">REGISTER</button>
+            </div>
+        </div>
+        <div id="right" class="box">
+            <div>
+                <div>NAME</div>
+                <div>
+                    <h1 id="displayname">MASAI</h1>
+                </div>
+            </div>
+            <div>
+                <div>EMAIL</div>
+                <div id="displayEmail">email@masaischool.com</div>
+            </div>
+            <div>
+                <div>MOBILE</div>
+                <div id="displayMobile">9876543210</div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        function register(){
+            console.log('register')
+            var name = document.getElementById('name').value
+            var email = document.getElementById('e-mail').value
+            var mobile = document.getElementById('mobile').value
+
+            if( name.length > 3 && name.length <= 10 ) {
+                console.log('name')
+                var nameflag = 1
+            }
+            else{
+                console.log('Invalid Name!')
+                var ele = document.getElementById('appName')
+                ele.style.visibility = 'visible'
+            }
+            
+            if( mobile.length == 10 ) {
+                console.log('mobile')
+                var mobileflag = 1
+            }
+            else{
+                console.log('Invalid Mobile!')
+                var ele = document.getElementById('appMobile')
+                ele.style.visibility = 'visible'
+            }
+            
+            if( true == verifyEmail(email) ){
+                console.log('email')
+                var emailflag = 1
+            }
+            else{
+                console.log('Invalid Email!')
+                var ele = document.getElementById('appEmail')
+                ele.style.visibility = 'visible'
+            }
+            
+            if ( nameflag == 1 && emailflag == 1 && mobileflag == 1 ){
+                document.getElementById('displayname').innerHTML = name;
+                document.getElementById('displayMobile').textContent = mobile;
+                document.getElementById('displayEmail').textContent = email;
+            }
+
+        }
+
+        function verifyEmail(email){
+
+            var flag = 0
+
+            function divide(x){
+
+                var email = x.split('@')
+                // console.log(email.length)
+                if( email.length == 2 ){
+
+                    flag = 0;
+
+                }
+                else{
+
+                    flag = 1;
+
+                }
+
+                return flag;
+            }
+
+            function indexCheck(x){
+
+                if( x[0] == '@' || x[0] == '.' ){
+
+                    flag = 1;
+
+                } 
+                else{
+
+                    flag = 0;
+
+                }
+
+                return flag;
+            }
+
+            function letterCheck(x){
+
+                var arr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',0,1,2,3,4,5,6,7,8,9,'_','-','@','.']
+            
+                for(i=0;i<x.length;i++){
+                
+                    if( arr.indexOf(x[i]) != -1 ){
+                    
+                        flag = 0;
+
+                    }
+                    else{
+                        // console.log(x[i])
+                        flag = 1;
+                        break;
+                    
+                    }
+
+                }
+
+                return flag;
+            }
+
+            function dots(x){
+            
+                for(i=0;i<x.length;i++){
+                
+                    if( x[i]=='.' && x[i+1]=='.' ){
+                    
+                        flag = 1;
+                        break;
+                    
+                    }
+                    else{
+                    
+                        flag = 0;
+                    
+                    }
+                
+                }
+            
+                return flag;
+            }
+
+            function presence(x){
+            
+                for(i=0;i<x.length;i++){
+                
+                    if( x.indexOf('@') != -1 ){
+                    
+                        flag = 0;
+                        break;
+                    
+                    }
+                    else{
+                    
+                        flag = 1;
+                    
+                    }
+                
+                }
+            
+                return flag;
+            }
+
+            function tld(x){
+            
+                var domain = ['com','org','net']
+            
+                for(i=0;i<x.length;i++){
+                
+                    if( x[i]=='c' && x[i+1]=='o' && x[i+2]=='m' && x[i+3]=='.' ){
+                    
+                        flag = 1;
+                        break;
+                    
+                    }
+                    else if( x[i]=='o' && x[i+1]=='r' && x[i+2]=='g' && x[i+3]=='.' ){
+                    
+                        flag = 1;
+                        break;
+                    
+                    }
+                    else if( x[i]=='n' && x[i+1]=='e' && x[i+2]=='t' && x[i+3]=='.' ){
+                    
+                        flag = 1;
+                        break;
+                    
+                    }
+                    else{
+                    
+                        flag = 0;
+                    
+                    }
+                
+                }
+            
+                return flag;
+            }
+
+            function checkEmail(x){
+            
+                var val = x;
+
+                var a = divide(val);
+                var b = indexCheck(val);
+                var c = letterCheck(val);
+                var d = dots(val);
+                var e = presence(val);
+                var f = tld(val);
+                // console.log(a,b,c,d,e,f)
+                if( a == 1 || b == 1 || c == 1 || d == 1 || e == 1 || f == 1 ){
+                
+                    return false;
+                
+                }
+                else{
+                
+                    return true;
+                
+                }
+            
+            }
+
+            var value = checkEmail(email)
+
+            return value;
+
+        }
+
+    </script>
+</body>
+</html>

@@ -14,10 +14,7 @@ $('#click').click(function() {
 function printData(data) {
 
     //remove preexisting form data
-    var rm = document.querySelectorAll('.rm');
-    for (var i = 0; i < rm.length; i++) {
-        rm[i].remove();
-    }
+    $('#tbody').empty()
 
 
     //append table elements
@@ -53,8 +50,8 @@ for (var i = 0; i < pageLink.length; i++) {
         var num = this.textContent;
         console.log(num)
         $.ajax({
-                method: 'GET',
-                url: "https://reqres.in/api/users/?page=" + num,
+                // method: 'GET',
+                url: "https://reqres.in/api/users/?page=" + num
             })
             .done(function(obj) {
                 console.log(obj.data)
