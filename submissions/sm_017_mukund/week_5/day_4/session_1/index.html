@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Constructors</title>
+  <style>
+
+    #flex {
+      display: flex;
+    }
+
+    #form {
+      display: flex;
+      flex-basis: 40%;
+      flex-direction: column;
+      width: 400px;
+      border: 1px solid green;
+    }
+
+    #displayContainer {
+      flex-basis: 60%;
+      margin-left: 40px;
+      border: 1px solid red;
+    }
+
+    p{
+      white-space: pre-line;
+      margin-top: 30px;
+    }
+  </style>
+</head>  
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <h1>Click the button to add a new customer!</h1>
+  <div id="flex">
+    <div id="form">
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname">
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname">
+    <label for="dateofbirth">Date Of Birth</label>
+    <input type="text" id="dateofbirth">
+    <label for="balance">Balance</label>
+    <input type="text" id="balance">
+    <label for="accoutnumber">Account Number</label>
+    <input type="text" id="accountnumber">
+    <label for="sharedaccountholder">Shared Account Holders</label>
+    <input type="text" id="sharedaccountholder">
+    <button onclick="addCustomer()">Add customer</button>
+  </div>
+  <div id="displayContainer"> </div>
+  </div>
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! <h1>
+  <button onclick="displayDetails()">Print Customers</button>  
+  
+
+  <script>
+
+    var customerArr = []
+
+    function Customers(firstName,lastName,dateOfBirth,balance,accountNumber,sharedAccountHolders){
+      this.firstname = firstName;
+      this.lastName = lastName;
+      this.dateOfBirth = dateOfBirth;
+      this.balance = balance;
+      this.accountNumber = accountNumber;
+      this.sharedAccountHolders = sharedAccountHolders;
+    }
+
+    function addCustomer(){
+      var firstName = document.getElementById('firstname').value
+      var lastName = document.getElementById('lastname').value
+      var dateOfBirth = document.getElementById('dateofbirth').value
+      var balance = Number(document.getElementById('balance').value)
+      var accountNumber = Number(document.getElementById('accountnumber').value)
+      var arr = document.getElementById('sharedaccountholder').value
+      var sharedAccountHolders = arr.split(',')
+
+      var obj = new Customers(firstName,lastName,dateOfBirth,balance,accountNumber,sharedAccountHolders)
+
+      customerArr.push(obj)
+      console.log(customerArr)      
+    }
+
+    function displayDetails(){
+      
+      var ptag = document.querySelectorAll('#displayContainer p')
+      if( ptag != null ){
+        for(i=0;i<ptag.length;i++){
+          ptag[i].remove();
+        }
+      }
+
+      var str = ''
+      for(i=0;i<customerArr.length;i++){
+        for(key in customerArr[i]){
+          str+=key
+          str+=' : '
+          str+=customerArr[i][key]+'\n'
+        }
+        var p = document.createElement('p')
+        p.textContent = str
+        var displayContainer = document.getElementById('displayContainer')
+        displayContainer.append(p)
+        str = ''
+      }
+    }
+  
+  </script>
+</body>
+</html>
