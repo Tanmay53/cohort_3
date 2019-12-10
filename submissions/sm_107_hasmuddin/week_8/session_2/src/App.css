@@ -1,0 +1,33 @@
+.red {
+  background: red;
+  color: white;
+}
+.yellow {
+  background: yellow;
+  color: black;
+}
+.blue {
+  background: blue;
+  color: white;
+}
+.green {
+  color: white;
+  background: green;
+}
+.lightblue {
+  color: black;
+  background: lightblue;
+}
+button {
+  padding: 10px 40px;
+  font-size: 16px;
+  border-radius: 30px;
+  width: 12rem;
+}
+
+.flex-d {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
