@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            height: 400px;
+            width: 500px;
+            background: thistle;
+            border-radius: 20%;
+        }
+        button{
+            height: 50px;
+            width: 100px;
+            margin: 300px 50px 50px 300px;
+            background: greenyellow;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button type="submit" id="submit">SUBMIT</button>
+    </div>
+    <script>
+        var div = document.getElementById('container')
+        var sub = document.getElementById('submit')
+
+        div.addEventListener('mouseenter',color)
+        div.addEventListener('mouseleave',original)
+
+        function color(){
+            var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            sub.style.background = randomColor
+        }
+
+        function original(){
+            sub.style.background = 'greenyellow'
+        }
+
+        function random(number){
+            return Math.floor(Math.random()*number);
+        }
+    </script>
+</body>
+</html>

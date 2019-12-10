@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        #flex, #table {
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .box, .box div {
+            padding: 10px;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="flex">
+        <div id="left" class="box">
+            <form>
+                <div>
+                    <label for="name">PRODUCT NAME</label>
+                </div>
+                <div>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="image">IMAGE URL</label>
+                </div>
+                <div>
+                    <input type="url" id="image" required>
+                </div>
+                <div>
+                    <label for="price">PRICE</label>
+                </div>
+                <div>
+                    <input type="number" id="price" required>
+                </div>
+            </form>
+            <div>
+                <button id="submit" type="submit" onclick="submit()">SUBMIT</button>
+            </div>
+        </div>
+        <div id="right" class="box">
+            <div>
+                <h1>PRODUCT DETAILS</h1>
+            </div>
+            <div id="table">
+                <div>
+                    <div>NAME</div>
+                    <div id="pname"></div>
+                </div>
+                <div>
+                    <div>IMAGE</div>
+                    <div id="imageurl"></div>
+                </div>
+                <div>
+                    <div>PRICE</div>
+                    <div id="prodPrice"></div>
+                </div>
+                <div>
+                    <button onclick="edit()">EDIT</button>
+                    <select id="edit"></select>
+                    <button onclick="deletebtn()">DELETE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+            
+            var details = []
+            var count = 0
+                            
+            function submit(){
+
+                if( document.getElementById('submit').innerText == 'UPDATE' ){
+                    document.getElementById('submit').innerText = 'SUBMIT'
+
+                    var val = document.getElementById('edit').value - 1
+
+                    details[val][0] = document.getElementById('name').value
+                    details[val][1] = document.getElementById('image').value
+                    details[val][2] = document.getElementById('price').value
+
+                    var getnameid = 'div'+(val+1)
+                    var getimgid = 'img'+(val+1)
+                    var getpriceid = 'price'+(val+1)
+
+                    document.getElementById(getnameid).textContent = document.getElementById('name').value
+                    document.getElementById(getimgid).textContent = document.getElementById('image').value
+                    document.getElementById(getpriceid).textContent = document.getElementById('price').value
+                    
+                }else{
+                
+                    count++
+                    var arr = []
+
+                    var name = document.getElementById('name').value
+                    var image = document.getElementById('image').value
+                    var price = document.getElementById('price').value
+
+                    arr[0] = name
+                    arr[1] = image
+                    arr[2] = price
+                    details.push(arr)
+                    console.log(arr,details)
+
+                    var div = document.createElement('div')
+                    div.textContent = name
+                    var divid = 'div'+count
+                    div.setAttribute('id',divid)
+                    var pname = document.getElementById('pname')
+                    pname.appendChild(div)
+                    div.style.height = '150px'
+
+                    var img = document.createElement('img')
+                    img.setAttribute('src',image)
+                    img.setAttribute('height','200')
+                    var imgid = 'img'+count
+                    img.setAttribute('id',imgid)
+                    var imageurl = document.getElementById('imageurl')
+                    imageurl.appendChild(img)
+                    img.style.border = '1px solid black'
+
+                    var div = document.createElement('div')
+                    div.textContent = price
+                    var priceid = 'price'+count
+                    div.setAttribute('id',priceid)
+                    var prodPrice = document.getElementById('prodPrice')
+                    prodPrice.appendChild(div)
+                    div.style.height = '150px'
+
+                    var op = document.createElement('option')
+                    op.innerHTML = count
+                    op.setAttribute('value',count)
+                    var edit = document.getElementById('edit')
+                    edit.appendChild(op)
+                }
+            }
+
+            function edit(){
+
+                var val = document.getElementById('edit').value - 1
+
+                var editname = details[val][0]
+                var editimage = details[val][1]
+                var editprice = details[val][2]
+
+                document.getElementById('name').value = editname
+                document.getElementById('image').value = editimage
+                document.getElementById('price').value = editprice
+                document.getElementById('submit').innerText = 'UPDATE'
+
+            }
+
+            function deletebtn(){
+                var val = document.getElementById('edit').value - 1
+
+                var rmvnameid = 'div'+(val+1)
+                var rmvimgid = 'img'+(val+1)
+                var rmvpriceid = 'price'+(val+1)
+
+                document.getElementById(rmvnameid).remove();
+                document.getElementById(rmvimgid).remove();
+                document.getElementById(rmvpriceid).remove();
+            }
+
+        
+
+    </script>
+</body>
+</html>

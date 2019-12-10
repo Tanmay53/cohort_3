@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="root"></div>
+    <ul id="list"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+    //Write your code below this line
+    var arra = ["Crafting","Painting","Cleaning","Coding","Reading"]
+    var user =  {
+        name :"surya",
+        age :24,
+        DOB :"10-03-2019",
+        favourite_color: "purple",
+    }
+    console.log(user)
+    ReactDOM.render(
+        <div>
+        <h2>My Todo List</h2>
+        <ul>
+        <li>{arra[0]}</li>
+        <li>{arra[1]}</li>
+        <li>{arra[2]}</li>
+        <li>{arra[1]}</li>
+        <li>{arra[1]}</li>
+    </ul>
+    <p>Name:{user.name},Age:{user.age},DOB:{user.DOB},Favorite Color:{user.favourite_color}</p>
+        </div>,document.getElementById("root")
+    );
+    </script>
+</body>
+</html>
