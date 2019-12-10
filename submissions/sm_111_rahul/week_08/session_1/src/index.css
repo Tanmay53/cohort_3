@@ -2,9 +2,7 @@
     margin:20px;
     padding:10px;
 }
-h1{
-    font-weight: bold;
-}
+
 #btns{
     display: grid;
     width:250px;
@@ -45,3 +43,68 @@ button{
  #btns8{
     background:#77632E;
 }
+#wrapper{
+    background: #28223F;
+    display: flex;
+    justify-content: center;
+    padding:100px;
+    margin-top:50px;
+}
+#pro{
+    background-color: #FEBB0B;
+    color:black;
+    border-radius: 5px;
+    width:60px;
+    float:left;
+    margin:5% 5%;
+}
+img{
+    padding:5px;
+    border-radius: 50%;
+    border: 2px solid rgb(11, 104, 254);
+    margin: 0 27%;
+}
+
+#card{
+    width:500px;
+    height:700px;
+    background: #231E39;
+    border-radius: 5px;
+    text-align: center;
+}
+h1,h3,p,span{
+    color:rgb(214, 202, 202);
+    margin:20px;
+}
+h1{
+    font-weight: bold;
+    color:black;
+}
+#ricky{
+    color:white;
+}
+p{
+    margin:20px;
+}
+#btn1{
+   color:black;
+   background: cyan;
+   border-radius: 2px;  
+   padding: 13px;
+   margin-right: 3px;
+}
+#btn2{
+    margin-left:3px;
+    border-radius: 2px;
+    padding: 12px;
+    border: 1px solid cyan;
+
+ }
+#footer span{
+    float: left;
+    margin-left:15px;
+    border: 0.3px solid rgb(153, 144, 144);
+    padding:8px;
+    color:rgb(194, 184, 184);
+    margin-top:0px;
+} 
