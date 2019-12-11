@@ -10,4 +10,5 @@ function myUser(myname, myemail, mypassword) {
   user.password = mypassword;
   return user;
 }
-console.log(myUser(name,email,password))
+console.log(myUser(name, email, password))
+// https://codepen.io/nrupuld/pen/mdbwNmb?editors=1010

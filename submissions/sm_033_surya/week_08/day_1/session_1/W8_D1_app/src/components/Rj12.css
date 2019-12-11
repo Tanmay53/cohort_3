@@ -1,0 +1,48 @@
+.btn  {
+    height: 20px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 200px 200px;
+}
+.grid button {
+    height: 40px;
+}
+.btn-1 {
+    background: #429bce;
+    color: white
+}
+.btn-2 {
+    background: #7aa0b5;
+    color: white
+}
+.btn-3 {
+    background: #ed8b23;
+    color: white
+}
+.btn-4 {
+    background:#e14b2e;
+    color: white
+}
+.btn-5 {
+    background:#72a540;
+    color: white
+}
+.btn-6 {
+    background: #5f5d9e;
+    color: white
+}
+.btn-7 {
+    background: #de5883;
+    color: white
+}
+.btn-8 {
+    background: #bca148;
+    color: white
+}

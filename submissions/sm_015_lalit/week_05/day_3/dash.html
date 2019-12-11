@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <style>
-    .formParent {
+        .formParent {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -22,10 +23,11 @@
             height: 300px;
             width: 450px;
             text-align: center;
-            background:#e8f5e9;
+            background: #e8f5e9;
             /* box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.8); */
             font-family: 'Nanum Gothic', sans-serif;
         }
+
         button {
             width: 80px;
             margin-left: 41%;
@@ -36,37 +38,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dash</title>
 </head>
+
 <body>
     <div>
         <div class="formParent">
             <div class="form">
                 <h1 id=heading></h1>
-                <div>Login time<p id="login">p1</p></div>
-                <div>Max Logout time<p id="logout">p2</p></div>
+                <div>Login time<p id="login">p1</p>
+                </div>
+                <div>Max Logout time<p id="logout">p2</p>
+                </div>
                 <button onclick="logoutsession()">Logout</button>
             </div>
         </div>
     </div>
 </body>
 <script>
+    function loaduser() {
+        input = localStorage.getItem('user')
+        if (input == null) {
+            logoutsession()
+        }
+        localStorage.setItem("backup", input)
+        var users = JSON.parse(input)
+        console.log(users)
+        var tophead = document.getElementById("heading")
+        tophead.textContent = users[users.length - 1].name
+        var logintime = document.getElementById("login")
+        logintime.textContent = users[users.length - 1].login
+        var logouttime = document.getElementById("logout")
+        logouttime.textContent = users[users.length - 1].logout
+        setTimeout(function () {
+            window.location.href = "index.html"
+        }, 300000)
+    }
+    window.onload = loaduser()
 
-function loaduser(){
- input=localStorage.getItem('user')
- var user = JSON.parse(input)
- console.log(user)
- var tophead=document.getElementById("heading")
- tophead.textContent=user.name
- var logintime=document.getElementById("login")
- logintime.textContent=user.login
- var logouttime=document.getElementById("logout")
- logouttime.textContent=user.logout
- setTimeout(function(){
-    window.location.href = "index.html"
- },300000)
-}
-window.onload =loaduser()
-function logoutsession(){
-    window.location.href = "index.html"
-}
+    function logoutsession() {
+        window.location.href = "index.html"
+    }
 </script>
+
 </html>

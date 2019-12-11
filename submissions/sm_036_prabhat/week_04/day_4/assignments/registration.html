@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        #box {
+            height: 600px;
+            width: 1400px;
+            margin: 150px;
+        }
+
+        label {
+            font-size: 30px;
+            padding: 0px 0px 10px 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 350px;
+            border: 3px solid black;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 375px;
+            border: 3px solid black;
+            background: black;
+            color: white;
+        }
+
+        .input {
+            padding: 50px;
+            height: 450px;
+            width: 450px;
+        }
+
+        .output {
+            padding: 80px;
+            height: fit-content;
+            width: fit-content;
+            background: black;
+            color: white;
+        }
+
+        .font1 {
+            font-size: 30px;
+            padding: 8px;
+        }
+
+        .font2 {
+            font-size: 50px;
+            padding: 8px;
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="box">
+        <tr>
+            <td>
+                <div class="input">
+                    <label>NAME</label><br>
+                    <input id="name" type="text"><br>
+                    <p id="ename"></p>
+                    <label>EMAIL</label><br>
+                    <input id="email" type="text"><br>
+                    <p id="ee"></p>
+                    <label>MOBILE</label><br>
+                    <input id="mobile" type="text"><br>
+                    <p id="emob"></p>
+                    <button onclick="register()">REGISTER</button>
+                </div>
+            </td>
+            <td>
+                <div id="output">
+                    <div class="font1" id="outputName"></div>
+                    <div class="font2" id="outname"></div>
+                    <div class="font1" id="outputEmail"></div>
+                    <div class="font2" id="outEmail"></div>
+                    <div class="font1" id="outputMob"></div>
+                    <div class="font2" id="outMobile"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        
+        function register() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            
+            var doc = document.getElementById("output");
+            doc.setAttribute('class', "output");
+            var outName = document.getElementById("outputName");
+            outName. innerHTML = "NAME";
+            var outputEmail = document.getElementById("outputEmail");
+            outputEmail. innerHTML = "EMAIL";
+            var outputMob = document.getElementById("outputMob");
+            outputMob. innerHTML = "MOBILE";
+
+
+            if (name.length < 3) {
+                document.getElementById("ename").innerHTML = "Please Enter valid Name"
+            }
+            else {
+                document.getElementById("outname").innerHTML = name
+                document.getElementById("ename").innerHTML = "";
+            }
+
+            if (hasEmail(email) == true) {
+                document.getElementById("outEmail").innerHTML = email;
+                document.getElementById("ee").innerHTML = ""
+            }
+            else {
+                document.getElementById("ee").innerHTML = "Please Enter valid Email"
+
+            }
+
+            if ((typeof(mobile) != Number) && (mobile.length < 10 || mobile.length > 10)) {
+                document.getElementById("mobile").value=""
+                document.getElementById("emob").innerHTML = "Please Enter valid Number"
+            }
+            else {
+                document.getElementById("outMobile").innerHTML = mobile;
+                document.getElementById("emob").innerHTML = "";
+            }
+        }
+
+        // Email Verification
+
+        function hasEmail(email) {
+
+            var countAtTheRate = check(email);  // Calling @ check function
+            if (!countAtTheRate) {
+                return countAtTheRate;
+            }
+            for (var i = 0; i < email.length; i++) {
+
+                if (email[0] == "@" || email[0] == ".") {
+                    return false;
+                }
+                if (email[i] == "@" && email[i + 1] == "." || email[i] == "." && email[i + 1] == "@") {
+                    return false;
+                }
+                if (email[i] == "." && email[i + 1] == ".") {
+                    return false;
+                }
+                if (email[i] == "@" && email[i + 1] == "@") {
+                    return false;
+                }
+                if (email[i] == "(" || email[i] == ")" || email[i] == "#" || email[i] == "$" || email[i] == "%" || email[i] == "&") {
+                    return false;
+                }
+                if (email[email.length - 2] == ".") {
+                    return false;
+                }
+            }
+            return true
+        }
+        // Checking @ 
+
+        function check(email) {
+            var cnt = 0;
+            var countAtTheRate = 0;
+            var countDot = 0;
+            var count = 0;
+            for (var i = 0; i < email.length; i++) {
+                if (email[i] == "@") {
+                    cnt++;
+                    countAtTheRate++;
+                }
+                if (email[i] == ".") {
+                    countDot++
+                }
+                if (email[i] + email[i + 1] + email[i + 2] + email[i + 3] == ".com") {
+                    count++
+                }
+            }
+            if (countAtTheRate == 0) {
+                return false;
+            }
+            if (countDot == 0) {
+                return false;
+            }
+            if (cnt > 1) {
+                return false;
+            }
+            if (count > 1) {
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>

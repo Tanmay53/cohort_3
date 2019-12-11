@@ -1,0 +1,12 @@
+.template{
+  padding: 20px;
+}
+.template > div{
+  margin: 10px;
+  color: rgb(43, 150, 199);
+}
+
+.btnGrid{
+  display: flex;
+  flex-direction: row;
+}
