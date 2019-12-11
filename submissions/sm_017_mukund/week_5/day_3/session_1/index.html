@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .cont {
+            background: linear-gradient(black, gray, white);
+            border: 1px solid white;
+            background-repeat: no-repeat;
+            height: 600px;
+        }
+
+        .login {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            border: 3px solid silver;
+            padding: 20px;
+            border-radius: 10%;
+            background: linear-gradient(darkgray, #112);
+            margin: 15% 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="login">
+            <div>
+                <label style="font-style: italic;">Name</label>
+                <input type="text" name="username" id="username" style="margin-left: 22px;">
+                <hr>
+            </div>
+            <div>
+                <label style="font-style: italic;">Password</label>
+                <input type="password" name="password" id="password">
+                <hr>
+            </div>
+            <div>
+                <input type="submit" id="sub" style="background-color: white; font-style: italic; margin-left: 40%;">
+                <button onclick="signup()" style="background-color: white; font-style: italic; margin-left: 20px;">Sign
+                    Up</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var onSubmit = document.getElementById('sub')
+        onSubmit.addEventListener('click', login)
+        // function login(){
+        //     var uname = document.getElementById('username').value
+        //     var password = document.getElementById('password').value
+        //     sessionStorage.username = uname
+        //     if(uname == localStorage.username && password == localStorage.password){
+        //         window.location.replace('dash.html')
+        //     }     
+        //     else{
+        //         alert('Wrong Credentials!')
+        //     }
+        // }
+
+        var obj = {};
+        var arr = [];
+        var time = [];
+        var obj2 = {};
+        var arr2 = [];
+        var lhis = [];
+
+        function signup() {
+
+            if (localStorage.getItem('db') == null) {
+                obj['username'] = 'admin';
+                obj['password'] = 'admin';
+                arr.push(obj);
+                localStorage.setItem('db', JSON.stringify(arr))
+                console.log(arr)
+            }
+            else {
+                var arrP = JSON.parse(localStorage.getItem('db'))
+                console.log(arrP)
+                var uname = document.getElementById('username').value
+                var password = document.getElementById('password').value
+                for (i = 0; i < arrP.length; i++) {
+                    if (arrP[i]['username'] == uname) {
+                        alert('Username already exist!')
+                        return
+                    }
+                }
+
+                obj['username'] = uname;
+                obj['password'] = password;
+                arrP.push(obj);
+                localStorage.setItem('db', JSON.stringify(arrP))
+                console.log(arrP)
+
+                if( localStorage.getItem('lh') == null ){
+                    localStorage.setItem('lh',JSON.stringify(arr2))
+                    var lhis = JSON.parse(localStorage.getItem('lh'))
+                    obj2['username']=uname;
+                    obj2['time']=[];
+                    lhis.push(obj2);
+                    localStorage.setItem('lh',JSON.stringify(lhis))
+                    console.log(lhis)
+                }
+                else{
+                    var lhis = JSON.parse(localStorage.getItem('lh'))
+                    obj2['username']=uname;
+                    obj2['time']=[];
+                    lhis.push(obj2);
+                    localStorage.setItem('lh',JSON.stringify(lhis))
+                    console.log(lhis)
+                }
+                
+                
+            }
+
+        }
+
+        function login() {
+            var arrP = JSON.parse(localStorage.getItem('db'))
+            console.log(arrP)
+            var uname = document.getElementById('username').value
+            var password = document.getElementById('password').value
+            sessionStorage.username = uname
+            lhistory();
+            for (i = 0; i < arrP.length; i++) {
+                if (uname=='admin' && password=='admin'){
+                    window.location = 'admin.html'
+                    return;
+                }
+                if (arrP[i]['username'] == uname && arrP[i]['password'] == password) {
+                    window.location = 'dash.html';
+                    return;
+                }
+
+            }
+
+            alert('User not found. Sign Up!')
+
+        }
+
+        
+
+        function lhistory(){
+            var lh = JSON.parse(localStorage.getItem('lh'))
+            var date = new Date()
+            
+            for(i=0;i<lh.length;i++){
+                var uname = sessionStorage.username
+                if(lh[i]['username']==uname){
+                    ltime = date.toTimeString();
+                    ntime = lh[i]['time']
+                    ntime.push(ltime)
+                    lh[i]['time']=ntime;
+                    localStorage.setItem('lh',JSON.stringify(lh))
+                    console.log(lh)
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
