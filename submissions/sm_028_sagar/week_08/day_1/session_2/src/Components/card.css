@@ -1,0 +1,93 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    color: rgb(221, 218, 218);
+    background-color: rgb(96, 94, 116);
+}
+.card{
+    width: 400px;
+    height: 560px;
+    margin:100px auto;
+    background-color: rgb(39, 37, 61);
+    box-shadow: 2px 2px 10px rgb(39, 37, 61);
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile > div{
+    margin: 5px;
+}
+
+.heading{
+    padding: 0px;
+    margin: 0px;
+}
+
+img{
+    width:150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.pro{
+    padding: 6px;
+    height: 20px;    
+    font-weight: 200;
+    margin: 20px 25px;
+    background-color: rgb(255, 157, 0);
+    border-radius: 5px;
+    color: black;
+}
+
+.profilePic{
+    display: flex;
+    flex-direction: row;
+    width: max-content;   
+}
+
+button{
+    padding: 10px 20px;
+    margin: 2px;
+}
+
+button:nth-of-type(1){
+    background-color: cyan;
+    border:0.5px solid cyan;
+    border-radius: 5px;
+}
+button:nth-of-type(2){
+    color: cyan;
+    background-color: rgb(39, 37, 61);
+    border:1px solid cyan;
+    border-radius: 5px;
+}
+
+.skill{
+    padding: 5px;  
+    margin-top: 42px;
+    background-color: rgb(47, 43, 87);
+
+}
+
+.skill > div{
+    margin: 10px;
+}
+
+.skillList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skillList > div{
+    text-align: center;
+    padding: 5px;
+    margin: 6px;
+    border: 0.5px solid grey;
+}

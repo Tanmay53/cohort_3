@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container p-4 row">
+      <div class="form-group mt-4 text-center col-md-5 p-4 rounded  bg-danger">
+        <input
+          type="text"
+          class="text form-control"
+          placeholder="First Name"
+          id="fname"
+        />
+        <input
+          type="text"
+          class="text form-control"
+          placeholder="Last Name"
+          id="lname"
+        />
+        <input
+          type="date"
+          class="text form-control"
+          placeholder="Date of Birth"
+          id="dob"
+        />
+        <input
+          type="number"
+          class="text form-control"
+          placeholder="Balance"
+          id="balance"
+        />
+        <input
+          type="number"
+          class="text form-control"
+          placeholder="accNumber"
+          id="accNum"
+        />
+        <input
+          type="text"
+          class="text form-control"
+          placeholder="Account Number Name"
+          id="accName"
+        />
+        <p class="lead">Click here to add customer</p>
+        <button id="btn_submit" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="text-center col-md-10 offset-2">
+        <p class="lead">Click to Show customers</p>
+        <button id="btn_show" class="btn btn-primary btn-block mb-4">
+          Show Data
+        </button>
+        <table class="table mt-4 table-striped table-dark">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Date of Birth</th>
+              <th>Balance</th>
+              <th>Acc Number</th>
+              <th>Acc Names</th>
+            </tr>
+          </thead>
+          <tbody id="tBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="home.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

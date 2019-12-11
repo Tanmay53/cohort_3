@@ -1,0 +1,143 @@
+.bg-primary {
+  background: skyblue;
+}
+.bg-grey {
+  background: grey;
+}
+.bg-orange {
+  background: orange;
+}
+.bg-red {
+  background: red;
+}
+.bg-green {
+  background: green;
+}
+.bg-violet {
+  background: violet;
+}
+.bg-pink {
+  background-color: palevioletred;
+}
+.bg-golden {
+  background: gold;
+}
+
+.text-white {
+  color: white;
+  text-align: center;
+}
+.d-inline {
+  display: inline;
+}
+.d-flex {
+  display: flex;
+}
+.round {
+  border-radius: 40px;
+}
+.w-200 {
+  width: 100px;
+}
+
+.padding-custom {
+  padding: 0.5rem 2rem;
+}
+
+/* Card Styles */
+.bg-secondary {
+  background: #231e39;
+}
+.bg-badge {
+  background: #febb33;
+}
+
+.btn-primary {
+  background: #41bfcb;
+  color: #231e39;
+  padding: 0.8rem 2rem;
+  border-radius: 2px;
+  text-decoration: none;
+  margin: 0.3rem;
+}
+.img-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #41bfcb;
+  padding: 0.5rem;
+}
+
+.img-fluid {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.btn-primary-border {
+  background: #231e39;
+  color: #41bfcb;
+  border: 1px solid #41bfcb;
+  padding: 0.8rem 2rem;
+  border-radius: 2px;
+  text-decoration: none;
+  margin: 0.3rem;
+}
+.bg-dark {
+  background: #1f1936;
+}
+.badge {
+  padding: 0.4rem 0.8rem;
+  color: #b3b8cd;
+  border-radius: 1px;
+  border: 0.5px solid #eaecee;
+}
+.rounded {
+  border-radius: 50%;
+}
+a {
+  display: inline-block;
+}
+.flex-primary {
+  display: flex;
+  color: #b3b8cd;
+  padding: 2rem;
+  width: 50%;
+  border-radius: 5px;
+  justify-content: center;
+  background: #231e39;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.flex-content-start {
+  align-self: flex-start;
+}
+.flex-primary h5 {
+  font-weight: 200;
+}
+.flex-primary span {
+  font-size: 14px;
+}
+.flex-primary p {
+  width: 70%;
+  text-align: center;
+  padding: 1rem 0;
+}
+.mt-2 {
+  margin-top: 0.8rem;
+}
+
+.flex-primary span.bg-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  color: #000;
+  align-self: flex-start;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tags span.badge {
+  margin: 0.2rem;
+}
