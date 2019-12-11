@@ -1,16 +1,21 @@
-var union={
-    first:[1,2,3,4],
-    second:[3,4,7,8],
-    unionArr:function(){
-        var unionArray=[];
-        unionArray=this.first;
-        
-        for (var j=0;j<this.second.length;j++){
-            if (unionArray.indexOf(this.second[j])===-1){
-                unionArray.push(this.second[j]);
-            }
+arr1=[1,2,1,1,3,4,5];
+arr2=[4,5,7,8,9];
+
+function union(arr1,arr2){
+    var obj={};
+    var size1=arr1.length;
+    var size2=arr2.length;
+
+    for (var i=0;i<size1||i<size2;i++){
+        if (i<size1){
+            obj[arr1[i]]=arr1[i];
         }
-        return unionArray;
+        if (i<size2){
+            obj[arr2[i]]=arr2[i];
+        }
     }
+    return Object.values(obj);
 }
-console.log(union.unionArr())
+
+console.log(union(arr1,arr2))
+
