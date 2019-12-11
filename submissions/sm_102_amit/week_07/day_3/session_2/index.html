@@ -1,0 +1,93 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>W7 D3</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid bg-light p-5">
+      <h5 class="text-center text-uppercase font-weight-bold border-bottom">
+        User Information
+      </h5>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Show</span>
+            </div>
+            <select class="form-control" id="tableLength">
+              <option value="10" selected>10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="searchText"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Gender</span>
+            </div>
+            <select class="form-control" id="gender">
+              <option value="" selected disabled>Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="btn-group float-right" role="group">
+            <button type="button" class="btn btn-secondary" id="sortEmail">
+              SORT BY EMAIL
+            </button>
+            <button type="button" class="btn btn-secondary" id="sortMarks">
+              SORT BY MARKS
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 bg-dark p-3 table-responsive">
+          <table class="table table-dark table-bordered">
+            <thead class="text-center">
+              <tr class="">
+                <th rowspan="2" scope="col">ID</th>
+                <th rowspan="2" scope="col" id="firstName">FIRST NAME</th>
+                <th rowspan="2" scope="col">LAST NAME</th>
+                <th rowspan="2" scope="col">EMAIL ID</th>
+                <th rowspan="2" scope="col">GENDER</th>
+                <th colspan="3" scope="col">MARKS</th>
+                <th rowspan="2" scope="col">TOTAL</th>
+              </tr>
+              <tr class="">
+                <th scope="col">ENGLISH</th>
+                <th scope="col">MATHS</th>
+                <th scope="col">SCIENCE</th>
+              </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+          </table>
+          <hr />
+          <nav class="p-4" id="pagination"></nav>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

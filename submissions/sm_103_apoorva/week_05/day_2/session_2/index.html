@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W5 D2 C2 JS-11.3</title>
+    <style>
+        .container
+        {   
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 50px;
+        }
+        .form
+        {
+            grid-area: 1/1/span 1/span 1;
+            margin-left: 300px;
+        }
+        .output
+        {
+            grid-area: 1/2/span 1/span 1;
+            background-color: black;
+            color: white;
+            width: 350px;
+            font-size: x-large;
+        }
+        #register
+        {
+            background-color: black;
+            color: white;
+            height: 40px;
+            width: 200px;
+            font-size: large;
+        }
+        .text
+        {
+            font-size: x-large;
+        }
+        .input
+        {
+            height: 30px;
+            width: 200px;
+        }
+        .settingMargin
+        {
+            margin-left: 10px;
+        }
+        table,
+        td {
+            border: 1px solid #333;
+        }
+
+        thead,
+        tfoot {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+                <div class="form formBorder">
+                    <h1 class="text">FORM</h1>
+                    <p class="text">Product name</p>
+                    <input class="input" type="text" id="name">
+                    <p class="text">Price</p>
+                    <input class="input" type="number" id="price">
+                    <p class="text">Quantity</p>
+                    <input class="input" type="number" id="quantity">
+                    <h4 style="color: red;" id="invalid"></h4>
+                    <button id="register" onclick="submit()">REGISTER</button>
+                </div>
+                <div class="output">
+                    <h2 class="settingMargin">Change Settings</h2>
+                    <label class="settingMargin">Change font-size</label>
+                    <select id="fontSize" class="SettingMargin">
+                        <option value="x-small" >x-small</option>
+                        <option value="small" >small</option>
+                        <option value="small" >medium</option>
+                        <option value="large" >large</option>
+                        <option value="x-large" >x-large</option>
+                        <option value="xx-large" >xx-large</option>
+                    </select>
+                    <p class="settingMargin">Click the below bar to change font-color:</p>
+                    <input class="input settingMargin" type="color" id="color">
+                    <p class="settingMargin">Click the below bar to  change background color of alternate row:</p>
+                    <input class="input settingMargin" type="color" id="bgColor">
+                </div>
+        </div>
+        <br>
+        <table style="margin-left: 400px;">
+            <thead>
+                <tr>
+                    <th colspan = "3">Product Table</th>
+                </tr>
+            
+                <tr>
+                    <td>Product Name</td>
+                    <td>Price(Rupee)</td>
+                    <td>Quantity</td>
+                </tr>
+            </thead>
+            <tbody id="productTable">
+                
+            </tbody>
+        </table>
+
+
+    <script>
+    
+    function submit()
+    {
+        var size = document.getElementById("fontSize")
+        size.addEventListener("change",sizeChange)
+
+        var color = document.getElementById("color")
+        color.addEventListener("change",fontColor)
+
+        var bgColor = document.getElementById("bgColor")
+        bgColor.addEventListener("change",bgChange)
+
+
+        var name = document.getElementById("name").value
+        var price = document.getElementById("price").value
+        var quantity = document.getElementById("quantity").value
+        console.log(name,price,quantity)
+
+        var table = document.getElementById("productTable")
+        var tr = document.createElement("tr")
+        console.log(tr)
+        var td1 = document.createElement("td")
+        var td2 = document.createElement("td")
+        var td3 = document.createElement("td")
+        td1.innerHTML = name
+        td2.innerHTML = price
+        td3.innerHTML = quantity
+        tr.appendChild(td1)
+        tr.appendChild(td2)
+        tr.appendChild(td3)
+        table.appendChild(tr)
+
+        function sizeChange()
+        {
+            var size = event.target.value
+            var tr = document.querySelectorAll("tbody tr")
+            for(var i=0; i< tr.length ; i++)
+            {
+                tr[i].style.fontSize = size
+            }
+        }
+
+        function fontColor()
+        {
+            var color = event.target.value
+            var tr = document.querySelectorAll("tbody tr")
+            for(var i=0; i< tr.length ; i++)
+            {
+                tr[i].style.color = color
+            }
+        }
+
+        function bgChange()
+        {
+            var bgColor = event.target.value
+            var tr = document.querySelectorAll("tbody tr")
+            for(var i=0; i< tr.length ; i=i+2)
+            {
+                tr[i].style.background = bgColor
+            }
+        }
+    }
+    </script>
+</body>
+</html>
