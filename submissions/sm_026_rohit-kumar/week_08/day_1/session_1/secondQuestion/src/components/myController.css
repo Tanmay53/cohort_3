@@ -1,0 +1,51 @@
+.red {
+    background: red;
+    width: 200px;
+    height: 30px;
+}
+
+.blue{
+    background: blue;
+    width: 200px;
+    height: 30px;
+
+}
+
+.green {
+    background: green;
+    width: 200px;
+    height: 30px;
+
+}
+
+.yellow {
+    background: yellow;
+    width: 200px;
+    height: 30px;
+
+}
+
+.orange {
+    background: orange;
+    width: 200px;
+    height: 30px;
+
+}
+
+.cyan {
+    width: 200px;
+    height: 30px;
+    background: cyan;
+}
+
+.brown {
+    width: 200px;
+    height: 30px;
+    background: brown;
+}
+
+.blueviolet {
+    width: 200px;
+    height: 30px;
+    background: blueviolet;
+}
