@@ -1,15 +1,27 @@
-const different={
-    array1:[1,2,3,4,5,6,4,7,5,8],
-    array2:[7,8,3,4],
-    difference:function(){
-        var differenceArray=[];
-        for (var i=0;i<this.array1.length;i++){
-            if (this.array2.indexOf(this.array1[i])===-1){
-                differenceArray.push(this.array1[i]);
-            }
-        }
-        return differenceArray;
+arr1=[1,2,3,1,1,4,5,6];
+arr2=[1,1,9,8,4,4,5];
+
+function difference(arr1,arr2){
+    var first={};
+    var second={};
+    size1=arr1.length;
+    size2=arr2.length;
+    for (var i=0;i<size1;i++){
+        first[arr1[i]]=arr1[i];
+    }
+    for (var j=0;j<size2;j++){
+        second[arr2[j]]=arr2[j];
     }
     
-}   
-console.log(different.difference())
+    var a=Object.values(first);
+    var b=Object.values(second);
+
+    var differenceArray=[];
+    for (var i=0;i<a.length;i++){
+        if (b.indexOf(a[i])===-1){
+            differenceArray.push(a[i]);
+        }
+    }
+    return differenceArray;
+}
+console.log(difference(arr1,arr2));
