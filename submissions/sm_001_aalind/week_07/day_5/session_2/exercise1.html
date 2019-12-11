@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 1</title>
+
+</head>
+<body>
+    <div id = "root"></div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+        const renderElement = (
+            <div>
+                <h1>My Todo List</h1>
+                <ul>
+                    <li>Cooking</li>
+                    <li>Cleaning</li>
+                    <li>Homework</li>
+                </ul>
+                <p>
+                    Name: Aalind Sharma <br/>
+                    Age: 22 <br/>
+                    DOB: 11/07/1997 <br/>
+                    Favorite Color: Red
+                </p>
+            </div>
+        );
+
+        ReactDOM.render(
+            renderElement,
+            document.getElementById("root")
+        );
+
+    </script>
+</body>
+</html>
