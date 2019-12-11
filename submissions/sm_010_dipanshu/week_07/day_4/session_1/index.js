@@ -35,12 +35,13 @@ class Car {
     this.trips.push(trip);
 
     //updating avgSpeed after every new trip is added
-    var totalSpeed = 0;
+    var totalDistance = 0;
+    var totalTime = 0;
     this.trips.forEach(function(trip) {
-      totalSpeed += trip.avgSpeed;
+      totalDistance += trip.distance;
+      totalTime += trip.time;
     });
-    let totalTrips = this.trips.length;
-    let totalAverage = Math.ceil(totalSpeed / totalTrips);
+    let totalAverage = Math.round(totalDistance / totalTime);
     this.avgSpeed = totalAverage;
   }
 
