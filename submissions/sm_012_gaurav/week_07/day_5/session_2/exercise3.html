@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button>Add</button>
+    <div id = "root"></div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    //Write your code below this line
+        const findSum = function() {
+            const num1 = Number(document.getElementById('num1').value);
+            const num2 = Number(document.getElementById('num2').value);
+            const sum = num1+num2;
+            let element = (<h2>The sum of {num1} and {num2} is {sum}.</h2>);
+            ReactDOM.render(element, document.getElementById('root'));
+        }
+
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', function() {
+            findSum();
+        });
+        
+    </script>
+</body>
+</html>

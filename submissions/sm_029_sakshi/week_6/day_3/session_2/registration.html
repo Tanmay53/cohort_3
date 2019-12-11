@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button id="name1">NAME</button>
+	<button id="gender1">GENDER</button>
+	<button id="email1">EMAIL</button>
+	<button id="mobile1">MOBILE</button>
+	<button id="resetfrm1">RESET FORM</button>
+    <button id="resetdata1">RESET DISPLAY</button>
+    <!-- Clicking the buttons shows the respective values in the designated locations
+    The reset will change back to the original values when the page is loaded -->
+    <script>
+    
+    $("#name1").click(function()
+    {
+      $("#dName").text($("#name").val());
+    });
+
+    $("#gender1").click(function()
+    {
+      $("#dGender").text($("#gender").val());
+    });
+
+    $("#email1").click(function()
+    {
+      $("#dEmail").text($("#email").val());
+    });
+
+    $("#mobile1").click(function()
+    {
+      $("#dMobile").text($("#mobile").val());
+    });
+    
+    // =============================reset form==============================
+    
+    $("#resetfrm1").click(function(){
+        $("#name").val(" ");
+        $("#gender").val(" ");
+        $("#email").val(" ");
+        $("#mobile").val(" ");
+    })
+    
+
+
+    // ===============================reset data===================================
+
+    $("#resetdata1").click(function () {
+			$("#dName").text("NAME")
+			$("#dGender").text("GENDER")
+			$("#dEmail").text("EMAIL")
+			$("#dMobile").text("MOBILE")
+
+		})
+    </script>
+</body>
+</html>
