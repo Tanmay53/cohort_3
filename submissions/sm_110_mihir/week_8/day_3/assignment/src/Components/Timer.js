@@ -62,7 +62,7 @@ export default class Timer extends React.Component {
                         type="text"
                         value={this.state.minutes}
                         onChange={this.handleInput}
-                        placeholder="Add task todo"
+                        placeholder="Minutes"
                     />
 
                     <small>m</small>

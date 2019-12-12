@@ -50,7 +50,7 @@ You don't need to focus on styles for the MVP.
 -   [x] The stopwatch must display the number of seconds and milliseconds.
 -   [ ] The timer must allow a user to manually enter the time using an inputbox, **_in seconds_**.
 -   [x] The user should be able to start, stop and reset the timer.
--   [ ] The use should be able to toggle between the timer and the stopwatch using tabs just like the google timer.
+-   [x] The use should be able to toggle between the timer and the stopwatch using tabs just like the google timer.
 
 ## Stretch Goals
 
