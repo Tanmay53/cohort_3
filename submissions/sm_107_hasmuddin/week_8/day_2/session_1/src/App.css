@@ -1,0 +1,9 @@
+.change {
+  border: 2px solid black;
+  padding: 10px;
+  width: 12rem;
+}
+.flex {
+  display: flex;
+  direction: row;
+}

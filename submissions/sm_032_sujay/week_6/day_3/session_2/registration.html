@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button id="bName">NAME</button>
+	<button id="sex">GENDER</button>
+	<button id="mail">EMAIL</button>
+	<button id="mob">MOBILE</button>
+	<button id="rstForm">RESET FORM</button>
+    <button id="rstDisplay">RESET DISPLAY</button>
+    <!-- Clicking the buttons shows the respective values in the designated locations
+	The reset will change back to the original values when the page is loaded -->
+	<script>
+	
+	$(document).ready(function(){
+  // your code goes here
+		$('#bName').click(function(){
+			$("#dName").text($("#name").val())
+		})
+
+		$("#sex").click(function(){
+			$("#dGender").text($("#gender").val())
+		})
+
+		$("#mail").click(function(){
+			$("#dEmail").text($("#email").val())
+		})
+
+		$("#mob").click(function(){
+			$("#dMobile").text($("#mobile").val())
+		})
+
+
+		$("#rstForm").click(function(){
+			$("#gender").val("")
+			$("#email").val("")
+			$("#mobile").val("")
+			$("#name").val("")
+		})
+
+		$("#rstDisplay").click(function(){
+			$("#dGender").text("GENDER")
+			$("#dName").text("NAME")
+			$("#dEmail").text("EMAIL")
+			$("#dMobile").text("MOBILE")
+		})
+
+
+
+
+
+});
+	</script>
+</body>
+</html>

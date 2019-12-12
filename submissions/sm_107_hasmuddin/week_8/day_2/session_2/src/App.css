@@ -1,0 +1,38 @@
+body {
+  background: khaki;
+}
+.d-flex {
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.background {
+  background: lightblue;
+  box-shadow: 10px 10px 20px black;
+  height: 25rem;
+}
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+}
+.todolist {
+  width: 15rem;
+}
+
+.green {
+  background: lightgreen;
+  border: 2px solid red;
+  box-shadow: 2px 3px 13px black;
+  border-radius: 24px;
+}
+.transparent {
+  background: transparent;
+  border-radius: 24px;
+  border: 1px solid black;
+  box-shadow: 2px 3px 13px black;
+  transition: 1s;
+}
+.transparent:hover {
+  transform: scale(1.1);
+}
