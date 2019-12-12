@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Exercise 3
+    </title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <label for="fname">FirstName</label>
+        <input type="text" id="fname" />
+      </div>
+
+      <div>
+        <label for="lname">Lastname</label>
+        <input type="text" id="lname" />
+      </div>
+
+      <button id="addBtn">Add</button>
+
+      <div id="root"></div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+      <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"
+      ></script>
+
+      <script type="text/babel">
+        function App() {
+          let fname = $("#fname").val();
+          let lname = $("#lname").val();
+
+          let fullName = fname + " " + lname;
+
+          return (
+            <div>
+              <h2>Hello {fullName}.</h2>
+            </div>
+          );
+        }
+
+        let addBtn = document.getElementById("addBtn");
+        addBtn.addEventListener("click", () => {
+          ReactDOM.render(<App />, document.getElementById("root"));
+        });
+      </script>
+    </div>
+  </body>
+</html>
