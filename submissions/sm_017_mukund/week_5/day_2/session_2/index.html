@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            #flex, #settings {
+                display: flex;
+                border: 1px solid black;
+            }
+
+            #mainform {
+                width: 450px;
+                border: 1px solid black;
+            }
+
+            #mainform div {
+                margin: auto;
+                padding: 10px;
+            }
+
+            #settings {
+                flex-direction: column;
+                width: 450px;
+            }
+
+            #settings div {
+                margin: auto;
+            }
+
+            #table {
+                display: flex;
+                width: 1000px;
+                border: 1px solid black;
+            }
+
+            #table div {
+                margin: auto;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="flex">
+           <!-- FORM to add -->
+            <div id="mainform">
+                <form>
+                   <div id="product">
+                        <div>PRODUCT</div>
+                        <div>
+                            <input type="text" id="proname">
+                        </div>
+                   </div>
+                   <div id="price">
+                        <div>PRICE</div>
+                        <div>
+                            <input type="number" id="proprice">
+                        </div>
+                   </div>
+                   <div id="qty">
+                        <div>QTY</div>
+                        <div>
+                            <input type="number" id="proqty">
+                        </div>
+                   </div> 
+                </form>
+                <div>
+                    <button type="submit" id="submit">SUBMIT</button>
+                </div>
+            </div>   
+            <!-- TABLE -->
+            <div id="table">
+                <div id="prodetails">PRODUCTS</div>
+                <div id="pricedetails">PRICE</div>
+                <div id="qtydetails">QUANTITY</div>
+            </div>
+            <!-- SETTINGS -->
+            <div id="settings">
+                <div id="fontsize">
+                    <select id="fontValue">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <button type="submit" id="changeFontSize">Change Font Size</button>
+                </div>
+                <div id="fontcolor">
+                    <select id="fontColor">
+                        <option value="red">red</option>
+                        <option value="blue">blue</option>
+                        <option value="green">green</option>
+                        <option value="yellow">yellow</option>
+                        <option value="pink">pink</option>
+                        <option value="orange">orange</option>
+                        <option value="brown">brown</option>
+                        <option value="black">black</option>
+                        <option value="purple">purple</option>
+                        <option value="maroon">maroon</option>
+                    </select>
+                    <button type="submit" id="changeFontColor">Change Font Color</button>
+                </div>
+                <div id="bgcolor">
+                    <select id="bgColor">
+                        <option value="red">red</option>
+                        <option value="blue">blue</option>
+                        <option value="green">green</option>
+                        <option value="yellow">yellow</option>
+                        <option value="pink">pink</option>
+                        <option value="orange">orange</option>
+                        <option value="brown">brown</option>
+                        <option value="black">black</option>
+                        <option value="purple">purple</option>
+                        <option value="maroon">maroon</option>
+                    </select>
+                    <button type="submit" id="changebgColor">Change Background Color</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var entry = document.getElementById('submit')
+            entry.addEventListener('click',enter)
+
+            function enter(){
+                var proname = document.getElementById('proname').value
+                var proprice = document.getElementById('proprice').value
+                var proqty = document.getElementById('proqty').value
+
+                var div = document.createElement('div')
+                var prodetails = document.getElementById('prodetails')
+                div.textContent = proname
+                prodetails.appendChild(div)
+
+                var div = document.createElement('div')
+                var pricedetails = document.getElementById('pricedetails')
+                div.textContent = proprice
+                pricedetails.appendChild(div)
+
+                var div = document.createElement('div')
+                var qtydetails = document.getElementById('qtydetails')
+                div.textContent = proqty
+                qtydetails.appendChild(div)
+            }
+
+            var changeFontSize = document.getElementById('changeFontSize')
+            changeFontSize.addEventListener('click',chgfontSize)
+
+            function chgfontSize(){
+                var fontValue = document.getElementById('fontValue').value
+                var table = document.getElementById('table')
+                table.style.fontSize = fontValue+'px'
+            }
+
+            var changeFontColor = document.getElementById('changeFontColor')
+            changeFontColor.addEventListener('click',chgfontColor)
+
+            function chgfontColor(){
+                var fontColor = document.getElementById('fontColor').value
+                var table = document.getElementById('table')
+                table.style.color = fontColor
+            }
+
+            var changebgColor = document.getElementById('changebgColor')
+            changebgColor.addEventListener('click',chgbgColor)
+
+            function chgbgColor(){
+                var bgColor = document.getElementById('bgColor').value
+                var prod = document.querySelectorAll('#prodetails div')
+                var prid = document.querySelectorAll('#pricedetails div')
+                var qtyd = document.querySelectorAll('#qtydetails div')
+                console.log(prod.length)
+
+                for(i=0;i<prod.length;i++){
+                    if( i%2 == 0 ){
+                        prod[i].style.background = bgColor
+                        prid[i].style.background = bgColor
+                        qtyd[i].style.background = bgColor
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

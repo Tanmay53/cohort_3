@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W4 D4 A1</title>
+    <style>
+    #maxDiv{
+        display: flex;
+    }
+    #maxBox
+    {
+        height: 100px;
+        width: 150px;
+        background-color: red;
+        margin-left: 400px;
+        border: solid;
+        font-size: xx-large;
+        text-align: center;
+    }
+    #minBox
+    {
+        height: 100px;
+        width: 150px;
+        background-color: green;
+        margin-left: 200px;
+        border: solid;
+        font-size: xx-large;
+        text-align: center;
+
+    }
+    #scoreBox
+    {
+        height: 100px;
+        width: 300px;
+        background-color: gray;
+        margin-left: 500px;
+        border: solid;
+        font-size: xx-large;
+        text-align: center;
+    }
+    
+    .buttonBox1
+    {
+        height: 60px;
+        width: 60px;
+        background-color: green;
+        border: solid;
+        font-size: x-large;
+    }
+    .buttonBox2
+    {
+        height: 60px;
+        width: 60px;
+        background-color: orange;
+        border: solid;
+        font-size: x-large;
+        color: white;
+    }
+    #submit
+    {
+        height: 60px;
+        width: 300px;
+        background-color: black;
+        margin-left: 500px;
+        border: solid;
+        color: white;
+        font-size: x-large;
+    }
+    </style>
+</head>
+<body>
+    <div id="maxDiv">
+        <div id="maxBox">500</div>
+        <div id="minBox">500</div>
+    </div>
+    <div id="maxDiv">
+        <h2 style="margin-left: 450px;">MIN</h2>
+        <h2 style="margin-left: 300px;">MAX</h2>
+    </div>
+    <h1 style="margin-left:595px ;">SCORE</h1>
+    <div id="scoreBox"></div>
+    <br>
+    <div id="maxDiv">
+            <button class="buttonBox1"style="margin-left: 525px;" onclick="score()" >1</button>
+            <button class="buttonBox2"style="margin-left: 40px" onclick="score()">2</button>
+            <button class="buttonBox1"style="margin-left: 40px"onclick="score()">3</button>
+    </div>
+    <br>
+    <div id="maxDiv">
+            <button class="buttonBox2" style="margin-left: 525px;"onclick="score()" >4</button>
+            <button class="buttonBox2"style="margin-left: 40px" onclick="score()">5</button>
+            <button class="buttonBox2"style="margin-left: 40px"onclick="score()">6</button>
+    </div>
+    <br>
+    <div id="maxDiv">
+            <button class="buttonBox1"style="margin-left: 525px;" onclick="score()">7</button>
+            <button class="buttonBox2"style="margin-left: 40px"onclick="score()">8</button>
+            <button class="buttonBox1"style="margin-left: 40px"onclick="score()">9</button>
+    </div>
+    <br>
+    <div id="maxDiv">
+            <button class="buttonBox1"style="margin-left: 625px; background-color: purple" onclick="score()">0</button>
+    </div>
+    <br>
+    <div id="maxDiv">
+            <button id="submit" onclick="update()">ENTER</button>
+    </div>
+    <br>
+
+    <script>
+    var sum = []
+    var min = 0
+    var max = 500
+    function score()
+    {
+        val = event.target.innerHTML
+        sum.push(val)
+        //console.log(string)
+        document.getElementById("scoreBox").innerHTML = sum.join("")
+    }
+    function update()
+    {
+        sum = sum.join("")
+        sum = parseInt(sum)
+        //console.log(sum)
+        min = document.getElementById("minBox")
+        max =  document.getElementById("maxBox")
+        console.log(min.innerHTML)
+        if(sum < parseInt(min.innerHTML))
+        {
+            min.innerHTML = sum
+            document.getElementById("scoreBox").innerHTML =" "
+            sum = []
+        }
+
+        else if(sum > parseInt(max.innerHTML))
+        {
+            max.innerHTML = sum
+            document.getElementById("scoreBox").innerHTML =" "
+            sum = []
+        }
+
+        else
+        {
+            document.getElementById("scoreBox").innerHTML =" "
+            sum = []
+        }
+        
+    }
+    
+    </script>
+</body>
+</html>

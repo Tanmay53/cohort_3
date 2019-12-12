@@ -36,13 +36,14 @@ function addUser(){
             password:password
         }
         userDetails.push(obj)
-        if(verbose){
-            console.log('adding users data', obj)
-            console.log('new students array is', userDetails)
-        }
+        // if(verbose){
+        //     console.log('adding users data', obj)
+        //     console.log('new students array is', userDetails)
+        // }
         var output = JSON.stringify(userDetails)
-        console.log(output)
+        // console.log(output)
         localStorage.setItem("data", output)
+        window.location.href = "/home/skynet/repos/cohort_3/submissions/sm_004_abhishek-sharma/week_05/day_3/session_1/dash.html";
     }
     
     userTextField.value = ""

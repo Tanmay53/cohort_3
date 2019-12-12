@@ -19,6 +19,7 @@ function changeServer() {
     // Success status
     if (xhr.status == 200) {
       // Clear table 
+      // console.log(xhr.response)
       table.innerHTML = '';
       // Parse and store value from URL
       var val = JSON.parse(xhr.response);
