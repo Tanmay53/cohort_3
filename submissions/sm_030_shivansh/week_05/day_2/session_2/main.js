@@ -1,5 +1,11 @@
+//developer mode
+var verbose = 1;
+
+
+
 var btn1 = document.getElementById("data");
 var btn2 = document.getElementById("setting");
+
 
 
 btn1.addEventListener("click", function () {
@@ -9,7 +15,7 @@ btn1.addEventListener("click", function () {
 
 btn2.addEventListener("click", function () {
     fontSize();
-    color();
+    textColor();
     bgColor();
 });
 
@@ -57,4 +63,56 @@ function reset() {
     document.getElementById("product").value = "";
     document.getElementById("price").value = "";
     document.getElementById("quantity").value = "";
+}
+
+//changing the fontsize
+function fontSize() {
+    var size = document.getElementById("font-size").value;
+
+    if (size !== "") {
+        var row = document.querySelectorAll("tr");
+        if (verbose) {
+            console.log(row)
+        }
+        for (var i = 0; i < row.length; i++) {
+            row[i].style.fontSize = size;
+        }
+    }
+}
+
+//function  to  change text color
+function textColor() {
+
+    var colors = document.getElementById("color").value;
+
+    if (colors !== "") {
+
+        var row = document.querySelectorAll("tr");
+
+        if (verbose) {
+            console.log(row)
+        }
+
+        for (var i = 0; i < row.length; i++) {
+            row[i].style.color = colors;
+        }
+    }
+
+}
+
+
+// function  to  change alternate row background
+function bgColor() {
+    var colors = document.getElementById("bg-color").value;
+
+
+
+    if (colors !== "") {
+        var row = document.querySelectorAll("tr");
+        if (verbose) console.log(row);
+
+        for (var i = 0; i < row.length; i += 2) {
+            row[i].style.backgroundColor = colors;
+        }
+    }
 }
