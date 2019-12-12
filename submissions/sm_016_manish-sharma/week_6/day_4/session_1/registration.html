@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .form-control {
+            border: 1px solid black
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5 mx-5 pt-5">
+
+
+            <div class="col" id='cont'>
+                <div class="form-group" id='cont1'>
+                    <label>NAME</label>
+                    <input class="form-control" type="text" id='name'>
+                    <p class="text-danger" id='p1'>Invalid name</p>
+                </div>
+                <div class="form-group" id='cont2'>
+                    <label>EMAIL</label>
+                    <input class="form-control" type="text" id='email'>
+                    <p class="text-danger" id='p2'>Invalid email</p>
+                </div>
+                <div class="form-group" id='cont3'>
+                    <label>MOBILE</label>
+                    <input class="form-control" type="number" id='mobile'>
+                    <p class="text-danger" id='p3'>Invalid mobile</p>
+                </div>
+                <br>
+                <div class="btn btn-dark col-12" id='reg'>REGISTER</div>
+
+            </div>
+
+
+            <div class="col  text-light mt-md-0 mt-5 mx-md-5" id='display'>
+                <div class="card bg-dark col-md-10 col-12 p-4">
+                    <h4>NAME</h4>
+                    <div class="display-4" id='d-name'>Masai</div>
+                    <h4 class="mt-4">EMAIL</h4>
+                    <div class="h4" id='d-email'>email@masaischool.com</div>
+                    <h4 class="mt-4">MOBILE</h4>
+                    <div class="h4" id='d-mobile'>1234567890</div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="registration.js"></script>
+
+</html>

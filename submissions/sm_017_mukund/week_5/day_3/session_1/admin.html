@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select id="u-name"></select>
+    <button onclick="selectuser()">Select</button>
+    <div id="lhistory"></div>
+    <script>
+        var select = document.getElementById('u-name')
+        var arrP = JSON.parse(localStorage.getItem('db'))
+        console.log(arrP)
+        for(i=0;i<arrP.length;i++){
+            var op = document.createElement('option')
+            var uname = arrP[i]['username']
+            op.value = uname
+            op.innerText = uname
+            select.appendChild(op)
+        }
+
+        var lh = JSON.parse(localStorage.getItem('lh'))
+        function selectuser(){
+
+            var rmv = document.querySelectorAll('#lhistory div')
+            if( rmv.length != null ){
+                for(i=0;i<rmv.length;i++){
+                    rmv[i].remove();
+                }
+            }
+
+            var user = document.getElementById('u-name').value
+            var lhistory = document.getElementById('lhistory')
+
+            for(i=0;i<lh.length;i++){
+                if( lh[i]['username'] == user ){
+                    var time = lh[i]['time']
+
+                    for(j=0;j<time.length;j++){
+                        var div = document.createElement('div')
+                        div.textContent = time[j] + ' '+ lh[i]['username']
+                        lhistory.appendChild(div)
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
