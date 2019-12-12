@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W5 D3 C1</title>
+    <style>
+
+    #maindiv
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 10px
+    }
+
+    #mainSignup
+    {
+        grid-area: 1/1/span 1/span 1;
+        height: 500px;
+        width: 300px;
+       margin-left: 50px;
+        border: 5px blue solid;
+        text-align: center;
+    }
+
+    #mainSignin
+    {
+        grid-area: 1/2/span 1/ span 1;
+        height: 350px;
+        width: 300px;
+        border: 5px blue solid;
+        text-align: center;
+    }
+    input
+    {
+        border: 2px cornflowerblue solid;
+        height: 30px;
+        width: 150px;
+    }
+    button
+    {
+       
+        background-color: darkcyan;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div id="mainSignup">
+                <h1 style="color: darkblue;">Sign up here</h1>
+                <div >
+                    <div>
+                        <h3>email</h3>
+                        <input type="email" id="emailsignup" placeholder="enter email">
+                    </div>
+                    <br>
+                    <div>
+                            <h3>username</h3>
+                            <input type="email" id="usernamesignup" placeholder="enter username">
+                    </div>
+                    <br>
+                    <div>
+                        <h3>password</h3>
+                        
+                        <input type="password" id="passsignup" placeholder="enter password">
+                    </div>
+                    <br>
+                    <div>
+                        <button onclick="add()">submit</button>
+                    </div>
+                </div>
+        </div>
+       
+        <div id="mainSignin">
+            <h1 style="color: darkblue;">Sign in here</h1>
+            <div >
+                <div>
+                    <h3>username</h3>
+                    <input type="email" id="username" placeholder="enter username">
+                </div>
+                <br>
+                <div>
+                    <h3>password</h3>
+                    
+                    <input type="password" id="pass" placeholder="enter password">
+                </div>
+                <br>
+                <div>
+                    <button onclick="submit()">submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+   
+    <script src="script.js">
+    </script>
+</body>
+</html>
