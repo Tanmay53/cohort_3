@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+        //Write your code below this line
+        var arr = ["cooking", "cleaning", "homework", "washing", "drying"]
+        var obj={
+            NAME:"PIYUSH JAIN",
+            AGE: 22, 
+            DOB: "09-01-1997",
+            FAVOURITECOLOR: "BLUE"
+        }
+        function App(){
+        var element = (
+            <div>
+                <h1>My Todo List</h1>
+                <ul>
+                    <li>{arr[0]}</li>
+                    <li>{arr[1]}</li>
+                    <li>{arr[2]}</li>
+                    <li>{arr[3]}</li>
+                    <li>{arr[4]}</li>
+                </ul>
+                <p>{obj["NAME"]} { obj["AGE"]} {obj["DOB"]},{obj["FAVOURITECOLOR"]}</p>
+            </div>)
+            ReactDOM.render(element, document.getElementById('root'))
+        }
+        App()
+
+
+    </script>
+</body>
+
+</html>

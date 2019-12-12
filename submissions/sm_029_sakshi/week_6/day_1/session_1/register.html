@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="register.js"></script>
+        <style type="text/css">
+            #grid {
+                width: 30%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-gap: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="grid">
+                <div>Name </div> <input id="name" type="input">
+                <div>Email </div> <input id="email" type="input"> 
+                <div>Password </div> <input id="password" type="input"> 
+                <div>Username </div> <input id="username" type="input"> 
+                <div>Mobile </div> <input id="mobile" type="input"> 
+                <div>Description </div> <input id="description" type="input"> 
+                <div></div><div> <button id="btnSubmit" onclick="onSubmit()" >Register</button></div>
+                <div id="finalresponse"></div>
+            </div>
+        </div>
+    </body>
+</html>
