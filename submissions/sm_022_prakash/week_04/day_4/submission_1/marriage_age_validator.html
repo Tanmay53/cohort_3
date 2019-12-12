@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Marraige Age Validator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div></div>
+    <select id="gender">
+
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+
+    </select>
+    <input type="number" value="enter your age" id="age">
+
+    <button onclick="validator()">Validator</button>
+    </div>
+
+    <script type="text/javascript">
+        function validator() {
+            console.log("your validator")
+            var gender = document.getElementById("gender").value
+            var age = document.getElementById("age").value
+            if (gender = "female" && age > 2000) {
+                alert("You have not reached legal age of marriage")
+            }
+            else {
+                alert("You have reached legal age of marriage")
+            }
+            if (gender = "male" && age > 1997) {
+                alert("You have not reached legal age of marriage")
+            }
+            else {
+                alert("You have reached legal age of marriage")
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

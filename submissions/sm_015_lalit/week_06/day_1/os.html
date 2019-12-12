@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+       <div id="heading" class="col text-center h3 my-4">
+        Choose Operating System
+       </div>
+       <div class="col">
+          <div class="text-center my-3">
+                <select id="osSelect" >
+                        <option selected disabled value="">Choose Operating System</option>
+                        <option value="android">Android</option>
+                        <option value="ubuntu">Ubuntu</option>
+                        <option value="windows">Windows</option>
+                        <option value="macos">Mac OS</option>
+                    </select>
+          </div>
+       </div>
+       <div class="col">
+            <div class="text-center mt-5">
+                    <button id="btnSub" class=" btn btn-primary">Submit</button>
+            </div>
+            <div class="mt-4">
+                    <table class="text-center" id="tableP" style="width: 120%;">
+                            
+                        </table>
+            </div>
+       </div>
+   </div> 
+</body>
+<script src="os.js"></script>
+</html>

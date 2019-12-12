@@ -1,0 +1,56 @@
+.main{
+    background:linear-gradient(to right,rgb(66,212,212),rgb(245,246,247));
+}
+.top{
+    border:1px solid black;
+    margin-left:250px;
+    margin-right:250px;
+}
+.headbar{
+    text-align:center;
+    font-size:30px;
+}
+#age{
+    font-size:20px;
+}
+.first{
+    text-align:center;
+    font-size:25px;
+}
+.submitbar{
+    text-align:center;
+    font-size:20px;
+    color:black;
+    margin-left:650px;
+    margin-bottom:20px;
+}
+.second{
+    text-align:center;
+    font-size:25px;
+    border:1px solid black;
+    margin:30px 250px;
+}
+#text_color{
+    font-size:20px;
+}
+#fav_color{
+    font-size:20px;
+    margin-bottom:20px;
+}
+.third{
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    border:1px solid black;
+    margin:50px 250px;
+}
+#continent_select{
+    font-size:20px;
+    margin-top:20px;
+}
+.find{
+    text-align:center;
+    margin-top:20px;
+    font-size:20px;
+    margin-bottom:20px;
+}
