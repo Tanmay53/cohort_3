@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>index</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container border row">
+      <div class="form-row col-lg-4 col-md-6 col-10 m-5 p-4 border">
+        <div class="form-group">
+          <div class="form-row">
+            <input
+              type="text"
+              placeholder="First Name"
+              class="form-control m-2 border border-round"
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="form-control  m-2 border border-round"
+            />
+            <input
+              type="text"
+              placeholder="Username"
+              class="form-control  m-2 border border-round"
+            />
+            <input
+              type="text"
+              placeholder="Password"
+              class="form-control  m-2 border border-round"
+            />
+            <input
+              type="text"
+              placeholder="Email"
+              class="form-control  m-2 border border-round"
+            />
+            <input
+              type="text"
+              placeholder="address"
+              class="form-control  m-2 border border-round"
+            />
+            <input
+              type="text"
+              placeholder="Phone no"
+              class="form-control  m-2 border border-round"
+            />
+            <select name="type" class="custom-select m-2" id="type">
+              <option value="--" selected disabled>User Type</option>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+            <input
+              type="submit"
+              id="submit"
+              class="btn btn-success px-5 m-2"
+              value="Submit"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-12">
+        <div class="form-group border m-5 p-3">
+          <select name="userlist" id="userlist" class="custom-select">
+            <option value="--" selected disabled>Select User</option>
+          </select>
+        </div>
+        <!-- print user info with greeting -->
+        <div class="form-row" id="userinfo"></div>
+      </div>
+    </div>
+    <!-- table data -->
+    <div class="container">
+      <div class="row p-3">
+        <table class="table" id="table">
+          <thead id="headTable">
+            <tr class="tr">
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>
+                Username
+                <select name="users" id="userSort">
+                  <option value="" selected></option>
+                  <option value="asc">Asc</option>
+                  <option value="desc">Des</option>
+                </select>
+              </th>
+              <th>Email</th>
+              <th>address</th>
+              <th>
+                User type
+                <select name="usertype" id="usertype">
+                  <option value="all" selected>All</option>
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

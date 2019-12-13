@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>car class</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!-- create car class -->
+                <div class="col-4">
+                    <form>
+                        <div class="from-group">
+                            <h1 class="bg-primary text-white p-2">
+                                Insert Car details
+                            </h1>
+                            <label for="brand">Car Make</label>
+                            <input type="text" class="form-control" id="make" />
+                            <label for="model">Car Model</label>
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="model"
+                            />
+                            <label for="topSpeed">Top Speed</label>
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="topSpeed"
+                            />
+                            <button onclick="createCar()" class="btn">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- insert trip details -->
+                <div class="col-4">
+                    <form>
+                        <div class="from-group">
+                            <h1 class="bg-primary text-white p-2">
+                                Insert trip details
+                            </h1>
+                            <label for="car">Select Car</label>
+                            <select
+                                name="car"
+                                id="sel-car"
+                                class="custom-select"
+                            >
+                                <option selected>Choose car</option>
+                            </select>
+                            <div id="trip">
+                                <label for="distance"
+                                    >Distance <small class="muted">(km)</small>
+                                </label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="distance"
+                                />
+                                <label for="time"
+                                    >Time <small class="muted">(Hr)</small>
+                                </label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="time"
+                                />
+                                <!-- <label for="distance"
+                                    >speed
+                                    <small class="muted">(km/hr)</small>
+                                </label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="speed"
+                                /> -->
+                                <button onclick="addTrip()" class="btn">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- summary -->
+                <div class="col-4">
+                    <h1 class="bg-primary text-white p-2">
+                        See Car details
+                    </h1>
+                    <select name="car" id="show-car" class="custom-select">
+                        <option selected>Choose car</option>
+                    </select>
+                    <button onclick="getStatus()" class="btn">
+                        Get Current Status
+                    </button>
+                    <button onclick="carDetails()" class="btn btn-warning">
+                        Show car & trip detail
+                    </button>
+                    <p id="status" class="bg-success text-white mt-2 p-2"></p>
+                    <ul class="list-group " id="details"></ul>
+                    <ul id="trips" class=" list-group"></ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://kit.fontawesome.com/2ccced269b.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>

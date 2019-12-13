@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W4 D5 S2 JS10.4</title>
+</head>
+<body>
+    <script>
+        window.addEventListener("resize",randomColorChange)
+        function random(number){
+            return Math.floor(Math.random()*number);
+        }
+        function randomColorChange()
+        {
+            var bodyele = document.getElementsByTagName("body")
+            console.log(randomColorChange)
+            // var randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')'
+            bodyele[0].style.background = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')'
+        }
+    </script>
+    
+</body>
+</html>

@@ -5,8 +5,8 @@ var pass='dino@19'
 
 function user(name,email,password){
     var obj={};
-    obj.name=name
-    obj.email=email
+    obj.name=name,
+    obj.email=email,
     obj.password=password
 
     return obj;

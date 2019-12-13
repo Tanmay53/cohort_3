@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    table,
+        td {
+            border: 1px solid #333;
+        }
+
+        thead,
+        tfoot {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">USER DETAILS</th>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td>Login Time(in GMT)</td>
+            </tr>
+        </thead>
+        <tbody id="table" style="margin-left: 300px;">
+
+        </tbody>
+    </table>
+</body>
+
+<script>
+    data = localStorage.getItem("admin")
+    console.log(JSON.parse(data))
+    getData = JSON.parse(data)
+    console.log(getData)
+    var table = document.getElementById("table")
+
+    getData.forEach(function(element)
+    {
+        var tr = document.createElement("tr")
+        var td2 = document.createElement("td")
+        var td4 = document.createElement("td")
+        td2.innerHTML = element.user
+        td4.innerHTML = element.loginTime
+        tr.appendChild(td2)
+        tr.appendChild(td4)
+        table.appendChild(tr)
+    })
+    
+
+
+</script>
+</html>

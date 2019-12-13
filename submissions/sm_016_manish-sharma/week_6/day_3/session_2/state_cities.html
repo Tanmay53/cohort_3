@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>State City Selectors</title>
+</head>
+
+<body>
+    <div class="container col-6 m-5">
+    <select id="state"></select>
+    <button id='next'>Next</button>
+    <select id="city"></select>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    var state_cities = [{ "state": "Karnataka", "cities": ["Bangalore", "Mysore"] }, { "state": "Tamil Nadu", "cities": ["Chennai", "Tanjore"] }]
+
+    $(state_cities).each(function (i, o) {
+        $('#state').append('<option>' + o.state + '</option>')
+    })
+
+    $('#next').click(function () {
+        $('#city > option').remove()
+        var select = $('#state').val()
+        newA = state_cities.filter(function (ele) {
+            return ele.state == select
+        })
+        // console.log(newA[0].cities)
+        $(newA[0].cities).each(function (i, v) {
+            $('#city').append('<option>' + v + '</option>')
+        })
+    })
+
+</script>
+
+</html>
