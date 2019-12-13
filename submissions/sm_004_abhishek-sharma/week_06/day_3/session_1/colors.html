@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colours</title>
+	<style>
+		/* p{
+			font-weight: bold;
+		} */
+	</style>
+</head>
+<body>
+	<h1 class="red" id="head1">MASAI H1</h1>
+	<h2 class="green" id="head2">MASAI H2</h2>
+	<h3 class="red" id="head3">MASAI H3</h3>
+	<h4 class="green" id="head4">MASAI H4</h4>
+	<h4 class="green" id="head5">MASAI H4</h4>
+	<div class="red" id="con1">School C1</div>
+	<div class="green" id="con2">School C2</div>
+	<div class="red" id="con3">School C3</div>
+	<p class="red" id="para1">Coding P1</p>
+	<p class="green" id="para2">Coding P2</p>
+	<p class="red" id="para3">Coding P3</p>
+	<hr>
+	<button id="changeH1">Change H1</button>
+	<button id="changeH2">Change H2</button>
+	<button id="changeH3">Change H3</button>
+	<button id="changeH4">Change H4</button>
+	<button id="changeDiv">Change DIVS</button>
+	<button id="changeP">Change Paragraph</button>
+	<button id="changeRed">Change Red</button>
+	<button id="changeGreen">Change Green</button>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// your code goes here
+			console.log("0")
+			$("#changeH1").click(function(){
+				console.log("1")
+				$("h1").css("font-size", "70px")
+			})
+			$("#changeH2").click(function(){
+				console.log("2")
+				$("h2").css({"font-size":"32px", "padding":"10px"})
+			})
+			$("#changeH3").click(function(){
+				console.log("3")
+				$("h3").css({"background":"black", "color":"white"})
+			})
+			$("#changeH4").click(function(){
+				console.log("4")
+				$("h4").css({"border":"2px solid black", "margin":"10px"})
+			})
+			$("#changeDiv").click(function(){
+				console.log("5")
+				$("div").css({"padding":"6px 8px"})
+			})
+			$("#changeP").click(function(){
+				console.log("6")
+				$("p").css({"color":"purple", "font-weight":"bold"})
+			})
+			$("#changeRed").click(function(){
+				console.log("7")
+				$(".red").css({"color":"red"})
+			})
+			$("#changeGreen").click(function(){
+				console.log("8")
+				$(".green").css({"background":"green", "color":"white"})
+			})
+
+
+		});
+	</script>
+</body>
+
+</html>
