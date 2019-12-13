@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="number" name = "num1" id="num1">
+	<input type="number" name = "num2" id="num2">
+	<p id="out1"></p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<pv id="out2"></pv>
+	<input type="text" id="limit">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="email">
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+			var a=document.getElementById("num1").value;
+			var b=document.getElementById("num2").value;
+			console.log(a*b);
+			var arr=[];
+			for (var i=0;i<b;i++){
+				arr.push(a);
+			}
+			var exp=arr.reduce(function (acc,curr){
+				return acc*curr
+			},1)
+
+			document.getElementById("out1").innerHTML=exp;	
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+			var limit=document.getElementById("limit").value;
+			var sum=0;
+			for (var i=1;i<=limit;i++){
+				if (i%3===0 && i%5===0){
+					sum+=i;
+				}
+			}
+			document.getElementById("out2").innerHTML=sum;
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+			var email=document.getElementById("email").value;
+			
+			var emailArr=email.split("@");
+			if (emailArr.length!=2){
+				alert("Invalid Email");
+			}
+			if (email.indexOf("@")===-1){
+				alert("Invalid Email");
+			}
+			var domainArr=emailArr[1].split(".");
+
+			console.log(domainArr);	
+
+			if (domainArr[0]==""){
+				alert("Invalid Email")
+			}
+			else{
+				alert("Valid Email")
+			}
+		}
+	</script>
+</body>
+</html>
