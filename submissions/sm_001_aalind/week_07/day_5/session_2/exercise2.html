@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React</title>
+
+</head>
+<body>
+    <div id = "root"></div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+        var toDoList = ["Cooking", "Cleaning", "Homework"];
+        var personObj = {
+            name: "Aalind Sharma",
+            age: 22,
+            dob: "11/07/1997",
+            favouriteColor: "Red"
+        };
+
+        function person() {
+            return `${personObj.name} ${personObj.age} ${personObj.dob} ${personObj.favouriteColor}`
+        }
+
+        let listItem = toDoList.map(item => {
+            return <li>{item}</li>;
+        });
+
+        console.log(listItem)
+
+        var output = (
+            <div>
+                <h1>My Todo List</h1>
+                <ul>
+                    {listItem}
+                </ul>
+                <p>{person()}</p>
+            </div>
+        );
+
+        ReactDOM.render(output, document.getElementById("root"));
+
+    </script>
+</body>
+</html>
