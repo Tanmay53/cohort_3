@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Coding Session 1!</title>
+</head>
+
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name="num1" id="exponent1">
+	<input type="text" name="num2" id="exponent2">
+	<p id = "expo_result"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id= "factor_result"></p>
+	<input type="text" id="limit">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" />
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent() {
+			console.log("exponent function")
+			var result = 0
+			var ele1 = document.getElementById("exponent1").value
+			var ele2 = document.getElementById("exponent2").value
+			var ele = 1;
+			if (ele2 == 0) {
+				result = ele
+			}
+			else if (ele2 > 0) {
+				for (var i = 0; i <= ele2 - 1; i++) {
+					ele = ele * ele1
+					result = ele;
+				}
+
+			}
+			var para = document.getElementById("expo_result")
+			para.innerHTML = "result:" + result	
+			
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5() {
+			var limit = document.getElementById("limit").value
+			var sum = 0
+			for(var i=1; i<limit; i++){
+				if(i%3==0 && i%5==0){
+					sum += i
+				}
+			}
+			
+			document.getElementById("factor_result").innerHTML = "Result:" + sum
+			
+			document.getElementById("factor_result").style.color = "green"
+
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail() {
+			console.log("exponent function")
+		}
+	</script>
+</body>
+
+</html>

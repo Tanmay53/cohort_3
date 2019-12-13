@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Practise Selectors</title>
+</head>
+
+<body>
+    <h1 id="first_h1">First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+    <button onclick="change_h1()">Change H1</button>
+    <button onclick="change_h3()">Change H3</button>
+    <button onclick="change_h5()">Change H5</button>
+    <button onclick="change_green()">Change Green</button>
+    <button onclick="change_red()">Change Red</button>
+    <button onclick="change_blue()">Change Blue</button>
+    <script>
+        function change_h1() {
+            document.getElementById("first_h1").style.color = "red"
+        }
+        function change_h3() {
+            var green_h3 = document.querySelectorAll("h3")
+            for (var i = 0; i < green_h3.length; i++) {
+                temp = green_h3[i]
+                temp.style.color = "green"
+            }
+
+        }
+        function change_h5() {
+            var blue_h5 = document.querySelectorAll("h5")
+            for (var i = 0; u = i < blue_h5.length; i++) {
+                temp = blue_h5[i]
+                temp.style.color = "blue"
+            }
+        }
+        function change_green() {
+            var ch_green = document.querySelectorAll(".green")
+            for (var i = 0; i < ch_green.length; i++) {
+                temp = ch_green[i]
+                temp.style.color = "green"
+            }
+        }
+        function change_blue() {
+            var ch_blue = document.querySelectorAll(".blue")
+            for (var i = 0; i < ch_blue.length; i++) {
+                temp = ch_blue[i]
+                temp.style.color = "blue"
+            }
+
+        }
+        function change_red() {
+            var ch_red = document.querySelectorAll(".red")
+            for (var i = 0; i < ch_red.length; i++) {
+                temp = ch_red[i]
+                temp.style.color = "red"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

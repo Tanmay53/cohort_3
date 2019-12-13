@@ -25,3 +25,4 @@
 | sm_012 | Gaurav Arya | Rick & Morty        | [github](https://github.com/gauravarya12/masai-sprint-3)
 | sm_104 | Asheesh Pratap| Currency Converter| [github](https://github.com/asheesh900/masai-sprint-3.git)
 | sm_029 | Sakshi Sinha| Cocktail Db         | [github](https://github.com/SakshiSinha/masai-sprint-3)                       |
+| sm_017 | Mukund Chandak | Cocktail Db         | [github](https://github.com/mukundchandak/masai-sprint-3)                  | 
