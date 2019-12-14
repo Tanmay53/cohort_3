@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="registration">
+        <label>Name</label><br>
+        <input type="text" id="formele"><br>
+        <label>Email</label><br>
+        <input type="text" id="formele"><br>
+        <label>User-name</label><br>
+        <input type="text" id="formele"><br>
+        <label>Mobile</label><br>
+        <input type="text" id="formele"><br>
+        <label>Password</label><br>
+        <input type="text" id="formele"><br>
+        <label>description</label><br>
+        <input type="text" id="formele"><br>
+    </div>
+    <button >Register</button>
+</body>
+<script>
+    var regbutton = document.querySelector('button');
+    regbutton.addEventListener('click', function (event) {
+        event.preventDefault();
+        var input = document.querySelectorAll('#formele');
+        console.log(input)
+        var obj = {
+            name: input[0].value,
+            email: input[1].value,
+            username: input[2].value,
+            mobile: input[3].value,
+            description: input[4].value,
+            password: input[5].value
+        }
+        console.log(obj)
+        send(obj);
+    });
+
+    function send(obj) {
+        var xhr = new XMLHttpRequest();
+        var json = JSON.stringify(obj);
+        xhr.open("POST", 'http://localhost:8080/auth/register')
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+        console.log(json)
+        xhr.addEventListener('load', function () {
+            if (xhr.status <= 400) {
+                console.log(xhr.response);
+            }
+            else {
+                console.log("Error Code is:" + xhr.status);
+            }
+        });
+
+        xhr.addEventListener('error', function (event) {
+            console.log('Error in HTTP request!')
+        });
+
+
+    }
+</script>
+
+</html>
