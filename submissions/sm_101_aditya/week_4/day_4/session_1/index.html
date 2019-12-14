@@ -1,0 +1,79 @@
+
+
+<!--index-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name = "num1" id="id1">
+	<input type="text" name = "num2" id="id2">
+	<p id="exp"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="id3"></p>
+	<input type="text" id="id4">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="em" />
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+            var num1 = document.getElementById("id1").value
+            var num2 = document.getElementById("id2").value
+			var expo = 1
+			for(var i = 0; i < num2; i++){
+				expo = expo * num1
+			}
+			document.getElementById("exp").innerHTML = expo
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+			var limit = document.getElementById("id4").value
+			var sum = 0
+			for(var i = 0; i < limit; i++){
+				if(i%3 === 0 && i%5 === 0){
+					sum += i
+				}
+			}
+			document.getElementById("id3").innerHTML = sum
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+			var email = document.getElementById("em").value
+			if(emailValidator(email)){
+				alert("valid Email")
+			}
+			else("Invalid Email")
+			function buildDictionary(){
+				var symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@_-."
+				var dict = {}
+				for (var i = 0; i < symbols.length; i++){
+					dict[symbols[i]] = 0
+				}
+				return dict
+			}
+			function emailValidator(email){
+				var dict =buildDictionary()
+				
+			}
+		}
+	</script>
+</body>
+</html>
+

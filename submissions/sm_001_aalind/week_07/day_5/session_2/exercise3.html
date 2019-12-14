@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React</title>
+
+</head>
+<body>
+    <div id = "root"></div>
+
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <button id="btn">Add</button>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    //Write your code below this line
+    function addInputs() {
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+
+        return <h1>{Number(input1) + Number(input2)}</h1>
+    }
+
+    btn.addEventListener("click", function() {
+        ReactDOM.render(addInputs(), document.getElementById("root"));
+    })
+
+    </script>
+</body>
+</html>
