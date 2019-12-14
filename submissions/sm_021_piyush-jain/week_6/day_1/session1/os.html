@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API</title>
+    <!-- <script src="os.js"></script> -->
+</head>
+
+<body>
+    <div>
+        <select id="Os">
+            <option value="android">Android</option>
+            <option value="ubuntu">Ubuntu</option>
+            <option value="windows">Windows</option>
+            <option id="mac">Mac</option>
+        </select>
+        <button id="getData">Submit</button>
+        <p id="one"></p>
+    </div>
+    <table>
+        <tr>
+            <th>Version Name</th>
+            <th>Number</th>
+        </tr>
+    </table>
+</body>
+<script>
+
+    var disbutton = document.querySelector('button')
+    disbutton.addEventListener('click', function () {
+        var opersys = document.getElementById('Os').value;
+        var xhr = new XMLHttpRequest();
+        var url = 'http://localhost:8080/codenames/' + opersys;
+        xhr.open('GET', url);
+        xhr.send();
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                var result = xhr.response;
+                showdata(result);
+            }
+            else {
+                console.log("Error Code is:" + xhr.status);
+            }
+        }
+    });
+    function showdata(result) {
+        var obj = JSON.parse(result)
+        console.log(obj)
+        var table1 = document.querySelector('table');
+        for (var i = 0; i < obj["codenames"]["length"]; i++) {
+            console.log(i)
+            var tr1 = document.createElement('tr');
+            var td1 = document.createElement('td')
+            td1.textContent = obj["codenames"][i]["version"];
+            tr1.appendChild(td1);
+            var td2 = document.createElement('td')
+            td2.textContent = obj["codenames"][i]["name"];
+            tr1.appendChild(td2);
+            table1.appendChild(tr1)
+        }
+        
+    }
+
+</script>
+
+</html>
