@@ -8,13 +8,18 @@ export class Form extends Component {
             age: "",
             address: "",
             department: "",
-            salary: ""
+            salary: 0
         };
     }
     handleChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
+        if (e.target.name === "salary")
+            this.setState({
+                salary: Number(e.target.value)
+            });
+        else
+            this.setState({
+                [e.target.name]: e.target.value
+            });
     };
     handleSubmit = e => {
         e.preventDefault();
@@ -36,7 +41,7 @@ export class Form extends Component {
                     />
                     <label htmlFor="age">Age</label>
                     <input
-                        type="text"
+                        type="number"
                         value={this.state.age}
                         name="age"
                         onChange={this.handleChange}
@@ -51,16 +56,23 @@ export class Form extends Component {
                         className="form-control"
                     />
                     <label htmlFor="department">Department</label>
-                    <input
+                    <select
                         type="text"
                         value={this.state.department}
                         name="department"
                         onChange={this.handleChange}
-                        className="form-control"
-                    />
+                        className="custom-select"
+                    >
+                        <option value="IT" selected>
+                            IT
+                        </option>
+                        <option value="sales">Sales</option>
+                        <option value="manager">manager</option>
+                        <option value="operations">operations</option>
+                    </select>
                     <label htmlFor="salary">Salary</label>
                     <input
-                        type="text"
+                        type="number"
                         value={this.state.salary}
                         name="salary"
                         onChange={this.handleChange}
