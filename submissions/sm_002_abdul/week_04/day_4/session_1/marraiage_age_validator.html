@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marriage Age Validator</title>
+</head>
+<body>
+    <label>Select Your Gender</label>
+    <select id="gender" name="gender">
+        <option value="">----</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+    <hr>
+    
+    <input type="date" id="yob" name="yearOfBirth" >
+
+    <button id="submit" onclick="marg()">Run Validator</button>
+
+    <script>
+        function marg(){
+        var gender=document.getElementById("gender").value;
+
+        var yob=document.getElementById("yob").value;
+
+        console.log(gender,yob)
+
+        var yearOfBirth=parseInt(yob.slice(0,4));
+        var age= 2019-yearOfBirth;
+        
+        if (gender=='female' && age<18){ 
+            alert('Miss, You are Below Legal Age to get Married')
+        }
+        else if (gender=='male' && age<21){
+            alert('Mr, You are Below Legal Age to get Married')
+        }
+        else{
+            alert('You can get Married Legally')
+        }
+        
+    
+        }
+    </script>
+    
+</body>
+</html>
