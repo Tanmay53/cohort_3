@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Registration</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-5">
+        <form>
+          <div class="form-group text-dark">
+            <label for="name" class="h2">NAME</label>
+            <input type="text" class="form-control border border-dark pt-5 pb-4" id="name" placeholder="Enter name between 3 to 10 charactes">
+            <small class="form-text  text-danger h4" id="invalidName"></small>
+          </div>
+          <div class="form-group text-dark">
+            <label for="exampleInputEmail1" class="h2">EMAIL</label>
+            <input type="email" class="form-control border border-dark pt-5 pb-4" id="email" aria-describedby="emailHelp" placeholder="Enter Like adsef12@gmail.com">
+            <small  class="form-text  text-danger h4" id="invalidEmail"></small>
+          </div>
+          <div class="form-group text-dark">
+            <label for="number" class="h2">NUMBER</label>
+            <input type="number" class="form-control border border-dark pt-5 pb-4" id="number" placeholder="Enter only 10 digit mobile number">
+            <small class="form-text  text-danger h4" id="invalidNum"></small>
+          </div>
+          <button type="submit" class="btn btn-dark text-white btn-block py-4" id="btn">REGISTER</button>
+        </form>
+      </div>
+      <div class="col-3"></div>
+      <div class="col-4  text-white " id="disBlock">
+        <div class="py-5 px-3 mt-4">
+          <p class="h2" id="printNameLabel"></p>
+          <h1 class="display-4 mb-3" id="printNameValue"></h1>
+          <p class="h2" id="printEmailLabel"></p>
+          <h1 class="h3 mb-5" id="printEmailValue"></h1>
+          <p class="h2" id="printNumberLabel"></p>
+          <h1 class="h1" id="printNumberValue"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JS file -->
+  <script>
+    // UI variables 
+    var n = document.querySelector('#name');
+    var email = document.querySelector('#email');
+    var num = document.querySelector('#number');
+    var btn = document.querySelector('#btn');
+
+    btn.addEventListener('click', submitFrom);
+    
+    function submitFrom(e) {
+      e.preventDefault();
+      if(n.value.length >= 3 && n.value.length <= 10) {
+        document.querySelector('#printNameLabel').innerHTML = 'NAME'
+        document.querySelector('#printNameValue').innerHTML = n.value
+      } else {
+        document.querySelector('#invalidName').innerHTML = 'Enter a valid Name';
+      }
+      if(num.value.length == 10) {
+        document.querySelector('#printNumberLabel').innerHTML = 'NUMBER'
+        document.querySelector('#printNumberValue').innerHTML = num.value
+        document.querySelector('#disBlock').classList.add("bg-dark");
+      } else {
+        document.querySelector('#invalidNum').innerHTML = 'Enter a valid Mobile';
+      }
+      if(ValidateEmail() ) {
+        document.querySelector('#printEmailLabel').innerHTML = 'EMAIL'
+        document.querySelector('#printEmailValue').innerHTML = email.value
+      } else {
+        document.querySelector('#invalidEmail').innerHTML = 'Enter a valid Email';
+      }
+    }
+    function ValidateEmail() {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+          console.log('valis')
+          return (true)
+        }
+        alert("You have entered an invalid email address!")
+        console.log('Invalid')
+        return (false)
+      }
+
+
+  </script>
+</body>
+</html>
+
+
