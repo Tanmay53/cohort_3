@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<style>
+.pStyle
+{
+    white-space: pre-line;
+    font-size: medium;
+}
+</style>
+<html>
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <div>
+      <h3>Fill the details</h3>
+      <label for="firstName">First Name:</label>
+      <br>
+      <input type="text" id="firstName" placeholder="Enter First Name" >
+      <br>
+      <br>
+      <label for="lastName">Last Name:</label>
+      <br>
+      <input type="text" id="lastName" placeholder="Enter Last Name" >
+      <br>
+      <br>
+      <label for="DOB">Date of Birth:</label>
+      <br>
+      <input type="date" id="DOB" placeholder="Enter your DOB" >
+      <br>
+      <br>
+      <label for="balance">Balance:</label>
+      <br>
+      <input type="number" id="balance" placeholder="Enter the Amount" >
+      <br>
+      <br>
+      <label for="accNumber">Account Number:</label>
+      <br>
+      <input type="number" id="accNumber" placeholder="Enter Acoount Number" >
+      <br>
+      <br>
+      <label for="sharedAccountHolders">Names of Shared Acoount Holders:</label>
+      <br>
+      <input type="text" id="sharedAccountHolders" placeholder="Enter Names(coma Seperated!)" >
+  </div>
+  <h1>Click the button to add a new customer!</h1>
+  <button id="addCustomer">Add customer</button>
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! <h1>
+  <button id="printDetails">Print Customers</button>  
+  <div id="displayContainer"> </div>
+  
+
+  <script>
+      function Person(firstName, lastName, DOB, balance, accNumber, sharedAccountHolders)
+      {
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.DOB = DOB;
+          this.balance = balance;
+          this.accNumber = accNumber;
+          this.sharedAccountHolders = sharedAccountHolders;
+
+          this.displayDetails = function(){
+              var output = ''
+                  output += "First Name: " + this.firstName + "\n" +
+                            "Last Name: " + this.lastName + '\n' +
+                            "Date of Birth: " + this.DOB + '\n' +
+                            "Balance Amount: " + this.balance + '\n' +
+                            "Account Number: " + this.accNumber + '\n' +
+                            "Shared Account Holders Name: " + this.sharedAccountHolders + '\n'
+              return output
+          }
+      }
+
+      var customerArr = [] //This array contains all the Person Objects! 
+      function createPerson()
+      {
+        var fname = document.getElementById("firstName")
+        var lname = document.getElementById("lastName")
+        var dateOfBirth = document.getElementById("DOB")
+        var balance = document.getElementById("balance")
+        var accNumber = document.getElementById("accNumber")
+        var sharedAccountHolders = document.getElementById("sharedAccountHolders")
+        var newPerson = new Person(fname.value, lname.value, dateOfBirth.value, balance.value, accNumber.value, sharedAccountHolders.value)
+        customerArr.push(newPerson)
+        //console.log(customerArr)
+        fname.value =" "
+        lname.value = " "
+        dateOfBirth.value = " "
+        balance.value = " "
+        accNumber.value = " "
+        sharedAccountHolders.value = " "
+        
+      }
+
+      function printDetail()
+      {
+        console.log(customerArr)
+        var place = document.getElementById("displayContainer")
+
+        customerArr.forEach(function(element)
+        {
+            var out = element.displayDetails()
+            var displayPara = document.createElement('p')
+            displayPara.setAttribute("class","pStyle")
+            displayPara.innerHTML = out
+            place.appendChild(displayPara)
+        })
+      }
+
+
+      var add = document.querySelector("#addCustomer")
+      add.addEventListener('click',createPerson)
+
+      var print = document.querySelector("#printDetails")
+      print.addEventListener('click',printDetail)
+      //console.log(customerArr)
+  </script>
+</body>
+</html>
