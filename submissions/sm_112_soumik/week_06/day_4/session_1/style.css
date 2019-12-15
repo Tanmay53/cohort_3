@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1 {
+  height: 400px;
+  width: 400px;
+  background-color: aqua;
+  justify-content: center;
+  align-items: center;
+}
+.box2 {
+  text-align: center;
+  height: 400px;
+  width: 400px;
+  background-color: aquamarine;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  border: 2px solid black;
+}
+tr,
+td {
+  border: 1px solid black;
+}
+th {
+  text-align: center;
+}
+select {
+  height: 60px;
+  width: 200px;
+  border-radius: 50px;
+  background-color: hsla(148, 61%, 82%, 0.72);
+}

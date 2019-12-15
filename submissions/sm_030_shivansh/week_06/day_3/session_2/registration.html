@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <input type="text" name="name" id="name">
+    <select id="gender">
+        <option value="">--</option>
+        <option value="male">M</option>
+        <option value="female">F</option>
+    </select>
+    <input type="text" name="email" id="email">
+    <input type="text" name="mobile" id="mobile">
+    <hr>
+    <h1 id="dName">NAME</h1>
+    <h2 id="dGender">GENDER</h2>
+    <h3 id="dEmail">EMAIL</h3>
+    <h4 id="dMobile">MOBILE</h4>
+    <hr>
+    <button id="btn-name">NAME</button>
+    <button id="btn-gender">GENDER</button>
+    <button id="btn-email">EMAIL</button>
+    <button id="btn-mobile">MOBILE</button>
+    <button id="reset-form">RESET FORM</button>
+    <button id="reset-display">RESET DISPLAY</button>
+    <!-- Clicking the buttons shows the respective values in the designated locations
+    The reset will change back to the original values when the page is loaded -->
+    <script>
+        //problem1
+        $("#btn-name").on("click", function () {
+            var name = $("#name").val();
+            $("#dName").text(name);
+        });
+
+        //problem2
+        $("#btn-gender").on("click", function () {
+            var gender = $("#gender").val();
+            $("#dGender").text(gender);
+        });
+
+        //problem3
+        $("#btn-email").on("click", function () {
+            var email = $("#email").val();
+            $("#dEmail").text(email);
+        });
+
+        //problem4
+        $("#btn-mobile").on("click", function () {
+            var mobile = $("#mobile").val();
+            $("#dMobile").text(mobile);
+        });
+
+        //reseting form
+        $("#reset-form").on("click", function () {
+            $("#name").val("");
+            $("#gender").val("");
+            $("#email").val("");
+            $("#mobile").val("");
+        });
+
+        //reseting display
+        $("#reset-display").on("click", function () {
+            $("#dName").text("Name");
+            $("#dGender").text("Gender");
+            $("#dEmail").text("Email");
+            $("#dMobile").text("Mobile");
+        });
+    </script>
+</body>
+
+</html>
