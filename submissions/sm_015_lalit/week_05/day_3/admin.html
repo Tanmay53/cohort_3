@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .formParent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+
+        body {
+            background: #d50000;
+        }
+
+        .form {
+            display: flex;
+            align-self: center;
+            flex-direction: column;
+            /* border: 5px solid black; */
+            min-height: 300px;
+            width: 450px;
+            text-align: center;
+            background: #ff8a80;
+            /* box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.8); */
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+</head>
+
+<body>
+    <div>
+        <div class="formParent">
+            <div class="form">
+                <h1 id=heading>Admin Dashboard</h1>
+                <div>
+                    <button onclick="clearData()">Clear Data & Logout</button>
+                    <table id="table" style="margin: 0px auto;border-spacing:20px 5px;">
+                        <tr>
+                            <th>Username</th>
+                            <th>Valid User</th>
+                            <th>Login attempt at</th>
+                        </tr>
+                    </table>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+
+        input = localStorage.getItem('user')
+        if (input == null) {
+            window.location.href = "index.html"
+        }
+        localStorage.setItem("backup", input)
+        var user = JSON.parse(input)
+        console.log(user)
+
+
+        function createData(xo, yo) {
+            tableP = document.getElementById("table")
+            var rowP = document.createElement("tr")
+            tableP.appendChild(rowP)
+            var colName = document.createElement("td")
+            colName.textContent = xo
+            rowP.appendChild(colName)
+            var colValid = document.createElement("td")
+            if (xo == "lalit" || xo == "manish" || xo == "admin" || xo == "masai" || xo == "admin2") {
+                colValid.textContent = "Yes"
+            } else {
+                colValid.textContent = "No"
+            }
+            rowP.appendChild(colValid)
+            var colTime = document.createElement("td")
+            colTime.textContent = yo
+            rowP.appendChild(colTime)
+        }
+
+
+        for (i = 0; i < user.length; i++) {
+            usrName = user[i].name
+            usrLogin = user[i].login
+            createData(usrName, usrLogin)
+        }
+
+
+    }
+
+    function clearData() {
+        localStorage.clear()
+        window.location.reload();
+    }
+</script>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice 2</title>
+</head>
+
+<body>
+    <div class="container mx-auto mt-3">
+        <div class="row">
+            <div class="col-8">
+                <div class="h2">Billing address</div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label>First Name</label>
+                        <input class="form-control">
+                    </div>
+                    <div class="col form-group">
+                        <label>Last Name</label>
+                        <input class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Username</label>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">@</span>
+                        <input class="form-control">
+                    </div>  
+                </div>
+                <div class="form-group">
+                    <label>Email<span class="text-muted">(Optional)</span> </label>
+                    <input class="form-control" placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <input class="form-control" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                    <label>Address 2<span class="text-muted">(Optional)</span> </label>
+                    <input class="form-control" placeholder="Apartment or suite">
+                </div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label>Country</label>
+                        <select class="custom-select">
+                            <option selected>Choose..</option>
+                        </select>
+                    </div>
+                    <div class="col form-group">
+                        <label>State</label>
+                        <select class="custom-select">
+                            <option selected>Choose..</option>
+                        </select>
+                    </div>
+                    <div class="col form-group">
+                        <label>Zip</label>
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+                <hr>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="addressinfo">
+                    <label class="custom-control-label" for="addressinfo">Shipping address is the same as my billing
+                        address</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="saveinfo">
+                    <label class="custom-control-label" for="saveinfo">Save this information for next time
+                    </label>
+                </div>
+                <hr>
+                <div class="h2">Payment</div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="radio1" name="payment" class="custom-control-input">
+                    <label class="custom-control-label" for="radio1">Credit Card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="radio2" name="payment" class="custom-control-input">
+                    <label class="custom-control-label" for="radio2">Debit Card</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="radio3" name="payment" class="custom-control-input">
+                    <label class="custom-control-label" for="radio3">PayPal</label>
+                </div>
+                <div class="row mt-2">
+                    <div class="col form-group">
+                        <label>Name on card</label>
+                        <input class="form-control">
+                        <small class="text-muted">Full name as displayed on card</small>
+                    </div>
+                    <div class="col form-group">
+                        <label>Credit card number</label>
+                        <input class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="text-muted text-left">Your Cart</h4>
+                    </div>
+                    <div class="col text-right">
+                       <h><span class=" text-right badge badge-pill badge-secondary">3</span></h>
+                    </div>
+                </div>
+                <ul class="list-group border">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col text-left">
+                                <div>Product name</div>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <div class="col">
+                                <p class="text-muted text-right">$12</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col text-left">
+                                <div>Second product</div>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <div class="col">
+                                <p class="text-muted text-right">$8</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col text-left">
+                                <div>Third item</div>
+                                <small class="text-muted">Brief description</small>
+                            </div>
+                            <div class="col">
+                                <p class="text-muted text-right">$5</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col text-left">
+                                <div>Promo code</div>
+                                <div class="text-success">EXAMPLECODE</div>
+                            </div>
+                            <div class="col">
+                                <p class="text-success text-right">$12</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col text-left">
+                                <div>Total (USD)</div>
+                            </div>
+                            <div class="col">
+                                <p class="text-right"><b>$20</b></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-group border mt-2">
+                    <li class="list-group-item">
+                        <div class="form-group">
+                            <div class="input-group-append">
+                                <input class="form-control" placeholder="Promo code">
+                                <button type="submit" class="btn btn-secondary">Redeem</button>
+                            </div>
+                        </div>
+            </div>
+
+        </div>
+        </li>
+
+        </ul>
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+</body>
+
+</html>

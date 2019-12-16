@@ -1,0 +1,31 @@
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.flex-col {
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.flex-col h3 {
+    align-self: center;
+}
+.flex-row input {
+    margin: 10px;
+}
+.flex-row p {
+    margin: 10px;
+}
+.border {
+    border: 2px solid black;
+}
+#addItem {
+    margin: 10px;
+    width: 30%;
+    align-self: center;
+}
+#settings button {
+    margin: 10px;
+}

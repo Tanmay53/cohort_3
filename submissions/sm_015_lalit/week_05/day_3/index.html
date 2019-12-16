@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet"> -->
+
+    <style>
+        .formParent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+
+        body {
+            background: #00796b;
+        }
+
+        .form {
+            display: flex;
+            align-self: center;
+            flex-direction: column;
+            /* border: 5px solid black; */
+            height: 200px;
+            width: 400px;
+            text-align: center;
+            background: #a7ffeb;
+            box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.8);
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        button {
+            margin-top: 30px;
+            width: 80px;
+            margin-left: 40%;
+        }
+
+        @media (max-width:768px) {
+            .formParent {
+                height: 300px;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="formParent">
+            <div class="form" action="">
+
+                <div><br>Username</div>
+                <div><input id="usernameinput" type="text" placeholder="Username" required></div>
+                <div><br>Password</div>
+                <div><input id="passwordinput" type="text" placeholder="Password" required></div>
+                <button onclick="validation()">Login</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var user = [{
+        name: "lalit",
+        passw: "12345",
+    }, {
+        name: "manish",
+        passw: "123456",
+    }, {
+        name: "masai",
+        passw: "school"
+    }]
+    var admin = [{
+            name: "admin",
+            passw: "admin",
+        },
+        {
+            name: "admin2",
+            passw: "admin2",
+        }
+    ]
+
+    dataArr = []
+    backupRec = JSON.parse(localStorage.getItem("backup"))
+    if (backupRec != null) {
+        for (i = 0; i < backupRec.length; i++) {
+            dataArr.push(backupRec[i])
+        }
+
+    }
+    console.log(dataArr)
+
+    function validation() {
+        var username = document.getElementById("usernameinput").value
+        var password = document.getElementById("passwordinput").value
+
+
+        var dateinfo = new Date()
+        var hour = dateinfo.getHours();
+        var minutes = dateinfo.getMinutes()
+        var logoutmin = minutes + 5
+
+        function UserObj(a, b, c, d, e) {
+            this.name = a;
+            this.pass = b;
+            this.login = c + ":" + d;
+            this.logout = c + ":" + e;
+
+        }
+
+        let y = admin.filter(function (ele) {
+            return ele.name == username
+        })
+
+        let x = user.filter(function (ele) {
+            return ele.name == username
+        })
+        var xArr = Object.keys(x)
+        var yArr = Object.keys(y)
+
+        console.log(dataArr)
+
+
+        if (yArr.length > 0) {
+            if (password == y[0].passw && username == y[0].name) {
+                console.log(" admin passed")
+                window.location.href = "admin.html"
+            } else {
+                console.log("admin failed")
+                alert("Wrong password")
+            }
+        }
+        if (xArr.length > 0) {
+            if (password == x[0].passw && username == x[0].name) {
+                console.log("user passed")
+                window.location.href = "dash.html"
+            } else {
+                console.log("user failed")
+                alert("Wrong password")
+            }
+        }
+        if (xArr.length == 0 & yArr.length == 0) {
+            console.log("all failed")
+            alert("Wrong username/password")
+        }
+        var details = new UserObj(username, password, hour, minutes, logoutmin)
+        dataArr.push(details)
+        localStorage.setItem('user', JSON.stringify(dataArr));
+
+    }
+</script>
+
+</html>

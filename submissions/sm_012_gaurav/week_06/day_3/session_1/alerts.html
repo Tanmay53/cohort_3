@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Showing Alerts</title>
+	</head>
+	<body>
+        <!-- Clicking the buttons should show the alerts with respective content -->
+        <button id="fname">FIRSTNAME</button>
+		<button id="lname">LASTNAME</button>
+        <button id="flname">FIRSTNAME NAME</button>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $('#fname').click(function() {
+                alert($(this).text());
+            });
+            $('#lname').click(function() {
+                alert($(this).text());
+            });
+            $('#flname').click(function() {
+                alert($(this).text());
+            });
+        </script>
+	</body>
+</html>

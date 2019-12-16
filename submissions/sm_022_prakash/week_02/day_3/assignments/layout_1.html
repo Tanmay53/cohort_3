@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>layout1</title>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+        .layout {
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: 100px 100px 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            font-size: 25px;
+
+        }
+
+        #box1 {
+            background: red;
+            /* height: 50px; */
+            /* width:600px; */
+            grid-area: 1 / 1 / span 1 /span 6;
+        }
+
+        #box2 {
+            background: green;
+            /* height:100px; */
+            /* width:200px; */
+            /* margin-top: 60px; */
+            grid-area: 2 / 1 / span 10 / span 3;
+        }
+
+        #box3 {
+            background: yellow;
+            /* height:100px; */
+            /* width:200px; */
+            /* margin-top: 60px; */
+            grid-area: 2 / 4 / span 10 / span 3;
+        }
+
+/* for the screen size between upto 600 */
+@media only screen and (max-width: 600px){
+
+.layout {
+            display: grid;
+            grid-gap: 50px;
+            /* row-gap: 20px; */
+            grid-template-columns: 50px 50px  50px 50px  50px 50px;
+            grid-template-rows:  50px 50px  50px 50px  50px 50px  50px 50px;
+            font-size: 25px;
+
+        }
+
+        #box1 {
+            background: red;
+            /* height: 50px; */
+            /* width:600px; */
+            grid-area: 1 / 1 / span 1 /span 4;
+        }
+
+        #box2 {
+            background: green;
+            /* height:100px; */
+            /* width:200px; */
+            /* margin-top: 60px; */
+            grid-area: 2 / 1 / span 3 / span 4;
+        }
+
+        #box3 {
+            background: yellow;
+            /* height:100px; */
+            /* width:200px; */
+            /* margin-top: 60px; */
+            grid-area: 5 / 1 / span  3/ span;
+        }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="layout">
+
+        <div id="box1"> NAVIGATION</div>
+        <div id="box2">LEFT BOX </div>
+        <div id="box3">RIGHT BOX </div>
+        <!-- <div id ="box3"> </div> -->
+    </div>
+
+</body>

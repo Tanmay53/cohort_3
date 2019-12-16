@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>State City Selectors</title>
+</head>
+<body>
+    <select id="state"></select>
+    <button class="cities" >Next</button>
+    <select id="city"></select>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var state_cities = [
+            {"state": "Karnataka", "cities": ["Bangalore", "Mysore"]}, 
+            {"state": "Tamil Nadu", "cities": ["Chennai", "Tanjore"]}] 
+        $(document).ready(function(){
+            state_cities.forEach(function(key) {
+            $("#state").append("<option>"+key.state+"</option>")
+          })
+        $(".cities").click(function()
+        {
+            state_cities.forEach(function(key){
+                if(key.state== $("#state").val()){
+                    $('#city').empty()
+                    key.cities.forEach(function(ele){
+                        $("#city").append("<option>"+ele+"</option>")
+                    })
+                }
+            })
+        })
+        });
+        
+        
+    </script>
+</body>
+</html>

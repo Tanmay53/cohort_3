@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+        </style>
+    </head>
+    <body>
+       <!-- FORM to add -->
+       <div>
+            <!-- Add -->
+            <label>Product</label>
+            <input type="text" name="product" id='prod'>
+
+            <label>Price</label>
+            <input type='text' name="price" id="cost">
+
+            <label>Quantity</label>
+            <input type='text' name="qty" id="qty">
+
+            <button id= 'adder' onclick="ADD()">ADD</button>
+            <button id='rst' onclick="resetAll()">Reset</button>
+
+       </div>   
+       <!-- TABLE -->
+       <div>
+            <!-- Table -->
+            <table id='tab'>
+                <!-- <tr id='trow'>
+                    <td id='tcol1'></td>
+                    <td id='tcol2'></td>
+                    <td id='tcol3'></td>
+                </tr> -->
+            </table>
+           
+
+       </div>
+       <!-- SETTINGS -->
+       <div>
+           Settings
+           <select>
+               <option id='size'>20px</option>
+               <option id='size'>25px</option>
+               <option id='size'>30px</option>
+           </select>
+           <button id= 'fsize' onclick="changeSize()">Change font Size</button>
+           <select>
+               <option id ='clr'>Blue</option>
+               <option id='clr'>Teal</option>
+               <option id='clr'>Orange</option>
+           </select>
+           <button id = "fclr" onclick="changeColor()">Change font Color</button>
+           
+           <select>
+               <option id='bgclr'>Green</option>
+               <option id='bgclr'>Black</option>
+               <option id='bgclr'>Yellow</option>
+           </select>
+           <button id = "bkclr" onclick="altrow()">Change background color for alternate row</button>
+
+          
+
+       </div>
+
+        <script>
+            var item=document.getElementById('prod').value
+            var amt=document.getElementById('cost').value
+            var quant=document.getElementById('qty').value
+
+            var big=document.getElementById('size').value
+            var see=document.getElementById('clr').value
+            var seeAll = document.getElementById('bgclr').value
+
+           
+
+            function ADD()
+            {
+                console.log(item)
+            var bodyEl=document.querySelector('body')
+            var table1=document.querySelector('#tab')
+            var tr1=document.querySelector('#trow')
+           
+            bodyEl.appendChild(table1)
+            table1.appendChild(tr1)
+            
+            var td1=document.querySelector('#tcol1')
+            td1.textContent=item
+            tr1.appendChild(td1)
+
+            var td2=document.querySelector('#tcol2')
+            td2.textContent=amt
+            tr1.appendChild(td2)
+
+            var td3=document.querySelector('#tcol3')
+            td3.textContent=quant
+            tr1.appendChild(td3)
+                console.log(quant)             
+               
+                // resetAll()
+            }
+            function changeSize()
+            {
+                var tdc1=document.querySelector('#tcol1')
+                tdc1.textContent=item
+                tdc1.setAttribute('id','size')
+                
+                var tdc2=document.querySelector('#tcol2')
+                tdc2.setAttribute('id','size')
+
+                var tdc3=document.querySelector('#tcol3')
+                tdc3.setAttribute('id','size')
+            }
+            function changeColor()
+            {   
+                console.log("Coloring")
+                var tddc1=document.querySelector('#tcol1')
+                tddc1.textContent=item
+                tddc1.setAttribute('id','clr')
+
+                var tddc2=document.querySelector('#tcol2')
+                tddc2.textContent=amt
+                tddc2.setAttribute('id','clr')
+
+                var tddc3=document.querySelector('#tcol3')
+                tddc3.textContent=quant
+                tddc3.setAttribute('id','clr')
+
+            }
+            function altrow()
+            {   console.log("alt color")
+                var trR1=document.querySelector('#trow')
+                trR1.setAttribute('id','bgclr')
+
+            }
+            function resetAll()
+            {
+                
+                document.getElementById('prod').value=""
+                document.getElementById('cost').value=""
+                document.getElementById('qty').value=""
+            }
+
+        </script>
+
+
+    </body>
+</html>

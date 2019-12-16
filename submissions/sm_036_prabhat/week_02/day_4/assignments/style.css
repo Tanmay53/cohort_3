@@ -1,0 +1,430 @@
+body{
+    margin: 0px;
+}
+.marginLeft_30 {
+    margin-left: 30px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.marginTop_15 {
+    margin-top: 15px;
+    text-decoration: none;
+    color: rgb(46, 43, 43);
+}
+
+.navBar {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: white;
+    margin-bottom: -55px;
+}
+
+/* FEE ISA */
+.FeesandISA {
+    margin-right: 30px;
+    width: 110px;
+    border: 1px solid #dc3545;;
+    border-radius: 5px;
+    color: #dc3545;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+}
+.bg {
+    background-image: url("https://www.masaischool.com/static/posters/banner_1.jpg");
+    background-size: cover;
+    color: white;
+    height: 800px;
+    /* margin-top: -40px; */
+}
+
+@media(max-width: 900px){
+    #back {
+        text-align: center;
+    }
+    .fontSize_60 {
+        font-size: 60px;
+        font-family: 'Noto Sans JP', sans-serif;
+        text-align: center;
+        color: white;
+    }
+    .fontSize_40 {
+        font-size: 40px;
+        font-family: 'Noto Sans JP', sans-serif;
+        text-align: center;
+        color: white;
+    }
+}
+
+.fontSize_60 {
+    font-size: 60px;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-left: 40%;
+}
+.fontSize_40 {
+    font-size: 40px;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-left: 40%;
+    color: white;
+}
+.box1 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    margin-left: 10px;
+    color: rgb(80, 57, 57);
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+}
+#box2 {
+    height: auto;
+    width: 93%;
+    background-size: cover;
+    background-image: linear-gradient(to right, #706bc4 ,#1879ac ,#00d4ff);
+    float: left;
+    padding: 60px;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+.font_20 {
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(59, 52, 52);
+}
+.fontSize_45 {
+    font-size: 45px;
+    color: white;
+}
+.box996 {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    color: rgb(7, 103, 167);
+    margin-left: 20%;
+    margin-right: 20%;
+ 
+}
+
+@media(max-width: 900px){
+    .box1 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        margin-left: 10px;
+        color: rgb(80, 57, 57);
+        font-family: 'Noto Sans JP', sans-serif;
+        text-align: center;
+    }
+    .box996 {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+        grid-gap: 30px;
+        margin-right: 15%;
+        margin-left: 15%;
+        
+    }
+}
+
+/* 996 */
+.box996 > div {
+    background: white;
+    padding: 25px;
+    border-radius: 5px; 
+    font-size: 70px;      
+}
+#small {
+    font-size: 20px;
+}
+#smallTcol {
+    color: rgb(71, 65, 65);
+    font-size: 18px;
+}
+.fontSize40 {
+    font-size: 40px;
+    clear: left;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+/* Image */
+.gridImg {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    color: rgb(7, 103, 167);
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.gridImg div img {
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.courseFont {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+@media(max-width: 900px){
+    .gridImg {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+/* Course */
+.gridCourse {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-gap: 40px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+.gridCourse div {
+    border: 1px solid rgb(170, 180, 179);
+}
+.box3 {
+    height: 65px;
+    padding-top: 10px;
+    width: 100%;
+    background-size: cover;
+    background-image: linear-gradient(to right,#1879ac ,#a80ad1);
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+.colorWhite {
+    color: white;
+}
+.colorBlack {
+    color: black;
+}
+.table1 {
+    height: 40px;
+    width: 270px;
+    padding-top: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    color: gray;
+    text-align: center;
+    
+}
+.table2 {
+    height: 30px;
+    width: 270px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 23px;
+    text-align: center;
+}
+.line { 
+    border-top: 1px solid gray;
+}
+.button {
+    height: 50px;
+    width: 140px;          
+    margin-top: 15px;
+    border: 1px solid gray;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    background: gray;
+    float: right;
+    margin-right: 10px;
+    color: honeydew;
+    border-radius: 25px;
+}
+.button2 {
+    height: 50px;
+    width: 170px;          
+    margin-top: 15px;
+    border: 1px solid gray;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    float: right;
+    margin-right: 10px;
+    color: gray;
+    border-radius: 25px;
+}
+.textCenter {
+    text-align: center;
+}
+
+@media(max-width: 900px){
+    .gridCourse {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 570px;
+        grid-gap: 40px;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+/* Hiring */
+.gridHiring {
+    display: grid;
+    grid-template-rows: 82px;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 60px;
+    margin-left: 7%;
+}
+@media(max-width: 900px){
+    .gridHiring {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-gap: 20px;
+        justify-items: center;
+    }
+}
+/* Payment */
+.gradientPayment {
+    background-image: linear-gradient(to right,#0a3c86 ,#1879ac);
+    width: 94%;
+    background-size: cover;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+.gridPayment {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    /* padding: 20px; */
+}
+
+@media(max-width: 900px){
+    .gridPayment {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-gap: 50px;
+        margin-left: 15%;
+        margin-right: 15%;
+        
+    }
+}
+
+.gridPayment div {
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.bakg {
+    height: 50px;
+    width: 170px;          
+    margin-top: 15px;
+    background: #1879ac;
+    color: white;
+    border: 2px solid white;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    border-radius: 25px;   
+}
+.fontSize_25 {
+    font-size: 25px;
+}
+.fontSize_20 {
+    font-size: 20px;
+}
+.colorBlue {
+    color: #1879ac;
+}
+.colorRed {
+    color: tomato;
+} 
+
+/* Admission Options */
+
+#admissionProc {
+    height: 730px;
+    width: 100%;
+    margin-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.phase1{
+    font-size: 30px;
+    color: rgb(46, 43, 43);
+}
+.gridPhase1 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+@media(max-width: 900px){
+    .gridPhase1 {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+        grid-gap: 50px;
+        justify-content: center;
+    }
+    #iconCenter {
+        margin-left: 80%;
+    }
+}
+
+.gridPhase1 div img {
+    background: linear-gradient(to right,#0a3c86 ,#1879ac);
+    border-radius: 50%;
+    padding: 35px;
+}
+
+.gridPhase2 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-gap: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.gridPhase2 div img {
+    background: linear-gradient(to right,#0a3c86 ,#1879ac);
+    border-radius: 50%;
+    padding: 35px;
+}
+
+.applyNow {
+    margin-right: 30px;
+    width: 210px;
+    background: #dc3545;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 25px;
+    justify-content: center;
+}
+#footer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: 'Montserrat', sans-serif;
+}
+#footer div {
+    justify-content: space-between;
+}
