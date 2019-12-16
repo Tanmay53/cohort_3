@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <title>Grocery data</title>
+
+    <style>
+        .body {
+
+            background-image: url("https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .h1{
+            font-size: x-large;
+            font-style: italic;
+            color: rgb(176, 39, 114);
+        }
+        .h2{
+            color:rgb(255, 255, 255);
+        }
+        .flex-box{
+            display:flexbox;
+            background:rgb(3, 207, 40);
+            color: tomato;
+            margin-top: auto;
+            margin: 220px
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <h1>DETAILS OF NEW EMPLOYEES</h1>
+
+
+    <div class="flex-box">
+        <h2>DEPARTMENTS</h2>
+        <select id="categories">
+            <option element="null">--</option>
+            <option element="Engineering">Engineering</option>
+            <option element="Design">Design</option>
+            <option element="Sales">Sales</option>
+            <option element="Marketing">Marketing</option>
+        </select>
+
+
+        <button id="category" onclick="category()">submit</button>
+
+        <div class="h1">
+            NAME :<p1 id="name"></p1>,
+            JOB TITLE: <p1 id="job"></p1>,
+            SALARY/MONTH: <p1 id="salary"></p1>
+        </div>
+        <div  class="h1">
+            NAME: <p2 id="name1"></p2>,
+            JOB TITLE:<p2 id="job1"></p2>,
+            SALARY/MONTH:<p2 id="salary1"></p2>
+        </div>
+        <div  class="h1">
+            NAME: <p3 id="name2"></p3>,
+            JOB TITLE: <p3 id="job2"></p3>,
+            SALARY/MONTH:<p3 id="salary2"></p3>
+        </div>
+        <div class="h2">
+            <h2>TOTAL SALARY</h2>
+            <p id="total">total</p>
+            <h2>AVERAGE SALARY</h2>
+            <p id="avg">Average of salary</p>
+        </div>
+
+
+    </div>
+    <script type="text/javascript">
+        function category() {
+            var category = document.getElementById("categories").value
+            switch (category) {
+                case 'Engineering':
+                    document.getElementById("name").innerHTML = "Blessy"
+                    document.getElementById("job").innerHTML = "senior engineer"
+                    document.getElementById("salary").innerHTML = "50000 Rs"
+
+                    document.getElementById("name1").innerHTML = "sneha"
+                    document.getElementById("job1").innerHTML = "junior engineer"
+                    document.getElementById("salary1").innerHTML = "45000 Rs"
+                    document.getElementById("name2").innerHTML = "Sona"
+                    document.getElementById("job2").innerHTML = "Maintanance engineer"
+                    document.getElementById("salary2").innerHTML = "55000 Rs"
+
+
+                    break;
+
+
+                case 'Design':
+                    document.getElementById("name").innerHTML = "Mariya"
+                    document.getElementById("job").innerHTML = "design engineer"
+                    document.getElementById("salary").innerHTML = "60000 Rs"
+                    document.getElementById("name1").innerHTML = "Venkat"
+                    document.getElementById("job1").innerHTML = "Senior engineer"
+                    document.getElementById("salary1").innerHTML = "70000 Rs"
+                    document.getElementById("name2").innerHTML = "Brijesh"
+                    document.getElementById("job2").innerHTML = "system engineer"
+                    document.getElementById("salary2").innerHTML = "40000 Rs"
+                    break;
+                case 'Sales':
+                    document.getElementById("name").innerHTML = "John"
+                    document.getElementById("job").innerHTML = "sales manager"
+                    document.getElementById("salary").innerHTML = "40000 Rs"
+                    document.getElementById("name1").innerHTML = "angel"
+                    document.getElementById("job1").innerHTML = "Senior  sales executive"
+                    document.getElementById("salary1").innerHTML = "42000 Rs"
+                    document.getElementById("name2").innerHTML = "Nithin"
+                    document.getElementById("job2").innerHTML = "sales 0fficer"
+                    document.getElementById("salary2").innerHTML = "60000 Rs"
+                    break;
+                case 'Marketing':
+                    document.getElementById("name").innerHTML = "Jilu"
+                    document.getElementById("job").innerHTML = "Marketing manager"
+                    document.getElementById("salary").innerHTML = "45000 Rs"
+                    document.getElementById("name1").innerHTML = "joseph"
+                    document.getElementById("job1").innerHTML = "Sales executive"
+                    document.getElementById("salary1").innerHTML = "30000 Rs"
+                    document.getElementById("name2").innerHTML = "Ashish"
+                    document.getElementById("job2").innerHTML = "junior sales executive"
+                    document.getElementById("salary2").innerHTML = "20000 Rs"
+                    break;
+                    
+            }
+
+
+            var sal = document.getElementById("salary").innerHTML
+
+            var sal1 = document.getElementById("salary1").innerHTML
+
+            var sal2 = document.getElementById("salary2").innerHTML
+
+            var total = parseInt(sal1) + parseInt(sal2) + parseInt(sal);
+
+            document.getElementById("total").innerHTML = total;
+            var num = 3;
+            var avg = (total / num);
+            document.getElementById("avg").innerHTML = avg;
+
+
+        }
+    </script>
+</body>
+
+</html>
