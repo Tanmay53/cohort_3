@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Jobs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" id='cont'>
+        <div class="container col-12 m-5">
+            <div class="form-group mt-5">
+                <label class="col-3 h4">Search for Jobs</label>
+                <input class="col-6 border-dark" type="text" id='search'>
+                <div class="col-1 btn btn-primary" id='go'>Go</div>
+            </div>
+        </div>
+        <nav id='#cont2'>
+            <ul class="pagination col-2 mx-auto" id='page'> 
+              <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+            </ul>
+          </nav>
+          <table class="table" id='tb'>
+              <thead>
+                  <th>id</th>
+                  <th>Title</th>
+                  <th>URL</th>
+                  <th>Company</th>
+                  <th>Location</th>
+                  <th>Summary</th>
+              </thead>
+          </table>
+    </div>   
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="jobs.js"></script>
+
+</html>
