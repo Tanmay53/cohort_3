@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Products Registration</title>
+  <style>
+    #img-holder {
+      max-width: 250px;
+      max-height: 300px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-5">
+        <form>
+          <div class="form-group text-dark">
+            <label for="text" class="h2">Enter Product Name</label>
+            <input type="text" class="form-control border border-dark pt-5 pb-4" id="name">
+          </div>
+          <div class="form-group text-dark">
+            <label for="exampleInputEmail1" class="h2">Enter Image URL</label>
+            <input type="text" class="form-control border border-dark pt-5 pb-4" id="image"
+              aria-describedby="emailHelp">
+          </div>
+          <div class="form-group text-dark">
+            <label for="number" class="h2">Enter Price</label>
+            <input type="number" class="form-control border border-dark pt-5 pb-4" id="price">
+          </div>
+          <button type="submit" class="btn btn-dark text-white btn-block py-4" id="btn">REGISTER</button>
+        </form>
+      </div>
+      <div class="col-2"></div>
+      <!-- Display data on UI -->
+      <div class="col-5 text-white text-center" id="disBlock">
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // UI variables
+    var n = document.getElementById('name');
+    var img = document.getElementById('image');
+    var price = document.getElementById('price');
+    var btn = document.getElementById('btn');
+    var show = document.getElementById('disBlock');
+
+    // Add Event Listener
+    btn.addEventListener('click', showData) 
+
+    // Function for show data
+    function showData(e) {
+      e.preventDefault();
+      show.classList.add('bg-dark')
+      // create image tag
+      var images = document.createElement('IMG');
+      images.setAttribute("src", img.value)
+      images.setAttribute("height", '300px')
+      images.setAttribute("width", '250px')
+      images.setAttribute("alt", 'Put other ulr')
+      // create h1
+      var comp = document.createElement('h1')
+      comp.innerHTML = n.value;
+      // create h1
+      var compPrz = document.createElement('h1')
+      compPrz.innerHTML = '₹' + price.value  
+      // create button
+      var btn2 = document.createElement('button');
+      btn2.innerHTML = 'Delete'
+      btn2.setAttribute('class', 'btn')
+      btn2.classList.add('text-white')
+      btn2.classList.add('border')
+
+      // Appending all tags to show variable
+      show.appendChild(comp);
+      show.appendChild(images)
+      show.appendChild(compPrz)
+      show.appendChild(btn2)
+
+      
+      // clear input boxes
+      n.value = ''
+      img.value = ''
+      price.value = ''
+
+      // Add Event Listener to delete button
+      btn2.addEventListener('click', deleteItem) 
+
+      function deleteItem() {
+        show.classList.add('d-none')
+      }
+    }
+
+  </script>
+</body>
+</html>
