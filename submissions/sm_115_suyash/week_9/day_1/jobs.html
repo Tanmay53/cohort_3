@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Search Jobs</title>
+</head>
+<body>
+  <select class="py-3 bg-dark text-white rounded-pill pl-3" id="select-box">
+    <option value="">Search Jobs???</option>
+    <option value="/api/jobs?l=Lagos">LIST JOBS</option>
+    <option value="/api/jobs?q=Web%20Developer">QUERY JOBS</option>
+    <option value="/api/jobs?l=Lagos&max=5">MAXIMUM JOB LIST</option>
+    <option value="/api/jobs?l=Lagos&country=ng">JOBS LOCATION</option>
+    <option value="/api/jobs?l=Lagos&country=ng&sort=date">SORT JOBS</option>
+    <option value="/api/jobs?l=Lagos&country=ng&sort=date&jt=contract">JOB TYPE</option>
+    <option value="api/jobs?l=Lagos&country=ng&sort=date&jt=contract&radius=25">JOB RADIUS</option>
+  </select>
+  <div id="output"></div>
+  
+  
+  <!-- jQuery file -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Local js file -->
+  <script src="jobs.js"></script>
+</body>
+</html>

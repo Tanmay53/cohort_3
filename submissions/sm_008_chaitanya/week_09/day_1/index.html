@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index.html</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="backgnd">
+    <div class="heading">
+        <h1>Masai Infotech Pvt. Ltd</h1>
+    </div>
+    <div class="admin">
+        <h1>Admin Portal</h1>
+    </div>
+    <div id="input_bar" class="input_line">
+        Name: <input type="text" id="name" placeholder="Name of the Employee">
+        Job Title: <input type="text" id="job_title" placeholder="Enter the Job position">
+        Salary: <input type="number" id="salary" placeholder="Enter Monthly Salary">
+        Select Department: <select id="dept">
+            <option value=" ">--Select--</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Design">Design</option>
+            <option value="Sales">Sales</option>
+            <option value="HR">HR</option>
+            <option value="Marketing">Marketing</option>
+        </select></br>
+        <button id="btn" Onclick="employee_details()">Submit</button>
+        <button id="rset" onclick="reset_data()">Reset</button>
+    </div>
+    <div class="side">
+        <button id="eng" class="dept_bar" onclick="engg_details()">Engineering</button>
+        <button id="des" class="dept_bar" onclick="design_details()">Design</button>
+        <button id="sal" class="dept_bar" onclick="sales_details()">Sales</button>
+        <button id="hr" class="dept_bar" onclick="hr_details()">HR</button>
+        <button id="mar" class="dept_bar" onclick="marketing_details()">Marketing</button>
+        <button id="avg" class="dept_bar" onclick="avg_sal()">Average Salary</button>
+        <button id="tot" class="dept_bar" onclick="total_sal()">Total Salary</button>
+
+    </div>
+    <table border="1" class="tab_bar" id="tab">
+
+    </table>
+    <div>
+        <table border="1" id="dept_wise_engg"></table>
+    </div>
+    <div>
+        <table border="1" id="dept_wise_des"></table>
+    </div>
+    <div>
+        <table border="1" id="dept_wise_sales"></table>
+    </div>
+    <div>
+        <table border="1" id="dept_wise_hr"></table>
+    </div>
+    <div>
+        <table border="1" id="dept_wise_mark"></table>
+    </div>
+    <div id="avg">
+        <p id="avg"></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <div id="total">
+        <h1></h1>
+    </div>
+
+
+
+
+
+    <script src="myscript.js"></script>
+</body>
+
+</html>
