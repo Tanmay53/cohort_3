@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <!-- bootstrap css cdn file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="text-center">Registration Page</h1>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+
+            <button class="btn btn-primary btn-lg" onclick="getDetails()">Submit</button>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var verbose = 0;
+        console.log("hello")
+
+
+        //function  to  get the student details
+        function getDetails() {
+            if (verbose)
+                console.log("getDetails");
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var obj = {};
+            obj.email = email;
+            obj.password = password;
+            callApi(obj);
+        }
+
+        // function to call the API
+        function callApi(object) {
+            if (verbose)
+                console.log("callApi");
+            var json = JSON.stringify(object);
+
+            var xhr = new XMLHttpRequest();
+
+            // This configures the xhr object to perform a POST request to the given url
+
+            xhr.open('POST', 'https://reqres.in/api/register');
+            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+            //sending the user details as json
+            xhr.send(json)
+
+            xhr.onload = function () {
+
+                if (xhr.status == 200) {
+                    console.log(xhr.response)
+                    printResponse(xhr.response)
+                }
+                else {
+                    console.log("Error Code is:" + xhr.status);
+                }
+            };
+
+            xhr.onerror = function () {
+                alert('Error in HTTP request!');
+                console.log('Error');
+            };
+        }
+
+
+
+        //printing the token id on the home page
+        function printResponse(data) {
+            data = JSON.parse(data);
+            console.log(data)
+
+            //removing elements
+            var element = document.querySelectorAll('.container');
+            element.forEach(ele => ele.remove());
+
+            //displaying response  
+            var div = document.createElement('div');
+            div.setAttribute('class', 'container');
+            var h1 = document.createElement('h1');
+            h1.setAttribute('class', 'text-center')
+            h1.textContent = 'Token Id :' + "\n" + data.token;
+            div.append(h1);
+            document.body.appendChild(div)
+        }
+
+    </script>
+
+
+
+
+    <!-- bootstrap source file -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

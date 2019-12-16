@@ -1,0 +1,11 @@
+body{
+    display:block;
+    grid-gap: 25px;
+}
+.box{
+    display: flex;
+    flex-flow: nowrap;
+    padding:25px;
+    margin: 25px;
+    flex-direction: row;
+}
