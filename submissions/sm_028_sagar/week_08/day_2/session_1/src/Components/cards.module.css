@@ -1,0 +1,81 @@
+.cardSection{
+    width:500px;
+    height:min-content;
+    border:1px solid rgb(114, 113, 113);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px rgb(173, 170, 170);
+    margin: 20px;
+}
+
+.cardBody{
+    display: flex;  
+    flex-direction: row;
+    padding: 10px;
+}
+
+.cardBody > div{
+    margin: 5px 9px;
+}   
+
+img{
+    width:120px;
+    height:150px;
+    border-radius: 5px;
+}
+
+p{
+    padding: 0px;
+    margin: 0px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.details > div{
+    color: rgb(31, 29, 29);
+    font-size: 18px;
+    padding: 1.5px;
+    margin: 3px;
+}
+
+
+h3{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 0px;
+    color: red;
+    font-size: 20px;
+}
+
+.social{
+    text-align: right;
+}
+
+.navigate{
+    height: 50px;
+    border:1px solid rgb(158, 157, 157);
+}
+
+.navigate > div{
+    background: rgb(185, 253, 185);
+    color: rgb(28, 177, 28);
+    padding: 10px;
+    border: 0.5px solid rgb(158, 157, 157);
+    width: max-content;
+    margin-left: 370px;
+}
+
+.rating{
+    margin-left: 25px;
+    font-weight: bolder;
+    background: rgb(16, 177, 16);
+    color: white;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 4px;
+}

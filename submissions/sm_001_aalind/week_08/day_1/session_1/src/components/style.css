@@ -1,0 +1,14 @@
+.buttonDiv {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+	/*background: red;*/
+	justify-content: flex-start;
+}
+
+.button {
+	border-radius: 10px;
+	width: 100px;
+	padding: 5px;
+	color: white;
+}
