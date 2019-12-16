@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+
+    <title>leaderboard</title>
+    <style>
+        .flex,
+        #top-bar {
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .box {
+            padding: 10px;
+            border: 1px solid red;
+        }
+
+        #min_score {
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        #top-bar div {
+            text-align: center;
+            margin: 20px 30px;
+            font-size: 20px;
+        }
+
+        #mid-bar,
+        #bottom-bar,
+        #enter {
+            text-align: center;
+        }
+
+        #mid-bar button,
+        #enter {
+            padding: 10px;
+            margin: 15px;
+            font-size: 16px;
+            border: 1px solid green;
+        }
+
+        #scores td {
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div id="left" class="box">
+            <div id="top-bar">
+                <div id="max-cont">
+                    <div id="max-score">100
+                    </div>
+                    <p id="max-name">Masai</p>
+                    <p>Max Score</p>
+
+                </div>
+                <div id="min-cont">
+                    <div id="min-score">10</div>
+                    <p id="min-name">School</p>
+                    <p>Min Score</p>
+
+                </div>
+            </div>
+            <div id="mid-bar">
+                <p>Score</p>
+                <h1 id="current_score">#</h1>
+                <div id="line-1">
+                    <button onclick="key_press(1)">1</button>
+                    <button onclick="key_press(2)">2</button>
+                    <button onclick="key_press(3)">3</button>
+                </div>
+                <div id="line-2">
+                    <button onclick="key_press(4)">4</button>
+                    <button onclick="key_press(5)">5</button>
+                    <button onclick="key_press(6)">6</button>
+                </div>
+                <div id="line-3">
+                    <button onclick="key_press(7)">7</button>
+                    <button onclick="key_press(8)">8</button>
+                    <button onclick="key_press(9)">9</button>
+                </div>
+                <div id="line-4">
+                    <button onclick="key_press(0)">0</button>
+                </div>
+
+            </div>
+            <div id="bottom-bar">
+                <input type="text" name="name" id="name" />
+                <p> Player Name </p>
+                <button id="enter" onclick="enter_press()">ENTER</button>
+            </div>
+        </div>
+        <div id="right" class="box">
+            <h1>Scores</h1>
+            <table id="scores" border="1">
+                <tr>
+                    <th>Player Name</td>
+                    <th>Score</td>
+                </tr>
+                <tr>
+                    <td>Masai</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>School</td>
+                    <td>10</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+    <script>
+        var current_score = "";
+        var all_scores = []
+        var max_score = { name: "Masai", score: 100 }
+        var min_score = { name: "School", score: 10 }
+
+        function key_press(num) {
+            console.log("key press" + num)
+            current_score = current_score + num;
+            document.getElementById("current_score").innerHTML = current_score;
+
+        }
+        function enter_press() {
+            console.log("Enter")
+            var name = document.getElementById("name").value;
+            var score = parseInt(current_score);
+
+            var new_game = { name: name, score: score }
+            document.getElementById("current_score").innerHTML = "#"
+            console.log(new_game)
+            document.getElementById("name").value = ""
+            current_score = ""
+            process_score(new_game)
+            update_min_max(new_game)
+        }
+
+        function process_score(new_game) {
+            var tbl = document.getElementById("scores")
+            var row = document.createElement("tr")
+            var col1 = document.createElement("td")
+            col1.textContent = new_game.name
+            var col2 = document.createElement("td")
+            col2.textContent = new_game.score;
+            row.appendChild(col1);
+            row.appendChild(col2);
+            tbl.appendChild(row)
+        }
+
+        function update_min_max(new_game) {
+            if (new_game.score > max_score.score) {
+                max_score.score = new_game.score;
+                max_score.name = new_game.name;
+                document.getElementById("max-score").textContent = new_game.score;
+                document.getElementById("max-name").textContent = new_game.name
+
+            } else if (new_game.score < min_score.score) {
+                min_score.score = new_game.score;
+                max_score.name = new_game.name;
+                document.getElementById("min-score").textContent = new_game.score
+                document.getElementById("min-name").textContent = new_game.name
+            }
+        }
+
+    </script>
+</body>
+
+</html>
