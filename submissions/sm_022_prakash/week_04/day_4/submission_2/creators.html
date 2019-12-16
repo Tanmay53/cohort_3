@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Practise Creators</title>
+</head>
+
+<body>
+    <div id="headings">
+    </div>
+    <div id="cont">
+    </div>
+    <ul id="vikings">
+        <li>Priyanshu</li>
+    </ul>
+    <button onclick="create_h1()">Create H1</button>
+    <button onclick="create_2h3()">Create 2 H3</button>
+    <button onclick="create_divs()">Create DIVS</button>
+    <button onclick="add_students()">Add Students</button>
+    <button onclick="add_copyright()">Add Copyright</button>
+    <script>
+        function create_h1() {
+            var new_h1 = document.createElement("h1")
+            new_h1.innerHTML = "Masai"
+            var write_into = document.querySelector("#headings")
+            write_into.appendChild(new_h1);
+
+        }
+
+        function create_2h3() {
+
+            var new_h1 = document.createElement("h3");
+            var new_h2 = document.createElement("h3");
+            var write_into = document.querySelector("#headings")
+
+            new_h1.innerHTML = "A Transformation in education!"
+            new_h2.innerHTML = "Learn to earn, pay when you get."
+
+            write_into.appendChild(new_h1);
+            write_into.appendChild(new_h2);
+
+        }
+
+        function create_divs() {
+
+            var len = 10;
+            for (var i = 1; i <= len; i++) {
+
+                var new_div = document.createElement("div")
+                new_div.textContent = "content:" + i
+
+                var write_into = document.querySelector("#cont")
+                write_into.appendChild(new_div)
+
+            }
+
+        }
+        var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
+        function add_students() {
+            for (var i = 0; i < students.length; i++) {
+                var new_li = document.createElement("li")
+                new_li.innerHTML = students[i]
+                var write_into = document.querySelector("#vikings")
+                write_into.appendChild(new_li)
+            }
+
+        }
+
+        function add_copyright() {
+            console.log("copyright")
+            var new_p = document.createElement("p")
+            new_p.textContent = "@ masai 2019"
+            var write_before = document.getElementById('headings')
+            var body_element = document.querySelector("body")
+            body_element.insertBefore(new_p, write_before)
+        }
+
+    </script>
+</body>
+
+</html>

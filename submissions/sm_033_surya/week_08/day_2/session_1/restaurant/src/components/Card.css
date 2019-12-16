@@ -1,0 +1,55 @@
+.container {
+    margin: 20px;
+    padding: 10px;
+    background: #c2c2c2;
+ height: 260px;
+ width: 660px;
+}
+.main {
+    height: 260px;
+    width: 660px;
+    background: white;
+}
+.row1 {
+    display: grid;
+    grid-template-columns: 150px 400px 100px; 
+    grid-template-rows: 200px;
+    padding: 5px;
+}
+.btn{
+    float: right;
+}
+.row1 img {
+    margin: 10px;
+    height: 180px;
+    width: 130px;
+}
+.ratingDiv p ,.ratingDiv h2,.ratingDivh5 {
+    margin: 0px;
+}
+.ratingDiv{
+    text-align:right;
+}
+.ratingDiv div {
+    text-align: center;
+    margin-left:45px;
+    background: yellow;
+
+}
+.btn {
+    padding: 15px;
+    color: green;
+    border:1px solid  green;
+    background:#c8e9c7
+}
+.footer{
+    border: 1px solid black;
+    height: 50px;
+}
+
+h5 {
+    margin: 0px;
+}
+h1 {
+    color:red;
+}

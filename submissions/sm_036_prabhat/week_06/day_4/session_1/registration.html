@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+</head>
+
+<body>
+    <div class="container mt-5 text-center display-3">User Data</div>
+    <div class="container mt-5">
+        <div class="row">
+
+            <div id="input" class="col-6 p-5">
+                <form>
+                    <div id="nameField" class="form-group">
+                        <label for="name">NAME</label>
+                        <input type="text" class="form-control" id="name">
+                        <small id="nameHelp" class="form-text text-muted text-danger"></small>
+                    </div>
+                    <div id="emailField" class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" class="form-control" id="email">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div id="mobileField" class="form-group">
+                        <label for="mobile">MOBILE</label>
+                        <input type="number" class="form-control" id="number">
+                        <small id="numberHelp" class="form-text text-muted"></small>
+                    </div>
+                </form>
+                <button id="btn" type="submit" class="btn btn-secondary btn-lg">Submit</button>
+            </div>
+            <div id="outputUserData" class="col-6 p-5">
+                <div class="p-3 mb-2 bg-dark text-white">
+                    <div id="oname">
+                        <h3>NAME</h3>
+                        <h3 id="nameOutput"></h3>
+                    </div>
+                    <div id="oemail">
+                        <h3>EMAIL</h3>
+                        <h3 id="emailOutput"></h3>
+                    </div>
+                    <div id="omobile">
+                        <h3>MOBILE</h3>
+                        <h3 id="mobileOutput"></h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        // Hide ALL Thing First
+
+        $("#btn").hide()
+        $("#emailField, #mobileField, #mobileField").hide()
+        $("#outputUserData, #oname, #oemail, #omobile").hide()
+
+        // Checking Name Condition
+
+        $("#name").keyup(function () {
+            var name = $("#name").val()
+            // console.log(name.length)
+            if (name.length < 3 || name.length > 11) {
+                $("#nameHelp").html("Please Enter Valid Name")
+            }
+            else {
+                $("#nameHelp").html("")
+                $("#outputUserData, #oname, #emailField").show()
+                $("#nameOutput").html(name)
+            }
+        })
+
+        // Checking Email Condition
+
+        $("#email").keyup(function(){
+            var email = $("#email").val();
+            if(hasEmail(email) == true){
+                console.log(hasEmail(email))
+                $("#emailHelp").html("");
+                $("#outputUserData, #oemail, #mobileField").show();
+                $("#emailOutput").html(email);
+                $("#oname, #nameField").hide();
+                $("#emailHelp").html("")
+            }
+            else{
+                $("#emailHelp").html("Enter Valid Email")
+            }
+        })
+
+        // Checking Mobile Number Condition
+
+        $("#number").keyup(function () {
+            var mobile = $("#number").val();
+            if(typeof(mobile != "String")){
+                $("#number").val(mobile);
+            }
+
+            // console.log(name.length)
+            if (mobile.length == 10) {
+                $("#numberHelp").html("");
+                $("#oname, #nameField").hide();
+                $("#outputUserData, #omobile, #btn").show();
+                $("#oname, #nameField").show();
+                $("#mobileOutput").html(mobile);
+            }
+            else {
+                $("#numberHelp").html("Please Enter Valid Name");
+
+            }
+        })
+
+        // Submit Button 
+
+        $("#btn").click(function(){
+            
+            $("#btn, #input").hide();
+            $("#outputUserData").show()
+
+            var name = $("#name").val();
+            $("#nameOutput").html(name);
+
+            var email = $("#email").val();
+            $("#emailOutput").html(email);
+
+            var mobile = $("#number").val();
+            $("#mobileOutput").html(mobile);
+        })
+
+        function hasEmail(email) {
+            var countAtTheRate = check(email);  // Calling @ check function
+            if (!countAtTheRate) {
+                return countAtTheRate;
+            }
+            for (var i = 0; i < email.length; i++) {
+
+                if (email[0] == "@" || email[0] == ".") {
+                    return false;
+                }
+                if (email[i] == "@" && email[i + 1] == "." || email[i] == "." && email[i + 1] == "@") {
+                    return false;
+                }
+                if (email[i] == "." && email[i + 1] == ".") {
+                    return false;
+                }
+                if (email[i] == "@" && email[i + 1] == "@") {
+                    return false;
+                }
+                if (email[i] == "(" || email[i] == ")" || email[i] == "#" || email[i] == "$" || email[i] == "%" || email[i] == "&") {
+                    return false;
+                }
+                if (email[email.length - 2] == ".") {
+                    return false;
+                }
+            }
+            return true
+        }
+        // Checking @ 
+
+        function check(email) {
+            var cnt = 0;
+            var countAtTheRate = 0;
+            var countDot = 0;
+            var count = 0;
+            for (var i = 0; i < email.length; i++) {
+                if (email[i] == "@") {
+                    cnt++;
+                    countAtTheRate++;
+                }
+                if (email[i] == ".") {
+                    countDot++
+                }
+                if (email[i] + email[i + 1] + email[i + 2] + email[i + 3] == ".com") {
+                    count++
+                }
+            }
+            if (countAtTheRate == 0) {
+                return false;
+            }
+            if (countDot == 0) {
+                return false;
+            }
+            if (cnt > 1) {
+                return false;
+            }
+            if (count > 1) {
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>
