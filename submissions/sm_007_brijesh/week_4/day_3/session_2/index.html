@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="driveage"></p>
+        <button onclick="older()">older than 18</button>
+        <button onclick="younger()">younger than 18</button>
+        <button onclick="exactly()">exactly 18</button>
+
+
+    <input type="text" name="color" id="color">
+    <button onclick="changecolor()" id="bcolor">Click here to change my color</button>
+
+    <select id="continent_select">
+        <option value="India">India</option>
+        <option value="United States of America">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+    </select>
+    <button onclick="continent()" id="continent">Find continent</button>
+
+    <script type="text/javascript">
+        function older() {
+            document.getElementById("driveage").innerHTML = "You can drive in India!";
+        }
+
+        function younger() {
+            document.getElementById("driveage").innerHTML = "You can't drive in India"
+        }
+
+        function exactly() {
+            document.getElementById("driveage").innerHTML = "You are just old enough to drive in India!"
+        }
+
+        function changecolor() {
+            document.getElementById("bcolor").style.color = document.getElementById("color").value;
+        }
+        function continent() {
+            country = document.getElementById("continent_select").value
+            switch (country) {
+                case "India":
+                    alert("Continent is Asia")
+                    break;
+                case "United States of America":
+                    alert("Continent is North America")
+                    break;
+                case "Nepal":
+                    alert("Continent is Asia")
+                    break;
+                case "Australia": alert("Continent is Australia")
+                    break;
+                case "France": alert("Continent is Europe")
+                    break;
+                case "Germany": alert("Continent is Europe")
+                    break;
+                case "South Africa": alert("Continent is Africa")
+                    break;
+                case "Nigeria": alert("Continent is Africa")
+                    break;
+                case "Mexico": alert("Continent is North America")
+                    break;
+                case "Argentina": alert("Continent is South America")
+                    break;
+                case "Brazil": alert("Continent is South America")
+                    break;
+                case "Canada": alert("Continent is North America")
+                    break;
+                case "Singapore": alert("Continent is Asia")
+                    break;
+                case "Sweden": alert("Continent is Europe")
+                    break;
+                default: alert("Select any country")
+            }
+        }
+    </script>
+
+</body>
+
+</html>
