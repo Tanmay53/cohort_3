@@ -1,0 +1,9 @@
+#check {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 13rem;
+}
+#checkLable {
+  padding: 8px;
+  border: 2px solid black;
+}
