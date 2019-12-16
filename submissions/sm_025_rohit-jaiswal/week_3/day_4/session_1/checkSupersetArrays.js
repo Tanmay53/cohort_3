@@ -1,18 +1,21 @@
-fruits = [ 'apple', 'mango', 'guava']
-veggies = ['tomato','beans','potato']
-var arr =[]
-//both = fruits + vegetable
-
-function unionArrays(x,y)
-{
-
-for(i=0,j=0;j<x.length,i<y.length;j++,i++)
-    {
-
-        arr.push(y[i])
-        arr.push(x[j])
+var a = [9,4,5,7,7,2,6,3,4,6];
+var b = [9,4,5,7,7]
+function checkSuperset(a, b) {
+    var times = 0
+    for(var i = 0; i < a.length; i++){
+        for(var j = 0; j < b.length; j++){
+            if(b[i] == a[j]){
+                times ++
+                break
+            }
+        }
     }
-
-  console.log(arr)
+    if(times == b.length){
+        console.log("Superset")
+    }
+    else{
+        console.log("No Superset")
+    }    
 }
-unionArrays(fruits,veggies)
+
+checkSuperset(a,b)

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Report Card
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="row m-3">
+      <div class="col form-control m-1 shadow bg-dark text-light">
+        <label for="pageSelector" class="mr-3">No. of results/page</label>
+        <select
+          id="pageSelector"
+          class="bg-dark text-light"
+          onchange="displayData(this.value)"
+        >
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+
+      <div class="col form-control m-1 shadow bg-dark text-light">
+        <label for="nameSort" class="mr-3">Sort first name</label>
+        <select
+          id="nameSort"
+          class="bg-dark text-light"
+          onchange="sortBy('first_name',this.value)"
+        >
+          <option value="all"></option>
+          <option value="asc">Asc</option>
+          <option value="desc">Desc</option>
+        </select>
+      </div>
+
+      <div class="col form-control m-1 shadow bg-dark text-light">
+        <label for="lastNameSort" class="mr-3">Sort last name</label>
+        <select
+          id="lastNameSort"
+          class="bg-dark text-light"
+          onchange="sortBy('last_name',this.value)"
+        >
+          <option value="all"></option>
+          <option value="asc">Asc</option>
+          <option value="desc">Desc</option>
+        </select>
+      </div>
+
+      <div class="col form-control m-1 shadow bg-dark text-light">
+        <label for="emailSort" class="mr-3">Sort email</label>
+        <select
+          id="emailSort"
+          class="bg-dark text-light"
+          onchange="sortBy('email',this.value)"
+        >
+          <option value="all"></option>
+          <option value="asc">Asc</option>
+          <option value="desc">Desc</option>
+        </select>
+      </div>
+
+      <div class="col form-control m-1 shadow bg-dark text-light">
+        <label for="marksSort" class="mr-3">Sort marks</label>
+        <select
+          id="marksSort"
+          class="bg-dark text-light"
+          onchange="sortBy('total_marks',this.value)"
+        >
+          <option value="all"></option>
+          <option value="asc">Low-high</option>
+          <option value="desc">High-low</option>
+        </select>
+      </div>
+
+      <div class="col form-control m-1 shadow bg-dark text-light">
+        <label for="genderSort" class="mr-3">Sort Gender</label>
+        <select
+          id="genderSort"
+          class="bg-dark text-light"
+          onchange="sortBy('gender',this.value)"
+        >
+          <option value="all">All</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="row m-3 text-center">
+      <div class="col-3 form-control m-auto shadow bg-dark text-light">
+        <label for="englishMarks" class="mr-3">Sort english marks</label>
+        <select
+          id="englishMarks"
+          class="bg-dark text-light"
+          onchange="sortBy('english',this.value)"
+        >
+          <option value="all"></option>
+          <option value="asc">Asc</option>
+          <option value="desc">Desc</option>
+        </select>
+      </div>
+
+      <div class="col-3 form-control m-auto shadow bg-dark text-light">
+        <label for="mathsMarks" class="mr-3">Sort maths marks</label>
+        <select
+          id="mathsMarks"
+          class="bg-dark text-light"
+          onchange="sortBy('maths',this.value)"
+        >
+          <option value="all"></option>
+          <option value="asc">Asc</option>
+          <option value="desc">Desc</option>
+        </select>
+      </div>
+
+      <div class="col-3 form-control m-auto shadow bg-dark text-light">
+        <label for="scienceMarks" class="mr-3">Sort science marks</label>
+        <select
+          id="scienceMarks"
+          class="bg-dark text-light"
+          onchange="sortBy('science',this.value)"
+        >
+          <option value="all"></option>
+          <option value="asc">Asc</option>
+          <option value="desc">Desc</option>
+        </select>
+      </div>
+    </div>
+    <div class="row m-3">
+      <div
+        class="col-3 form-control m-auto shadow bg-dark text-light text-center"
+      >
+        <label for="searchFname" class="mr-1">Look firstname</label>
+        <input
+          type="text"
+          id="searchFname"
+          class="small"
+          placeholder="Firstname"
+        />
+        <button
+          class="button button-inline bg-dark text-light ml-3 small"
+          id="searchBtn"
+          onclick="searchUser('firstname')"
+        >
+          Go
+        </button>
+      </div>
+
+      <div
+        class="col-3 form-control m-auto shadow bg-dark text-light text-center"
+      >
+        <label for="searchLname" class="mr-1">Look lastname</label>
+        <input
+          type="text"
+          id="searchLname"
+          class="small"
+          placeholder="Lastname"
+        />
+        <button
+          class="button button-inline bg-dark text-light ml-3 small"
+          id="searchBtn"
+          onclick="searchUser('lastname')"
+        >
+          Go
+        </button>
+      </div>
+
+      <div
+        class="col-3 form-control m-auto shadow bg-dark text-light text-center"
+      >
+        <label for="searchDomain" class="mr-3">Look domain</label>
+        <input
+          type="text"
+          id="searchDomain"
+          class="small"
+          placeholder="Full email"
+        />
+        <button
+          class="button button-inline bg-dark text-light ml-3 small"
+          id="searchBtn"
+          onclick="searchUser('domain')"
+        >
+          Go
+        </button>
+      </div>
+
+      <div
+        class="col-3 form-control m-auto shadow bg-dark text-light text-center"
+      >
+        <label for="searchEmail" class="mr-3">Search email</label>
+        <input
+          type="text"
+          id="searchEmail"
+          class="small"
+          placeholder="Full email"
+        />
+        <button
+          class="button button-inline bg-dark text-light ml-3 small"
+          id="searchBtn"
+          onclick="searchUser('email')"
+        >
+          Go
+        </button>
+      </div>
+    </div>
+    <div class="container-fluid p-5">
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center"></ul>
+      </nav>
+      <table
+        class="table table-bordered table-hover table-striped shadow shadow-lg mt-5 text-center"
+        id="table"
+      ></table>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>

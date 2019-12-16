@@ -1,19 +1,23 @@
 var person = {
-    pass : 'secret@123'
+    password : 'secret@123'
 }
 
-var password = 'secret@123'
+var pass = 'secret@1234'
 
 
-function passwordVerify(obj,password){
-    passV=obj.pass
+function passwordVerify(user,p){
+    verifyPass = user.password
 
-    if(passV===password){
+    if( verifyPass === p ){
+
         return true;
+
     }
     else{
+
         return false;
+    
     }
 }
 
-console.log(passwordVerify(person,password))
+console.log(passwordVerify(person,pass))

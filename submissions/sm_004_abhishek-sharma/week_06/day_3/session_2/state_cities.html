@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>State City Selectors</title>
+</head>
+<body>
+    <select id="state"></select>
+    <button id="nextBtn">Next</button>
+    <select id="city"></select>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+            // your code goes here
+            var state_cities = [{"state": "Karnataka", "cities": ["Bangalore", "Mysore"]}, {"state": "Tamil Nadu", "cities": ["Chennai", "Tanjore"]}, {"state": "Maharashtra", "cities": ["Pune", "Satara", "Mumbai", "Panvel"]}, {"state": "Bihar", "cities": ["Patna", "Gaya", "Muzaffarpur", "Purnia", "Darbhanga", "Arrah", "Chhapra", "Danapur", "Siwan"]}];
+            // console.log(state_cities.length)
+
+            $("#state").val(state_cities[0].state)
+            for(var i = 0; i < state_cities.length; i++){
+                // console.log(state_cities[i].state)
+                $("#state").append("<option value="+ " '" + state_cities[i].state + "' " +">" + state_cities[i].state +"</option>")
+            }
+
+            $("#nextBtn").click(function(){
+                $("#city").empty()
+                // console.log("1")
+                var state = $("#state").val()
+                console.log(state)
+                for(var i = 0; i < state_cities.length; i++){
+                    // console.log("2")
+                    if(state_cities[i].state == state){
+                        // console.log("3")
+                        for(var j = 0; j < state_cities[i].cities.length; j++){
+                            $("#city").append("<option value="+ state_cities[i].cities[j] +">" + state_cities[i].cities[j] +"</option>")
+                        }
+                    }
+                }
+            })
+
+		});
+	</script>
+</body>
+</html>

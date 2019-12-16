@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form">
+        <label>Username</label><br>
+        <input type="text" id="formele"><br>
+        <label>Password</label><br>
+        <input type="text" id="formele"><br>
+        <button>Submit</button>
+    </div>
+</body>
+<script>
+    var button1 = document.querySelector('button');
+    button1.addEventListener('click', function (event) {
+        var inputs = document.querySelectorAll('#formele')
+        event.preventDefault();
+        var obj = {
+            username: inputs[0].value,
+            password: inputs[1].value
+        }
+        send(obj);
+    });
+    function send(obj) {
+        var xhr = new XMLHttpRequest();
+        var json = JSON.stringify(obj);
+        console.log(json);
+        xhr.open("POST", 'http://localhost:8080/auth/login');
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+        xhr.addEventListener('load', function () {
+            if (xhr.status <= 400) {
+                console.log(xhr.response);
+            }
+            else
+                console.log("Error status code" + xhr.status);
+        });
+        xhr.addEventListener('error', function (event) {
+            console.log('Error in HTTP request!')
+        });
+       
+    }
+
+</script>
+
+</html>

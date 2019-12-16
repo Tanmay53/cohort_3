@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       .outer-cont {
+        display: flex;
+        justify-content: center;
+    }
+
+    .inner-cont {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 40px;
+    }
+    .inner-cont div {
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+    input{
+        
+        width:250px;
+        height: 30px;
+    }
+    .submit{
+        background-color: green;
+        padding: 4px;
+        margin-top: 30px;
+    }
+    table{
+        border: 3px solid black;
+    }
+    td{
+        border: 3px solid black;
+        padding:3px;
+    }
+    </style>
+</head>
+<div class="outer-cont">
+        <div class="inner-cont">
+                <div>PRODUCT NAME</div>
+                <input type="text" id="name">
+                
+                <div>PRODUCT IMAGE</div>
+                <input type="url" id="image">
+               
+
+                <div>PRICE</div>
+                <input type="number" id="price">
+               
+                <button class="submit" onclick="submit()">SUBMIT</button>
+         </div>
+
+         <div class="inner-cont ">
+               <table id=table>
+                   <tbody>
+                       <tr>
+                           <th id="col1"><h3>Product name</h3></th>
+                           <th id=col2><h3>Product image</h3></th>
+                           <th id=col3><h3>Product price</h3></th>
+                       </tr>
+                   </tbody>
+               </table>
+         </div>
+
+</div>
+
+<script>
+
+function submit()
+{
+    var table=document.getElementById("table")
+    var pname=document.getElementById("name").value
+    var pprice=document.getElementById("price").value
+    var pimage=document.getElementById("image").value
+    var row=document.createElement("tr")
+    var col1=document.createElement("td")
+    col1.textContent=pname
+    row.appendChild(col1)
+     table.appendChild(row)
+
+     var col2=document.createElement("td")
+    col2.setAttribute('src',"https://s3.us-east-1.amazonaws.com/craft-sexyhair-assets/products/Images/big-altitude-front.jpg")
+    row.appendChild(col2)
+     table.appendChild(row)
+
+     var col3=document.createElement("td")
+    col3.textContent=pprice
+    row.appendChild(col3)
+     table.appendChild(row)
+}
+
+
+</script>
+</body>
+</html>

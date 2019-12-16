@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 5rem;
+  border: 1px solid black;
+  width: 25rem;
+  padding: 3rem;
+  background: linear-gradient(12deg, white, darkgrey, orange);
+}
+button {
+  background: transparent;
+}
