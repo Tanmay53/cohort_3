@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <title>Employee Details</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+        <h2>Employee Details:</h2>
+<div class="main">
+    
+    <div class="left-box">
+        <div>
+        <form>
+                <label for="name" class="label">Name :</label><br>
+                <input type="text" min="1" placeholder="Enter name.." name="name" id="name"><br>
+                <label for="Salary" class="label">Salary :</label><br>
+                <input type="text" min="1" placeholder="Salary" name="salary" id="salary"><br>
+                <label for="Jobtitle" class="label">Job Title :</label><br>
+                <input type="text" min="1" placeholder="Enter Job Title.." name="jobtitle" id="jobtitle"><br>
+                <select id="select_value">
+                    <option value="Engineering" id="engineering">Engineering</option>
+                    <option value="Design" id="design">Design</option>
+                    <option value="Sales" id="sales">Sales</option>
+                    <option value="HR" id="hr">HR</option>
+                    <option value="Marketing" id="marketing">Marketing</option>
+                </select>
+                <button type="button" id="submit" onclick="submit_details()">Submit</button>
+
+        </form>
+    </div>
+    <br>
+        <div>
+            <button type="button" id="eng_button" onclick="eng_button()" class="button">Engineering</button><br>
+            <button type="button" id="design_button" onclick="design_button()" class="button">Design</button><br>
+            <button type="button" id="sales_button" onclick="sales_button()" class="button">Sales</button><br>
+            <button type="button" id="hr_button" onclick="hr_button()" class="button">HR</button><br>
+            <button type="button" id="marketing_button" onclick="marketing_button()" class="button">Marketing</button>
+        </div>
+
+    </div>
+    <div id="right-box">
+        <table id="details" border="1">
+            <tr>
+                <th>Name</th>
+                <th>Jobtitle</th>
+                <th>Salary</th>
+                <th>Department</th>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+
+</html>
