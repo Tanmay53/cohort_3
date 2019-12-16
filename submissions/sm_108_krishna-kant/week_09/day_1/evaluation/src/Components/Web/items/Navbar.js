@@ -12,12 +12,14 @@ const Navbar = () => {
         aria-expanded='false'
         aria-label='Toggle navigation'
       >
-        <span className='navbar-toggler-icon text-white'></span>
+        <span className='navbar-toggler-icon text-white'>
+          <i className='fas fa-bars'></i>
+        </span>
       </button>
+      <a className='navbar-brand text-white' href='#'>
+        <span className='font-weight-bold'>U</span>ber
+      </a>
       <div className='collapse navbar-collapse' id='navbarTogglerDemo01'>
-        <a className='navbar-brand text-white' href='#'>
-          <span className='font-weight-bold'>U</span>ber
-        </a>
         <ul className='navbar-nav mr-auto mt-2 mt-lg-0'>
           <li className='nav-item active'>
             <a className='nav-link text-white' href='#'>
