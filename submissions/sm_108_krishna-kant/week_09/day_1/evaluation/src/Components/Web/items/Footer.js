@@ -7,13 +7,13 @@ const Footer = () => {
         <div className='col-lg-6'>
           <h1>Uber</h1>
           <p className='my-4'>
-            <i class='fas fa-question-circle mr-3'></i> Help Center
+            <i className='fas fa-question-circle mr-3'></i> Help Center
           </p>
           <p className='my-4'>
-            <i class='fas fa-globe mr-3'></i>English (International)
+            <i className='fas fa-globe mr-3'></i>English (International)
           </p>
           <p className='my-4'>
-            <i class='fas fa-map-marker-alt mr-3'></i>Location
+            <i className='fas fa-map-marker-alt mr-3'></i>Location
           </p>
           <div className='d-flex mt-5'>
             <img
