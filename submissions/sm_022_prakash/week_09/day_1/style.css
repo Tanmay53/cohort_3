@@ -1,0 +1,23 @@
+.main{
+    display: flex;
+    border: solid green;
+    margin-right: 30px;
+}
+.left-box{
+    display:block;
+    margin: 10px;
+    padding: 10px;
+}
+.button{
+    padding:10px;
+    margin: 5px;
+    border-color: green 1px;
+}
+.right-box{
+    border: blue;
+    margin-left: 30px;
+    padding: 10px;
+}
+#details td{
+    padding: 10px;
+}
