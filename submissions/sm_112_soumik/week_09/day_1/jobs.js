@@ -1,5 +1,6 @@
 var info = [];
 $("#search").click(function() {
+  $("#tbody td").remove();
   var input = $("#input").val();
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "https://indreed.herokuapp.com/api/jobs/?q=" + input);
