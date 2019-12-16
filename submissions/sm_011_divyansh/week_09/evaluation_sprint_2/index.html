@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Database</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="form">
+            <input type="text" id="name" placeholder="enter your name"><br><br>
+            <input type="text" id="title" placeholder="enter your job title"><br><br>
+            <input type="number" id="salary" placeholder="enter your monthly salary"><br><br>
+            Department: <select id="dept">
+                <option value="Engineering ">Engineering</option>
+                <option value="Design ">Design</option>
+                <option value="Sales ">Sales</option>
+                <option value="HR ">HR</option>
+                <option value="Marketing ">Marketing</option>
+            </select><br><br>
+            <button id="get">GetData</button>
+            <button id="submit">submit</button>
+            <h2 id="display">Total and average salary of employees will be shown here</h2><br>
+
+
+        </div>
+    </div>
+    <script src="employee.js"></script>
+</body>
+
+</html>

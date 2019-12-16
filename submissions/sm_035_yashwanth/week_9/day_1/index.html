@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index.html</title>
+<style>
+    body {
+        background-image: url("https://www.kinnarps.com.au/contentassets/b78de4bc3ac54301a1ecc09a736fde2a/no_banner_bild.jpg?preset=&preset=startpage-carouselLg1x");
+        background-repeat: no-repeat;
+    }
+
+    label {
+        background-color: black;
+        color: white;
+        font-size: 18px;
+    }
+
+    #result {
+        background-color: white;
+    }
+
+    #myList {
+        font-size: 18px;
+        background-color: black;
+        color: white;
+    }
+
+    #dsum {
+        background-color: black;
+        color: white;
+    }
+
+    #listDE {
+        text-align: center
+    }
+
+    #Edept {
+        background-color: white;
+    }
+  </style>
+</head>
+<body>
+    <script>
+
+        function details() {
+            var Name = document.getElementById("name").value;
+            var Job = document.getElementById("job").value;
+            var Salary = document.getElementById("salary").value;
+            var Department = document.getElementById("department").value;
+            var sum = " Name: " + Name + ", Job: " + Job + ", Salary: " + Salary + ", Department: " + Department + ".";
+            var node = document.createElement("LI");
+            var textnode = document.createTextNode(sum);
+            node.appendChild(textnode);
+            document.getElementById("myList").appendChild(node);
+        }
+        function reset() {
+            var list = document.getElementById("myList");
+            list.removeChild(list.childNodes[0]);
+        }
+        function employee() {
+            var x = document.getElementById("dept").value;
+            document.getElementById("Edept").innerHTML = x;
+
+        }
+        function total() {
+            var e1 = document.getElementById("E1").value;
+            var e2 = document.getElementById("E2").value;
+            var e3 = document.getElementById("E3").value;
+            var e4 = document.getElementById("E4").value;
+            var e5 = document.getElementById("E5").value;
+            var totalsum = Number(e1) + Number(e2) + Number(e3) + Number(e4) + Number(e5)
+            document.getElementById("tsalary").innerHTML = "Total salary of emoloyee =" + totalsum + "Rupees";
+            document.getElementById("avgsalary").innerHTML = "Average salary of emoloyee =" + totalsum / 5 + "Rupees";
+        }
+    </script>
+    <div>
+        <h1>
+            Welocome to Masai office:
+        </h1>
+    </div>
+    <form id="form">
+        <label for="name">Full Name:</label>
+        <input type="text" name="name" id="name">
+        <label for="job">Job:</label>
+        <input type="text" name="job" id="job">
+        <label for="salary">Salary:</label>
+        <input type="number" name="salary" id="salary">
+        <label for="department">Department:</label>
+        <select id="department">
+            <option value=""></option>
+            <option value="Engineering">Engineering</option>
+            <option value="Design">Design</option>
+            <option value="sales">Sales</option>
+            <option value="HR">HR</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+    </form>
+    <hr>
+    <button onclick="details()">submit</button>
+    <button onclick="reset()">Reset</button>
+    <p id="pdetails"> Details:</p>
+    <hr>
+    New Employee:
+    <ul id="myList">
+    
+    </ul>
+    
+    Old Employee:
+    <div id="dsum">
+        <ul>
+            <li>
+                <p> <b>Name:</b> Chaitanya , <b>Job:</b> Sr.Engineer , <b>Salary:</b> 1,00,000/- <b> Department:</b>
+                    Engineer.</p>
+            </li>
+            <li>
+                <p> <b>Name:</b> Venkat Sherpa, <b>Job:</b> Designer , <b>Salary:</b> 60,000/- <b>Department:</b> Design.
+                </p>
+            </li>
+            <li>
+                <p> <b>Name:</b> Gangu Bhai , <b>Job:</b> Sales-Manager , <b>Salary:</b> 70,000/- <b>Department:</b> Design.
+                </p>
+            </li>
+            <li>
+                <p> <b>Name:</b> Brijesh Tagore , <b>Job:</b> Marketing-Executive , <b>Salary:</b> 80,000/-
+                    <b>Department:</b> Marketing.</p>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <div id="listDE">
+        <label for="dept">Departments list:</label>
+        <select id="dept">
+            <option value=""></option>
+            <option value="Engineering">Engineering</option>
+            <option value="Design">Design</option>
+            <option value="sales">Sales</option>
+            <option value="HR">HR</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+        <button onclick="employee()">submit</button>
+        <h2 id="Edept"></h2>
+    </div>
+    <div>
+        <label for="name">Employee_1:</label>
+        <input type="number" name="name" id="E1">
+        <br>
+        <label for="name">Employee_2:</label>
+        <input type="number" name="name" id="E2">
+        <br>
+        <label for="name">Employee_3:</label>
+        <input type="number" name="name" id="E3">
+        <br>
+        <label for="name">Employee_4:</label>
+        <input type="number" name="name" id="E4">
+        <br>
+        <label for="name">Employee_5:</label>
+        <input type="number" name="name" id="E5">
+    </div>
+    <button onclick="total()">Total Salary and Average Salary</button>
+    <div id="result">
+        <h2 id="tsalary"></h2>
+        <h2 id="avgsalary"></h2>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>index</title>
+        <style>
+            body {
+                background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqh27KY9Ttiuh4Ex9Zrk3W0YIuICuzGhvP3vzzkOwJECl8GEbG-g&s");
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+            .main {
+            display:flex;
+            margin-left:50px;
+            
+            }
+            .main > div {
+            margin:20px;
+            color:deeppink;
+            font-size:30px;
+            }
+            .one {
+            text-align:center;
+            color:red;
+            font-size:40px;
+            }
+            #avgsal {
+                margin-left:645px;
+                color:deeppink;
+                font-size:30px;
+            }
+        </style>
+    </head>
+    <body>
+  
+        <div class="one">
+          <form>
+            Departments:<br>
+            <input list="browsers" name= "department">
+            <datalist id="browsers">
+              <option value="Engineering">
+              <option value="Design">
+              <option value="Sales">
+              <option value="HR">
+              <option value="Marketing">
+            </datalist>
+            </form>
+          </div>
+ 
+      <div class="main">
+        
+        <div id = "name">
+            Name:<br>
+            <input type= "text">
+            <input type= "text">
+            <input type= "text"> 
+            <input type= "text">
+            <input type= "text">
+            <input type= "text">
+          </div>
+          <div id = "job">
+          Job:<br>
+            <input type= "text">
+            <input type= "text">
+            <input type= "text"> 
+            <input type= "text">
+            <input type= "text">
+            <input type= "text">
+          </div>
+          <div id = "salary">
+          Salary:<br>
+            <input type= "text">
+            <input type= "text"> 
+            <input type= "text"> 
+            <input type= "text">
+            <input type= "text">
+            <input type= "text">
+            
+          </div>
+          <div id = "dept">
+            Department:<br>
+            <input type= "text">
+            <input type= "text"> 
+            <input type= "text"> 
+            <input type= "text">
+            <input type= "text">
+            <input type= "text">
+          </div>
+      </div>
+      <div id = "avgsal">
+          AverageSalary:
+            <input type= "text">
+        
+        <script src="index.js"></script>
+    </body>
+</html>
