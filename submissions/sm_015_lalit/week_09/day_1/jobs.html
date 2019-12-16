@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Search Jobs</title>
+</head>
+
+<body>
+    <div class="container">
+        <img class="col-3 row my-3 mx-auto" src="http://www.emartu.com/image/cache/catalog/job-750x750.png" alt="">
+        <div class="form-group col">
+            <input type="text" class="form-control" name="" id="sQuery" aria-describedby="helpId"
+                placeholder="Eg: Web Development">
+            <small id="helpId" class="form-text text-muted">Choose your dream job here</small>
+            <div class="row">
+                <button type="button" id="goSearch" class="btn-sm btn-primary col-3 mx-auto mt-3">Search</button>
+            </div>
+
+        </div>
+        <table id="tableX" class="table mt-5">
+            <thead>
+                <th id="hId">Id</th>
+                <th id="hTitle">Title</th>
+                <th id="hUrl">Url</th>
+                <th id="hCompany">Company</th>
+                <th id="hLocation">Location</th>
+                <th id="hSummary">Summary</th>
+            </thead>
+        </table>
+    </div>
+    <nav id="pagiN" class="col-1 mx-auto">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+        </ul>
+    </nav>
+    <script src="jobs.js"></script>
+</body>
+
+</html>
