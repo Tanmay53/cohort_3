@@ -1,0 +1,30 @@
+body{
+    background-image: url("https://www.zinghr.com/wp-content/uploads/2015/09/Why-to-Opt-for-Employee-Database-Software-in-Current-Scenario-1.jpg");
+     background-size: cover;
+ }
+ .main
+ {
+     display: flex;
+     flex-flow: row;
+     justify-content:center;
+     align-items: flex-start;
+     height:500px;
+     background-color: lightblue;
+     margin-top:200px;
+     border:5px solid red;
+     
+
+ }
+@media(max-width:400px)
+{
+
+ .main
+    {
+
+        justify-content:flex-start;
+    
+    }
+} 
+        
+   
+ 
