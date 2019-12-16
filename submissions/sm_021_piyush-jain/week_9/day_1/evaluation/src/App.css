@@ -1,0 +1,94 @@
+/* navbar styling */
+.NAV{
+  display: flex;
+  /* margin:0px 100px 0px 100px; */
+  background-color: black;
+  color: white;
+}
+.NAV> div{
+  /* flex-direction: row; */
+  float: left;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 5px;
+}
+.NAV>div:nth-of-type(5)
+{
+  margin-right: 600px;
+}
+.NAV>div:last-child
+{
+  background-color: white;
+  /* padding: 5px; */
+  color: black;
+}
+.icon{
+  height: 35px;
+  width: 30px;
+}
+.flexing{
+  display: flex;
+}
+.flexing>div{
+  flex-grow: 1;
+}
+.size{
+  height: 600px;
+  width: 100%;
+}
+
+/* navbar styling */
+
+
+
+/* background image */
+.bgImg{
+  background-image: url("https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,g_north,w_1280,h_727/v1558483958/assets/3a/b709e3-54eb-4f13-8618-2bf08addf5dd/original/earn_2x.jpg");
+  height: 700px;
+  width: 100%;
+}
+.sidebox{
+width: 400px;
+height: 400px;
+}
+/* background image */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
