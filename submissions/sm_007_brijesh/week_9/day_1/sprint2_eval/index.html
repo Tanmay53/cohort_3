@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Employees Info</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Employee Dashboard</h1>
+    <div class="container">
+    <div>
+        <label for="name" class="name">Name: </label>
+        <input type="text" id="name">
+    </div>
+    <div>
+        <label for="jobtittle" class="jobtitle">Job Title: </label>
+        <input type="text" id="jobtitle">
+    </div>
+    <div>
+        <label for="salary" class="salary">Salary: </label>
+        <input type="text" id="salary">
+    </div>
+
+    <div>
+        Department: <select id="dept">
+            <option value="Engineering">Engineering</option>
+            <option value="Design">Design</option>
+            <option value="Sales">Sales</option>
+            <option value="HR">HR</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" onclick="emp_info()" value="Submit">
+    </div>
+    <div>
+        <input type="reset" onclick="reset()">
+    </div>
+
+</div>
+
+    <div class="cont">
+        <h3 id="pName"></h3>
+        <h3 id="pJobtitle"></h3>
+        <h3 id="pSalary"></h3>
+        <h3 id="pDept"></h3>
+    </div>
+<div>
+    <table class="tab">
+        <tr>
+          <td id="jName">Name</td>
+          <td id="jJobtitle" >Jobtitle</td>
+          <td id="jSalary" >Salary</td>
+          <td id="jDept">Department</td>
+        </tr>
+</table>
+</div>
+    <script src="emp.js"></script>
+</body>
+
+</html>

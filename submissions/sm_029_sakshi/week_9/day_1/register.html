@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>INDEX</title>
+  <style>
+    body {
+
+      background-image: url(https://www.insureon.com/-/jssmedia/industry-and-professions/imagery/retail/grocery-store/hero_grocery-stores.jpg?h=530&w=1920&hash=49983F00E11C50E0038C8E92E1B3A4E9);
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body id="body">
+  <form class="container mt-5 col-lg-6 col-md-6 col-sm-12 border border-danger bg-info">
+    <div class="form-group mt-3">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="emailid" aria-describedby="emailHelp">
+
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="password">
+    </div>
+
+  </form> 
+  <div class="offset-5 col-2">
+  <button type="submit" onclick="submit()" class="btn btn-primary  ml-4 d-flex justify-content-center mt-3">Submit</button>
+</div>
+  <script>
+    //Sends form data to the server as a JSON
+
+    function user(email, password) {
+      this.email = email;
+      this.password = password;
+    }
+
+
+// ========================onclick submit the value will come and the a function to rum api is called===============
+    function submit() {
+
+
+      var email = document.getElementById("emailid").value
+      //console.log(email)
+      var password = document.getElementById("password").value
+      //console.log(password)
+      var newuser = new user(email, password)
+      var data = JSON.stringify(newuser)
+      //console.log(data)
+      dataValidation(data)
+    }
+
+// =============================check whether email passwrd are true by api call============================================
+    function dataValidation(data) {
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", 'https://reqres.in/api/register')
+      xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+      xhr.send(data);
+      //console.log(data)
+      xhr.onload = function () {
+        if (xhr.status <= 400) {
+          validatetoken = xhr.response
+          console.log(validatetoken)
+          newpage(validatetoken)
+        }
+        else {
+          console.log("Error Code is:" + xhr.status);
+        }
+      }
+
+    }
+
+    // =======================will come to a blank page to print tokenn no=============================
+    function newpage(validatetoken)
+    {
+      document.getElementById("body").innerHTML=" "
+      body=document.getElementById("body")
+      tokendiv=document.createElement('h1')
+      tokendiv.textContent=validatetoken
+      tokendiv.style.color="white";
+      console.log(validatetoken)
+      body.appendChild(tokendiv)
+    }
+
+  </script>
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
