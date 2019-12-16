@@ -1,0 +1,19 @@
+.overlay-placement {
+  margin-top: 200px;
+  margin-left: 140px;
+  width: 480px;
+  height: 400px;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.products {
+  width: 1200px;
+  height: 100px;
+  margin-left: 115px;
+  margin-top: 25px;
+}
+
+dark {
+  background-color: #000000;
+}
