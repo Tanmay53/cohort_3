@@ -4,15 +4,15 @@ function sendData(objData){
     var json = JSON.stringify(objData);
 
     xhr.addEventListener('load', function(){
-      if(xhr.status == 200){
+      if(xhr.status < 400){
         console.log(xhr.response)
         // success()
       }
-      else if(xhr.status == 401){
-        console.log("Error Code is:" + xhr.status);
-      }
+      // else if(xhr.status == 401){
+      //   console.log("Error Code is:" + xhr.status);
+      // }
       else{
-        failure()
+        console.log("Error Code is:" + xhr.status);
       }
     });
     
@@ -28,15 +28,6 @@ function sendData(objData){
     }
   }
 
-// function success(){
-//     console.log("error: false")
-//     console.log("message: Registration Success" + xhr.status)
-// }
-
-function failure(){
-    console.log("erorr: true")
-    console.log("message: Registration failed, user already exists")
-}
 var form = document.getElementById('sendForm')
 var inputElements = document.querySelectorAll('.formEle')
 
