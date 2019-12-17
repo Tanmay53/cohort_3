@@ -1,0 +1,99 @@
+.backgnd{
+    background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfUdw7NlO8sbetYwL9bJAIi3KTWfj2EtQEN5sqN1rkwvpZVPKj');
+    background-size:cover;
+}
+.heading{
+    text-align:center;
+    font-size:40px;
+    font-weight:normal;
+    /* background:black; */
+    color:black;
+    margin-left:250px;
+    margin-right:250px;
+    border-radius:10px;
+}
+.heading:hover{
+    color:navy;
+    background:none;
+}
+.admin{
+    text-align:center;
+    font-size:25px;
+    color:rgb(240, 20, 56);
+}
+.input_line{
+    font-size:30px;
+    margin-top:50px;
+    margin-left:200px;
+}
+#name{
+    font-size:18px;
+}
+#job_title{
+    font-size:18px; 
+}
+#salary{
+    font-size:18px;
+}
+#dept{
+    font-size:20px;
+    text-align:center;
+}
+#btn{
+    margin-left:700px;
+    font-size:25px;
+    margin-top:30px;
+    background:grey;
+    color:black;
+}
+#rset{
+    font-size:25px;
+    background:grey;
+    color:black;
+}
+.side{
+    text-align:center;
+    margin-top:20px;
+}
+.dept_bar{
+    font-size:20px;
+    background:black;
+    color:white;
+    padding:5px;
+    border-radius:10px;
+}
+.tab_bar{
+    font-size:30px; 
+    margin-left:700px;
+    margin-top:50px; 
+}
+#dept_wise_engg{
+    margin-bottom:20px; 
+    font-size:20px;
+}
+#dept_wise_des{
+    margin-left:170px;
+    margin-bottom:20px; 
+    font-size:20px;
+}
+#dept_wise_sales{
+    margin-left:340px;
+    margin-bottom:20px; 
+    font-size:20px;
+}
+#dept_wise_hr{
+    margin-left:520px;
+    margin-bottom:20px; 
+    font-size:20px;
+}
+#dept_wise_mark{
+    margin-left:700px;
+    margin-bottom:20px; 
+    font-size:20px;
+}
+
+
+
+
+
+

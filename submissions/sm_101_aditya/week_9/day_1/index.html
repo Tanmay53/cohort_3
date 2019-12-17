@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <!--Heading-->
+    <head>
+        <title>Grocery</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <div>
+            <div><h1>Grocery Items</h1></div>
+            <div id="opt">
+                <div>Select Category</div>
+                <label for="Grocery-Item"><b> Select Item : </b></label>
+                <select name="Grocery" id="Grocery">
+                        <option value="DAIRY">Dairy </option>
+                        <option value="FRUITS">Fruits</option>
+                        <option value="VEGETABLES">Vegetables</option>
+                        <option value="PULSES">Pulses</option>
+                        <option value="SNACKS">Snacks</option>
+                </select>
+                <br>
+                <button onclick="show()" id="search">Search</button>
+            </div>
+        </div>
+        <div>
+            <!--Grocery List-->
+            <div class="grid">
+                <div id="item1">Product</div>
+                <div id="item2">Quantity</div>
+                <div id="item3">Price</div>
+                <div id="item4"></div>
+                <div id="item5"></div>
+                <div id="item6"></div>
+                <div id="item7"></div>
+                <div id="item8"></div>
+                <div id="item9"></div>
+                <div id="item10"></div>
+                <div id="item11"></div>
+                <div id="item12"></div>
+                <div id="item13"></div>
+                <div id="item14"></div>
+                <div id="item15"></div>
+                <div id="item16"></div>
+                <div id="item17"></div>
+                <div id="item18"></div>
+                <div id="item19"></div>
+                <div id="item20"></div>
+                <div id="item21"></div>
+                <div id="item22"></div>
+                <div id="item23"></div>
+                <div id="item24"></div>
+                <div id="item25"></div>
+                <div id="item26"></div>
+                <div id="item27"></div>
+                <div id="item28"></div>
+            </div>
+            <br> <br>
+
+
+
+            <!-- Add to Cart -->
+            <div>
+                <input type="text" name="" id="cartInput">
+                <button onclick="cart()">Add to Cart</button>
+            </div>
+            <div id="cartView">
+                <div id="cart-item1"></div>
+                <div id="cart-item2"></div>
+                <div id="cart-item3"></div>
+                <div id="cart-item4"></div>
+                <div id="cart-item5"></div>
+                <div id="cart-item6"></div>
+                <div id="cart-item7"></div>
+                <div id="cart-item8"></div>
+                <div id="cart-item9"></div>
+                <div id="cart-item10"></div>
+                <div id="cart-item11"></div>
+                <div id="cart-item12"></div>
+                <div id="cart-item13"></div>
+                <div id="cart-item14"></div>
+                <div id="cart-item15"></div>
+                <div id="cart-item16"></div>
+                <div id="cart-item17"></div>
+                <div id="cart-item18"></div>
+                <div id="cart-item19"></div>
+                <div id="cart-item20"></div>
+            </div>
+
+
+
+
+            <!-- Imployee Table -->
+            <h2>Employee details</h2>
+            <!-- category of employees -->
+            <div id="emp">
+            <label for="Employees">Select Category</label>
+            <select id="employee">
+                <option value="Design">Design </option>
+                <option value="Engineering">Engineering</option>
+                <option value="HR">HR</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Sales">Sales</option>
+            </select>
+            <button onclick="checkData()">Check Data</button>
+            </div>
+            <!-- employee details -->
+            <div class="employeeDetails">
+                <div id="data1">Name</div>
+                <div id="data2">Job Title</div>
+                <div id="data3">Salary</div>
+                <div id="data4">Department</div>
+                <div id="data5"></div>
+                <div id="data6"></div>
+                <div id="data7"></div>
+                <div id="data8"></div>
+                <div id="data9"></div>
+                <div id="data10"></div>
+                <div id="data11"></div>
+                <div id="data12"></div>
+                <div id="data13"></div>
+                <div id="data14"></div>
+                <div id="data15"></div>
+                <div id="data16"></div>
+                <div id="data17"></div>
+                <div id="data18"></div>
+                <div id="data19"></div>
+                <div id="data20"></div>
+                <div id="data21"></div>
+                <div id="data22"></div>
+                <div id="data23"></div>
+                <div id="data24"></div>
+                <div id="data25"></div>
+                <div id="data26"></div>
+                <div id="data27"></div>
+                <div id="data28"></div>
+            </div>
+            <!-- <div>
+                <label for="Name">Name: <input type="text" name="" id="name"></label><br><br>
+                <label for="jobTitle">JobTitle:<input type="text" name="" id="job"></label><br><br>
+                <label for="salary">Salary :<input type="number" name="" id="salary"></label><br><br>
+                <label for="department">Department :<input type="text" name="" id="department"></label><br><br>
+                <button id="addElist" onclick="eList()">Add </button>
+                <div id="test"></div>
+            </div> -->
+    </body>
+</html>
