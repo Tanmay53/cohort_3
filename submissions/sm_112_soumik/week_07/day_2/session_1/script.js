@@ -170,9 +170,9 @@ $("#sort").change(function() {
 function deleteRow() {
   var target = event.target;
   var parent = target.parentElement;
-  var baap = parent.parentElement;
-  var baapkabaap = baap.parentElement;
-  var father = baapkabaap.parentElement;
+  var parent = parent.parentElement;
+  var parent = parent.parentElement;
+  var father = parent.parentElement;
 
   $(father).remove();
   console.log(parent);
