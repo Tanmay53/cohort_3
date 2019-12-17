@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Practise Deletions</title>
+</head>
+
+<body>
+    <h1 id="first_h1">First H1</h1>
+    <h1 id="second_h1">Second H1</h1>
+    <h3 id="first_h3">First H3</h3>
+    <h3 id="second_h3">Second H3</h3>
+    <div id="headings">
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+    </div>
+    <div id="cont">
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+    </div>
+    <hr />
+    <button onclick="remove_h1()">Remove H1</button>
+    <button onclick="remove_h2()">Remove H3</button>
+    <button onclick="remove_h5()">Remove H5</button>
+    <button onclick="remove_red()">Remove Red</button>
+    <button onclick="remove_divs()">Remove DIVS</button>
+    <script>
+        function remove_h1() {
+            console.log("Working function");
+            var bodyElem = document.querySelector("body");
+            var first_h1 = document.getElementById("first_h1");
+            bodyElem.removeChild(first_h1);
+        }
+        function remove_h2() {
+            var bodyElem = document.querySelector("body");
+            var second_h3 = document.getElementById("first_h3");
+            bodyElem.removeChild(second_h3)
+        }
+        function remove_h5() {
+            var parentEle = document.querySelector("#headings")
+            // console.log(parEle)
+            var remAll = document.querySelectorAll("h5")
+
+            for (var i = 0; i < remAll.length; i++) {
+                temp = remAll[i];
+                parentEle.removeChild(temp);
+            }
+        }
+
+        function remove_red() {
+            console.log("working")
+            var parentEle = document.querySelector("#cont");
+            console.log(parentEle)
+            var allRed = document.querySelectorAll(".red")
+            console.log(allRed)
+            for (var i = 0; i < allRed.length; i++) {
+                temp = allRed[i];
+                parentEle.removeChild(temp);
+                // temp.style.color = "red"
+            }
+        }
+        function remove_divs() {
+            console.log("Working")
+            var parentEle = document.querySelector("#cont");
+            var allDivs = parentEle.querySelectorAll("div")
+            console.log(allDivs)
+            for (var i = 0; i < allDivs.length; i++) {
+                temp = allDivs[i];
+                parentEle.removeChild(temp);
+            }
+        }
+    </script>
+</body>
+
+</html>

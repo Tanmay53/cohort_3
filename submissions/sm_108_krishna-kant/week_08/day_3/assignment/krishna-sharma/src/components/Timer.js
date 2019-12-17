@@ -17,21 +17,19 @@ class Timer extends React.Component {
   };
 
   runTimer = e => {
-    if (this.state.toggleStart === false) {
-      this.setState({ toggleStart: true });
-    }
-    console.log(this.state.toggleStart);
     if (timerSecond == null) {
       this.setState({ seconds: this.state.inputValue, toggleTimer: false });
     }
-    if (this.state.toggleStart) {
-      timerSecond = setInterval(() => {
-        let updatedSeconds = this.state.seconds - 1;
-        if (updatedSeconds <= 0) {
-          this.callAlert();
-        }
-        this.setState({ seconds: updatedSeconds });
-      }, 1000);
+    if (this.state.toggleStart === false || this.state.toggleStart === true) {
+      this.setState({ toggleStart: true }, () => {
+        timerSecond = setInterval(() => {
+          let updatedSeconds = this.state.seconds - 1;
+          if (updatedSeconds <= 0) {
+            this.callAlert();
+          }
+          this.setState({ seconds: updatedSeconds });
+        }, 1000);
+      });
     }
   };
 
