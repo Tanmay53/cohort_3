@@ -1,25 +1,3 @@
-// var category = document.getElementById("CategoryList").value
-// var name = document.getElementById("name").value
-// var price = document.getElementById("price").value
-// var table = document.querySelector(".displayTable")
-
-
-// function Enter() {
-//     var category = document.getElementById("CategoryList").value
-//     var name = document.getElementById("name").value
-//     var price = document.getElementById("price").value
-//     console.log(name, category, price)
-
-//     var table1 = document.querySelector("table");
-//     var trs = document.createElement("tr");
-//     trs.innerHTML = "<td>" + category + "</td><td>" + name + "</td><td>" + price + "</td>"
-//     table1.appendChild(trs)
-//     console.log(trs)
-// }
-
-
-
-
 function Enter() {
     var table1 = document.querySelector("table");
     var Category = document.getElementById('CategoryList').value;
@@ -45,10 +23,6 @@ function Enter() {
     td4.textContent = JobTitle
     trs.appendChild(td4)
 
-
-
-    // trs.innerHTML = "<td>" + Category + "</td><td>" + Name + "</td><td>" + Price + "</td>"
-    // trs.innerHTML = "SVJFV"
     console.log(trs)
     table1.appendChild(trs)
 
