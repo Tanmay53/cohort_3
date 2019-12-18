@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Coding 1</title>
+    <style>
+      .teal {
+        background-color: #b2dfdb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid px-5">
+      <div class="row">
+        <div class="col-4 mt-5">
+          <form action="">
+            <div class="form-group ">
+              <label for="">Username</label>
+              <input type="text" class="form-control" id="username" />
+            </div>
+            <div class="form-group">
+              <label for="">Email</label>
+              <input type="email" class="form-control" id="emailInput" />
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input type="text" class="form-control" id="pass" />
+            </div>
+            <div class="form-group">
+              <label>Type</label>
+              <select class="form-control" id="selectType">
+                <option value="">Select</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-outline-dark" id="submit">Submit</button>
+            </div>
+          </form>
+          <div class="display text-center">
+            <div class="details" id="details"></div>
+            <p class="lead" id="email"></p>
+          </div>
+        </div>
+        <div class="col-8 mt-5">
+          <div class="row">
+            <div class="col-4"></div>
+          </div>
+          <p class="lead text-center">Show User</p>
+          <select name="" id="showUser"> </select>
+          <table class="table"></table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var output = "";
+      var thead = "";
+
+      $(document).ready(function() {
+        thead = `<thead class="thead-dark">
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Type</th>
+              </tr>
+            </thead>`;
+        $(".table").html(thead);
+      });
+      var usersArr = [];
+
+      function User(username, email, password, type) {
+        (this.username = username || "Username"),
+          (this.email = email || "Email"),
+          (this.password = password || "Password"),
+          (this.type = type || "User Type");
+      }
+
+      function createUser() {
+        let username = $("#username").val();
+        let email = $("#emailInput").val();
+        let password = $("#pass").val();
+        let logtype = $("#selectType").val();
+
+        var data = new User(username, email, password, logtype);
+
+        usersArr.push(data);
+        console.log(usersArr);
+      }
+      var show = "";
+      $(".table").html(thead);
+      $("#submit").click("click", function(e) {
+        e.preventDefault();
+        createUser();
+        $("#showUser").empty();
+        usersArr.forEach(function(key) {
+          if (output == "") {
+            output += `
+            <tbody>
+
+              <tr class="teal">
+                <td scope="row">${key.username}</td>
+                <td>${key.email}</td>
+                <td>${key.password}</td>
+                <td>${key.type}</td>
+              </tr>
+            </tbody>`;
+          } else {
+            output = "";
+            output += `
+            <tbody>
+
+              <tr class="teal">
+                <td scope="row">${key.username}</td>
+                <td>${key.email}</td>
+                <td>${key.password}</td>
+                <td>${key.type}</td>
+              </tr>
+            </tbody>`;
+          }
+          $(".table").append(output);
+          show = `<option value="${key.username}">${key.username}</option>`;
+          $("#showUser").append(show);
+        });
+
+        $("#showUser").change(function() {
+          event.preventDefault();
+          var selectedValue = $(this)
+            .children("option:selected")
+            .val();
+
+          usersArr.forEach(function(elem) {
+            $("#details").empty();
+            if (elem.username == selectedValue) {
+              // console.log(elem.username);
+              $("#details").append(fillInfo(elem));
+            }
+          });
+        });
+      });
+      function fillInfo(user) {
+        return `<div>
+                    <div> Hello ${user.username}, welcome back </div>
+                    <div> Registered email is ${user.email}</div>
+                </div>`;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+<tr class="bg-light">
+  <td scope="row">${key.username}</td>
+  <td>${key.email}</td>
+  <td>${key.password}</td>
+  <td>@${key.type}</td>
+</tr> -->

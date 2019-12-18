@@ -1,0 +1,11 @@
+
+.cover {
+    background: url("https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,g_north,w_1280,h_726/v1558483958/assets/3a/b709e3-54eb-4f13-8618-2bf08addf5dd/original/earn_2x.jpg")
+}
+.cover2 {
+    background: url("https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1280/v1556927537/assets/e4/ade93c-0b7b-4990-bda4-afef96793277/original/Modalities_banner_home.jpg");
+    height:600px;
+}
+td {
+    padding:0 20px 0 20px;
+}
