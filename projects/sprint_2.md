@@ -15,3 +15,4 @@
 | sm_022 | Prakash Peram 	 | Expense Manager 	 | [github](https://github.com/prakashperam/masai-sprint-2)
 | sm_034 | Venkat                | Expense Manager       | [github](https://github.com/Venkatasubbu913/masai-week-4.git)
 |sm_011|Divyansh Srivastava|Expense Manager|[github](https://github.com/divyansh1234/masai-sprint2/tree/master/files/ExpenseManager)|
+|sm_007|Brijesh Kumar |Power Tracker |[github](https://github.com/brijkrpr22/masai-sprint-2/tree/master/week_4)

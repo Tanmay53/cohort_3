@@ -4,8 +4,6 @@ input = '10801'
 //Invoking function
 palindrome(input)
 
-
-
 //function for checking palindrome
 function palindrome(input) {
     var temp = input; //temporary input storage

@@ -3,6 +3,7 @@ const userArr = []
 
 
 $('#submit').click(function() {
+    event.preventDefault();
     let user = {
         first: $('#first').val(),
         last: $('#last').val(),
@@ -11,7 +12,7 @@ $('#submit').click(function() {
         email: $('#email').val(),
         address: $('#address').val(),
         mobile: $('#mobile').val(),
-        type: $('#type').val()
+        type: $("input[type=radio]:checked").val()
     }
     console.log(user)
     userArr.push(user)
@@ -20,7 +21,7 @@ $('#submit').click(function() {
 })
 
 
-//function to display user details 
+//function to display user details in drop down list
 function userData(arr) {
     $('#user').empty()
     for (var i = 0; i < arr.length; i++) {
@@ -46,15 +47,16 @@ function dropDown(user) {
     console.log(user)
     var doc = document.getElementById('userInfo')
     doc.innerHTML = `<div>
-                           <div> Hello ${user.username}, welcome back ... </div>
-                           <div> Registered email is ${user.email}</div>
-                           <div> Your mobile number is ${user.mobile}</div>
-                    </div>`
+                           <div> Hello ${user.username}, Welcome back ... </div>
+                           <div> You are ${user.type} here...</div>
+                           <div> Thanks for registering with email: ${user.email}</div>
+                     </div>`
 }
 
 
 //adding event listener on 'see table' button
 $('#seeTable').click(function() {
+    event.preventDefault(); 
     displayTable(userArr);
 })
 
@@ -70,24 +72,26 @@ function displayTable(arr) {
         if (arr[i] == null) {
             continue;
         }
+        const {first,last,username,password,email,address,mobile,type} = arr[i]
         let tr = document.createElement('tr');
 
         var td = document.createElement('td');
-        td.textContent = arr[i].username;
+        td.textContent = username;
         tr.append(td);
         var td = document.createElement('td');
-        td.textContent = arr[i].first;
+        td.textContent = first;
         tr.append(td);
         var td = document.createElement('td');
-        td.textContent = arr[i].last;
+        td.textContent = last;
         tr.append(td);
         var td = document.createElement('td');
-        td.textContent = arr[i].type;
+        td.textContent = type;
         tr.append(td);
         var td = document.createElement('td');
-        td.textContent = arr[i].email;
+        td.textContent = email;
         tr.append(td);
         var td = document.createElement('td');
+        //logic for delete button
         var del = document.createElement('button');
         del.setAttribute('class', 'btn btn-sm btn-danger');
         del.setAttribute('idx', i);
@@ -95,93 +99,46 @@ function displayTable(arr) {
         del.addEventListener('click', function(btn) {
             var index = this.getAttribute('idx');
             console.log(index)
-            arr[index] = null;
-            displayTable(arr);
-            userData(arr);
+            userArr[index] = null;
+            displayTable(userArr);
+            userData(userArr);
         })
         td.append(del);
         tr.append(td);
 
         $('#table-body').append(tr);
 
-        // for(key in userArr[i]){
-        //     var td = document.createElement('td');
-        //     if(key === username){
-        //         td.textContent = userArr[i].username;
-        //     }else if(key === first){
-        //         td.textContent = userArr[i].first;
-        //     }else if(key === last){
-        //         td.textContent = userArr[i].last;
-        //     }else if(key === type){
-        //         td.textContent = userArr[i].type;
-        //     }else if(key === email){
-        //         td.textContent = userArr[i].email;
-        //     }
-        // }
     }
-}
+}   
 
 
+//order drop down check
 
-//Alphabetical sorting of users
-$('#order').change(function() {
-
-    let username_sorted = []
-    for (let i = 0; i < userArr.length; i++) {
-        username_sorted[i] = userArr[i]['username'];
+$('#order').change(function(){
+    let order = $('#order').val()
+    let arr = []
+    console.log('order check')
+    if(order === 'asc'){
+        arr = userArr.sort((a,b)=> (a.username > b.username))
+    }else if(order === 'desc'){
+        arr = userArr.sort((a,b)=>(b.username > a.username))
     }
-    username_sorted.sort();
-    console.log(username_sorted);
-
-    //arranging arr ascending order
-    let user_asc = []
-
-    for (let i = 0; i < username_sorted.length; i++) {
-        for (let j = 0; j < userArr.length; j++) {
-            if (username_sorted[i] === userArr[j].username) {
-                user_asc[i] = userArr[j]
-            }
-        }
-    }
-
-    //arranging as per desc order
-
-    let user_desc = []
-    let length = username_sorted.length - 1;
-    for (let i = length; i >= 0; i--) {
-        for (let j = 0; j < userArr.length; j++) {
-            if (username_sorted[i] === userArr[j].username) {
-                user_desc[(length) - i] = userArr[j]
-            }
-        }
-    }
+    displayTable(arr)
+})
 
 
-    //calling asc / desc function
-    if ($('#order').val() === 'asc') {
-        displayTable(user_asc)
-    } else if ($('#order').val() === 'desc') {
-        console.log('check', user_desc)
-        displayTable(user_desc);
-    }
-});
-
+//user type drop down check
 
 $('#userType').change(function() {
-    let onlyUser = [];
-    let onlyAdmin = []
-    for (let i = 0; i < userArr.length; i++) {
-        if ((userArr[i]['type']) === 'user') {
-            onlyUser.push(userArr[i])
-        } else {
-            onlyAdmin.push(userArr[i])
-        }
-    }
-    if ($('#userType').val() === 'user') {
-        displayTable(onlyUser)
-    } else if ($('#userType').val() === 'admin') {
-        displayTable(onlyAdmin)
-    } else {
-        displayTable(userArr)
-    }
+   let userType = $('#userType').val()
+   let arr = []
+   console.log(userType)
+   if(userType === 'Admin'){
+     arr =  userArr.filter(ele=>ele.type == 'Admin')
+   }else if(userType === 'User'){
+       arr = userArr.filter(ele=>ele.type == 'User')
+   }else if(userType === 'all'){
+       arr = userArr
+   }
+   displayTable(arr)
 })
