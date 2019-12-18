@@ -69,8 +69,8 @@ function rhombus(rows) {
     }
 }
 
-// pyramid(6);
+pyramid(3);
 
 // inverse_pyramid(4);
 
-rhombus(4);
+// rhombus(3);
