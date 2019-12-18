@@ -1,0 +1,19 @@
+body {
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqh27KY9Ttiuh4Ex9Zrk3W0YIuICuzGhvP3vzzkOwJECl8GEbG-g&s");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.main {
+  display:flex;
+  margin-left:50px;
+}
+.main > div {
+  margin:20px;
+}
+.one {
+  text-align:center;
+}
+#avgsal {
+    margin-left:480px;
+    color:deeppink;
+  }

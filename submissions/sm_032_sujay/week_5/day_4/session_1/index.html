@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Constructors</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <h1>Click the button to add a new customer!</h1>
+  <button onclick="add()">Add customer</button>
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! <h1>
+  <button onclick="print()">Print Customers</button>  
+  <div id="displayContainer"> </div>
+
+  <div id="inputContainer">
+
+    <label for="firstName"> First Name </label>
+    <input type="text" name="firstName" class= "custIp" placeholder="First Name">
+
+
+    <label for="lastName"> Last Name</label>
+    <input type= "text" name= "lastName" class="custIp" placeholder="Last Name">
+
+    <label for="dob"> Date Of Birth</label>
+    <input type= "text" name="dateOfBirth" class="custIp" placeholder="dd/mm/yyyy">
+
+    <label for="balance"> Balance</label>
+    <input type="number" name="balance" class="custIp" placeholder="Balance">
+
+    <label for="accNumber">Account Number </label>
+    <input type = "text" name="accNumber" class="custIp" placeholder="Account Number">
+
+    <label for="sharedAccHolders"> Shared Account Holders</label>
+    <input type="text" name="sharedAccHolders" class="custIp" placeholder="Shared Account Holders">
+
+  </div>
+  
+
+  <script>
+    
+    function Customers(firstName,lastName,dateOfBirth,balance,accountNumber,sharedAccountHolders){
+      this.firstName =firstName
+      this.lastName =lastName
+      this.dateOfBirth =dateOfBirth
+      this.balance = balance
+      this.accountNumber = accountNumber
+      this.sharedAccountHolders = sharedAccountHolders
+      this.displayDetails = function(){
+       var output = ''
+       for(key in this){
+      output += key + ":" + this[key] + "\n"
+      if(key == 'sharedAccountHolders') break;
+        }
+     return output 
+      }
+
+
+    }
+    var sm_032 = new Customers ("Sujay","Nagaraj","18/01/1995","1729","007",["Masai School","Nolan Edutech"]) 
+
+    console.log(sm_032)
+
+    var customerArr=[]
+
+
+
+     function add(){
+      console.log("inside add")
+  var inputs = document.querySelectorAll('.custIp') 
+  var newCustomer = new Customers()
+  var i = 0 
+  for(key in newCustomer){
+    if(newCustomer[key] == undefined){ 
+      if(key != 'sharedAccountHolders')  {
+        newCustomer[key] = inputs[i].value 
+      }
+      else {
+        newCustomer[key] = inputs[i].value.split(',')
+      }
+      inputs[i].value = '' 
+      i++
+    }
+  }
+  customerArr.push(newCustomer) 
+}
+
+function print(){
+  console.log("inside print")
+  var displayContainer = document.querySelector('#displayContainer') 
+  displayContainer.innerHTML = ''
+
+  for(var i = 0; i < customerArr.length;i++){ 
+    var displayPara = document.createElement('p') 
+    displayPara.textContent = customerArr[i].displayDetails() 
+    displayContainer.appendChild(displayPara) 
+  }
+}
+
+
+
+
+  </script>
+</body>
+</html>

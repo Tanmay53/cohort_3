@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <title>Practise Attributes</title>
+    <style type="text/css">
+        .class-h1 {
+            color: red
+        }
+
+        .class-h3 {
+            color: green;
+        }
+
+        .class-h5 {
+            color: orange;
+        }
+
+        .class-div {
+            color: yellow;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .class-p {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        #test-2 {
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="first_h1">First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div id="box">
+        <div>First DIV</div>
+        <div>Second DIV</div>
+        <div>Third DIV</div>
+    </div>
+    <div>Fourth DIV</div>
+    <div id="cont">
+        <p>First P</p>
+        <p>Second P</p>
+        <p>Third P</p>
+    </div>
+    <div id="temp">
+        <p>Test P1</p>
+        <p>Test P2</p>
+        <p>Test P3</p>
+    </div>
+    <hr />
+    <button onclick="change_h1()">Change H1</button>
+    <button onclick="change_h3()">Change H3</button>
+    <button onclick="change_h5()">Change H5</button>
+    <button onclick="change_div()">Change DIV</button>
+    <button onclick="change_p()">Change P</button>
+    <button onclick="set_id()">Set ID</button>
+    <script>
+        function change_h1() {
+            console.log("working")
+            var first_h1 = document.querySelector('#first_h1')
+            console.log(first_h1)
+            first_h1.setAttribute('class', 'class-h1')
+        }
+        function change_h3() {
+            console.log("h3")
+            var all_h3 = document.querySelectorAll('h3')
+            console.log(all_h3)
+            for (var i = 0; i < all_h3.length; i++) {
+                all_h3[i].setAttribute('class', 'class-h3')
+            }
+        }
+        function change_h5() {
+            console.log("h5")
+            var all_h5 = document.querySelectorAll('h5')
+            console.log(all_h5)
+            for (var i = 0; i < all_h5.length; i++) {
+                all_h5[i].setAttribute('class', 'class-h5')
+            }
+        }
+        function change_div() {
+            console.log("div")
+            var parent_div = document.querySelector("#box")
+            var all_div = parent_div.querySelectorAll("div")
+            console.log(all_div)
+            for (i = 0; i < all_div.length; i++) {
+                all_div[i].setAttribute('class', 'class-div')
+            }
+        }
+        function change_p() {
+            console.log("p")
+            var parent_p = document.querySelector("#cont");
+            var all_p = parent_p.querySelectorAll("p");
+            for (i = 0; i < all_p.length; i++) {
+                all_p[i].setAttribute('class', 'class-p')
+            }
+
+        }
+        function set_id() {
+            console.log("id")
+            var parent_div = document.querySelector("#temp");
+            var all_p = parent_div.querySelectorAll("p")
+            all_p[1].setAttribute('id', 'test-2')
+
+        }
+    </script>
+</body>
+
+</html>
