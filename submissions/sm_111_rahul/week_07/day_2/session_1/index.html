@@ -5,88 +5,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>index</title>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row bg-dark d-flex flex-row justify-content-center">
-            <div class="col-3 bg-info m-4 p-4">
-                <div class="form-group col m-2 p-2">
-                    <label for="fname">First Name</label>
-                    <input type="text" class="form-control input" id="fname" placeholder="First Name">
-                </div>
-                <div class="form-group col m-2 p-2">
-                    <label for="lname">Last Name</label>
-                    <input type="text" class="form-control input" id="lname" placeholder="Last Name">
-                </div>
-                <div class="form-group col m-2 p-2">
-                    <label for="userN">User Name</label>
-                    <input type="text" class="form-control input" id="userN" placeholder="Username">
-                </div>
-                <div class="form-group col m-2 p-2">
-                    <label for="pass">Password</label>
-                    <input type="password" class="form-control input" id="pass" placeholder="Password">
-                </div>
-                <div class="form-group col m-2 p-2">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control input" id="email" placeholder="Email">
-                </div>
-                <div class="form-group col m-2 p-2">
-                    <label for="add">Address</label>
-                    <input type="text" class="form-control input" id="add" placeholder="Address">
-                </div>
-                <div class="form-group col m-2 p-2">
-                    <label for="phone">Phone Number</label>
-                    <input type="number" class="form-control input" id="phone" placeholder="Phone Number">
-                </div>
-                <div class="m-2 p-2 col">
-                    <select class="custom-select" id="userType">
-                        <option selected>select user/admin</option>
-                        <option value="user">User</option>
-                        <option value="admin">Admin</option>
-                    </select>
-                </div>
-                <div>
-                    <button class="btn btn-warning float-right" id="register">Register</button>
-                </div>
-            </div>
-            <div class="col-2 bg-info m-4 p-2">
-                <div class="form-group p-2">
-                    <label for="selectUsers" class="col-form-label-lg"> </label>
-                    <select class="custom-select p-2" id="selectUsers">
-                        <option selected>Select Users</option>
-                    </select>
-                </div>
-                <div id="displayUsers">
 
-                </div>
+    <div class="container-fluid  mx-5 ">
+        <div class="row lg-mx-5">
+            <div class="col-12 py-4"></div>
+            <div class="col-lg-3 col-md-4 border border-primary ">
+                <form class="p-4">
+                    <div class="form-group">
+                        <label for="fname">First Name :</label>
+                        <input id="fname" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name :</label>
+                        <input id="lname" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="userN">User Name :</label>
+                        <input id="userN" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password :</label>
+                        <input id="pass" class="form-control" type="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input id="email" class="form-control" type="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="add">Address :</label>
+                        <input id="add" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone :</label>
+                        <input id="phone" class="form-control" type="phone">
+                    </div>
+                    <div class="form-group py-2 row justify-content-center">
+                        <label for="uType" class="col-lg-5 mx-lg-3">Select User Type</label>
+                        <select class="col-md-12 col-lg-5" class="form-control-lg" id="uType">
+                            <option selected>--</option>
+                            <option>User</option>
+                            <option>Admin</option>
+                        </select>
+                    </div>
+                    <div class="form-group pb-2">
+                        <button class="btn btn-primary float-right" id="submit">Submit</button>
+                    </div>
+                </form>
             </div>
-            <div class="col-6 bg-light m-4 p-2">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-4 ">
-                        <select class="custom-select bg-danger text-white" id="sortUsers">
-                            <option selected>Sort Users</option>
-                            <option>Ascending</option>
-                            <option>Descending</option>
-                        </select>
+            <div class="col-sm-8 col-lg-9">
+                <div class="row">
+                    <div class="col-11 border-top border-right border-bottom border-primary  justify-content-center">
+                        <div class="form-group p-2 mx-lg-3 justify-content-center row">
+                            <label for="selectUser" class="col-lg-3 mx-lg-3">Select User</label>
+                            <select class="col-md-12 col-lg-4" class="form-control-lg" id="selectUser">
+                                <option selected>--</option>
+                            </select>
+                            
+                        </div>
+                        <div id="userDetails" class="col-lg-10"></div>
                     </div>
-                    <div class="col-4">
-                        <select class="custom-select bg-danger text-white" id="selectUsers">
-                            <option selected>Filter Users</option>
-                            <option>All</option>
-                            <option>Users</option>
-                            <option>Admins</option>
-                        </select>
+                </div>
+                <div class="row ">
+                    <div class="col-11 py-3 border-right border-primary">
+                        <div class="row  justify-content-center">
+                        <div class="form-group col-sm-6 col-lg-5 ">
+                            <label for="sort" class="col-5">Sort Users</label>
+                            <select class=" col-md-12 col-lg-5" class="form-control-lg" id="sort">
+                                <option selected>Sort using username</option>
+                                <option value="asc">Ascending</option>
+                                <option value="des">Descending</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6 col-lg-4">
+                            <label for="filter" class="">Filter Users</label>
+                            <select class="col-md-12 col-lg-4" class="form-control-lg" id="filter">
+                                <option selected>--</option>
+                                <option value="All">All</option>
+                                <option value="User">User</option>
+                                <option value="Admin">Admin</option>
+
+                            </select>
+                        </div>
+                        </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-11 border-right border-bottom border-primary">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Full-Name</th>
+                                <th scope="col">User-Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">User Type</th>
+                                <th scope="col">
+                                    Delete User
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

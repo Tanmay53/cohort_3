@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            .cont{
+                display: flex;
+                flex-direction: column;
+                width: 1200px;
+                height: 10000px;
+                margin: auto;
+            }
+            .class1{
+                   display: flex;
+                   flex-direction: column;
+                   width: 400px;
+                   height: 300px;
+                   background-color:thistle;
+                   margin-top: 20px;
+                   margin: auto;
+           }
+
+        </style>
+    </head>
+    <body>
+       <button id="btnCreate">Create Page</button>
+       <!-- script -->
+       <script>
+       function createPage(){
+           var btnCreate =document.getElementById('btnCreate')
+           var cont = document.createElement('div')
+           cont.setAttribute(' class', 'cont')
+           var body = document.querySelector('body')
+           cont.appendChild(cont)
+
+        //    first
+        var cont1 = document.createElement('div')
+        cont1.setAttribute('class', 'class1')
+       }
+       
+       </script>
+    </body>
+</html>
