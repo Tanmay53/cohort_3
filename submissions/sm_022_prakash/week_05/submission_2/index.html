@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width:device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+
+<head>
+    <title>index.html</title>
+    <style>
+        .main {
+            display: flex;
+            border: aqua 2px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <form>
+                <label for="product" class="label">Product</label> <br>
+                <input type="text" placeholder="Enter Product.." name="product" id="product"><br>
+                <label for="price" class="label">Price</label><br>
+                <input type="number" placeholder="Enter price..." name="quantity" id="price"><br>
+                <label for="quantity" class="label">Quantity</label><br>
+
+                <input type="number" placeholder="Enter Quantiy.." name="quantity" id="quantity"><br>
+            </form>
+            <button onclick="submit()">Submit</button>
+        </div>
+        <div>
+            <button onclick="changeFontSize()">Change Font Size</button>
+            <button onclick="changeFontColor()">Change Font Color</button>
+            <button onclick="ChangeBgAlternateRow()">ChangeBgAlternateRow</button>
+        </div>
+
+    </div>
+    <div>
+
+
+    </div>
+    <div>
+        <table id="items_table">
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+
+        </table>
+
+
+    </div>
+    </div>
+
+
+    <script>
+       var arr = []
+        function submit() {
+            var pos = ["even", "odd"]
+            var product = document.getElementById("product").value;
+            var qty = document.getElementById("quantity").value;
+            var price = document.getElementById("price").value;
+            console.log("submit")
+            var items = { product: product, quantity: qty, price: price }
+            console.log(items)
+            addItems(items)
+            arr.push(items)
+          
+            itemManipulation(arr)
+            console.log(arr);
+            changeFontSize(arr)
+        }
+
+        function addItems(items) {
+            
+            var tbl = document.getElementById("items_table");
+            var row = document.createElement("tr")
+            var col1 = document.createElement("td")
+            col1.textContent = items.product;
+            var col2 = document.createElement("td");
+            col2.textContent = items.price;
+            var col3 = document.createElement("td");
+            col3.textContent = items.price;
+            row.appendChild(col1)
+            row.appendChild(col2)
+            row.appendChild(col3)
+            tbl.appendChild(row)
+            var pos = ["even", "odd"]
+            for(var i=0; i<arr.length; i++){
+                if(i%2===0){
+                    row.setAttribute('class',pos[0])
+                }
+                else{
+                    row.setAttribute('class',pos[1])
+                }
+            }
+            
+        }
+        function itemManipulation(arr) {
+            for (i = 0; i < arr.length; i++) {
+                product = arr[i]["product"]
+                quantity = arr[i]["quantity"]
+                price = arr[i]["price"]
+                console.log(product, quantity, price)
+            }
+        }
+        function changeFontColor() {
+            var tbl = document.getElementById("items_table").style.color = "red"
+
+        }
+        function changeFontSize() {
+            var tbl = document.getElementById("items_table").style.fontSize = "20px";
+
+        }
+        function ChangeBgAlternateRow(){
+            console.log("hey there?")
+           
+            var cls = document.getElementsByClassName('odd').backgroundColor = "red";
+        }
+
+    </script>
+</body>
+
+
+</html>
