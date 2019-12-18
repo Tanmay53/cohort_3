@@ -20,7 +20,7 @@ arr.map(a=>a*10)
 Answer
 
 ```
-[55,200,215,230,280]
+[550,2000,2150,2300,2800]
 ```
 2. What is the value of b?
 ```javascript
@@ -41,7 +41,7 @@ arr.map(a=>a%10)
 Answer
 
 ```
-[55,200,215,230,280]
+[5,0,5,0,0]
 ```
 4. What is the value of `z`?
 ```javascript
@@ -63,7 +63,7 @@ arr.filter(a=>a>220)
 Answer
 
 ```
-[220,200,215,205,280]
+[280]
 ```
 6.  What is the value of `arr`? If the answer is in an array please use [num1,num2,num3] format
 ```javascript
@@ -73,7 +73,7 @@ arr.filter(a=>a>200)
 Answer
 
 ```
-[55,200,215,230,280]
+[215,230,280]
 ```
 7. What is the value of `arr`? If the answer is in an array please use [num1,num2,num3] format
 ```javascript
@@ -83,7 +83,7 @@ arr.reduce((a,b)=>a>b?a:b)
 Answer
 
 ```
-[55,200,300,230,280]
+300
 ```
 8.  What is the value of `arr`? If the answer is in an array please use [num1,num2,num3] format
 ```javascript
@@ -93,7 +93,7 @@ arr.reduce((a,b)=>a>b?a+100:b)
 Answer
 
 ```
-[55,200,300,230,280]
+500
 ```
 9. What is the value of `x` and `y` ?
 ```javascript
@@ -109,6 +109,5 @@ y = z(90)
 Answer
 
 ```
-y = 100
-x = 110
+x = 110, y = 100
 ```
