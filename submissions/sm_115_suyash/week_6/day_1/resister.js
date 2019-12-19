@@ -37,7 +37,7 @@ btn.addEventListener('click', takeValue)
 // function for sending data
 function takeValue(e) {
   e.preventDefault()
-  alert('hello')
+  // alert('hello')
   var sendObj = {
     'name': fname.value,
     'email': email.value,
