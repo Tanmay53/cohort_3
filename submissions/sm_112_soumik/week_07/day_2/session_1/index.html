@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>practice</title>
+  </head>
+  <body>
+    <div class="container p-4 text-center">
+      <div class="row">
+        <div class="col-md-5">
+          <h2 class="text-center">User Form</h2>
+          <div class="form-group">
+            <input
+              type="text"
+              id="fname"
+              class="form-control"
+              placeholder="First Name"
+            />
+            <input
+              type="text"
+              id="lname"
+              class="form-control"
+              placeholder="Last Name"
+            />
+            <input
+              type="text"
+              id="username"
+              class="form-control"
+              placeholder="User Name"
+            />
+            <input
+              type="password"
+              id="pass"
+              class="form-control"
+              placeholder="password"
+            />
+            <input
+              type="email"
+              id="email"
+              class="form-control is-invalid"
+              placeholder="email"
+            />
+            <input
+              type="text"
+              id="add"
+              class="form-control"
+              placeholder="address"
+            />
+            <input
+              type="text"
+              id="phn"
+              class="form-control"
+              placeholder="phoneNumber"
+            />
+            <select name="" class="form-control" id="type">
+              <option value="">---</option>
+              <option value="admin">admin</option>
+              <option value="user">user</option>
+            </select>
+            <button class="btn btn-outline-danger" id="submit">
+              Submit Data
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6" id="showInfo">
+          <h2 class="text-center">
+            Show data
+          </h2>
+          <div class="form-group">
+            <select name="" id="users" class="form-control">
+              <option value="">---</option>
+            </select>
+          </div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Password</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="container bg-dark text-light p-4 m-4">
+      <div class="col-md-8 text-center">
+        <div class="form-group row">
+          <select name="" id="sort" class="form-control d-inline">
+            <option value="">---</option>
+            <option value="asc">ascending</option>
+            <option value="desc">descending</option>
+          </select>
+          <p class="lead">Filter</p>
+          <select name="" id="filter" class="form-control d-inline">
+            <option value="">---</option>
+            <option value="all">All</option>
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+          </select>
+        </div>
+        <button class="btn btn-outline-light" id="showAll">Show Data</button>
+        <table class="table table-bordered col-md-12">
+          <thead class="text-light col-md-12">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Username</th>
+              <th scope="col">email</th>
+              <th scope="col">address</th>
+              <th scope="col">user type</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="search" class="text-light"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://kit.fontawesome.com/32e24ce59e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
