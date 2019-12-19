@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button onclick="createh1()" id="h1btn">Create H1</button>
+        <button onclick="createh3()">Create 2 H3</button>
+        <button onclick="createDivs()">Create DIVS</button>
+        <button onclick="addNames()">Add Students</button>
+        <button onclick="copyright()">Add Copyright</button>
+        <script>
+            
+            
+            // .....FIRST CODE.......
+            function createh1(){
+                var masai=document.createElement('h1');
+                masai.innerHTML='MASAI';
+                var headinsDiv=document.querySelector('#headings');
+                headinsDiv.appendChild(masai);
+            }
+
+
+            // .......SECOND CODE...........
+            function createh3(){
+                var first=document.createElement('h3');
+                var second=document.createElement('h3');
+
+                first.innerHTML='A Transformation in education!';
+                second.innerHTML='Learn to earn, pay when you get';
+
+                var headingsDiv=document.querySelector("#headings");
+
+                headingsDiv.appendChild(first);
+                headingsDiv.appendChild(second);
+            }
+
+            // .........THIRD CODE...............
+            function createDivs(){
+                var arr=[];
+                for (var i=1;i<11;i++){
+                    arr.push(document.createElement('div'));
+                }
+                
+                var container=document.querySelector('#cont');
+
+                count=0;
+                for (var i=0;i<arr.length;i++){
+                    count++
+                    arr[i].innerHTML='Content'+count;
+
+                    container.appendChild(arr[i]);                    
+                }
+            }
+
+            //FOURTH CODE.............
+            function addNames(){
+                var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+
+                var vikings=document.querySelector('#vikings');
+                var arr=[];
+                for (var i=1;i<students.length+1;i++){
+                    arr.push(document.createElement('li'));
+                }   
+
+                for (var i=0;i<arr.length;i++){
+                    arr[i].innerHTML=students[i];
+                    vikings.appendChild(arr[i]);
+                }
+            }
+
+
+            //FIFTH CODE............
+            function copyright(){
+                var newP=document.createElement('p');
+
+                newP.innerHTML= '&copy'+'Masai 2019';
+                
+                var h1btn=document.getElementById("h1btn");
+
+                var bodyelem=document.querySelector('body');
+
+                bodyelem.insertBefore(newP,h1btn);
+            }
+
+
+        
+        </script>
+    </body>
+</html>
