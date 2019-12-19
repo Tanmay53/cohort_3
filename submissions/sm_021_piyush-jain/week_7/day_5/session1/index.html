@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Fetch API</title>
+    <style>
+        .imgSize {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center my-5">
+        <input type="text" id="name" placeholder="Find the github users">
+        <button id="search">Search</button>
+    </div>
+    <table class="table"></table>
+</body>
+<script>
+    var array = []
+    var value = $("#name").val();
+    var baseUrl = 'https://api.github.com/search/users?q='
+    var button1 = document.querySelector('button')
+    button1.addEventListener('click', fetchApi)
+    var AOO = []
+    function fetchApi() {
+        fetch(baseUrl + value)
+            .then(res => res.json())
+            // .then(res => console.log(res))
+            .then(res => {
+                AOO = JSON.stringify(res)
+                return res.items
+            })
+
+            .then(res => fetchRepos(res))
+    }
+    function fetchRepos(res) {
+        console.log(res)
+        var table = document.querySelector('table')
+        table.innerHTML = "<tr><th>Html URL</th><th>Score</th><th>Owner</th><th>Profile</th><th>More Details</th></tr>"
+        for (var i = 0; i < res.length; i++) {
+            var tr1 = document.createElement('tr')
+            tr1.innerHTML = "<td id='selected'>" + res[i]["url"] + "<td>" + res[i]["score"] + "<td>" + res[i]["login"] + "<td><img class=imgSize src=" + res[i]["avatar_url"] + "/><td  id='details' onclick='deleting()'><button>More Details</button>"
+            table.appendChild(tr1)
+        }
+    }
+        function deleting(){
+            var e=details.parentElement
+            e.remove()
+            // console.log(e.textContent)
+        //    var detailss=e.firstChild;
+        //    console.log(e.firstChild.textContent)
+            var ob=e.firstChild.textContent
+            console.log(ob)
+            localStorage.setItem('Detail1',JSON.stringify(ob))
+            var a=localStorage.getItem('Detail1')
+            console.log(a)
+            location="file:///home/piyush/coding/week_7/day_5/session1/more_detail.html"
+        }
+
+
+</script>
+
+</html>
