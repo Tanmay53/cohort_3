@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <title>W5D2S2</title>
+    <style>
+        body {
+            margin: 5%;
+            background-color: wheat;
+        }
+
+        table {
+            width: 75%;
+            margin: 0 12%;
+        }
+        #table tr:nth-of-type(2n) {
+            background-color: rgb(247, 201, 247);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+            font-size: larger;
+        }
+
+        form div {
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function addProduct() {
+            event.preventDefault();
+            var add1 = document.getElementById('item').value;
+            var add2 = document.getElementById('rate').value;
+            var add3 = document.getElementById('num').value;
+
+            var box = document.getElementById('table');
+
+            var row = document.createElement('tr');
+
+            var col1 = document.createElement('td');
+            col1.innerHTML = add1;
+            row.appendChild(col1);
+
+            var col2 = document.createElement('td');
+            col2.innerHTML = add2;
+            row.appendChild(col2);
+
+            var col3 = document.createElement('td');
+            col3.innerHTML = add3;
+            row.appendChild(col3);
+
+            box.appendChild(row);
+
+        }
+
+        function changeSize() {
+            event.preventDefault();
+            var fs = document.getElementById('fSize').value;
+            var a = Number(fs);
+            document.getElementById("table").style.fontSize= a;
+        }
+
+        function fColor() {
+            event.preventDefault();
+            var c = document.getElementById('Color').value;
+            document.getElementById('table').style.color= c;
+        }
+
+        function bgColor() {
+            event.preventDefault();
+            var bgc = document.getElementById('bg').value;
+            document.getElementById('table').style.backgroundColor= bgc;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- FORM to add -->
+    <div>
+        <form action="">
+            <div>
+                Product -:
+                <input type="text" name="product" id="item">
+            </div>
+            <br>
+            <div>
+                Price ----:
+                <input type="number" name="price" id="rate">
+            </div>
+            <br>
+            <div>
+                Quantity:
+                <input type="number" name="quantity" id="num">
+            </div>
+            <button onclick="addProduct()">Add Product</buttonl>
+                <button type="reset">Reset</button>
+
+        </form>
+    </div>
+    <!-- TABLE -->
+    <div>
+        <table id="table">
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </table>
+    </div>
+    <!-- SETTINGS -->
+    <div>
+        <form action="">
+            <fieldset>
+                <legend style="font-size: x-large;">Settings :</legend>
+                <div>
+                    <input type="text" size="3" id="fSize">
+                    <button onclick="changeSize()">Change Font Size</button>
+                </div>
+                <br>
+                <div>
+                    <input type="color" id="Color">
+                    <button onclick="fColor()">Change Font Color</button>
+                </div>
+                <br>
+                <div>
+                    <input type="color" id="bg">
+                    <button onclick="bgColor()">Change Background Color</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
