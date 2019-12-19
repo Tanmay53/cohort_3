@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In Api</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-center display-3 p-3">Register Api</div>
+        <hr>
+        <div id="inputForm" class="p-3">
+            <form>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Username</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="password" placeholder="Password">
+                    </div>
+                </div>
+               
+            </form>
+
+            <div class="d-flex justify-content-center">
+                <button onclick="getDetail()" class="btn btn-secondary btn-lg mt-5">Log In</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Display -->
+    <div id="outputContainer" class="container">
+        <div class="h1 text-center p-3">Token</div>
+        <div id="dataDis" class="text-center h3"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="register.js"></script>
+</body>
+
+</html>
