@@ -14,7 +14,9 @@ function getData(data) {
     for (i = 0; i < out.length; i++) {
         out[i].total = out[i].science + out[i].maths + out[i].english
     }
-    // console.log(out)
+    $(".list").click(function (e) {
+        display(e.target.id, out)
+    })
     $(".test").click(function () {
         paging(out)
     })
@@ -32,6 +34,18 @@ function getData(data) {
     })
     $(".genderSelect").click(function () {
         filterGender(out)
+    })
+    $(".searchBtn").click(function () {
+        var stringIn = $(".search").val()
+        search(out, stringIn)
+    })
+    $(".searchBtnDomain").click(function () {
+        var stringIn = $(".searchDomain").val()
+        searchEmail(out, stringIn)
+    })
+    $(".searchBtnEmail").click(function () {
+        var stringIn = $(".searchEmail").val()
+        searchEmail(out, stringIn)
     })
     $(".dataHolder").empty()
     var table = document.createElement("table")
@@ -99,7 +113,8 @@ function sortingTotal(out) {
     }
 }
 function reversingTotal(out) {
-    out.reverse(function (a, b) {
+    // console.log(out)
+    out.sort(function (a, b) {
         return b.total - a.total
     })
     $(".dataHolder").empty()
@@ -157,94 +172,85 @@ function filterGender(out) {
         }
     }
 }
-function paging(data) {
-    // console.log(data)
-    $(".dataHolder").empty()
-    var count = Number($(".units").val())
-    // console.log(data.length)
-    var arra = []
-    var a = 0
-    var pages = data.length / count
-    for (i = 0; i < pages; i++) {
-        arra = data.slice(a, a + count)
-        a = a + count
-        if (pages == 2) {
-            $(".page0,.page1").show()
-            $(".page2, .page3, .page4, .page5, .page6, .page7, .page8, .page9").hide()
-        }
-        if (pages == 4) {
-            $(".page0,.page1 ,.page2, .page3").show()
-            $(".page4, .page5, .page6, .page7, .page8, .page9").hide()
-        }
-        if (pages == 1) {
-            $(".page0").show()
-            $(".page1 ,.page2, .page3, .page4, .page5, .page6, .page7, .page8, .page9").hide()
-        }
-        if (pages == 10) {
-            $(".page0,.page1 ,.page2, .page3, .page4, .page5, .page6, .page7, .page8, .page9").show()
-        }
-        var div = document.createElement("div")
-        div.setAttribute("id", "tablediv" + i)
-        div.setAttribute("class", "hidden")
-        var table = document.createElement("table")
-        table.setAttribute("class", "table table-striped")
-        // table.setAttribute("class", "tableNo" + i)
-        div.append(table)
-        $(".dataHolder").append(div)
-        var tr = document.createElement("tr")
-        tr.innerHTML = "<tr><td>ID no</td> <td> First Name</td> <td> Last Name</td> <td>Gender</td> <td> Email</td> <td>English</td> <td>Maths</td> <td> Science</td><td>Total</td></tr>"
-        table.append(tr)
-        for (j = 0; j < arra.length; j++) {
-            var tr = document.createElement("tr")
-            tr.innerHTML = `<tr><td>${arra[j].id}</td> <td> ${arra[j].first_name}</td> <td> ${arra[j].last_name}</td> <td> ${arra[j].gender}</td> <td> ${arra[j].email}</td> <td> ${arra[j].english}</td> <td> ${arra[j].maths}</td> <td> ${arra[j].science}</td><td>${arra[j].total}</td></tr>`
-            table.append(tr)
-        }
-        // console.log(arra)
-    }
-}
-
-// pagination hide and show divs 
-$(".page0").click(function () {
-    // $("#tablediv1").css("background","red")
-    $("#tablediv0").show()
-    $("#tablediv1, #tablediv2,#tablediv3,#tablediv4, #tablediv5,#tablediv6,#tablediv7, #tablediv8,#tablediv9").hide()
-})
-$(".page1").click(function () {
-    $("#tablediv1").show()
-    $("#tablediv0, #tablediv2,#tablediv3,#tablediv4, #tablediv5,#tablediv6,#tablediv7, #tablediv8,#tablediv9").hide()
-})
-$(".page2").click(function () {
-    $("#tablediv2").show()
-    $("#tablediv1, #tablediv0,#tablediv3,#tablediv4, #tablediv5,#tablediv6,#tablediv7, #tablediv8,#tablediv9").hide()
-})
-$(".page3").click(function () {
-    $("#tablediv3").show()
-    $("#tablediv1, #tablediv2,#tablediv0,#tablediv4, #tablediv5,#tablediv6,#tablediv7, #tablediv8,#tablediv9").hide()
-})
-$(".page4").click(function () {
-    $("#tablediv4").show()
-    $("#tablediv1, #tablediv2,#tablediv3,#tablediv0, #tablediv5,#tablediv6,#tablediv7, #tablediv8,#tablediv9").hide()
-})
-$(".page5").click(function () {
-    $("#tablediv5").show()
-    $("#tablediv1, #tablediv2,#tablediv3,#tablediv4, #tablediv0,#tablediv6,#tablediv7, #tablediv8,#tablediv9").hide()
-})
-$(".page6").click(function () {
-    $("#tablediv6").show()
-    $("#tablediv1, #tablediv2,#tablediv3,#tablediv4, #tablediv5,#tablediv0,#tablediv7, #tablediv8,#tablediv9").hide()
-})
-$(".page7").click(function () {
-    $("#tablediv7").show()
-    $("#tablediv1, #tablediv2,#tablediv3,#tablediv4, #tablediv5,#tablediv6,#tablediv0, #tablediv8,#tablediv9").hide()
-})
-$(".page8").click(function () {
-    $("#tablediv8").show()
-    $("#tablediv1, #tablediv2,#tablediv3,#tablediv4, #tablediv5,#tablediv6,#tablediv7, #tablediv0,#tablediv9").hide()
-})
-$(".page9").click(function () {
-    $("#tablediv9").show()
-    $("#tablediv1, #tablediv2,#tablediv3,#tablediv4, #tablediv5,#tablediv6,#tablediv7, #tablediv8,#tablediv0").hide()
-})
 function hidder() {
     $(".dataHolder > div").hide()
+}
+function getvalue(id, data) {
+    // console.log(data,id)
+}
+function paging(data) {
+    $(".pagination").empty()
+    $(".dataHolder").empty()
+    var units = $(".units").val()
+    var pages = data.length / units
+    for (i = 1; i <= pages; i++) {
+        var li = document.createElement("li")
+        li.innerHTML = i
+        li.setAttribute("class", "page-link list")
+        li.setAttribute("id", i)
+        li.setAttribute("onClick", "getvalue(this.id,data`)")
+        $(".pagination").append(li)
+
+    }
+
+}
+function display(id, out) {
+    $(".dataHolder").empty()
+    // console.log(id, out)
+    var units = Number($(".units").val())
+    var a = (id * units) - units
+    var b = a + units
+    console.log(a, b)
+    $(".dataHolder").empty()
+    var table = document.createElement("table")
+    table.setAttribute("class", "table table-striped")
+    var tr = document.createElement("tr")
+    tr.innerHTML = "<tr><td>ID no</td> <td> First Name</td> <td> Last Name</td> <td>Gender</td> <td> Email</td> <td>English</td> <td>Maths</td> <td> Science</td><td>Total</td></tr>"
+    table.append(tr)
+    $(".dataHolder").append(table)
+    for (i = a; i < b; i++) {
+        var tr = document.createElement("tr")
+        tr.innerHTML = `<tr><td>${out[i].id}</td> <td> ${out[i].first_name}</td> <td> ${out[i].last_name}</td> <td> ${out[i].gender}</td> <td> ${out[i].email}</td> <td> ${out[i].english}</td> <td> ${out[i].maths}</td> <td> ${out[i].science}</td><td>${out[i].total}</td></tr>`
+        table.append(tr)
+    }
+}
+function search(out, stringIn) {
+    $(".dataHolder").empty()
+    // console.log(out)
+    // var stringIn = $(".search").val()
+    // console.log(stringIn)
+    var table = document.createElement("table")
+    table.setAttribute("class", "table table-striped")
+    var tr = document.createElement("tr")
+    tr.innerHTML = "<tr><td>ID no</td> <td> First Name</td> <td> Last Name</td> <td>Gender</td> <td> Email</td> <td>English</td> <td>Maths</td> <td> Science</td><td>Total</td></tr>"
+    table.append(tr)
+    $(".dataHolder").append(table)
+    for (i = 0; i < out.length; i++) {
+        if (out[i].first_name.includes(stringIn)) {
+            console.log(out[i])
+            var tr = document.createElement("tr")
+            tr.innerHTML = `<tr><td>${out[i].id}</td> <td> ${out[i].first_name}</td> <td> ${out[i].last_name}</td> <td> ${out[i].gender}</td> <td> ${out[i].email}</td> <td> ${out[i].english}</td> <td> ${out[i].maths}</td> <td> ${out[i].science}</td><td>${out[i].total}</td></tr>`
+            table.append(tr)
+        }
+    }
+}
+function searchEmail(out, stringIn) {
+    $(".dataHolder").empty()
+    // console.log(out)
+    // var stringIn = $(".search").val()
+    // console.log(stringIn)
+    var table = document.createElement("table")
+    table.setAttribute("class", "table table-striped")
+    var tr = document.createElement("tr")
+    tr.innerHTML = "<tr><td>ID no</td> <td> First Name</td> <td> Last Name</td> <td>Gender</td> <td> Email</td> <td>English</td> <td>Maths</td> <td> Science</td><td>Total</td></tr>"
+    table.append(tr)
+    $(".dataHolder").append(table)
+    for (i = 0; i < out.length; i++) {
+        if (out[i].email.includes(stringIn)) {
+            // console.log(out[i])
+            var tr = document.createElement("tr")
+            tr.innerHTML = `<tr><td>${out[i].id}</td> <td> ${out[i].first_name}</td> <td> ${out[i].last_name}</td> <td> ${out[i].gender}</td> <td> ${out[i].email}</td> <td> ${out[i].english}</td> <td> ${out[i].maths}</td> <td> ${out[i].science}</td><td>${out[i].total}</td></tr>`
+            table.append(tr)
+        }
+    }
 }
