@@ -7,6 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .hover{
+            cursor: pointer;
+        }
+        .current{
+            background: rgb(101, 101, 230);
+            color: white;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,34 +30,45 @@
             </select>
         </div>
         <div class="border mt-5 col-8">
-            <nav aria-label="...">
-                <ul class="pagination">
-
-                </ul>
-            </nav>
+            <div class="d-flex">
+                <nav aria-label="...">
+                        <ul class="pagination">
+        
+                        </ul>
+                </nav>
+                <div class="ml-5">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Search By:</span>
+                            <select name="search" class="dropdown" id="search">
+                                <option value="Name" selected>Name</option>
+                                <option value="Email">Email</option>
+                                <option value="Domain">Domain</option>
+                            </select>
+                        </div>
+                        <input type="text" id="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary" id="check" type="button">check</button>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary" id="reset" type="button">reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">id</th>
-                        <th scope="col">first_name
-                            <select name="firstName" id="order">
-                                <option value="asc">asc</option>
-                                <option value="desc">desc</option>
-                            </select>
-                        </th>
-                        <th scope="col">last_name</th>
-                        <th scope="col">email</th>
-                        <th scope="col">gender
-                            <select name="gender" id="gender">
-                                <option value="male">male</option>
-                                <option value="female">female</option>
-                                <option value="all">all</option>
-                            </select>
-                        </th>
-                        <th scope="col">english</th>
-                        <th scope="col">maths</th>
-                        <th scope="col">science</th>
-                        <th scope="col">total</th>
+                        <th scope="col" class="hover" id="first-name" data-toggle="tooltip" data-placement="bottom" title="click to toggle firstname for asc or desc">First Name</th>
+                        <th scope="col" class="hover" id="last-name" data-toggle="tooltip" data-placement="bottom" title="click to toggle lastname for asc or desc">Last Name</th>
+                        <th scope="col" class="hover" id="email" data-toggle="tooltip" data-placement="bottom" title="click to toggle email for asc or desc">Email</th>
+                        <th scope="col" class="hover" id="gender" data-toggle="tooltip" data-placement="bottom" title="click to switch between genders i.e. Male,Female,All">Gender</th>
+                        <th scope="col" class="hover" id="eng" data-toggle="tooltip" data-placement="bottom" title="click to toggle subject for asc or desc">English</th>
+                        <th scope="col" class="hover" id="math" data-toggle="tooltip" data-placement="bottom" title="click to toggle subject for asc or desc">Maths</th>
+                        <th scope="col" class="hover" id="sci" data-toggle="tooltip" data-placement="bottom" title="click to toggle subject for asc or desc">Science</th>
+                        <th scope="col" class="hover" id="total" data-toggle="tooltip" data-placement="bottom" title="click to toggle total for asc or desc">Total</th>
                     </tr>
                 </thead>
                 <tbody id="tbody">
