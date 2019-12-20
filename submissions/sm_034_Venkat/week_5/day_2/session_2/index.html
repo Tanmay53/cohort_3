@@ -12,8 +12,9 @@
             width: 75%;
             margin: 0 12%;
         }
-        #table tr:nth-of-type(2n) {
-            background-color: rgb(247, 201, 247);
+
+        table tr:nth-of-type(2n+1) {
+            background-color: rgb(123, 229, 233);
         }
 
         table,
@@ -58,19 +59,23 @@
             event.preventDefault();
             var fs = document.getElementById('fSize').value;
             var a = Number(fs);
-            document.getElementById("table").style.fontSize= a;
+            document.getElementById("table").style.fontSize = a;
         }
 
         function fColor() {
             event.preventDefault();
             var c = document.getElementById('Color').value;
-            document.getElementById('table').style.color= c;
+            document.getElementById('table').style.color = c;
         }
 
-        function bgColor() {
-            event.preventDefault();
+        function changeColor() {
             var bgc = document.getElementById('bg').value;
-            document.getElementById('table').style.backgroundColor= bgc;
+            var rows = document.querySelectorAll('tr');
+            for (i = 0; i < rows.length; i++) {
+                if (i % 2 == 0) {
+                    rows[i].style.backgroundColor = bgc;
+                }
+            }
         }
     </script>
 </head>
@@ -110,25 +115,25 @@
     </div>
     <!-- SETTINGS -->
     <div>
-        <form action="">
-            <fieldset>
-                <legend style="font-size: x-large;">Settings :</legend>
-                <div>
-                    <input type="text" size="3" id="fSize">
-                    <button onclick="changeSize()">Change Font Size</button>
-                </div>
-                <br>
-                <div>
-                    <input type="color" id="Color">
-                    <button onclick="fColor()">Change Font Color</button>
-                </div>
-                <br>
-                <div>
-                    <input type="color" id="bg">
-                    <button onclick="bgColor()">Change Background Color</button>
-                </div>
-            </fieldset>
-        </form>
+        <!-- <form> -->
+        <fieldset>
+            <legend style="font-size: x-large;">Settings :</legend>
+            <div>
+                <input type="text" size="3" id="fSize">
+                <button onclick="changeSize()">Change Font Size</button>
+            </div>
+            <br>
+            <div>
+                <input type="color" id="Color">
+                <button onclick="fColor()">Change Font Color</button>
+            </div>
+            <br>
+            <div>
+                <input type="color" id="bg">
+                <button onclick=changeColor()>Change Background Color</button>
+            </div>
+        </fieldset>
+        <!-- </form> -->
     </div>
 </body>
 
