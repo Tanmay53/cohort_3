@@ -1,76 +1,76 @@
-
-// function fib(N){
-//     if(N==2){
-//         return 1
-//     }
-//     else if(N==1){
-//         return 1
-//     }
-//     else if(N==0){
-//         return 0
-//     }
-//     else{
-//         result=fib(N-1)+fib(N-2)
-//         return result
-//     }
-// }
-
-// console.log(fib(3))
-
-
-
-var a=[39,27,11,4,24,32,32,1]
-
-// function sumAll(arr,i,result){
-    
-//     if(i<=0){
-//       result.push(-1)
-//         return result
-//     }
-//     if(arr[i]>arr[i+1]){
-//         result.push(arr[i-1])
-//     }
-//     else{
-//         result.push(-1)
-//     }
-//     //arr[i]=arr[i]*arr[i]
-//        return sumAll(arr,i-1,result)
-
-
-// }
-// var b = []
-// sumAll(a,7,b)
-// console.log(b)
-
-
-//var arr=[2,9,6,4]
-
-function mergeSort(org){
-    if (org.length == 1){
-    return org;
+$(document).ready(function(){
+var carList=[]
+class Car {
+    constructor(carMake = 'Invalid', model = 'Invalid', topspeed = 0) {
+        this.carMake = carMake;
+        this.model = model;
+        this.topSpeed = topspeed;
+        this.avgSpeed = 0;
+        this.dist = 0;
+        this.totalTime = 0;
+        this.trips = [];
     }
-    let mid = Math.floor(org.length/2),
-    left = org.slice(0,mid),
-    right = org.slice(mid);
-    
-    return merge(mergeSort(left),mergeSort(right));
+    trip(time = 1, distance = 0) {
+        let speed = 0;
+        if (distance == "") {
+            speed = this.topSpeed / 2;
+            distance = speed * time
+            this.dist += Number(distance);
+            this.totalTime += Number(time);
+        } else {
+            this.dist += Number(distance);
+            speed = distance / time;
+            this.totalTime += Number(time);
+        }
+        this.trips.push({
+            tripSpeed: speed,
+            tripDistance: Number(distance),
+            tripTime: time
+        });
     }
-    
-    function merge(left, right){
-    let l = 0,
-    r = 0,
-    result = [];
-   while(l < left.length && r < right.length){
-    if(left[l] > right[r]){
-    result.push(right[r]);
-    r++;
-    }else{
-    result.push(left[l]);
-    l++;
+    averageSpeed() {
+        let totalTime = 0;
+        let totalDist = 0;
+        this.trips.forEach(function (ele) {
+            totalTime += ele.tripTime
+            totalDist += ele.tripDistance
+        })
+        let avg = totalDist / totalTime;
+        this.avgSpeed = avg;
     }
+    presentStatus() {
+        let str=this.carMake+' '+this.model+' '+this.topSpeed+' KM/Hr'+' '+this.dist+' KM'+ ' Average spped in km/hr is: '+this.avgSpeed;
+        return str;
     }
-    return result.concat(left.slice(l),right.slice(r));
-    }
-    
-    var org = [2, 5, 1, 3, 7, 2, 3, 8, 6, 3];
-    console.log(mergeSort(org));
+}
+    $("#addCar").click(function () {
+        event.preventDefault()
+        var newcar = new Car($("#carMake").val(), $("#carModel").val(), $("#topSpeed").val())
+        carList.push(newcar)
+        $("#mySelect").append(`<option value = ${newcar.model}>${newcar.carMake}(${newcar.model})</option>`)
+        console.log(carList)
+    })
+    $("#addTrip").click(function () {
+        event.preventDefault()
+        carList.forEach(function (ele) {
+            if (ele.model == $("#mySelect").val()) {
+                ele.trip(Number($("#tripTime").val()), Number($("#tripDistance").val()))
+                ele.averageSpeed()
+            }
+        })
+    })
+    $("#show").click(function () {
+        carList.forEach(function (ele) {
+            if (ele.model == $("#mySelect").val()) {
+               let str = ele.presentStatus()
+               $("#status").append(str)
+            }
+        })
+  })
+})
+  
+
+
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise 3</title>
+
+</head>
+
+<body>
+    <input id="num1" type="number"></input>
+    <input id="num2" type="number"></input>
+    <button>Show Addition</button>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+    //Write your code below this line
+
+    function addition(sum) {
+        const element = (
+                <h2>Sum of above two numbers is = {sum} </h2>
+        );
+
+        ReactDOM.render(element, document.querySelector('#root'));
+    }
+
+    let sum=0;
+
+    document.querySelector('button').addEventListener('click', function(){
+        num1 = parseInt(document.getElementById('num1').value);
+        num2 = parseInt(document.getElementById('num2').value);
+        sum = num1+num2
+        addition(sum)
+    })
+    
+    </script>
+</body>
+
+</html>

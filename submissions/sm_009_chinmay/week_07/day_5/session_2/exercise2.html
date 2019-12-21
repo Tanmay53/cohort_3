@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2</title>
+
+</head>
+<body>
+    <div id = "root"></div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    //Write your code below this line
+    var arr = ["Eat", "Sleep", "Code", "Repeat"]
+
+    function myData(info){
+        return `
+                My name is ${info.name}.
+
+                I am ${info.age} years old.
+                
+                My date of birth is ${info.dob}.
+                
+                My fav color is ${info.favColor}.
+            `
+    };
+
+    var myInfo = {
+        name: "Chinmay",
+        age: "99",
+        dob: "26 Sept",
+        favColor: "White",
+    };
+     
+    const element = (
+        <div>
+            <h1>My Todo List</h1>
+            <ul>
+                <li>{arr[0]}</li>
+                <li>{arr[1]}</li>
+                <li>{arr[2]}</li>
+                <li>{arr[3]}</li>
+            </ul>
+            <p>
+                {myData(myInfo)}
+            </p>
+        </div>
+    );
+
+    // console.log(arr)
+    const root = document.getElementById('root');
+    
+    ReactDOM.render(
+        element, 
+        root
+    );
+
+    </script>
+</body>
+</html>
