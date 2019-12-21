@@ -1,0 +1,27 @@
+.content-item img {
+  height: 10rem;
+  border: 1px solid black;
+  padding: 3px;
+  box-shadow: 2px 0px 10px black;
+}
+li {
+  list-style-type: none;
+}
+ul h4 {
+  color: yellow;
+}
+ul h3 {
+  color: darkcyan;
+}
+.mens:hover,
+.womens:hover,
+.kids:hover,
+.technology:hover {
+  opacity: 0.8;
+}
+.parallex {
+  background-image: url("https://wallpaperhdzone.com/wp-content/uploads/2016/08/create-your-own-desktop-wallpaper-HD1-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
