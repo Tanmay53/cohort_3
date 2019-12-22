@@ -1,0 +1,30 @@
+[
+    {
+        "id": "001",
+        "name": "Connect iPad (7th Gen) 10.2' Case Kit",
+        "price": "$39.95",
+        "description": "Designed for iPad (7th Gen) 10.2' the Shell Case is slim, light weight, protective, and most importantly, your bridge into the Connect Series of iPad Mounts and Stands. This kit includes an iPad Connect Shell Case, Shoulder Strap and Universal Accessory Adapter. Allowing you to protect and mount your case, strap it to your person, and connect any peripheral securely to your case with the included adhesive adapter.",
+        "img": "https://cdn.shopify.com/s/files/1/0173/8828/products/SPCIPA102C_190917.150_3000x2000_19e05dda-93c6-4dd9-84b8-4bb83b2bcf02_2048x.png?v=1569910133"
+    },
+    {
+        "id": "002",
+        "name": "iPad Connect Pro Bumper + Glass Guard",
+        "price": "$74.9",
+        "description": "From skyscraping to skydiving, the protective iPad Pro Bumper is a rugged, silicone protective bumper designed to fit securely over your Proper iPad Connect Shell Case when you need added protection, while allowing complete functionality with our entire range of Proper iPad accessories. The Pro Bumper is simple to install, easy to grab, and protects the most vulnerable areas of your device, include the iPad's volume & sleep/wake buttons. Drop-proof, bump-proof, throw-proof, and thump-proof. We've worked relentlessly to develop a fully-protective iPad case, compatible with our complete iPad Connect series, as well as our entire Proper Business range.",
+        "img": "https://cdn.shopify.com/s/files/1/0173/8828/products/062A1411_EDIT_2048x.jpg?v=1537236540"
+    },
+    {
+        "id": "003",
+        "name": "iPad Connect Shell Case",
+        "price": 45,
+        "img": "https://cdn.shopify.com/s/files/1/0173/8828/products/Studio_Proper_Ipad17_91676_2048x.jpg?v=1532309843",
+        "description": "The Proper iPad Shell Case is slim, light weight, protective, and most importantly, your bridge into the Connect Series of iPad Mounts and Stands. Work or play; the Connect Series allows you to use your iPad like never before."
+    },
+    {
+        "id": "004",
+        "name": "iPad pivot stand",
+        "price": 59.95,
+        "img": "https://cdn.shopify.com/s/files/1/0173/8828/products/0000s_0000s_0000_Studio_Proper_Ipad17_91674_f85bc3f8-b840-40e9-a018-7a100260ce45_2048x.jpg?v=1532309914",
+        "description": "The iPad Pivot Stand is the ideal complement to any desktop environment. Mount your iPad by your side and use it as secondary screen, a media control centre, or a productive sidekick. Standing tall and handsome in the office, and blending in seamlessly at home."
+    }
+]

@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="redh1()">Change H1</button>
+        <button onclick="greenh3()">Change H3</button>
+        <button onclick="blueh5()">Change H5</button>
+        <button onclick="classGreen()">Change Green</button>
+        <button onclick="classRed()">Change Red</button>
+        <button onclick="classBlue()">Change Blue</button>
+        <script>
+            
+
+            function redh1(){
+                var h1tags=document.querySelectorAll('h1');
+                console.log(h1tags)
+                for (var i=0;i<h1tags.length;i++){
+                    h1tags[i].style.color="red";
+                }
+            }
+
+            function greenh3(){
+                var h3tags=document.querySelectorAll('h3');
+                for (var i=0;i<h3tags.length;i++){
+                    h3tags[i].style.color="green";
+                }
+            }
+
+            function blueh5(){
+                var h5tags=document.querySelectorAll('h5');
+                for (var i=0;i<h5tags.length;i++){
+                    h5tags[i].style.color="blue";
+                }
+            }
+
+            function classGreen(){
+                var green=document.querySelectorAll(".green");
+                console.log(green)
+                for (var i=0;i<green.length;i++){
+                    green[i].style.color="green";
+                }
+
+            }
+
+            function classRed(){
+                var red=document.querySelectorAll(".red");
+                for (var i=0;i<red.length;i++){
+                    red[i].style.color="red";
+                }
+            }
+
+            function classBlue(){
+                var blue=document.querySelectorAll(".blue");
+                for (var i=0;i<blue.length;i++){
+                    blue[i].style.color="blue";
+                }
+            }
+        </script>
+    </body>
+</html>
