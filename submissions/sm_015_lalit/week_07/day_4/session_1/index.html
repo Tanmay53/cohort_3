@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+<title>Car info</title>
+</head>
+<body>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-3 border shadow">
+            <div class="form-group">
+                <p class="text-center mt-2">Enter Car details</p>
+              <input type="text"
+                class="form-control my-1" name="" id="iCarMake" aria-describedby="helpId" placeholder="Car Make">
+                <input type="text"
+                class="form-control my-1" name="" id="iCarModel" aria-describedby="helpId" placeholder="Car Model">
+                <input type="number"
+                class="form-control my-1" name="" id="iTopSpeed" aria-describedby="helpId" placeholder="Top Speed">
+                <div class="row">
+                    <button type="button" class="btn btn-primary my-2 mx-auto col-6" id="firstSubmit">Submit</button>
+                </div>
+            </div>
+            <div class="col mt-5">
+                <div class="form-group">
+                    <p class="text-center mt-2">Enter Trip details</p>
+                      <select class="form-control" id="firstSelect">
+                        <option selected disabled >Select Car</option>
+                      </select>
+                      <!-- <input type="number"
+                      class="form-control my-1" name="" id="iTripRide" aria-describedby="helpId" placeholder="Ride"> -->
+                    <input type="number"
+                    class="form-control my-1" name="" id="iTripTime" aria-describedby="helpId" placeholder="Time">
+                    <input type="number"
+                    class="form-control my-1" name="" id="iTripSpeed" aria-describedby="helpId" placeholder="Distance">
+                    <div class="row">
+                        <button type="button" class="btn btn-primary my-2 mx-auto col-6" id="secondSubmit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col m-5">
+            <p>Select car for info :</p>
+            <select class="form-control"  id="secondSelect">
+                <option selected disabled >Select Car</option>
+              </select>
+              <table id="tableCarInfo" class="table my-5">
+                  <thead>
+                      <th>Car Make</th>
+                      <th>Car Model</th>
+                      <th>Top Speed</th>
+                      <th>Total Distance Travelled</th>
+                      <th>Total Average Speed</th>
+                  </thead>
+              </table>
+              <table id="tableTripInfo" class="table my-5 col-6 mx-auto">
+                <thead>
+                    <th>Trip No.</th>
+                    <th>Trip Distance</th>
+                </thead>
+            </table>
+        </div>
+    </div> 
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
