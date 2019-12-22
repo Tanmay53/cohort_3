@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DASH HTML</title>
+   
+</head>
+<body>
+    <button onclick="logout()">Logout</button>
+
+    <script>
+        function logout(){
+            location.assign("/home/rahul-b/repos/cohort_3/submissions/sm_002_abdul/week_05/day_3/session_1/index.html")
+        }
+        //here we fetch the stored value of user name from local storage and append it to body.
+        var userNameOutput=localStorage.getItem('userName');
+        var bodyelem=document.querySelector('body');
+        var h1=document.createElement('h1');
+        h1.innerHTML=userNameOutput;
+        bodyelem.appendChild(h1);
+
+        //fetching starttime of the session from local storage and appending it to body
+        var startTime=JSON.parse(localStorage.getItem('loginTime'));
+        var loginTimeP=document.createElement('p');
+        loginTimeP.textContent=startTime;
+        bodyelem.appendChild(loginTimeP);
+
+        //fetching endtime of the session from local storage and appending it to body
+        var endTime=JSON.parse(localStorage.getItem('endTime'));
+        var endTimeP=document.createElement('p');
+        endTimeP.textContent=endTime;
+        bodyelem.appendChild(endTimeP);
+        
+        if (!userNameOutput){
+            location.assign("/home/rahul-b/repos/cohort_3/submissions/sm_002_abdul/week_05/day_3/session_1/index.html");
+        }
+        var entireSessionTime=Date.parse(endTime)-Date.now();
+
+        setTimeout(function(){
+            location.assign("/home/rahul-b/repos/cohort_3/submissions/sm_002_abdul/week_05/day_3/session_1/index.html");
+        },entireSessionTime)
+        
+    </script>
+</body>
+</html>
