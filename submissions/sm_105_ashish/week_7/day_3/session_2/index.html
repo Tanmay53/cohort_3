@@ -4,7 +4,8 @@
     <style>
         .box{
             /* height:600px; */
-            background-color: aquamarine;
+            background-color:rgb(160, 199, 199);
+            color:white;
         }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -17,34 +18,58 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col">
-            <div class="dropdown">
-              <select class="btn btn-secondary" type="button" id="dr" aria-haspopup="true" aria-expanded="false">
+        <!-- //<div class="col"> -->
+          <label class="m-3 bg-grey"><b>Result per page:</b></label>
+          <div class="dropdown my-3 col-2">
+            <select class="btn btn-secondary" type="button" id="myselect" aria-haspopup="true" aria-expanded="false">
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <option class="dropdown-item" selected disabled> result per page</option>
+                <option class="dropdown-item" value="10">10</option>
+                <option class="dropdown-item" value="25">25</option>
+                <option class="dropdown-item" value="50">50</option>
+                <option class="dropdown-item" value="100">100</option>
+              </div>
+            </select>
+          </div>
+          <label class="my-3 bg-grey"><b>Select page no:</b></label>
+          <div class="dropdown my-3 col-1">
+              <select class="btn btn-secondary" type="button" id="myPageSelect" aria-haspopup="true" aria-expanded="false">
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <option class="dropdown-item" selected disabled> result per page</option>
-                  <option class="dropdown-item" value="10">10</option>
-                  <option class="dropdown-item" value="25">25</option>
-                  <option class="dropdown-item" value="50">50</option>
-                  <option class="dropdown-item" value="100">100</option>
                 </div>
               </select>
             </div>
-        </div>
+            <input class="my-3 bg-grey" type="text" id="searchInput" placeholder="Search your name"/>
+            <div class="dropdown m-3 col-1">  
+              </div>
+            <label class="my-3 bg-grey"><b>filter By:</b></label>
+              <div class="dropdown my-3 col-1">
+                <select class="btn btn-secondary" type="button" id="genderValue" aria-haspopup="true" aria-expanded="false">
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <option class="dropdown-item" value="all">All</option>
+                      <option class="dropdown-item" value="male">Male</option>
+                      <option class="dropdown-item" value="female">Female</option>
+                  </div>
+                </select>
+              </div>
       </div>
         <div class="row">
           <div class="col">
               <div class="box">
-                  <table class="table">
+                  <table class="table table-hover">
                       <thead>
                           <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Gender</th>
+                            <th scope="col">English</th>
+                            <th scope="col">Maths</th>
+                            <th scope="col">Science</th>
+                            <th scope="col">Total</th>
                           </tr>
                         </thead>
-                      <tbody id="table">
+                      <tbody id="tableData">
                       </tbody>
                       </table>
                 </div>

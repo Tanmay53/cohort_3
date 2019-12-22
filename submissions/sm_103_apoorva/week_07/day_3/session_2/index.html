@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W7D3 js16.2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid my-4 mx-3">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-center bg-secondary " style="width: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">Marks based Sort</h5>
+                                <select id="marksSort" class="form-control">
+                                  <option selected>Choose...</option>
+                                  <option value="lowToHigh">Low To High</option>
+                                  <option value="highToLow">High To Low</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center bg-secondary " style="width: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">ASC/DSC Sort</h5>
+                                <select id="userSort" class="form-control">
+                                  <option selected>Choose...</option>
+                                  <option value="asc">Ascending</option>
+                                  <option value="dsc">Descending</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-center bg-secondary " style="width: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">Select row/page</h5>
+                                <select id="pageControl" selected="all" class="form-control">
+                                    <option selected>Select row/page</option>
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center bg-secondary " style="width: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">Gender sort</h5>
+                                <select id="genderSort" class="form-control" >
+                                    <option selected value="">Gender sort</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="all">all</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <form class="form-inline">
+                    <div class="form-group mx-sm-3 mb-2">
+                      <label for="inputPassword2" class="sr-only"></label>
+                      <input type="text" class="form-control" id="search" placeholder="Search From table">
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary mb-2">Show Data</button>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <nav aria-label="Page navigation example" id="page" class="justify-content-center">
+                
+            </nav>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid my-4">
+        <table class="table">
+            <thead class="thead-dark font-weight-bold">
+                <tr>
+                    <th class="text-center" colspan="9">STUDENT'S DATA TABLE</th>
+                </tr>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">First_name</th>
+                    <th scope="col">Last_name</th>
+                    <th scope="col">email</th>
+                    <th scope="col">gender</th>
+                    <th scope="col">english</th>
+                    <th scope="col">maths</th>
+                    <th scope="col">science</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+            
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
