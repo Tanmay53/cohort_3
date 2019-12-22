@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        table,td{
+            border: 1px solid black;
+            padding: 2px;
+        }
+    </style>
+    <title>Admin Page</title>
+</head>
+<body>
+    <table id="usernamesTable">
+        <tr>
+            <td>User Name</td>
+            <td>Login Time</td>
+        </tr>
+    </table>
+
+    <script>
+        var bodyElem=document.querySelector('body');
+
+        var userNamesTable=document.querySelector('table');
+
+        var rowNew=document.createElement('tr');
+        var col1=document.createElement('td');
+        var col2=document.createElement('td');
+
+        var userDetails=JSON.parse(localStorage.getItem('userDetails'));
+        console.log(userDetails)
+
+        col1.textContent=userDetails[0];
+        col2.textContent=userDetails[1];
+
+        rowNew.appendChild(col1);
+        rowNew.appendChild(col2);
+
+        userNamesTable.appendChild(rowNew);
+    
+    </script>
+
+</body>
+</html>

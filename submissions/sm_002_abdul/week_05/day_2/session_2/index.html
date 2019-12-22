@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            #main-form{
+                display: table;
+            }
+            #main-form div{
+                display: table-row;
+            }
+            label, input{
+                display: table-cell;
+                margin: 10px;
+                padding: 10px;
+            }
+            label{
+                display: block;
+                padding-right: 10px;
+            }
+            #main-table{
+                border: 1px solid gray;
+                margin: 5px;
+                padding: 1px;
+            }
+            #main-table td{
+                border: 1px solid gray;
+                margin: 1px;
+                padding: 15px;
+            }
+            button{
+                margin: 10px;
+                padding: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+       <!-- FORM to add -->
+       <div id="form-block">
+            <form id="main-form">
+                <div>
+                    <label for="product">Product :</label>
+                    <input type="text" id="product" name="product">
+                </div>
+                <hr/>
+                <div>
+                    <label for="price">Price :</label>
+                    <input type="number" id="price" name="price" min="1">
+                </div>
+                <hr/>
+                <div>
+                    <label for="quantity">Quantity :</label>
+                    <input type="number" id="quantity" name="quantity" min="1">
+                </div>
+                <input name="submit" id="submit" type="submit" onclick="addItems()">
+                <hr/>
+            </form>
+       </div>   
+       <!-- TABLE -->
+       <div id="table-block">
+            <table id="main-table">
+                <tr>
+                    <td>product</td>
+                    <td>price</td>
+                    <td>quantity</td>
+                </tr>
+            </table>
+       </div>
+       <!-- SETTINGS -->
+       <div>
+           <form id="settings">
+               <div id="fontSizeBlock">
+                    <button onclick="changeFontSize()">Change Font Size</button>
+               </div>
+               <div id="fontColorBlock">
+                    <button onclick="changeFontColor()">Change Font Color</button>
+               </div>
+               <div id="bgColorBlock">
+                    <button onclick="changeBgColor()">Change background color of alternate row</button>
+               </div>
+           </form>
+       </div>
+
+       <script>
+           function addItems(){
+               event.preventDefault();
+               var formBlock=document.getElementById('form-block');
+               var mainForm=document.querySelector('#main-form');
+               var product=document.getElementById('product').value;
+               var price=document.getElementById('price').value;
+               var quantity=document.getElementById('quantity').value;
+
+               var mainTable=document.getElementById('main-table');
+
+               var newRow=document.createElement('tr');
+               
+
+               var productCol=document.createElement('td');
+               var priceCol=document.createElement('td');
+               var quantityCol=document.createElement('td');
+
+               productCol.innerHTML=product;
+               priceCol.innerHTML=price;
+               quantityCol.innerHTML=quantity;
+
+               newRow.appendChild(productCol);
+               newRow.appendChild(priceCol);
+               newRow.appendChild(quantityCol);
+
+               mainTable.appendChild(newRow);
+           }
+
+           function changeFontSize(){
+                event.preventDefault();
+                var bodyElem=document.querySelector('body');
+                var mainTable=document.getElementById('main-table');
+                var mainTableCol=mainTable.querySelectorAll('td');
+                
+                for (var i=0; i<mainTableCol.length;i++){
+                    mainTableCol[i].style.fontSize='30px';
+                }
+           }
+
+           function changeFontColor(){
+                event.preventDefault();
+                    var bodyElem=document.querySelector('body');
+                    var mainTable=document.getElementById('main-table');
+                    var mainTableCol=mainTable.querySelectorAll('td');
+                    
+                    for (var i=0; i<mainTableCol.length;i++){
+                        mainTableCol[i].style.color='teal';
+                    }
+           }
+
+            function changeBgColor(){
+                event.preventDefault();
+                    var bodyElem=document.querySelector('body');
+                    var mainTable=document.getElementById('main-table');
+                    var mainTableRow=mainTable.querySelectorAll('tr');
+                    
+                    for (var i=0; i<mainTableRow.length;i++){
+                        if (i%2===0){
+                            mainTableRow[i].style.backgroundColor='white';
+                            mainTableRow[i].style.color='black';
+                        }
+                        else{
+                            mainTableRow[i].style.backgroundColor='black';
+                            mainTableRow[i].style.color='white';
+                        }
+                    }
+            }
+
+
+
+
+       </script>
+    </body>
+</html>

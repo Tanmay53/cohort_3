@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <title>Practise Attributes</title>
+    <style type="text/css">
+        .class-h1 {
+            color: red
+        }
+
+        .class-h3 {
+            color: green;
+        }
+
+        .class-h5 {
+            color: orange;
+        }
+
+        .class-div {
+            color: yellow;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .class-p {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        #test-2 {
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div id="box">
+        <div>First DIV</div>
+        <div>Second DIV</div>
+        <div>Third DIV</div>
+    </div>
+    <div>Fourth DIV</div>
+    <div id="cont">
+        <p>First P</p>
+        <p>Second P</p>
+        <p>Third P</p>
+    </div>
+    <div id="temp">
+        <p>Test P1</p>
+        <p>Test P2</p>
+        <p>Test P3</p>
+    </div>
+    <hr />
+    <button onclick="chng_h1()">Change H1</button>
+    <button onclick="chng_h3()">Change H3</button>
+    <button onclick="chng_h5()">Change H5</button>
+    <button onclick="chng_div()">Change DIV</button>
+    <button onclick="chng_p()">Change P</button>
+    <button onclick="chng_id()">Set ID</button>
+    <script>
+        function chng_h1() {
+            var ref = document.querySelector('h1')
+            ref.setAttribute('class', 'class-h1')
+        }
+        function chng_h3() {
+            var ref = document.querySelectorAll('h3')
+            for (i = 0; i < ref.length; i++) {
+                var a = ref[i];
+                a.setAttribute('class', 'class-h3')
+            }
+        }
+        function chng_h5() {
+            var ref = document.querySelectorAll('h5')
+            for (i = 0; i < ref.length; i++) {
+                var a = ref[i];
+                a.setAttribute('class', 'class-h5')
+            }
+        }
+        function chng_div() {
+            var ref = document.getElementById("box")
+            var cng = ref.querySelectorAll('div')
+            for (i = 0; i < cng.length; i++) {
+                var a = cng[i];
+                a.setAttribute('class', 'class-div')
+            }
+        }
+        function chng_p() {
+            var ref = document.getElementById("cont")
+            var cng = ref.querySelectorAll('p')
+            for (i = 0; i < cng.length; i++) {
+                var a = cng[i];
+                a.setAttribute('class', 'class-p')
+            }
+        }
+        function chng_id() {
+            var ref = document.getElementById("temp")
+            var cng = ref.querySelectorAll('p')
+            var a = cng[1];
+            a.setAttribute('id', 'test-2')
+        } 
+    </script>
+</body>
+
+</html>

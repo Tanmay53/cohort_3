@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #mainForm{
+            margin: 25px;
+        }
+        #mainForm div{
+            padding: 25px;
+        }
+    </style>
+    <title>Login Page</title>
+</head>
+<body>
+    <form id="mainForm">
+        <div>
+            <label for="userName">User Name :</label>
+            <input type="text" id="userName" required> 
+        </div>
+        
+        <div>
+            <label for="password">Password :</label>
+            <input type="password" id="password" required>
+        </div>
+        
+        <div>
+            <input type="submit" id="button" value="Login" onclick="login()">
+        </div>
+        <!-- a simple form with username password and login button -->
+    </form>
+    <script>
+        function login(){
+            event.preventDefault();
+            var formName=document.getElementById("mainForm").value; //fetching form
+            var userName=document.getElementById("userName").value; //fetching username input value
+            var password=document.getElementById("password").value; //fetching password input value
+            
+            var loginStart=new Date(Date.now());
+            
+            
+            var inputArr=[]; 
+            inputArr.push(userName);
+            inputArr.push(loginStart);
+            localStorage.setItem('userDetails',JSON.stringify(inputArr));
+
+
+        }
+    </script>
+</body>
+</html>

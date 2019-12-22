@@ -1,0 +1,14 @@
+#nav{
+    background: #673AB7;
+}
+#logo{
+    max-height: 50px;
+    width: 180px;
+}
+#cont1{
+    height: 520px;
+    background-image: linear-gradient(120deg, #FFFFFF 50%, #FDC02B 50%);
+}
+.img1{
+    max-height: 250px;
+}
