@@ -1,0 +1,52 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  padding: 3rem;
+}
+
+.todoCard {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.pexels.com/photos/1250260/pexels-photo-1250260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+}
+.todoCard input {
+  padding: 0.7rem;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.todoCard button {
+  padding: 0.8rem;
+  margin-left: 0.5rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.task {
+  margin-top: 0.9rem;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 0.2rem 0rem;
+  border-radius: 3px;
+}
+.flex p {
+  font-size: 1.3rem;
+}
+
+.cp {
+  font-size: 1.4rem;
+  color: white;
+}
