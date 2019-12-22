@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>session2_part2</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var bdy=document.querySelector('body')
+        var container=document.createElement('div')
+        container.style.width="800px"
+        container.style.height="400px"
+        container.style.backgroundColor="cornflowerblue"
+        container.style.borderRadius="10px"
+        container.style.margin="10px"
+        bdy.appendChild(container)
+        var btn=document.createElement('button')
+        btn.textContent="SUBMIT"
+        btn.style.backgroundColor="brown"
+        btn.style.fontSize="25px";
+        btn.style.padding="25px"
+        btn.style.borderRadius="10px"
+        btn.style.marginLeft="630px"
+        btn.style.marginTop="290px"
+        container.appendChild(btn)
+        function mouse_in(){
+            btn.style.backgroundColor="green"
+        }
+        container.addEventListener('mouseenter',mouse_in)
+        function mouse_out(){
+            btn.style.backgroundColor="brown"
+        }
+        container.addEventListener('mouseleave',mouse_out)
+    </script>
+</body>
+</html>
