@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="rmH1()">Remove H1</button>
+        <button onclick="rmH3()">Remove H3</button>
+        <button onclick="rmH5()">Remove H5</button>
+        <button onclick="rmRed()">Remove Red</button>
+        <button onclick="rmDiv()">Remove DIVS</button>
+        <script>
+            function rmH1() {
+                var h1= document.getElementsByTagName("h1");
+                h1[0].remove();
+            }
+            function rmH3() {
+                var h3= document.getElementsByTagName("h3");
+                for(i= 0; i< h3.length; i++) {
+                    h3[i].remove();
+                }
+            }
+            function rmH5() {
+                var h5= document.getElementsByTagName("h5");
+                for(i= 0; i< h5.length; i++) {
+                    h5[i].remove();
+                }
+            }
+            function rmRed() {
+                var red= document.getElementById("cont").getElementsByClassName("red");
+                for(i= 0; i< red.length; i++) {
+                    red[i].remove();
+                }
+            }
+            function rmDiv() {
+                var divs= document.getElementById("cont").getElementsByTagName("div")
+                for(i= 0; i< divs.length; i++) {
+                    divs[i].remove();
+                }
+            }
+        </script>
+    </body>
+</html>

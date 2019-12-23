@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body class="bg-dark text-white">
+    <div class="container">
+        <div class="display-4 text-center">VEHICLE DETAIL</div>
+        <div class="row border border-primary">
+            <div class="form1 ml-5">
+                <label>Car-Make</label><br>
+                <input type="text" id="carmake" placeholder="Car make"><br>
+                <label>Model</label><br>
+                <input type="text" id="model" placeholder="model"><br>
+                <label>TopSpeed</label><br>
+                <input type="text" id="TopSpeed" placeholder="Top Speed"><br>
+                <label>Average Speed</label><br>
+                <input type="text" id="averagespeed" placeholder="Average Speed"><br>
+                <label>Distance</label><br>
+                <input type="text" id="distance" placeholder="Distance"><br><br>
+                <button class="bg-danger ml-5" onclick="submit()">Submit</button>
+            </div>
+            <div class="form2 ml-5">
+                <label>Time</label><br>
+                <input type="text" id="time" placeholder="Time"><br>
+                <label>Distance</label><br>
+                <input type="text" id="speed" placeholder="Time"><br><br>
+                <button class="bg-danger ml-5" onclick="tripSet()">Register</button>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center my-5">
+        <select id="allCars">
+            <option>Select Car</option>
+        </select>
+        <button class="bg-danger" onclick="done()">ALL CARS DETAILS</button>
+        <button class="bg-danger"onclick="presentStatus()">presentStatus</button>
+    </div>
+    <table class="table text-white"></table>
+</body>
+<script>
+    class Car {
+        constructor(carMake = "invalid", model = 0, top_speed = 0) {
+            this.carMake = carMake || "invalid";
+            this.model = model || 0;
+            this.top_speed = Number(top_speed || 0)
+            this.avgSpeed = Number((top_speed) / 2);
+            this.dist = 0
+            this.trips = []
+        }
+        trip(time = 1, distance = 0) {
+            this.avgSpeed = Math.floor((Number(this.avgSpeed) + Number(distance / time)) / 2);
+            this.dist += Number(distance)
+            this.trips.push({
+                time: time,
+                dist: distance,
+                tripAvgSpeed: distance / time
+            })
+            return this.trips
+        }
+        presentStatus() {
+            return [this.carMake, this.avgSpeed + "km/hr", this.dist]
+        }
+    }
+    var AOO = []
+    function submit() {
+        var name = new Car($("#carmake").val(), $("#model").val(), $("#TopSpeed").val())
+        AOO.push(name)
+        console.log(name)
+        var selector = $("#allCars").val();
+        var option1 = document.createElement('option');
+        option1.setAttribute("value", $("#model").val())
+        option1.setAttribute("id", $("#model").val())
+        option1.textContent = $("#carmake").val()
+        $("#allCars").append(option1)
+
+    }
+    function tripSet() {
+        event.preventDefault();
+        var selected = document.getElementById($("#allCars").val()).value;
+        for (var i = 0; i < AOO.length; i++) {
+            if (AOO[i]["model"] == selected) {
+                if (($("#time").val() != "") && ($("#speed").val() != "")) {
+                    AOO[i].trip($("#time").val(), $("#speed").val())
+                }
+                else {
+                    AOO[i].trip();
+                }
+            }
+        }
+    }
+    function presentStatus() {
+        var selected = document.getElementById($("#allCars").val()).value;
+        for (var i = 0; i < AOO.length; i++) {
+            if (AOO[i]["model"] == selected) {
+                var status=[]
+                // console.log(AOO[i].presentStatus())
+               status.push(AOO[i])
+               console.log(status)
+                createTable(status)
+            }
+        }
+    }
+
+    function done(){
+        createTable(AOO)
+    }
+    function createTable(test) {
+        var table1 = document.querySelector('table');
+        table1.innerHTML = "<tr><th>CarMake</th><th>Model</th><th>Top-Speed</th><th>Average-Speed</th><th>Total-Distance </th><th>CarMake</th></tr>"
+        for (var i = 0; i < test.length; i++) {
+            var tr1 = document.createElement('tr')
+            tr1.innerHTML = "<td>" + test[i]["carMake"] + "<td>" + test[i]["model"] + "<td>" + test[i]["top_speed"] + "<td>" + test[i]["avgSpeed"] + "<td>" + test[i]["dist"] + "<td>" + test[i]["trips"].length + "<td>"
+            table1.appendChild(tr1)
+        }
+    }
+</script>
+
+</html>

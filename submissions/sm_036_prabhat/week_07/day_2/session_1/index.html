@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Info</title>
+</head>
+<body>
+    <h1 class="text-center py-3">Create User Information</h1>
+    <hr>
+    <div class="row">
+        <div class="col-3 px-5">
+            <form action="">
+                <div class="form-group">
+                    <div class="text-center h2 py-3">Enter User Details</div>
+                    <label for="">First Name <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control mb-1" id="fname">
+                    <label for="">Last Name (Optional)</label>
+                    <input type="text" class="form-control mb-1" id="lname">
+                    <label for="">Username</label>
+                    <input type="text" class="form-control mb-1" id="username">
+                    <label for="">Password</label>
+                    <input type="text" class="form-control mb-1" id="password">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control mb-1" id="email">
+                    <label for="">Address (Optional)</label>
+                    <input type="text" class="form-control mb-1" id="address">
+                    <label for="">Phone no (Optional)</label>
+                    <input type="text" class="form-control mb-1" id="phone">
+                    <label for="">Select Type</label>
+                    <select name="" id="type" class="custom-select">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+            </form>
+            <div class="d-flex justify-content-center">
+                <button id="submit" type="button" class="btn btn-danger px-5">Submit</button>
+            </div>
+        </div>
+
+        <div id="optDiv" class="col-9 px-2 pt-2">
+            <div id="SortDiv">
+                <div class="text-center p-2 h2">User Table Data</div>
+                <table class="table table-dark">
+                    <thead class="thead-dark p-3">
+                        <tr class="p-5">
+                            <th>
+                                <label>Search User By Name</label>
+                                <select id="userOption" class="custom-select">
+                                    <option>Select</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label>Select user type</label>
+                                <select id="userType" class="custom-select">
+                                    <option value="all">All</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="user">User</option>
+                                </select>
+                            </th>
+                            <th>
+                                <label>Sort By</label>
+                                <select id="userSort" class="custom-select">
+                                    <option id="acc" value="ascending">Accending (A-Z)</option>
+                                    <option id="dec" value="descending">Decending (Z-A)</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+
+                <div id="message"></div>
+
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>User Type</th>
+                            <th>Delete</th>
+                        </tr>
+                        <tbody id="displayUser">
+
+                        </tbody>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
