@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>JSON</title>
+
+        <style>
+            #input{
+              
+                margin-left:500px;
+                margin-top:150px;
+                
+                width:350px;
+            } 
+         
+        
+        </style>
+
+    </head>
+    <body>
+        
+
+        <div id="input">
+        <hr>
+            <label for="username"> Username :</label>
+            <input type="text" name="username" id="uid">
+            
+          <hr>
+            <label for="password"> Password :</label>&nbsp
+            <input type="password" name="password" id="pwd">
+            <hr>
+            <button id = "redirect" onclick="dash()" style="margin-left:140px;width:120px;height:30px">LogIn</button>
+       </div>
+
+
+        <script>
+
+            function dash(){
+                var id=document.getElementById("uid").value
+                var pass=document.getElementById("pwd").value
+                if((id !="") && (pass != ""))
+                {
+                  location="http://127.0.0.1:5500/session_1/dash.html";
+                }
+            }
+
+            var uName=document.getElementById("uid").value
+            // var UPass=document.getElementById("pwd").value
+            var io= JSON.stringify(uName)
+            // var pd= JSON.stringify(uPass)
+            localStorage.setItem("username",io)
+            console.log(io)
+            // localStorage.setItem("password",pd)
+
+
+
+            </script>
+
+    </body>
+</html>

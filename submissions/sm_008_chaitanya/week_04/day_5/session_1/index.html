@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <!-- FSD.JS.10.1 !-->
+  <h1 id="h1_single">Change the buttons text color random value</h1>
+  <button id="btn1">Click here to change my color</button>
+
+  <!-- FSD.JS.10.1 !(Bonus Challenge)-->
+  <button id="bonus_1">Click me to change my color to an array value!</button>
+
+  <!-- FSD.JS.10.2 !-->
+  <h1 id="h1_double">My color should change when I double click the button!</h1>
+  <button id="btn2">Double Click here to change the color of the h1 tag !</button>
+
+  <!-- FSD.JS.10.3 !-->
+  <h1 id="h1_remove">The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="btn3">Click here to change my color!</button>
+  <script type="text/javascript">
+    //****************FSD.JS.10.1! **************//
+    var chng_single = document.getElementById("btn1")
+    function random(number) {
+      return Math.floor(Math.random() * number);
+    }
+    function switchColor_single() {
+      var a = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      chng_single.style.background = a;
+    }
+    chng_single.addEventListener('click', switchColor_single)
+
+    //****************FSD.JS.10.2! **************//
+    var chng_double = document.getElementById("btn2")
+    function switchColor_double() {
+      var a = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      var b = document.getElementById("h1_double")
+      b.style.color = a;
+    }
+    chng_double.addEventListener('dblclick', switchColor_double)
+
+    //****************FSD.JS.10.3! **************//
+    var chng_rem = document.getElementById("btn3")
+    var count = 0
+    function switchColor_rem() {
+      var a = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      chng_rem.style.background = a;
+      count++
+      if (count > 1) {
+        chng_rem.removeEventListener('click', switchColor_rem);
+      }
+    }
+    chng_rem.addEventListener('click', switchColor_rem)
+
+    //****************FSD.JS.10.1!(Bonus challenge) **************//
+
+    var chng_bonus = document.getElementById("bonus_1")
+    var arr = ["red", "green", "blue", "yellow", "pink", "grey", "silver"]
+    var i = 0
+    function switchColor_arr() {
+      chng_bonus.style.color = arr[i];
+      i++;
+    }
+    chng_bonus.addEventListener('click', switchColor_arr)
+
+    //****************FSD.JS.10.3! (Bonus Challenge)**************//
+    var chng_rem = document.getElementById("btn3")
+    function switch_text() {
+      chng_rem.style.fontSize = random(60) + 'px'
+    }
+    chng_rem.addEventListener('mouseover', switch_text)
+
+  </script>
+</body>
+
+</html>
