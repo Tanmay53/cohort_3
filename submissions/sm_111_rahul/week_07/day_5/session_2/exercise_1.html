@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+    <div id = "root"></div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    //Write your code below this line
+         const cont = (
+             <div>
+                <h1>My Todo List</h1>
+                <ul>
+                    <li>Cooking</li>
+                    <li>Cleaning</li>
+                    <li>Homework</li>
+                    <li>Playing cricket</li>
+                    <li>Studying</li>
+                </ul>
+                <p>Name - Rahul <br/> Age - 25 <br/> DOB - 30/07/1995<br/> Favourite Color - Red </p>
+            </div>
+            );
+        const root = document.getElementById('root');    
+            ReactDOM.render(cont, root);
+    </script>
+</body>
+</html>
