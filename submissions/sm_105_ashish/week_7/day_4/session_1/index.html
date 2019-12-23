@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    
+
+<div class="container">
+    <div class="row">
+        <div class="col-5 m-auto">
+            <div class="text-right">
+                <h1>Add New car Deatils</h1>
+            <form>
+                <label>
+                    Car Make :<input type="text" id ="carMake" placeholder="Enter your car make"/>
+                </label>
+                <label>
+                    Model :<input type="text" id ="carModel" placeholder="Enter your Model"/>
+                </label>
+                <label>
+                    Top Speed :<input type="text" id="topSpeed" placeholder="Enter Top speed of your car"/>
+                </label>
+                <button id="addCar">Add car</button>
+            </form>
+            <br>
+    </div>
+            </div>
+            <div class="col-2">
+            <label>
+                Select your car:
+                    <select id="mySelect">
+                    </select>
+            </label>
+        </div>
+    <!-- <div class="row"> -->
+        <div class="col-5">
+            <div class="text-right">
+                <h1>Add Trip Deatils</h1>
+                <form>
+                    <label>
+                       Enter trip time :<input type="text" id ="tripTime" placeholder="Enter time"/>
+                    </label>
+                    <label>
+                        Enter distance travelled :<input type="text" id ="tripDistance" placeholder="Enter Distance"/>
+                    </label>
+                    <button id="addTrip">Add trip</button>
+                </form>
+            </div>
+        </div>
+        <button id="show">Show present status</button>
+        <h1 class ="text-danger bg-grey" id ="status"></h1>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

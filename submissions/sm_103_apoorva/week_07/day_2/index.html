@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid my-2">
+        <div class="row">
+            <div class="col-5">
+                <div class="row">
+                    <div style="border: 2px solid blue;" class="mx-2">
+                        <h3 class="font-weight-bold text-center my-2">Fill the Form</h3>
+                        <form class="mx-3 my-2" >
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName">
+                              </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="userName">User Name</label>
+                                  <input type="text" class="form-control" id="userName">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="Password">Password</label>
+                                  <input type="password" class="form-control" id="password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="emailInput">Email</label>
+                              <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                              <label for="inputAddress">Address</label>
+                              <input type="text" class="form-control" id="inputAddress">
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="phoneNo">Phone No.</label>
+                                <input type="number" class="form-control" id="mobile">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="inputType">Input Type</label>
+                                <select id="inputType" class="form-control" >
+                                  <option selected value="">Choose...</option>
+                                  <option value="user">User</option>
+                                  <option value="admin">Admin</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                  Check me out
+                                </label>
+                              </div>
+                            </div>
+                            <button type="submit" id="add" class="btn btn-primary">Sign in</button>
+                        </form>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="card text-center " style="width: 36rem; height: 300px;">
+                        <div class="card-body">
+                          <h2 class="card-title font-weight-bold">Display</h2>
+                          <div id="display">
+
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="row px-2 ">
+                    <div class="col-4 my-3">
+                        <div class="card text-center bg-secondary" style="width: 10rem;">
+                            <div class="card-body">
+                                <h2 class="card-title font-weight-bold">Show</h2>
+                                <select id="showUser" class="form-control" >
+                                  <option selected>Choose...</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 my-3">
+                        <div class="card text-center bg-secondary " style="width: 10rem;">
+                            <div class="card-body">
+                                <h2 class="card-title font-weight-bold">Filter</h2>
+                                <select id="userFilter" selected="all" class="form-control" >
+                                  <option selected>Choose...</option>
+                                  <option value="all">All</option>
+                                  <option value="user">User</option>
+                                  <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4  my-3">
+                        <div class="card text-center bg-secondary " style="width: 10rem;">
+                            <div class="card-body">
+                                <h2 class="card-title font-weight-bold">Sort</h2>
+                                <select id="userSort" class="form-control">
+                                  <option selected>Choose...</option>
+                                  <option value="asc">Ascending</option>
+                                  <option value="dsc">Descending</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-2">
+                    <table class="table my-5 thead-light">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th class="font-weight-bold text-center" colspan="8">User/Admin Table</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">User Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Phone No.</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table" class="tbody-light">
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

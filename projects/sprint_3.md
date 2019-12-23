@@ -34,3 +34,4 @@
 =======
 | sm_029 | Sakshi Sinha | Meal DB            | [github](https://sakshisinha.github.io/masai-Sprint-3/)  
 >>>>>>> 2d0596aea288a7d37e94f5c6ed2168c97b83a9e9
+| sm_114 | Sudhir  | Cocktail DB     | [github](https://github.com/Sudhirsin/projects/tree/master/masai/sprint-3)                           |
