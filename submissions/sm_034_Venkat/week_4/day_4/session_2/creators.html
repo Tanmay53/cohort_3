@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Practise Creators</title>
+</head>
+
+<body>
+    <div id="headings"></div>
+    <div id="cont"></div>
+    <ol id="vikings">
+        <li>Priyanshu</li>
+    </ol>
+    <button onclick="h1()">Create H1</button>
+    <button onclick="h3()">Create 2 H3</button>
+    <button onclick= createDivs()>Create DIVS</button>
+    <button onclick= addStudents()>Add Students</button>
+    <button onclick=addCopyRight()>Add Copyright</button>
+
+    <script>
+        var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh',
+            'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
+        
+        function h1() {
+            var h11= document.createElement('h1');
+            var th1=document.createTextNode("MASAI");
+            h11.appendChild(th1);
+            document.getElementById("headings").appendChild(h11);
+        }
+
+        function h3() {
+            var h31= document.createElement('h3');
+            var th31=document.createTextNode("A Transformation in Education!");
+            h31.appendChild(th31);
+            document.getElementById("headings").appendChild(h31);
+
+            var h32= document.createElement('h3');
+            var th32=document.createTextNode("Learn to earn, pay when you get.");
+            h32.appendChild(th32);
+            document.getElementById("headings").appendChild(h32);
+        }
+
+        function createDivs() {
+            var Body= document.getElementById("cont");
+            for(var i= 0; i< 10; i++)
+                {
+                    var div1= document.createElement('div');
+                    div1.textContent= "content "+ i;
+                    Body.appendChild(div1)
+                }
+        }
+
+        function addStudents() {
+            var stuList= document.getElementById('vikings');
+            for(i= 0; i< students.length; i++)
+                {
+                    var stuNew= document.createElement('li');
+                    stuNew.textContent= students[i];
+                    stuList.appendChild(stuNew)
+                }
+        }
+
+        function addCopyRight() {
+            var copyR= document.createElement('p');
+            copyR.textContent= "@ Masai 2019";
+            var h1Top= document.getElementById('vikings');
+            h1Top.insertAdjacentElement("afterend", copyR)
+        }
+    </script>
+</body>
+
+</html>

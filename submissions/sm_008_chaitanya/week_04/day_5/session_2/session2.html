@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>session 2</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var bdy=document.querySelector('body')
+        function random(number){
+            return Math.floor(Math.random()*number);
+        }
+        function switchcolor(){
+            var a='rgb('+random(255)+','+random(255)+','+random(255)+')';
+            bdy.style.backgroundColor=a;
+        }
+        window.addEventListener('resize',switchcolor);
+    </script>
+</body>
+</html>
