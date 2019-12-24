@@ -1,7 +1,7 @@
 function indexesAre(a, val) {
     var a = [1, 1, 2, 2, 3, 3, 5, 6, 1, 2, 3, 4, 7];
     var val = val || 3;
-    var arr = a || [];
+    var arr = arr || [];
     var c= 0;
     for (i = 0; i < a.length; i++) {
         if (a[i] == val) {
