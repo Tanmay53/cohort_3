@@ -1,6 +1,7 @@
 import React from 'react';
 import Task from './task';
 import CompletedTask from './completed';
+import { Box, TextField } from '@material-ui/core';
 let newTaskItem = [];
 let globalCounter = 0;
 class Todo extends React.Component {
@@ -47,15 +48,15 @@ class Todo extends React.Component {
   };
   render() {
     return (
-      <div className='todoCard'>
-        <div className='addTask'>
-          <input
-            type='text'
-            placeholder='Add a to-do,,,'
-            id='add'
+      <Box className='todoCard'>
+        <Box className='addTask'>
+          <TextField
             value={this.state.inputValue}
             onChange={this.onInputChange}
-          />
+            id='outlined-basic'
+            label='Add a Task'
+            variant='outlined'
+          ></TextField>
           <button
             onClick={() => {
               this.onItemAdd(this.state.inputValue);
@@ -63,23 +64,23 @@ class Todo extends React.Component {
           >
             Add
           </button>
-        </div>
-        <div className='task'>
+        </Box>
+        <Box className='task'>
           {this.state.taskItem.map(task => {
             return (
               <Task key={globalCounter++} task={task} toggle={this.markTask} />
             );
           })}
-        </div>
+        </Box>
         <p className='cp' style={{ display: this.state.completedState }}>
           Completed Task
         </p>
-        <div className='completedTask'>
+        <Box className='completedTask'>
           {this.state.completedItem.map(task => {
             return <CompletedTask task={task} />;
           })}
-        </div>
-      </div>
+        </Box>
+      </Box>
     );
   }
 }
