@@ -5,7 +5,9 @@ import {
   decrementCounter,
   multiplyCounter,
   divideCounter,
-  remCounter
+  remCounter,
+  evenCounter,
+  oddCounter
 } from './action';
 import store from './store';
 class App extends React.Component {
@@ -65,6 +67,16 @@ class App extends React.Component {
             label='Reminder'
             varient='btn btn-primary mx-2'
             callBack={() => this.handleData(remCounter)}
+          />
+          <Button
+            label='Even Increment'
+            varient='btn btn-primary mx-2'
+            callBack={() => this.handleData(evenCounter)}
+          />
+          <Button
+            label='Odd Increment'
+            varient='btn btn-primary mx-2'
+            callBack={() => this.handleData(oddCounter)}
           />
         </div>
         <p className='display-1 lead'>{store.getState().count.toString()}</p>

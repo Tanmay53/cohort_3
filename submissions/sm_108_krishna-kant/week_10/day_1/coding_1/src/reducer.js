@@ -3,6 +3,8 @@ const DEC_COUNTER = 'DEC_COUNTER';
 const MUL_COUNTER = 'MUL_COUNTER';
 const DIV_COUNTER = 'DIV_COUNTER';
 const REM_COUNTER = 'REM_COUNTER';
+const INC_EVEN = 'INC_EVEN';
+const INC_ODD = 'INC_ODD';
 
 const initialState = {
   count: 0
@@ -29,6 +31,14 @@ const counter = (state = initialState, action) => {
     case REM_COUNTER:
       return {
         count: state.count % action.amount
+      };
+    case INC_EVEN:
+      return {
+        count: state.count + 2
+      };
+    case INC_ODD:
+      return {
+        count: state.count + 1
       };
     default:
       return state;
