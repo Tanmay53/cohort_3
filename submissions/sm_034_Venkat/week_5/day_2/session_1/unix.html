@@ -1,0 +1,201 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <style type="text/css">
+        #body {
+            background-color: rgba(188, 233, 98, 0.815);
+        }
+
+        #mainDiv {
+            width: 100%;
+            height: 100%;
+            padding: 1%;
+            float: left;
+        }
+
+        #linus {
+            background-color: burlywood;
+            height: 300px;
+            width: 38%;
+            margin-left: 28%;
+            text-align: center;
+        }
+
+        #linusImg {
+            height: 180px;
+            margin-top: 15px;
+            width: 36%;
+        }
+
+        h1 {
+            color: rgb(201, 61, 25);
+        }
+
+        #linusText {
+            font-size: 15px;
+        }
+
+        #khan {
+            width: 60%;
+            float: left;
+            margin-left: 20%;
+            padding: 20px;
+        }
+
+        #khanImg {
+            float: left;
+            height: 120px;
+            width: 90px;
+            padding-right: 20px;
+        }
+
+        h2 {
+            color: green;
+        }
+
+        #last {
+            width: 90%;
+            height: 90px;
+            background-color: darkorange;
+            margin-left: 4%;
+            clear: left;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 17px;
+            color: white;
+            margin: 10px;
+        }
+
+        #div1 {
+            width: 49%;
+            float: left;
+        }
+
+        #kenP {
+            margin: 10px;
+        }
+
+        #bar {
+            height: 70px;
+            width: 10px;
+            float: left;
+            background-color: black;
+            margin-top: 10px
+        }
+
+        #div2 {
+            width: 49%;
+            float: left;
+        }
+
+        #dennisH {
+            text-align: right;
+        }
+
+        #dennisP {
+            text-align: right;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="unixPage()">Create Page</button>
+    <script>
+        function unixPage() {
+            var Body = document.querySelector("body");
+            Body.setAttribute('id', 'body')
+            var bigDiv = document.createElement("div");
+            bigDiv.setAttribute('id', 'mainDiv');
+            Body.appendChild(bigDiv);
+
+            var divLinus = document.createElement("div");
+            divLinus.setAttribute('id', 'linus');
+            bigDiv.appendChild(divLinus);
+
+            var lImg = document.createElement("img");
+            lImg.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg');
+            lImg.setAttribute('alt', 'Linus.jpg');
+            lImg.setAttribute('id', 'linusImg');
+            divLinus.appendChild(lImg);
+
+            var H1 = document.createElement('h1');
+            var t = document.createTextNode('Linus Torvalds');
+            H1.appendChild(t);
+            divLinus.appendChild(H1);
+
+            var P = document.createElement('p');
+            P.setAttribute('id', 'linusText')
+            var t2 = document.createTextNode('The Creator of Linux & Git');
+            P.appendChild(t2);
+            divLinus.appendChild(P);
+
+            var Br = document.createElement('br');
+            bigDiv.appendChild(Br);
+
+            var divKhan = document.createElement('div');
+            divKhan.setAttribute('id', 'khan');
+            bigDiv.appendChild(divKhan);
+
+            var kImg = document.createElement('img');
+            kImg.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/khan.jpg');
+            kImg.setAttribute('alt', 'Sal Khan.jpg');
+            kImg.setAttribute('id', 'khanImg');
+            divKhan.appendChild(kImg);
+
+            var H2 = document.createElement('h2');
+            var t3 = document.createTextNode('Sal Khan');
+            H2.appendChild(t3);
+            divKhan.appendChild(H2);
+
+            var P2 = document.createElement('p');
+            var t4 = document.createTextNode('Salman Khan is the founder of the Khan Acadamey,Which has a mission of providing a free world class education for anyone,anywhere.');
+            P2.appendChild(t4);
+            divKhan.appendChild(P2);
+
+            var divLast = document.createElement('div');
+            divLast.setAttribute('id', 'last');
+            bigDiv.appendChild(divLast);
+
+            var Div1 = document.createElement('div');
+            Div1.setAttribute('id', 'div1');
+            divLast.appendChild(Div1);
+
+            var H3 = document.createElement('h3');
+            var t5 = document.createTextNode('Ken Thompson');
+            H3.appendChild(t5);
+            Div1.appendChild(H3);
+
+            var P3 = document.createElement('p');
+            P3.setAttribute('id', 'kenP')
+            var t6 = document.createTextNode('Designed and implemented the original Unix operating system');
+            P3.appendChild(t6);
+            Div1.appendChild(P3);
+
+            var Bar = document.createElement('div');
+            Bar.setAttribute('id', 'bar');
+            divLast.appendChild(Bar);
+
+            var Div2 = document.createElement('div');
+            Div2.setAttribute('id', 'div2');
+            divLast.appendChild(Div2);
+
+            var H32 = document.createElement('h3');
+            H32.setAttribute('id', 'dennisH');
+            var t7 = document.createTextNode('Dennis Ritchie');
+            H32.appendChild(t7);
+            Div2.appendChild(H32);
+
+            var P4 = document.createElement('p');
+            P4.setAttribute('id', 'dennisP');
+            var t8 = document.createTextNode('The Creator of C Programming Language');
+            P4.appendChild(t8);
+            Div2.appendChild(P4);
+        }
+    </script>
+</body>
+
+</html>
