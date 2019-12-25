@@ -4,7 +4,7 @@ import ButtonX from './components/Task2';
 import Card from './components/Task3'
 
 let cardInfo={
-  name:"Mrs.X",
+  name:"Ms.X",
   location:"BHIVE",
   description:"Lets code",
   skills:["js","python coding","node","ui","dj","design","testing"]

@@ -37,7 +37,7 @@ class Card extends React.Component{
                         <p className="text-white h5 mx-auto mt-2 text-muted">{this.props.location}</p>
                     </div>
                     <div className="row">
-                        <p className="text-white mx-auto mt-2 text-muted">{this.props.desciption}</p>
+                        <p className="text-white mx-auto mt-2 text-muted">{this.props.description}</p>
                     </div>
                     <div className="row mt-2">
                         <div className="mx-auto">
