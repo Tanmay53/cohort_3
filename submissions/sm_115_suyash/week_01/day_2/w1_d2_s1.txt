@@ -1,0 +1,225 @@
+    1  xrand -o normal
+    2  xrandr -o normal
+    3  sudo systemct1 stop iio-sensor-proxy-service
+    4  sudo systemctl stop iio-sensor-proxy-service
+    5  sudo apt-get remove iio-sensor-proxy
+    6  sudo apt-get update
+    7  sudo apt-get upgrade
+    8  sudo dpkg -i google-chrome-stable_current_amd64.deb
+    9  sudo dpkg -i code_1.39.1-1570750687_amd64.deb
+   10  alsamixer
+   11  apt install pulseaudio
+   12  sudo apt install pulseaudio
+   13  date
+   14  date -u
+   15  date -R
+   16  date -u -R
+   17  date -uR
+   18  cal
+   19  cal 1947
+   20  man cal
+   21  cal -j
+   22  df
+   23  man df
+   24  df -h
+   25  man
+   26  cd
+   27  cd suyash/
+   28  cd HTML/
+   29  cd Decendants/
+   30  cd suyash/
+   31  cd suyash/cpp
+   32  cd suyash/cpp/
+   33  cd /suyash/cpp/
+   34  ls
+   35  cd
+   36  ls
+   37  cd Desktop/
+   38  cd
+   39  cd Home/
+   40  cd
+   41  cd suyash/
+   42  cd ../suyash/
+   43  cd Desktop/suyash/
+   44  cd
+   45  cd Desktop/series
+   46  cd
+   47  cd home
+   48  cd
+   49  cd series/
+   50  Descendants\ of\ the\ Sun/
+   51  ../
+   52  cd ../
+   53  cd Pictures/
+   54  wget https://www.google.com/search?q=download+picture&sxsrf=ACYBGNQuvat9y90JgZd-lWeXR8Kg4iDdvA:1571728650845&source=lnms&tbm=isch&sa=X&ved=0ahUKEwix1qq_qa_lAhVv7nMBHSn8DBcQ_AUIEygC&biw=1305&bih=620#imgrc=p_28cmHCS-cwqM:
+   55  cd
+   56  free
+   57  man free
+   58  free -version
+   59  free -h
+   60  less
+   61  ls -l
+   62  ls -a
+   63  ls -t
+   64  ls -s
+   65  ls -S
+   66  ls -R
+   67  ls -
+   68  ls -F
+   69  ls /
+   70  cd
+   71  ls /
+   72  ls -u
+   73  ls /usr
+   74  cd
+   75  pwd
+   76  Desktop/suyash/
+   77  pwd
+   78  CMD -h
+   79  nan -MD
+   80  man -CMD
+   81  CMD -h
+   82  cmd -h
+   83  ls /usr
+   84  clear
+   85  wget version
+   86  wget --version
+   87  sudo apt-get install wget
+   88  dte -u
+   89  date -u
+   90  cal 2000
+   91  df -h -m g
+   92  df h
+   93  df -h
+   94  free -m
+   95  pwd
+   96  cd Desktop/dev-masai-day-1-cli/
+   97  pwd
+   98  ../
+   99  pwd
+  100  cd ../
+  101  mkdir practise
+  102  cd practise/
+  103  wget <https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv> 
+  104  wget <https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv>
+  105  wget https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv 
+  106  wget https://raw.githubusercontent.com/masai-school/assignments-data/master/data/lists/countries.csv
+  107  less
+  108  cd ..
+  109  cd practise/
+  110  less countries.csv
+  111  mkdir movies songs books epsilon
+  112  ls
+  113  cd movies/
+  114  mkdir hindi english french chinese
+  115  ls
+  116  cd ..
+  117  cd songs/
+  118  mkdir tamil kannadu urdu
+  119  ls
+  120  cd ..
+  121  cd books/
+  122  mkdir hindi english french chinese
+  123  ls
+  124  cd .//
+  125  cd..
+  126  cd ..
+  127  mkdir delta
+  128  ls
+  129  cs delta/
+  130  cd delta
+  131  cd gamma
+  132  mkdir gamma
+  133  cd gamma
+  134  mkdir beta
+  135  cd beta
+  136  mkdir alpha
+  137  cd alpha
+  138  cd
+  139  cd Desktop/
+  140  cd
+  141  cd Downloads/
+  142  course.zip unzip
+  143  unzip course.zip
+  144  cd course/
+  145  cd day_1
+  146  cd week_1
+  147  cd day_1
+  148  ls -a
+  149  cd ..
+  150  ls -a
+  151  ls -r
+  152  ls -a
+  153  ls -R
+  154  cd ..
+  155  cd all/
+  156  ls -s
+  157  cd ..
+  158  cd all/
+  159  cp overall.txt practise/
+  160  cp overall.txt ~/Desktop/practise/
+  161  cd ../
+  162  cd week-1
+  163  cd week_1/
+  164  cp ~/Desktop/practise/
+  165  cd  ..
+  166  cd week_1/
+  167  cp ~/Desktop/practise/
+  168  cd ..
+  169  ls
+  170  cp -r week_1 ../../Desktop/practise/
+  171  mkdir s1 s2
+  172  ls
+  173  cd all
+  174  cp s1.txt* -r s1
+  175  cp -r s1.txt* s1
+  176  ls
+  177  cp *s1.txt s1/
+  178  cp *s1.txt ../s1/
+  179  cd ../
+  180  cp -r s1/ s2/
+  181  cd all/
+  182  cd day_3
+  183  mkdir day_3
+  184  cp *d3 day_3/
+  185  mkdir d3
+  186  cd ..
+  187  cd all
+  188  cp *d3*.txt d3/
+  189  cp *d3*.txt day_3
+  190  mv w3_d3_s1.txt w2_d3_s1.txt
+  191  mv w3_d3_s2.txt w2_d2_s2.txt 
+  192  cd ..
+  193  cd week_2
+  194  mv -r day-4 day_4
+  195  mv day-4 day_4
+  196  cd ..
+  197  cd all
+  198  mkdir w1 w2
+  199  mv w1*.txt w1/
+  200  mv w2*.txt w2/
+  201  mkdir session_wise
+  202  mv s1/ session_wise
+  203  mv s1/ session_wise/
+  204  cd ..
+  205  mv s1/ all/session_wise/
+  206  mv s2/ all/session_wise/
+  207  cd all
+  208  rm overall.txt 
+  209  rm w3*
+  210  rm day_3/
+  211  cd
+  212  Desktop/practise/
+  213  ls
+  214  cd 
+  215  cd Desktop/practise/
+  216  rm week_1/
+  217  ls -a
+  218  rm week_1/
+  219  rm -r week_1/
+  220  cd
+  221  cd Downloads/course/
+  222  rm -r week_1 Week_2
+  223  rm -r week_2
+  224  cd ~
+  225  history > w1_d2_s1.txt
