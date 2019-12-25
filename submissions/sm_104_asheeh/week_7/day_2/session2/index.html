@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Registration Form</title>
+    <style>
+        /* .box {
+            height: 800px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 border border-dark box">
+                <div class="row">
+                    <div class="col-8">
+                        <p class="display-4">Registration Form</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="validationCustom01" class="font-weight-bold">First name</label>
+                                <input type="text" class="form-control" id="dataFname" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="validationCustom02" class="font-weight-bold">Last name</label>
+                                <input type="text" class="form-control" id="dataLname" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="validationCustom02" class="font-weight-bold">Username</label>
+                                <div class="input-group mb-2">
+                                  <div class="input-group-prepend">
+                                  </div>
+                                  <input type="text" class="form-control" id="dataUsername">
+                                </div>
+                              </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1" class="font-weight-bold">Email address</label>
+                                <input type="email" class="form-control" id="dataEmail"
+                                    aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1" class="font-weight-bold">Password</label>
+                                <input type="password" class="form-control" id="dataPassword">
+                            </div>
+                            <div class="form-group">
+                                    <label for="inputState" class="font-weight-bold">Type</label>
+                                    <select id="dataSelectType" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>user</option>
+                                        <option>admin</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                    <label for="inputAddress" class="font-weight-bold">Address</label>
+                                    <input type="text" class="form-control" id="dataAddress" placeholder="1234 Main St">
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="inputCountry" class="font-weight-bold">Country</label>
+                                <select id="dataCountry" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputState" class="font-weight-bold">State</label>
+                                <select id="dataState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputZip" class="font-weight-bold">Zip</label>
+                                <input type="text" id="dataZip" class="form-control" id="inputZip">
+                            </div> -->
+                            <!-- <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div> -->
+                            <button type="submit" class="btn btn-primary" id="btnSubmit">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+
+
+            <div class="col-6 border border-dark box">
+                <p id="displayDetails">
+                    <h1>Display Area </h1>
+                </p>
+                <div class="row" >
+                    <div class="col-4">
+                        <p class="text-center display-4 bg-primary text-white">Filter
+                            <select class="custom-select mr-sm-2 col-10" id="dataFilter">
+                                <option >Select</option>
+                                <option value="all">All</option>
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-center display-4 bg-primary text-white">Person
+                            <select class="custom-select mr-sm-2 col-10" id="dataSelectUser">
+                                <option >Select User</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="text-center display-4 bg-primary text-white">Sort
+                            <select class="custom-select mr-sm-2 col-10" id="dataSort">
+                                <option >Select</option>
+                                <option value="ascending">Ascending</option>
+                                <option value="descending">Descending</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+                <div class="row" id="displayArea">
+                    <div class="col-12 justify-content-center">
+                        <h1>print table here</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+        var obj = {
+            name : "Apoorva Krishna",
+            age : 25,
+            list : ["Cooking","Cleaning","Coding","Homework","Playing"],
+            color : "White",
+            DOB : "15/09/1997"
+        }
+        var listArr = obj.list
+        var li = listArr.map(function(ele){
+            return (<li>{ele}</li>)
+        })
+        var name = "Apoorva Krishna"
+        var age = 22
+        function  app(){
+           return (<div>
+                <h1>My Todo List</h1>
+                <ul>
+                    {li}
+                </ul>
+                <p>Name: {obj.name}.
+                    Age: {obj.age}yr.
+                    DOB: {obj.DOB}.
+                    Fav Color: {obj.color}.
+                </p>
+            </div>)
+        }
+
+        ReactDOM.render(app(), document.getElementById("root"))
+    
+    </script>
+</body>
+</html>
