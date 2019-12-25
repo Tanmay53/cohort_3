@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+      //Write your code below this line
+      function myToDo() {
+        var elem = (
+          <div>
+            <h1>My Todo List</h1>
+            <ul>
+              <li>My name is Suyash Mishra</li>
+              <li>My age is 19 years</li>
+              <li>My age is 02/july/2000</li>
+              <li>My favourite color is BLUE...</li>
+            </ul>
+          </div>
+        );
+        ReactDOM.render(elem, document.getElementById("root"));
+      }
+      myToDo();
+    </script>
+  </body>
+</html>
