@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <style>
+        .linus_h {
+            height: 270px;
+            width: 330px;
+            background: cyan;
+            margin: 10px 450px 10px 450px;
+        }
+
+        div>img {
+            height: 120px;
+            width: 85px;
+            margin: 15px 15px 15px 100px;
+        }
+
+        div>h1 {
+            color: blue;
+            margin-top: -5px;
+        }
+
+        div>h2 {
+            color: black;
+            margin-top: -10px;
+        }
+
+        .divider {
+            margin: 40px 150px 40px 150px;
+            float: left;
+        }
+
+        .sal_div {
+            width: 800px;
+            margin: 15px 20px 30px 20px;
+        }
+
+        .sal_div>h2 {
+            color: red;
+        }
+
+        .sal_div>p {
+            color: black
+        }
+
+        .last_box {
+            background: orangered;
+            padding: 20px;
+            clear: both;
+            height: 100px;
+            width: 1200px;
+            margin: 30px;
+        }
+
+        .last_box .ken {
+            border-right: 5px solid black;
+            float: left;
+            width: 600px;
+        }
+
+        .last_box~h2 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="create_page()">Create Page</button>
+    <script>
+        function create_page() {
+            // first div
+            var parent_body = document.querySelector("body")
+            var main_div = document.createElement("div")
+            parent_body.appendChild(main_div)
+            var first_div = document.createElement("div")
+            main_div.appendChild(first_div);
+            first_div.setAttribute('class', 'linus_h')
+            var first_div_1 = document.createElement("div")
+            first_div.appendChild(first_div_1)
+            var first_div_img = document.createElement("img")
+            first_div_1.appendChild(first_div_img)
+            first_div_img.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg');
+            var first_div_h1 = document.createElement("h1")
+            first_div_h1.textContent = "Linus Torvalds"
+            first_div.appendChild(first_div_h1)
+            first_div_h1.setAttribute('class', 'h1')
+            var first_div_h2 = document.createElement("h2");
+            first_div.appendChild(first_div_h2)
+            first_div_h2.textContent = "Creator of Linux & Git"
+            first_div_h2.setAttribute('class', 'h2')
+
+            //second Div
+
+            var second_div = document.createElement("div");
+            main_div.appendChild(second_div)
+            second_div.setAttribute('class','divider');
+            var second_div_1 = document.createElement("div")
+            second_div.appendChild(second_div_1)
+            second_div_1.setAttribute('style', 'float:left');
+            var sal_img = document.createElement("img");
+            second_div_1.appendChild(sal_img)
+            sal_img.setAttribute('src','https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg')
+
+            var second_div_2 = document.createElement("div")
+            second_div.appendChild(second_div_2);
+            second_div_2.setAttribute('class','sal_div')
+            var second_div_2_h2 = document.createElement("h2");
+            second_div_2.appendChild(second_div_2_h2)
+            second_div_2_h2.textContent = "Sal Khan"
+            var second_div_2_p = document.createElement("p")
+            second_div_2.appendChild(second_div_2_p)
+            second_div_2_p.textContent = "Salaman khan is the founder of the khan academy which has a mission providing a free world class education for anyone , anywhere"
+               
+            
+            //third div//
+            var third_div = document.createElement("div");
+            main_div.appendChild(third_div)
+            var third_div_1 = document.createElement("div");
+            third_div.appendChild(third_div_1);
+            third_div_1.setAttribute('class','last_box');
+            var third_div_1_1 = document.createElement("div")
+            third_div_1.appendChild(third_div_1_1)
+            third_div_1_1.setAttribute('class','ken');
+            var third_div_1_1_h2 = document.createElement("h2");
+            third_div_1_1.appendChild(third_div_1_1_h2);
+            third_div_1_1_h2.textContent = "Ken Thomson";
+            var third_div_1_1_p = document.createElement("p");
+            third_div_1_1.appendChild(third_div_1_1_p)
+            third_div_1_1_p.textContent = "Design and implemented the &nbsp; original Unix Operating System"
+            
+            var third_div_1_2 = document.createElement("div")
+            third_div_1.appendChild(third_div_1_2)
+            third_div_1_2.setAttribute('style', 'float:right');
+
+            var third_div_1_2_h2 = document.createElement("h2");
+            third_div_1_2.appendChild(third_div_1_2_h2)
+            third_div_1_2_h2.textContent = "Dennis Richie"
+            third_div_1_2_h2.setAttribute('style',"color: white;text-align: right;")
+            var third_div_1_2_p = document.createElement("p")
+            third_div_1_2.appendChild(third_div_1_2_p)
+            third_div_1_2_p.textContent = "The creator of the c Programming language"
+        }
+
+    </script>
+
+</body>
+
+
+</html>

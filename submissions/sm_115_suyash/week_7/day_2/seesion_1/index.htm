@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Form Page</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row pt-4">
+        <div class="col-lg-4 col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="inputEmail4">Email</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="inputPassword4">Password</label>
+              <input type="password" class="form-control" id="password" />
+            </div>
+            <div class="form-group">
+              <label for="lname">User Name</label>
+              <input type="text" class="form-control" id="user-name" />
+            </div>
+            <div class="form-group pb-1">
+              <label for="lname">Phone Number</label>
+              <input type="number" class="form-control" id="number" />
+            </div>
+            <div class="form-group">
+              <select
+                id="select-box"
+                class="py-2 w-100 bg-white border rounded"
+              >
+                <option value="">Select Type</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-dark btn-block" id="btn">
+                Sign in
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-8 col-md-6">
+          <div class="row">
+            <div class="col-12 text-center" id="output"></div>
+            <div class="col-1"></div>
+            <div class="col-8 text-center" id="tableOutput"></div>
+            <div class="col-3"></div>
+            <div class="col-1"></div>
+            <div class="col-8 text-center" id="tableOutput2"></div>
+          </div>
+          <div class="row"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Local script file -->
+    <script src="app.js"></script>
+  </body>
+</html>

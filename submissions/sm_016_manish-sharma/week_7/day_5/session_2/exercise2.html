@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+    <div id = "root"></div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    const root = document.getElementById('root')
+    var list= ['Playing','Cooking','cleaning','homework']
+    var person={
+        name:'Manish',
+        age:24,
+        color:'blue'
+    }
+    var element= <div>
+                    <h1>My Todo List</h1>
+                    <ul>
+                        <li>{list[0]}</li>
+                        <li>{list[1]}</li>
+                        <li>{list[2]}</li>
+                        <li>{list[3]} </li>
+                    </ul>
+                    <p>Name:{person.name},
+                    Age:{person.age},
+                    Favorite color:{person.color}</p>
+                 </div>
+    ReactDOM.render(element,root)             
+    </script>
+</body>
+</html>

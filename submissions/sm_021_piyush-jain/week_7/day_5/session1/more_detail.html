@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MORE_DETAILS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <button>GET DATA</button>
+    <table class="table"></table>
+    <script>
+        var a = localStorage.getItem('Detail1')
+        var realData = JSON.parse(a)
+        console.log(realData)
+        var value = "repos"
+        var baseUrl = realData
+        var button1 = document.querySelector('button')
+        button1.addEventListener('click', fetchApi)
+        var AOO = []
+        console.log(baseUrl + '/' + value)
+        function fetchApi() {
+            fetch(baseUrl + '/' + value)
+                .then(res => res.json())
+                .then(res => {
+                    AOO = JSON.stringify(res)
+                    createTable(AOO)
+                })
+                .then(res => createTable(res))
+
+               
+        }
+
+        function createTable(res){
+            res=JSON.parse(res)
+            var table1 = document.querySelector('table')
+            table1.innerHTML = "<tr><th>ID</th><th>NAME</th><th>CREATE_AT</th><th>ISSUES_COUNT</th></tr>"
+            for (var i = 0; i <res.length; i++) {
+                var tr2 = document.createElement('tr');
+                tr2.innerHTML = "<td>" + res[i]["id"] + "<td>" + res[i]["name"] + "<td>" + res[i]["created_at"] + "<td>" + res[i]["open_issues_count"]
+                table1.appendChild(tr2)
+            }
+        }
+    </script>
+</body>
+
+</html>
