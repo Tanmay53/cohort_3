@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        table,td{
+            border: 1px solid black;
+            padding: 2px;
+        }
+    </style>
+    <title>Admin Page</title>
+</head>
+<body>
+    <table id="usernamesTable">
+        <tr>
+            <td>User Name</td>
+            <td>Login Time</td>
+        </tr>
+    </table>
+
+    <script>
+        var userDetails=JSON.parse(localStorage.getItem('userDetails')); //parsing JSON string into an array
+
+        var bodyElem=document.querySelector('body'); //fetching body 
+
+        var userNamesTable=document.querySelector('table'); //fetching table inside the body
+
+        
+        for (var j=0;j<userDetails.length;j++){
+            var rowNew=document.createElement('tr'); //creating a new row
+            var col1=document.createElement('td'); //creating a new td
+            var col2=document.createElement('td'); //creating a new td
+                                                 //ITERATING THROUGH THE USERDETAILS ARRAY
+            col1.textContent=userDetails[j].userName; //ADDING THE VALUES OF IT TO TABLE COLUMNS
+            col2.textContent=userDetails[j].loginStart;
+            rowNew.appendChild(col1); //Appending the td(column) data back to table
+            rowNew.appendChild(col2);
+            userNamesTable.appendChild(rowNew); //appending TABLE ROW back to table
+        }
+
+    
+    </script>
+
+</body>
+</html>

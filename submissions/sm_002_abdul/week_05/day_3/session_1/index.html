@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #main-form{
+            margin: 25px;
+        }
+        #main-form div{
+            padding: 25px;
+        }
+    </style>
+    <title>Index.html</title>
+    
+</head>
+<body>
+    <form id="main-form">
+        <div>
+            <label for="userName">User Name :</label>
+            <input type="text" id="userName" required> 
+        </div>
+        
+        <div>
+            <label for="password">Password :</label>
+            <input type="password" id="password" required>
+        </div>
+        
+        <div>
+            <input type="submit" id="button" value="Login" onclick="login()">
+        </div>
+        <!-- a simple form with username password and login button -->
+    </form>
+    
+    <script>
+        function login(){
+            event.preventDefault();
+            var formName=document.getElementById("main-form").value; //fetching form
+            var userName=document.getElementById("userName").value; //fetching username input value
+            var password=document.getElementById("password").value; //fetching password input value
+            
+            var userDetails=[
+                {
+                    userName:'jabz',
+                    password:'masai', //predefined values to validate it with input ids and passwords
+                },
+                {
+                    userName:'sam',
+                    password:'supernatural',
+                },
+                {
+                    userName:'ross',
+                    password:'friends',
+                },
+                {
+                    userName:'oliver',
+                    password:'arrow',
+                },
+                {
+                    userName:'barry',
+                    password:'flash',
+                },
+                {
+                    userName:'harvey',
+                    password:'suits',
+                }
+            ]
+            
+            
+            for (var i=0;i<userDetails.length;i++){
+            //iterating through the array
+
+                //if it matches with the input username and password 
+                if (userDetails[i].userName===userName && userDetails[i].password===password){
+                    //we store username in local storage
+                    localStorage.setItem('userName',userName);
+                    //we store login time in local storage
+                    var start=new Date(Date.now());
+                    localStorage.setItem('loginTime',JSON.stringify(start));
+                    //we store session end in local storage
+                    var end=new Date(Date.now()+300000);
+                    localStorage.setItem('endTime',JSON.stringify(end));
+                    //redirecting to dash.html page
+                    location.assign("/home/rahul-b/repos/cohort_3/submissions/sm_002_abdul/week_05/day_3/session_1/dash.html");
+                    return;
+                }
+            }  
+            
+            //if it doesn't match we display the same thing
+            var body=document.querySelector('body');
+            var invalidP=document.createElement('p');
+            invalidP.textContent="Invalid user name or password";
+            body.appendChild(invalidP);
+        }
+    </script>
+</body>
+</html>
