@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W7D4JS-17.3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col border border-dark my-2 mx-2">
+                <h2>Car Details</h2>
+                <form class="mx-4">
+                    <div class="form-group">
+                      <label for="carBrand">Enter Car Brand</label>
+                      <input type="text" class="form-control" id="carBrand" placeholder="Brand">
+                    </div>
+                    <div class="form-group">
+                      <label for="carModel">Model</label>
+                      <input type="text" class="form-control" id="carModel" placeholder="Model">
+                    </div>
+                    <div class="form-group">
+                        <label for="topSpeed">Top Speed</label>
+                        <input type="text" class="form-control" id="topSpeed" placeholder="Enter Top Speed Of Car(km/hr)">
+                    </div>
+                    <button type="button" class="btn btn-outline-primary my-2" id="carDetails">Submit Details</button>
+                </form>  
+            </div>
+            <div class="col border border-dark mx-2 my-2">
+                <h2>Ride Details</h2>
+                <form class="mx-4">
+                    <div class="form-group">
+                      <label for="selectCar">Select Car</label>
+                      <select id="selectCar" class="form-group">
+                        <option selected>Choose</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="distance">Distance Travelled</label>
+                      <input type="text" class="form-control" id="distance" placeholder="Distance Travelled in km">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="text" class="form-control" id="time" placeholder="Enter time in hr">
+                    </div>
+                    <button type="button" class="btn btn-outline-primary my-4" id="rideDetails">Submit Details</button>
+                </form>  
+            </div>
+            <div class="col my-2 border border-danger mx-2">
+                <button type="button" class="btn btn-warning my-2" id="status">Show Status</button>
+                <div class="px-3 my-2 font-weight-bold text-white bg-dark" id="display">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -3,9 +3,6 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body {
-  padding: 3rem;
-}
 
 .todoCard {
   border: 1px solid rgba(0, 0, 0, 0.4);

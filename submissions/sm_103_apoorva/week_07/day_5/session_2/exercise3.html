@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="input1">First Input: </label>
+        <input id="input1" type="number" placeholder="Enter Number"/>
+        <label for="input2">Second Input: </label>
+        <input id="input2" type="number" placeholder="Enter Number"/>
+        <button onclick="sum()">Add</button>
+    </div>
+    <div id="root">
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+    // var add = parseInt(input1)+parseInt(input2)
+    // var add = 0
+    function  sum(){
+                var input1 =  document.getElementById("input1").value
+                var input2 =  document.getElementById("input2").value
+                console.log(input1,input2)
+                var add =  parseInt(input1)+parseInt(input2)
+                console.log(add)
+                var line = (<div>
+                        <h1>{add}</h1>
+                </div>)
+                ReactDOM.render(line, document.getElementById("root"))
+            }
+        
+    
+    </script>
+</body>
+</html>

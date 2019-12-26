@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Clock</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div>
+        <input type="text" placeholder="Enter First Number" id="val1">
+        <input type="text" placeholder="Enter Second Number" id="val2">
+        <button onclick="add()">Add</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </script>
+    <script type="text/babel">
+        function add(){
+            const sum = Number($("#val1").val()) + Number($("#val2").val())
+            const element =(
+                <div>
+                    <p>The Sum is {sum}</p>
+                </div>
+            )
+            const root = document.getElementById("root")
+    ReactDOM.render(element,root)
+        }
+        
+    </script>
+  </body>
+</html>
