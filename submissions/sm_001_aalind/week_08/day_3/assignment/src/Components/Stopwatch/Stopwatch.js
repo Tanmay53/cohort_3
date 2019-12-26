@@ -4,14 +4,15 @@ import "./stopwatch.css";
 class Stopwatch extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            totalMilliseconds: 0,
+        this.initialState = {
+            totalMilliseconds: 1,
             milliseconds: 0,
             seconds: 0,
             minutes: 0,
             hours: 0,
             stopwatchOn: false
         }
+        this.state = this.initialState
     }
 
     startStopHandler = () => {
@@ -27,7 +28,7 @@ class Stopwatch extends Component {
                 10
             );
         } else {
-            this.stopTimer()
+            this.componentWillUnmount()
         }
     }
 
@@ -36,26 +37,21 @@ class Stopwatch extends Component {
             return {
                 totalMilliseconds: prevState.totalMilliseconds + 1,
                 milliseconds: prevState.totalMilliseconds % 100,
-                // milliseconds: (prevState.milliseconds !== 99) ? prevState.milliseconds + 1 : 0,
-                // seconds: (prevState.milliseconds !== 99) ? prevState.seconds : (prevState.seconds === 4) ? 0 : prevState.seconds+1,
                 seconds: Math.floor((prevState.totalMilliseconds % 6000)/100),
                 minutes: Math.floor((prevState.totalMilliseconds % 360000)/6000),
-                // minutes: (prevState.seconds !== 4) ? prevState.minutes : (prevState.minutes === 4) ? 0 : prevState.minutes + 1
+                hours: Math.floor((prevState.totalMilliseconds % 8640000)/360000)
             }
         })
     }
 
-    stopTimer = () => clearInterval(this.startId);
+    componentWillUnmount() {
+        clearInterval(this.startId);
+    }
 
     resetHandler = () => {
-        this.stopTimer();
-        this.setState(prevState => {
-            return {
-                milliseconds: 0,
-                seconds: 0,
-                hours: 0,
-                stopwatchOn: false
-            }
+        this.componentWillUnmount();
+        this.setState(() => {
+            return this.initialState
         });
     }
 
