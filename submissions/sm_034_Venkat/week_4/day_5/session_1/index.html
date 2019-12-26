@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<!-- FSD.JS.10.1 !-->
+	<h1>Change the buttons text color random value</h1>
+	<button id="buttonOne">Click here to change my color</button>
+	<button id="buttonOneTwo">Click me to change my color to an array value!</button>
+
+	<!-- FSD.JS.10.2 !-->
+	<h1>My color should change when I double click the button!</h1>
+	<button id="buttonTwo">Double Click here to change the color of the h1 tag !</button>
+
+	<!-- FSD.JS.10.3 !-->
+	<h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+	<button id="buttonThree" onmouseover="changeTextSize()">Click here to change my bgcolor!</button>
+
+	<script>
+		var button1 = document.getElementById('buttonOne');
+		function random(num) {
+			return Math.floor(Math.random() * num);
+		}
+		function changeC() {
+			var randomC = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+			button1.style.color = randomC;
+		}
+		button1.addEventListener('click', changeC);
+
+		var c = 0;
+		// console.log(c);
+		var colors = ["red", "green", "blue", "black", "orange", "pink", "yellow"];
+		var button12 = document.getElementById("buttonOneTwo");
+		function button12fun() {
+			button12.style.backgroundColor = colors[c];
+			c++
+		}
+		button12.addEventListener('click', button12fun);
+
+
+		var h12 = document.getElementsByTagName("h1")[1];
+		// console.log(h12);
+		var button2 = document.getElementById("buttonTwo");
+		function dblClkChangeC() {
+			var randomC = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+			h12.style.color = randomC;
+		}
+		button2.addEventListener('dblclick', dblClkChangeC);
+
+
+		var button3 = document.getElementById('buttonThree');
+		var c = 0;
+		// console.log(c);
+		function twoBgColorsOnly() {
+			var randomC = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+			button3.style.backgroundColor = randomC;
+			c++;
+			if (c == 2) {
+				button3.removeEventListener('click', twoBgColorsOnly);
+			}
+		}
+		button3.addEventListener('click', twoBgColorsOnly);
+
+		function changeTextSize() {
+			var randomNum = random(50);
+			console.log(randomNum);
+			document.getElementById("buttonThree").style.fontSize = randomNum + 'px';
+		}
+	</script>
+</body>
+
+</html>

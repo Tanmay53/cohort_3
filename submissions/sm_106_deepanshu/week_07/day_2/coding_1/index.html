@@ -10,18 +10,23 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
     <title>Coding 1</title>
-    <style>
-      .teal {
-        background-color: #b2dfdb;
-      }
-    </style>
   </head>
   <body>
     <div class="container-fluid px-5">
       <div class="row">
         <div class="col-4 mt-5">
           <form action="">
+            <div class="form-group ">
+              <label for="">Name</label>
+              <input type="text" class="form-control" id="name" />
+            </div>
             <div class="form-group ">
               <label for="">Username</label>
               <input type="text" class="form-control" id="username" />
@@ -47,7 +52,7 @@
             </div>
           </form>
           <div class="display text-center">
-            <div class="details" id="details"></div>
+            <div class="details p-3 m-3" id="details"></div>
             <p class="lead" id="email"></p>
           </div>
         </div>
@@ -56,8 +61,44 @@
             <div class="col-4"></div>
           </div>
           <p class="lead text-center">Show User</p>
-          <select name="" id="showUser"> </select>
-          <table class="table"></table>
+          <div class="row">
+            <div class="col m-1 p-0">
+              <select class="custom-select" id="showUser">
+                <option value=""> User Details</option>
+              </select>
+            </div>
+            <div class="col m-1 p-0">
+              <select class="custom-select" id="sortByName">
+                <option value="name"> Sort By Name </option>
+                <option value="username"> Sort By Username </option>
+              </select>
+            </div>
+            <div class="col m-1 p-0">
+              <select class="custom-select" id="orderBy">
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+              </select>
+            </div>
+            <div class="col m-1 p-0">
+              <select class="custom-select" id="userType">
+                <option value="def-type">User Type</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+              </select>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Type</th>
+              </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -66,106 +107,6 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script>
-      var output = "";
-      var thead = "";
-
-      $(document).ready(function() {
-        thead = `<thead class="thead-dark">
-              <tr>
-                <th scope="col">Username</th>
-                <th scope="col">Email</th>
-                <th scope="col">Password</th>
-                <th scope="col">Type</th>
-              </tr>
-            </thead>`;
-        $(".table").html(thead);
-      });
-      var usersArr = [];
-
-      function User(username, email, password, type) {
-        (this.username = username || "Username"),
-          (this.email = email || "Email"),
-          (this.password = password || "Password"),
-          (this.type = type || "User Type");
-      }
-
-      function createUser() {
-        let username = $("#username").val();
-        let email = $("#emailInput").val();
-        let password = $("#pass").val();
-        let logtype = $("#selectType").val();
-
-        var data = new User(username, email, password, logtype);
-
-        usersArr.push(data);
-        console.log(usersArr);
-      }
-      var show = "";
-      $(".table").html(thead);
-      $("#submit").click("click", function(e) {
-        e.preventDefault();
-        createUser();
-        $("#showUser").empty();
-        usersArr.forEach(function(key) {
-          if (output == "") {
-            output += `
-            <tbody>
-
-              <tr class="teal">
-                <td scope="row">${key.username}</td>
-                <td>${key.email}</td>
-                <td>${key.password}</td>
-                <td>${key.type}</td>
-              </tr>
-            </tbody>`;
-          } else {
-            output = "";
-            output += `
-            <tbody>
-
-              <tr class="teal">
-                <td scope="row">${key.username}</td>
-                <td>${key.email}</td>
-                <td>${key.password}</td>
-                <td>${key.type}</td>
-              </tr>
-            </tbody>`;
-          }
-          $(".table").append(output);
-          show = `<option value="${key.username}">${key.username}</option>`;
-          $("#showUser").append(show);
-        });
-
-        $("#showUser").change(function() {
-          event.preventDefault();
-          var selectedValue = $(this)
-            .children("option:selected")
-            .val();
-
-          usersArr.forEach(function(elem) {
-            $("#details").empty();
-            if (elem.username == selectedValue) {
-              // console.log(elem.username);
-              $("#details").append(fillInfo(elem));
-            }
-          });
-        });
-      });
-      function fillInfo(user) {
-        return `<div>
-                    <div> Hello ${user.username}, welcome back </div>
-                    <div> Registered email is ${user.email}</div>
-                </div>`;
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
-
-<!-- 
-<tr class="bg-light">
-  <td scope="row">${key.username}</td>
-  <td>${key.email}</td>
-  <td>${key.password}</td>
-  <td>@${key.type}</td>
-</tr> -->
