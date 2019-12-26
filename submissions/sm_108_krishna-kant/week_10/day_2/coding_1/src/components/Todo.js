@@ -1,5 +1,10 @@
 import React from 'react';
-import { addTodo, fetchTodo, updateTodo } from '../actions/todoActions';
+import {
+  addTodo,
+  fetchTodo,
+  updateTodo,
+  deleteTodo
+} from '../actions/todoActions';
 import { connect } from 'react-redux';
 let globalCounter = 0;
 class Todo extends React.Component {
@@ -41,6 +46,19 @@ class Todo extends React.Component {
     this.forceUpdate();
   };
 
+  deleteItem = id => {
+    let target = {};
+    console.log(id);
+    this.props.completed.forEach(item => {
+      if (item.id == id) {
+        target = item;
+      }
+    });
+    console.log(target);
+    this.props.deleteTodo(target);
+    this.forceUpdate();
+  };
+
   render() {
     return (
       <div>
@@ -77,6 +95,16 @@ class Todo extends React.Component {
             {this.props.completed.map(item => (
               <li key={item.id}>
                 <strike>{item.task}</strike>
+                <span>
+                  <button
+                    style={{ margin: '0px 20px' }}
+                    onClick={() => {
+                      this.deleteItem(item.id);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </span>
               </li>
             ))}
           </ol>
@@ -93,6 +121,9 @@ const mapStatetoProps = state => {
   };
 };
 
-export default connect(mapStatetoProps, { addTodo, fetchTodo, updateTodo })(
-  Todo
-);
+export default connect(mapStatetoProps, {
+  addTodo,
+  fetchTodo,
+  updateTodo,
+  deleteTodo
+})(Todo);
