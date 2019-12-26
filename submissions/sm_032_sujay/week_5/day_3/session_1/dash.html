@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id = "h1">       
+        </h1>
+        <p id="p"></p>
+
+        <script>
+
+            
+             var op=localStorage.getItem("username")
+             var oName=JSON.parse(op)
+            
+            console.log(oName)
+        var ele= document.getElementById('h1')
+        ele.textContent=oName
+       
+
+            var time=document.getElementById("p")
+            time.textContent=Date()
+
+        </script>
+        
+    </body>
+</html>
