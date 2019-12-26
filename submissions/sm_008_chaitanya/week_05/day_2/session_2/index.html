@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index.html</title>
+    <style>
+        body{
+            background:rgb(142,248,236);
+        }
+        #form_bar {
+            margin-left: 300px;
+            margin-top: 20px;
+            font-size: 30px;
+        }
+
+        #form_bar input {
+            font-size: 20px;
+        }
+
+        #btn {
+            font-size: 20px;
+            background: black;
+            color: white;
+        }
+
+        #submit_bar {
+            margin-left: 540px;
+        }
+
+        #submit_bar button {
+            font-size: 20px;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+
+        #tab {
+            font-size: 30px;
+            margin-left: 450px;
+            margin-top: 50px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        #tab td {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        #font_size {
+            font-size: 40px;
+            margin-left: 450px;
+            margin-top: 50px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        #font_size td {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form_bar">
+        <form>
+            Product: <input type="text" id="prod" placeholder="Enter product Name">
+            Price: <input type="number" id="price" placeholder="Enter price of the Item">
+            Quantity: <input type="number" id="qunt" placeholder="Enter Quantity of Item">
+            <button id="btn" onclick="add_cont()">Add</button>
+        </form>
+    </div>
+
+    <div id="submit_bar">
+        <button id="btn1" onclick="chng_font()">Change Font size</button>
+        <button id="btn2" onclick="chng_color()">Change Font Color</button>
+        <button id="btn3" onclick="chng_bgd()">Change Background Color</button>
+    </div>
+
+    <div id="tab_bar">
+        <table id="tab" border="1">
+            <tr>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+        //************Main function to add content to table**********// 
+        function add_cont() {
+            event.preventDefault();
+            var tbl = document.getElementById('tab')
+            var row = document.createElement('tr')
+            tbl.appendChild(row)
+            var col_1 = document.createElement('td')
+            col_1.innerHTML = document.getElementById('prod').value
+            row.appendChild(col_1)
+            var col_2 = document.createElement('td')
+            col_2.innerHTML = document.getElementById('price').value
+            row.appendChild(col_2)
+            var col_3 = document.createElement('td')
+            col_3.innerHTML = document.getElementById('qunt').value
+            row.appendChild(col_3)
+        }
+
+        //*************Function to change font-size of the table content*********//
+        function chng_font() {
+            var tbl = document.getElementById("tab")
+            tbl.setAttribute('id', 'font_size')
+        }
+
+        //**********Function to change the font-color of the table content*********//
+        function chng_color() {
+            var tbl = document.getElementById("tab")
+            var all = document.querySelectorAll('tr')
+            for (i = 0; i < all.length; i++) {
+                var all_col = all[i]
+                all_col.style.color = "red"
+            }
+        }
+
+        //********Function to change the background of the table content*********//
+        function chng_bgd() {
+            var tbl = document.getElementById("tab")
+            var all = document.querySelectorAll('tr')
+            for (i = 0; i < all.length; i++) {
+                var all_col = all[i]
+                if (i % 2 == 0) {
+                    all_col.style.background = "black";
+                    all_col.style.color = "white";
+                }
+                else if (i % 2 != 0) {
+                    all_col.style.background = "pink";
+                    all_col.style.color = "navy";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

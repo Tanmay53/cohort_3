@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>W5D2S2</title>
+    <style>
+    body {
+    background-image: url("http://w4.wallls.com/uploads/original/201711/24/wallls.com_167141.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+input {
+    font-size: 25px;
+}
+
+.input_styl {
+    margin: 20px;
+    align-items: center;
+    font-size: 35px;
+    background-color: white;
+}
+
+#styl {
+    font-size: 35px;
+    margin: 3px;
+    color: rgb(41, 40, 38);
+    width: 10%;
+}
+
+#styli {
+    background-color: blanchedalmond;
+    color: black;
+    font-size: 30px;
+}
+
+.table_data {
+    border: 1px solid black;
+    font-size: 30px;
+    margin: 20px;
+}
+
+#space {
+    margin-right: 50px;
+}
+
+#tabl {
+    font-size: 30px;
+    margin-left: 300px;
+    margin-top: 50px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white; 
+}
+table, th, tr, td {
+    border: 1px solid;
+}
+
+button{
+    font-size: 25px;
+    background-color: black;
+    color: gray;
+
+}
+label{
+    font-size: 25px;   
+}
+
+h1 {
+    background-color: whitesmoke;
+    color: black;
+}
+
+table td {
+    padding: 15px;
+    padding-right: 100px;
+    ;
+}
+
+#total {
+    background-color: thistle;
+    font-size: 35px;
+}
+
+#font_size {
+    font-size: 40px;
+    margin-left: 300px;
+    margin-top: 50px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+}
+
+#color {
+    font-size: 30px;
+    margin-left: 300px;
+    margin-top: 50px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+    color: red;
+}
+
+#result {
+    background-color: white;
+    font-size: 50px;
+    color: black;
+}
+
+h1 {
+    background-color: black;
+    color: gray;
+    text-align: center;
+    font-size: 40px;
+}
+
+#grandTbl {
+    font-size: 30px;
+    background-color:black;
+    color:gray;
+}
+    
+    </style>
+    </head>
+    
+    <body>
+        <h1>
+            Lets Calculate:
+        </h1>
+        <div>
+            <form class="input_styl">
+                <label for="product">Products:</label>
+                <input type="text" id="product" placeholder="Enter Products" name="product">
+                <label for="price">Price:</label>
+                <input type="Number" id="price" placeholder="Enter Price" name="price">
+                <label for="quantity">Quantity:</label>
+                <input type="Number" id="quantity" placeholder="Enter quantity" name="quantity">
+                <button type="reset">Reset</button>
+            </form>
+
+        </div>
+        <button onclick="submit()">Submit</button>
+        <hr>
+        <h1>Settings:</h1>
+        <div>
+            <input type="text" id="fSiz" size="3">
+            <button onclick="change_font()">Change Font size</button>
+            <input type="color" id= "color1">
+            <button  onclick="change_color()">Change Font Color</button>
+            <input type="color" id ="color2">
+            <button onclick="change_background()">Change Background Color</button>
+        </div>
+        <hr>
+        <div id="tab_bar">
+            <table id="tabl">
+                <tr>
+                    <th>Products:</th>
+                    <th>Price:</th>
+                    <th>Quantity:</th>
+                    <th>Total:</th>
+                </tr>
+            </table>
+            <table id="grandTbl">
+                <tr>
+                    <th> Total price is</th>
+                    <th id="grandCol"></th>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <script src="script.js"></script>
+    </body>
+</html>
