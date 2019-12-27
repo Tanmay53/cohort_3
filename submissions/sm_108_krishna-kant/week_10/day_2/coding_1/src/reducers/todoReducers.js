@@ -19,10 +19,21 @@ export default (state = initialState, action) => {
         ...state
       };
     }
-    case FETCH_TODO:
+    case FETCH_TODO: {
       return {
         ...state
       };
+    }
+    case DELETE_TODO: {
+      state.completed.forEach((item, index, arr) => {
+        if (item.id == action.payload.id) {
+          arr.splice(index, 1);
+        }
+      });
+      return {
+        ...state
+      };
+    }
     case UPDATE_TODO: {
       state.completed.push(action.payload);
       state.items.forEach((item, index, arr) => {
@@ -34,6 +45,7 @@ export default (state = initialState, action) => {
         };
       });
     }
+
     default:
       return state;
   }
