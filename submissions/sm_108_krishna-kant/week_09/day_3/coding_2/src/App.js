@@ -23,7 +23,7 @@ function App() {
           <Sitename>
             <Navitem label='Github' />
           </Sitename>
-          <div className='d-flex p-2'>
+          <div className='p-2'>
             <Navitem label='About Us' />
             <Navitem label='Prices' />
             <Navitem label='Start Page' />

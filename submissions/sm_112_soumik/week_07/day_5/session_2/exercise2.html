@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Clock</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    </script>
+    <script type="text/babel">
+    const toDo=["eating","sleeping","gaming","biking"]
+   const list = toDo.map(ele=> <li>{ele}</li>)
+    const person ={
+        name:"Soumik",
+        age:21,
+        DOB:"8th Oct 1997",
+        fav_color:"Black"
+    }
+    function aboutMe(person){
+        return `My name is ${person.name}, I am ${person.age} years old , My Dob is ${person.DOB} and my favourite color is ${person.fav_color}.`
+    }
+     const element = (
+        <div>
+            <h1>My To Do list</h1>
+        <ul>{list}</ul>    
+        <p>
+            {aboutMe(person)}
+        </p>
+        </div>
+     )
+     var root = document.getElementById("root")
+     
+     ReactDOM.render(element,root)
+    </script>
+  </body>
+</html>
