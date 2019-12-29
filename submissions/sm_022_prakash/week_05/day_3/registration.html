@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width:device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+
+<head>
+    <title>Registration</title>
+</head>
+<body>
+
+    <form>
+        <label for="username">Chose your username: </label>
+        <input type="text" placeholder="username" id="username"> <br>
+        <label for="emailAddress">Enter your Email address:</label>
+        <input type="text" placeholder="email address" id="emailAddress"> <br>
+        <label for="password"> Enter Password</label>
+        <input type="password" id="password"> <br>
+        
+        <input type="radio" name="user_type" value="admin" id="user_admin" class="user_type">Admin <br>
+        <input type="radio" name="user_type" value="user" id="user_user" class="user_type">User <br>
+        <button type="button" onclick="registration()">Register</button>
+
+    </form>
+        <script type="text/javascript" src="script.js"></script>
+ </body>
+
+</html>
