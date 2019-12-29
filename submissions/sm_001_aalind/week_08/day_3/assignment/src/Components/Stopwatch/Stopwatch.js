@@ -15,6 +15,10 @@ class Stopwatch extends Component {
         this.state = this.initialState
     }
 
+    // componentDidMount() {
+        
+    // }
+
     startStopHandler = () => {
         this.setState(prevState => {
             return {stopwatchOn: !prevState.stopwatchOn}
