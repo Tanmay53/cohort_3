@@ -3,9 +3,11 @@ class Tasks extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            TaskDone:[]
+            TaskDone:[],
         }
+
     }
+   
     // handleTaskClick=(e)=>{
     //     let textC=e.target.textContent
     //     console.log(textC)
@@ -20,7 +22,7 @@ class Tasks extends React.Component {
     render() {
         return (
            <div className="row">
-             <p onClick={this.props.selectX} className="h3 mx-auto text-danger" style={{cursor:"pointer"}}>{this.props.taskName}</p>
+             <p onClick={this.props.selectX} className="h3 mx-auto" style={{cursor:"pointer",color:"red"}}>{this.props.taskName}</p>
            </div>
             
         )
