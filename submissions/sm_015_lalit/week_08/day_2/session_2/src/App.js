@@ -9,7 +9,8 @@ class App extends React.Component {
     super(props)
     this.state = {
       tasksToDo: [],
-      tasksDone: []
+      tasksDone: [],
+      toShow: false
     }
   }
 
@@ -18,11 +19,14 @@ class App extends React.Component {
     let Task = document.getElementById("inputTask").value
     console.log(Task)
     let totalTasks = this.state.tasksToDo
-    totalTasks.push(Task)
-    this.setState({
-      tasksToDo: totalTasks
-    })
+    if (Task.length >= 1) {
+      totalTasks.push(Task)
+      this.setState({
+        tasksToDo: totalTasks
+      })
+    }
     console.log(this.state.tasksToDo)
+    document.getElementById("inputTask").value = ""
   }
 
   handleTaskClick = (e) => {
@@ -32,27 +36,42 @@ class App extends React.Component {
     // }
     console.log(e.target.classList)
     e.target.classList.remove('h3');
-    e.target.classList.add('strikeit','text-secondary','h1');
+    e.target.classList.add('strikeit', 'text-secondary', 'h1');
     console.log(e.target.classList)
     console.log(textC)
- setTimeout(()=>{
-  let filteredTask=this.state.tasksToDo.filter(function(ele){
-    return ele!==textC
-  })
-  console.log(filteredTask)
-  let selectedData = this.state.tasksDone
-  selectedData.push(textC)
-  this.setState({
-    tasksToDo:filteredTask,
-    tasksDone: selectedData
-  })
-  console.log(this.state.tasksDone)
- },200)
+    setTimeout(() => {
+      let filteredTask = this.state.tasksToDo.filter(function (ele) {
+        return ele !== textC
+      })
+      console.log(filteredTask)
+      let selectedData = this.state.tasksDone
+      selectedData.push(textC)
+      this.setState({
+        tasksToDo: filteredTask,
+        tasksDone: selectedData
+      })
+      console.log(this.state.tasksDone)
+    }, 200)
+
   }
-   handleShowCompleted=()=>
-    {
-      return console.log(this.state.tasksDone)
-    }
+
+  handleDelete = (e) => {
+    let toDelete = e.target.previousSibling.textContent
+    let realTask = this.state.tasksToDo.filter(function (ele) {
+      return ele !== toDelete
+    })
+    this.setState({
+      tasksToDo: realTask
+    })
+
+  }
+
+  handleShowCompleted = () => {
+    console.log(this.state.tasksDone)
+    this.setState({
+      toShow: true
+    })
+  }
 
 
   render() {
@@ -70,16 +89,14 @@ class App extends React.Component {
           </div>
         </div>
         {this.state.tasksToDo.map((e) => {
-          return <Tasks selectX={this.handleTaskClick} key={uuid1()} taskName={e} />
+          return <Tasks selectX={this.handleTaskClick} selectD={this.handleDelete} key={uuid1()} taskName={e} />
         })}
         <div className="row">
-          {(this.state.tasksToDo.length >= 1)? <button onClick={this.handleShowCompleted} type="button" className="col-2 btn btn-outline-info mx-auto my-2">Show completed tasks</button> : <div className="container"><div className="row"><p className="mx-auto text-danger">Nothing todo</p></div></div>}
+          {(this.state.tasksToDo.length >= 1) ? <button onClick={this.handleShowCompleted} type="button" className="col-2 btn btn-outline-info mx-auto my-2">Show completed tasks</button> : <div className="container"><div className="row"><p className="mx-auto text-danger">Nothing todo</p></div></div>}
         </div>
-        {/* <CompletedTasks /> */}
-        {this.state.tasksDone.map((e) => {
+        {this.state.toShow ? this.state.tasksDone.map((e) => {
           return <CompletedTasks key={uuid1()} xtaskName={e} />
-        })}
-        
+        }) : <p></p>}
       </div>
     )
   }
