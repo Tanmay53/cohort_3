@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise 3</title>
+    <!-- bootstrap css cdn file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="text-center">
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button id="add" class="btn btn-lg btn-secondary">Add</button>
+    </div>
+
+    <div id="root" class="text-center"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+        //Write your code below this line
+
+
+
+        function App() {
+            console.log("hello");
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let elem = (
+                <h2>sum = {num1 + num2}</h2>
+            );
+
+            ReactDOM.render(elem, document.getElementById("root"));
+
+        }
+
+        var btn = document.getElementById("add");
+        btn.addEventListener("click", App);
+
+    </script>
+</body>
+
+</html>
