@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 3</title>
+</head>
+<body>
+    <label>Enter 1 st Number</label><input id="num1">
+    <br>
+    <label>Enter 2 nd Number</label><input id="num2">
+    <br>
+    <button>Add</button>
+
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+
+        function findSum(){
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            let sum = Number(num1)+Number(num2)
+
+            const sumOf =<h1>{`The Sum of ${num1} and ${num2} is  = ${sum}`}</h1>;
+            ReactDOM.render(sumOf, document.getElementById('root'))
+        }
+
+        var add = document.querySelector('button');
+        add.addEventListener('click',function(){
+            findSum();
+        })
+
+    </script>
+</body>
+</html>
