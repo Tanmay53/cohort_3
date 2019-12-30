@@ -23,7 +23,7 @@ $(document).ready(function () {
             }
             $(".inputEle").val("")
             userData.push(obj)
-            console.log(userData)
+            // console.log(userData)
             displayBio(obj)
             
         }  
@@ -31,52 +31,72 @@ $(document).ready(function () {
     // Displaying Bio of user in a box
     function displayBio(obj){
         $("#userInfo").val("")
-        if(obj.type == "user"){
-            $("#userInfo").removeClass("bg-dark")
-            $("#userInfo").addClass("bg-danger text-white")
+        if(obj.type == "user")   
             $("#userInfo").html(fillUserInfo(obj))
-        }
-        else {
-            $("#userInfo").removeClass("bg-danger")
-            $("#userInfo").addClass("bg-dark text-white")
+        else 
             $("#userInfo").html(fillAdminInfo(obj))
-        }
-
     }
+
     // Displaying normal User Bio
     function fillUserInfo(user){
+        $("#userInfo").removeClass("bg-dark")
+        $("#userInfo").addClass("bg-danger text-white")
         return `<div>
                     <div><h3> Hello ${user.firstName}, welcome back </h3></div>
                     <div><h3> Registered email is ${user.email}</h3></div>
                 </div>`
     }
+
     // Displaying Admin Bio
     function fillAdminInfo(user){
+        $("#userInfo").removeClass("bg-danger")
+        $("#userInfo").addClass("bg-dark text-white")
         return `<div>
                     <div><h3> Hello ${user.firstName}, welcome back </h3></div>
                     <div><h3> Registered email is ${user.email} </h3></div>
                 </div>`
     }
 
-    // Displaying the User Data in the table
-    $("#displayUsers").click(function(e){
-        e.preventDefault()
-        $("#userTable").empty()
-        for(var i = 0; i < userData.length; i++){
-            console.log(userData[i])
+    // Filter Table
+    function filterTable(){
+        if($("#selectedUserType").val() == "any"){
+            tableData = userData
+        }
+        else{
+            var tableData = userData.filter(function(obj){
+                return obj.type=== $("#selectedUserType").val()
+            })
+        }
+        console.log(tableData)
+        createTable(tableData)
+    }
 
-            var {type, firstName, lastName, email, address, phoneNo} = userData[i]
+    // Event Listener for sorting the table
+    $("#displayUsers").click(filterTable)
+
+    // Deleting the user
+    // $("#deleteUser").click(){
+    //     var 
+    // }
+
+    // Creating the table
+    function createTable(data){
+        $("#userTable").empty()
+        for(var i = 0; i < data.length; i++){
+            console.log(data[i])
+
+            var {type, firstName, lastName, email, username, phoneNo} = data[i]
             $("#userTable").append(`<tr>
                                         <td> ${type} </td>
                                         <td> ${firstName} </td>
                                         <td> ${lastName} </td>
                                         <td> ${email} </td>
-                                        <td> ${address} </td>
+                                        <td> ${username} </td>
                                         <td> ${phoneNo} </td>
+                                        <td> <button type="submit" id="deleteUser" class="btn btn-danger">Delete User</button> </td>
                                     </tr>`)
         }
-
-    })
+    }
 
 
 });

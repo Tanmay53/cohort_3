@@ -1,0 +1,7 @@
+body {
+    background: red;
+}
+.todoDiv {
+    font-size: 20px;
+    display: flex;
+}
