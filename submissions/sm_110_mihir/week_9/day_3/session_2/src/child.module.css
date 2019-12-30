@@ -1,0 +1,10 @@
+.cont {
+    display: flex;
+    width: 80%;
+    border: 1px solid black;
+}
+
+.cont > * {
+    flex: 1;
+    border: 1px solid gray;
+}

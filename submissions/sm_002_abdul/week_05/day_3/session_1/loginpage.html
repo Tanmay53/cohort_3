@@ -32,22 +32,27 @@
         <!-- a simple form with username password and login button -->
     </form>
     <script>
+        
+        var loginArr=[];
         function login(){
             event.preventDefault();
             var formName=document.getElementById("mainForm").value; //fetching form
             var userName=document.getElementById("userName").value; //fetching username input value
             var password=document.getElementById("password").value; //fetching password input value
             
-            var loginStart=new Date(Date.now());
-            
-            
-            var inputArr=[]; 
-            inputArr.push(userName);
-            inputArr.push(loginStart);
-            localStorage.setItem('userDetails',JSON.stringify(inputArr));
+            var loginStart=new Date(Date.now()); //fetching the current time to put as a login time
 
+            var obj={}; //creating a new object using object literals
+            obj.userName=userName;  // key--->userName value----> user name we got from input
+            obj.loginStart=loginStart; //key--->loginStart value----> value we got from date constructor
 
+            loginArr.push(obj);
+            localStorage.setItem('userDetails',JSON.stringify(loginArr));
+            console.log(loginArr);
         }
+
+        
+
     </script>
 </body>
 </html>
