@@ -1,0 +1,165 @@
+<!-- FSD.JS.11.1
+Complete the functionality in the file attributes.html
+
+On clicking the button Change H1 the first <h1> should have the class class-h1
+On clicking the button Change H3 all <h3> should have the class class-h3
+On clicking the button Change H5 all <h5> should have the class class-h5
+On clicking Change DIV all the div inside the div with id box should have the class class-div
+On clicking Change P all the p inside the div with the id cont should have the class class-p
+On clicking Set ID the second p inside div with the id temp should have the id test-2 -->
+
+
+<html>
+
+<head>
+    <title>Practise Attributes</title>
+    <style type="text/css">
+        .class-h1 {
+            color: red;
+        }
+
+        .class-h3 {
+            color: green;
+        }
+
+        .class-h5 {
+            color: orange;
+        }
+
+        .class-div {
+            color: yellow;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .class-p {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        #test-2 {
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div id="box">
+        <div>First DIV</div>
+        <div>Second DIV</div>
+        <div>Third DIV</div>
+    </div>
+    <div>Fourth DIV</div>
+    <div id="cont">
+        <p>First P</p>
+        <p>Second P</p>
+        <p>Third P</p>
+    </div>
+    <div id="temp">
+        <p>Test P1</p>
+        <p>Test P2</p>
+        <p>Test P3</p>
+    </div>
+    <hr />
+    <button onclick="changeStyle()">Change H1</button>
+    <button onclick="changeStyle1()">Change H3</button>
+    <button onclick="changeStyle2()">Change H5</button>
+    <button onclick="changeStyle3()">Change DIV</button>
+    <button onclick="changeStyle4()">Change P</button>
+    <button onclick="changeStyle5()">Set ID</button>
+    <script>
+        function changeStyle() {
+            var y = document.querySelector('h1');
+            console.log(y)
+            y.setAttribute('class', 'class-h1')
+        }
+
+        function changeStyle1() 
+        {
+            var y = document.querySelectorAll('h3');
+            // console.log(y)
+            for (var i = 0; i < y.length; i++) {
+                // console.log(i)
+                // console.log(y)
+                y[i].setAttribute('class', 'class-h3')
+                // console.log(y[i])
+            }
+        }
+
+        function changeStyle1() 
+        {
+            var y = document.querySelectorAll('h3');
+            // console.log(y)
+            for (var i = 0; i < y.length; i++) {
+                // console.log(i)
+                // console.log(y)
+                y[i].setAttribute('class', 'class-h3')
+                // console.log(y[i])
+            }
+        }
+
+        function changeStyle2() 
+        {
+            var y = document.querySelectorAll('h5');
+            // console.log(y)
+            for (var i = 0; i < y.length; i++) {
+                // console.log(i)
+                // console.log(y)
+                y[i].setAttribute('class', 'class-h5')
+                // console.log(y[i])
+            }
+        }
+
+        function changeStyle2() 
+        {
+            var y = document.querySelectorAll('h5');
+            // console.log(y)
+            for (var i = 0; i < y.length; i++) {
+                // console.log(i)
+                // console.log(y)
+                y[i].setAttribute('class', 'class-h5')
+                // console.log(y[i])
+            }
+        }
+
+        function changeStyle3() 
+        {
+            var y = document.querySelectorAll('#box > div');
+            for (var i = 0; i < y.length; i++) 
+            {
+                y[i].setAttribute('class', 'class-div')
+            }
+        }
+
+        function changeStyle4() 
+        {
+            var y = document.querySelectorAll('#cont > p');
+            for (var i = 0; i < y.length; i++) 
+            {
+                y[i].setAttribute('class', 'class-p')
+            }
+        }
+
+        function changeStyle5() 
+        {
+            var y = document.querySelectorAll('#temp > p');
+            for (var i = 0; i < y.length; i++) 
+            {
+                y[2].setAttribute('id', 'test-2')
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
