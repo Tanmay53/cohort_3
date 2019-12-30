@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+    /* #userInfo {
+        height: 200px;
+    } */
+    .infoContainer {
+        margin-top: 100px;
+    }
+    </style>
+    <title>Index Page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-6 offset-lg-2 ">
+                <div class="row mb-5">
+                    <div class="col-12 bg-light">
+                        <div class="text-center">
+                            <h3>Register Form</h3>
+                        </div>
+                        <!-- Registration Form -->
+                        <form id="sendForm">
+                            <!-- Type Of User -->
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="userType">Type</label>
+                                </div>
+                                <select class="custom-select inputEle" id="userType" required>
+                                    <option value="" selected>Choose...</option>
+                                    <option value="user">User</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                            <!-- First & Last Name -->
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control inputEle" placeholder="First name (Optional)" id="firstName">
+                                </div>
+                                <div class="col">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control inputEle" placeholder="Last name (Optional)" id="lastName">
+                                </div>
+                            </div>
+                            <!-- Email Address -->
+                            <div class="form-group mt-2">
+                                <label for="inputEmail">Email address</label>
+                                <input type="email" class="form-control inputEle" id="inputEmail" placeholder="Enter Email Address" required>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone
+                                    else.</small>
+                            </div>
+                            <!-- Password -->
+                            <div class="form-group">
+                                <label for="inputPassword">Password</label>
+                                <input type="password" class="form-control inputEle" id="inputPassword" placeholder="Enter Password" required>
+                            </div>
+                            <!-- Username & Mobile Number -->
+                            <div class="form-row">
+                                <!-- Username -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="username">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                        </div>
+                                        <input type="text" class="form-control inputEle" id="username"
+                                            aria-describedby="inputGroupPrepend" required>
+                                    </div>
+                                </div>
+                                <!-- Mobile No -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="phoneNo">Mobile </label>
+                                    <input type="text" class="form-control inputEle" id="phoneNo" placeholder="Phone No (Optional)">
+                                </div>
+                            </div>
+                            <!-- Address -->
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea class="form-control inputEle" id="address" rows="3" placeholder="Optional"></textarea>
+                            </div>
+                            <!-- Submit Btn -->
+                            <div class="text-center">
+                                <button type="submit" id="addUser" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Present User Info -->
+            <div class="col-4  col-lg-4 offset-1 infoContainer">
+                <div class="row">
+                    <div class="col-12 md-pt-5 text-center text-wrap rounded rounded-pill-lg" id="userInfo">
+
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <!-- Filter based on type of user -->
+                    <div class="col-12 col-lg-6">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="selectedUserType">Type</label>
+                            </div>
+                            <select class="custom-select inputEle" id="selectedUserType" required>
+                                <option value="any" selected>All Users</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Print table -->
+                    <div class="col-12 col-lg-6 ">
+                        <button type="submit" id="displayUsers" class="btn btn-primary">Show Data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table for different Users -->
+        <div class="row">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Type</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Mobile No</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+
+</body>
+
+</html>

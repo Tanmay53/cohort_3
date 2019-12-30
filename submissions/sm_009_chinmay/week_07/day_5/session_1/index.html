@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search Users on Github</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <style>
+    img {
+      height: 70px;
+      width: 70px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row p-5 text-secondary">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Search User on Github</span>
+        </div>
+        <input id='root' type="text" class="form-control" placeholder="Username" aria-label="Username" />
+        <button id="submit-btn" class="btn btn-secondary" onclick='promise()'>Find User Details!</button>
+      </div>
+
+      <table id="display-table" class="table table-bordered table-secondary table-striped text-center ">
+        <thead>
+          <tr>
+            <th scope="col">Avatar</th>
+            <th scope="col">ID</th>
+            <th scope="col">User Login</th>
+            <th scope="col">Type</th>
+            <th scope="col">User Profile Link</th>
+          </tr>
+        </thead>
+        <tbody id="tbody" class="tbody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    var selectedUserRepo = ''
+    gitSearchUserAPI = 'https://api.github.com/search/users?q='
+
+    $('#display-table').hide();
+
+    const promise = () => {
+      var userID = $('#root').val();
+      var user = gitSearchUserAPI + userID;
+      
+      fetch(user)
+        .then(response => response.json())
+
+        .then(response => {
+          if(response.items.length===0){
+            $('#submit-btn').click(function(){
+              $('#root').reset();
+            })
+            $('#tbody').empty();
+            alert("User not found")
+          }
+
+          console.log(Object.values(response.items)[0])
+          // console.log(response.items.length)
+          localStorage.setItem('cachedUserData', Object.values(response.items)[0])
+          localStorage.setItem('repo_url', Object.values(response.items)[0]["repos_url"]);
+          selectedUserRepo = localStorage.getItem('repo_url');
+          userRepos = localStorage.setItem('user_repos', Object.values(response.items)[0]["repos_url"])
+          console.log(selectedUserRepo)
+          $('#display-table').show();
+          $('#tbody').empty();
+          $('#tbody').append(
+            "<tr><td>" + "<img class=rounded " +
+            "src=" + Object.values(response.items)[0]["avatar_url"] + "></img>" + "</td>" +
+            "<td>" + Object.values(response.items)[0]["id"] + "</td>" +
+            "<td>" + Object.values(response.items)[0]["login"] + "</td>" +
+            "<td>" + Object.values(response.items)[0]["type"] + "</td>" +
+            "<td>" + "<a href="+ Object.values(response.items)[0]["html_url"] +">"+ Object.values(response.items)[0]["html_url"] +"</a>" + "</td>" +
+            "<td>" + "<button id='show-repo-btn' class='btn btn-success'> Show Repos</button>" + "</td>"
+            + "</tr>")
+
+          $('#show-repo-btn').click(function () {
+            location.href = '/week_07/day_5/session_1/user_repo.html'
+
+            function navigateToSelectedRepo(selectedUserRepo) {
+              console.log(selectedUserRepo)
+              $('#root').textContent =''
+            }
+
+          })
+        })
+    }
+
+  </script>
+</body>
+
+</html>
