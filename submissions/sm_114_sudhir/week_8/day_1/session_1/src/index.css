@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container{
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 40px 40px 40px 40px;
+  grid-gap:20px;
+}
+/* button{
+  border-radius: 20px;
+} */
+#proMainCont{
+  width:700px;
+  height:600px;
+  background-color: #28223F;
+  padding:50px;
+}
+#profileSubCont{
+  width: 350px;
+  height:550px;
+  background-color: #231E39;
+  border-radius: 20px;
+  margin:auto;
+  padding:10px;
+}
+#btnPro{
+  background-color: yellow;
+}
+#imgDiv{
+  width:160px;
+  height:160px;
+  border : 1px solid #1D9DAC;
+  border-radius: 50%;
+  margin-left:80px;
+  padding:5px;
+}
+#img{
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+  margin-top:5px;
+  margin-left:5px;
+}
+.text{
+  color:white;
+  text-align: center;
+}
+.btnPro{
+  padding:10px 20px;
+  margin:2px;
+  border-radius: 5px;
+}
+#btnDiv{
+  margin-left: 70px;
+}
+.spanEle{
+  color:white;
+  border:1px solid white;
+  margin:5px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
