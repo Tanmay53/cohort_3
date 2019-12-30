@@ -2,6 +2,7 @@
     <head>
         <title></title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type = "text/javascript"></script>
         <style type="text/css">
             #left-box{
                 display:flex;
@@ -15,9 +16,22 @@
                 margin-bottom:15px;
                 
             }
+            #reg{
+                background:black;
+                color:white
+            }
             p{
                 width:auto;
                 color:red;
+            }
+            #right-box{
+                height:400px;
+                width:400px;
+                padding:10px;
+                color:white;
+                background:black;
+                margin-left: 600px;
+                margin-top:-300px;
             }
 
         </style>
@@ -38,11 +52,17 @@
         <input type="text" name="mobileNo" id="mobile">
         <p id="liveMob"></p>
 
-        <button id= "reg">REGISTER</button>
+        <button  id= "reg">REGISTER</button>
 
         </div>
 
         <div id="right-box">
+            <h4>NAME</h4>
+            <h1 id = "dName"></h1>
+            <h4>EMAIL</h4>
+            <h2 id = "dEmail"></h2>
+            <h4>MOBILE</h4>
+            <h2 id= "dMobile"></h2>
 
         </div>
         
@@ -60,6 +80,7 @@
             $("#mobNo").hide()
             $("#mobile").hide()
             $("#reg").hide()
+            $("#right-box").hide()
 
             $("#name").keyup(function(){
                 var value= $(this).val()
@@ -71,6 +92,7 @@
                     $("#liveName").text("Name should be lesser than 10 letters and your input exceeds by "+(value.length-10))
                 }
                 else{
+                    console.log('test')
                     $("#liveName").text("")
                     $("#email").show()
                     $("#mail").show()
@@ -162,8 +184,23 @@ else{
                     $("#liveMob").text("")
                     $("#reg").show()
                 }
-            })
+            });
 
+               $("#reg").click(function(){
+                    $("#right-box").show()
+                    $("#dName").text($("#name").val())
+                    $("#dEmail").text($("#email").val())
+                    $("#dMobile").text($("#mobile").val())
+
+                    $("#name").val("")
+                    $("#email").val("")
+                    $("#mobile").val("")
+
+               });
+                    
+
+                
+                
     
 
             });
