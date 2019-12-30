@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>w5d3s2P2</title>
+</head>
+
+<body>
+    <div class="container m-3">
+        <div class="row">
+            <div class="col-8">
+                <h2>Billing address</h2>
+
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <label for="fName">First name</label>
+                            <input type="text" class="form-control" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <label for="lName">Last name</label>
+                            <input type="text" class="form-control" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="uName">Username</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
+                            <input type="text" class="form-control" id="uName" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="eMail">Email <span class="text-muted">(optional)</span></label>
+                        <input type="text" class="form-control" id="eMail" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Address 2 <span class="text-muted">(optional)</span></label>
+                        <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check1" required>
+                            <label class="form-check-label" for="address">
+                                Shipping address is the same as my billing address
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="check2" required>
+                            <label class="form-check-label" for="saveInfo">
+                                Save this information for next time
+                            </label>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h2>Payment</h2>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                        <label class="custom-control-label" for="customRadio1">Credit card</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Debit card</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Pay pal</label>
+                    </div>
+                    <div class="row">
+                        <div class="col mt-3">
+                            <label for="fName">Name on the card</label>
+                            <input type="text" class="form-control" placeholder="First name">
+                            <small id="mutedtext" class="form-text text-muted">Full name as displayed in card</small>
+                        </div>
+                        <div class="col mt-3">
+                            <label for="lName">credit card number</label>
+                            <input type="text" class="form-control" placeholder="Last name">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-4 flex-column">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h2>Your cart</h2>
+                    </div>
+                    <div class="d-inline-flex p-2 bd-highlight">
+                        <h4>3</h4>
+                    </div>
+                </div>
+                <div class="border">
+                    <div class="d-flex">
+                        <div class="p-2 w-100 bd-highlight">
+                            <p>Product name</p>
+                            <small id="mutedtext" class="form-text text-muted">Brief description</small>
+                        </div>
+                        <div class="p-2 flex-shrink-1 bd-highlight">$12</div>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <div class="p-2 w-100 bd-highlight">
+                            <p>Second product</p>
+                            <small id="mutedtext" class="form-text text-muted">Brief description</small>
+                        </div>
+                        <div class="p-2 flex-shrink-1 bd-highlight">$8</div>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <div class="p-2 w-100 bd-highlight">
+                            <p>Third item</p>
+                            <small id="mutedtext" class="form-text text-muted">Brief description</small>
+                        </div>
+                        <div class="p-2 flex-shrink-1 bd-highlight">$5</div>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <div class="p-2 w-100 bd-highlight text-success">
+                            <p>Promo code</p>
+                            <small id="mutedtext" class="form-text text-success">EXAMPLECODE</small>
+                        </div>
+                        <div class="p-2 flex-shrink-1 bd-highlight text-success">-$5</div>
+                    </div>
+                    <hr>
+                    <div class="d-flex">
+                        <div class="p-2 w-100 bd-highlight">Total(USD)</div>
+                        <div class="p-2 flex-shrink-1 bd-highlight">$20</div>
+                    </div>
+                </div>
+                <div class="border mt-4">
+                    <div class="input-group m-2">
+                        <div class="input-group-prepend">
+                        <input type="text" class="form-control col-7" id="uName" placeholder="Promocode">
+                        <div class="input-group-text">Redeem</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
