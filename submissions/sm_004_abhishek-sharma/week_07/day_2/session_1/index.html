@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-    #userInfo {
+    /* #userInfo {
         height: 200px;
-    }
+    } */
     .infoContainer {
-        margin-top: 200px;
+        margin-top: 100px;
     }
     </style>
     <title>Index Page</title>
@@ -93,7 +93,6 @@
                             <!-- Submit Btn -->
                             <div class="text-center">
                                 <button type="submit" id="addUser" class="btn btn-primary">Submit</button>
-                                <button type="submit" id="displayUsers" class="btn btn-danger">Show Data</button>
                             </div>
                         </form>
                     </div>
@@ -102,8 +101,27 @@
             <!-- Present User Info -->
             <div class="col-4  col-lg-4 offset-1 infoContainer">
                 <div class="row">
-                    <div class="col-12 md-pt-5 text-center rounded rounded-pill-lg" id="userInfo">
+                    <div class="col-12 md-pt-5 text-center text-wrap rounded rounded-pill-lg" id="userInfo">
 
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <!-- Filter based on type of user -->
+                    <div class="col-12 col-lg-6">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="selectedUserType">Type</label>
+                            </div>
+                            <select class="custom-select inputEle" id="selectedUserType" required>
+                                <option value="any" selected>All Users</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Print table -->
+                    <div class="col-12 col-lg-6 ">
+                        <button type="submit" id="displayUsers" class="btn btn-primary">Show Data</button>
                     </div>
                 </div>
             </div>
