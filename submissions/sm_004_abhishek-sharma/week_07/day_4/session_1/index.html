@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Car Wiki</title>
+  </head>
+  <body>
+      <div class="container-fluid bg-dark">
+          <div class="row text-center py-3">
+            <div class="col text-white">
+                <h1>Car Wiki</h1>
+            </div>
+          </div>
+
+      </div>
+      <div class="container bg-light pt-3">
+          <div class="row pt-3">
+              <!-- New Car form -->
+              <div class="col-6 col-lg-6 pt-2">
+                <form>
+                    <div class="form-group row">
+                      <label for="carMake" class="col-sm-4 offset-1 col-form-label">Car Make</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control form1Ele" id="carMake">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="carModel" class="col-sm-4 offset-1 col-form-label">Car Model</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control form1Ele" id="carModel">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="topSpeed" class="col-sm-4 offset-1 col-form-label">Top Speed</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control form1Ele" id="topSpeed">
+                        </div>
+                      </div>
+                    <div class="form-group row text-center">
+                      <div class="col-sm-10">
+                        <button type="submit" id="newCar" class="btn btn-primary">New Car!</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              <!-- Car's data entry -->
+              <div class="col-6 col-lg-6">
+                <form>
+                    <div class="form-group row">
+                        <!-- Selecting Car Type -->
+                        <div class="col-12 col-lg-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <label class="input-group-text" for="selectCarMake">Car Make</label>
+                                </div>
+                                <select class="custom-select" id="selectCarMake">
+                                  <option selected>Choose...</option>
+                                  
+                                </select>
+                              </div>
+                        </div>
+                        <!-- Selecting Car Model -->
+                        <div class="col-12 col-lg-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <label class="input-group-text" for="selectCarModel">Car Model</label>
+                                </div>
+                                <select class="custom-select" id="selectCarModel">
+                                  <option selected>Choose...</option>
+                                  
+                                </select>
+                              </div>
+                        </div>
+                      </div>
+                    <div class="form-group row">
+                      <label for="time" class="col-sm-4 col-form-label">Ride Time</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="time">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="speed" class="col-sm-4  col-form-label">Speed(in km/hr)</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="speed">
+                      </div>
+                    </div>
+                    <div class="form-group row text-center">
+                      <div class="col-6 col-lg-4">
+                        <button type="submit" id="addData" class="btn btn-info ">Enter Data</button>
+                      </div>
+                      <div class="col-6">
+                        <button type="button" id="showDisplay" class="btn btn-success">Show Status</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <!-- Current status of the car will be displayed here -->
+      <div class="container bg-light">
+          <div class="row">
+            <div class="col">
+                
+            </div>
+          </div>
+
+      </div>
+
+      <div class="container bg-light pt-5">
+          <div class="row">
+            <div class="col text-center">
+                <button type="button" id="carDetails" class="btn btn-primary btn-lg">Car Wiki</button>
+            </div>
+          </div>
+
+      </div>
+      <!-- Display all the car models and trip details -->
+      <div class="container mt-1">
+        <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Car Make</th>
+                <th scope="col">Model</th>
+                <th scope="col">Top Speed</th>
+                <th scope="col">Avg Speed</th>
+                <th scope="col">Distance</th>
+                <th scope="col">Trips</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
