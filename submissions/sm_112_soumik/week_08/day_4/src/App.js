@@ -25,14 +25,22 @@ class Login extends React.Component {
   };
 
   changeHandler = e => {
-    let obj = { ...this.state.people, [e.target.name]: e.target.value };
-    this.setState({ people: obj });
+    // let obj = { ...this.state.people, [e.target.name]: e.target.value };
+    // this.setState({ people: obj });
+    this.setState({
+      people: {
+        [e.target.name]: e.target.value
+      }
+    });
   };
 
   submitForm = e => {
     let list = [...this.state.person, { ...this.state.people }];
     this.setState({});
     this.setState({});
+    this.setState({
+      person: [...this.state.person, this.state.people]
+    });
     e.preventDefault();
     localStorage.setItem("person", JSON.stringify(list));
   };
