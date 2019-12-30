@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+
+        //Write your code below this line
+        let name = "Shivansh Singh";
+        let age = 23;
+        let DOB = "1st February 1996";
+        let favoriteColor = "Black";
+
+        function App() {
+            return (
+                <div>
+                    <h1>My Todo List</h1>
+                    <ul>
+                        <li>Cooking</li>
+                        <li>Cleaning</li>
+                        <li>Coding </li>
+                        <li> eating</li>
+                        <li>sleeping</li>
+                    </ul>
+                    <p>My name is {name}. I am {age} years old. I was born on {DOB}. My fovorite color is {favoriteColor}</p>
+                </div>
+
+
+
+            );
+        }
+        ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+
+</html>
