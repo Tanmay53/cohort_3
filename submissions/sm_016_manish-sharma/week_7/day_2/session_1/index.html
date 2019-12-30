@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        #cont1 {
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-primary">
+        <a class="navbar-brand text-white" href="#">Index</a>
+    </nav>
+    <div class="container-fluid row">
+        <div class="col-3 border border-success">
+            <div class="form-group">
+                <label>First name<span class="text-muted">(Optional)</span></label>
+                <input class="form-control border-dark inputs" type="text">
+                <label>Last name<span class="text-muted">(Optional)</span></label>
+                <input class="form-control border-dark inputs" type="text">
+                <label>Username<span class="text-danger">*</span></label>
+                <input class="form-control border-dark inputs" type="text">
+                <label>Password<span class="text-danger">*</span></label>
+                <input class="form-control border-dark inputs" type="text">
+                <label>Email<span class="text-danger">*</span></label>
+                <input class="form-control border-dark inputs" type="text">
+                <label>Address<span class="text-muted">(Optional)</span></label>
+                <input class="form-control border-dark inputs" type="text">
+                <label>Phone Number<span class="text-muted">(Optional)</span></label>
+                <input class="form-control border-dark inputs" type="text">
+                <label>Type<span class="text-danger">*</span></label>
+                <select class="form-control inputs">
+                    <option value="">Select category....</option>
+                    <option>User</option>
+                    <option>Admin</option>
+                </select>
+            </div>
+            <div class="btn btn-primary" id='submit'>Submit</div>
+        </div>
+
+
+        <div class="col-7">
+
+            <div id='cont1' class="shadow">
+                <div class="form-group mx-2">
+                    <label>Select Users/Admins</label>
+                    <select class="form-control col-4" id='select'></select>
+                </div>
+            </div>
+
+
+            <div id='cont2' class="mt-2 shadow">
+                <div class="row">
+                    <!-- <div class="btn btn-info mx-3" id='info'>Get all info</div> -->
+                    <select class="input-control mx-4 bg-secondary text-white" id='category'>
+                        <option value="">Choose category</option>
+                        <option>All</option>
+                        <option>User</option>
+                        <option>Admin</option>
+                    </select>
+                    <label class="ml-5">Sort</label>
+                    <select class="input-control ml-2 bg-secondary text-white" id='sort'>Sort
+                        <option value="">Choose order</option>
+                        <option>Ascending</option>
+                        <option>Descending</option>
+                    </select>
+                </div>
+                <table class="table" id='tb'>
+                    <thead>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Type of user</th>
+                        <th></th>
+                    </thead>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src='index.js'></script>
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>

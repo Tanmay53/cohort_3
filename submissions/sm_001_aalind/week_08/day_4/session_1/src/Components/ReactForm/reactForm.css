@@ -1,0 +1,12 @@
+.form-div {
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+input {
+    margin: 10px 0px;
+}
+input[type="submit"] {
+    width: 150px;
+}

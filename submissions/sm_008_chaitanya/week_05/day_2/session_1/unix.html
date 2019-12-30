@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <style>
+        #top {
+            display: flex;
+            flex-direction: column;
+            background: rgb(227, 218, 219);
+            width: 500px;
+            margin-left: 450px;
+            justify-content: center;
+        }
+
+        #top div {
+            text-align: center;
+            border-top: 20px rgb(227, 218, 219);
+            font-family: sans-serif;
+            padding-top: 20px;
+        }
+
+        #main {
+            height: 200px;
+        }
+
+        #top h1 {
+            color: navy;
+            font-size: 40px;
+            margin: 0px;
+        }
+
+        #top p {
+            font-size: 30px;
+            color: black;
+            margin: 0px;
+            padding-bottom: 10px;
+        }
+
+        #middle {
+            display: flex;
+            border-top: 20px solid white;
+            margin: 0px;
+        }
+
+        .khan {
+            margin-left: 300px;
+            height: 150px;
+            padding-top: 10px;
+        }
+
+        #middle h1 {
+            color: red;
+            font-family: sans-serif;
+            margin-left: 30px;
+        }
+
+        #middle p {
+            color: black;
+            font-size: 18px;
+            font-family: sans-serif;
+            margin-left: 30px;
+        }
+
+        #bottom {
+            display: flex;
+            width: 1100px;
+            height: 150px;
+            background: rgb(211, 86, 31);
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 40px;
+            border: 10px solid rgb(211, 86, 31);
+        }
+
+        .ken h1 {
+            font-family: sans-serif;
+            color: white;
+            font-weight: normal;
+        }
+
+        .ken p {
+            color: black;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        .dennis {
+            margin-left: 200px;
+        }
+
+        .dennis h1 {
+            float: right;
+            font-family: sans-serif;
+            color: white;
+            font-weight: normal;
+            text-align: right;
+        }
+
+        .dennis p {
+            color: black;
+            font-size: 20px;
+            font-family: sans-serif;
+            margin-top: 80px;
+        }
+
+        .empty {
+            justify-content: center;
+            background: black !important;
+            height: 130px;
+            width: 8px;
+            margin-top: 10px;
+            margin-left: 240px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="create_unix()">Create Page</button>
+</body>
+<script>
+    function create_unix() {
+
+        //*****************Linus Portion************//
+        var bdy = document.querySelector('body')
+        var first = document.createElement('div')
+        bdy.appendChild(first)
+        var first_one = document.createElement('div')
+        first.appendChild(first_one)
+        var first_two = document.createElement('div')
+        first.appendChild(first_two)
+        var first_three = document.createElement('div')
+        first.appendChild(first_three)
+        first.setAttribute('id', "top")
+        var first_image = document.createElement('img')
+        first_one.appendChild(first_image)
+        first_image.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg');
+        first_image.setAttribute('id', "main")
+        var first_h1 = document.createElement('h1')
+        first_two.appendChild(first_h1)
+        first_h1.textContent = "Linus Torvalds"
+        var first_para = document.createElement('p')
+        first_three.appendChild(first_para)
+        first_para.textContent = "The creator of Linux & Git"
+        
+        //*******************sal khan portion*********************///
+
+        var second = document.createElement('div')
+        bdy.appendChild(second)
+        second.setAttribute('id', 'middle')
+        var second_one = document.createElement('div')
+        second.appendChild(second_one)
+        var second_one_image = document.createElement('img')
+        second.appendChild(second_one_image)
+        second_one_image.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg');
+        second_one_image.setAttribute('class', 'khan')
+        var second_two = document.createElement('div')
+        second.appendChild(second_two)
+        var second_two_h1 = document.createElement('h1')
+        second_two.appendChild(second_two_h1)
+        second_two_h1.textContent = "Sal Khan"
+        var second_two_p = document.createElement('p')
+        second_two.appendChild(second_two_p)
+        second_two_p.innerHTML = "Salman Khan is the founder of the Khan Academy which has a mission<br>of providing a free world-class education for anyone,anywhere.</br>"
+
+        ////************dennis portion*************///////////
+        var third = document.createElement('div')
+        bdy.appendChild(third)
+        third.setAttribute('id', 'bottom')
+        var third_one = document.createElement('div')
+        third.appendChild(third_one)
+        third_one.setAttribute('class', 'ken')
+        var third_one_h1 = document.createElement('h1')
+        third_one.appendChild(third_one_h1)
+        third_one_h1.innerHTML = "Ken Thompson"
+        var third_one_p = document.createElement('p')
+        third_one.appendChild(third_one_p)
+        third_one_p.innerHTML = "Designed and Implemented the <br>original Unix operating system</br>"
+        var third_two = document.createElement('div')
+        third.appendChild(third_two)
+        third_two.setAttribute('class', 'empty')
+        var third_three = document.createElement('div')
+        third.appendChild(third_three)
+        third_three.setAttribute('class', 'dennis')
+        var third_three_h1 = document.createElement('h1')
+        third_three.appendChild(third_three_h1)
+        third_three_h1.innerHTML = "Dennis Ritchie"
+        var third_three_p = document.createElement('p')
+        third_three.appendChild(third_three_p)
+        third_three_p.innerHTML = "The creator of C Programming Language"
+
+    }
+</script>
+
+</html>

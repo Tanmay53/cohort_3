@@ -1,0 +1,175 @@
+<html>
+    <head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+            #left-box{
+                display:flex;
+                flex-direction:column;
+                width:300px;
+                margin:15px;
+                margin-left:80px;
+                padding:10px;
+            }
+            #left-box input{
+                margin-bottom:15px;
+                
+            }
+            p{
+                width:auto;
+                color:red;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+
+        <div id="left-box">
+            <label for="name">NAME</label>
+        <input type="text" name="name" id="name">
+        <p id="liveName"></p>
+
+        <label for="email" id="mail">EMAIL</label>
+        <input type="email" name="email" id="email">
+        <p id="liveEmail"></p>
+
+        <label for="mobile" id="mobNo">MOBILE</label>
+        <input type="text" name="mobileNo" id="mobile">
+        <p id="liveMob"></p>
+
+        <button id= "reg">REGISTER</button>
+
+        </div>
+
+        <div id="right-box">
+
+        </div>
+        
+
+
+        <script>
+            $(document).ready(function(){
+
+            $('input').focus(function(){
+                $(this).css('border',"2px solid black")
+            });
+
+            $("#email").hide()
+            $("#mail").hide()
+            $("#mobNo").hide()
+            $("#mobile").hide()
+            $("#reg").hide()
+
+            $("#name").keyup(function(){
+                var value= $(this).val()
+                if(value.length <3){
+                    $("#liveName").text("Name should be greater than 3 letters "+(3-value.length)+" remaining")
+                    
+                }
+                else if(value.length >10){
+                    $("#liveName").text("Name should be lesser than 10 letters and your input exceeds by "+(value.length-10))
+                }
+                else{
+                    $("#liveName").text("")
+                    $("#email").show()
+                    $("#mail").show()
+                }
+            });
+
+            $("#email").keyup(function(){
+                var id1= $(this).val()
+                verifyEmail(id1)
+                function verifyEmail(id1) {
+   
+   input1 = id1.split('@')
+   input2 = input1[1].split(".")
+   //    console.log(input1,input2)
+   var arr1=input1[0]
+   var arr2=input2[0]
+   var arr3=input2[1]
+       console.log(arr1,arr2,arr3)
+   var count1 = 0
+   var count2 = 0
+   var count3 = 0
+   var z1=0
+   var z2=0
+   var z3=0 
+   if(arr1 != "" && arr2 != "" && arr3 != "" && arr3 != undefined)
+   {
+   for (i = 0; i < arr1.length; i++) {
+       if ((arr1[i] == '@') || (arr1[i] == '.') || (arr1[i] == ' ')|| (arr1[i]== '(')|| (arr1[i]== ')')|| (arr1[i]== '&' )|| (arr1[i]== '$') || (arr1[i]== '^')|| (arr1[i]== '#')|| (arr1[i]== '/')|| (arr1[i]== '' )) 
+       {
+           z1++
+       }
+       else {
+           count1++
+       }
+
+
+   }
+   for (i = 0; i < arr2.length; i++) {
+       if ((arr2[i] == '@') || (arr2[i] == '.') || (arr2[i] == ' ')|| (arr2[i]== '(')|| (arr2[i]== ')')|| (arr2[i]== '&' )|| (arr2[i]== '$') || (arr2[i]== '^')|| (arr2[i]== '#')) {
+           z2++
+       }
+       else {
+           count2++
+       }
+
+
+   }
+   for (i = 0; i < arr3.length; i++) {
+       if ((arr3[i] == '@') || (arr3[i] == '.') || (arr3[i] == ' ')|| (arr3[i]== '(')|| (arr3[i]== ')')|| (arr3[i]== '&' )|| (arr3[i]== '$') || (arr3[i]== '^')|| (arr3[i]== '#')) {
+         z3++
+       }
+       else {
+           count3++
+       }
+
+   }
+   if (count1 > 0 && count2 > 0 && count3 > 0) {
+       console.log('Valid')
+       // console.log(count1,count2,count3)
+       $("#liveEmail").text("")
+       $("#mobNo").show()
+        $("#mobile").show()
+
+
+   }
+   else if( z1 >0 || z2>0 || z3 > 0)
+   {
+       console.log('invalid')
+       $("#liveEmail").text("Enter a valid Email ID")
+   }
+}
+else{
+   console.log("Invalid")
+   $("#liveEmail").text("Enter a valid Email ID")
+}   
+}
+            })
+
+
+            $("#mobile").keyup(function(){
+                var phNo = $(this).val()
+                if(phNo.length < 10){
+                    $("#liveMob").text(10-phNo.length+" Digits Remaining ")
+                }
+                else if (phNo.length > 10){
+                    $("#liveMob").text(phNo.length-10+" Digits are Extra ")
+                }
+                else{
+                    $("#liveMob").text("")
+                    $("#reg").show()
+                }
+            })
+
+    
+
+            });
+        </script>
+
+
+
+    </body>
+</html>
