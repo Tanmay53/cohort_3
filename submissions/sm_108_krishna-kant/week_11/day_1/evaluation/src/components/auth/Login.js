@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { auth } from '../../actions/loginAction';
+import { useHistory } from 'react-router-dom';
+let history;
 
 class Login extends Component {
   state = {
@@ -15,7 +17,11 @@ class Login extends Component {
   onSubmit = e => {
     e.preventDefault();
     this.props.auth(this.state);
-    console.log(this.props.isLogged);
+    console.log(this.props.isLogged.login);
+    if (this.props.isLogged.login) {
+      this.props.authorization();
+      this.props.history.push('/');
+    }
   };
   render() {
     return (
