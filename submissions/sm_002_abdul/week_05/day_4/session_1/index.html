@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  label,button{
+    display: block;
+    margin: 15px;
+  }
+  p{
+    white-space: pre-line;
+  }
+  #displayContainer{
+    display: block;
+    float: left;
+    padding-left: 10%;
+  }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <h1>Click the button to add a new customer!</h1>
+  <div class="inputContainer">
+      <label for="firstName">First Name :</label>
+      <input type="text" name="firstName" class="customerInput">
+
+      <label for="lastName">Last Name :</label>
+      <input type="text" name="lastName" class="customerInput">
+
+      <label for="dateOfBirth">Date Of Birth :</label>
+      <input type="text" name="dateOfBirth" class="customerInput">
+
+      <label for="balance">Balance :</label>
+      <input type="text" name="balance" class="customerInput">
+
+      <label for="accountNumber">Account Number :</label>
+      <input type="text" name="accountNumber" class="customerInput">
+
+      <label for="sharedAccountHolders">Shared Account Holders(Comma Separated) :</label>
+      <input type="text" name="sharedAccountHolders" class="customerInput">
+
+    </div>
+    
+    <button id="addCustomer" type="submit">Add customer</button>
+
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! <h1>
+  <button id="printCustomer">Print Customers</button>  
+  <div id="displayContainer"> </div>
+  
+
+  <script>
+    //first we create a constructor Customer function
+    function Customer(firstName,lastName,dateOfBirth,balance,accountNumber,sharedAccountHolders){
+      this.firstName=firstName;
+      this.lastName=lastName;
+      this.dateOfBirth=dateOfBirth;
+      this.balance=balance;
+      this.accountNumber=accountNumber;
+      this.sharedAccountHolders=sharedAccountHolders;
+      this.getDetails=function(){
+        var output='';
+        detailArray=['First Name','Last Name','Date Of Birth','Balance','Account Number','Shared Account Holders']
+        var i=0;// this creates a counter
+        for (key in this){
+          output+=detailArray[i]+":"+this[key]+'\n'
+          if (key=='sharedAccountHolders') break;
+          i++;
+        }
+        return output;
+      }    
+    }
+
+    var customerArr=[]; //create empty global array
+    
+    function createNewCustomer(){
+      console.log('working');
+
+
+      var inputs=document.querySelectorAll('.customerInput'); //fetch all input as an array
+      
+      var newCustomer=new Customer(); //create a new Customer Object
+      
+      var i=0; //this creates a counter for each input box
+      
+      for (key in newCustomer){
+        if (newCustomer[key]== undefined){ //this checks if the key has an undefined value
+          if (key != 'sharedAccountHolders') { 
+            
+            newCustomer[key]=inputs[i].value; // this adds value to empty person object
+            
+          }
+          else {
+            newCustomer[key]=inputs[i].value.split(","); //this adds array values
+          }
+          inputs[i].value="" //reset all input values to empty string
+          i++
+        }
+      }
+      customerArr.push(newCustomer); //adds new customer to array 
+      console.log(customerArr)
+    }
+
+    function displayCustomer(){
+      var displayContainer=document.querySelector('#displayContainer');//fetching display container
+      displayContainer.innerHTML='';
+      for (var i=0;i<customerArr.length;i++){
+        var displayParaBlock=document.createElement('p');
+        displayParaBlock.textContent=customerArr[i].getDetails();
+        displayContainer.appendChild(displayParaBlock);
+      }
+    }
+
+    var addCustomerBtn=document.querySelector('#addCustomer'); //fetch the button addCustomer
+    addCustomerBtn.addEventListener('click',createNewCustomer); //add event listener to that button
+
+    var printCustomerBtn=document.querySelector('#printCustomer'); //fetch button printCustomer
+    printCustomerBtn.addEventListener('click',displayCustomer); //add event listener to that button
+
+
+
+  </script>
+</body>
+
+</html>
+
+
