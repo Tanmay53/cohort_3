@@ -5,8 +5,7 @@ const Data = (props)=>{
      
 
     return(
-        <div>
-        <tbody>
+        <React.Fragment>
             <tr>
             <td>{props.label.itemId}</td>
             <td>{props.label.itemName}</td>
@@ -15,8 +14,7 @@ const Data = (props)=>{
             <td>{props.label.material}</td>
             <td>{props.label.price}</td>
             </tr>
-        </tbody>           
-        </div>
+        </React.Fragment>          
     )
 }
 

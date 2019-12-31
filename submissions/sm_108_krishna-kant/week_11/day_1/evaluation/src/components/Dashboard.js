@@ -12,7 +12,6 @@ class Dashboard extends Component {
   };
 
   authenticate = () => {
-    alert();
     this.setState({ isLoggedIn: true });
   };
 
@@ -29,7 +28,11 @@ class Dashboard extends Component {
                 return this.state.isLoggedIn ? (
                   <AddStaff />
                 ) : (
-                  <Redirect to='/login' />
+                  <Redirect
+                    to={{
+                      pathname: '/login'
+                    }}
+                  />
                 );
               }}
             />
@@ -40,7 +43,11 @@ class Dashboard extends Component {
                 return this.state.isLoggedIn ? (
                   <ViewStaff />
                 ) : (
-                  <Redirect to='/login' />
+                  <Redirect
+                    to={{
+                      pathname: '/login'
+                    }}
+                  />
                 );
               }}
             />
@@ -48,7 +55,12 @@ class Dashboard extends Component {
               path='/login'
               exact
               component={() => {
-                return <Login auth={this.state.authenticate} />;
+                return (
+                  <Login
+                    authorization={this.authenticate}
+                    history={this.props.history}
+                  />
+                );
               }}
             />
             <Route component={Notfound} />

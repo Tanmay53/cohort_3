@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { addCustomer } from "../../Redux/action";
 import { Col, Jumbotron, Form, Button } from "react-bootstrap";
 
 class AddCustomer extends React.Component {
@@ -18,13 +20,24 @@ class AddCustomer extends React.Component {
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    let data = {
+      name: this.state.name,
+      email: this.state.email,
+      phone: this.state.phone,
+      sales: this.state.sales
+    };
+    this.props.addCustomer(data);
+  };
+
   render() {
     return (
       <React.Fragment>
         <Col md={{ span: 4, offset: 4 }}>
           <Jumbotron>
             <h1>Add New Customer!</h1>
-            <Form onSubmit={e => this.addCustomer(e)}>
+            <Form onSubmit={e => this.handleSubmit(e)}>
               <Form.Group controlId="name">
                 <Form.Label>Full Name</Form.Label>
                 <Form.Control
@@ -78,4 +91,10 @@ class AddCustomer extends React.Component {
   }
 }
 
-export default AddCustomer;
+const mapDispatchToProps = dispatch => {
+  return {
+    addCustomer: data => dispatch(addCustomer(data))
+  };
+};
+
+export default connect(null, mapDispatchToProps)(AddCustomer);
