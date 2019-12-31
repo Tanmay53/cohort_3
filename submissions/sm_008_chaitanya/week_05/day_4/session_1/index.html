@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>index</title>
+</head>
+<style>
+  body {
+    background: rgb(227, 218, 219);
+  }
+
+  .container,
+  #add_customer,
+  #print_data {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .container input {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  div {
+    padding-bottom: 15px;
+  }
+
+  p {
+    white-space: pre-line;
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  #add_customer,
+  #print_data {
+    background: black;
+    color: white;
+  }
+</style>
+
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <h1>Click the button to add a new customer!</h1>
+  <div class="container">
+    <div>
+      <label for="fname">First Name</label><br>
+      <input type="text" id="fname" placeholder="First Name" class="user_input">
+    </div>
+
+    <div>
+      <label for="lname">Last Name</label><br>
+      <input type="text" id="lname" placeholder="Last Name" class="user_input">
+    </div>
+
+    <div>
+      <label for="bob">Date of Birth</label><br>
+      <input type="text" id="dob" placeholder="Date of Birth" class="user_input">
+    </div>
+
+    <div>
+      <label for="bal">Balance</label><br>
+      <input type="text" id="bal" placeholder="Balance" class="user_input">
+    </div>
+
+    <div>
+      <label for="acc_no">Accont Number</label><br>
+      <input type="text" id="acc_no" placeholder="Account Number" class="user_input">
+    </div>
+
+    <div>
+      <label for="sha">Shared Account Holders</label><br>
+      <input type="text" id="sha" placeholder="Account Holders" class="user_input">
+    </div>
+
+  </div>
+  <button id="add_customer">Add customer</button>
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! <h1>
+      <button id="print_data">Print Customers</button>
+      <div id="displayContainer"> </div>
+
+
+      <script>
+        var customerArr = [] // This array contains all the customer Objects!
+        function Customers(firstName, lastName, dateOfBirth, balance, accountNumber, sharedAccontHolders) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.dateOfBirth = dateOfBirth;
+          this.balance = balance;
+          this.accountNumber = accountNumber;
+          this.sharedAccontHolders = sharedAccontHolders;
+          //This function returns a string with all the properties of object
+          this.getDetails = function () {
+            var output = ""
+            for (key in this) {
+              output += key + ":" + this[key] + "\n";
+              if (key == "sharedAccontHolders") {
+                break
+              }
+            }
+            return output //output is a string
+          }
+        }
+
+        function displayDetails() {
+          var input = document.querySelectorAll(".user_input")// This will return an array of all the input objects with the class = "user_input"
+          var i = 0 //This is a counter for each of the input boxes
+          var customerObj = new Customers()// This creates an empty Customer() object
+          for (key in customerObj) {
+            if (customerObj[key] == undefined) { //This checks if the key has an undefined value,since it is an empty obhect,hence considered undefined
+              if (key != "sharedAccontHolders") {
+                customerObj[key] = input[i].value   // This adds value to the empty Person object
+              }
+              else {
+                customerObj[key] = input[i].value.split(",")
+              }
+              input[i].value = ""  //Reset all the input values to empty string
+              i++
+            }
+          }
+          customerArr.push(customerObj)  // Add the new customer to the array
+        }
+
+        function printDetails() {
+          for (i = 0; i < customerArr.length; i++) {  // Here we loop through all the objects in the customerArr[]
+            var displaypara = document.createElement("p")
+            displaypara.innerHTML = customerArr[i].getDetails()  // We call the getDeatils function for each object get a string and set the p tags innertext to the returned string
+            var display_loc = document.getElementById("displayContainer")
+            display_loc.appendChild(displaypara)
+          }
+        }
+
+        var customer_details = document.getElementById("add_customer")
+        customer_details.addEventListener("click", displayDetails)
+
+        var print_customers = document.getElementById("print_data")
+        print_customers.addEventListener("click", printDetails)
+
+      </script>
+</body>
+
+</html>

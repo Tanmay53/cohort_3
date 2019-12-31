@@ -20,10 +20,11 @@ class Form extends React.Component {
       this.props.pass === this.state.inputPass
     ) {
       alert("Login Succesfull");
+ 	 this.setState({ login: true });
     } else {
       alert("Try again");
     }
-    this.setState({ login: true });
+    
     e.preventDefault();
   };
 
