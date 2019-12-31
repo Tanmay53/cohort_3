@@ -3,16 +3,14 @@
   flex-direction:column;
   background:rgb(227,218,219);
   width:500px;
-  margin-left:20%;
+  margin-left:450px;
   justify-content:center;
 }
-
 #top div{
 text-align:center;
 border-top: 20px rgb(227,218,219);
 font-family: sans-serif;
 padding-top:20px;
-
 }
 #main {
 height:200px;
@@ -27,7 +25,6 @@ font-size:30px;
 color:black;
 margin:0px;
 padding-bottom:10px;
-
 }
 #middle{
 display:flex;
@@ -35,13 +32,9 @@ border-top:20px solid white;
 margin:0px;
 }
 .khan{
-margin-left:115%;
+margin-left:280px;
 height:60%;
 padding-top:10px;
-
-}
-.name {
-margin-left:10%;
 }
 #middle h1{
 color:red;
@@ -55,11 +48,11 @@ font-size:18px;
 #bottom{
 display:flex;
 width:1100px;
+height:150px;
 background:rgb(211,86,31);
 padding-left:10px;
 padding-right:10px;
 border:10px solid rgb(211,86,31);
-
 }
 .ken h1{
 font-family: sans-serif;
@@ -72,9 +65,10 @@ font-size:20px;
 font-family: sans-serif;
 }
 .dennis{
-margin-left:40%;
+  margin-left:200px;
 }
 .dennis h1{
+  float:right;
 font-family: sans-serif;
 color:white;
 font-weight: normal;
@@ -84,12 +78,15 @@ text-align:right;
 color:black;
 font-size:20px;
 font-family: sans-serif;
-
+margin-top:80px;
 }
 .empty{
-  background:black;!important
-  height:5px;
+  justify-content:center;
+  background:black !important;
+  height:130px;
   width:5px; 
+  margin-top:10px;
+  margin-left:240px;
 }
 @media(max-width:600px){
   #top{

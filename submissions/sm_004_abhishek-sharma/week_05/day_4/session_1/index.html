@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<style>
+  label {
+    display: block;
+  }
+</style>
+
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <h1>Click the button to add a new customer!</h1>
+  <div>
+    <label for="firstName" class="labels">First Name</label>
+    <input type="text" name="firstName" class="input">
+
+    <label for="lastName" class="labels">Last Name</label>
+    <input type="text" name="lastName" class="input">
+
+    <label for="dob" class="labels">Date Of Birth</label>
+    <input type="text" name="dob" class="input">
+
+    <label for="balance" class="labels">Balance</label>
+    <input type="text" name="balance" class="input">
+
+    <label for="accNo" class="labels">Account Number</label>
+    <input type="text" name="accNo" class="input">
+
+    <label for="accHolders" class="labels">Shared Account Holders</label>
+    <input type="text" name="accHolders" class="input" placeholder="Input should be comma separated">
+  </div>
+
+  <button id="addBtn">Add customer</button>
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! </h1>
+      <button id="printBtn">Print Customers</button>
+      <div id="displayContainer"></div>
+
+      <script>
+        function Customers(firstName, lastName, dob, balance, accNo, accHolders) {
+          this.firstName = firstName
+          this.lastName = lastName
+          this.dob = dob
+          this.balance = balance
+          this.accNo = accNo
+          this.accHolders = accHolders
+          this.displayDetails = function(){
+            var output = ''
+            var labels = document.querySelectorAll(".labels")
+            var count = 0
+            for(key in this){
+              output += labels[count].innerHTML  + ": " + this[key] + "\n"
+              if(key == 'accHolders') 
+                break;
+              count++
+            }
+            return output
+          }
+        }
+
+        var customerArr = []
+
+        function createCustomers() {
+          var inputs = document.querySelectorAll('.input')
+          var newCustomer = new Customers()
+          var i = 0 //This is a counter for each input boxes
+          for (key in newCustomer) {
+            // console.log(i)
+            if (newCustomer[key] == undefined) {
+              if (key != 'accHolders') {
+                newCustomer[key] = inputs[i].value
+                // console.log(newPerson[key])
+              }
+              else {
+                newCustomer[key] = inputs[i].value.split(',')
+                // console.log(newPerson[key])
+              }
+              inputs[i].value = ''
+              i++
+            }
+          }
+          customerArr.push(newCustomer)
+          // console.log(customerArr)
+        }
+
+        function displayAll() {
+          var displayContainer = document.querySelector('#displayContainer')
+          displayContainer.innerHTML = ''
+          for (var i = 0; i < customerArr.length; i++) { 
+            var displayPara = document.createElement('p') 
+            displayPara.textContent = customerArr[i].displayDetails() 
+            displayPara.style.whiteSpace = "pre-line"
+            displayContainer.appendChild(displayPara) 
+          }
+        }
+
+          var submitBtn = document.getElementById("addBtn")
+          submitBtn.addEventListener('click', createCustomers)
+
+          var displayBtn = document.getElementById("printBtn")
+          displayBtn.addEventListener('click', displayAll);
+      </script>
+</body>
+
+</html>

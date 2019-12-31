@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+      //Write your code below this line
+      let myArr = ["HTML", "CSS", "JavaScript", "React", "Node JS"];
+      let person = {
+        name: "Suyash Mishra",
+        dob: "02/july/2000",
+        age: "19",
+        color: "BLUE"
+      };
+      function myProf() {
+        return `${person.name} ${person.dob} ${person.age} ${person.color}`;
+      }
+      let list = myArr.map(function(val) {
+        return <li>{val}</li>;
+      });
+      let UI = (
+        <div>
+          <h1>My Todo list</h1>
+          <h4>{myProf()}</h4>
+          <ul>{list}</ul>
+        </div>
+      );
+
+      ReactDOM.render(UI, document.getElementById("root"));
+    </script>
+  </body>
+</html>

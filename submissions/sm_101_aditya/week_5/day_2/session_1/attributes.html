@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Attributes</title>
+        <style>
+        .class-h1{
+            color: blue;
+        }
+        .class-h3{
+            color: brown;
+        }
+        .class-h5{
+            color: chocolate;
+        }
+        .class-div{
+            color: darkcyan;
+            font-size: 33px;
+            margin: 20px;
+        }
+        .class-p{
+            color: darkorchid;
+            border: 1px dotted red;
+            padding: 8px;
+        }
+        #test-2{
+            color: deeppink;
+            font-size: xx-large;
+            border: 3px dotted gray;
+        }
+        
+        </style>
+    </head>
+
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>H3 One</h3>
+        <h3>H3 two</h3>
+        <h5>H5 one</h5>
+        <h5>H5 two</h5>
+        <h5>H5 three</h5>
+        <div id="box">
+            <div>div one</div>
+            <div>div two</div>
+            <div>div three</div>
+
+        </div>
+        <div>div four</div>
+        <div id="cont">
+            <p>p one</p>
+            <p>p two</p>
+            <p>p three</p>
+
+        </div>
+        <div id="temp">
+            <p>check p1</p>
+            <p id="p2">check p2</p>
+            <p>check p3</p>
+        </div>
+        <!-- Horizontal line with height of 20 pixels  -->
+        <hr size="20" noshade>
+        <button onclick="changeH1()">H One</button>
+        <button onclick="changeH3()" id="bH3">H Three</button>
+        <button onclick="bH5()">H five</button>
+        <button onclick="changeDiv()" id="bDiv">Change Div</button>
+        <button onclick="changeP()" id="bP1">Change P</button>
+        <button onclick="setP()" id="bP2">Set Id</button>
+        <!-- JavA Script -->
+        <script>
+            // h1
+            function changeH1(){
+                var H1 = document.querySelector('h1');
+                H1.setAttribute('class', 'class-h1')
+            }
+            
+            // h3
+
+            var bh3 = document.getElementById('bH3')
+            
+            function changeH3(){
+                var H3 = document.querySelectorAll('h3')
+                for(var i = 0; i < H3.length; i++){
+                    H3[i].setAttribute('class', 'class-h3')
+                }
+            } 
+            function bH5(){
+                var H5 = document.querySelector('h5');
+                H5.setAttribute('class', 'class-h5')
+            }
+            // div
+            var div = document.getElementById('bDiv')
+            function changeDiv(){
+                var div1 = document.querySelectorAll('div');
+                for(var i =0; i < div1.length; i++){
+                    div1[i].setAttribute('class', 'class-div')
+                }
+            }
+            div.addEventListener('clack', changeDiv)
+
+            var buttonP = document.getElementById('bP1');
+            function changeP(){
+                var p = document.querySelectorAll('#cont p')
+                for(var i = 0; i < p.length; i++){
+                    p[i].setAttribute('class', 'class-p')
+                }
+            }
+            p.addEventListener('click', 'changeP2')
+            var p2 = document.getElementById('bP2')
+            function setP(){
+                var xp2 = document.getElementById('p2')
+                p2.setAttribute('id', 'test-2')
+            }
+
+
+        </script>
+    </body>
+</html>
