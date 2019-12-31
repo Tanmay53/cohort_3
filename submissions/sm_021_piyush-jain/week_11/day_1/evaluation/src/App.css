@@ -1,14 +1,6 @@
 .App {
   text-align: center;
 }
-.labels>div{
-  margin-left: 200px;
-}
-table,tr,td{
-  display: flex;
-  padding: 0px 37px 0px 37px;
-text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
