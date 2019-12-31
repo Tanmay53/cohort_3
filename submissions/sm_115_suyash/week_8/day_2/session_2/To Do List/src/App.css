@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.taskListDiv {
+  margin: auto;
+  width: 30rem;
+  text-align: left;
+}
+
+.taskListDiv h2 {
+  text-align: center;
+}
