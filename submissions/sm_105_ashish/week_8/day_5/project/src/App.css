@@ -1,0 +1,31 @@
+.bgImage{
+  background-image:url('./background.jpeg');
+  height:420px;
+  background-repeat:repeat-x;
+}
+.logo-main{
+  width:120px;
+  height:120px;
+  border-radius: 10px;
+}
+.custom-select{
+  width:200px;
+}
+.img{
+  width:60px;
+  height:60px;
+}
+.mobile{
+  border-radius:10px;
+  width:300px;
+}
+.gp{
+  width:160px;
+  height:45px;
+}
+.cardimg{
+  height:148px;
+}
+.para{
+  font-size: 34px;
+}

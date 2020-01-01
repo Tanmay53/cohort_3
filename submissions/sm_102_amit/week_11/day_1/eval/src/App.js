@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Provider>
+    <Provider store={store}>
       <div className="py-5">
         <Routes />
       </div>
