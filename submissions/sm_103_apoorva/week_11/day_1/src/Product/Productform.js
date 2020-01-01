@@ -1,7 +1,7 @@
 import React from 'react'
 import Data from './ProductData'
 
-var master = []
+
 
 class Product extends React.Component
 {
@@ -16,7 +16,7 @@ class Product extends React.Component
             category : "",
             material : "",
             price : "",
-            item : []
+            items : []
         }
     }
 
@@ -24,14 +24,23 @@ class Product extends React.Component
         this.setState({
             [event.target.name]: event.target.value
         });
-        this.setState({item : master})
+        
     }
 
     submit=(event)=>
     {
-        event.preventDefault()
-        master.push(this.state)
-        console.log(this.state.item)
+        event.preventDefault();
+        let data = {
+            itemName : this.state.itemName,
+            itemId : this.state.itemId,
+            itemDesc : this.state.itemDesc,
+            category : this.state.category,
+            material : this.state.material,
+            price : this.state.price,
+        }
+        this.setState({
+            items : [...this.state.items, data]
+        })
         
     }
 
@@ -51,7 +60,7 @@ class Product extends React.Component
                         </div>
                         <div className="form-group">
                             <label for="exampleInputEmail1">Item Description</label>
-                            <input onChange={this.handleChange} name="itemDesc " value ={this.state.itemDesc} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <input onChange={this.handleChange} name="itemDesc"  type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                         </div>
                         <select className="form-group" onChange={this.handleChange} name = "category" value ={this.state.category}>
                             <option value = "bedroom">Bedroom</option>
@@ -87,7 +96,7 @@ class Product extends React.Component
                             </tr>
                         </thead>
                         <tbody>
-                        {this.state.item.map((ele)=> (
+                        {this.state.items.map((ele)=> (
                                 <Data label={ele}/>
                             )
                         )}
