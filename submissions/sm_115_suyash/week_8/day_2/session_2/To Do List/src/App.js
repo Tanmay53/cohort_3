@@ -27,7 +27,6 @@ class App extends Component {
     this.setState({
       dataShow: this.state.dataArr
     });
-    Input.innerHTML = "";
   };
 
   show = i => {
