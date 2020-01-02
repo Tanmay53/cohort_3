@@ -1,8 +1,14 @@
 import {
   CREATE_FINAL_ORDER,
   SET_CURRENT_ORDER,
-  FETCH_CURRENT_ORDER
+  FETCH_CURRENT_ORDER,
+  FETCH_ALL_ORDERS
 } from './type';
+
+export const fetchAllOrders = () => ({
+  type: FETCH_ALL_ORDERS,
+  message: 'fetching all orders'
+});
 
 export const createFinalOrder = orderDetails => ({
   type: CREATE_FINAL_ORDER,

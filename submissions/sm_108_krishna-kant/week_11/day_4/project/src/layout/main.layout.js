@@ -8,7 +8,7 @@ import Cars from '../component/Cars';
 import CarDetails from '../component/CarDetails';
 import Auth from '../component/Auth/Auth';
 import PrivateRoute from '../component/PrivateRoute';
-import Orders from '../component/Orders';
+import Orders from '../component/Orders/Orders';
 
 const main = () => (
   <div>

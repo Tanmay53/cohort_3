@@ -36,7 +36,8 @@ class ConfirmRide extends Component {
       },
       fname: this.state.fname,
       lname: this.state.lname,
-      mobile: this.state.mobile
+      mobile: this.state.mobile,
+      trip: this.props.trip
     };
 
     store.dispatch(this.props.createFinalOrder(orderSummary));
