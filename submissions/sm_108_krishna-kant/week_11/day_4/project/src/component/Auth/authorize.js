@@ -1,4 +1,4 @@
-export let isAuthenticated = true;
+export let isAuthenticated = false;
 const credentials = {
   username: 'admin',
   password: 'admin'
