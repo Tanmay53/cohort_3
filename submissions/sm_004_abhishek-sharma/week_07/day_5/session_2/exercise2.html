@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2 - Todo List</title>
+
+</head>
+<body>
+    <div id = "root"></div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    //Write your code below this line
+    const tasks = ["Eat", "Sleep", "Code", "Mark it on Tracker", "Push on Git"]
+    function displayUserData(user){
+        return `Name : ${user.name},
+                Age : ${user.age},
+                DOB : ${user.dob},
+                Favourite Color : ${user.favColor}`
+    }
+    const someUser = {
+        name : "Abhishek Sharma",
+        age : 21,
+        dob : "25th March 1998",
+        favColor : "Black"
+    }
+    
+    const toDoList = (<div>
+                    <h1>My Todo List</h1>
+                    <ul>
+                        <li>{tasks[0]}</li>
+                        <li>{tasks[1]}</li>
+                        <li>{tasks[2]}</li>
+                        <li>{tasks[3]}</li>
+                        <li>{tasks[4]}</li>
+                    </ul>
+                    <p>
+                        {displayUserData(someUser)}
+                    </p>
+                </div>
+        )
+    const root = document.getElementById("root")
+    ReactDOM.render(toDoList, root)
+    </script>
+</body>
+</html>
