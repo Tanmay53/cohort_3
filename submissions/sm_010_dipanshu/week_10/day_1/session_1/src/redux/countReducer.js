@@ -16,12 +16,10 @@ const countReducer = (count = 0, action) => {
       return count * action.payload;
 
     case "divide":
-      count = count / action.payload;
-      return count.toFixed(2);
+      return (count / action.payload).toFixed(2);
 
     case "modulus":
-      count = count % action.payload;
-      return count.toFixed(2);
+      return (count % action.payload).toFixed(2);
 
     default:
       return count;
