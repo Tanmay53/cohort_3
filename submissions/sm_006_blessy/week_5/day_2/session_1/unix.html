@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <style>
+        #id1 {
+
+            margin: auto;
+            background: grey;
+            width: 500px;
+            height: 250px;
+            text-align: center;
+        }
+
+        #img1 {
+            margin-left: 560px;
+            margin-top: -220px;
+            height: 100px;
+            width: 100px;
+
+        }
+
+        #h1 {
+            text-align: center;
+            margin-top: -100px;
+            color: blue;
+        }
+
+        #id2 {
+            background: peachpuff;
+            width: 700px;
+            height: 200px;
+            margin-left: 250px;
+            margin-top: 150px;
+
+        }
+
+        #img2 {
+            height: 200px;
+            width: 150px;
+            margin-top: -200px;
+            margin-left: 200px;
+
+        }
+
+        #h2 {
+            color: red;
+            margin-left: 380px;
+            margin-top: -200px;
+        }
+
+        #p1 {
+            margin-left: 370px;
+        }
+
+        #id3 {
+            background: orange;
+            width: 950px;
+            height: 150px;
+            margin-left: 120px;
+            margin-top: 200px;
+
+
+        }
+
+        #h3 {
+            color: white;
+            margin-top: -150px;
+            margin-left: 130px;
+        }
+
+        #id4 {
+            background: black;
+            height: 120px;
+            width: 1px;
+            margin-left: 550px;
+            margin-top: -50px;
+        }
+
+        #h4 {
+            margin-left: 750px;
+            margin-top: -140px;
+            color: white;
+        }
+
+        #p2 {
+            float: right;
+            margin-right: 300px;
+        }
+
+        #p3 {
+            margin-left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="first"></div>
+    <div id="second"> </div>
+    <div id="third"> </div>
+
+    <button onclick="unix()">Create Page</button>
+    <script>
+
+
+
+        function unix() {
+
+            //var btn = document.createElement("button")
+           // btn.innerHTML = "create page";
+            //document.body.appendChild(btn)
+
+            var linusdiv = document.createElement("div");
+            linusdiv.setAttribute('id', 'id1')
+            document.getElementById("first").appendChild(linusdiv);
+
+            var linusimg = document.createElement("img");
+            linusimg.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg')
+            linusimg.setAttribute('id', 'img1')
+            document.getElementById("first").appendChild(linusimg);
+
+
+            var heading = document.createElement("h1")
+            heading.innerHTML = "Linus Torvalds."
+            heading.setAttribute('id', 'h1')
+            document.getElementById("first").appendChild(heading);
+
+            var saldiv = document.createElement("div");
+            saldiv.setAttribute('id', 'id2')
+            document.getElementById("second").appendChild(saldiv);
+
+            var salimg = document.createElement("img");
+            salimg.setAttribute('src', 'https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg')
+            salimg.setAttribute('id', 'img2')
+            document.getElementById("second").appendChild(salimg);
+
+            var salhead = document.createElement("h1")
+            salhead.innerHTML = "Sal Khan."
+            salhead.setAttribute('id', 'h2')
+            document.getElementById("second").appendChild(salhead);
+
+            var salpara = document.createElement("p1")
+            salpara.innerHTML = "Salman khan is the founder of khan Academy which has a mission of providing a free world class education for antone ,anywhere."
+            salpara.setAttribute('id', 'p1')
+            document.getElementById("second").appendChild(salpara);
+
+
+            var footer = document.createElement("div");
+            footer.setAttribute('id', 'id3')
+            document.getElementById("third").appendChild(footer);
+
+            var kenhead = document.createElement("h1")
+            kenhead.innerHTML = "Ken Thompson."
+            kenhead.setAttribute('id', 'h3')
+            document.getElementById("third").appendChild(kenhead);
+
+            var kenpara = document.createElement("p1")
+            kenpara.innerHTML = "Designed and implemented original operating system."
+            kenpara.setAttribute('id', 'p3')
+            document.getElementById("third").appendChild(kenpara);
+
+            var border = document.createElement("div")
+            border.setAttribute('id', 'id4')
+            document.getElementById("third").appendChild(border);
+
+            var dennhead = document.createElement("h1")
+            dennhead.innerHTML = "Dennis Ritchie."
+            dennhead.setAttribute('id', 'h4')
+            document.getElementById("third").appendChild(dennhead);
+
+            var denpara = document.createElement("p1")
+            denpara.innerHTML = "The Creator of C programming language."
+            denpara.setAttribute('id', 'p2')
+            document.getElementById("third").appendChild(denpara);
+        }
+
+
+    </script>
+</body>
+
+</html>
