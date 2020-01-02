@@ -1,10 +1,11 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import { logger } from "redux-logger";
 import reducer from "./reducer";
 
-var initialState = {
-  customers: []
-};
-
-const store = createStore(initialState, reducer);
+const store = createStore(
+  reducer,
+  composeWithDevTools(applyMiddleware(logger))
+);
 
 export default store;

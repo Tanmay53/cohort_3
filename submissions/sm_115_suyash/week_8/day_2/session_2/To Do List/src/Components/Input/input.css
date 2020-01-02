@@ -1,0 +1,13 @@
+.input {
+  border: 1px yellow solid;
+  padding: 10px 15px;
+  margin: 2rem 0 0 0;
+  border-radius: 15px;
+}
+
+.input:focus {
+  border: solid 2px violet;
+  border-radius: 20px;
+  color: yellow;
+  font-size: 18px;
+}
