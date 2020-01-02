@@ -1,0 +1,14 @@
+{
+  "name": "jest1.2",
+  "version": "1.0.0",
+  "description": "array difference",
+  "main": "arrayDifference.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
