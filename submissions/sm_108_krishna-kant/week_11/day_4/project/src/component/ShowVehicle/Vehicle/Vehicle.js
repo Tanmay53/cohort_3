@@ -61,7 +61,7 @@ const Vehicle = props => {
 };
 
 const selectACar = (vehicle, callback, history) => {
-  store.dispatch(callback(vehicle));
+  callback(vehicle);
 
   history.push('/confirm-ride');
 };

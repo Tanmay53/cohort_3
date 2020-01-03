@@ -21,15 +21,8 @@ export default (state = initialState, action) => {
       };
     }
     case FETCH_ALL_ORDERS: {
-      let orders = [];
-      state.orderList.forEach((order, index) => {
-        if (index % 2 == 0) {
-          orders.push(order);
-        }
-      });
       return {
-        ...state,
-        orderList: orders
+        ...state
       };
     }
     case SET_CURRENT_ORDER: {

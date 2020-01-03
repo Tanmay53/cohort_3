@@ -23,7 +23,7 @@ class SelectLocation extends Component {
       ...this.state
     };
 
-    store.dispatch(createTrip(tripDetails));
+    this.props.createTrip(tripDetails);
     this.props.history.push('/selectCar');
   };
 

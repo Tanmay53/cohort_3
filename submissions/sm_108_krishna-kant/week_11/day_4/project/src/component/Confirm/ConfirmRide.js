@@ -18,8 +18,8 @@ class ConfirmRide extends Component {
     mobile: ''
   };
   componentDidMount() {
-    store.dispatch(this.props.fetchSelectedCar());
-    store.dispatch(this.props.fetchTrip());
+    this.props.fetchSelectedCar();
+    this.props.fetchTrip();
     console.log(this.props);
   }
 
@@ -40,13 +40,10 @@ class ConfirmRide extends Component {
       trip: this.props.trip
     };
 
-    store.dispatch(this.props.createFinalOrder(orderSummary));
+    this.props.createFinalOrder(orderSummary);
+    this.props.setCurrentOrder(orderSummary);
+    this.props.changeCarLocation(this.props.selectedCar, this.props.trip.to);
 
-    store.dispatch(this.props.setCurrentOrder(orderSummary));
-
-    store.dispatch(
-      this.props.changeCarLocation(this.props.selectedCar, this.props.trip.to)
-    );
     this.props.history.push('/order-confirmed');
   };
 
@@ -54,7 +51,7 @@ class ConfirmRide extends Component {
     return (
       <div className='py-2 px-5'>
         <h3 className='lead'>Confirm Your Trip</h3>
-        <div className='d-flex'>
+        <div className='row'>
           <Report carDetails={this.props.selectedCar} />
           <OrderSummary fuelDetail={this.props.selectedCar.Miles_per_Gallon} />
         </div>
