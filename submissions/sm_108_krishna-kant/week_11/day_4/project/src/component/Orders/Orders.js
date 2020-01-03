@@ -15,14 +15,14 @@ class Orders extends Component {
         <h3 className='lead'>Orders and Reports Detail</h3>
         <table className='table table-bordered'>
           <thead className='thead-dark'>
-            <tr>
-              <th>Order No.</th>
-              <th>Name</th>
-              <th>Mobile</th>
-              <th>To</th>
-              <th>From</th>
-              <th>Car</th>
-              <th>Price</th>
+            <tr className='row'>
+              <th className='col'>Order No.</th>
+              <th className='col'>Name</th>
+              <th className='col'>Mobile</th>
+              <th className='col'>To</th>
+              <th className='col'>From</th>
+              <th className='col'>Car</th>
+              <th className='col'>Price</th>
             </tr>
           </thead>
           <tbody>

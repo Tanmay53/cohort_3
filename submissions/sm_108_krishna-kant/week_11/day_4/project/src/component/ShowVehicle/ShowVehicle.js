@@ -6,8 +6,8 @@ import ViechelView from './VehicleView/VehicleView';
 
 class ShowViechel extends Component {
   componentDidMount() {
-    store.dispatch(fetchTrip());
-    store.dispatch(fetchVehicle(this.props.tripDetails.from));
+    this.props.fetchTrip();
+    this.props.fetchVehicle(this.props.tripDetails.from);
     console.log(this.props);
   }
   render() {
@@ -47,4 +47,6 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { fetchTrip })(ShowViechel);
+export default connect(mapStateToProps, { fetchTrip, fetchVehicle })(
+  ShowViechel
+);
