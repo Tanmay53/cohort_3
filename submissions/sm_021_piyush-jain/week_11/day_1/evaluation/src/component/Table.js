@@ -4,11 +4,10 @@ class Table extends React.Component {
         super(props)
     }
     render() {
-        const heading = <table class="table"><tbody><tr><th>NAME</th><th>ID</th><th>DESCRIPTION</th><th>CATEGORY</th><th>Material</th><th>PRICE</th></tr></tbody></table>
         return (
             <div>
-                {heading}
-                <tbody class="flex">
+                <table class="table"><thead><tr><th>NAME</th><th>ID</th><th>DESCRIPTION</th><th>CATEGORY</th><th>Material</th><th>PRICE</th></tr></thead>
+                <tbody >
                     {this.props.database.map((product, index) => (
                         <tr key={product.name + index} class="spacing" id="add" onClick={(e) => this.props.add(index)}>
                             <td>{product.name}</td>
@@ -20,6 +19,7 @@ class Table extends React.Component {
                         </tr>
                     ))}
                 </tbody>
+                </table>
             </div>
         )
     }
