@@ -33,7 +33,7 @@ class ShowData extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.data.map(ele => {
+            {this.props.data.map(ele => {
               return (
                 <tr>
                   <td>{ele.id}</td>
