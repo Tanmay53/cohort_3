@@ -1,0 +1,14 @@
+{
+  "name": "session_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mirrorImage.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
