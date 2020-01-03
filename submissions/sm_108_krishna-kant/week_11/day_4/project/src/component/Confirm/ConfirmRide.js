@@ -85,7 +85,7 @@ class ConfirmRide extends Component {
             </div>
           </div>
           <div className='form-group w-25'>
-            <label>Enter Email</label>
+            <label>Enter Mobile</label>
             <input
               type='number '
               placeholder='Enter Mobile Number'
