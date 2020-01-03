@@ -1,8 +1,9 @@
 import React from "react";
+import "./showList.css";
 
 const ShowList = props => {
   return (
-    <p>
+    <p className="para">
       {props.num}.
       <input type="checkbox" onClick={props.click} />
       {props.item}
