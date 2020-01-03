@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Second task</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script type="text/babel">
+            
+            var arr = ["cooking", "cleaning", "reading", "sleeping", "coding"]
+            var name = "Manish Kumar"
+            var age = 26
+            var dob = "15-09-1993"
+            var fav = "blue"
+
+            ReactDOM.render(
+                <div>
+                    <ul>
+                        <li>{arr[0]}</li>
+                        <li>{arr[1]}</li>
+                        <li>{arr[2]}</li>
+                        <li>{arr[3]}</li>
+                        <li>{arr[4]}</li>
+                    </ul>
+                    <p>My name is {name}. I am {age} years old. My date of birth is {dob}. And my favorite color is {fav}.</p>
+                </div>,
+                document.getElementById("root")
+            );
+        </script>
+    </body>
+</html>

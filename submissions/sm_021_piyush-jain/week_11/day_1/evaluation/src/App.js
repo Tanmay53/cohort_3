@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Table from './component/Table'
 import Cart from './component/Cart'
-
+localStorage.clear();
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -31,7 +31,7 @@ class App extends React.Component {
     this.setState({
       category: [e.target.value]
     })
-    if (e.target.value === "Appliances") {
+    if (e.target.value == "Appliances") {
       this.setState({
         material: ''
       })
@@ -39,7 +39,7 @@ class App extends React.Component {
   }
   //function to select the Material
   handleMaterial = (e) => {
-    if (this.state.category === "Appliances") {
+    if (this.state.category == "Appliances") {
       this.setState({
         material: ''
       })
@@ -52,10 +52,13 @@ class App extends React.Component {
   //Function to get Filtered Data
   handleFilter = (e) => {
     var data = JSON.parse(localStorage.getItem('data'))
+    console.log(data)
     var filler = e.target.value
+    console.log(filler)
     this.setState({
-      db: data.filter((item) => item.category === filler)
+      db: data.filter((item) => item.category == filler)
     })
+    console.log(this.state.db)
   }
   //function to add selected item in Cart
   handleAdd = (index) => {

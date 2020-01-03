@@ -1,0 +1,103 @@
+body {
+  margin: 50px;
+}
+
+/* Button Css */
+.grid {
+  display: grid;
+  margin: 100px;
+  grid-template-rows: 50px 50px 50px 50px;
+  grid-template-columns: 200px 200px;
+  grid-gap: 20px;
+}
+
+.grid button {
+  border: 1px solid black;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+
+/* Card */
+
+.card {
+  height: 600px;
+  width: 1000px;
+  background-color: rgb(28, 28, 80);
+  margin: 100px;
+}
+
+.flex {
+  display: flex;
+  direction: row;
+  margin-left: 350px;
+}
+
+.pill {
+  margin-top: 100px;
+  height: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: yellow;
+  
+}
+
+.image {
+  margin-left: 40px;
+  margin-top: 80px;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.text {
+  color: white;
+  text-align: center;
+}
+
+.widthFix{
+  width: 250px;
+  margin-left: 400px;
+}
+.flexButton {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+
+.btn11 {
+  background: rgb(90, 230, 230);
+  border-radius: 5px;
+  width: 130px;
+}
+
+.btn22 {
+  background:  rgb(28, 28, 80);
+  margin-left: 10px;
+  border: 1px solid rgb(90, 230, 230);
+  border-radius: 5px;
+  width: 130px;
+}
+
+.contentBox {
+  height: 100px;
+  width: 300px;
+  margin-left: 350px;
+  color: white;
+}
+
+.contentBoxRow {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.contentBoxRow Button{
+  background:  rgb(28, 28, 80);
+  padding: 5px;
+  margin-left: 5px;
+  color: white;
+  border: 1px solid rgb(8, 8, 8);
+  border-radius: 5px;
+}
