@@ -6,7 +6,7 @@ import Timer from "./Components/Timer";
 function App() {
   return (
     <div className="container-fluid">
-      <div className="row">
+      <div className="row mt-5 pt-5">
         <Stopwatch className="col" />
         <Timer className="col" />
       </div>

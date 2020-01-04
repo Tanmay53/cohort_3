@@ -61,7 +61,7 @@ class Stopwatch extends Component {
     if (!this.state.toggle) {
       toggle = (
         <button
-          className="mx-3 rounded bg-success py-2 px-4"
+          className="mr-3 rounded bg-success py-2 px-4"
           disabled={this.state.toggle}
           onClick={this.startTimer}
         >
@@ -72,7 +72,7 @@ class Stopwatch extends Component {
       toggle = (
         <button
           onClick={this.stopTimer}
-          className="mx-3 rounded bg-warning py-2 px-4"
+          className="rounded bg-warning py-2 px-4"
         >
           Stop
         </button>
