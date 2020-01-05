@@ -17,7 +17,7 @@ const Links = () => {
         >
           Sign up to Drive
         </a>
-        <i class='fas fa-arrow-right fa-3x'></i>
+        <i className='fas fa-arrow-right fa-3x'></i>
       </div>
       <div
         className='col-lg-5 py-5 d-flex justify-content-between'
@@ -33,7 +33,7 @@ const Links = () => {
         >
           Sign up to Ride
         </a>
-        <i class='fas fa-arrow-right fa-3x'></i>
+        <i className='fas fa-arrow-right fa-3x'></i>
       </div>
     </div>
   );

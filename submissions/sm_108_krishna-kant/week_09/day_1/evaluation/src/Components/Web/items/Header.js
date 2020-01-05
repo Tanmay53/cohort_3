@@ -20,8 +20,12 @@ class Header extends React.Component {
     return (
       <div className='container py-5'>
         <div className='d-flex justify-content-around bg-white flex-wrap'>
-          {this.state.tileDetails.map(tile => {
-            return <Tiles tile={tile} />;
+          {this.state.tileDetails.map((tile, index) => {
+            if (index == 0) {
+              return <Tiles tile={tile} key={index} border='4px solid black' />;
+            } else {
+              return <Tiles tile={tile} key={index} border='0px solid black' />;
+            }
           })}
         </div>
         <div className='d-flex flex-column'>

@@ -29,4 +29,8 @@
 | sm_029 | Sakshi Sinha| Cocktail Db         | [github](https://github.com/SakshiSinha/masai-sprint-3)                      |
 | sm_017 | Mukund Chandak | Cocktail Db         | [github](https://github.com/mukundchandak/masai-sprint-3)                 | 
 | sm_106 | Deepanshu   | Movie DB     | [github](https://github.com/dipanshuraz/masai-sprint-3-2)                           |
-| sm_029 | Sakshi Sinha | Meal DB            | [github](https://sakshisinha.github.io/masai-Sprint-3/)  
+| sm_004 | Abhishek Sharma | Cocktail Database | [github](https://github.com/Abhi1597/sprint_3)                             |
+|sm_114  | Sudhir      | Cocktail DB  | [github](https://github.com/Sudhirsin/projects/tree/master/masai/week_8/sprint-3)   |
+| sm_029 | Sakshi Sinha | Meal DB            | [github](https://sakshisinha.github.io/masai-Sprint-3/)   
+| sm_114 | Sudhir  | Cocktail DB     | [github](https://github.com/Sudhirsin/projects/tree/master/masaisprint-3)              
+| sm_104 | Asheesh Pratap | Meal DB | [github](https://github.com/asheesh900/masai-sprint-3-project-2)                       |

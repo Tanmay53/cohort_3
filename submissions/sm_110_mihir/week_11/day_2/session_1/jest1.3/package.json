@@ -1,0 +1,14 @@
+{
+  "name": "jest1.3",
+  "version": "1.0.0",
+  "description": "count occurances ",
+  "main": "findCountDuplicates.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}

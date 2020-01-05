@@ -16,6 +16,7 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script type="text/babel">
         const tasks = ['Workout','Coding','Eating','Sleeping','Practising'];
+
         const object = {
             name : 'Sagar Kadu',
             Age: 23,
@@ -30,13 +31,19 @@
                 </div>
             }
         }
+
         function todo(){
-            let task = ''
-            for(let i = 0; i < 5; i++){
-                let task = React.createElement('li')
-            }
-            return task;
+            return (
+                      <div>
+                        <li>{tasks[0]}</li>
+                        <li>{tasks[1]}</li>
+                        <li>{tasks[2]}</li>
+                        <li>{tasks[3]}</li>
+                        <li>{tasks[4]}</li>
+                      </div>
+            )
         }
+
 
         const ele = (
             <div>
@@ -45,7 +52,7 @@
                 {object.display()}
             </div>
         );
-    
+        
         const root = document.getElementById('root');
         ReactDOM.render(ele,root)
     
