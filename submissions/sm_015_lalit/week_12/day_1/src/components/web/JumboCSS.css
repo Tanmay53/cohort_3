@@ -1,0 +1,22 @@
+.bg{
+    background-image: url(https://a.slack-edge.com/59662/marketing/img/homepage/video/brand-campaign_hero-poster.jpg);
+    background-size: cover;
+}
+.purple{
+    background-color: #611F69;
+}
+.text-slack{
+    color:#611F69;
+}
+.btn-outline-primary{
+    border-color: #611F69;
+    outline-color: #611F69;
+}
+.btn-outline-primary:hover{
+    background-color: #611F69;
+    color: white
+}
+
+.size {
+    font-size: 50px;
+}
