@@ -53,13 +53,13 @@
         xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8')
         xhr.send(json)
     }
-    // pending removing the selectors
     function printResponse(input) {
         console.log(input)
         var body = document.querySelector('body')
         var main = document.querySelector('main_div')
         console.log(main)
         // body.removeChild(main)
+        body.innerHTML = ''
         var outputPara = document.createElement('p')
         outputPara.textContent = input
         body.append(outputPara);

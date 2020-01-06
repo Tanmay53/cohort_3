@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <center><p class="h1 bg-light mt-4">Login</p></center>
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-4"></div>
+    		
+    		<div class="col-4">
+    			<form name="login" id = "upload">
+    				Username : 
+			      <input type = 'text' name="name" class= 'element form-control'/>
+			      Password:
+			      <input type = 'password' name="surname" class = 'element form-control'/>
+			      <p></p>
+			      <input type = 'submit' class="bg-info"></input>
+			    </form>
+    		</div>
+    		
+    		<div class="col-4">
+                Login id:eve.holt@reqres.in
+            </div>
+        </div>
+        <div> Get Token No.</div>
+    </div>
+    <script>
+    function posting(contentData){
+  var xhr = new XMLHttpRequest();
+
+  var json = JSON.stringify(contentData);
+  
+  xhr.addEventListener('load', function(){
+    if(xhr.status == 200){
+      printResponse(xhr.response)
+    }
+    else{
+      console.log("error:" + xhr.status);
+    }
+  });
+
+  xhr.open("POST", 'https://reqres.in/api/login')
+  xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+  xhr.send(json);
+  
+}
+
+function printResponse(input){
+  var body = document.querySelector('body')
+  var token = document.createElement('h1')
+  token.textContent = input
+  body.append(token)
+  console.log(input)
+}
+
+var form = document.querySelector('#upload')
+
+form.addEventListener('submit', function(event){
+  event.preventDefault(); 
+  var inputs = document.querySelectorAll('.element')
+  var postObject = {
+    email : inputs[0].value,
+    password: inputs[1].value
+  }
+  posting(postObject)
+});
+    </script>
+</body>
+</html>

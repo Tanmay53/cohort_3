@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <title>index.html</title>
+  <style>
+    body {
+      background-size: cover;
+      background-image: url("https://i.pinimg.com/originals/3d/1e/d4/3d1ed43517f666087f197418c60d9059.jpg")
+    }
+
+    .signup {
+      background-image: url("http://www.sfondicellulare.eu/var/albums/Texture-Pattern/texture-legno-rovinato-giallo-e-azzuro.JPG");
+      background-color: white;
+      text-align: center;
+      color: white;
+      font-size: 110px;
+      height: 400px;
+      width: 600px;
+      margin-left: 380px;
+      border: 2px solid black;
+    }
+
+    #wel {
+      height: 110px;
+      /* background-color:black; */
+      background-image: url("https://previews.123rf.com/images/tankist276/tankist2761701/tankist276170100007/70224398-many-coloured-background-of-old-wood-plank.jpg");
+      text-align: center;
+      padding-top: 10px;
+      font-size: 80px;
+      color: rgb(10, 10, 1);
+    }
+
+    .enter {
+      height: 100px;
+      background-color: black;
+      text-align: center;
+      font-size: 50px;
+      color: white;
+      padding-top: 1px;
+      border-bottom: 2px solid black;
+    }
+
+    #size {
+      font-size: 30px;
+      color: black;
+    }
+
+    #signin,#signup {
+      height: 60px;
+      width: 100px;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      margin-top: -80px;
+    }
+
+    input {
+      font-size: 25px;
+    }
+    p.button{
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p id="wel">WELCOME......!
+    </p>
+    
+  </div>
+  <div class="signup">
+    <div class="enter">
+      <p>Enter details</p>
+      <label id="size"><b>Username:</b></label>
+      <input type="text" id="user_name" placeholder="Enter username">
+      <br>
+      <label id="size"><b>Password:</b></label>
+      <input type="password" id="user_password" placeholder="Enter password">
+      <br>
+      <hr>
+      <button id="signin" onclick="login()" type="submit">SignIn</button>
+    </div>
+  </div>
+
+  <script>
+
+    function login() {
+      var flag = false
+      var users = [
+        {
+          "username": "Yashkore",
+          "password": "12345",
+        },
+
+        {
+          "username": "Ravikumar",
+          "password": "12345",
+        },
+
+        {
+          "username": "Ravi",
+          "password": "12345",
+        }
+      ]
+    
+      var user_name = document.getElementById("user_name").value;
+      var user_password = document.getElementById("user_password").value;
+
+       
+     
+      localStorage.setItem("myusers", JSON.stringify(users));
+      console.log(localStorage);
+
+      for (var i = 0; i < users.length; i++) {
+        if (users[i].username == user_name && users[i].password == user_password) {
+            alert("welcome...succesfully logging in" + " "+ user_name );
+          flag = true 
+        }
+      }
+      if(flag==false){
+        alert("Invalid username or password")
+      }
+      // console.log(users.length)
+    }
+  </script>
+</body>
+
+</html>
