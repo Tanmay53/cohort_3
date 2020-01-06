@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>User Database</title>
+</head>
+
+<body>
+    <div class="container">
+        <p class="display-4 text-center">User Database</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-4">
+                <p class="text-center">Input User Data</p>
+                <div class="form-group">
+                    <input type="text" name="" id="iFname" class="form-control my-1" placeholder="First Name">
+                    <input type="text" name="" id="iLname" class="form-control my-1" placeholder="Last Name">
+                    <input type="text" name="" id="iUsername" class="form-control my-1" placeholder="Username*">
+                    <input type="text" name="" id="iPassword" class="form-control my-1" placeholder="Password*">
+                    <input type="text" name="" id="iEmail" class="form-control my-1" placeholder="Email*">
+                    <input type="text" name="" id="iAddress" class="form-control my-1" placeholder="Address">
+                    <input type="number" name="" id="iPnumber" class="form-control my-1" placeholder="Phone No.">
+                    <div class="row m-2 d-flex justify-content-between my-1">
+                        <p>Select user type:</p>
+                        <div class="p-1">
+                            <input type="radio" name="userType" id="isUser" value="user">
+                            <label for="isUser">User</label>
+                        </div>
+                        <div class="p-1">
+                            <input type="radio" name="userType" id="isAdmin" value="admin">
+                            <label for="isAdmin">Admin</label>
+                        </div>
+                    </div>
+                    <button type="button" id="submitData" class="btn btn-primary col">Submit</button>
+                    <small class="text-danger">Fields marked with (*) are required</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="container ">
+                        <p class="text-center h4 font-weight-bold">User Info Dashboard</p>
+                        <div class="row d-flex justify-content-around">
+                            <div class="row">
+                                <p class="my-auto">Select User =></p>
+                            </div>
+                            <div>
+                                <select onchange=dropAction(event) class="custom-select" name="" id="userSelect">
+                                    <option selected hidden>Usernames</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="userInfo" class="col ">
+
+                    </div>
+                </div>
+                <div>
+                    <select onchange=sortData(event) class="custom-select col-2" name="" id="sort">
+                        <option selected hidden>Sort</option>
+                        <option value="asc">Ascending</option>
+                        <option value="des">Descending</option>
+                    </select>
+                    <select onchange=filter(event) class="custom-select col-2" name="" id="filter">
+                        <option selected hidden>Filter by user</option>
+                        <option value="all">All</option>
+                        <option value="user" >User</option>
+                        <option value="admin" >Admin</option>
+                    </select>
+                </div>
+                <div>
+ 
+                    <table class="table" id="tableX">
+                        <thead>
+                            <th>Username</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>User Type</th>
+                            <th></th>
+                        </thead>
+                    </table>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+<script src="script.js"></script>
+
+</html>
