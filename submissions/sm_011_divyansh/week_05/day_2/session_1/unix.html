@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unix</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        .box1 {
+            width: 470px;
+            height: 340px;
+            background: grey;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .firstboxh1 {
+            color: blue;
+        }
+
+        .firstboxp {
+            font-size: 30px;
+        }
+
+        img {
+            height: 150px;
+            width: 130px;
+        }
+
+        .box2 {
+            width: 650px;
+            height: 150px;
+            padding-top: 30px;
+        }
+
+        .row {
+            float: right;
+            padding: 10px;
+        }
+
+        .secondboxh1 {
+            color: red;
+        }
+
+        .box3 {
+            background: orangered;
+            width: 900px;
+            height: 150px;
+            padding-top: 20px;
+        }
+
+        .left {
+            width: 490px;
+            height: 140px;
+            border-right: 7px solid black;
+            float: left;
+
+        }
+
+        .right {
+            float: right;
+        }
+
+        .name {
+            color: white;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page"></div>
+    <button onclick="createPage()">Create</button>
+
+    <script>
+        function createPage() {
+            //creating firstbox
+            var cont = document.getElementById("page");
+            var box1 = document.createElement("div")
+            box1.setAttribute("class", "box1")
+            var img1 = document.createElement("img")
+            img1.setAttribute("src", "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg")
+            box1.appendChild(img1)
+            var h1 = document.createElement("h1")
+            h1.textContent = "Linus Torvalds"
+            h1.setAttribute("class", "firstboxh1")
+            box1.appendChild(h1)
+            var p = document.createElement('p')
+            p.textContent = "The creator of Linux & Git";
+            p.setAttribute("class", "firstboxp")
+            box1.appendChild(p)
+            cont.appendChild(box1)
+            //creating second box
+            var box2 = document.createElement("div")
+            box2.setAttribute("class", "box2")
+            var img2 = document.createElement("img")
+            img2.setAttribute("src", "https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg")
+            box2.appendChild(img2);
+            var div = document.createElement("div");
+            div.setAttribute("class", "row");
+            var secondboxh1 = document.createElement("h1")
+            secondboxh1.textContent = "Sal Khan";
+            secondboxh1.setAttribute("class", "secondboxh1")
+            div.appendChild(secondboxh1)
+            var secondP = document.createElement("p");
+            secondP.innerHTML = "Salman Khan is the founder of Khan Academy which has a mission of" + "<br>" + "providing a free world-class education for anyone, anywhere."
+            div.appendChild(secondP)
+            box2.appendChild(div)
+            cont.appendChild(box2)
+            //creating third box
+            var box3 = document.createElement("div");
+            box3.setAttribute("class", "box3");
+            var div1 = document.createElement("div");
+            div1.setAttribute("class", "left")
+            var p1 = document.createElement("p")
+            p1.textContent = "Ken Thompson";
+            p1.setAttribute("class", "name")
+            div1.appendChild(p1);
+            var p2 = document.createElement("p");
+            p2.innerHTML = "Designed & Implemented the" + "<br>" + "Original Unix operating system"
+            div1.appendChild(p2)
+            box3.appendChild(div1);
+            var div2 = document.createElement("div");
+            div2.setAttribute("class", "right");
+            var p3 = document.createElement("p");
+            p3.textContent = "Dennis Ritchie";
+            p3.setAttribute("class", "name");
+            div2.appendChild(p3)
+            var p4 = document.createElement("p");
+            p4.textContent = "The creator of C programming language";
+            div2.appendChild(p4)
+            box3.appendChild(div2)
+            cont.appendChild(box3)
+        }
+    </script>
+</body>
+
+</html>
