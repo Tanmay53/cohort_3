@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.js"
+	  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	  crossorigin="anonymous"></script>
+
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				List of All
+				<button id="click">Show</button>
+				Show Per Page
+				<select id="sel">
+					<option value="ten">Top 10</option>
+					<option value="twofive">Top 25</option>
+					<option value="fifty">Top 50</option>
+					<option value="hundred">Top 100</option>
+				</select>
+				Pagination
+				<select id="page"></select>
+				Filter
+				<select id="filter">
+					<option value="all">All</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+				Sort
+				<select id="sort">
+					<option value="fname">First Name</option>
+					<option value="tmarks">Total Marks</option>
+				</select>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<table class="table">
+				  	<thead id="tabhead">
+					    <tr>
+					    	<th scope="col">Id</th>
+					    	<th scope="col">First Name</th>
+					    	<th scope="col">Last Name</th>
+					    	<th scope="col">Email</th>
+					    	<th scope="col">Gender</th>
+						    <th scope="col">English</th>
+						    <th scope="col">Math</th>
+						    <th scope="col">Science</th>
+						    <th scope="col">Total</th>
+						</tr>
+				  	</thead>
+  					<tbody id="tab">
+  						
+  					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src ="action.js"></script>
+</body>
+</html>

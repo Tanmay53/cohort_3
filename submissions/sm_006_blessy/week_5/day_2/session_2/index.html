@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <style>
+        .table,
+        tr,
+        td {
+            border: 2px solid black
+        }
+
+        .flex-container {
+            display: flex;
+            background-image: url("https://images.unsplash.com/photo-1573576383167-1255a6af80f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+            background-size: cover;
+            justify-content: center;
+        }
+
+        .flex-container>div {
+            padding: 20px;
+            margin: 10px;
+
+        }
+
+        .form {
+            height: 300px;
+            padding: 30px;
+            border: 5px solid black;
+
+        }
+
+        #product1 {
+            border-radius: 10px;
+
+        }
+
+        #bttn {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            margin-left: 55px;
+            margin-top: 5px;
+            padding: 10px 24px;
+
+        }
+
+        .table {
+            padding: 30px;
+            border: 5px solid black;
+
+        }
+
+        .settings {
+            height: 300px;
+            padding: 30px;
+            border: 5px solid black;
+        }
+
+        #settgs {
+            text-align: center;
+        }
+
+        .submit1 {
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+
+        .submit1:hover {
+            background-color: rgb(175, 76, 158);
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="flex-container">
+    <!-- FORM to add -->
+    <div class="form">
+        <div class="product">
+            <div>Products</div>
+            <input type="text" id="product1">
+        </div>
+        <div class="price">
+            <div>Price</div>
+            <input type="number" id="price1">
+        </div>
+        <div class="qty">
+            <div></div>
+            <div>Quantity</div>
+            <input type="number" id="qty1">
+        </div>
+        <button id="bttn" onclick="add()">Add</button>
+
+    </div>
+    <!-- TABLE -->
+    <div>
+        <table class="table" id="tble">
+            <tr>
+                <td>PRODUCT</td>
+                <td>PRICE</td>
+                <td>QUANTITY</td>
+
+            </tr>
+        </table>
+    </div>
+    <!-- SETTINGS -->
+    <div class="settings">
+        <h1 id="settgs">Settings</h1>
+        <div class="font">
+            <div>CHANGE FONT SIZE</div>
+            <input type="text" id="font1">
+            <button onclick="changefont()" class=" submit1">submit</button>
+        </div>
+        <div class="color">
+            <div>CHANGE FONT COLOR</div>
+            <input TYPE="text" id="clr">
+            <button onclick="changeclr()" class=" submit1">submit</button>
+        </div>
+        <div class="backgrnd">
+            <div>CHANGE BACKGROUND COLOR</div>
+            <input type="text" id="background">
+            <button onclick="changebackgrndclr()" class=" submit1">submit</button>
+        </div>
+    </div>
+    <script>
+        arr = []
+        var obj = {}
+        function add() {
+            var prod = document.getElementById("product1").value;
+            var pric = document.getElementById("price1").value;
+            var qnty = document.getElementById("qty1").value;
+            obj = {
+                product: prod,
+                price: pric,
+                qty: qnty
+            }
+            arr.push(obj)
+            createtable(obj)
+        }
+        function createtable() {
+            var tble = document.querySelector(".table")
+            //first row
+            var tr = document.createElement("tr")
+            tble.appendChild(tr)
+            //first col
+            var td = document.createElement("td")
+            td.innerHTML = obj.product
+            tr.appendChild(td)
+            //sec col
+            var td1 = document.createElement("td")
+            td1.innerHTML = obj.price
+            tr.appendChild(td1)
+            //third col
+            var td2 = document.createElement("td")
+            td2.innerHTML = obj.qty
+            tr.appendChild(td2)
+        }
+        function changefont() {
+            var tble = document.querySelector(".table")
+            var fontt = getElementById("font1").value;
+            tble.style.fontSize = fontt
+        }
+        function changeclr() {
+            var tble = document.querySelector(".table")
+            var clr = document.getElementById("clr").value;
+            tble.style.color = clr
+        }
+        function changebackgrndclr() {
+            var tble = document.querySelector(".table")
+            var bakgrndclr = document.getElementById("background").value;
+            tble.style.backgroundColor = bakgrndclr
+        }
+    </script>
+</body>
+
+</html>

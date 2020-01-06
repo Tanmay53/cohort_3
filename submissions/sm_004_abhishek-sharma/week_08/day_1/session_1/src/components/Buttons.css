@@ -1,0 +1,32 @@
+.btn {
+    color: white;
+    font-size: 20px;
+    border-radius: 50px;
+    height: 50px;
+    width: 200px;
+    margin: 10px 25px;
+}
+.joinBtn {
+    background-color: aqua;
+}
+.settingsBtn {
+    background-color: grey;
+}
+.loginBtn {
+    background-color: orange;
+}
+.contactBtn {
+    background-color: darkred;
+}
+.searchBtn {
+    background-color: green;
+}
+.helpBtn {
+    background-color: darkviolet;
+}
+.homeBtn {
+    background-color: palevioletred;
+}
+.downloadBtn {
+    background-color: peru;
+}
