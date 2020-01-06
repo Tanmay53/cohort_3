@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+    <div id = "root"></div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    const data=function(){  
+    return      <div>
+                <h1>My Todo List</h1>
+                <ul>
+                <li>Coding</li>
+                <li>Coding</li>
+                <li>Eating</li>
+                <li>Sleeping</li>
+                <li>Coding</li>
+                </ul>
+                <p>Hello, My name is XYZ. I am XYZ years old. I celebrate my birthday on XYZ. My favourite color is XYZ.</p>
+                </div>
+    }  
+    ReactDOM.render(data(),document.getElementById("root"))
+    </script>
+</body>
+</html>
