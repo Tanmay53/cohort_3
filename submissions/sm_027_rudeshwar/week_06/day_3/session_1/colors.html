@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Colours</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$("#change1").click(function () {
+				$("#head1").css("color", "red");
+				$("#head1").css("font-size", "70px");
+			});
+
+			$("#change2").click(function () {
+				$("#head2").css("color", "green");
+				$("#head2").css("font-size", "32px");
+				$("#head2").css("padding", "10px");
+			});
+
+			$("#change3").click(function () {
+				$("#head3").css("background", "black");
+				$("#head3").css("color", "white");
+			
+			});
+
+			$("#change4").click(function () {
+				$(".head4").css("border", "2px solid black");
+				$(".head4").css("margin", "10px 0px 10px 0px");
+			
+			});
+
+			$("#change5").click(function () {
+				$("div").css("padding", "6px 8px 6px 8px");
+			});
+
+			$("#change6").click(function () {
+				$("p").css("color", "purple");
+				$("p").css("font-weight","bold")
+			});
+
+			$("#change7").click(function () {
+				$(".red").css("color", "red");
+			});
+
+			$("#change7").click(function () {
+				$(".red").css("color", "red");
+			});
+
+			$("#change8").click(function () {
+				$(".green").css("color", "green");
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+	<h1 id="head1" class="red">MASAI H1</h1>
+	<h2 id="head2" class="green">MASAI H2</h2>
+	<h3 id="head3" class="red">MASAI H3</h3>
+	<h4 class="head4" class="green">MASAI H4</h4>
+	<h4 class="head4" class="green">MASAI H4</h4>
+	<div id="con1 red" class="red">School C1</div>
+	<div id="con2 green" class="green">School C2</div>
+	<div id="con3 red" class="red">School C3</div>
+	<p id="para1 red" class="red">Coding P1</p>
+	<p id="para2 green">Coding P2</p>
+	<p id="para3 red" class="red">Coding P3</p>
+	<hr>
+	<button id="change1">Change H1</button>
+	<button id="change2">Change H2</button>
+	<button id="change3">Change H3</button>
+	<button id="change4">Change H4</button>
+	<button id="change5">Change DIVS</button>
+	<button id="change6">Change Paragraph</button>
+	<button id="change7" class="green">Change Red</button>
+	<button id="change8">Change Green</button>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>product</title>
+    <style>
+        th {
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>ADD PRODUCTS</h1><br>
+        <input type="text" placeholder="enter product name">
+        <input type="number" placeholder="enter price name">
+        <input type="number" placeholder="enter quantity">
+        <button id="add">add</button>
+    </div><br>
+    <hr>
+    <div>
+        <h1>SETTINGS</h1><br>
+        change fontsize:<select id="fsize">
+            <option value="30px">30px</option>
+            <option value="40px">40px</option>
+            <option value="50px">50px</option>
+        </select><br>
+        change fontcolor:<select id="fcolor">
+            <option value="yellow">yellow</option>
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+        </select><br>
+        change backgroundcolor:<select id="bgcolor">
+            <option value="purple">purple</option>
+            <option value="black">black</option>
+            <option value="green">green</option>
+        </select><br>
+
+
+    </div><br>
+    <hr>
+    <div>
+        <h1>product store</h1><br>
+        <table border="4" id="products">
+            <tr>
+                <th>product</th>
+                <th>price</th>
+                <th>qty</th>
+            </tr>
+
+        </table>
+    </div>
+    <script>
+        var addbtn = document.getElementById("add")
+        var fsize = document.getElementById("fsize")
+        var fcolor = document.getElementById("fcolor")
+        var bgcolor = document.getElementById("bgcolor")
+        var table = document.getElementById("products")
+        addbtn.addEventListener("click", takedata);
+        fsize.addEventListener("change", changefsize);
+        fcolor.addEventListener("change", changefcolor);
+        bgcolor.addEventListener("change", changebgcolor);
+        var inp = document.querySelectorAll("input");
+
+
+
+        function takedata() {
+            var arr = []
+
+            for (var i = 0; i < inp.length; i++) {
+                arr.push(inp[i].value)
+                inp[i].value = ""
+            }
+            console.log(arr)
+
+
+            display(arr);
+            
+
+
+
+        }
+        function display(arr) {
+            var tr = document.createElement("tr")
+            arr.forEach(function (val) {
+                var td = document.createElement("td")
+                td.textContent = val
+                tr.appendChild(td)
+            })
+            table.appendChild(tr)
+
+        }
+        function changefsize() {
+            var row = document.querySelectorAll("td")
+            for (var i = 0; i < row.length; i++) {
+                row[i].style.fontSize = fsize.value
+            }
+        }
+        function changefcolor() {   
+            var row = document.querySelectorAll("tr")
+            for (var i = 0; i < row.length; i++) {
+                row[i].style.color = fcolor.value
+            }
+        }
+        function changebgcolor() {
+            var row = document.querySelectorAll("tr")
+            for (var i = 0; i < row.length; i++) {
+                if (i % 2 != 0) {
+                    row[i].style.backgroundColor = bgcolor.value
+                }
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
