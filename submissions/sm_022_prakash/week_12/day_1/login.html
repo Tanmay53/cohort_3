@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<head>
+    <title>Login.html</title>
+</head>
+
+<body>
+    <div id="main_div">
+    <form id="formElement">
+        <label>username:</label>
+        <input type="text" for="username" id="username" class="formEle"> <br>
+        <label>password:</label>
+        <input type="password" id="password" class="formEle">
+        <button type='submit'>submit</button>
+    </div>
+    </form>
+</body>
+<script> 
+    var form = document.querySelector('#formElement');
+    // function submit(){
+    form.addEventListener('submit', function (event) {
+        console.log("working")
+        event.preventDefault();
+        var inputElements = document.querySelectorAll('.formEle');
+        var postObject = {
+            email: inputElements[0].value,
+            password: inputElements[1].value,
+        }
+        console.log(postObject)
+        sendData(postObject)
+        // return postObject
+    });
+
+    function sendData(objData) {
+        var xhr = new XMLHttpRequest();
+        var json = JSON.stringify(objData);
+        xhr.addEventListener('load', function () {
+            if (xhr.status == 200) {
+                printResponse(xhr.response)
+            }
+            else {
+                console.log("Error Code is:" + xhr.status);
+            }
+        });
+        xhr.addEventListener('error', function (event) {
+            console.log('Error in HTTP request!')
+        })
+        xhr.open('POST', 'https://reqres.in/api/login');
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8')
+        xhr.send(json)
+    }
+    pending removing the selectors
+    function printResponse(input) {
+        console.log(input)
+        var body = document.querySelector('body')
+        var main = document.querySelector('main_div')
+        console.log(main)
+        // body.removeChild(main)
+        body.innerHTML = ''
+        var outputPara = document.createElement('p')
+        outputPara.textContent = input
+        body.append(outputPara);
+    }
+</script>
+
+
+</html>
