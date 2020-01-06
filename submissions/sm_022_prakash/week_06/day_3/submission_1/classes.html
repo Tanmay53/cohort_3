@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Practise Attributes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style type="text/css">
+        .class-h1 {
+            color: red
+        }
+
+        .class-h3 {
+            color: green;
+            border: 2px solid black;
+        }
+
+        .class-h5 {
+            color: orange;
+        }
+
+        .class-div {
+            color: yellow;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .class-odd {
+            color: black;
+            background: white;
+        }
+
+        .class-even {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="ml-2">
+    <h1 id="first_h1">First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5 class="class-h3">First H5</h5>
+    <h5 class="class-h3">Second H5</h5>
+    <h5 class="class-h3">Third H5</h5>
+    <div id="test-2" class="class-div">MASAI School</div>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>
+    <hr />
+    <button class="btn btn-primary" id="change_h1">Change H1</button>
+    <button class="btn btn-primary" id="change_h2">Change H3</button>
+    <button class="btn btn-primary" id="change_div">Change DIV</button>
+    <button class="btn btn-primary" id="change_h5">Change h5</button>
+    <button class="btn btn-primary" id="change_p">Change P</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            console.log("1")
+            $('#change_h1').click(function () {
+                console.log("2")
+                $("#first_h1").addClass("class-h1")
+            });
+
+            $('#change_h2').click(function () {
+                $('h3').addClass("class-h3")
+            });
+            $("#change_div").click(function () {
+                console.log("33")
+                $("#test-2").removeClass("class-div")
+            })
+            $("#change_h5").click(function () {
+                $("h5").removeClass("class-h5")
+                $("h5").addClass("class-h5")
+            })
+            $("#change_p").click(function () {
+                $("p").addClass(function (index) {
+                    if (index % 2 == 0) {
+                        return "class-even"
+                    }
+                    else {
+                        return "class-odd"
+                    }
+                })
+            })
+
+        });
+    </script>
+
+</body>
+
+</html>
