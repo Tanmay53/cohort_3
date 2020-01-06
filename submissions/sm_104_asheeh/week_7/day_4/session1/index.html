@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>ES6 Classes</title>
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="container mt-4" style="background: pink;">
+                        <div class="row">
+                            <div class="col-10">
+                                <p class="display-4">Enter your car details</p>
+                                <form>
+                                    <div>
+                                      <label for="formGroupExampleInput">Car Make</label>
+                                      <input type="text" class="form-control" id="inputCarMake" placeholder="E.g.Honda">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="formGroupExampleInput2">Model</label>
+                                      <input type="text" class="form-control" id="inputModel" placeholder="E.g.City/Amaze">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2">Top Speed</label>
+                                        <input type="text/number" class="form-control" id="inputTopSpeed" placeholder="E.g.150Kmph">
+                                      </div>
+                                      <button id="btnSubmitCarDetails" onclick="submitCarDetails()" type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-sm-12">
+                    <div class="container mt-4" style="background: pink;">
+                        <div class="row">
+                            <div class="col-10">
+                                <p class="display-4">Ride details</p>
+                                <form>
+                                    <label for="formGroupExampleInput">Select your car</label>
+                                    <select id="selectCar" class="form-control">
+                                        <option>Select your car</option>
+                                    </select>
+                                    <div>
+                                        <label for="formGroupExampleInput">Journey Duration</label>
+                                        <input type="text" class="form-control" id="inputJourneyDurn" placeholder="E.g.2Hrs">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2">Distance Covered</label>
+                                        <input type="text" class="form-control" id="inputDistance" placeholder="E.g.200Km">
+                                    </div>
+                                    <button id="btnSubmitRideDetails" onclick="submitRideDetails()" type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container justify-content-center mt-4">
+            <div class="row">
+                <div class="col-4">
+
+                        <form>
+                                <select id="selectModelToDisplay" class="form-control">
+                                    <option>Select your Model</option>
+                                </select>
+                        </form>
+
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                        <button id="btnShowStatus" onclick="showCurrentStatus()" type="submit" class="btn btn-primary">Show Current Status</button>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+
+        <div class="container justify-content-center mt-4">
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div  class="col-lg-4 col-sm-12">
+                        <p class="h4" id="displayArea">display area</p>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
