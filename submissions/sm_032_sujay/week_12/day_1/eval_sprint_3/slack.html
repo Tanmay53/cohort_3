@@ -1,0 +1,302 @@
+<html>
+    <head>
+        <!-- <title><img class="img-fluid" width="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAA7VBMVEX///82xfHrsi0ttn7fHVoqw/HrsSjrsCCW2fHeA1LplKmd1r0es3ju0JQqtX7bEVfnuVRbyOzdAE2i4fjU7uL12KDu0Zn3y9fdAEvqrQ7fFFam3vMes3lfwpe24/Ts9vK64c/utMP11996y6fm9Pl20O/0+fuw3smE1PDf8emx4fLqvV71587sxnjx27LquEr59OvkbY367vH89vjtyYLsp7jw16j23uVUx+/M6/Zsxp+U07ZHvIra8Pe14MzF6PXrnLD04b/37+Dme5feK2PhVn3hSXTkZIbvusfgQW/fT3jyy9T12eDrwGnoh6Bpl7c9AAAI5ElEQVR4nO2ca1viOhCAQYVaqbvCUZdWUFjvNxTEOx5v6Lp61v//c06rUtLmMk1J21nI+2U/7NDHvs8khGQmuZxGM25srM6WyxflzdnLLTB2sbRe79WvrhtrKfxh+Fi9KLjk83nvn80bUeju+rRl1WrT0zXLsuqNlP5APKzmPU8+hUJ5gxe6dmW5noZY040U/9Ds2SoHVH3qWmHHbgdVfei6gsft2HCTp1x5ujZZsetWWJVnq7eb9t+cFTcsVRxbTFfu5FWbEFtbbFWerZ1w7DXblcdkjER6vhraWg2GNviuavVs/vp02eO7cm0F8mWLq8qbt7azeoP04A9CeiAKBqFHVq+QHiuixAqm1prY1QSk1oXQVZ5cbZXEsqZ72b1FOvCWDUOGsT2xq2lr3JcPwCgkx+EWkFjjPw43QVmXg9BFSFZtPcs3SQFgynJl7Q1C/4VkTY/7UgtylS/MDkKh+X38Z3ilsr5l+SYpoGVJUNayorMDfhtqWT6rWlZ0NrQsCQS7WVpWmFstSwJo20HLIgD2HbSsALNCW1pWEOEcr2WFENnSssIIdrW0LIq9Ak+XlkWztcPRpWWx2FgpF1hoWWy2Lm9X/gnj78FrWRJoWRJoWRJoWRJoWRJoWRJoWRJoWRJMgKyN1dnNsgybOyvs9oq4stYa1+v1+noJfefK3qDHJDofH9hh9FfEk7Xds7zWFRfL6v2b+AvHZ0XSE2lskyrVjiOrZAU+ZNWwlnBtXMRV9akrVNYdQ9Zuj/qI1UM5GKEzLlhXqGVAWhazar5WW0zPQVRGdkW1o8jK4nUYWI0UNUQCLqyVzi1JWfyqSmyFuuJWgOi2bolnyslaoxrteBmYOWBdbVSI70Q5WVcCWbgqdZUMQg9yIErJEpc2oxqIyhKLbEeRklUXJJabWlcZSOEAFl1JyBq2o8jI2gViLTyrLbBtQoIL/6kysqBYRM0YUIGaDMNxKCOrDkQiGofqVJHtKBKyhF2cIa8Zs6UwsYh2FAlZQGeil1pYJi2F83vM43uwJwrPDP9XyMKy0spMlt/o9BdlVkJzluCegk+GtxXAsmporoFQ6Cpf8DfkoYUm8ZMPloWn207drx1X1vCxYNuvv8X+NzW9gg05EpSHjxX/3iPnIVAWog1AhZMWuRMPTFrEBSuwLDRTVoTGuOiyyMd+i5otkCwLzyhUuHgI3ji2LXRAzNmgLCwLhw/EXRPRuQg+tieYtSzi1AaQZZXStQEx0pmhTyF0kC9YPVjXRJxYFrrbozaUuNoLP5Y7x1sBAUBmoRqEHgq24VlXJHKmraAroazaNJafhQQbzFsPR8orjwZ9maR3nWQwSCAL6fn9aAv5wgXnXle6gMGiNom5smqoFg0BLssxy2jcj3FuKfXY/kZml2WtU7nCkWVZdYSFDj43O8wWE4hyuIImROPK8vBuC+6VGMNq0QrjhX5bx6zqg5vblVkp9oT3Kg9YbJSuS9uL7Alo95qi1EA4r2s0Go1Go9FoUuL85W4uzPs5M7Tzdur+Z/NnlMcetJbnZVi6f1D6Wgnw89GsVkyK6g869Hyu/xVarT41xY9t7du2IYn7ie5BMm+phLfnqjPDokLJ6rSr5jDWqcyc8h97NmUXp+Jg2AtodbU5qhiy7sxwaKXPGY0PR3YsUx8U7cPEXzsOnb7JUUXL+lWhY5wKcyy2YmaVn11Tx2m8vRznDi+taFnPbK3VO/qxZyOk1VdyGehm+s53gauQLI4r1xaVW62RXbm2ithy67fIVVDWO2MMDuJC89aDAleuraNUVYDM8QWEZb1V+XFOP/jYo9HmqwH2fLo2xHQEAsKyhDlYCawgRp+wBrYwDcRH4SAMyHoR56BDPlZNXrkYiBYQJ/xFAyXrVeyVXD+omN0HtvCkVlOcLaQsaMA6r8PH7ivLrCm7lYUXJm1gFBKymlASVoePVZdYmMZhP7qsR1CWv3pQs274pDiVjRmaDiSAkAVMWTMzpj9ptQx1svBMWtA8RMrqQ6Hm3CB0WaUsG8tvnnMJWd+1LFDW2yB24mVFmLM6g1gJWWdjOWfBE5FzMgiVkHUwlt+GuSfgK8757YdKyDpWKWs/EzEsToFxaL77oRKyVO05eBhnWXhhAq0dhgtNKVkKJy1M2w6/hOOQGIVSstSNw+KfDKTw+E+YWuSpoYys3Lyq1EKzcPigLZi1yI0EOVk5Ra4Q/Yz2OBGcV5gdIlBO1r2aPfhi2joAfnIHYvWFjJOTlZtXYctGdyz9wrFVDZ7LS8rKHY5uy75P00M0flAn8i5O+ChQVlauO6KtooHQlft7+je1u2xSBQzSsnItY5TvRPsI1RchwZ1JZpdjVsIvHkdW7vjQjqmraCBauVOcnPYrFdNxMc1q/+6EjoghK5d76BZtwyhK4VVoHSFW9UGnOdd+fW2/N9nFfrFkuRycdf8sSLB/ON/COgAjE1fWRKJlSaBlSaBlSaBlSaBlSaBlSaBlSSBzFLZEcY9usyVRJGTN0x0otm0vnCE6e0iYkY/v3R993UnRpaLWwTDw1PEliprCEKQdOapRVEVj4DmOTxBVJUcTYUtZfRaurolkUFfMhu+ASznqZGFrX0oAhWWSGM8D1aJQFqICtYRQWYCLqegqEVTKGvuFvFJZ3SzfJAVUyiouZPkmKaBUFp567WRQ2mGBrUhNNX2VssY9s57BFjq/+A2s7B77NTzc9Or3RIHtKAamgu0kuAM7Wf1yXbAM3ljK8k1SQFwxH7wGA2pHGf99B6Cf2rwbhi5N/LYDMA6rRNE8MA6N5ezeIiVOhCst85GM7QpTC93lRQlwKroxwyG7MXLHIlk29oJRJQiWWuGqecEFK8a4/zD85IR7h1vlMRzLHYhFPE3PyXLO6sXwXP2iY/+wbSG8my4pzmdYtqptViyzeceYmhhX7kh8otamDut6RI8z+jpJe39CxuAXzZmKE1D1xG4ycHnYD7SjFO3iuG8n0zSfvzpXHLPitIX3Kx8cDtpRvB6TyVPl0Wm+Pz0/v7bn3hhNPiEOlg8Xjhb2u63JGoCayeB/VV8qlIEJUvoAAAAASUVORK5CYII=">  -->
+            <title>Where Work Happens | Slack</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <style>
+            .purple{
+                background:purple;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!-- Image and text -->
+<nav class="navbar navbar-light fixed-top bg-white ">
+    <a class="navbar-brand" href="#">
+      <img src="data:image/png;base64,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" width="100" height="80" class="d-inline-block align-top ml-2" alt="">
+    </a>
+
+    
+        <a class="text-left text-dark text-decoration-none">Why slack?</a>
+    <a class="text-left text-dark text-decoration-none"> Solution</a>
+    <a class="text-left text-dark text-decoration-none">Resources</a>
+    <a class="text-left text-dark" href="https://slack.com/intl/en-in/enterprise">Enterprise</a>
+    <a class="text-left text-dark" href="https://app.slack.com/plans/TQW9G4X2N/?geocode=en-in">Pricing</a>
+  
+    
+    <div class="text-right">
+        <button type="button" class="btn btn-primary btn-lg float-right purple">Your Workspaces</button>
+    </div>
+      
+    <!-- edit -->
+    <!-- <div class="sm md">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div> -->
+
+  </nav>
+
+  <!-- <div class="container-fluid bk">
+     <h1 > Slack replaces email <br> inside your company</h1>
+
+  </div> -->
+
+  <div class="jumbotron jumbotron-fluid my-5">
+    <div class="container-fluid mx-5">
+      <h1 class="display-4 font-weight-bold">Slack replaces email <br> inside your company</h1>
+      <p class="lead">Keep conversations organised in Slack, the smart<br> alternative to email.</p>
+      <button type="button" class="btn btn-primary btn-lg purple">TRY SLACK</button>
+      <button type="button" class="btn btn-outline-primary btn-lg purple">SEE THE DEMO</button><br>
+      <span>Already using Slack?<a href="https://slack.com/signin">Sign in</a></span>
+    </div>
+  </div>
+
+  <h2 class="display-4 font-weight-bold text-center">Break out of the inbox</h2>
+  <p class="text-center font-weight-bold">Working in channels gives everyone in your team a shared view of progress and purpose.</p>
+
+  <div class="shadow p-3 mb-5 bg-white rounded">
+      <!-- <img src="https://slack.com/marketing/img/homepage/video/brand-campaign_inline-video.mp4"> -->
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="card border-white" style="width: 18rem;">
+                    <ul class="list-group list-group-flush border-white">
+                      <li class="list-group-item border-white ">
+                          <img class="img-fluid" width="60" src="https://static.thenounproject.com/png/1005559-200.png">
+                      </li>
+                      <li class="list-group-item border-white font-weight-bold">Conversations, organised</li>
+                      <li class="list-group-item border-white">Instead of a single overstuffed inbox, conversations in Slack happen in dedicated spaces called channels.</li>
+                    </ul>
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="card border-white" style="width: 18rem;">
+                    <ul class="list-group list-group-flush border-white ">
+                      <li class="list-group-item  border-white">
+                         
+                          <img class="img-fluid" width="60" src="https://static.thenounproject.com/png/2313534-200.png">
+                      </li>
+                      <li class="list-group-item border-white border-white font-weight-bold">Stay in the loop, not out</li>
+                      <li class="list-group-item border-white">Slack makes it simple to follow conversations or find important information in an easily searchable archive.</li>
+                    </ul>
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="card border-white" style="width: 18rem;">
+                    <ul class="list-group list-group-flush border-white">
+                      <li class="list-group-item border-white">
+                        <img class="img-fluid" width="60" src="https://static.thenounproject.com/png/1230927-200.png">
+                      </li>
+                      <li class="list-group-item border-white font-weight-bold">Give focus a chance</li>
+                      <li class="list-group-item border-white">Unlike email, Slack lets you choose which conversations are most important – and which can wait.</li>
+                    </ul>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+
+    <!-- pending -->
+
+    <div>
+
+    </div>
+
+    <!-- carousel -->
+    <div class="container-fluid bg-light my-5">
+        <h2 class="display-4 font-weight-bold text-center ">Trusted the world over</h2>
+        <p class="font-weight-bold text-center">Teams of every size, shape and sort have already made Slack the place where their work happens.</p>
+        <a class="offset-5" href="https://slack.com/intl/en-in/customer-stories">See all customer stories</a>
+        
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active  p-5 m-5">
+                <img src="https://a.slack-edge.com/80588/marketing/img/stories/intuit/slack-customer-intuit.jpg" class="d-block img-fluid " width="300px" alt="...">
+              </div>
+              <div class="carousel-item  p-5 m-5">
+                <img src="https://a.slack-edge.com/80588/marketing/img/stories/lyft/slack-customer-lyft.jpg" class="d-block  img-fluid " width="300px"  alt="...">
+              </div>
+              <div class="carousel-item  p-5 m-5">
+                <img src="https://a.slack-edge.com/80588/marketing/img/stories/shopify/slack-customer-shopify.jpg" class="d-block  img-fluid" width="300px" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        
+
+          <div>
+              <!-- pagination -->
+          </div>
+
+          <div class="container-fluid my-5">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/trivago-logo.png">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/vodafone-logo.png">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/shopify-logo.png">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <img src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/treebo-logo.png">
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+    <h2 class="display-4 font-weight-bold text-center p-5 m-5"> What’s new at Slack</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="https://a.slack-edge.com/b4782/marketing/img/promos/2019-10-10-engagement.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class= "col-4">
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="https://a.slack-edge.com/ebeb3/marketing/img/promos/shared-channels-hp-promo.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class= "col-4">
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="https://a.slack-edge.com/80588/marketing/img/promos/gsuite-calendar-email-files.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+
+                 
+        </div>
+    </div>
+
+
+    <div class="jumbotron jumbotron-fluid purple">
+        <div class="container">
+          <h1 class="display-5 font-weight-bold text-center text-white">Choose a better way to work</h1>       
+        <button type="button" class="btn btn-primary btn-lg text-white offset-4">TRY SLACK</button>             
+         <button type="button" class="btn btn-outline-primary btn-lg text-white mx-3 ">CONTACT SALES</button>       
+        </div>
+    </div>
+
+    <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col-2 ">
+                <img  class="img-fluid" width="90" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAA7VBMVEX///82xfHrsi0ttn7fHVoqw/HrsSjrsCCW2fHeA1LplKmd1r0es3ju0JQqtX7bEVfnuVRbyOzdAE2i4fjU7uL12KDu0Zn3y9fdAEvqrQ7fFFam3vMes3lfwpe24/Ts9vK64c/utMP11996y6fm9Pl20O/0+fuw3smE1PDf8emx4fLqvV71587sxnjx27LquEr59OvkbY367vH89vjtyYLsp7jw16j23uVUx+/M6/Zsxp+U07ZHvIra8Pe14MzF6PXrnLD04b/37+Dme5feK2PhVn3hSXTkZIbvusfgQW/fT3jyy9T12eDrwGnoh6Bpl7c9AAAI5ElEQVR4nO2ca1viOhCAQYVaqbvCUZdWUFjvNxTEOx5v6Lp61v//c06rUtLmMk1J21nI+2U/7NDHvs8khGQmuZxGM25srM6WyxflzdnLLTB2sbRe79WvrhtrKfxh+Fi9KLjk83nvn80bUeju+rRl1WrT0zXLsuqNlP5APKzmPU8+hUJ5gxe6dmW5noZY040U/9Ds2SoHVH3qWmHHbgdVfei6gsft2HCTp1x5ujZZsetWWJVnq7eb9t+cFTcsVRxbTFfu5FWbEFtbbFWerZ1w7DXblcdkjER6vhraWg2GNviuavVs/vp02eO7cm0F8mWLq8qbt7azeoP04A9CeiAKBqFHVq+QHiuixAqm1prY1QSk1oXQVZ5cbZXEsqZ72b1FOvCWDUOGsT2xq2lr3JcPwCgkx+EWkFjjPw43QVmXg9BFSFZtPcs3SQFgynJl7Q1C/4VkTY/7UgtylS/MDkKh+X38Z3ilsr5l+SYpoGVJUNayorMDfhtqWT6rWlZ0NrQsCQS7WVpWmFstSwJo20HLIgD2HbSsALNCW1pWEOEcr2WFENnSssIIdrW0LIq9Ak+XlkWztcPRpWWx2FgpF1hoWWy2Lm9X/gnj78FrWRJoWRJoWRJoWRJoWRJoWRJoWRJoWRJMgKyN1dnNsgybOyvs9oq4stYa1+v1+noJfefK3qDHJDofH9hh9FfEk7Xds7zWFRfL6v2b+AvHZ0XSE2lskyrVjiOrZAU+ZNWwlnBtXMRV9akrVNYdQ9Zuj/qI1UM5GKEzLlhXqGVAWhazar5WW0zPQVRGdkW1o8jK4nUYWI0UNUQCLqyVzi1JWfyqSmyFuuJWgOi2bolnyslaoxrteBmYOWBdbVSI70Q5WVcCWbgqdZUMQg9yIErJEpc2oxqIyhKLbEeRklUXJJabWlcZSOEAFl1JyBq2o8jI2gViLTyrLbBtQoIL/6kysqBYRM0YUIGaDMNxKCOrDkQiGofqVJHtKBKyhF2cIa8Zs6UwsYh2FAlZQGeil1pYJi2F83vM43uwJwrPDP9XyMKy0spMlt/o9BdlVkJzluCegk+GtxXAsmporoFQ6Cpf8DfkoYUm8ZMPloWn207drx1X1vCxYNuvv8X+NzW9gg05EpSHjxX/3iPnIVAWog1AhZMWuRMPTFrEBSuwLDRTVoTGuOiyyMd+i5otkCwLzyhUuHgI3ji2LXRAzNmgLCwLhw/EXRPRuQg+tieYtSzi1AaQZZXStQEx0pmhTyF0kC9YPVjXRJxYFrrbozaUuNoLP5Y7x1sBAUBmoRqEHgq24VlXJHKmraAroazaNJafhQQbzFsPR8orjwZ9maR3nWQwSCAL6fn9aAv5wgXnXle6gMGiNom5smqoFg0BLssxy2jcj3FuKfXY/kZml2WtU7nCkWVZdYSFDj43O8wWE4hyuIImROPK8vBuC+6VGMNq0QrjhX5bx6zqg5vblVkp9oT3Kg9YbJSuS9uL7Alo95qi1EA4r2s0Go1Go9FoUuL85W4uzPs5M7Tzdur+Z/NnlMcetJbnZVi6f1D6Wgnw89GsVkyK6g869Hyu/xVarT41xY9t7du2IYn7ie5BMm+phLfnqjPDokLJ6rSr5jDWqcyc8h97NmUXp+Jg2AtodbU5qhiy7sxwaKXPGY0PR3YsUx8U7cPEXzsOnb7JUUXL+lWhY5wKcyy2YmaVn11Tx2m8vRznDi+taFnPbK3VO/qxZyOk1VdyGehm+s53gauQLI4r1xaVW62RXbm2ithy67fIVVDWO2MMDuJC89aDAleuraNUVYDM8QWEZb1V+XFOP/jYo9HmqwH2fLo2xHQEAsKyhDlYCawgRp+wBrYwDcRH4SAMyHoR56BDPlZNXrkYiBYQJ/xFAyXrVeyVXD+omN0HtvCkVlOcLaQsaMA6r8PH7ivLrCm7lYUXJm1gFBKymlASVoePVZdYmMZhP7qsR1CWv3pQs274pDiVjRmaDiSAkAVMWTMzpj9ptQx1svBMWtA8RMrqQ6Hm3CB0WaUsG8tvnnMJWd+1LFDW2yB24mVFmLM6g1gJWWdjOWfBE5FzMgiVkHUwlt+GuSfgK8757YdKyDpWKWs/EzEsToFxaL77oRKyVO05eBhnWXhhAq0dhgtNKVkKJy1M2w6/hOOQGIVSstSNw+KfDKTw+E+YWuSpoYys3Lyq1EKzcPigLZi1yI0EOVk5Ra4Q/Yz2OBGcV5gdIlBO1r2aPfhi2joAfnIHYvWFjJOTlZtXYctGdyz9wrFVDZ7LS8rKHY5uy75P00M0flAn8i5O+ChQVlauO6KtooHQlft7+je1u2xSBQzSsnItY5TvRPsI1RchwZ1JZpdjVsIvHkdW7vjQjqmraCBauVOcnPYrFdNxMc1q/+6EjoghK5d76BZtwyhK4VVoHSFW9UGnOdd+fW2/N9nFfrFkuRycdf8sSLB/ON/COgAjE1fWRKJlSaBlSaBlSaBlSaBlSaBlSaBlSSBzFLZEcY9usyVRJGTN0x0otm0vnCE6e0iYkY/v3R993UnRpaLWwTDw1PEliprCEKQdOapRVEVj4DmOTxBVJUcTYUtZfRaurolkUFfMhu+ASznqZGFrX0oAhWWSGM8D1aJQFqICtYRQWYCLqegqEVTKGvuFvFJZ3SzfJAVUyiouZPkmKaBUFp567WRQ2mGBrUhNNX2VssY9s57BFjq/+A2s7B77NTzc9Or3RIHtKAamgu0kuAM7Wf1yXbAM3ljK8k1SQFwxH7wGA2pHGf99B6Cf2rwbhi5N/LYDMA6rRNE8MA6N5ezeIiVOhCst85GM7QpTC93lRQlwKroxwyG7MXLHIlk29oJRJQiWWuGqecEFK8a4/zD85IR7h1vlMRzLHYhFPE3PyXLO6sXwXP2iY/+wbSG8my4pzmdYtqptViyzeceYmhhX7kh8otamDut6RI8z+jpJe39CxuAXzZmKE1D1xG4ycHnYD7SjFO3iuG8n0zSfvzpXHLPitIX3Kx8cDtpRvB6TyVPl0Wm+Pz0/v7bn3hhNPiEOlg8Xjhb2u63JGoCayeB/VV8qlIEJUvoAAAAASUVORK5CYII=">
+            </div>
+            <div class="col-lg-2 offset-lg-2 col-md-6 offset-md-0 col-sm-6 offset-sm-0">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                    <div class="p-2 bd-highlight font-weight-bold ">Product</div>
+                    <div class="p-2 bd-highlight">Why Slack?</div>
+                    <div class="p-2 bd-highlight">Enterprise</div>
+                    <div class="p-2 bd-highlight">Security</div>
+                    <div class="p-2 bd-highlight">Customer stories</div>
+                    <div class="p-2 bd-highlight">Pricing</div>
+                    <div class="p-2 bd-highlight">Slack demo</div>
+
+                  </div>
+            </div>
+            <div class="col-lg-2 offset-lg-0 col-md-6 offset-md-0 col-sm-6 offset-sm-0">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                    <div class="p-2 bd-highlight font-weight-bold">Slack for Teams</div>
+                    <div class="p-2 bd-highlight">Engineering</div>
+                    <div class="p-2 bd-highlight">Financial services</div>
+                    <div class="p-2 bd-highlight">Sales</div>
+                    <div class="p-2 bd-highlight">IT</div>
+                    <div class="p-2 bd-highlight">Marketing</div>
+                    <div class="p-2 bd-highlight">Customer support</div>
+                    <div class="p-2 bd-highlight">Human Resources</div>
+                    <div class="p-2 bd-highlight">Project Management</div>
+                    <div class="p-2 bd-highlight">Media</div>
+                
+
+                  </div>
+            </div>
+            <div class="col-lg-2 offset-lg-0 col-md-6 offset-md-0 col-sm-6 offset-sm-0">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                    <div class="p-2 bd-highlight font-weight-bold">Resources</div>
+                    <div class="p-2 bd-highlight">Slack Tips</div>
+                    <div class="p-2 bd-highlight">Blog</div>
+                    <div class="p-2 bd-highlight">Help Center</div>
+                    <div class="p-2 bd-highlight">API</div>
+
+                  </div>
+            </div>
+            <div class="col-lg-2 offset-lg-0 col-md-6 offset-md-0 col-sm-6 offset-sm-0">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                    <div class="p-2 bd-highlight font-weight-bold">Company</div>
+                    <div class="p-2 bd-highlight">About Us</div>
+                    <div class="p-2 bd-highlight">Leadership</div>
+                    <div class="p-2 bd-highlight">News</div>
+                    <div class="p-2 bd-highlight">Careers</div>
+
+                  </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+<!-- footer -->
+    <div class="container bg-light">
+        <div class="text-left font-weight-bold ">
+            <a>Status</a>
+            <a>Privacy</a>
+            <a>Contact us</a>
+            <a>Change Region</a>
+        </div>
+        <div class="text-right">
+            <a><img class="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEX///8AAABLS0vNzc1TU1Pw8PB9fX10dHReXl5xcXG0tLS3t7e6urqFhYWQkJB6enqtra3Dw8P29vbk5ORoaGiTk5OmpqY0NDQNDQ3Y2NhaWloJCQmenp6MjIxCQkL5+fkpKSk8PDzU1NRy7VplAAACUklEQVR4nO3dXU/CMBSAYRwfY4PBGGwCioj//0caEi8WaEdxq+05vu816ckTdMRS09GIiIiIiIiIiIiIiIiIiIiIiIjo/7ZIk7ClC6++5UsMLf0B69C2n1a+gHG8g9d8vYuhXa38ABehWa1yL8I0NKtV5kWYhGa1ShAiRBg8hAgRhg8hQoThQxipcLKumzLPy7Jp6lWR7pJXRcJ9sZkah1ZbFcL1oWOsAuHp3DlWvPBo/unUI3y8pSRcuH08VrRwXzmMFS10AYoWOvyIyhY67lvLFU4cx8oVPvocFC88uY4VK3R6jkoWps5jpQq7/ppQIXxzHytUWKgXbtQLO56k4/fZbt5KptD6a1jN3BaIXji3jDi4LhC90PKgmTovEL2wMU/Y6RGazxdW7gtELzR/WDxx6Cp64dg44KRemKkXHtULJwgRIkSIECFChAgRIvwD4YdY4Xl6m/mM0N3Lrq80syMT9ppqXhLh7woiNB9N1CQcqxeW6oWWHUZFQstGvyLhRb3QsqQeoe3LGj1C21emeoQb9cJGvbBQLzSfNdEk/FQvtC2pRmg9fqJGaD1BpEZo+ziMTVjMbkrN/2lRr29faN1fjEx4n3k38YkBQoX6d4QRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChK0GvP+wt9DP/YcD3mHZW+jnDssB7yHtLfQDHPAu2b5Cb7ceryIRersPeLh3sZ/Q773VeTbA3dqXL+PaTld+Z54eMkRERERERERERERERERERERERCL6BkgAS6tKlWFoAAAAAElFTkSuQmCC" width="20" src=""></a>
+            <a><img class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmIJDO-qBi_dXkIS-G4VjtymqQkVzoL37Ll59Kf1Ji1yRZ2tMq&s" width="20" src=""></a>
+            <a><img class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQraSuGqhkwH1EHx4Cmh3ldtNgUgAaSKELfGq3nZ-VSPfa2AdFh&s" width="20" src=""></a>
+            <a><img class="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEUAAAD///9MTEz8/PyTk5PNzc339/c4ODjo6OhPT0+MjIzu7u6xsbERERGnp6fy8vIiIiLe3t6fn58+Pj5GRkaBgYF6enpfX1/R0dG6urqPj4/X19eZmZlmZmZZWVlkZGQuLi4xMTEZGRlycnK3t7fExMQnJycdHR0+1Fr0AAAFB0lEQVR4nO2daXeqMBCGQW8RcEG02kXa2lbo//+H17WKLJPKjFnO+3wup/Mck5BkksHzrwhHcTQdezYynkbxKLwW8sp62UB3mJ0ZZGGjYRDrjo6JOKg3nOgOjJFJjWES6Y6KlSi5NkwL3TExU6RlwwfdAQnwcGmY6o5GhPRsmLjWRA8Uya+hW4PMmehk6NJroszkYBjojkOQYG/oykymjnhnGOqOQpRwa5jpDkKUbGto/2qijYHvud1It83UG+kOQZiR5/JIuiP2XJ3PnIi8qe4QhJl6dm46qeO6HwAAACBB722ZbWaLt3fdgcjwcZG6GuZL3eGwsxxeJeb6bu0OPFUyjy6l47bMavycynfkDYK+H651x8ZCXQv9xYWdrOZfcD+q6g6vO0198MSz7gC78kQI+v5Md4gdae2EB+xOPy5pQf9Fd5CduJ7J1PKpO8oOfKgIWt0TR0qGNic/FMaZHXPdcd5MT03QX+gO9GbeFA3tPeyg8q7YkesO9GYyRUN7D1VtnDekZt32Gy4UDe3th+6Ppe+Khq+6A70dpYm371u8Q9y+g3Ei0R1mB9Re+VYfyuk73kjVZjUr3UF2I6ANe7pj7EZMCtr7uj/yQAgOv3RH2Blinf+oO77urFsFv3WHx8GgZWbjhOCW56Y+6EATPVK/UMztH2TOFC8Vv5Xl78EKn7PLQTUZWT1Va2K+mORpmuaTVyf1AAAAAAAAAACA+zL+Wc/n6+JHdxwyPC436anGU/j8Ejt2E3s+q+6vDx8Wwnd5e36/Hf9f/YMB9dz1ZY1lWtE70M+fZA0pGgzJ3GrZcNF6ZCAUvGZ1H8PKraqqo9j5x3sY/lAZvD0roVOsdzCkk7BHZA4myRtW8wWNpBJn5qUN100jaC2BQDZP2PBR4SRECf47j7KGc6XzOiXYO6Oo4effBflPYEka/iTU39TC/CtKGiq9Bmvg7YtyhvnrjYLM5yPkDIe3dMIDAed7Uc6wC5xH58005BxtDDVkvENuqiHfoVZTDX22NbGxhmzXOo01ZPsRzTXk+hHNNfSZduAMNmQ6YH43w2G6SsO/PWSTYf5d7He2p++bPyz6eTYY72DYL1cs+Fa8TsbVTOUNN5UqsZniszw3ysQN65papLj4ZznmKmzYrw/yS62YA8tiX9iwMT+o1Bk35hs2j4aPKs+zLDBEDdtq96jcI2eZuEka9ltT9Qrb/QFHASdJw/bKiyqFVThW+oKGAXHlZkUbcqQUBQ2pKYlCXpHj3pWgIbWELWhDjotJgobkKRK6mRpuSP7vpkuBthjSNSXp/LfZhnRJSboYgNmGdAHbfzCEIQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMIQhjCEIQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMIQhjCEoYBhRP6Xhpug5HP0NWX6VhBHqehx1GsnWtc/SDzWi+j7n2vyfwuXiQYAAAAAAPfC9Ynd2KtUEnOMqefYl2oqRB5/IX6ziD3uIvWmMfLYatUaSugxVo02kYHvEfW2bCfbGrrdTMOtocBnTcwh9neGge4wBAn2hkJfUTKBiX8wZNlWNZH9ZvbeMOGor2geRfJryPo9DHM41M48ZhfoJIl9HD/Tc8qfpK411OJU/fQ3Q5S4Ndyci0lf5MBcemlMzlqXWb7AldlNfFm4vpzHDDP7VxqDrFwKvJKpDUdxNLVze2o8jeJRpdL5f2YjU4xtkVEnAAAAAElFTkSuQmCC" width="20" src=""></a>
+        </div>
+    </div>
+    
+
+    </body>
+</html>
