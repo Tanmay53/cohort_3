@@ -1,0 +1,16 @@
+body {
+  background-image: url("https://media.istockphoto.com/photos/todo-list-personal-planner-on-turquoise-office-table-picture-id925734296?k=6&m=925734296&s=612x612&w=0&h=_VB2egSpS_1RFYSknOl8v19wqT7dMbeRv8duolALfDc=");
+}
+.gradient {
+  background: #9796f0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fbc7d4,
+    #9796f0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fbc7d4,
+    #9796f0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

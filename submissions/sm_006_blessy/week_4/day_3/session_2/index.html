@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>Index</title>
+
+</head>
+
+<body>
+    <div>
+        <h1>age check to driving in india</h1>
+        <input type="number" id="age">
+        <button id="bttn1" onclick="agecheck()">agecheck</button>
+
+        <p id="valid1"> </p>
+        <p id="valid2"> </p>
+        <p id="valid3"> </p>
+    </div>
+    <div>
+        <h1>change color</h1>
+        <input type="text" id="myinput" />
+        <button id="btn" onclick="changecolour()">changecolour</button>
+    </div>
+    <div>
+        <h1>find continent</h1>
+        <select id="continent_select">
+            <option element="india">india</option>
+            <option element="United States of America">United States of America</option>
+            <option element="China">China</option>
+            <option element="Nepal ">Nepal</option>
+            <option element="Australia">Australia</option>
+            <option element="France">France</option>
+            <option element="Germany">Germany</option>
+            <option element="South Africa">South Africa</option>
+            <option element="Nigeria">Nigeria</option>
+            <option element="Mexico">Mexico</option>
+            <option element="Argentina">Argentina</option>
+            <option element="Brazil">Brazil</option>
+            <option element="Canada">Canada</option>
+            <option element="Singapore">Singapore</option>
+            <option element="Sweden">Sweden</option>
+            <option element="default"> default</option>
+        </select>
+        <button id="bttn2" onclick="continent()">find continent</button>
+    </div>
+    <script type="text/javascript">
+
+        function agecheck() {
+            if (age < 18) {
+                document.getElementById('valid1').innerHTML = "you can't drive in india"
+            }
+
+            else if (age > 18) {
+
+                document.getElementById('valid2').innerHTML = "you can drive in india"
+
+            }
+            else
+                document.getElementById('valid3').innerHTML = "you are just enough to drive in india"
+        }
+
+        function changecolour() {
+            document.getElementById("btn").style.backgroundColor = document.getElementById("myinput").value
+        }
+
+        function continent() {
+            var country = document.getElementById("continent_select").value
+            var continent
+            switch (country) {
+                case 'india':
+                    continent = "the continent is asia";
+                    break;
+                case 'UnitedStatesofAmerica':
+                    continent = 'The continent is north america'
+                    break;
+
+                case "china": continent =
+                    continent = "The continent is asia"
+                    break;
+
+                case "Nepal":
+                    continent = "The continent is asia"
+                    break;
+
+                case "Australia":
+                    continent = "The continent is europe"
+                    break;
+
+                case "France":
+                    continent = "The continent is europe"
+
+                case "Germany":
+                    continent = "The continent is europe"
+                    break;
+
+                case "South Africa":
+                    continent = "The continent is africa"
+                    break;
+
+                case "Nigeria":
+                    continent = "The continent is africa"
+                    break;
+
+                case "Brazil":
+                    continent = "The continent is south america"
+                    break;
+
+                case "Canada":
+                    continent = "The continent is north america"
+                    break;
+
+                case "Singapore":
+                    continent = "The continent is asia"
+                    break;
+
+                case "Sweden":
+                    continent = "The continent is europe"
+                    break;
+
+                case "Mexico":
+                    continent = "The continent is north america"
+                    break;
+
+                case "Argentina":
+                    continent = "The continent is south america"
+                    break;
+
+                case "default":
+                    "invalid input"
+                    break;
+            }
+            if (continent) {
+                alert(continent)
+            }
+            else
+                alert("invalid input")
+        }
+    </script>
+</body>
+
+</html>
