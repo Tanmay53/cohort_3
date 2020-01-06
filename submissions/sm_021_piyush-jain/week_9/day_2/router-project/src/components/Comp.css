@@ -1,0 +1,17 @@
+.Navbar, .footer {
+    display: flex;
+    color: white;
+    background-color: black;
+}
+
+a {
+    color: white
+}
+.iconSize{
+    height: 30px;
+}
+.Navbar>div,.footer>div {
+    float: left;
+    flex-grow: 5;
+    margin: 20px 0px 20px 20px;
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Pagination</title>
+</head>
+
+<body>
+
+    <div class="container-fluid ">
+        <div class="row justify-content-center">
+            <div class="col-10 justify-content-center">
+                <button type="button" id="btnDisplay" class="btn btn-primary btn-lg btn-block">Display Data</button>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <nav>
+                    <ul id="pages" class="pagination">
+        
+                    </ul>
+                </nav>
+            </div>
+            
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-2">
+                    <select class="custom-select mr-sm-2" id="selectPage">
+                            <option selected>Choose...</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+    
+                          </select>
+            </div>
+            <div class="col-3">
+                <select class="custom-select mr-sm-2" id="selectGender">
+                    <option selected value="">Gender...</option>
+                    <option value="all">All</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>  
+            </div>
+            <div class="col-3">
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="inputBox" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="btnSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div id="data" class="row justify-content-center my-4">
+            <div class="col-10">
+                <table id="table" class="table table-striped">
+                    <thead id="tHead" class="thead-dark">
+                        <tr id="tr">
+                            <th scope="col">Id</th>
+                            <th onclick="sortByFname()" scope="col">First Name</th>
+                            <th onclick="sortByLname()" scope="col">Last Name</th>
+                            <th onclick="sortByEmail()" scope="col">Email</th>
+                            <th scope="col">Gender</th>
+                            <th onclick="sortByEnglish()" scope="col">English</th>
+                            <th onclick="sortByMathAsc()" ondblclick="sortByMathDsc()" scope="col">Math</th>
+                            <th onclick="sortByScience()" scope="col">Science</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="tBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
