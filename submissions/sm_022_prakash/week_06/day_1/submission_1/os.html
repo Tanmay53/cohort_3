@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<head>
+    <title>OS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row my-3">
+            <h4>Choose your Operating System</h4>
+        <div class="col-md-3 mb-3 ">
+            <select class="custom-select" id="operatingSystem">
+                <option value="os">Operating System..</option>
+                <option value="ubuntu">Ubuntu</option>
+                <option value="windows">Windows</option>
+                <option value="android">Android</option>
+            </select>
+            <button class="btn-primary my-2" onclick="submit()" id="input_value"> submit </submit>
+        </div>
+    </div>
+    <div class="row my-3" id="resultAppend">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Version</th>
+                <th scope="col">Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+              </tr>
+              </tbody>
+              </table>
+    </div> 
+</div>
+    <script type="text/javascript" src="os.js"></script>
+</body>
