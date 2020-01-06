@@ -1,0 +1,452 @@
+[
+  {
+    "_id": 1,
+    "name": "SC",
+    "type": "Lexus",
+    "mileage": 15.7,
+    "speed": 148,
+    "cost": 94133,
+    "sales": 6656
+  },
+  {
+    "_id": 2,
+    "name": "Mustang",
+    "type": "Ford",
+    "mileage": 23.4,
+    "speed": 152,
+    "cost": 22167,
+    "sales": 3009
+  },
+  {
+    "_id": 3,
+    "name": "Range Rover",
+    "type": "Land Rover",
+    "mileage": 10.1,
+    "speed": 107,
+    "cost": 99162,
+    "sales": 1603
+  },
+  {
+    "_id": 4,
+    "name": "Spyder",
+    "type": "Maserati",
+    "mileage": 15.4,
+    "speed": 256,
+    "cost": 68267,
+    "sales": 2744
+  },
+  {
+    "_id": 5,
+    "name": "Ram 3500",
+    "type": "Dodge",
+    "mileage": 25.8,
+    "speed": 128,
+    "cost": 60718,
+    "sales": 2864
+  },
+  {
+    "_id": 6,
+    "name": "Quattroporte",
+    "type": "Maserati",
+    "mileage": 28.4,
+    "speed": 118,
+    "cost": 41603,
+    "sales": 3464
+  },
+  {
+    "_id": 7,
+    "name": "Escort",
+    "type": "Ford",
+    "mileage": 29.5,
+    "speed": 106,
+    "cost": 34241,
+    "sales": 7152
+  },
+  {
+    "_id": 8,
+    "name": "Taurus",
+    "type": "Ford",
+    "mileage": 13.8,
+    "speed": 202,
+    "cost": 94526,
+    "sales": 5433
+  },
+  {
+    "_id": 9,
+    "name": "Swift",
+    "type": "Suzuki",
+    "mileage": 19.6,
+    "speed": 250,
+    "cost": 91177,
+    "sales": 3170
+  },
+  {
+    "_id": 10,
+    "name": "960",
+    "type": "Volvo",
+    "mileage": 14.8,
+    "speed": 294,
+    "cost": 79545,
+    "sales": 2921
+  },
+  {
+    "_id": 11,
+    "name": "Pathfinder",
+    "type": "Nissan",
+    "mileage": 12.0,
+    "speed": 151,
+    "cost": 65734,
+    "sales": 8769
+  },
+  {
+    "_id": 12,
+    "name": "2500",
+    "type": "Chevrolet",
+    "mileage": 16.6,
+    "speed": 262,
+    "cost": 75226,
+    "sales": 1327
+  },
+  {
+    "_id": 13,
+    "name": "TundraMax",
+    "type": "Toyota",
+    "mileage": 18.7,
+    "speed": 257,
+    "cost": 51051,
+    "sales": 5599
+  },
+  {
+    "_id": 14,
+    "name": "1500 Club Coupe",
+    "type": "GMC",
+    "mileage": 25.8,
+    "speed": 103,
+    "cost": 61801,
+    "sales": 8773
+  },
+  {
+    "_id": 15,
+    "name": "CL",
+    "type": "Acura",
+    "mileage": 20.5,
+    "speed": 161,
+    "cost": 62543,
+    "sales": 3761
+  },
+  {
+    "_id": 16,
+    "name": "Thunderbird",
+    "type": "Ford",
+    "mileage": 27.6,
+    "speed": 179,
+    "cost": 70409,
+    "sales": 4939
+  },
+  {
+    "_id": 17,
+    "name": "Express 3500",
+    "type": "Chevrolet",
+    "mileage": 28.8,
+    "speed": 275,
+    "cost": 78925,
+    "sales": 2636
+  },
+  {
+    "_id": 18,
+    "name": "Pajero",
+    "type": "Mitsubishi",
+    "mileage": 10.7,
+    "speed": 135,
+    "cost": 51703,
+    "sales": 6703
+  },
+  {
+    "_id": 19,
+    "name": "Dakota Club",
+    "type": "Dodge",
+    "mileage": 20.5,
+    "speed": 251,
+    "cost": 43904,
+    "sales": 4413
+  },
+  {
+    "_id": 20,
+    "name": "Aurora",
+    "type": "Oldsmobile",
+    "mileage": 10.6,
+    "speed": 228,
+    "cost": 38086,
+    "sales": 8582
+  },
+  {
+    "_id": 21,
+    "name": "Suburban 2500",
+    "type": "Chevrolet",
+    "mileage": 20.5,
+    "speed": 209,
+    "cost": 62156,
+    "sales": 5562
+  },
+  {
+    "_id": 22,
+    "name": "929",
+    "type": "Mazda",
+    "mileage": 16.8,
+    "speed": 158,
+    "cost": 57046,
+    "sales": 6918
+  },
+  {
+    "_id": 23,
+    "name": "Forester",
+    "type": "Subaru",
+    "mileage": 28.1,
+    "speed": 263,
+    "cost": 82526,
+    "sales": 2829
+  },
+  {
+    "_id": 24,
+    "name": "Yukon",
+    "type": "GMC",
+    "mileage": 17.6,
+    "speed": 287,
+    "cost": 85654,
+    "sales": 3621
+  },
+  {
+    "_id": 25,
+    "name": "Nubira",
+    "type": "Daewoo",
+    "mileage": 23.8,
+    "speed": 280,
+    "cost": 23199,
+    "sales": 4126
+  },
+  {
+    "_id": 26,
+    "name": "Electra",
+    "type": "Buick",
+    "mileage": 21.1,
+    "speed": 156,
+    "cost": 28489,
+    "sales": 3006
+  },
+  {
+    "_id": 27,
+    "name": "Taurus X",
+    "type": "Ford",
+    "mileage": 29.7,
+    "speed": 236,
+    "cost": 60611,
+    "sales": 7685
+  },
+  {
+    "_id": 28,
+    "name": "Supra",
+    "type": "Toyota",
+    "mileage": 25.5,
+    "speed": 274,
+    "cost": 92641,
+    "sales": 7530
+  },
+  {
+    "_id": 29,
+    "name": "Roadster",
+    "type": "Tesla",
+    "mileage": 15.5,
+    "speed": 160,
+    "cost": 31736,
+    "sales": 5248
+  },
+  {
+    "_id": 30,
+    "name": "L-Series",
+    "type": "Saturn",
+    "mileage": 20.4,
+    "speed": 219,
+    "cost": 42358,
+    "sales": 7775
+  },
+  {
+    "_id": 31,
+    "name": "9-3",
+    "type": "Saab",
+    "mileage": 14.1,
+    "speed": 209,
+    "cost": 25522,
+    "sales": 4231
+  },
+  {
+    "_id": 32,
+    "name": "MX-5",
+    "type": "Mazda",
+    "mileage": 27.7,
+    "speed": 260,
+    "cost": 66971,
+    "sales": 2133
+  },
+  {
+    "_id": 33,
+    "name": "CL-Class",
+    "type": "Mercedes-Benz",
+    "mileage": 12.3,
+    "speed": 293,
+    "cost": 31652,
+    "sales": 1300
+  },
+  {
+    "_id": 34,
+    "name": "Prelude",
+    "type": "Honda",
+    "mileage": 20.3,
+    "speed": 191,
+    "cost": 69609,
+    "sales": 7797
+  },
+  {
+    "_id": 35,
+    "name": "Bonneville",
+    "type": "Pontiac",
+    "mileage": 10.8,
+    "speed": 165,
+    "cost": 36424,
+    "sales": 5572
+  },
+  {
+    "_id": 36,
+    "name": "Sentra",
+    "type": "Nissan",
+    "mileage": 21.3,
+    "speed": 293,
+    "cost": 44825,
+    "sales": 5387
+  },
+  {
+    "_id": 37,
+    "name": "Silverado 2500",
+    "type": "Chevrolet",
+    "mileage": 29.7,
+    "speed": 268,
+    "cost": 58060,
+    "sales": 2330
+  },
+  {
+    "_id": 38,
+    "name": "900",
+    "type": "Saab",
+    "mileage": 19.4,
+    "speed": 200,
+    "cost": 75736,
+    "sales": 5089
+  },
+  {
+    "_id": 39,
+    "name": "Land Cruiser",
+    "type": "Toyota",
+    "mileage": 17.1,
+    "speed": 264,
+    "cost": 20274,
+    "sales": 2158
+  },
+  {
+    "_id": 40,
+    "name": "2500 Club Coupe",
+    "type": "GMC",
+    "mileage": 22.3,
+    "speed": 168,
+    "cost": 28593,
+    "sales": 1343
+  },
+  {
+    "_id": 41,
+    "name": "Sable",
+    "type": "Mercury",
+    "mileage": 12.6,
+    "speed": 123,
+    "cost": 55483,
+    "sales": 8363
+  },
+  {
+    "_id": 42,
+    "name": "Allroad",
+    "type": "Audi",
+    "mileage": 18.2,
+    "speed": 123,
+    "cost": 50827,
+    "sales": 4387
+  },
+  {
+    "_id": 43,
+    "name": "G",
+    "type": "Infiniti",
+    "mileage": 17.8,
+    "speed": 298,
+    "cost": 61263,
+    "sales": 1290
+  },
+  {
+    "_id": 44,
+    "name": "Regal",
+    "type": "Buick",
+    "mileage": 29.1,
+    "speed": 215,
+    "cost": 39175,
+    "sales": 3193
+  },
+  {
+    "_id": 45,
+    "name": "Express 3500",
+    "type": "Chevrolet",
+    "mileage": 19.7,
+    "speed": 125,
+    "cost": 95025,
+    "sales": 3914
+  },
+  {
+    "_id": 46,
+    "name": "Corolla",
+    "type": "Toyota",
+    "mileage": 21.1,
+    "speed": 146,
+    "cost": 40685,
+    "sales": 7391
+  },
+  {
+    "_id": 47,
+    "name": "Expedition",
+    "type": "Ford",
+    "mileage": 24.9,
+    "speed": 275,
+    "cost": 87741,
+    "sales": 7458
+  },
+  {
+    "_id": 48,
+    "name": "Grand Prix",
+    "type": "Pontiac",
+    "mileage": 24.2,
+    "speed": 124,
+    "cost": 49796,
+    "sales": 8246
+  },
+  {
+    "_id": 49,
+    "name": "Millenia",
+    "type": "Mazda",
+    "mileage": 18.0,
+    "speed": 202,
+    "cost": 27372,
+    "sales": 3175
+  },
+  {
+    "_id": 50,
+    "name": "Esprit",
+    "type": "Lotus",
+    "mileage": 28.4,
+    "speed": 153,
+    "cost": 32988,
+    "sales": 7115
+  }
+]
