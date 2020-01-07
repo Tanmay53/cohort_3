@@ -123,8 +123,8 @@ class App extends React.Component{
     let deleteValSal=e.target.parentElement.previousSibling.textContent
     let deleteValDept=e.target.parentElement.previousSibling.previousSibling.textContent
     let deleteValAdd=e.target.parentElement.previousSibling.previousSibling.previousSibling.textContent
-    let targetAge=e.target.parentElement.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.textContent
-    let targetName=e.target.parentElement.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.textContent
+    let targetAge=e.target.parentElement.previousSibling.previousSibling.previousSibling.previousSibling.textContent
+    let targetName=e.target.parentElement.previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.textContent
     DataRec=DataRec.filter((e)=>{
       return e.Salary!==deleteValSal && e.Department!==deleteValDept && e.Address!==deleteValAdd && e.Name!==targetName && e.Age!==targetAge
     })

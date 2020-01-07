@@ -1,0 +1,13 @@
+.img-con {
+  background: url("https://a.slack-edge.com/59662/marketing/img/homepage/video/brand-campaign_hero-poster.jpg")
+    no-repeat center center/cover;
+  height: 80vh;
+}
+
+.my-bg {
+  background: #4b204b !important;
+}
+
+.my-text {
+  color: #4b204b !important;
+}
