@@ -4,7 +4,6 @@ import Banner from "./components/banner";
 import Break from "./components/break";
 import Card1 from "./components/Card1";
 import Corosel from "./components/corosel";
-import Corosel2 from "./components/corosel2";
 import Bottom from "./components/bottom";
 class Slack extends Component {
   render() {
@@ -16,7 +15,7 @@ class Slack extends Component {
         <Card1 />
         <hr />
         <Corosel />
-        <Corosel2 />
+
         <Bottom />
       </div>
     );
