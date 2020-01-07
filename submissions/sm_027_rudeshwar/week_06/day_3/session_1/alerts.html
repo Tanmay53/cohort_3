@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Showing Alerts</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$("#firstName").click(function () {
+				alert('Rudreshwar');
+			});
+
+			$("#lastName").click(function () {
+				alert('Jha');
+			});
+
+			$("#firstNameName").click(function () {
+				alert('FIRSTNAME: Rudreshwar, NAME: Rudreshwar Jha');
+			});
+		});
+	</script>
+
+
+</head>
+
+<body>
+	<!-- Clicking the buttons should show the alerts with respective content -->
+	<button id="firstName">FIRSTNAME</button>
+	<button id="lastName">LASTNAME</button>
+	<button id="firstNameName">FIRSTNAME NAME</button>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> 
+     
+<!--8.2  -->
+    <p id="ageOk"></p>
+    <p id=ageNok></p>
+    <p id=ageMng></p>
+	<input type="number" name="name" id="age">
+	<button onclick="drinkTest()">Check</button>
+<!--  8.3  -->
+<input type="text" name="name" id="color">
+
+<button id="btn" onclick="colorchange()">Click here to change my color </button>
+<!-- 8.4 -->
+<select id="continent_select">
+    <option value=""></option>
+    <option value="UnitedStatesofAmerica"> USA</option>
+    <option value="India"> India </option>
+    <option value="China">China</option>
+    <option value="Nepal">Nepal</option>
+    <option value="Australia">Australia</option>
+    <option value="France">France</option>
+    <option value="Germany">Germany</option>
+    <option value="SouthAfrica">SouthAfrica</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Brazil">Brazil</option>
+    <option value="Canada">Canada</option>
+    <option value="Singapore">Singapore</option>
+</select>
+<button id="continent" onclick="continentTest()">Check</button>
+<p id="india"></p>
+<p id="USA"></p>
+<p id="China"></p>
+<p id="Nepal"></p>
+<p id="Australia"></p>
+<p id="France"></p>
+<p id="Germany"></p>
+<p id="SouthAfrica"></p>
+<p id="Nigeria"></p>
+<p id="Mexico"></p>
+<p id="Argentina"></p>
+<p id="Brazil"></p>
+<p id="Canada"></p>
+<p id="Singapore"></p>
+<p id="Sweden"></p>
+<p id"invalid"></p>
+
+</body>
+<script type="text/javascript">
+   
+   function drinkTest() {
+			// Show the alert of the filled name
+		var x= document.getElementById("age").value
+		if(x>18){
+		document.getElementById("ageOk").innerHTML=x+"years: You can drive in India!"
+		}
+		else if(x<18){
+		document.getElementById("ageNok").innerHTML=x+" You can't drive in India"
+		}
+		else if(x==18){
+		document.getElementById("ageMng").innerHTML=x+" You are just old enough to drive in India!"
+		}
+    }
+    function colorchange() {
+        var y = document.getElementById("color").value;
+        document.getElementById("btn").style.background = y;
+    }
+      
+    function continentTest() {
+      var country = document.getElementById("continent_select").value;
+      switch (country){
+      case "India":document.getElementById("india").innerHTML = country +" :The continent is Asia ";break;
+  
+       case "UnitedStatesofAmerica":document.getElementById("USA").innerHTML =country+" :The continent is North America ";break; 
+     case "China":document.getElementById("China").innerHTML =country+" :The continent is Asia ";break;
+        case "Nepal":document.getElementById("Nepal").innerHTML =country+" :The continent is Asia ";break;
+        case "Australia":country = document.getElementById("Australia").innerHTML =country+" :The continent is Oceania";break;
+        case "France":country = document.getElementById("France").innerHTML =country+" :The continent is Europe";break;
+        case "Germany":country = document.getElementById("Germany").innerHTML =country+" :The continent is Europe";break;
+        case "SouthAfrica":country =document.getElementById("SouthAfrica").innerHTML =country+" :The continent is Africa";break;
+        case "Nigeria":country = document.getElementById("Nigeria").innerHTML =country+" :The continent is Africa"; break;              
+        case "Mexico" :document.getElementById("Mexico").innerHTML =country+" :The continent is North America";break;
+        case "Argentina":document.getElementById("Argentina").innerHTML =country+" :The continent is South America";break;
+        case "Brazil":country =document.getElementById("Argentina").innerHTML =country+" :The continent is South America";break;
+        case "Canada":document.getElementById("Canada").innerHTML =country+" :The continent is North";break;   
+        case "Singapore":document.getElementById("Singapore").innerHTML =country+" :The continent is Asia";break;
+        case "Sweden":country =document.getElementById("Sweden").innerHTML =country+" :The continent is Europe";break;   
+        default: country=document.getElementById("Sweden").innerHTML ="select country"; 
+       }
+      }
+
+</script>
+</html>
