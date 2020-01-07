@@ -1,18 +1,14 @@
 import React from 'react';
-import Login from './Components/Login/Login'
-import Product from './Components/Product/ProductForm'
-import Slack from './Components/Web/Slack'
+import Form from './Components/Form'
 
 function App() {
   return (
-    <div>
-      <div className="container p-5 my-5">
-        <Login />
-      </div>
-      <Product />
-      <Slack />
+    <div className="">
+      <Form />
     </div>
   );
 }
 
 export default App;
+
+
