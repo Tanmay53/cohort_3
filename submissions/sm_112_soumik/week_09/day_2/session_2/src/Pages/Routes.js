@@ -3,6 +3,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import Cart from "./Cart";
 import Home from "./Home";
 import SignIn from "./SignIn";
+import Product from "./Product";
 
 const products = [
   {
@@ -54,24 +55,39 @@ const products = [
       "https://rukminim1.flixcart.com/image/714/857/jz30nm80/shoe/x/g/m/38099-1614-9-levi-s-white-original-imafj6f4wmdfwtku.jpeg?q=50"
   }
 ];
+let name = "";
+let pass = "";
 
 export class Routes extends Component {
   constructor(props) {
     super(props);
     this.state = {
       products: products,
-      isAuth: false
+      isAuth: false,
+      addCart: [],
+      name: "",
+      pass: ""
     };
   }
 
-  addCart = () => {
-    alert("hello");
+  addCart = obj => {
+    let cart = [...this.state.addCart, obj];
+    this.setState({ ...this.state, addCart: cart });
   };
 
-  loginHandler = () => {
-    this.setState({
-      isAuth: true
-    });
+  loginHandler = user => {
+    if (name.length < 5 && pass.length < 4) {
+      alert("Enter a valid username and password");
+    } else {
+      this.setState({
+        isAuth: true
+      });
+    }
+  };
+
+  handleChange = obj => {
+    name = obj.name;
+    pass = obj.pass;
   };
 
   logoutHandler = () => {
@@ -80,57 +96,111 @@ export class Routes extends Component {
     });
   };
 
+  componentNotfound = () => {
+    return <h2>Error:404 Page not found</h2>;
+  };
+
   render() {
     return (
-      <div>
-        <h2 className="text-center">The Shoe Store</h2>
-        <div>
-          <div className="container-fluid">
-            <ul className="nav bg-dark text-ligth">
-              <li className="nav-item">
-                <a className="nav-link">
-                  <Link to="/">Home</Link>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link">
-                  <Link to="/signIn">Sign In</Link>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled">
-                  <Link to="/cart">Cart</Link>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <Switch>
-            <Route
-              path="/"
-              exact
-              component={() => (
-                <Home
-                  addCart={this.addCart}
-                  isAuth={this.state.isAuth}
-                  data={this.state.products}
-                  logout={this.logoutHandler}
+      <>
+        <nav className="navbar navbar-expand-sm bg-light navbar-light">
+          <div className="container">
+            <a className="navbar-brand">
+              <Link to="/">
+                <img
+                  className="nav-img"
+                  src="https://www.brandcrowd.com/gallery/brands/pictures/picture14828756328430.png"
                 />
-              )}
-            />
-            <Route
-              path="/signIn"
-              component={props => (
-                <SignIn isAuth={this.state.isAuth} submit={this.loginHandler} />
-              )}
-            />
-            <Route
-              path="/cart"
-              component={() => <Cart isAuth={this.state.isAuth} />}
-            />
-          </Switch>
-        </div>
-      </div>
+              </Link>
+            </a>
+            <button
+              className="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item mx-2">
+                  <Link className="nav-link lead" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item lead mx-2">
+                  <Link className="nav-link" to="/cart">
+                    Cart
+                  </Link>
+                </li>
+                <li className="nav-item lead mx-2">
+                  <Link className="nav-link" to="">
+                    About
+                  </Link>
+                </li>
+                <li className="nav-item mx-2">
+                  <Link className="nav-link btn btn-success" to="/signIn">
+                    Sign In
+                  </Link>
+                </li>
+                <li className="nav-item mx-4">
+                  <Link className="nav-link btn btn-danger" to="">
+                    Login
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <Switch>
+          <Route
+            path="/"
+            exact
+            component={() => (
+              <Home
+                addCart={this.addCart}
+                isAuth={this.state.isAuth}
+                data={this.state.products}
+                logout={this.logoutHandler}
+              />
+            )}
+          />
+          <Route
+            path="/signIn"
+            component={props => (
+              <SignIn
+                isAuth={this.state.isAuth}
+                submit={this.loginHandler}
+                handleChange={this.handleChange}
+              />
+            )}
+          />
+          <Route
+            path="/cart"
+            component={props => (
+              <Cart
+                cart={this.state.cart}
+                isAuth={this.state.isAuth}
+                cartData={this.state.addCart}
+                {...props}
+              />
+            )}
+          />
+
+          <Route
+            path="/:id"
+            component={props => (
+              <Product
+                addCart={this.addCart}
+                data={this.state.products}
+                isAuth={this.state.isAuth}
+                {...props}
+              />
+            )}
+          />
+          <Route render={this.componentNotfound} />
+        </Switch>
+      </>
     );
   }
 }

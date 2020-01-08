@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button id="createH1">Create H1</button>
+        <button id="createH3">Create 2 H3</button>
+        <button id="createDiv">Create DIVS</button>
+        <button id="addStudents">Add Students</button>
+        <button id="addCopyright">Add Copyright</button>
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+            $('#createH1').click(function(){
+              var masai=document.createElement('h1');
+              masai.textContent='MASAI';
+              $('#headings').append(masai);
+            })
+            $('#createH3').click(function(){
+              var trans=document.createElement('h3');
+              trans.textContent='A Transformation in Education';
+              var learn=document.createElement('h3');
+              learn.textContent='learn to earn, pay when you get';
+
+              $('#headings').append(trans);
+              $('#headings').append(learn);
+            })
+            $('#createDiv').click(function(){
+              for (var i=1;i<11;i++){
+                var div=document.createElement('div');
+                div.textContent='content '+i;
+
+                $('#cont').append(div);
+              }
+            })
+
+            $('#addStudents').click(function(){
+              for (var i=0;i<students.length;i++){
+                var stud=document.createElement('li');
+                stud.textContent=students[i];
+                
+                $('#vikings').append(stud);
+              }
+            })
+
+            $('#addCopyright').click(function(){
+              $('#createH1').before('<p>&#169; masai 2019</p>');
+            })
+        </script>
+    </body>     
+</html>
