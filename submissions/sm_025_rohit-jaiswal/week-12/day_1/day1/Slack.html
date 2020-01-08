@@ -16,6 +16,12 @@
             width: 800px;
             height: 800px;
         }
+        
+        #jmbo {
+            background-image: url("https://www.androidpolice.com/wp-content/uploads/2016/06/nexus2cee_sl.jpg");
+            background-repeat: no-repeat;
+            image-resolution: 700px * 1800px;
+        }
     </style>
 </head>
 
@@ -53,7 +59,7 @@
             </div>
         </nav>
     </div>
-    <div class="jumbotron p-5">
+    <div class="jumbotron p-5 " id="jmbo">
         <h1 class="display-4 font-weight-bold">Slack replaces email <br> inside your company</h1>
         <p class="lead font-weight-bold">Keep conversations organised in Slack, the smart <br> alternative to email.</p>
         <hr class="my-4">
@@ -158,7 +164,64 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <div class="container ">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-4 font-weight-bolder text-center">What’s new at Slack</h1>
+
+                </div>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://a.slack-edge.com/b4782/marketing/img/promos/2019-10-10-engagement.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h3>Not all Daily Active Users are created equal: Work is fueled by true engagement</h3>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://a.slack-edge.com/ebeb3/marketing/img/promos/shared-channels-hp-promo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h3>Share channels:A better way to work with the people outside your company.</h3>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://a.slack-edge.com/80588/marketing/img/promos/gsuite-calendar-email-files.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h3>Slack and Gsuite bring Productivity to your work.</h3>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
+    <div class="jumbotron jumbotron-fluid bg-danger">
+        <div class="container text-center">
+            <h1 class="display-4">
+                <h1 class="display1 text-light text-center text font-weight-bold">Choose a better way to work</h1>
+                <br>
+                <br>
+                <button type="button" class="btn btn-light">TRY SLACK</button>
+                <button type="button" class="btn btn-outline-light">SEE THE DEMO</button>
+                <br>
+                <br><br>
+                <br>
+        </div>
     </div>
 
 
@@ -170,6 +233,11 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+    </script>
 </body>
 
 </html>
