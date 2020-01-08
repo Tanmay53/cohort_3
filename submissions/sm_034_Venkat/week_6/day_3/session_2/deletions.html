@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h5>First H5</h5>
+            <h5>Second H5</h5>
+            <h5>Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button id="btnH1">Remove H1</button>
+        <button id="btnH3">Remove H3</button>
+        <button id="btnH5">Remove H5</button>
+        <button id="btnRed">Remove Red</button>
+        <button id="btnDiv">Remove DIVS</button>
+        <script>
+            $("#btnH1").click(function() {
+                $("h1:first").remove()
+            })
+
+            $("#btnH3").click(function() {
+                $("h3").remove()
+            })
+
+            $("#btnH5").click(function() {
+                $("h5").remove()
+            })
+
+            $("#btnRed").click(function() {
+                $(".red").remove()
+            })
+
+            $("#btnDiv").click(function() {
+                $("#cont").children("div").remove()
+            })
+        </script>
+    </body>
+</html>
