@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>State City Selectors</title>
+</head>
+<body>
+    <select id="state">
+
+      <!-- So I hard coded the state names here in html part -->
+
+      <option value="">--</option>
+      <option value="Karnataka">Karnataka</option> 
+      <option value="Tamil Nadu">Tamil Nadu</option>
+    </select>
+    <button id="next">Next</button>
+    <select id="city">
+
+    </select>
+    <script>
+        var state_cities = [{"state": "Karnataka", "cities": ["Bangalore", "Mysore"]}, {"state": "Tamil Nadu", "cities": ["Chennai", "Tanjore"]}] 
+
+        $('#next').click(function(){
+
+          var stateSelected=$('#state').val();
+          for (var i=0;i<state_cities.length;i++){
+
+            if (stateSelected==state_cities[i]['state']){
+                  // I fetch the value selected and compare it with the data of 'state_cities' array
+              for (var j=0;j<state_cities[i]['cities'].length;j++){
+                //I can loop through the corresponding cities in this loop here
+                var cityNames=state_cities[i]['cities'][j];
+
+                var citySelect=document.getElementById('city'); //fetch select city element
+                var options=document.createElement("option");      //create option element
+                options.textContent=cityNames; //assign the value to loop of cities
+
+                citySelect.appendChild(options) //append that to select element
+              }
+            }
+          }
+        })
+
+
+    </script>
+</body>
+</html>
