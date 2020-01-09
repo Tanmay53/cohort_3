@@ -1,0 +1,18 @@
+button{
+    width: 200px;
+}
+
+#intro{
+    background: url("https://via.placeholder.com/728x900.png");
+}
+
+video{
+    width:75%;
+    height:300px
+}
+
+#contact{
+    background-color: rgb(66, 3, 47);
+    height: 400px;
+    
+}
