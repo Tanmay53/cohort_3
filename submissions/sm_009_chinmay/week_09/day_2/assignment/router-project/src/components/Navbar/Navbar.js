@@ -22,6 +22,7 @@ export default function Navbar() {
                 <Link to='/ipad'    className="py-2 text-white d-none mt-1 d-md-inline-block"       >iPad</Link>
                 <Link to='/iphone'  className="py-2 text-white d-none mt-1 d-md-inline-block"       >iPhone</Link>
                 <Link to='/music'   className="py-2 text-white d-none mt-1 d-md-inline-block"       >Music</Link>
+                <Link to='/products'className="py-2 text-white d-none mt-1 d-md-inline-block" >Products</Link>
                 <Link to='/cart'    className="py-2 text-white d-none mt-1 d-md-inline-block mr-5"  >Cart</Link>
             </div>
             <Routes />
