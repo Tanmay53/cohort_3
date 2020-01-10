@@ -76,7 +76,7 @@ class App extends React.Component {
                         )
                       }
                     >
-                      Mark Incompleted
+                      Mark Completed
                     </button>
                 
                   </li>
