@@ -1,9 +1,4 @@
-var button = document.getElementById("sub_mit")
-button.addEventListener('click', function () {
-    getUserData(display)
-})
 var details
-
 function getUserData(profile) {
     var user_name = document.getElementById("u_name").value
     var pass_word = document.getElementById("u_pass").value
@@ -27,7 +22,11 @@ function getUserData(profile) {
             profile(result)
         }
         else {
-            console.log('The username or password was Incorrect, please try again!')
+            var invalidData = document.getElementById("e_disp")
+            var errordisp = document.createElement('h4')
+            errordisp.textContent = "The username or password was Incorrect, please try again!"
+            invalidData.append(errordisp)
+            errordisp.setAttribute('class','text-center text-danger my-4')
         }
     }
 
@@ -39,16 +38,17 @@ function getUserData(profile) {
 function display(result) {
     var token = result.token
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:8080/user/chaitu')
+    xhr.open('GET', 'http://localhost:8080/user/'+document.getElementById('u_name').value)  //To user who attempted to login(must Registered earlier)
     xhr.setRequestHeader('Authorization', 'Bearer ' + token)
     xhr.send()
     xhr.onload = function () {
         if (xhr.status == 200) {
             var profileData = JSON.parse(xhr.response)
-            printData(profileData)
+            printData(profileData)    ///printData function is being called here
         }
         else {
             console.log("Error code is:" + xhr.status)
+            console.log(xhr.response)
         }
     }
 }
@@ -56,7 +56,7 @@ function display(result) {
 function printData(items) {
     var output = document.getElementById('out')
     var tab = document.createElement('table')
-    output.innerHTML = ""
+    output.innerHTML = ""             //ensure empty string since the current data is not being added with the prevoius one 
     for (key in items) {
         var row = document.createElement('tr')
         var col_1 = document.createElement('td')
@@ -70,10 +70,17 @@ function printData(items) {
         tab.append(row)
     }
     output.append(tab)
-    tab.setAttribute('class', 'col-8 col-md-8 col-lg-3 text-center container bg-info table h5 my-5')
+    tab.setAttribute('class', 'col-8 col-md-8 col-lg-3 text-center container bg-info table tabel h5 my-5')
+
+    /////////To Reset the login fields after submitting//////////
+    document.getElementById("u_name").value=""
+    document.getElementById("u_pass").value=""
 }
 
-
+var button = document.getElementById("sub_mit")
+button.addEventListener('click', function () {
+    getUserData(display)   ///display is also a function and it is being called in getUserData function
+})
 
 
 
