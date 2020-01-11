@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>registration</title>
+</head>
+<body>
+  <div class="row">
+    <div class="col-6" id="form-group">
+        <label for="name" id="nameLabel">NAME :</label>
+        <input type="text" class="form-control" id="name"> 
+      
+        <label for="email" id="emailLabel">EMAIL :</label>
+        <input type="text" class="form-control" id="email">
+      
+        <label for="mobile" id="mobileLabel">MOBILE :</label>
+        <input type="text" class="form-control" id="mobile">
+        
+        <button type="submit" id="submit"class="btn btn-primary">Submit</button>
+
+        <!-- form accepting name,email and mobile number and submit button which displays the data when clicked -->
+    </div>
+
+    <div class="col-6" id="detailsDisplay">
+      <!-- a container to display the details data when submit button is clicked -->
+    </div>
+    
+    <div class="col-12">
+      <p id="displayContainer"></p> 
+      <!-- to display the error messages live -->
+    </div>
+
+
+    
+  <script>
+    $('#email').hide(); //we start with hiding email, mobile and submit.. 
+    $('#emailLabel').hide(); // when we validate name --> then email is displayed --> when we validate email -->mobile is displayed 
+    $('#mobile').hide(); //when we validate mobile -->submit button is displayed 
+    $('#mobileLabel').hide(); //when submit button is clicked -->a display with all the details of the user will be displayed
+    $('#submit').hide();
+    $('#detailsDisplay').hide();
+    
+    $('#name').keyup(function(){ //function to validate name and proceed
+      var name=$(this).val();
+      if (name.length<3 || name.length>10){
+        $('#displayContainer').text('Length of the name should be greater than 3 and less than 10');
+        $('#email').hide();
+        $('#emailLabel').hide();
+        $('#mobile').hide();
+        $('#mobileLabel').hide();
+        $('#submit').hide();        
+      }
+      else{
+        $('#displayContainer').text('');
+        $('#email').show();
+        $('#emailLabel').show();
+        $('#mobile').hide();
+        $('#mobileLabel').hide();
+        $('#submit').hide();
+      }
+    })
+
+    $('#email').keyup(function(){ //function to validate email and proceed
+      var email=$(this).val();
+
+      if (emailCheck(email)){
+        $('#displayContainer').text('');
+        $('#mobile').show();
+        $('#mobileLabel').show();
+      }
+      else{
+        $('#displayContainer').text('email address is not valid');
+      }
+
+      // .............functions checking email validity.................
+
+      function emailCheck(address){
+        if (address.indexOf('@')===-1){ //check if the email contains '@' or not
+            return false;
+        }
+
+        if (splitEmailCheck(address)){ //check if the email has more than 1 @'s
+            return false;
+        }
+
+        if (globalEmail(address)){ //check if the first value is . or @
+            return false;
+        }
+
+        if (firstPart(address)){ //check in first part if all are valid chars or not
+            return false; 
+        }
+
+        if (secondPart(address)){
+            return false; //check in second part if all are valid chars or not
+        }
+
+        if (tld(address)){ //check if tld domains start with .
+            return false;
+        }
+
+        if (doubleDot(address)){
+            return false;
+        }
+
+        if (domainName(address)){
+            return true; //check domain name of its .com or .net or .org
+        }
+
+
+        return true;
+      }
+
+      function splitEmailCheck(email){
+        var splitEmail=email.split('@');
+        
+        if (splitEmail.length!==2){
+            return true;
+        }
+      }
+
+      function globalEmail(email){
+        if (email[0]=='.' || email[0]=='@'){
+            return true;
+        }
+      }
+
+      function firstPart(email){
+        var splitEmail=email.split('@');
+
+        var allowedChars=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',1,2,3,4,5,6,7,8,9,0,"_","-",'.']
+        
+        var firstPart=splitEmail[0];
+
+        for (var i=0;i<firstPart.length;i++){
+            if (allowedChars.indexOf(firstPart[i])==-1){
+                return true;
+            }
+        }
+      }
+
+      function secondPart(email){
+        var splitEmail=email.split('@');
+
+        var allowedChars=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',1,2,3,4,5,6,7,8,9,0,"."]
+        
+        var secondPart=splitEmail[1];
+
+        for (var i=0;i<secondPart.length;i++){
+            if (allowedChars.indexOf(secondPart[i])==-1){
+                return true;
+            }
+        }
+      }
+
+      function tld(email){
+        var splitEmail=email.split('@');
+
+        if (splitEmail[1][0]=='.'){
+            return true;
+        }
+      }
+
+      function domainName(email){
+        var splitEmail=email.split('@');
+
+        var second=splitEmail[1];
+
+        var domainName=second.split(".");
+
+        var dotcomPart=domainName[domainName.length-1];
+
+        if (dotcomPart=='com' || dotcomPart=='org' || dotcomPart=='net'){
+            return true;
+        }
+
+      }
+
+      function doubleDot(email){
+        for (var i=0;i<email.length-1;i++){
+            if (email[i]=='.' && email[i+1]=='.'){
+                return true;
+            }
+        }
+      }
+
+      // ................................................................
+      
+    })
+
+    $('#mobile').keyup(function(){ //function to validate mobile and proceed
+      var mobile=$(this).val();
+
+      if (mobile.length==10){
+        $('#displayContainer').text('');
+        $('#submit').show();
+      }
+      else{
+        $('#displayContainer').text('mobile number is not valid')
+        $('#submit').hide();
+      }
+    })
+
+    $('#submit').click(function(){
+      $('#table').html('') //when submit is clicked
+      var userName=$('#name').val();
+      var emailAddress=$('#email').val();
+      var mobile=$('#mobile').val();
+
+      //fetch the values of name and email and mobile number
+
+      // console.log(userName,emailAddress,mobile)
+
+      $('#form').hide(); //hide the form now
+      $('#detailsDisplay').show(); //and display the user details
+      $('#detailsDisplay').addClass('container bg-dark text-white text-left');
+
+      var nameLabel=$('<h5></h5>').text('NAME')
+      $('#detailsDisplay').append(nameLabel);
+
+      var userNameBlock=$('<h1></h1>').text(userName);
+      $('#detailsDisplay').append(userNameBlock);
+
+      var emailLabel=$('<h5></h5>').text('EMAIL')
+      $('#detailsDisplay').append(emailLabel);
+
+      var emailBlock=$('<p></p>').text(emailAddress);
+      $('#detailsDisplay').append(emailBlock);
+
+      var mobileLabel=$('<h5></h5>').text('MOBILE')
+      $('#detailsDisplay').append(mobileLabel);
+
+      var mobileBlock=$('<p></p>').text(mobile);
+      $('#detailsDisplay').append(mobileBlock);
+
+    })
+  </script>
+    
+  
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
