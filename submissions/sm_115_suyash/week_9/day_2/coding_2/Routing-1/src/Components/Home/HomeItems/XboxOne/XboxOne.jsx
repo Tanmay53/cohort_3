@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 function XboxOne() {
   return (
     <div className="backimg d-flex align-items-center">
-      <div className="pl-5 ml-3">
-        <h5 className="font-weight-bold">Xbox One S</h5>
-        <p className="">
+      <div className="pl-5 ml-3 ">
+        <h5 className="font-weight-bold text-white">Xbox One S</h5>
+        <p className="text-white">
           The ultimate games and 4K Ultra HD entertainment system
         </p>
         <Link
