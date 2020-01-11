@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Log In</title>
+    <style>
+        h1 {
+            text-align: center;
+        } 
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Enter Your User Name And Password</h1>
+        <br><br>
+        <hr>
+        <br><br>
+        <div>
+            <label>User Name</label>
+            <input id="user" type="text">
+            <br><br>
+            <label>Password</label>
+            <input id="pass" type="text">
+            <br><br>
+            <button id="login" onclick="logIn()">Login</button>
+        </div>
+    </div>
+    <script>
+        localStorage.setItem("prabhat", "admin");
+
+        // var a = localStorage.getItem(data)
+        var data = []
+        // localStorage.semtItem("loginData",userData);
+
+        // localStorage.setItem("data","[]");
+
+        function logIn() {
+            var user = document.getElementById('user').value;
+            var password = document.getElementById('pass').value;
+
+            if (user == "" || password == "") {
+                alert("Please Enter Some DATA ")
+            }
+
+            var x = JSON.parse(localStorage.getItem("loginData"));
+
+            if (x == null) {
+                console.log("here")
+                var obj = {
+                    user: user,
+                    password: password,
+                }
+                data.push(obj)
+
+                var userData = JSON.stringify(data)
+                // console.log(userData)
+                localStorage.setItem("loginData", userData);
+                alert("User Created")
+            }
+
+            data = x
+            var flag = true;
+            if (x.length > 0) {
+                console.log("There")
+                console.log(x)
+                for (var i = 0; i < x.length; i++) {
+                    if (x[i]["user"] == user && x[i]["password"] == password) {
+                        alert("Login Success")
+                        console.log(password);
+                        window.location.href = "./dash.html"
+                    }
+                    else{
+                        flag = false
+                    }
+                }
+                console.log("After updating", x)
+            }
+            if (flag == false){
+                var obj = {
+                    user: user,
+                    password: password,
+                }
+                data.push(obj)
+                var userData = JSON.stringify(data)
+                // console.log(userData)
+                localStorage.setItem("loginData", userData);
+                alert("New User Created")
+            }
+        }
+    </script>
+</body>
+
+</html>
