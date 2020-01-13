@@ -20,14 +20,13 @@ class Login extends Component {
         })
     }
 
-    handleLoginSubmit = () =>{
+    handleLogin = () =>{
+        console.log('clicked')
         let credentials = {
             username:this.state.username,
             password:this.state.password
         }
         this.props.loginSubmit(credentials)
-        console.log('clicked')
-
     }
 
     render(){
@@ -47,7 +46,7 @@ class Login extends Component {
                              <TextField name='password' id="standard-secondary" type='password' value={this.state.password} onChange={(e)=>this.handleChange(e)} label="Password" color="primary" fullWidth/>
                         </Box>
                         <Box m={2}>
-                            <Button variant='contained' color='primary' onClick={this.handleLoginSubmit}>Sign In</Button>
+                            <Button variant='contained' color='primary' onClick={()=>this.handleLogin()}>Sign In</Button>
                         </Box>
                         {this.props.helperText && <Box m={2}>
                                 <FormHelperText>{this.props.helperText}</FormHelperText>

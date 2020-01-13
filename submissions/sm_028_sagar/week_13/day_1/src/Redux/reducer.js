@@ -1,4 +1,4 @@
-import { Check_Login, Submit_Data, Update_User, Save_Update, Sort_Cibil,Sort_Loan, Filter_Loan } from "./actions"
+import { Check_Login, Submit_Data, Update_User, Save_Update, Sort_Cibil,Sort_Loan, Filter_Loan, Logout } from "./actions"
 
 
 const initialObj = {
@@ -9,15 +9,16 @@ const initialObj = {
     isLoggedIn:false,
     //User Data
     data:[],
-    updateUserData:{}
+    updateUserData:{},
+    filteredData:[],
+    viewTableData:[]
 }
 
 
 const reducer = (state = initialObj, action) =>{
-    console.log(initialObj)
+    console.log('filter ',state.filteredData,'data ',state.data )
     switch(action.type){
         case Check_Login:
-                console.log(action.loginData)
              if(action.loginData.username === state.validUsername && action.loginData.password === state.validPassword){
                 console.log('success')
                 return {
@@ -62,7 +63,7 @@ const reducer = (state = initialObj, action) =>{
                         sortArr.sort((a,b) => Number(b.cibil_score) - Number(a.cibil_score)) 
                     return {
                         ...state,
-                        data:[...sortArr]
+                        viewTableData:[...sortArr]
                     }
         case Sort_Loan:
                     let sortLoanArr = state.data
@@ -72,14 +73,28 @@ const reducer = (state = initialObj, action) =>{
                         sortLoanArr.sort((a,b) => Number(b.loan) - Number(a.loan)) 
                     return {
                         ...state,
-                        data:[...sortLoanArr]
+                        viewTableData:[...sortLoanArr]
                     }    
         case Filter_Loan:
-                    let filterArr = state.data
-                     filterArr = filterArr.filter(item => item.type === action.value)
+                    if(action.value !== 'all'){
+                        let filterArr = state.data.filter(item => {
+                            console.log(item.type[0],action.value)
+                            return item.type[0] === action.value
+                        })
+                        return {
+                            ...state,
+                            viewTableData:[...filterArr]
+                        }
+                    }else{
+                        let data = state.data
+                        return {
+                            viewTableData:[...data]
+                        }
+                    }
+        case Logout:
                     return {
                         ...state,
-                        data:[...filterArr]
+                        isLoggedIn:false
                     }
         default:
                     return state
