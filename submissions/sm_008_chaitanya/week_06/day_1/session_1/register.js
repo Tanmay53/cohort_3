@@ -15,17 +15,6 @@ function getData(display) {
         description: description,
     }
 
-    // for (key in details) {
-    //     if (details.key == null || details.key == "") {
-    //         alert('Please fill all the Fields')
-    //         break
-    //     }
-    //     else {
-    //         alert('Your response is recorded')
-    //         break
-    //     }
-    // }
-
     details = JSON.stringify(details)
 
     var result = null;
@@ -49,6 +38,7 @@ function getData(display) {
     xhr.onerror = function () {
         console.log("Error in HTTP Request!")
     }
+
 }
 
 var printUser = function (output) {
@@ -62,4 +52,12 @@ var printUser = function (output) {
 var btn = document.getElementById("sub_mit")
 btn.addEventListener('click', function () {
     getData(printUser)
+
+    ///////  After submitting the registration form the input fileds to reset  ////// 
+    document.getElementById("name").value = ""
+    document.getElementById("email").value = ""
+    document.getElementById("pwd").value = ""
+    document.getElementById("user_name").value = ""
+    document.getElementById("mobile").value = ""
+    document.getElementById("desp").value = ""
 })
