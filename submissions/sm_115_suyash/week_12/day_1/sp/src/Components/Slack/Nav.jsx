@@ -3,7 +3,7 @@ import "./Nav.css";
 
 function Nav() {
   return (
-    <div className="container-fluid shadow-sm sticky">
+    <div className="container-fluid shadow-sm sticky-top bg-white pb-2">
       <div className="row">
         <div className="col-1 ml-4">
           <a href="#">
