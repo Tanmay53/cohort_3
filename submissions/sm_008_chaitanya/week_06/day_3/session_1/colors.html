@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Colours</title>
+</head>
+
+<body>
+	<h1 class="head1 red">MASAI H1</h1>
+	<h2 class="head2 green">MASAI H2</h2>
+	<h3 class="head3 red">MASAI H3</h3>
+	<h4 class="head4 green">MASAI H4</h4>
+	<h4 class="head5 green">MASAI H4</h4>
+	<div class="con1 red">School C1</div>
+	<div class="con2 green">School C2</div>
+	<div class="con3 red">School C3</div>
+	<p class="para1 red">Coding P1</p>
+	<p class="para2 green">Coding P2</p>
+	<p class="para3 red">Coding P3</p>
+	<hr>
+	<button id="chng_h1">Change H1</button>
+	<button id="chng_h2">Change H2</button>
+	<button id="chng_h3">Change H3</button>
+	<button id="chng_h4">Change H4</button>
+	<button id="chng_div">Change DIVS</button>
+	<button id="chng_para">Change Paragraph</button>
+	<button id="chng_red">Change Red</button>
+	<button id="chng_green">Change Green</button>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// your code goes here
+			$("#chng_h1").click(function () {
+				$("h1").css("font-size", "70px");
+			});
+
+			$("#chng_h2").click(function () {
+				$("h2").css({ "font-size": "32px", "padding": "10px" })
+			});
+
+			$("#chng_h3").click(function () {
+				$("h3").css({ "background": "black", "color": "white" });
+			});
+
+			$("#chng_h4").click(function () {
+				$("h4").css({ "border": "2px solid black", "margin": "10px 0px" })
+			});
+
+			$("#chng_div").click(function () {
+				$("div").css({ "padding": "6px 8px" });
+			});
+
+			$("#chng_para").click(function () {
+				$("p").css({ "color": "purple", "font-weight": "bold" });
+			});
+
+			$("#chng_red").click(function () {
+				$(".red").css({ "color": "red" });
+			});
+
+			$("#chng_green").click(function () {
+				$(".green").css({ "background": "green", "color": "white" });
+			});
+
+		});
+	</script>
+</body>
+
+</html>
