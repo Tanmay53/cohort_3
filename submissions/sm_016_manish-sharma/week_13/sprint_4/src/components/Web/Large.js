@@ -6,9 +6,9 @@ class Large extends React.Component {
     }
     render() {
         return (<div>
-            <div className='container d-flex flex-row justify-content-center py-5'>
+            <div className='container d-flex flex-row justify-content-center mt-5 py-5'>
                 <div className='col-5 my-5 py-5'>
-                    <div className='h2 font-weight-light mt-4'>Simple. Secure.</div>
+                    <div className='h2 font-weight-light mt-5'>Simple. Secure.</div>
                     <div className='h2 font-weight-light'>Reliable messaging.</div>
                     <div className='text-secondary mt-4 mb-2'>With WhatsApp, you'll get fast, simple, secure messaging and calling for free*, available on phones all over the world.</div>
                     <div><small className='text-muted'>* Data charges may apply. Contact your provider for details.</small></div>
@@ -19,7 +19,7 @@ class Large extends React.Component {
                         <div className='text-info my-3'><i class="material-icons mx-2" style={{fontSize:'15px'}}>developer_board</i> Windows Phone</div>
                     </div>
                 </div>
-                <div className='col-4'>
+                <div className='col-4 mt-5'>
                     <img style={{height:'640px',width:'auto',objectFit:'contain'}} src='https://static.whatsapp.net/rsrc.php/v3/yU/r/aIUMc-wmaFw.png' />
                 </div>
             </div>
