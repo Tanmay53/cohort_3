@@ -72,16 +72,16 @@
             for (var i = 0; i < data.length; i++) {
                 var tr = document.createElement('tr');
                 var userid = document.createElement('td');
-                userid.tableItems = data[i].UserId;
+                userid.textContent = data[i].UserId;
                 tr.appendChild(userid);
                 var id = document.createElement('td');
-                id.tableItems = data[i].Id;
+                id.textContent = data[i].Id;
                 tr.appendChild(id);
                 var title = document.createElement('td');
-                title.tableItems = data[i].Title;
+                title.textContent = data[i].Title;
                 tr.appendChild(title);
                 var body = document.createElement('td');
-                body.tableItems = data[i].Body;
+                body.textContent = data[i].Body;
                 tr.appendChild(body);
                 console.log(data[i]);
                 tr.setAttribute('class', 'rm')

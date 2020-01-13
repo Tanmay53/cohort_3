@@ -1,21 +1,18 @@
-    var ctgry = document.getElementById('CategoryListChoices').value;
-    var nme = document.getElementById('name').value;
-    var pice = document.getElementById('price').value;
-    var total = 0
-    var avg = 0
+// var category = document.getElementById("CategoryList").value
+// var name = document.getElementById("name").value
+// var price = document.getElementById("price").value
+// var table = document.querySelector(".displayTable")
 
-    function Enter() {
-        printItem(CategoryListChoices, name, price) reset()
-    }
 
-    function reset() {
-        document.getElementById('CategoryListChoices').value = " "
-        document.getElementById('name').value = " "
-        document.getElementById('price').value = " "
-    }
+// function Enter() {
+//     var category = document.getElementById("CategoryList").value
+//     var name = document.getElementById("name").value
+//     var price = document.getElementById("price").value
+//     console.log(name, category, price)
 
-    function printItem(CategoryListChoices, name, price) {
-        CategoryListChoices.innerHTML = CategoryListChoices
-        name.innerHTML = name
-        price.innerHTML = price
-    }
+//     var table1 = document.querySelector("table");
+//     var trs = document.createElement("tr");
+//     trs.innerHTML = "<td>" + category + "</td><td>" + name + "</td><td>" + price + "</td>"
+//     table1.appendChild(trs)
+//     console.log(trs)
+// }
