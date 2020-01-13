@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Colours</title>
+</head>
+<body>
+	<h1 id="head1" class="red">MASAI H1</h1>
+	<h2 id="head2" class="green">MASAI H2</h2>
+	<h3 id="head3" class="red">MASAI H3</h3>
+    <h4 id="head4" class="green">MASAI H4</h4>
+    <h4 id="head5" class="green">MASAI H4</h4>
+	<div id="con1" class="red">School C1</div>
+	<div id="con2" class="green">School C2</div>
+	<div id="con3" class="red">School C3</div>
+	<p id="para1" class="red">Coding P1</p>
+	<p id="para2" class="green">Coding P2</p>
+	<p id="para3" class="red">Coding P3</p>
+	<hr>
+	<button id="changeH1">Change H1</button>
+	<button id="changeH2">Change H2</button>
+    <button id="changeH3">Change H3</button>
+    <button id="changeH4">Change H4</button>
+	<button id="changeDiv">Change DIVS</button>
+    <button id="changeP">Change Paragraph</button>
+    <button id="changeRed">Change Red</button>
+    <button id="changeGreen">Change Green</button>
+</body>
+<script>
+	$('#changeH1').click(function(){
+		$('h1').css('font-size','70px')
+	})
+	$('#changeH2').click(function(){
+		$('h2').css('font-size','32px')
+		$('h2').css('padding','10px');
+	})
+	$('#changeH3').click(function(){
+		$('h3').css('color','white');
+		$('h3').css('background','black');
+		// $('h3').addClass('bg-dark text-white')
+	})
+	$('#changeH4').click(function(){
+		$('h4').css('border','2px solid black');
+		$('h4').css('margin-top','10px 0px 10px 0px');
+	})
+	$('#changeDiv').click(function(){
+		$('div').css('padding','6px 8px')
+	})
+	$('#changeP').click(function(){
+		$('p').css('color','purple');
+		$('p').addClass('font-weight-bold');
+	})
+	$('#changeRed').click(function(){
+		$('.red').css('color','red');
+	})
+	$('#changeGreen').click(function(){
+		$('.green').addClass('bg-success text-white');
+	})
+
+
+
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,106 @@
+{
+  "iphone": [
+    {
+      "id": "1",
+      "name": "IPhone 11",
+      "avatar": "https://www.slickwraps.com/media/catalog/product/cache/1/image/491x491/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone11-glow.jpg",
+      "price": "70000",
+      "description": "Pro performance"
+    },
+    {
+      "id": "2",
+      "name": "IPhone 11 pro",
+      "avatar": "https://images-na.ssl-images-amazon.com/images/G/01/appcore/phone/11pro/iPhone_11_Pro_Desktop_01._CB436769811_.jpg",
+      "price": "100000",
+      "description": "Pro cameras. Pro display. Pro performance."
+    },
+    {
+      "id": "3",
+      "name": "IPhone 8 Plus",
+      "avatar": "http://localhost:3000/iphonestack.jpg",
+      "price": "30000",
+      "description": "Pro cameras Pro performance"
+    },
+    {
+      "id": "4",
+      "name": "IPhone 8",
+      "avatar": "https://cdn.vox-cdn.com/thumbor/hR2SY7RNMgc7Y72XyNr3MM4gEDI=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/57264875/jbareham_170916_2000_0126.0.jpg",
+      "price": "30000",
+      "description": "Decent Display and Performance"
+    },
+    {
+      "id": "5",
+      "name": "IPhone XR",
+      "avatar": "https://cdn.vox-cdn.com/thumbor/sReaaOYo1Lcl3-Hf73vByPPRBsg=/0x0:800x533/1200x800/filters:focal(336x203:464x331)/cdn.vox-cdn.com/uploads/chorus_image/image/56641599/apple_iphone_2017_20170912_11670.0.jpeg",
+      "price": "75000",
+      "description": "Big and Decent Display and Performance"
+    },
+    {
+      "id": "6",
+      "name": "IPhone Neo",
+      "avatar": "https://www.abc.net.au/news/image/10240302-3x2-700x467.jpg",
+      "price": "198760",
+      "description": "Upcoming"
+    }
+  ],
+  "mac": [
+    {
+      "id": "1",
+      "name": "MacBook Pro 16",
+      "avatar": "https://cdn.pocket-lint.com/r/s/970x/assets/images/150265-laptops-review-macbook-pro-16-inch-review-a-typing-power-house-image1-ga7cf05o2j.jpg",
+      "price": "200000",
+      "description": "Our most powerful pro lineup ever"
+    },
+    {
+      "id": "2",
+      "name": "MacBook Air",
+      "avatar": "https://static.bhphoto.com/images/images2500x2500/1562676502_1492872.jpg",
+      "price": "130000",
+      "description": "Power to change everything."
+    },
+    {
+      "id": "3",
+      "name": "MacBook Pro 13",
+      "avatar": "https://icdn9.digitaltrends.com/image/digitaltrends/macbook-air-2018-review-5879-500x500.jpg",
+      "price": "150000",
+      "description": "Believing is seeing"
+    }
+  ],
+  "accessories": [
+    {
+      "id": "1",
+      "name": "Home Pod",
+      "avatar": "https://www.mytrendyphone.eu/images/Original-Apple-HomePod-Smart-Bluetooth-Speaker-MQHW2D-A-Space-Grey-0190198796424-10122018-01-p.jpg",
+      "price": "10000",
+      "description": "The new sound of home"
+    },
+    {
+      "id": "2",
+      "name": "I Pod",
+      "avatar": "https://www.itechlux.lu/wp-content/uploads/2017/10/ipod_classic_3-500x500.jpg",
+      "price": "5000",
+      "description": "Magic like you never have heard"
+    },
+    {
+      "id": "3",
+      "name": "Air Pod Pro",
+      "avatar": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/genericairpodproductphoto-1572283776.jpg",
+      "price": "3000",
+      "description": "Wireless. Effortless. Magical."
+    },
+    {
+      "id": "4",
+      "name": "Apple Watch",
+      "avatar": "https://media.wired.com/photos/5a3030635a2d9a4a532ba9d3/master/w_2176,h_1632,c_limit/applewatchreview-IL.jpg",
+      "price": "12000",
+      "description": "You have never seen a watch like this"
+    },
+    {
+      "id": "5",
+      "name": "Apple Tv",
+      "avatar": "https://cdn.vox-cdn.com/thumbor/ne6Aqt6HZ5iO4yuu8MsZGMEimF0=/295x0:1254x739/1200x800/filters:focal(417x161:661x405)/cdn.vox-cdn.com/uploads/chorus_image/image/65050362/big_bird_apple_tv_plus_1536.0.png",
+      "price": "300000",
+      "description": "Cinematic in every sense"
+    }
+  ]
+}
