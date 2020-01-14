@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
-import {Box,Container,Input,TextField,Button,Typography,FormHelperText} from '@material-ui/core'
+import {Box,Container,TextField,Button,Typography,FormHelperText} from '@material-ui/core'
 import {connect} from 'react-redux'
-import { render } from '@testing-library/react'
 import { checkLogin } from '../../Redux/actions'
 import { Redirect } from 'react-router-dom'
 

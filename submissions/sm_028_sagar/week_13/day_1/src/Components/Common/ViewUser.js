@@ -10,15 +10,15 @@ class ViewUser extends Component {
         this.state ={
             type:'asc',
             loanAmt:'asc',
-            loanType:'all'
+            loanType:'all',
         }
     }
     
     sortCibil = (e) =>{
-        this.props.sortCibil(e.target.value)
         this.setState({
             type:e.target.value,
         })
+        this.props.sortCibil(e.target.value)
     }
 
     sortLoan = (e) =>{
@@ -37,9 +37,7 @@ class ViewUser extends Component {
         console.log('filtering started')
     }
     
-
     render(){
-        console.log('filtered',this.state.tempData)
         if(this.props.isLoggedIn){
             return (
                 <div>

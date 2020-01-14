@@ -34,7 +34,8 @@ const reducer = (state = initialObj, action) =>{
         case Submit_Data:
                return {
                    ...state,
-                   data:[...state.data,action.data]
+                   data:[...state.data,action.data],
+                   viewTableData:[...state.data,action.data]
                }
         case Update_User:
                let findUser = state.data.find(item => item.id === action.id)
@@ -53,7 +54,8 @@ const reducer = (state = initialObj, action) =>{
                     }  
                     return {
                         ...state,
-                        data: [...arr]
+                        data: [...arr],
+                        viewTableData:[...arr]
                     }     
         case Sort_Cibil:
                     let sortArr = state.data
@@ -88,6 +90,7 @@ const reducer = (state = initialObj, action) =>{
                     }else{
                         let data = state.data
                         return {
+                            ...state,
                             viewTableData:[...data]
                         }
                     }
