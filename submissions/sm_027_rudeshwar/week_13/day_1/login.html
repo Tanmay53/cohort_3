@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+
+</head>
+
+<body>
+    <!-- <form action="" id="loginForm"> -->
+    
+        <label for="email">email</label>
+        <input type="text" id="email" name="email">
+        
+        <label for="password">password</label>
+        <input type="text" id="password" name="password">
+    <!-- </form> -->
+
+    <input type="button" value="SUBMIT" id="printUser">
+    <!-- <button type="submit" id="printUser">SUBMIT</button> -->
+    <!-- whats the difference between these two -->
+    <!-- </form>   -->
+
+    <script>
+        
+
+            //selecting button tag by id printUser
+            var button = document.getElementById("printUser")
+            //adding the event ''click' for function getData()
+            button.addEventListener("click", getData)
+
+            function getData() {
+            var email = document.getElementById("email").value
+            console.log(email)
+            var password = document.getElementById("password").value
+            console.log(password)
+
+            var object = {
+                "email": email,
+                "password": password
+            }
+            object = JSON.stringify(object)//sending data in the form of string
+
+ 
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", 'https://reqres.in/api/login')
+            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            xhr.send(object);
+
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    console.log(xhr.response, xhr.status)
+                    //if response is a success get the token
+                    var output= JSON.parse(xhr.response)
+                    console.log(output.token)
+                    
+                }
+                else {
+                    console.log("Error Code is" + xhr.status)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
