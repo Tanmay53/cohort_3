@@ -3,7 +3,7 @@ import {Container,Box,Typography,TextField,Button} from '@material-ui/core'
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import {submitData} from '../../Redux/actions'
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 
 class AddUser extends Component {
     constructor(props){
@@ -36,13 +36,14 @@ class AddUser extends Component {
             loan:this.state.loan,
             type:this.state.type
         }
-        console.log('submit clicked')
-        console.log(newUser)
+        console.log('user added')
         this.props.dataSubmit(newUser)
         this.state.count++
     }
 
     render(){
+       console.log(this.props.isLoggedIn)
+       if(this.props.isLoggedIn === true){
         return (
             <div>
                 <Container maxWidth='sm'>
@@ -128,11 +129,11 @@ class AddUser extends Component {
                                 <Box m={2}>
                                    <label htmlFor='type' style={{margin:'15px'}}>Loan Type</label>
                                    <select name='type' value={this.state.type} onChange={this.handleChange} >
-                                       <option value='personal'>Personal</option>   
-                                       <option value='educational'>Educational</option>
-                                       <option value='car'>Car</option>
-                                       <option value='home'>Home</option>
-                                       <option value='business'>Business</option>
+                                        <option value='personal'>personal</option>
+                                        <option value='business'>business</option>
+                                        <option value='education'>education</option>
+                                        <option value='car'>car</option>
+                                        <option value='home'>home</option>
                                    </select>
                                 </Box>
                                 <Box m={2}>
@@ -145,8 +146,16 @@ class AddUser extends Component {
                 </Container>
             </div>
         )
+       }else    
+            return <Redirect to='/login' />
     }
     
+}
+
+const mapStateToProps = state => {
+    return {
+        isLoggedIn:state.isLoggedIn
+    }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -155,4 +164,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(null,mapDispatchToProps)(AddUser)
+export default connect(mapStateToProps,mapDispatchToProps)(AddUser)

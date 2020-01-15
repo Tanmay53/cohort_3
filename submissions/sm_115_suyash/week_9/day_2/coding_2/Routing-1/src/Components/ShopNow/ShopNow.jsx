@@ -1,9 +1,13 @@
 import React from "react";
 
-function ShopNow() {
+function ShopNow(props) {
+  console.log("ShopNow>>>>>>>", props.cartList);
   return (
     <div>
-      <h1>Sopping here...</h1>
+      <p>Item is added</p>
+      {props.cartList.map(val => (
+        <h3>Rs {val}</h3>
+      ))}
     </div>
   );
 }

@@ -58,3 +58,10 @@ export const filterLoanType = (value) =>{
         value
     }
 }
+
+export const Logout = 'Logout'
+export const isLogOut = () => {
+    return {
+        type:Logout
+    }
+}
