@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dash</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Log in to Dash Html Page</h1>
+    <hr>
+    <br>
+    <h4 id="userName"></h4>
+    <h5 id="ltime"></h5>
+    <div>
+        <button onclick="logOut()">Logout</button>
+    </div>
+    <script>
+
+        var x =JSON.parse(localStorage.getItem("loginData"));
+        console.log(x)
+        var abc = x[x.length-1]["user"];
+        document.getElementById('userName').innerHTML ="User Name = " +abc
+        console.log(abc)
+        var logInTime = Date();
+        document.getElementById("ltime").innerHTML ="Log In Time = " +logInTime;
+        // console.log(time.getH)
+        
+        function logOut (){
+        window.location.href="./index.html"
+            var obj = {
+                logInTime: logInTime,
+                }
+            x.push(obj)
+            var userData = JSON.stringify(data)
+            // console.log(userData)
+            localStorage.setItem("loginData", userData);
+            alert("Time Added")
+        }
+        setTimeout(function(){
+            window.location.href="./index.html"
+        },300000)
+
+    </script>
+</body>
+</html>

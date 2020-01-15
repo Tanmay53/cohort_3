@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- .....bootstrap link..... -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Form Practice</title>
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <!-- ....heading.... -->
+        
+        
+        
+        <div class="row">
+            <!-- ....left side form block.... -->
+            <div class="col-8">
+                <form>
+                    <div class="form-row">
+                        <h1>Billing Address</h1>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <!-- .............................................. -->
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="userName">User Name</label>
+                            <input type="text" class="form-control" id="userName" placeholder="User Name">
+                        </div>
+                    </div>
+                    <!-- ...................................................... -->
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="email">Email<span class="font-weight-light"> (Optional)</span> </label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                        </div>
+                    </div>
+                    <!-- ........................................................... -->
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                        </div>
+                    </div>
+                    <!-- .............................................................. -->
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="address2">Address 2<span class="font-weight-light"> (Optional)</span></label>
+                            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                        </div>
+                    </div>
+                    <!-- ....................................................................... -->
+                    <div class="form-row">
+                        <div class="form-group col-4">
+                            <label for="country">Country</label>
+                            <select id="country" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="india">India</option>
+                                <option value="china">China</option>
+                                <option value="nepal">Nepal</option>
+                                <option value="wakanda">Wakanda</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="state">State</label>
+                            <select id="state" class="form-control">
+                                <option selected>Choose...</option>
+                                <option value="karnataka">Karnataka</option>
+                                <option value="andhraPradesh">Andhra Pradesh</option>
+                                <option value="tamilNade">Tamil Nadu</option>
+                                <option value="kerala">Kerala</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="zipCode">Zip Code</label>
+                            <input type="text" class="form-control" id="zipCode">
+                        </div>
+                    </div>
+                    <!-- .......................................................... -->
+                    <hr>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="shipAddInfo">
+                                <label class="form-check-label" for="shipAddInfo">
+                                    Shipping Address is the same as my billing Address
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .................................................................. -->
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="saveInfoNextTime">
+                                <label class="form-check-label" for="saveInfoNextTime">
+                                    Save this information for next time
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- ........................................................................... -->
+                    <div class="form-row">
+                        <h5>Payment</h5>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="" id="creditCard">
+                                <label class="form-check-label" for="creditCard">
+                                    Credit card
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="" id="debitCard">
+                                <label class="form-check-label" for="debitCard">
+                                    Debit card
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="" id="paypal">
+                                <label class="form-check-label" for="paypal">
+                                    Paypal
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ................................................................ -->
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="nameOncard">Name on card</label>
+                            <input type="text" class="form-control" id="nameOncard">
+                            <small class="form-text text-muted">Full name as displayed on card</small>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="creditCardNumber">Credit card number</label>
+                            <input type="text" class="form-control" id="creditCardNumber">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            
+            <div class="col-4">
+                <div class="row">
+                    <img src="https://via.placeholder.com/50/FFFFFF/FFFFFF">
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <h3 class="text-secondary">Your Cart</h3>
+                    </div>
+                    <div class="col-3">
+                        <img src="https://via.placeholder.com/4*1.png/D3D3D3/808080?text=3" class="rounded-pill">
+                    </div>
+                </div>
+                <div class="row">
+                    <table class="table border">
+                        <tr>
+                            <td>    
+                                <p class="h6">Product name</p>
+                                <small class="text-muted">Brief Description</small>
+                            </td>
+                            <td>
+                                <h5 class="text-secondary h6">$12</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="h6">Second product</p>
+                                <small class="text-muted">Brief Description</small>
+                            </td>
+                            <td>
+                                <h5 class="text-secondary h6">$8</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="h6">Third item</p>
+                                <small class="text-muted">Brief Description</small>
+                            </td>
+                            <td>
+                                <h5 class="text-secondary h6">$5</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="h6 text-success">Promo code</p>
+                                <small class="text-success">EXAMPLECODE</small>
+                            </td>
+                            <td>
+                                <h5 class="text-success h6">-$5</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="h6">Total (USD)</p>
+                            </td>
+                            <td>
+                                <h6>$20</h6>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
