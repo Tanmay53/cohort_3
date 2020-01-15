@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.block1{
+  background-color: rgb(107, 192, 192);
+  height: 700px;
+}
+
+
+.block2{
+  background-color: rgb(166, 224, 224);
+  height: 700px;
+}
+
+.footer{
+  background-color: rgb(15, 15, 82);
+}
