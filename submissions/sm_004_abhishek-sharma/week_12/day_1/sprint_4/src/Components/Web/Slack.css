@@ -1,0 +1,22 @@
+.btn-primary {
+    background-color: #4a154b;
+}
+.btn {
+    width: 160px;
+    height: 60px;
+    font-size: 4px;
+}
+
+.top{
+    background:center / contain url("https://a.slack-edge.com/59662/marketing/img/homepage/video/brand-campaign_hero-poster.jpg");
+}
+.functionImg1{
+    background: center / contain url("https://a.slack-edge.com/9d2e8/marketing/img/channels/channels-inline1.en-IN.jpg");
+}
+.down {
+    font-size: 14px;
+}
+
+.dataText {
+    font-size: 18px;
+}

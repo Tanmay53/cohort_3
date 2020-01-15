@@ -1,0 +1,43 @@
+.purple{
+    background-color: purple;
+    color:white;
+} 
+.size1{
+    width: 1200px;
+    height: 500px;
+}
+.size2{
+    width: 800px;
+    height: 400px;
+}
+
+.topleft {
+    position: absolute;
+    top: 155px;
+    margin-left: 50px;
+    font-size: 18px;
+  }
+  .iconsize{
+      height: 60px;
+      width: 60px;
+  }
+  .size4{
+      width: 550px;
+      height: 550px;
+  }
+  .topmar{
+      margin-top: 140px;
+    
+  }
+  .iconsize1{
+    height: 100px;
+    width: 130px;
+  }
+  .space{
+      margin-top: 300px;
+  }
+  .aa{
+      margin-left: 400px;
+      margin-top: 40px;
+      
+  }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise2</title>
+
+</head>
+<body>
+    <div id = "root"></div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+        let arr = ["Wake up at 5:00", "Take a shower at 7:30", "Breakfast at 8", "Move to Co-work by8:50", "Attend Scrum at 9:00"]
+        let person = {
+            name: "Asheesh Pratap Singh",
+            age: 27,
+            dob: "22/05/1992",
+            favouriteColor: "Black"
+        }
+
+        const element = (
+            <div>
+                <h1>My Todo List</h1>
+                <ul>
+                    <li>{arr[0]}</li>
+                    <li>{arr[1]}</li>    
+                    <li>{arr[2]}</li>    
+                    <li>{arr[3]}</li>    
+                    <li>{arr[4]}</li>        
+                </ul>
+                <p>Name: {person.name}<br />Age: {person.age}<br />DOB: {person.dob}<br />Favourite Color: {person.favouriteColor}</p>    
+            </div>
+        );
+        const root = document.getElementById("root");
+        ReactDOM.render(element,root);
+    </script>
+</body>
+</html>

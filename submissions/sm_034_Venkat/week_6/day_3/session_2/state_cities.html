@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>State City Selectors</title>
+</head>
+
+<body>
+    <select id="state"></select>
+    <button>Next</button>
+    <select id="city"></select>
+
+    <script>
+        var state_cities = [{ "state": "Karnataka", "cities": ["Bangalore", "Mysore", "Manglore"] },
+        { "state": "Tamil Nadu", "cities": ["Chennai", "Tanjore", "Kanchi"] },
+        { "state": "Andhra Pradesh", "cities": ["Vijayawada", "Guntur", "Vizag", "Tirupati"] }]
+
+        var l = state_cities.length
+        var states = []
+        var cities = []
+        var select = document.getElementById('state')
+        for (i = 0; i < l; i++) {
+            states.push(state_cities[i].state)
+            cities.push(state_cities[i].cities)
+            var opt = document.createElement("option")
+            opt.textContent = states[i]
+            select.append(opt)
+        }
+        // console.log(select.options[2])
+
+
+        var btn = document.querySelector('button')
+        btn.addEventListener('click', showCities)
+        function showCities() {
+            var chosenState = select.value
+            var city = document.getElementById("city")
+            city.textContent = ""
+            var reqCity
+            for (i = 0; i < l; i++) {
+                if (states[i] == chosenState) {
+                    reqCity = cities[i]
+                }
+            }
+            for (j = 0; j < reqCity.length; j++) {
+                var optCity = document.createElement("option")
+                optCity.textContent = reqCity[j]
+                city.append(optCity)
+            }
+        }
+    </script>
+</body>
+
+</html>
