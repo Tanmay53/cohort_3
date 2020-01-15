@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div>
+        <div>
+            <button id="get-btn">Submit</button>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered text-center">
+    <tr>
+        <th>Id</th>
+        <th>title</th>
+    </tr>
+    </table>
+
+
+
+    <script>
+
+        $("#get-btn").click(function () {
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/posts",
+            })
+                .done(function (data) {
+                    console.log(data);
+                    showdata(data)
+
+                    // if (xhr.status == 200) {
+                    //     result = null
+                    //     result = xhr.response
+                    //     // result = JSON.parse(result)
+                    //     showdata(result);
+                    //     console.log(result)
+
+                    // }
+                    // else {
+                    //     console.log("Error Code is:" + xhr.status)
+                    // }
+
+                });
+        });
+
+        function showdata(result) {
+            var obj = result
+            console.log(obj)
+            var table1 = document.querySelector('table');
+            for (var i = 0; i < result.length; i++) {
+                // console.log(result[i])
+                var tr1 = document.createElement('tr');
+                var td1 = document.createElement('td')
+                td1.textContent = result[i].id;
+                tr1.appendChild(td1);
+                var td2 = document.createElement('td')
+                td2.textContent = result[i].title;
+                tr1.appendChild(td2);
+                table1.appendChild(tr1)
+            }
+        }
+    </script>
+</body>
+
+</html>

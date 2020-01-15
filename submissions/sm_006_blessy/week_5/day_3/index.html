@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>index.html</title>
+</head>
+<style>
+    body {
+        background-image: url("https://images.unsplash.com/photo-1496913660671-3821df336ffb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    }
+
+    #form {
+        display: flexbox;
+        background-color: cornsilk;
+        height: 300px;
+        width: 350px;
+        margin: 200px 450px;
+        text-align: center;
+    }
+
+    #usrname {
+        border-radius: 10px;
+        width: 300px;
+        margin: 10px;
+    }
+
+    #paswrd {
+        border-radius: 10px;
+        width: 300px;
+        margin: 10px;
+
+    }
+
+    #sbmit {
+        border-radius: 10px;
+        width: 300px;
+        background-color: cadetblue;
+        margin: 10px;
+
+    }
+</style>
+
+<body>
+    <div id="form">
+        <p1>User Name</p1><br>
+        <input type="text" value="username" id="usrname"><br>
+        <p1>Password</p1><br>
+        <input type="password" value="password" id="paswrd"><br>
+        <button id="sbmit">SUBMIT</button>
+    </div>
+    <button onclick="myFunction()">Replace document</button>
+
+    <script>
+        localStorage.setItem("user", "Blessy")
+        logouttime.innerHTML = date;
+        localStorage.setItem("passwrd", "123456")
+        document.getElementById("sbmit").addEventListener("click", function (event) {
+            event.preventDefault()
+            var username = document.getElementById("usrname").value;
+            var password = document.getElementById("paswrd").value;
+            if (username === localStorage.getItem("user") && password === localStorage.getItem("passwrd")) {
+                alert("Valid User")
+            }
+            else {
+                alert("Invalid User")
+            }
+            location.replace("/home/blessy/coding/week_5/day_3/dash.html")
+
+        });
+        
+        
+    </script>
+</body>
+
+</html>
