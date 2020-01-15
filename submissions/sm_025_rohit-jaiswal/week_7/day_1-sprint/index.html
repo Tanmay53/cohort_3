@@ -34,32 +34,33 @@
                 Add Item's to your List
                 <hr width="70%" class="content5">
                 <div class=" content6">
-                    <form action="" method="get" class="form">
-                        <div class="form">
-                            <label for="CategoryListChoices">Choose a Category:</label>
-                            <input list="CategoryList" id="CategoryListChoices" name="CategoryListChoices" placeholder="Choose a Category" />
-                            <datalist id="CategoryList">
-                            <option value="Dairy">
-                            <option value="Fruits">
-                            <option value="Vegetables">
-                            <option value="Pulses">
-                            <option value="Snacks">
-                        </datalist>
-                            <br>
-                            <label for="name">Items' Name </label>
-                            <input type="text" name="name" id="name" placeholder="Enter Item's Name">
-                            <br>
-                        </div>
-                        <div class="form">
-                            <label for="price">Price: </label>
-                            <input type="text" name="price" id="price" required placeholder="Enter Price in Rupee">
-                        </div>
+                    <!-- <form action="" method="get" class="form"> -->
+                    <div>
+                        <label for="CategoryListChoices">Choose a Category:</label>
+                        <select id="CategoryList">
+                                <option value="">Select a Category</option>
+                                <option value="dairy" >Dairy</option>
+                                <option value="fruits">Fruits</option>
+                                <option value="vegetables">Vegetables</option>
+                                <option value="pulses">Pulses</option>
+                                <option value="snacks">Snacks</option>
+                            </select>
                         <br>
-                        <div class="form">
-                            <input type="submit" onclick="Enter()" value="Enter to the List ->">
-                        </div>
+
+                        <label for="name">Items' Name </label>
+                        <input type="text" id="name" placeholder="Enter Item's Name">
+                        <br>
+                    </div>
+                    <div>
+                        <label for="price">Price: </label>
+                        <input type="text" id="price" required placeholder="Enter Price in Rupee">
+                    </div>
+                    <br>
+                    <div>
+                        <button onclick="Enter()"> Submit</button>
+                    </div>
                 </div>
-                </form>
+
             </div>
 
             <div class="content9">
@@ -68,11 +69,10 @@
                 <div>
                     <table class="displayTable">
                         <tr>
-                            <td>Category </td>
-                            <td>Item's Name </td>
-                            <td> Price </td>
+                            <th>Category </th>
+                            <th>Item's Name </th>
+                            <th> Price </th>
                         </tr>
-
                     </table>
                 </div>
 
@@ -90,7 +90,35 @@
     </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function Enter() {
+            var table1 = document.querySelector("table");
+            var Category = document.getElementById('CategoryList').value;
+            var Name = document.getElementById('name').value;
+            var Price = document.getElementById('price').value;
+            console.log(Category, Name, Price)
+            var trs = document.createElement('tr');
+            var td1 = document.createElement("td")
+            td1.textContent = Category
+            trs.appendChild(td1)
+
+            var td2 = document.createElement("td")
+            td2.textContent = Name
+            trs.appendChild(td2)
+
+            var td3 = document.createElement("td")
+            td3.textContent = Price
+            trs.appendChild(td3)
+
+
+
+            // trs.innerHTML = "<td>" + Category + "</td><td>" + Name + "</td><td>" + Price + "</td>"
+            // trs.innerHTML = "SVJFV"
+            console.log(trs)
+            table1.appendChild(trs)
+
+        }
+    </script>
 
 </body>
 
