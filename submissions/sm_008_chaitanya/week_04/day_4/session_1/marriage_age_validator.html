@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .header {
+            text-align: center;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+
+        #gend {
+            font-size: 20px;
+        }
+
+        #birth {
+            margin-top: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        Select Gender:
+        <select id="gend">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select></br>
+        <input type="num" id="birth" placeholder="Enter your Birth Year"><br>
+        <button onclick="marriage_cal()">Submit</button>
+    </div>
+    <script>
+        function marriage_cal() {
+            var gender = document.getElementById("gend").value;
+            var birth_year = document.getElementById("birth").value;
+            var curr_year = 2019;
+            var age = curr_year - birth_year;
+            if (gender == "Male" && age > 21) {
+                alert("Valid legal age to get married");
+            }
+            else if (gender == "Male" && age <= 21) {
+                alert("Not a Valid legal age to get married");
+            }
+            if (gender == "Female" && age > 18) {
+                alert("Valid legal age to get married");
+            }
+            else if (gender == "Female" && age <= 18) {
+                alert("Not a Valid legal age to get married")
+            }
+        }
+
+    </script>
+</body>
+
+</html>
