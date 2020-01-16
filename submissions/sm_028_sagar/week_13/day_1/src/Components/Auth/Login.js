@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
-import {Box,Container,Input,TextField,Button,Typography,FormHelperText} from '@material-ui/core'
+import {Box,Container,TextField,Button,Typography,FormHelperText} from '@material-ui/core'
 import {connect} from 'react-redux'
-import { render } from '@testing-library/react'
 import { checkLogin } from '../../Redux/actions'
 import { Redirect } from 'react-router-dom'
 
@@ -20,14 +19,13 @@ class Login extends Component {
         })
     }
 
-    handleLoginSubmit = () =>{
+    handleLogin = () =>{
+        console.log('clicked')
         let credentials = {
             username:this.state.username,
             password:this.state.password
         }
         this.props.loginSubmit(credentials)
-        console.log('clicked')
-
     }
 
     render(){
@@ -47,7 +45,7 @@ class Login extends Component {
                              <TextField name='password' id="standard-secondary" type='password' value={this.state.password} onChange={(e)=>this.handleChange(e)} label="Password" color="primary" fullWidth/>
                         </Box>
                         <Box m={2}>
-                            <Button variant='contained' color='primary' onClick={this.handleLoginSubmit}>Sign In</Button>
+                            <Button variant='contained' color='primary' onClick={()=>this.handleLogin()}>Sign In</Button>
                         </Box>
                         {this.props.helperText && <Box m={2}>
                                 <FormHelperText>{this.props.helperText}</FormHelperText>

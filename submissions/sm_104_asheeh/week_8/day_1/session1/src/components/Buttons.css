@@ -1,0 +1,38 @@
+.cont{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+      display: flex;
+      flex-direction: column;
+}
+.badge{
+        height: 35px;
+        width: 140px;
+        text-align: center;
+        padding: 5px;
+        margin: 10px;
+        font-size: 15px;
+        
+}
+
+.btnJoin{
+        background: teal;
+        color: white;
+}
+
+.btnHelp{
+            background: purple;
+            color: white;
+}
+
+.btnHome{
+            background: pink;
+            color: white;
+}
+
+.btnDownload{
+            background: brown;
+            color: white;
+}
