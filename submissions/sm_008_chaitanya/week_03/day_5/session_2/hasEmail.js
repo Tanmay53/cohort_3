@@ -55,7 +55,7 @@ function invalidDomains(address) {          // An email must contain the valid d
     var domain = str[1]
     var str2 = domain.split(".")
     var last = str2[str2.length - 1]
-    var valid_domain = ['com', 'net', 'org', 'in', 'co.in']
+    var valid_domain = ['com', 'net', 'org']
     for (var i = 0; i < last.length; i++) {
         if (valid_domain.indexOf(last) == -1) {
             return false

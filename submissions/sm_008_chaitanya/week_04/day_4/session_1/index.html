@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Coding Session 1!</title>
+</head>
+
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name="num1" id="first">
+	<input type="text" name="num2" id="second">
+	<p id="para"> </p>
+	</hr>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="para1"></p>
+	<input type="text" id="input_limit">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="input_email">
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent() {
+			var a = document.getElementById("first").value
+			var b = document.getElementById("second").value
+			var product = 1
+			for (i = 0; i < b; i++) {
+				product = product * a;
+			}
+			document.getElementById("para").innerHTML = "Result : " + Number(product);
+
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5() {
+			var sum = 0;
+			var limit = document.getElementById("input_limit").value
+			for (i = 0; i <= limit; i++) {
+				if (i % 3 === 0 && i % 5 === 0) {
+					sum += i;
+				}
+			}
+			document.getElementById("para1").innerHTML = "sum : " + sum;
+		}
+		//Write javascript for FSD.JS.9.3 here
+
+		function validateEmail(email) {
+			
+			var email = document.getElementById("input_email").value
+			if (atNotPresent(email) == false) {
+				alert("Invalid Email!")	
+			}
+
+			else if (topLevelStartdot(email) == false) {
+				alert("Invalid Email!")
+				
+			}
+
+			else if (atFirstAtLast(email) == false) {
+				alert("Invalid Email!")
+				
+			}
+
+			else if (invalidDomains(email) == false) {
+				alert("Invalid Email!")
+				
+			}
+
+			else if (doubleDots(email) == false) {
+				alert("Invalid Email!")
+				
+			}
+
+			else if (allowedChar(email) == false) {
+				alert("Invalid Email!")
+			}
+			else{
+				alert("valid Email!")
+			}	
+		}
+		
+		function atNotPresent(address) {            // The email address must contain @
+			if(address.indexOf("@") === -1) {
+				return false
+			}
+			return true
+		}
+
+		function topLevelStartdot(address) {        // Top level domain should not start with dot(.)
+			var str = address.split("@")
+			var tld = str[1]
+			if (tld[0] === ".") {
+				return false
+			}
+			return true
+		}
+
+		function atFirstAtLast(address) {           // An email should not start and end with @ and dot(.)          
+			if (address[0] === "@" || address[0] === "." || address[address.length - 1] === "@" || address[address.length - 1] === ".") {
+				return false
+			}
+			return true
+		}
+
+		function invalidDomains(address) {          // An email must contain the valid domain name 
+			var str = address.split("@")
+			var domain = str[1]
+			var str2 = domain.split(".")
+			var last = str2[str2.length - 1]
+			var valid_domain = ['com', 'net', 'org',]
+			for (var i = 0; i < last.length; i++) {
+				if (valid_domain.indexOf(last) == -1) {
+					return false
+				}
+			}
+			return true
+		}
+
+		function doubleDots(address) {          // doubledots(..) are not allowed in an email address
+			for (var i = 0; i < address.length; i++) {
+				if (address[i] === "." && address[i + 1] === ".") {
+					return false
+				}
+			}
+			return true
+		}
+
+		function allowedChar(address) {         // only allowed chars of an email address
+			var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-.'
+			var arr = chars.split('');
+			var divide = address.split("@")
+			var prefix = divide[0]
+			for (var i = 0; i < prefix.length; i++) {
+				if (arr.indexOf(prefix[i]) == -1) {
+					return false
+				}
+			}
+			return true
+		}
+			
+	</script>
+</body>
+
+</html>
