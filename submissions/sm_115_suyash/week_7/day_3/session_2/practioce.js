@@ -212,7 +212,7 @@
 // }
 // fetApi();
 
-var [a, b, c] = [1, , 2];
-console.log(c);
-{ name: 'suyash', age: '21', id: 5 }
-console.log(name)
+// var [a, b, c] = [1, , 2];
+// console.log(c);
+// { name: 'suyash', age: '21', id: 5 }
+// console.log(name)

@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latin Posts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body class="bg">
+    <div class="container-flid" id="bg">
+        <div class="display-2 text-center mb-5 text-secondary">
+            Post In Latin/English
+            <br>
+
+
+            <button id="click" class="btn btn-success ml-5">GET POSTS</button>
+        </div>
+        <p class="diplay-4 text-center " class="font-weight-bold" class="lead">Week-13 | Sprint-3 | Evaluation Problem: 2 </p>
+
+        <br>
+    </div>
+    <table id="table" class="table">
+        <thead class="thead">
+            <tr id="user">
+                <th scope="col" id="userid">UserId</th>
+                <th scope="col" id="id">Id</th>
+                <th scope="col" id="title">Title</th>
+                <th scope="col" id="body">Body</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+
+    </table>
+
+
+    <div>
+        <br>
+        <br>
+        <nav class="text-center" aria-label="...">
+            <ul class="pagination justify-content-center">
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item " aria-current="page">
+                    <a class="page-link" href="#">2<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#click').click(function() {
+            $.ajax({
+                    method: 'GET',
+                    url: "https://jsonplaceholder.typicode.com/posts/"
+                })
+                .done(function(obj) {
+                    console.log(obj.data)
+                    printData(obj.data);
+                });
+        });
+
+        function printData(data) {
+            $('#tbody').empty()
+            for (var i = 0; i < data.length; i++) {
+                var tr = document.createElement('tr');
+                var userid = document.createElement('td');
+                userid.textContent = data[i].UserId;
+                tr.appendChild(userid);
+                var id = document.createElement('td');
+                id.textContent = data[i].Id;
+                tr.appendChild(id);
+                var title = document.createElement('td');
+                title.textContent = data[i].Title;
+                tr.appendChild(title);
+                var body = document.createElement('td');
+                body.textContent = data[i].Body;
+                tr.appendChild(body);
+                console.log(data[i]);
+                tr.setAttribute('class', 'rm')
+                $('#tbody').append(tr)
+            }
+        }
+        var pageLink = document.querySelectorAll('.page-link');
+        for (var i = 0; i < pageLink.length; i++) {
+            pageLink[i].addEventListener('click', function() {
+                var num = this.tableItems;
+                console.log(num)
+                $.ajax({
+                        url: "https://jsonplaceholder.typicode.com/posts/?page=" + num
+                    })
+                    .done(function(obj) {
+                        console.log(obj.data)
+                        printData(obj.data);
+                    });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

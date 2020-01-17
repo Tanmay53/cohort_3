@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>posts.html</title>
+    <script type="text/javascript" src="posts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <button id="get-btn">GET</button>
+    <button id="post-btn">POST</button>
+    <div>
+        <table class="table">
+            <tr>
+                <th>id</th>
+                <th>userid</th>
+                <th>title</th>
+                <th>body</th>
+            </tr>
+        </table>
+    </div>
+    <div id="cont"></div>
+    <script>
+        $(document).ready(function () {
+
+            $("#post-btn").click(function () {
+                $.ajax({
+                    method: "POST",
+                    url: 'https://jsonplaceholder.typicode.com/posts',
+                    data: {
+                        userId: "blessy",
+                        password: "123"
+                    }
+                })
+                    .done(function (data) {
+                        console.log(data);
+                        var tble = document.querySelector(".table")
+                        //   for(var i =0;i<data["post"];i++){
+
+                        var child = document.createElement('tr')
+                        var tr = document.createElement("tr")
+
+                        tble.append(tr)
+                        var th = document.createElement("th")
+                        th.innerHTML = data.id
+                        tble.appendChild(th)
+                        var th1 = document.createElement("th")
+                        th1.innerHTML = data.title
+                        tble.appendChild(th1)
+                        var th2 = document.createElement("th")
+                        th1.innerHTML = data.body
+                        tble.appendChild(th2)
+                        var th3 = document.createElement("th")
+                        th1.innerHTML = data.userId
+                        tble.appendChild(th3)
+
+                    });
+            });
+            $("#get-btn").click(function () {
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/posts",
+                })
+                    .done(function (data) {
+                        console.log(data);
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>

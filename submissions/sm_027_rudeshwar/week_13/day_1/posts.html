@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>postsHtml</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>list of users</h1>
+    <button id="printUsers">click to get the users </button>
+
+    <div class="fixed-bottom container">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function getUserData(displayFunction) {
+            var result = null;
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+            xhr.send()
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    result = xhr.response;
+                    displayFunction(result);
+                }
+                else {
+                    console.log("Error Code is:" + xhr.status);
+                }
+            }
+        }
+
+        var printUserData = function (input) {
+            var body = document.querySelector('body');
+            var display = document.createElement('p');
+            if (input == null) {
+                // checking if the input is null
+                display.textContent = "Error! No user data received or invalid request!";
+                //It will print an error if the input is null
+            }
+            else {
+                display.textContent = input;
+                //Otherwise it will display the text
+            }
+            body.append(display);
+        }
+
+        //Button and listener for the `click here to print the user data!` button
+        var displayBtn = document.querySelector('#printUsers')
+        displayBtn.addEventListener('click', function () {
+            getUserData(printUserData);
+        });
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

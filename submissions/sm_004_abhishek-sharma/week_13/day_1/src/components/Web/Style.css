@@ -1,0 +1,56 @@
+.logo{
+    height: 50px;
+    width: 50px;
+}
+
+.navbarBg{
+    background-color: #1ebea5;
+}
+.borderColor{
+    /* border-color: #1ebea5; */
+    border: 2px solid #1ebea5;
+}
+
+.textColor {
+    color: #1ebea5;
+}
+
+.whatsAppPhone{
+    width: 350px;
+}
+
+.businessAppColor{
+    background-color: #d0e9ea;
+    padding-right: 5px;
+}
+
+.securityColor{
+    background-color: #edf8f5;
+}
+.businessCardMargin{
+    margin-top: 75px;
+}
+.businessImg{
+    height: 500px;
+}
+.securityCircle{
+    background-color: #77d7c8;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 100px;
+}
+.cardTextSize{
+    font-size: 14px;
+}
+.footerColor {
+    background-color: #273443;
+}
+.bottomColor {
+    background-color: #232f3c;
+}
+    @media (max-width: 768px) {
+        .backImage {
+            background-color: #1ebea5;
+    }
+}
