@@ -3,7 +3,7 @@ var target=93
 function filterArrayGreaterThan(arr,target)
 {
     newArr = arr.filter(function(element, index){
-        return element>200
+        return element>4
     })
 }
 filterArrayGreaterThan(arr,target)
