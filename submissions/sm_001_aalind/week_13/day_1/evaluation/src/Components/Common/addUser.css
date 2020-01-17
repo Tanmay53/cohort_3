@@ -1,0 +1,13 @@
+h3 {
+  text-align: center;
+}
+form {
+  font-size: 18px;
+}
+.form-group {
+  margin: 8px 0px;
+}
+.form-group > label {
+  display: inline-block;
+  width: 130px;
+}
