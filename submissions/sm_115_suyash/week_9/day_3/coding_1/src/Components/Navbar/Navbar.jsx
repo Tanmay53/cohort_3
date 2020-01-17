@@ -80,7 +80,6 @@ class Navbar extends Component {
   }
 
   addCart = val => {
-    alert("hdsdfh");
     let list = [...this.state.cartList, val];
     this.setState({
       cartList: list
@@ -178,7 +177,12 @@ class Navbar extends Component {
             <Route path="/xbox" component={Xbox} />
             <Route path="/support" component={Support} />
             <Route path="/allsolution" component={AllSolution} />
-            <Route path="/shopnow" component={ShopNow} />
+            <Route
+              path="/shopnow"
+              render={props => (
+                <ShopNow {...props} cartList={this.state.cartList} />
+              )}
+            />
             <Route
               path="/signup"
               component={props => (
@@ -190,6 +194,23 @@ class Navbar extends Component {
             />
             <Route
               path="/surface/:id"
+              render={props => (
+                <ShopNow {...props} cartList={this.state.cartList} />
+              )}
+            />
+            <Route
+              exact
+              path="/cart"
+              render={props => (
+                <Surface
+                  {...props}
+                  productArr={this.state.productArr}
+                  clicked={this.addCart}
+                />
+              )}
+            />
+            <Route
+              path="/cart/:id"
               component={props => (
                 <ShopNow {...props} cartList={this.state.cartList} />
               )}
