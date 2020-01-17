@@ -1,0 +1,42 @@
+.anchorTag{
+        height: 30px;
+        width: 60px;
+}
+
+.container{
+    background-color: rgb(40, 34, 63);
+    margin-top: 50px;
+}
+
+.row1{
+    margin-top: 20px;
+}
+
+#imgGirl{
+    border-radius: 50%;
+}
+#imgDiv{
+    height: 160px;
+    width: 160px;
+    padding: 5px;
+    margin: 5px;
+    
+}
+#imgDiv2{
+    height: 160px;
+    width: 30%;
+    padding: 5px;
+    margin:  5px auto;
+    border-radius: 50%;
+    border: rgb(99, 193, 203) 1px solid;
+}
+
+.btnMsg{
+    background-color: rgb(99, 193, 203);
+}
+
+.btnFollow{
+    border: 2px solid rgb(99, 193, 203);
+    color: rgb(99, 193, 203);
+}
+
