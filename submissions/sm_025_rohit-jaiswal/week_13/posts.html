@@ -31,6 +31,7 @@
                 <th scope="col" id="body">Body</th>
             </tr>
         </thead>
+
         <tbody id="tbody"></tbody>
 
     </table>
@@ -56,36 +57,43 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        $('#click').click(function() {
-            $.ajax({
-                    method: 'GET',
-                    url: "https://jsonplaceholder.typicode.com/posts/"
-                })
-                .done(function(obj) {
-                    console.log(obj.data)
-                    printData(obj.data);
-                });
+        $("#click").click(function() {
+            console.log("sadd")
+        })
+        $.ajax({
+                // method: 'GET',
+                url: "https://jsonplaceholder.typicode.com/posts/",
+            })
+            .done(function(data) {
+                console.log("uyguy");
+                printData(obj.data);
+            });
         });
 
         function printData(data) {
+            console.log(data)
             $('#tbody').empty()
             for (var i = 0; i < data.length; i++) {
+                var body = document.getElementById("tbody")
                 var tr = document.createElement('tr');
+
+                body.appendChild(tr)
                 var userid = document.createElement('td');
-                userid.textContent = data[i].UserId;
+                userid.innerHTML = data[i].userId;
                 tr.appendChild(userid);
                 var id = document.createElement('td');
-                id.textContent = data[i].Id;
+                id.textContent = data[i].id;
                 tr.appendChild(id);
                 var title = document.createElement('td');
-                title.textContent = data[i].Title;
+                title.textContent = data[i].title;
                 tr.appendChild(title);
                 var body = document.createElement('td');
-                body.textContent = data[i].Body;
+                body.textContent = data[i].body;
                 tr.appendChild(body);
                 console.log(data[i]);
                 tr.setAttribute('class', 'rm')
-                $('#tbody').append(tr)
+
+
             }
         }
         var pageLink = document.querySelectorAll('.page-link');

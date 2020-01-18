@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>FSD 15.3 table filtering/sorting</title>
+</head>
+<body>
+  <!-- This button creates table and displays it -->
+  <button id="makeList">Create A table Of All Users</button><br>
+  
+  <!-- This sorts the element in ascending and descending order -->
+  <div>
+    <label for="sortTable">Sort Table In :</label>
+    <select id="sortTable">
+      <option value="">--</option>
+      <option value="ascending">Ascending</option>
+      <option value="descending">Descending</option>
+    </select>
+  </div><br>
+
+  <!-- This filters the table based on type All, user, admin -->
+  <div>
+    <label for="filterTable">Filter By :</label>
+    <select id="filterTable">
+      <option value="">--</option>
+      <option value="all">All</option>
+      <option value="admin">Admin</option>
+      <option value="user">User</option>
+    </select>
+  </div>
+
+  <script>
+    //user data
+    var user=[
+      {
+        username:'sam',
+        email:'sam@gmail.com',
+        type:'user'
+      },
+      {
+        username:'dean',
+        email:'dean@gmail.com',
+        type:'admin'
+      },
+      {
+        username:'felicity',
+        email:'felicity@gmail.com',
+        type:'user'
+      },
+      {
+        username:'oliver',
+        email:'oliver@gmail.com',
+        type:'admin'
+      },
+      {
+        username:'barry',
+        email:'barry@gmail.com',
+        type:'admin'
+      },
+      {
+        username:'cisco',
+        email:'cisco@gmail.com',
+        type:'user'
+      },
+    ]
+
+    // var adminArr=[];
+    // var userArr=[];
+
+    // for (var i=0;i<user.length;i++){
+    //   if (user[i].type=='admin'){
+    //     adminArr.push(user[i]);
+    //   }
+    //   else{
+    //     userArr.push(user[i]);
+    //   }
+    // }
+    
+    var body=document.querySelector('body'); //fetch the body
+    var table=document.createElement('table'); //create table element
+    $(table).html(''); //keep its value as ''
+    var headingRow=document.createElement('tr'); //create row and 4 headings to accomodate data
+    var usernameHeading=document.createElement('th');
+    var emailHeading=document.createElement('th');
+    var typeHeading=document.createElement('th');
+    var deleteButtonHeading=document.createElement('th');
+
+    $(usernameHeading).text('User Name'); //fillin the data headings
+    $(emailHeading).text('E mail');
+    $(typeHeading).text('Type');
+    $(deleteButtonHeading).text('Delete Row');
+
+    $(headingRow).append(usernameHeading); //appending data to table header
+    $(headingRow).append(emailHeading);
+    $(headingRow).append(typeHeading);
+    $(headingRow).append(deleteButtonHeading);
+    $(table).append(headingRow);
+    $(table).hide();
+
+    function tableCreate(arr){
+       //when user clicks on make list of user button
+      //console.log(user);
+      $(table).show();
+      $(table).html('')
+      for (var i=0;i<arr.length;i++){
+        var row=document.createElement('tr'); //we iterate through the user array -->create table col and rows 
+        var col1=document.createElement('td'); //fillin those with data from array -->append table back to body
+        var col2=document.createElement('td');
+        var col3=document.createElement('td');
+        var col4=document.createElement('td');
+
+        $(col1).text(arr[i].username);
+        $(col2).text(arr[i].email);
+        $(col3).text(arr[i].type);
+
+        var deleteButton=document.createElement('button'); //a delete button is also create which allows to delete corresponding row
+        $(deleteButton).text('Delete');
+        $(deleteButton).attr('id',arr[i].username);
+        $(col4).append(deleteButton);
+        // $(deleteButton).click(function(){
+        //   $(row).text('')
+        // })
+        deleteButton.addEventListener('click',deleteRow)
+
+        
+            
+        row.append(col1);
+        row.append(col2);
+        row.append(col3);
+        row.append(col4);
+
+        table.append(row);
+        $(table).addClass('table');
+      }
+      body.append(table);
+    }
+
+    function deleteRow(e){
+      var deleteTarget=e.target.id;
+
+      user=user.filter(function(el){
+        return el.username!==deleteTarget;
+      })
+      tableCreate(user);
+    }
+
+
+    $('#makeList').click(function(){ //when user clicks on make list of user button
+      //console.log(user);
+      
+      tableCreate(user);
+    })
+
+
+    
+
+    $('#sortTable').click(function(){
+        //alert('its working buddy') 
+         //when user clicks on sort dropdown button
+
+      if ($('#sortTable').val()=='ascending'){ //if ascending -->array is sorted in accordance with that
+        for (var i=0;i<user.length-1;i++){
+          for (var j=0;j<user.length-i-1;j++){
+            if (user[j].username>user[j+1].username){
+              var temp=0;
+              temp=user[j];
+              user[j]=user[j+1];
+              user[j+1]=temp;
+            }
+          }
+        }
+      tableCreate(user);
+      }
+
+      if ($('#sortTable').val()=='descending'){ //same goes for descending
+        for (var i=0;i<user.length-1;i++){
+          for (var j=0;j<user.length-i-1;j++){
+            if (user[j].username<user[j+1].username){
+              var temp=0;
+              temp=user[j];
+              user[j]=user[j+1];
+              user[j+1]=temp;
+            }
+          }
+        }
+      tableCreate(user);
+      }
+    })
+
+    //.......
+
+    //...........................Now Filter User....................................
+    function tableCreateUserFilter(arr){
+       //when user clicks on make list of user button
+      //console.log(user);
+      $(table).show();
+      $(table).html('')
+      for (var i=0;i<arr.length;i++){
+        if (arr[i].type=='user'){
+          var row=document.createElement('tr'); //we iterate through the user array -->create table col and rows 
+          var col1=document.createElement('td'); //fillin those with data from array -->append table back to body
+          var col2=document.createElement('td');
+          var col3=document.createElement('td');
+          var col4=document.createElement('td');
+
+          $(col1).text(arr[i].username);
+          $(col2).text(arr[i].email);
+          $(col3).text(arr[i].type);
+
+          var deleteButton=document.createElement('button'); //a delete button is also create which allows to delete corresponding row
+          $(deleteButton).text('Delete');
+          $(deleteButton).attr('id',arr[i].username);
+          $(col4).append(deleteButton);
+          // $(deleteButton).click(function(){
+          //   $(row).text('')
+          // })
+          deleteButton.addEventListener('click',function(e){
+            var deleteTarget=e.target.id;
+
+            user=user.filter(function(el){
+              return el.username!==deleteTarget;
+            })
+            tableCreate(user);
+          })
+
+          
+              
+          row.append(col1);
+          row.append(col2);
+          row.append(col3);
+          row.append(col4);
+
+          table.append(row);
+          $(table).addClass('table');
+        }
+      }
+      body.append(table);
+    }
+
+
+    //.............................................................................
+
+    //...........................Now Filter Admin....................................
+    function tableCreateAdminFilter(arr){
+       //when user clicks on make list of user button
+      //console.log(user);
+      $(table).show();
+      $(table).html('')
+      for (var i=0;i<arr.length;i++){
+        if (arr[i].type=='admin'){
+          var row=document.createElement('tr'); //we iterate through the user array -->create table col and rows 
+          var col1=document.createElement('td'); //fillin those with data from array -->append table back to body
+          var col2=document.createElement('td');
+          var col3=document.createElement('td');
+          var col4=document.createElement('td');
+
+          $(col1).text(arr[i].username);
+          $(col2).text(arr[i].email);
+          $(col3).text(arr[i].type);
+
+          var deleteButton=document.createElement('button'); //a delete button is also create which allows to delete corresponding row
+          $(deleteButton).text('Delete');
+          $(deleteButton).attr('id',arr[i].username);
+          $(col4).append(deleteButton);
+          // $(deleteButton).click(function(){
+          //   $(row).text('')
+          // })
+          deleteButton.addEventListener('click',function(e){
+            var deleteTarget=e.target.id;
+
+            user=user.filter(function(el){
+              return el.username!==deleteTarget;
+            })
+            tableCreate(user);
+          });
+
+          
+              
+          row.append(col1);
+          row.append(col2);
+          row.append(col3);
+          row.append(col4);
+
+          table.append(row);
+          $(table).addClass('table');
+        }
+      }
+      body.append(table);
+    }
+
+  
+    //.............................................................................
+    $('#filterTable').click(function(){
+
+      //console.log($('#filterTable').val())
+      //console.log(user)
+      
+      
+      //console.log(adminArr,userArr)
+
+      if ($('#filterTable').val()=='admin'){
+        //console.log('check admin')
+        tableCreateAdminFilter(user);
+      }
+
+      if ($('#filterTable').val()=='user'){
+        tableCreateUserFilter(user);
+      }
+
+      if ($('#filterTable').val()=='all'){
+        tableCreate(user);
+      }
+    })
+
+
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>
