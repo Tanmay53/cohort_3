@@ -13,7 +13,81 @@ import AllSolution from "../AllSolution/AllSolution";
 import ShopNow from "../ShopNow/ShopNow";
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      cartList: [],
+      productArr: [
+        {
+          name: "Mackbook Air",
+          id: 1,
+          price: "70,000",
+          img:
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        },
+
+        {
+          name: "Mackbook Air Pro",
+          id: 2,
+          price: "1,70,000",
+          img:
+            "https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        },
+
+        {
+          name: "Mackbook",
+          id: 3,
+          price: "55,000",
+          img:
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        },
+
+        {
+          name: "Mack Pro 16",
+          id: 4,
+          price: "1,70,000",
+          img:
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        },
+
+        {
+          name: "Mackbook Pro",
+          id: 5,
+          price: "65,000",
+          img:
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        },
+
+        {
+          name: "Thinkpad 470",
+          id: 6,
+          price: "54,000",
+          img:
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        },
+
+        {
+          name: "Thinkpad 490",
+          id: 7,
+          price: "1,15,000",
+          img:
+            "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+        }
+      ]
+    };
+  }
+
+  addCart = val => {
+    alert("hdsdfh");
+    let list = [...this.state.cartList, val];
+    this.setState({
+      cartList: list
+    });
+  };
+
   render() {
+    console.log("Class comp>>>>>>>>>>>>>", this.props);
     return (
       <div className="container-fluid">
         <nav className="px-5 row">
@@ -43,7 +117,7 @@ class Navbar extends Component {
               className="mr-4 sm-font text-dark py-3 d-inline-block"
               to="/surface"
             >
-              Surface
+              Produts
             </Link>
             <Link
               className="mr-4 sm-font text-dark py-3 d-inline-block"
@@ -82,12 +156,28 @@ class Navbar extends Component {
             <Route path="/" exact component={Home} />
             <Route path="/office" component={Office} />
             <Route path="/window" component={Window} />
-            <Route path="/surface" component={Surface} />
+            <Route
+              exact
+              path="/surface"
+              render={props => (
+                <Surface
+                  {...props}
+                  productArr={this.state.productArr}
+                  clicked={this.addCart}
+                />
+              )}
+            />
             <Route path="/xbox" component={Xbox} />
             <Route path="/support" component={Support} />
             <Route path="/allsolution" component={AllSolution} />
             <Route path="/shopnow" component={ShopNow} />
             <Route path="/signup" component={SignUp} />
+            <Route
+              path="/surface/:id"
+              component={props => (
+                <ShopNow {...props} cartList={this.state.cartList} />
+              )}
+            />
           </div>
         </nav>
       </div>

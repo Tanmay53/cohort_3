@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+.todo {
+  background: #daa557;
+  width: 30vw;
+  margin: 3rem auto;
+}
