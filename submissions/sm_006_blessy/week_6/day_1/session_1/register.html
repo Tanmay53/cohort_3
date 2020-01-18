@@ -1,0 +1,71 @@
+<html>
+<body>
+    <div>
+        FORM
+        <div id ="input">
+            <input type="text" id="name"><br>
+            <input type="text" id="email"><br>
+            <input type="text" id="password"><br>
+            <input type="text" id="username"><br>
+            <input type="text" id="mob"><br>
+            <input type="text" id="descr"><br>
+
+        </div>
+        <button id='test'>SUBMIT</button>
+    </div>
+    <script type="text/javascript">
+        var button
+        window.addEventListener('load', function () {
+            button = document.getElementById('test')
+            button.addEventListener('click', getData)
+        })
+        function getData() {
+            var name = document.getElementById('name').value
+            var email = document.getElementById('email').value
+            var password = document.getElementById('password').value
+            var username = document.getElementById('username').value
+            var mob = document.getElementById('mob').value
+            var descr = document.getElementById('descr').value
+
+            var details = {
+                name : name,
+                email: email,
+                password :password,
+                username:username,
+                mob:mob,
+                descr:descr
+            }
+            details = JSON.stringify(details)
+            console.log(details)
+            var xhr = new XMLHttpRequest()
+            xhr.open('POST', "https://localhost:8080/auth/register"+document.getElementById("input").value)
+            xhr.setRequestHeader('Content-type',
+                'application/json; charset=utf-8');
+            xhr.onload = function () {
+                console.log(xhr.response, xhr.status)
+                if (xhr.status == 200) {
+                    console.log('success')
+                    var result = JSON.parse(xhr.response)
+                    var div = document.querySelector('body')
+                    var child = document.createElement('div')
+                    child.textContent = result.name + " " +
+                        result.email + " " +
+                        result.password + " " +
+                        result.username+" "+
+                        result.mob+" "+
+                        result.descr+" "+
+
+                        result.createdAt
+                    div.append(child)
+                }
+                else {
+                alert("Registration failed, user already exists")
+                console.log("Error code is:"+xhr.status)
+            }
+            }
+            xhr.send(details)
+            
+        }
+        </script>
+        </body>
+        </html>
