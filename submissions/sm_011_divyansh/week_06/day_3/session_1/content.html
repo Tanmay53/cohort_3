@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <h1 id="firstname">Hello</h1>
+    <div id="lastname">MASAI</div>
+    <p id="fullname">School</p>
+    <hr />
+    <button id="fname">FIRSTNAME</button>
+	<button id="lname">LASTNAME</button>
+	<button id="full">FULL NAME</button>
+    <button id="reset">RESET DEFAULTS</button>
+    <!-- Clicking the buttons should show the values in the respective place holders
+                the reset button should set the values to the original values -->
+    <script>
+        $('#fname').click(function () {
+            $('#firstname').text('DIVYANSH');
+        });
+
+        $('#lname').click(function () {
+            $('#lastname').text('SRIVASTAVA');
+        });
+
+        $('#full').click(function () {
+            $('#fullname').text('DIVYANSH SRIVASTAVA');
+        });
+
+        $('#reset').click(function () {
+            $('#fullname').text('School');
+            $('#firstname').text('Hello');
+            $('#lastname').text('MASAI');
+        });
+
+    </script>
+</body>
+
+</html>
