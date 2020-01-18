@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>w5d4s1</title>
+	<style>
+		body {
+			background: rgb(91, 179, 91);
+		}
+		p {
+			white-space: pre-line;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- FSD.W4.3.1_1 !-->
+	<table>
+		<tr>
+			<td><label for="firstName">First Name :</label></td>
+			<td><input type="text" name="firstName" id="fName" placeholder="First Name"></td>
+		</tr>
+		<tr>
+			<td><label for="lastName">Last Name :</label></td>
+			<td><input type="text" name="lastName" id="lName" placeholder="Last Name"></td>
+		</tr>
+		<tr>
+			<td><label for="DOB">Date of Birth :</label></td>
+			<td><input type="text" name="DOB" id="dob" placeholder="Ex : 01/01/2020"></td>
+		</tr>
+		<tr>
+			<td><label for="balance">Balance :</label></td>
+			<td><input type="text" name="balance" id="bal" placeholder="Remaining Balance"></td>
+		</tr>
+		<tr>
+			<td><label for="accNumber">Account Number :</label></td>
+			<td><input type="text" name="accNumber" id="accNo" placeholder="Account Number"></td>
+		</tr>
+		<tr>
+			<td><label for="sharedAccHolders">Shared Account Holders :</label></td>
+			<td><input type="text" name="sharedAccHolders" id="srdAccHldrs" placeholder="' , ' Comma Seperated"></td>
+		</tr>
+	</table>
+
+	<h2>Click the button to add a new customer!</h2>
+	<button onclick= addCustomer()>Add customer</button>
+	<!-- FSD.W4.3.1_3 !-->
+	<h2> Click here to print all customers!</h2>
+	<button onclick= printCustomers()>Print Customers</button>
+	<div id="displayContainer"> </div>
+
+	<script>
+		var customers= []
+
+		function addCustomer() {
+			name1 = document.getElementById("fName").value;
+			name2 = document.getElementById("lName").value;
+			birth = document.getElementById("dob").value;
+			balance = document.getElementById("bal").value;
+			accountNo= document.getElementById("accNo").value;
+			srdAccHldrs = (document.getElementById("srdAccHldrs").value).split(',');
+			var x= new customer(name1, name2, birth, balance, accountNo, srdAccHldrs)
+			customers.push(x)
+			alert('Success..!')
+			// console.log(x)
+			// console.log(customers[0].Date_Of_Birth,customers.length)
+		}
+
+		function customer(fName, lName, dob, bal, accNo, srdAccHldrsArr) {
+			this.First_Name = fName;
+			this.Last_Name = lName;
+			this.Date_Of_Birth = dob;
+			this.Balance = bal;
+			this.Account_Number = accNo;
+			this.shared_Account_Holders = srdAccHldrsArr;
+			this.displayDetails= function() {
+				var output= ''
+				for(key in this) {
+					output= output + key + " : " + this[key] + "\n"
+					if(key== 'shared_Account_Holders')
+						break
+				}
+				return output
+			}
+		}
+
+		function printCustomers() {
+			var div= document.getElementById('displayContainer')
+			for(i= 0; i< customers.length; i++)
+				{
+					var p= document.createElement('p')
+					p.textContent= customers[i].displayDetails()
+					// console.log(p,i)
+					div.append(p)
+				}
+		}
+
+	</script>
+</body>
+
+</html>
