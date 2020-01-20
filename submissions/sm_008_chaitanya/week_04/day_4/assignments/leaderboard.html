@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>leaderboard.html</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="flex_box">
+            <div class="box box_red">
+                <p id="min">43</p>
+                <div>MIN</div>
+            </div>
+            <div class="box box_green">
+                <p id="max">2019</p>
+                <div>MAX</div>
+            </div>
+        </div>
+
+        <div class="grid_box">
+            <div class="score_tag">SCORE</div>
+            <div class="score" id="disp_score">#</div>
+            <button class="t_green" onclick="press(1)">1</button>
+            <button class="t_brown" onclick="press(2)">2</button>
+            <button class="t_green" onclick="press(3)">3</button>
+            <button class="t_brown" onclick="press(4)">4</button>
+            <button class="t_brown" onclick="press(5)">5</button>
+            <button class="t_brown" onclick="press(6)">6</button>
+            <button class="t_green" onclick="press(7)">7</button>
+            <button class="t_brown" onclick="press(8)">8</button>
+            <button class="t_green" onclick="press(9)">9</button>
+            <button class="t_purple" onclick="press(0)">0</button>
+            <button class="enter" onclick="leaderboard()">ENTER</button>
+        </div>
+    </div>
+
+
+    <script src="leaderboard.js"></script>
+</body>
+
+</html>
