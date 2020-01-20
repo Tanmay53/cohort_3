@@ -1,0 +1,69 @@
+.main{
+    background:white;
+    width: 21%;
+    margin:2% 30%;
+}
+.flex_box{
+    display:flex;
+    flex-grow:1;
+}
+.box{
+    height:80px;
+    width:120px;
+    border:2px solid black;
+}
+.box_red{
+    background:red;
+}
+.box_green{
+    background:green;
+    margin-left:200px;
+}
+.box p{
+    text-align:center;
+    font-size:25px;
+}
+.box div{
+    font-size:30px;
+    text-align:center;
+    padding-top:10px;
+}
+.grid_box{
+    display:grid;
+    grid-gap:20px;
+    grid-template-rows:repeat(6,70px);
+    grid-template-columns:repeat(3,60px);
+    padding:10px;
+    margin:60px;
+    text-align:center;
+}
+.grid_box button{
+    font-size:30px;
+    padding:10px;
+}
+.score_tag{
+    grid-area:1/1/span 1/span 3;
+    font-size:30px;
+}
+.score{
+    grid-area:2 / 1 / span 1 / span 3;
+    background:grey; 
+    padding:10px;
+    font-size:30px;
+    border:2px solid black; 
+}
+.t_green{
+    background:green;
+}
+.t_brown{
+    background:rgb(248,102,38); 
+}
+.t_purple{
+    background:purple;
+    grid-area:6 / 2 / span 1/ span 1;
+}
+.enter{
+    grid-area:7 / 1 / span 1 / span 3;
+    background:black;
+    color:white;
+}
