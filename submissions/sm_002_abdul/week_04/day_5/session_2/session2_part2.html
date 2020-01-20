@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #container{
+            display: grid;
+            grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+            grid-template-columns: 100px 100px 100px 100px 100px 100px;
+            height: 400px;
+            width:600px;
+            padding: 25px;
+            margin: 100px;
+            background: teal;
+        }
+        #submit{
+            grid-area: 8/6/9/7;
+            background: orangered;
+            font-size: 1.4rem;
+            color: whitesmoke;
+        }
+    </style>
+    <title>Event Listener</title>
+</head>
+<body>
+    <div id="container">
+        <button id="submit">Submit</button>
+    </div>
+    
+    <script>
+
+        function setOriginal(){
+
+        }
+
+        container.addEventListener('mouseover',function(event){
+            event.preventDefault()
+            var body=document.querySelector('body');
+            var container=document.querySelector('#container');
+            var submit=document.querySelector('#submit');
+
+            submit.style.backgroundColor= 'salmon';
+            
+
+        })
+
+        container.addEventListener('mouseout',function(event){
+            event.preventDefault()
+            var body=document.querySelector('body');
+            var container=document.querySelector('#container');
+            var submit=document.querySelector('#submit');
+
+            submit.style.backgroundColor= 'orangered';
+            
+
+        })
+
+    </script>
+</body>
+</html>

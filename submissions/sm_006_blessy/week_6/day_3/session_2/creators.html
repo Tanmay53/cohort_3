@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Practise Creators</title>
+    </head>
+    <body>
+            <div class="container border border-danger m-5 p-3"></div>
+
+        <div id="headings">
+        </div>
+        <div id="cont">
+        </div>
+        <ul id="vikings">
+            <li>Priyanshu</li>
+        </ul>
+        <button id="createh1">Create H1</button>
+        <button id="create2-h3">Create 2 H3</button>
+        <button id="createdivs">Create DIVS</button>
+        <button id="addstudents">Add Students</button>
+        <button id="copyright">Add Copyright</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script>
+            var students = ['Ajay','Akshay','Anusha','Chandrashekhara','Haren','Hasaan','Mahesh','Mousumi','Pavan','Rahul','Sumanta','Venkatesh','Vetrival','Vijayendra'];
+            $( "#createh1" ).click(function() {
+  $("#headings").append("<hi>MASAI</h1>");
+});
+
+$( "#create2-h3" ).dblclick(function() {
+    var elem = document.createElement("h3");
+    elem.textContent = "transformation in education! " 
+    $(".container").prepend(elem);
+
+    var elem1 = document.createElement("h3");
+    elem1.textContent = "Learn to earn, pay when you get" 
+     $(".container").prepend(elem1);
+
+});
+$( "#createdivs" ).dblclick(function() {
+  for (var i= 0; i < 10; i++){
+    var elem = document.createElement("div");
+    elem.textContent = "div " + i
+    $("#cont").prepend(elem);
+   }
+});
+$( "#addstudents" ).dblclick(function() {
+  for (var i= 0; i < 14; i++){
+    var students = document.createElement("ul");
+    students.textContent = " var students " + i
+    $("#vikings").prepend(students);
+   }
+});
+$( "#copyright" ).click(function() {
+  $(".container").before("<p>@ masai 2019</p>");
+});
+        </script>
+    </body>
+</html>
