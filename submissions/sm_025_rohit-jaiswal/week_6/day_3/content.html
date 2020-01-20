@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Content</title>
+</head>
+
+<body>
+    <h1 id="firstname">Hello</h1>
+    <div id="lastname">MASAI</div>
+    <p id="fullname">School</p>
+    <hr/>
+    <button id="first">FIRSTNAME</button>
+    <button id="last">LASTNAME</button>
+    <button id="both">FIRSTNAME NAME</button>
+    <button id="rset">RESET DEFAULTS</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#first').click(function() {
+                $('#firstname').html($('#first').html())
+            })
+
+            $('#last').click(function() {
+                $('#lastname').html($('#last').html())
+            })
+
+            $('#both').click(function() {
+                $('#fullname').html($('#both').html())
+            })
+
+            $('#rset').click(function() {
+                $('#firstname').html('Hello')
+                $('#lastname').html('MASAI')
+                $('#fullname').html('School')
+            })
+
+        })
+    </script>
+</body>
+
+</html>

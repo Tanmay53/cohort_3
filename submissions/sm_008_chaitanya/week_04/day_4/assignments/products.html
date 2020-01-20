@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pratice.html</title>
+    <link rel="stylesheet" type="text/css" href="products.css">
+</head>
+
+<body>
+    <div class="flex">
+        <div>
+            <div>
+                <label for="prod_name">Product Name</label><br>
+                <input type="text" id="prod_name" placeholder="Enter product name">
+            </div>
+            <div>
+                <label for="prod_img">Product Image</label><br>
+                <input type="url" id="prod_img" placeholder="Enter url of image">
+            </div>
+            <div>
+                <label for="prod_price">Price</label><br>
+                <input type="number" id="prod_price" placeholder="Enter Product price">
+            </div>
+            <div>
+                <button id="btn" onclick="shopping_cart()">SUBMIT</button>
+            </div>
+        </div>
+        <div class="disp">
+            <table id="output">
+                <tr>
+                    <td>Product Name</td>
+                    <td>Image </td>
+                    <td>Price</td>
+                    <td>Options</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="products.js">
+    </script>
+</body>
+
+</html>
