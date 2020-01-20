@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>os.html</title>
+</head>
+
+ <body> 
+     <div>
+     <select id="os-name">
+            <option element="ubuntu" id="ubu">ubuntu</option>
+            <option element="macos" id='mac'>macos</option>
+            <option element="android" id="and">android</optionsubmit>
+            <option element="windows" id="win">windows</option>
+     </select>
+</div>
+        <button id = "print"> submit  </button>
+</body>
+    <script>
+       
+        function getData() {
+            var ubun = document.getElementById('ubu')
+            var maco = document.getElementById('mac')
+            var andr = document.getElementById('and')
+            var wind = document.getElementById('win')
+
+            var details = {
+                
+    
+
+               
+            }
+            details = JSON.stringify(details)
+            console.log(details)
+            var xhr = new XMLHttpRequest()
+            xhr.open('GET', "http://localhost:8080/codenames/"+document.getElementById("os-name"))
+            xhr.setRequestHeader('Content-type',
+                'application/json; charset=utf-8');
+            xhr.onload = function () {
+                console.log(xhr.response, xhr.status)
+                if (xhr.status == 201) {
+                    console.log('success')
+                    var details = JSON.parse(xhr.response)
+                    var div = document.querySelector('body')
+                    var child = document.createElement('div')
+                    child.textContent = result.details.codenames
+                    div.append(child)
+                }
+            xhr.send(details)
+            }
+        }
+        
+        
+    </script>
+ </body>
+
+</html>
