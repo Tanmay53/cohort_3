@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log("first")
     var arr = []
     var usersList = []
 
@@ -15,7 +14,9 @@ $(document).ready(function () {
         var type = $('#type').val();
 
         //appending users to the users arrays
-        usersList.push(first)
+        usersList.push(username)
+        console.log(usersList)
+        appendUsers(usersList)
 
 
         //constructor function object 
@@ -31,14 +32,19 @@ $(document).ready(function () {
             }
 
         }
-        var user = new GetDetails(first, last, username, password, address, phoneno, type)
+        var user = new GetDetails(first,last, username, password, address,phoneno,type)
+        console.log(user)
         arr.push(user)
         console.log(arr)
-        
-        // for(var i=0; i<usersList.length; i++){
 
-        // }
-       
-       
+        function appendUsers(usersList){
+        for(var i=0; i<usersList.length; i++){
+           var displayUser = document.getElementById("user-select");
+           let user = document.createElement("option")
+           user.setAttribute('value',usersList[i]);
+           user.textContent = usersList[i]
+           displayUser.appendChild(user);
+        }
+    }
     })
 })

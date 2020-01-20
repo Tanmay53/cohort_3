@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        Firstname:<input type="text" id="firstname" class="form-control">
+        lastname:<input type="text" id="lastname" class="form-control">
+        username:<input type="text" id="username" class="form-control" required">
+        password:<input type="password" id="password" class="form-control" required">
+        email:<input type="email" id="email" class="form-control" required">
+        address:<input type="text" id="address" class="form-control">
+        phone:<input type="number" id="phone" class="form-control">
+        <select id="type">
+            <option value="user">user</option>
+            <option value="admin">admin</option>
+        </select>
+
+        <button class="btn btn-primary" id="btn">Submit</button>
+
+        <div>
+
+            <select id="filter">
+                <option value="user">Users</option>
+                <option value="admin">Admins</option>
+            </select>
+            <select>
+                <option value="asc">Ascending</option>
+                <option value="des">Descending</option>
+            </select>
+        </div>
+        <div id="info"></div>
+    </div>
+    <div>
+        <table class="table"></table>
+    </div>
+
+</body>
+
+</html>
