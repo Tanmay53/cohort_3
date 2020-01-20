@@ -10,18 +10,29 @@ def pyramid(level):
     for i in range(level):
         print('.' * (level - i) + middle_part_pyramid(i) + '.' * (level - i))
 
-def inverse_pyramid(level,):
-    for i in range(level, - 1, -1):
-        print('.' * (level - i) + middle_part_inverse_pyramid(i) + '.' * (level - i))
 
-def rhombus():
-    pass
+""" def inverse_pyramid(level):
+    for i in range(level, - 1, -1):
+        print('.' * (level - i - 1) + middle_part_inverse_pyramid(i) + '.' * (level - i - 1))
+"""
+
+def inverse_pyramid(level):
+    for i in range(level):
+        print('.' * i + middle_part_inverse_pyramid(level - i) + '.' * i)
+
+
+def rhombus(level):
+    pyramid(level)
+    for i in range(1, level):
+        print('.' * i + middle_part_inverse_pyramid(level - i) + '.' * i)
+
 
 
 level = int(input('How many levels ? : '))
-print('pyramid -')
+print()
 pyramid(level)
 
-print('inverse pyramid -')
+print()
 inverse_pyramid(level)
-    
+print()
+rhombus(4)    
