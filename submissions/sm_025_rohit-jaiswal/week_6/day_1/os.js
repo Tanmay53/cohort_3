@@ -1,13 +1,11 @@
-var displayBtn = document.getElementById('printOS')
-// var displayBtn = document.getElementById('osType')
+var displayBtn = document.getElementById('prntOS')
 var table = document.querySelector('tbody');
-displayBtn.addEventListener('click', function () {
-    // var osType = displayBtn.value
+displayBtn.addEventListener('click', function() {
     var osType = document.getElementById('osType').value
-    getOSData(printOSTypes, osType)
+    getOSData(printOSTypes, osTyp)
 })
 
-var printOSTypes = function (input) {
+var printOSTypes = function(input) {
     table.innerHTML = ""
     for (var i = 0; i < input.codenames.length; i++) {
         var row = document.createElement('tr')
@@ -17,26 +15,27 @@ var printOSTypes = function (input) {
 }
 
 var osDetails = []
-function storeData(data){
+
+function storeData(data) {
     osDetails.push(data)
-    localStorage.setItem("osTypes", osDetails)
+    localStorage.setItem("osTyp", osDetails)
 }
 
 function getOSData(displayFunction, type) {
-    var result = null, obj = null;
+    var result = null,
+        obj = null;
     var xhr = new XMLHttpRequest();
     var url = 'http://localhost:8080/codenames/' + type;
     xhr.open('GET', url);
     xhr.send()
-    xhr.onload = function () {
+    xhr.onload = function() {
         if (xhr.status == 200) {
             result = xhr.response;
             storeData(result)
             obj = JSON.parse(result)
             console.log(result)
             displayFunction(obj);
-        }
-        else {
+        } else {
             console.log("Error Code is:" + xhr.status);
         }
     }
