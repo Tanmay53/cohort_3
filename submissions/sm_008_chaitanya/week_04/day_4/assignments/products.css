@@ -1,0 +1,40 @@
+.flex{
+    display:flex;
+    flex-direction:row;
+}
+.flex div,input{
+    padding:18px;
+    font-size:30px;
+}
+input{
+    border:2px solid black;
+}
+#btn{
+    font-size:25px;
+    padding:10px 160px;
+    background:black;
+    color:white;
+}
+table img {
+    max-width:120px;
+    border:2px solid black;
+    padding:10px 60px;
+}
+button{
+    font-size:25px;
+    background:black;
+    color:white;
+    padding:2px 50px;
+}
+table{
+    border:2px solid black;
+    text-align:center;
+}
+td{
+    padding-left:80px;
+    padding-right:80px;
+    border:2px solid black;
+}
+.disp{                          
+    display:none;
+}
