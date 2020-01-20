@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <style>
+        #personDetails {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            margin: 10px auto;
+        }
+        
+        input,
+        p {
+            margin: 5px;
+            padding: 10px 15px;
+        }
+        
+        #status {
+            width: max-content;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <form id="personDetails">
+            <p>Person Details</p>
+            <input type="text" name="name" class="formEle" placeholder="name" required>
+            <input type="text" name="email" class="formEle" placeholder="email" required>
+            <input type="password" name="password" class="formEle" placeholder="password" required>
+            <input type="text" name="username" class="formEle" placeholder="username" required>
+            <input type="text" name="mob" class="formEle" placeholder="mob" required>
+            <input type="text" name="desc" class="formEle" placeholder="Description" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <a href="./login.html">Go to Login Page</a>
+    <div id="status">
+
+    </div>
+
+    <script src="./register.js"></script>
+</body>
+
+</html>

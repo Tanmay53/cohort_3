@@ -11,7 +11,7 @@ function LaptopsCards(props) {
             {props.title}
           </h5>
           <p className="card-text sm-font">{props.text}</p>
-          <Link to="/shopnow" className="sm-font font-weight-bold">
+          <Link to="/cart" className="sm-font font-weight-bold">
             <p>{props.link}</p>
           </Link>
         </div>
