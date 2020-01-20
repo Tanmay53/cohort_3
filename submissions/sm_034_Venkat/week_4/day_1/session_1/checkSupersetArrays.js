@@ -1,4 +1,4 @@
-function disJointArrays(x,y) {
+function supersetArrays(x,y) {
     var objX= {}
     var objY= {}
     for(i= 0; i< x.length; i++) {
@@ -27,4 +27,4 @@ function disJointArrays(x,y) {
         console.log('false',c)
     }
 }
-disJointArrays([2,5,6,8,4,8,2,9,1],[5,6,4,9,5,6]) //x,y are Two arrys
+supersetArrays([2,5,6,8,4,8,2,9,1],[5,6,4,9,5,6]) //x,y are Two arrys

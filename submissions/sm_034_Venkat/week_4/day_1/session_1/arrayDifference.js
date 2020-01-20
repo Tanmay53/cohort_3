@@ -1,4 +1,4 @@
-function disJointArrays(x,y) {
+function arrayDifference(x,y) {
     var objX= {}
     var objY= {}
     for(i= 0; i< x.length; i++) {
@@ -26,4 +26,4 @@ function disJointArrays(x,y) {
     }
     console.log(a)
 }
-disJointArrays([2,5,6,8,8,2,9,1],[5,6,4,5,6]) //x,y are Two arrys
+arrayDifference([2,5,6,8,8,2,9,1],[5,6,4,5,6]) //x,y are Two arrys

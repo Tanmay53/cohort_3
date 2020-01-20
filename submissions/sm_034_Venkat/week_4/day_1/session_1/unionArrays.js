@@ -1,4 +1,4 @@
-function disJointArrays(x,y) {
+function unionArrays(x,y) {
     var obj= {}
     for(i= 0; i< x.length; i++) {
         obj[x[i]]= 0
@@ -9,4 +9,4 @@ function disJointArrays(x,y) {
     var a= Object.keys(obj)
     console.log(a)
 }
-disJointArrays([2,5,6,8,8,32,9,1],[5,64,4,11,5,6]) //x,y are Two arrys
+unionArrays([2,5,6,8,8,32,9,1],[5,64,4,11,5,6]) //x,y are Two arrys

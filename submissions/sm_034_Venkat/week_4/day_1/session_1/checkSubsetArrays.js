@@ -1,4 +1,4 @@
-function disJointArrays(x,y) { // x is subset of y or not.!
+function subsetArrays(x,y) { // x is subset of y or not.!
     var objX= {}
     var objY= {}
     for(i= 0; i< x.length; i++) {
@@ -27,4 +27,4 @@ function disJointArrays(x,y) { // x is subset of y or not.!
         console.log('false',c)
     }
 }
-disJointArrays([2,5,6,2,1],[5,6,4,1,9,5,6,2]) //x,y are Two arrys
+subsetArrays([2,5,6,2,1],[5,6,4,1,9,5,6,2]) //x,y are Two arrys
