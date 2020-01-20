@@ -1,4 +1,3 @@
-//function to post data 
 function postData(obj) {
     var xhr = new XMLHttpRequest();
 
@@ -25,11 +24,10 @@ function postData(obj) {
 }
 
 
-//EventListener on forms
 var form = document.getElementById('personDetails');
 
 form.addEventListener('submit', function(event) {
-    event.preventDefault(); //prevents default behaviour of submit
+    event.preventDefault();
     var inputElements = document.querySelectorAll('.formEle');
     var object = {
         name: inputElements[0].value,
