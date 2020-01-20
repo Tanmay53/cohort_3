@@ -119,9 +119,17 @@
 
 .displayTable {
     color: white;
-    font: unset;
+    font: 36px;
     text-align: center;
-    border: ivory;
+    border: black;
     margin-left: 300px;
     top: 0%;
+}
+
+tr {
+    font-size: 38px;
+}
+
+.displayTable th {
+    padding: 0px 30px;
 }
