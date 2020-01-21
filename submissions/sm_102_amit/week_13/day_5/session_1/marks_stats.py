@@ -48,3 +48,6 @@ print("No. of students who scored exactly 50 marks from India: ", fifty_ind)
 print("No. of students who scored exactly 50 marks from Pakistan: ", fifty_pak)
 
 f.close()
+f1.close()
+f2.close()
+f3.close()
