@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Practise Deletions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1 class="firsth1">First H1</h1>
+    <h1>Second H1</h1>
+    <h3 >First H3</h3>
+    <h3 >Second H3</h3>
+    <div id="headings">
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+    </div>
+    <div id="cont">
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+    </div>
+    <hr />
+    <button id="remove-h1">Remove H1</button>
+    <button id="remove-h3">Remove H3</button>
+    <button id="remove-h5">Remove H5</button>
+    <button id="remove-red">Remove Red</button>
+    <button id="remove-div">Remove DIVS</button>
+    <script>
+
+$("#remove-h1" ).click(function() {
+  $(".firsth1").remove();
+});
+
+ //can be done by nth-child(1) but next h1 will be removed this as first child //
+
+// $("#remove-h1" ).click(function() {
+//   $("h1:nth-child(1)").remove();
+// });
+
+
+
+$("#remove-h3" ).click(function() {
+  $("h3").remove();
+});
+
+
+$("#remove-h5").click(function() {
+  $("h5").remove();
+});
+
+
+$("#remove-red").click(function() {
+  $(".red").remove();
+});
+
+
+$("#remove-div").click(function() {
+  $("#cont").remove();
+});
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+  <hr>
+  <!-- /*...this button displays name....*/ -->
+  <button id="nameBtn">NAME</button> 
+
+  <!-- ........this displays gender............ -->
+  <button id="genderBtn">GENDER</button>
+
+  <!-- ........this displays gender............ -->
+  <button id="emailBtn">EMAIL</button>
+
+  <!-- ........this displays gender............ -->
+  <button id="mobileBtn">MOBILE</button>
+
+  <!-- ........this displays gender............ -->
+  <button id="resetFormBtn">RESET FORM</button>
+
+  <!-- ........this displays gender............ -->
+  <button id="resetDisplayBtn">RESET DISPLAY</button>
+
+    <!-- Clicking the buttons shows the respective values in the designated locations
+    The reset will change back to the original values when the page is loaded -->
+	<script>
+    $('#nameBtn').click(function(){ //when the button is clicked, it displays the function
+      var name=$('#name').val();
+      $('#dName').text(name);
+    });
+    $('#genderBtn').click(function(){
+      var gender=$('#gender').val();
+      $('#dGender').text(gender);
+    });
+    $('#emailBtn').click(function(){
+      var email=$('#email').val();
+      $('#dEmail').text(email);
+    });
+    $('#mobileBtn').click(function(){
+      var mobile=$('#mobile').val();
+      $('#dMobile').text(mobile);
+    })
+    $('#resetFormBtn').click(function(){
+      $('#name').val('');
+      $('#gender').val('');
+      $('#email').val('');
+      $('#mobile').val('');
+    });
+    $('#resetDisplay').click(function(){
+      $('#dName').html('<h3>NAME</h3>');
+      $('#dGender').html('<h4>GENDER</h4>');
+      $('#dEmail').html('<h5>EMAIL</h5>');
+      $('#dMobile').text('<h6>MOBILE</h6>');
+    })
+  </script>
+</body>
+</html>

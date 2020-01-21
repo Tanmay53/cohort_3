@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login Form</h1>
+        <div class="form-group">
+            Email:<input type="email" class="form-control" id="email" placeholder="Enter Your email">
+            Password:<input type="password" class="form-control" id="password" placeholder="Enter Your password"><br>
+            <button id="get" class="btn btn-primary">submit</button>
+        </div>
+    </div>
+    <script>
+        var details
+        var getbtn = document.getElementById("get")
+        getbtn.addEventListener("click", getData)
+
+        function getData() {
+
+            var email = document.getElementById("email").value
+            var password = document.getElementById("password").value
+            var obj = {
+                "email": email,
+                "password": password
+            }
+            details = JSON.stringify(obj)
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', "https://reqres.in/api/login")
+            xhr.setRequestHeader('Content-type', 'application/json;charset=utf-8')
+            xhr.send(details)
+            xhr.onload = function () {
+
+                if (xhr.status == 200) {
+                    alert("success")
+                    $('.container').hide();
+                    console.log('success')
+                    var result = JSON.parse(xhr.response)
+                    console.log(result)
+                    var body = document.querySelector('body')
+                    var div = document.createElement('div')
+                    div.textContent = "The Token " + result.token + " is present in database"
+                    body.append(div)
+                }
+                else {
+                    console.log(xhr.response)
+                    alert("404 error:Data not present in database")
+
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

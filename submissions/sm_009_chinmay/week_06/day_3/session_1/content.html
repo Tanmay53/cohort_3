@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Content Manipulation</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<h1 id="firstname">Hello</h1>
+	<div id="lastname">MASAI</div>
+	<p id="fullname">School</p>
+	<hr/>
+	<button id="fname-btn" value="Chinmay">FIRSTNAME</button>
+	<button id="lname-btn" value="Kude">LASTNAME</button>
+	<button id="name-btn" value="Chinmay Kude">FULL NAME</button>
+ <button id="reset-btn">RESET DEFAULTS</button>
+    <!-- Clicking the buttons should show the values in the respective place holders
+    the reset button should set the values to the original values -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script>
+  
+ $(document).ready(function(){
+  var defaultFName = $('#firstname').text();
+  var defaultLName = $('#lastname').text();
+  var defaultName = $('#fullname').text();
+
+  var inputFirstName = $('#fname-btn').val();
+  $('#fname-btn').click(function(){
+   $("#firstname").text(inputFirstName)
+  })
+
+  var inputLastName = $('#lname-btn').val();
+  $('#lname-btn').click(function(){
+   $('#lastname').text(inputLastName)
+  })
+
+  var inputFullName = $('#name-btn').val();
+  $('#name-btn').click(function(){
+   $('#fullname').text(inputFullName)
+  })
+
+  $('#reset-btn').click(function(){
+   $("#firstname").text(defaultFName)
+   $("#lastname").text(defaultLName)
+   $("#fullname").text(defaultName)
+  })
+  
+
+ })
+ 
+ </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+ <button onclick="callApi()">callApi</button>
+
+    <script>
+
+        function callApi() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('POST', 'https://reqres.in/api/login');
+
+            xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+
+            var data = {
+                "email": "eve.holt@reqres.in",
+                "password": "cityslicka"
+            }
+
+            dataJSON = JSON.stringify(data)
+
+            xhr.send(dataJSON)
+
+            xhr.onload = function () {
+                if (xhr.status == 200) {
+                    result = null
+                    result = xhr.response
+                    result = JSON.parse(result)
+                    console.log(result)
+                    console.log(result.token)
+                }
+                else {
+                    console.log("Error Code is:" + xhr.status)
+                }
+            }
+
+            xhr.onerror = function () {
+                console.log("API call failed", xhr.status)
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

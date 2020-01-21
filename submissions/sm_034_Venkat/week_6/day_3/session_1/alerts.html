@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>Showing Alerts</title>
+</head>
+
+<body>
+	<!-- Clicking the buttons should show the alerts with respective content -->
+	<table>
+		<tr>
+			<td>
+				<button id="fName">FIRST NAME</button>
+			</td>
+			<td><input type="text" id="fNam"></td>
+		</tr>
+		<tr>
+			<td>
+				<button id="lName">LAST NAME</button>
+			</td>
+			<td><input type="text" id="lNam"></td>
+		</tr>
+		<tr>
+			<td>
+				<button id="full">FULL NAME</button>
+			</td>
+		</tr>
+	</table>
+
+	<script>
+		$("#fName").click(function () {
+			var a = $("#fNam").val();
+			alert(a);
+		})
+
+		$("#lName").click(function () {
+			alert($("#lNam").val());
+		})
+
+		$("#full").click(function () {
+			var f = $("#fNam").val() + " " + $("#lNam").val();
+			alert(f);
+		})
+	</script>
+</body>
+
+</html>

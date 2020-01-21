@@ -1,0 +1,17 @@
+.textCardSize {
+    font-size: 14px;
+}
+.muteTextSize{
+    font-size: 12px;
+}
+.restaurantPic {
+    height: 110px;
+    width: 90px;
+}
+.badge{
+    width: 40px;
+    height: 28px;
+}
+.cardHeight{
+    max-height: 100px;
+  }
