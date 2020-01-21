@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>registration.html</title>
+    <link rel="stylesheet" type="text/css" href="registration.css">
+</head>
+
+<body>
+
+    <div class="flex">
+        <div>
+            <div>
+                <label for="name">NAME</label><br>
+                <input type="text" id="name">
+                <p id="error_name"></p>
+            </div>
+            <div>
+                <label for="email">EMAIL</label><br>
+                <input type="text" id="email">
+                <p id="error_email"></p>
+            </div>
+            <div>
+                <label for="mobile">MOBILE</label><br>
+                <input type="number" id="mobile">
+                <p id="error_mobile"></p>
+            </div>
+            <div>
+                <button id="btn" onclick="user_registration()">REGISTER</button>
+            </div>
+        </div>
+        <div id="output"></div>
+    </div>
+
+    <script src="registration.js">
+    </script>
+</body>
+
+</html>
