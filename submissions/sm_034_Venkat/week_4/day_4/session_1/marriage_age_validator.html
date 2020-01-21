@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MarriageAgeValidator</title>
+</head>
+
+<body>
+    <select name="gender" id="genderSelect" required>
+        <option value="gender">--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+    <input type="number" id="dob" required>
+    <button onclick="eligibilityCheck()">Check Eligibility</button>
+
+    <script type="text/javascript">
+        function eligibilityCheck() {
+            var d = new Date().getFullYear();
+            var age = (d - (document.getElementById("dob").value));
+            var sex = document.getElementById("genderSelect").value;
+            if (sex == 'Male' && age >= 21) {
+                alert("Your age is " + age + ".So my boy You can marry")
+            }
+            else if (sex == 'Female' && age >= 18) {
+                alert("My little girl is " + age + " and she can marry a Person")
+            }
+            else {
+                alert("Legally you can not marry,because your age is " + age + " only")
+            }
+        }
+    </script>
+</body>
+
+</html>
