@@ -99,6 +99,9 @@ function email_validate(email) {
     else if (allowedChar(email) === false) {
         return "Invalid Email !"
     }
+    else if (MultiDomainCheck(email) === false) {
+        return "Invalid Email !"
+    }
     return "valid Email"
 }
 function emailLength(address) {
@@ -159,6 +162,20 @@ function allowedChar(address) {         // only allowed chars of an email addres
         if (arr.indexOf(prefix[i]) === -1) {
             return false
         }
+    }
+    return true
+}
+function MultiDomainCheck(address) {    //checks If the domain name exist for multiple times in an email
+    var cnt = 0
+    for (var i = 0; i < address.length; i++) {
+        if (address[i] === ".") {
+            if (address[i + 1] + address[i + 2] + address[i + 3] === "com" || "org" || "net") {
+                cnt++
+            }
+        }
+    }
+    if (cnt > 1) {
+        return false
     }
     return true
 }
