@@ -1,30 +1,46 @@
 function hasEmail(email) {
 
-    if (atNotPresent(email) == false) {
+    if (emailLength(email) === false) {
         return "Invalid Email !"
     }
 
-    if (topLevelStartdot(email) == false) {
+    else if (atNotPresent(email) === false) {
         return "Invalid Email !"
     }
 
-    if (atFirstAtLast(email) == false) {
+    else if (topLevelStartdot(email) === false) {
         return "Invalid Email !"
     }
 
-    if (invalidDomains(email) == false) {
+    else if (atFirstAtLast(email) === false) {
         return "Invalid Email !"
     }
 
-    if (doubleDots(email) == false) {
+    else if (invalidDomains(email) === false) {
         return "Invalid Email !"
     }
 
-    if (allowedChar(email) == false) {
+    else if (doubleDots(email) === false) {
+        return "Invalid Email !"
+    }
+
+    else if (allowedChar(email) === false) {
+        return "Invalid Email !"
+    }
+
+    else if (MultiDomainCheck(email) === false) {
         return "Invalid Email !"
     }
 
     return "valid Email"
+}
+
+function emailLength(address) {             // The email must contains exactly two parts after splitting at "@"
+    var seperate = address.split('@')
+    if (seperate.length !== 2) {
+        return false
+    }
+    return true
 }
 
 function atNotPresent(address) {            // The email address must contain @
@@ -57,7 +73,7 @@ function invalidDomains(address) {          // An email must contain the valid d
     var last = str2[str2.length - 1]
     var valid_domain = ['com', 'net', 'org']
     for (var i = 0; i < last.length; i++) {
-        if (valid_domain.indexOf(last) == -1) {
+        if (valid_domain.indexOf(last) === -1) {
             return false
         }
     }
@@ -79,12 +95,29 @@ function allowedChar(address) {         // only allowed chars of an email addres
     var divide = address.split("@")
     var prefix = divide[0]
     for (var i = 0; i < prefix.length; i++) {
-        if (arr.indexOf(prefix[i]) == -1) {
+        if (arr.indexOf(prefix[i]) === -1) {
             return false
         }
     }
     return true
 }
 
-var email = 'masai2.(.@gmail.com'
+function MultiDomainCheck(address) {    //checks If the domain name exist for multiple times in an email
+    var cnt = 0
+    for (var i = 0; i < address.length; i++) {
+        if (address[i] === ".") {
+            if (address[i + 1] + address[i + 2] + address[i + 3] === "com" || "org" || "net") {
+                cnt++
+            }
+        }
+    }
+    if (cnt > 1) {
+        return false
+    }
+    return true
+}
+
+var email = 'masai123@@gmail.com'
 console.log(hasEmail(email))
+
+
