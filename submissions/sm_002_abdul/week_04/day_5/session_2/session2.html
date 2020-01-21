@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Javascript</title>
+</head>
+<body onresize="resizefn()">
+
+
+
+
+    <script>
+        
+        var count=0;
+        function resizefn(){
+            count++;
+            console.log(count);
+
+
+            var body=document.querySelector('body');
+            
+            function random(num){
+                return Math.floor(Math.random()*num);
+            }
+
+            function bodyColor(){
+                var randomColor= 'rgb('+random(255)+','+random(255)+','+random(255)+')';
+                body.style.backgroundColor=randomColor;
+            }
+
+            body.addEventListener("resize",bodyColor);
+        }
+        
+        
+    </script>
+</body>
+</html>
