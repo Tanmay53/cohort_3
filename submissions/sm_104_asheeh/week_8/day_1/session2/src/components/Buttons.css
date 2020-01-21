@@ -1,0 +1,18 @@
+.btnClass{
+    height: 30px;
+    width: 150px;
+    border-radius: 30px;
+    color: white;
+}
+.btnJoinUs{
+    background-color: rgb(62,147,203);
+}
+.btnHome{
+    background-color:rgb(217,132,167) ;
+}
+.btnHelp{
+    background-color: rgb(123,120,167);
+}
+.btnDownload{
+    background-color: rgb(48, 40, 22)
+}
