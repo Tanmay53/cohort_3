@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Coding Session 1!</title>
+</head>
+
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="text" name="num1">
+	<input type="text" name="num2">
+	<p></p>
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+	<hr>
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p id="3and5" style="color: red;font-size: larger;">---</p>
+	<input type="number" id="limitNum">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	<!-- These elements above are for FSD.JS.9.2-->
+	<hr>
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" id="email">
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+
+
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent() {
+			var n1 = document.querySelector("input").value;
+			var n2 = document.querySelectorAll("input")[1].value;
+			var exp = 1;
+			for (i = 0; i < n2; i++) {
+				exp = exp * n1
+			}
+			document.querySelector('p').innerHTML = exp;
+			// console.log(n1,n2,exp);
+		}
+
+
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5() {
+			var limit = document.getElementById("limitNum").value;
+			var multiples = [];
+			for (i = 15; i <= limit; i += 15) {
+				// console.log(i);
+				if (i % 15 == 0) {
+					multiples.push(i)
+				}
+			}
+			var sum = multiples.reduce(function (a, b) {
+				return a + b
+			})
+			sum2 = multiples.join(' + ') + ' = ' + sum
+			document.getElementById("3and5").innerHTML = sum2;
+		}
+
+
+		//Write javascript for FSD.JS.9.3 here		
+		function validateEmail() {
+			var email = document.getElementById("email").value;
+
+			if (checkChar(email) != true) alert('Invalid Email Id...!')
+
+			else if (checkByForLoop(email) != true) alert('Invalid Email Id...!')
+
+			else if (checkEnd(email) != true) alert('Invalid Email Id...!')
+
+			else if (doubleEndCheck(email) != true) alert('Invalid Email Id...!')
+
+			else alert('Email Id is Valid..!')
+		}
+
+		function checkByForLoop(x) {
+			if (x[0] != '@' && x[0] != '.' && x[0] != '-' && x[0] != '_') {
+				var x2 = x
+				var c = 0
+				var c2 = 0
+				for (i = 1; i < x.length - 4; i++) {
+					if (x[i] == '@' && x[i + 1] != '.') c++
+					if (x2[i] == '.' && x2[i + 1] == '.') c2++
+				}
+				if (c == 1 && c2 == 0) return true
+				else console.log(c, 'if-3')
+			}
+		}
+
+		function checkChar(w) {
+			var all = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@-_.'
+			var c = 0
+			for (i = 0; i < w.length; i++) {
+				for (j = 0; j < all.length; j++) {
+					if (w[i] == all[j]) {
+						c++
+					}
+					// console.log(c,'char')
+				}
+			}
+			if (c == w.length) return true
+			// else console.log(c)
+		}
+
+		function checkEnd(y) {
+			var ly = y.length - 1
+			if (y[ly - 3] + y[ly - 2] + y[ly - 1] + y[ly] === '.com' ||
+				y[ly - 3] + y[ly - 2] + y[ly - 1] + y[ly] === '.net' ||
+				y[ly - 3] + y[ly - 2] + y[ly - 1] + y[ly] === '.org') {
+				return true
+			}
+		}
+
+		function doubleEndCheck(z) {
+			var c = 0
+			for (i = 0; i < z.length; i++) {
+				if (z[i] == '.') {
+					if (z[i + 1] + z[i + 2] + z[i + 3] === 'com' ||
+						z[i + 1] + z[i + 2] + z[i + 3] === 'org' ||
+						z[i + 1] + z[i + 2] + z[i + 3] === 'net') {
+						c++
+						// console.log(c, z[i + 1] + z[i + 2] + z[i + 3])
+					}
+				}
+			}
+			if (c == 1) return true
+		}
+
+	</script>
+</body>
+
+</html>
