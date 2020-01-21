@@ -1,0 +1,136 @@
+<html>
+
+<head>
+  <title>Unix</title>
+  <style>
+    body {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVn6Ut3Kufl4JaK2HfsqjwUU_JpyjDzGQWIVu3c2CoId56C009CA&s");
+      background-size: cover;
+    }
+
+    #first,
+    input {
+      margin: 20px;
+      font-size: 20px;
+    }
+
+    #three button {
+      font-size: 20px;
+      background: lightblue
+    }
+
+    #three {
+      font-size: 25px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid blue;
+    }
+
+    table {
+      margin-left: 15%;
+    }
+
+    #tab th {
+      font-size: 20px;
+      color: lime;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- FORM to add -->
+  <div id="first">
+    <!-- <form id = "form"> -->
+      product :
+      <input type="text" placeholder="enter product name" id="prdname"><br><br>
+      price :
+      <input type="number" placeholder="enter price of the product" id="price"><br><br>
+      Quantity :
+      <input type="number" placeholder="enter quantity" id="qty"><br><br>
+      <input type="submit" onclick="submit()">
+      <input type ="reset" onclick="reset()">
+    <!-- </form> -->
+
+
+  </div>
+  <hr>
+  <!-- TABLE -->
+  <div>
+    <table id="tab">
+      <tr>
+        <th>product Name</th>
+        <th>price</th>
+        <th>qty</th>
+      </tr>
+    </table>
+
+  </div>
+  <!-- SETTINGS -->
+  <hr>
+  <div id="three">
+    Settings:<br><br>
+    <button id="cfcolor" onclick=" fontcolor()">change Font color </button>
+    <button id="cfsize" onclick="fontsize()">change font size</button>
+    <button id="cbcolor" onclick="background()">change background </button>
+
+  </div>
+  <div>
+    <input type = "color"  id ="colour">
+    <input type = "text" id = "num">
+    <input type = "color" id = "bgcolor">
+  </div>
+  <script>
+    function submit() {
+      event.preventDefault();
+      var tabadd = document.getElementById("tab");
+      var row = document.createElement("tr");
+
+
+      var fi_col = document.createElement("td");
+      fi_col.innerHTML = document.getElementById("prdname").value;
+      row.appendChild(fi_col);
+
+      var sec_col = document.createElement("td");
+      sec_col.innerHTML = document.getElementById("price").value;
+      row.appendChild(sec_col);
+
+      var thr_col = document.createElement("td");
+      thr_col.innerHTML = document.getElementById("qty").value;
+      row.appendChild(thr_col);
+
+      tabadd.appendChild(row);
+
+    }
+    function reset() {
+      document.getElementById("prdname").value ="";
+      document.getElementById("price").value="";
+      document.getElementById("qty").value="";
+    }
+
+
+    function fontsize() {
+      var n = document.getElementById("num").value;
+      document.getElementById("tab").style.fontSize = n;
+    }
+    function fontcolor(){
+        var x = document.getElementById("colour").value;
+        document.getElementById("tab").style.color = x;
+        // console.log(x);
+
+    }
+    function background(){
+      var b = document.getElementById("bgcolor").value;
+     
+      var rows = document.querySelectorAll("tr") ;
+        for(var i = 1; i <= rows.length; i= i+2)
+        {
+        rows[i].style.backgroundColor = b;
+        }
+    }
+  </script>
+</body>
+
+</html>
