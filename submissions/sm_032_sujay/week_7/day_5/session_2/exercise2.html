@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body class="bg-dark text-info">
+    <div id = "root" class="m-3"></div>
+    <div id="flower"></div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    //Write your code below this line
+    var array = ['Wake up 5am','Meditate','Code','Commit','Note new things learnt for the day']
+
+    var obj={
+        name:"Sujay",
+        age:"24",
+        dob:"18/01/1995",
+        color:"Black"
+    }
+
+    ReactDOM.render(array,document.getElementById("root"))
+    ReactDOM.render(Object.values(obj),document.getElementById("flower"))
+
+
+
+    
+
+    </script>
+</body>
+</html>
+
