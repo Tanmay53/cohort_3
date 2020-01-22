@@ -1,0 +1,70 @@
+<!-- FSD.JS.9.1
+Create your own exponentiation function!
+
+You have been given 2 input elements named num1 and num2. num1 and num2 are used to input 2 numbers.
+
+In Javascript do the following:
+
+Create a basic multiplication function that accepts 2 arguments a and b and prints a * b. in the console
+
+When the button Click here to find the exponent! is clicked, you must output the value of num1num2 in the p tag.
+
+Example: If num1 = 3 and num2=2, your output is 32 = 9.
+
+You cannot use the ** operator.
+
+You also cannot use the Math.pow function.
+
+Hint: Use a loop! -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Session 1!</title>
+</head>
+<body>
+	<!-- These elements below are for FSD.JS.9.1-->
+	<h1> Create your own exponentiation function! </h1>
+	<input type="number" name = "num1" id="num1">
+	<input type="number" name = "num2" id="num2">
+	<p id="exponent"> </p>
+	<hr>
+
+	<button onclick="exponent()">Click here to find the exponent!</button>
+	<!-- These elements above are for FSD.JS.9.1-->
+
+	<!-- These elements below are for FSD.JS.9.2-->
+	<h1>Sum of multiples of 3 and 5!</h1>
+	<p></p>
+	<input type="text">
+	<button onclick="sumOf3And5()">Click here for the output!</button>
+	
+	<!-- These elements above are for FSD.JS.9.2-->
+
+	<!-- These elements below are for FSD.JS.9.3-->
+	<h1>Check if the users email is valid!</h1>
+	<label for="Email">Email</label>
+	<input type="text" />
+	<button onclick="validateEmail()">Check Email!</button>
+	<!-- These elements above are for FSD.JS.9.3-->
+	<script type="text/javascript">
+		//Write javascript for FSD.JS.9.1 here
+		function exponent(){
+			var val1 = document.getElementById("num1").value;
+			var val2 = document.getElementById("num2").value;
+			var val3=val1**val2
+			document.getElementById("exponent").innerHTML = val3;
+
+
+		}
+		//Write javascript for FSD.JS.9.2 here
+		function sumOf3And5(){
+		}
+		//Write javascript for FSD.JS.9.3 here
+		function validateEmail(){
+		}
+	</script>
+</body>
+</html>
