@@ -1,5 +1,6 @@
 def brick_wall(N):
-    my_arr = [2,6,10,14,18,22,24,28,32,36,40,44]
+    # my_arr = [2,6,10,14,18,22,24,28,32,36,40,44]
+    my_arr = range(2,N*4-3,4)
     final_wall = list()
     for i in range(N):
         layer = list()
@@ -25,5 +26,5 @@ def brick_wall(N):
         result += x
         result += "\n"
     return result
-print(brick_wall(6))
+print(brick_wall(8))
     
