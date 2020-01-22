@@ -8,4 +8,3 @@ function filterArrayGreaterThan(arr,target)
 }
 filterArrayGreaterThan(arr,target)
 console.log(newArr)
-
