@@ -2,61 +2,57 @@ no_of_rows = input()  #input is no of rows
 
 #printin pyramid
 def pyramid(input=4):
-    rows = 2 * input + 1
+    string = ''
+    for a in range(input,0,-1):
+        for i in range(0,a):
+            string += '.'
+        for j in range(0,input-i):
+            string += '0.'
+        for k in range(0,a-1):
+            string += '.'
+        string += '\n'
+    print(string)
 
-    for i in range(0,rows):
-        string = ''
-        arr = []
-        for j in range(0,rows+1):
-            arr.append('.')
-        for k in range(-i,i+1,2):
-            arr[(((rows - 1) / 2) + 1) + k] = '0'
-        
-        #appending string
-        for l in range(0,len(arr)):
-            string += arr[l]
-        
-        print(string)
+
+#Inverse Pyramid
+def inverse(input):
+    string = ''
+    for a in range(input,0,-1):
+        for k in range(0,input-a+1):
+            string += '.'
+        for j in range(0,a):
+            string += '0.'
+        for i in range(0,input-a):
+            string += '.'
+        string += '\n'
+    print(string)
+
+#rhombus 
+def rhombus(input):
+    string = ''
+    for a in range(input,0,-1):
+        #a = 4,3,2,1
+        for i in range(0,a):
+            string += '.'
+        for j in range(0,input-i):
+            string += '0.'
+        for k in range(0,a-1):
+            string += '.'
+        string += '\n'
+
+    for a in range(input-1,0,-1):
+        for k in range(0,input-a+1):
+            string += '.'
+        for j in range(0,a):
+            string += '0.'
+        for i in range(0,input-a):
+            string += '.'
+        string += '\n'
+    print(string)
+
 
 # pyramid(no_of_rows) 
+# inverse(no_of_rows)
+rhombus(no_of_rows)
 
-
-
-
-#  var cols = 2 * rows + 1; //total columns
-#     for (var i = rows - 1; i >= 0; i--) {
-#         var str = '';
-#         var arr = [];
-#         for (var j = 1; j <= cols; j++) {
-#             arr[j] = '.'
-#         }
-#         for (var k = -i; k <= i; k += 2) {
-#             arr[(((cols - 1) / 2) + 1) + k] = '0';
-#         }
-#         for (var l = 1; l < arr.length; l++) {
-#             str = str + arr[l]
-#         }
-#         console.log(str);
-#     }
-
-
-#inverse pyramid
-def inverse_pyramid(input=4):                                                               
-    rows = 2 * input + 1
-
-    for i in range(rows-1,-1,-1):
-        string = ''
-        arr = []
-        for j in range(0,rows+1):
-            arr.append('.')
-        for k in range(-i,i+1,2):
-            arr[(((rows - 1) / 2) + 1) + k] = '0'
-        
-        #appending string
-        for l in range(0,len(arr)):
-            string += arr[l]
-        
-        print(string)
-    
-inverse_pyramid(no_of_rows)
         
