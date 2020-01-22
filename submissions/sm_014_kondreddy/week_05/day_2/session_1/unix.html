@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>Unix</title>
+    <style>
+        #flew {
+            background-color: lightblue;
+            margin-left: 500px;
+            height: 350px;
+            width: 400px;
+            text-align: center;
+        }
+
+        #flew img {
+            text-align: center;
+            /* margin-left: 130px; */
+            padding-top: 10px;
+        }
+
+        h1 {
+            color: blue;
+            font-size: 40px;
+            /* text-align: center; */
+        }
+
+        #cent {
+            /* text-align: center; */
+            font-size: 45px;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: red;
+        }
+
+        #text {
+            margin-top: 50px;
+            margin-left: 200px;
+        }
+
+        #dean img {
+            float: left;
+            margin-left: 200px;
+            margin-right: 50px;
+        }
+
+        #dean {
+            margin: 30px;
+        }
+
+        #orange {
+            background-color: orangered;
+            height: 120px;
+            width: 100%;
+            float: left;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #blue {
+            font-size: 25px;
+            color: black;
+            padding-top: 3px;
+            float: left;
+            margin-left: 20px;
+            /* width: 40%; */
+        }
+
+        #rig {
+            float: right;
+            color: black;
+            margin-right: 20px;
+            /* width: 40%; */
+        }
+
+        #middle {
+            background-color: black;
+            height: 130px;
+            width: 10px;
+            float: left;
+            margin-left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createpage(){
+            var Body = document.querySelector("body");
+        var Flew = document.createElement("div");
+          Flew.setAttribute("id", "flew");
+          Body.appendChild(Flew);
+
+          var Img = document.createElement("img");
+          Img.setAttribute("src","https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/linus.jpg")
+          Img.setAttribute("id","flew img");
+          Img.setAttribute("width","150");
+          Img.setAttribute("height","150");
+            Flew.appendChild(Img)
+
+            var H1 = document.createElement("h1");
+            var Lt =document.createTextNode("Linus Torvalds");
+            H1.appendChild(Lt)
+            Flew.appendChild(H1)
+
+            var H3 = document.createElement("h3");
+            H1.setAttribute("id","cent");
+            var Lg =document.createTextNode("Creator of Linux & Git");
+            H3.appendChild(Lg)
+            Flew.appendChild(H3)
+
+            var Dean = document.createElement("div");
+          Dean.setAttribute("id", "dean");
+          Body.appendChild(Dean);
+
+          var Img1 = document.createElement("img");
+          Img1.setAttribute("src","https://raw.githubusercontent.com/masai-school/full-stack-dev-1910/master/week_01/day_4/resources/images/khan.jpg");
+          Img1.setAttribute("id","dean img");
+          Img1.setAttribute("width","150");
+          Img1.setAttribute("height","150");
+            Dean.appendChild(Img1)
+
+            var Ddiv = document.createElement("div");
+            Ddiv.setAttribute("id","text");
+            Dean.appendChild(Ddiv)
+
+            var H2 = document.createElement("h2");
+            H2.textContent = ("Sal Khan");
+            Ddiv.appendChild(H2)
+
+            var P = document.createElement("p");
+            P.textContent = ("Salman Khan is the founder of Khan Acadamy which has a mission of providing a free world class education anyone,anywhere.");
+            Ddiv.appendChild(P)
+
+            var Orange = document.createElement("div");
+          Orange.setAttribute("id", "orange");
+          Body.appendChild(Orange);
+
+          var Blue = document.createElement("div");
+          Blue.setAttribute("id", "blue");
+          Orange.appendChild(Blue);
+
+          var H3 = document.createElement("h3");
+            H3.textContent = ("Ken Thompson");
+            Blue.appendChild(H3)
+
+            var P1 = document.createElement("p");
+            P1.textContent = ("Designed and implemented the original unix operating system");
+            Blue.appendChild(P1)
+
+            var Middle = document.createElement("div");
+          Middle.setAttribute("id", "middle");
+          Orange.appendChild(Middle);
+
+          var Rig = document.createElement("div");
+          Rig.setAttribute("id", "rig");
+          Orange.appendChild(Rig);
+
+          var H3 = document.createElement("h3");
+            H3.textContent = ("Dennis Riche");
+            Rig.appendChild(H3)
+
+            var P = document.createElement("p");
+            P.textContent = ("creator of C programming language");
+            Rig.appendChild(P)
+
+        }
+    </script>
+        
+    <button onclick="createpage()">Create Page</button>
+</body>
+
+</html>
