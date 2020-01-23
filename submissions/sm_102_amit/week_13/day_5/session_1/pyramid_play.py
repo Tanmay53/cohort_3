@@ -1,51 +1,47 @@
-def pyramid(level):
+line = list()
+
+
+def create_list(level):
     pos = 0
     row = 0
-    line = ""
+    l = ""
     for i in range(level, 0, -1):
         row += 1
         pos = i
         flg = 0
         for col in range(level * 2 + 1):
             if col == pos and flg < row:
-                line += 'o'
+                l += 'o'
                 flg += 1
                 if row != 1:
                     pos = pos + 2
             else:
-                line += '.'
+                l += '.'
+        line.append(l)
+        l = ""
+    return line
+
+
+def pyramid(lines):
+    for line in lines:
         print(line)
-        line = ""
 
 
-def reverse(level):
-    pos = 0
-    row = level + 1
-    line = ""
-    for i in range(1, level + 1):
-        row -= 1
-        pos = i
-        flg = 0
-        for col in range(0, level * 2 + 1):
-            if col == pos and flg < row:
-                line += "o"
-                flg += 1
-                if row != 1:
-                    pos += 2
-            else:
-                line += "."
+def inverse(lines):
+    for line in lines[::-1]:
         print(line)
-        line = ""
 
 
-def rhombus(level):
-    pyramid(level)
-    reverse(level)
+def rhombus(lines, level):
+    pyramid(lines)
+    for line in lines[level - 2::-1]:
+        print(line)
 
 
 level = int(input("Enter level: "))
-pyramid(level)
+line_list = create_list(level)
+pyramid(line_list)
 print("\n")
-reverse(level)
+inverse(line_list)
 print("\n")
-rhombus(level)
+rhombus(line_list, level)
