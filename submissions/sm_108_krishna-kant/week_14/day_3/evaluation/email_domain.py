@@ -3,7 +3,6 @@ email_address = input("Enter the email address")
 # @param : "email"
 def domain(email) :
     domain_name = ""
-    is_domain = False
     for i in range(len(email)):
         if email[i] is "@":
             domain_name = email[i+1:]
