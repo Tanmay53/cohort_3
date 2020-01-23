@@ -24,9 +24,9 @@ def find_common(set1, set2):
 
     return new_set
 
-set1 = input('Enter comma(,) separated elements for set1: ')
-set2 = input('Enter comma(,) separated elements for set2: ')
-set3 = input('Enter comma(,) separated elements for set3: ')
+set1 = input('Enter comma(,) separated elements without quotes(\') for set1: ')
+set2 = input('Enter comma(,) separated elements without quotes(\') for set2: ')
+set3 = input('Enter comma(,) separated elements without quotes(\') for set3: ')
 
 set1 = split_string(',', set1)
 set2 = split_string(',', set2)
