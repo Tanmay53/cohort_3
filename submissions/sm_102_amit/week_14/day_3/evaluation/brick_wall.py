@@ -1,24 +1,38 @@
 # Make wall
+def even_row(width):
+    wall = ""
+    for _ in range(width):
+        wall += "|___"
+    wall += "|"
+    return wall
+
+
+def odd_row(width):
+    wall = ""
+    for w in range(width):
+        if w == 0:
+            wall += "__|"
+        else:
+            wall += "___|"
+    wall += "__"
+    return wall
+
+
+def make_wall(height, width):
+    for h in range(height):
+        if h % 2 == 0:
+            print(even_row(width))
+        else:
+            print(odd_row(width))
+
+
 input_1 = input("Enter wall height: ")
 input_2 = input("Enter wall width: ")
 height = int(input_1)
 width = int(input_2)
-
-wall = ""
-for h in range(height):
-    if h % 2 == 0:
-        for w in range(width):
-            wall += "|___"
-        wall += "|\n"
-    else:
-        for w in range(width):
-            if w == 0:
-                wall += "__|"
-            else:
-                wall += "___|"
-        wall += "__\n"
 print("=== WALL ===")
-print(wall)
+make_wall(height, width)
+
 
 # Sample Case:
 '''
