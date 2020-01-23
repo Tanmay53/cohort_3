@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <title>Practise Creators</title>
+</head>
+
+<body>
+  <div id="headings">
+  </div>
+  <div id="cont">
+  </div>
+
+  <ul id="vikings">
+    <li>Priyanshu</li>
+  </ul>
+  <button onclick="myFunction1()">Create H1</button>
+  <button onclick="myFunction2()">Create 2 H3</button>
+  <button onclick="myFunction3()">Create DIVS</button>
+  <button onclick="myFunction4()">Add Students</button>
+  <button onclick="myFunction5()">Add Copyright</button>
+  <script>
+    var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
+    function myFunction1() {
+      var heading1 = document.createElement("H1")
+      heading1.innerHTML = "MASAI"
+      document.getElementById("headings").appendChild(heading1)
+    }
+
+    function myFunction2() {
+      var heading3a = document.createElement("H3")
+      var heading3b = document.createElement("H3")
+      heading3a.innerHTML = "A Transformation in education!"
+      heading3b.innerHTML = "Learn to earn, pay when you get."
+      document.getElementById("headings").appendChild(heading3a)
+      document.getElementById("headings").appendChild(heading3b)
+    }
+
+    function myFunction3() {
+
+      for (var i = 1; i <= 10; i++) {
+        var create_divs = document.createElement('DIV')
+        create_divs.innerHTML = "Content 1"
+        document.getElementById("cont").appendChild(create_divs)
+      }
+    }
+
+    function myFunction4() {
+      for (i = 0; i <= students.length - 1; i++) 
+      {
+        var list_items = document.createElement("LI")
+        list_items.innerHTML=students[i]
+        document.getElementById("vikings").appendChild(list_items)
+      }
+    }
+
+    function myFunction5(){
+      
+    }
+  </script>
+</body>
+
+</html>
