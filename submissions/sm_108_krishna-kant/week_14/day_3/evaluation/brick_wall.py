@@ -1,17 +1,25 @@
+def create_odd_row(size):
+    row = ""
+    for loop in range(size):
+        row += "|___"
+    return row + "|\n"
+
+def create_even_row(size):
+    row = ""
+    for k in range(width):
+        if k is 0 :
+            row += "__|"
+        else:
+            row += "___|"
+    return row + "__\n"
+
 def create_wall(width,height):
     wall = ""
     for i in range(height):
         if i % 2 is 0:
-            for k in range(width):
-                wall += "|___"
-            wall += "|\n"
+            wall += create_odd_row(width)
         else:
-            for k in range(width):
-                if k is 0 :
-                    wall += "__|"
-                else:
-                    wall += "___|"
-            wall += "__\n"
+            wall += create_even_row(width)
     print(wall)
     
 width = int(input("Enter width of wall"))
