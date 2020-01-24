@@ -9,9 +9,9 @@ def file_not_found():
 def analysis():
     try:
         obj = {}
-        with open("data/summary.csv", "w") as summary:
+        with open("data/summary.csv", "w",) as summary:
             fieldnames = ["year", "month", "min_temp", "max_temp"]
-            writer = csv.writer(summary, delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            writer = csv.writer(summary, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             writer.writerow(fieldnames)
             with open("data/KCQT.csv") as weather_file:
                 reader = csv.reader(weather_file)
