@@ -1,17 +1,29 @@
 inp = input().split()   #user input
 
-lower_case_vowels = 0
-upper_case_vowels = 0
+def count_vowels(inp):
+    total_lower = 0
+    total_upper = 0
 
-for i in inp:
-    for char in i:
-        if char in 'aeiou':
-            lower_case_vowels += 1
-        elif char in 'AEIOU':
-            upper_case_vowels += 1
+    for string in inp:
+        total_lower += lower_case(string)
+        total_upper += upper_case(string)
 
-print('lower - '+str(lower_case_vowels))
-print('upper - '+str(upper_case_vowels))
+    print('lower - '+str(total_lower))
+    print('upper - '+str(total_upper))
+
+def lower_case(string):
+    count = 0
+    for char in string:
+        if char in 'aeiou': count+=1
+    return count
+
+def upper_case(string):
+    count = 0
+    for char in string:
+        if char in 'AEIOU': count += 1
+    return count
+
+count_vowels(inp)
 
 # sample test case
 # input = 'MASAI school'

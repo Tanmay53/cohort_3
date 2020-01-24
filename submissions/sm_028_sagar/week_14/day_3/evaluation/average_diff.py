@@ -9,6 +9,7 @@ def average_diff(num):
             even_index_sum += numbers[i]
         else:
             odd_index_sum += numbers[i]
+            
     print(even_index_sum - odd_index_sum)
     
 average_diff(numbers)

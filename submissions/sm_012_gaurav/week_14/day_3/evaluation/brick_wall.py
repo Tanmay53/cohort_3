@@ -1,15 +1,18 @@
 def brick_wall(width, height):
-    s = ''
     for i in range(height):
         if i%2 == 0:
-            s += '|___'*width
-            s += '|\n'
+            printEvenRow(width)
         else:
-            s += '__'
-            s += '|___'*(width - 1)
-            s += '|__\n'
-    return s[:-1]
+            printOddRow(width)
 
 
-width, heigth = list(map(int, input("Enter Width, Height(Space Seperated): ").split()))
-print(brick_wall(width, heigth))
+def printEvenRow(width):
+    s = '|___'*width + '|'
+    print(s)
+
+def printOddRow(width):
+    s = '__'+'|___'*(width - 1) + '|__'
+    print(s)
+
+width, height = list(map(int, input("Enter Width, Height(Space Seperated): ").split()))
+brick_wall(width, height)
