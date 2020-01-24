@@ -1,6 +1,6 @@
 def create_odd_row(size):
     row = ""
-    for loop in range(size):
+    for _ in range(size):
         row += "|___"
     return row + "|\n"
 
