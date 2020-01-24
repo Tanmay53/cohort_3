@@ -13,9 +13,9 @@ def read_csv(username):
         with open('users.csv','r') as csvfile:
             reader=csv.DictReader(csvfile)
             for row in reader:
-                print(row)
-                if(row == username):
-                    return False
+                for _,value in row.items():
+                    if( value == username):
+                        return False
             return True
     except FileNotFoundError:
         return "Not Found"
