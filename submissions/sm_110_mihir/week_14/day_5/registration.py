@@ -13,8 +13,8 @@ def read_csv(username):
         with open('users.csv','r') as csvfile:
             reader=csv.DictReader(csvfile)
             for row in reader:
-                for _,value in row.items():
-                    if( value == username):
+                for key,value in row.items():
+                    if key=="username" and value == username:
                         return False
             return True
     except FileNotFoundError:
