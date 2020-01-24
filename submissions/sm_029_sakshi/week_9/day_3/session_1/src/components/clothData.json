@@ -1,0 +1,44 @@
+[
+    {
+        "id": "001",
+        "name": "Men in blazer",
+        "price": "$39.95",
+        "img": "https://images.unsplash.com/photo-1502148589715-3f209594d750?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id": "002",
+        "name": "REd dotted dress",
+        "price": "$74.9",
+        "img": "https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id": "003",
+        "name": "White wedding gown",
+        "price": 45,
+        "img": "https://images.unsplash.com/photo-1490587023182-5e096fcedeb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+    },
+        {
+        "id": "004",
+        "name": "BLue jeans",
+        "price": 59.95,
+        "img": "https://images.unsplash.com/photo-1553907692-0a21227e24ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+    "id": "005",
+    "name": "Long socks",
+    "price": 59.95,
+    "img": "https://images.unsplash.com/photo-1560998912-81a899755061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+},
+{
+"id": "006",
+"name": "Long coat",
+"price": 59.95,
+"img": "https://images.unsplash.com/photo-1554632084-1dcbc408d11d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+},
+{
+"id": "007",
+"name": "Skirt",
+"price": 59.95,
+"img": "https://images.unsplash.com/photo-1528220704592-69af2162a4c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+}
+]
