@@ -2,12 +2,16 @@ a = set(map(str,input().split()))
 b = set(map(str,input().split()))
 c = set(map(str,input().split()))
 
-common = set({})
 
-for char in a:
-    if char in b and char in c:
-        common.add(char)
-print(common)
+def common_char(a,b,c):
+    common = set({})
+    for char in a:
+        if char in b and char in c:
+            common.add(char)
+            
+    print(common)
+
+common_char(a,b,c)
 
 #tc
     # a b c    

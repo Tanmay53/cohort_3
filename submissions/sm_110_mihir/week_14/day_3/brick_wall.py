@@ -1,21 +1,23 @@
 width=int(input("Enter width: "))
 height=int(input("Enter height: "))
-pipe="|"
-full="___|"
-right="__|"
-left="__"
+
+def get_even_row(width):
+    print("|",end="")
+    for _ in range(width):
+            print("___|",end="")
+
+def get_odd_row(width):
+    for i in range(0,width+1):
+            if i==0:
+                print("__|",end="")
+            elif i==width:
+                print("__",end="")
+            else:
+                print("___|",end="")
+
 for i in range(0,height):
     if i%2 == 0:
-        print(pipe,end="")
-        for bricks in range(width):
-            print(full,end="")
-        
+        get_even_row(width)        
     else:
-        for i in range(0,width+1):
-            if i==0:
-                print(right,end="")
-            elif i==width:
-                print(left,end="")
-            else:
-                print(full,end="")
+        get_odd_row(width)
     print()
