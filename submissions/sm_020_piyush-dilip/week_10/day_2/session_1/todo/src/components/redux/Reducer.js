@@ -1,7 +1,8 @@
-import { ADD_NEW_TODO, DELETE_TODO, TOGGLE} from './Action'
+import { ADD_NEW_TODO, DELETE_TODO, TOGGLE, COUNT } from './Action'
 
 const initialState = {
-    todo:[]
+    todo:[],
+    countOfNonCompletedTasks:0
 }
 
 export default (state = initialState, { type, payload }) => {
@@ -11,6 +12,11 @@ export default (state = initialState, { type, payload }) => {
         return {
             ...state,
             todo: [...state.todo, payload]
+        }
+    case COUNT:
+        return{
+            ...state,
+            countOfNonCompletedTasks: state.todo.filter(e => e.completed == false).length
         }
     case TOGGLE:
         return{
