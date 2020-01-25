@@ -25,7 +25,7 @@ class Product2 extends React.Component{
                          <div className="card">
                              <div className='d-flex row'>
                                  <div className='col'>
-                                    <img src={`/${e.src}`} className="card-img-top" alt="" />
+                                    <img src={`/${e.src}`} className="card-img-top" alt="img" />
                                  </div>
                                  <div className='col'>
                                     <h5 className="card-title">{e.name}</h5>
