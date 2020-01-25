@@ -14,7 +14,7 @@ class Vegetables extends React.Component {
                         <img src={e.src} className="card-img-top" alt="" />
                             <div className="card-body">
                                 <h5 className="card-title">{e.name}</h5>
-                                <Link to={`/vegetables/vegetablesinfo/${e.id}`}>Click here</Link>
+                                <Link to={`/vegetables/vegitablesinfo/${e.id}`}>Click here</Link>
                             </div>
                         </div>
                     </div>
