@@ -26,7 +26,7 @@ const reducer = (state = initialState, action) => {
         case DEL:
             return ({
                 ...state,
-                sorted: state.products.filter(item => item.id != action.id)
+                sorted: state.sorted.filter(item => item.id != action.id)
             })
         case FILL:
                 if(action.value=="first")
