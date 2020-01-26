@@ -35,3 +35,4 @@
 | sm_029 | Sakshi Sinha | Meal DB            | [github](https://sakshisinha.github.io/masai-Sprint-3/)   
 | sm_114 | Sudhir  | Cocktail DB     | [github](https://github.com/Sudhirsin/projects/tree/master/masaisprint-3)              
 | sm_104 | Asheesh Pratap | Meal DB | [github](https://github.com/asheesh900/masai-sprint-3-project-2)                       |
+| sm_035 | Yashwanth Kore | Cocktail DB      | [github](https://github.com/YashwanthKore/masai-sprint-3)                    |
