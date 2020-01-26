@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Marriage age Validator</h1>
+    <label for="gender">Select Gender</label>
+    <select name="gender" id="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+
+    <label for="dob">Enter Date of Birth</label>
+    <input type="text" id="dob">
+    <!-- <label for="dob">Enter Date of Birth</label>
+    <input type="date" id="dob"> -->
+
+    <label for="today">Enter today year</label>
+    <input type="text" id="today">
+    <!-- <label for="today">Enter today's Date</label>
+    <input type="datetime-local" id="today"> -->
+
+    <!-- <input type="button" value="submit"> -->
+    <button onclick="myFunction()" type="submit">submit</button>
+
+
+    <script>
+        function myFunction() {
+            var gender = document.getElementById('gender').value
+            console.log(gender)
+            var date_of_birth = document.getElementById('dob').value
+            // console.log(date_of_birth)
+            var today_date = document.getElementById('today').value
+            //  a=Number(today_date)
+            // console.log(today_date)
+
+
+
+            var age = Number(today_date) - Number( date_of_birth)
+           // console.log(age)
+
+            if (gender == 'Male') {
+                if (age > 21) {
+                    alert('legal age')
+                }
+                else {
+                    alert('not legal age')
+                }
+
+            }
+            else if (gender === 'Female') {
+                if (age > 18) {
+                    alert('legal age')
+                }
+                else {
+                    alert('not legal age')
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
