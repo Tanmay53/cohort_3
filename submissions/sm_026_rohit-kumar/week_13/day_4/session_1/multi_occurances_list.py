@@ -13,6 +13,5 @@ for key, value in dict.items():
     if value > 1:
         new_lst.append(key)
 
-print(new_lst)                
-
+print(new_lst)
 
