@@ -7,7 +7,7 @@ import Login from './component/Login/Login'
 
 function App() {
   return (
-    // <BBInstant></BBInstant>
+    <BBInstant></BBInstant>
     <Login />
   );
 }
