@@ -2,24 +2,21 @@
 <html>
 
 <head>
-    <title></title>
+    <title>W7D5S2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
     <div id="root"></div>
-    <form>
         <div class="container mt-5">
             <div class="form-group">
                 <label for="First Input "><h2>Input First Number:</h2></label>
-                <input type="number" class="form-control" id="input1" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
+                <input type="number" class="form-control" id="inputbox1">
+                <br>
                 <label for="Second Input"><h2>Input Second Number:</h2></label>
-                <input type="number" class="form-control" id="input2">
+                <input type="number" class="form-control" id="inputbox2">
             </div>
-            <button type="submit" class="btn btn-primary">Let's Add 'em using React.js</button>
-    </form>
+            <button type="submit" id="click" class="btn btn-primary">Let's Add 'em using React.js</button>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
@@ -29,17 +26,16 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <script type="text/babel">
-        function counter(sum { const element = (
-        <div>
-            <h2>The Sum of the Inputs Provided is {sum} !</h2>
-        </div>
-        ); ReactDOM.render(element, document.querySelector('#root')); } 
-        let sum = 0; document.querySelector('button').addEventListener('click', ()=>
-        { 
-            document.getElementById(("input1")+("input2")) 
-        counter(sum) });
-    </script>
-</body>
+    <script type ="text/babel">
+        function addingViaReact() {
+            var inputbox1 = document.getElementById("inputbox1").value;
+            var inputbox2 = document.getElementById("inputbox2").value;
+            return <p class="text-center display-2">The Sum of the Input Provided below is {Number(inputbox1) + Number(inputbox2)}.</p>
 
-</html>
+        }
+        click.addEventListener("click", function() {
+            ReactDOM.render(addingViaReact(), document.getElementById("root"));
+        })
+      </script>
+    </body>
+    </html>
