@@ -1,4 +1,0 @@
-a = input()
-str = ''
-for i in	 range(len(a)-1,0):
-	
