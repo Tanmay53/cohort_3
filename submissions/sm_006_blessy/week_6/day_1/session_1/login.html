@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>login.html</title>
+    </head>
+    <body>
+        <h1>Login page</h1>
+        <div>
+            <input type="text"id="username">
+            <input type="text" id="password">
+        </div>
+        <button id="submit" onclick="onsubmit()">submit</button>
+            <script type="text/javascript">
+            function user(username,password){
+                this.username = username;
+                this.password = password;
+            }
+            function onsubmit(){
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var newuser = new user(username,password)
+                datavalidation(newuser)
+            }
+            function datavalidation(newuser){
+                var name = newuser.username;
+                var data = JSON.stringify(newuser)
+                console.log(data);
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST','http://localhost:8080/auth/login');
+                xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8')
+                xhr.send(data);
+                xhr.onload = Function(){
+                    if(xhr.status ==200)
+                    {
+var response = JSON.parse(xhr.response);
+console.log(response)
+                    }
+                }
+            }
+                </script>
+        </button>
+    </body>
+</html>
