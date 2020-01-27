@@ -91,11 +91,15 @@
 				alert("Invalid Email!")
 			}
 
+			else if (MultiDomainCheck(email) === false) {
+				alert("Invalid Email!")
+			}
+
 			else {
 				alert("valid Email!")
 			}
 		}
-		
+
 		function emailLength(address) {             // The email must contains exactly two parts after splitting at "@"
 			var seperate = address.split('@')
 			if (seperate.length !== 2) {
@@ -159,6 +163,21 @@
 				if (arr.indexOf(prefix[i]) === -1) {
 					return false
 				}
+			}
+			return true
+		}
+
+		function MultiDomainCheck(address) {    //checks If the domain name exist for multiple times in an email
+			var cnt = 0
+			for (var i = 0; i < address.length; i++) {
+				if (address[i] === ".") {
+					if (address[i + 1] + address[i + 2] + address[i + 3] === "com" || "org" || "net") {
+						cnt++
+					}
+				}
+			}
+			if (cnt > 1) {
+				return false
 			}
 			return true
 		}
