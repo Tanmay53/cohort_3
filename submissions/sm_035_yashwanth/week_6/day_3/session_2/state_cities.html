@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>State City Selectors</title>
+  </head>
+  <body>
+    <select id="state">
+      <option value="Karnataka">Karnataka</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+    </select>
+    <button id="nextBtn">Next</button>
+    <select id="city"></select>
+    <script>
+      var state_cities = [
+        { state: "Karnataka", cities: ["Bangalore", "Mysore"] },
+        { state: "Tamil Nadu", cities: ["Chennai", "Tanjore"] }
+      ];
+      
+      $("#nextBtn").click(function() {
+        // console.log("clicked")
+        var selectState = $("#state").val();
+        for (var i = 0; i < state_cities.length; i++) {
+          if (selectState == state_cities[i]["state"]) {
+            var selectCity = document.getElementById("city");
+            selectCity.textContent = "";
+
+            for (var j = 0; j < state_cities[i]["cities"].length; j++) {
+              var citytoDisplay = state_cities[i]["cities"][j];
+              var opt = document.createElement("option");
+              opt.textContent = citytoDisplay;
+              selectCity.appendChild(opt);
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
