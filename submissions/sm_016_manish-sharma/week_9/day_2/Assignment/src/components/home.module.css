@@ -1,0 +1,21 @@
+.pic{
+    height:600px;
+    filter: brightness(50%);
+  }
+  .carsl{
+    position: absolute;
+    text-align: left;
+    top:190px
+  }
+  .carsl div{
+    font-size: 80px;
+  }
+
+  @media (max-width:577px){
+    .carsl div{
+      font-size: 50px;
+    }
+    .carsl h1{
+      font-size: 20px;
+    }
+  }
