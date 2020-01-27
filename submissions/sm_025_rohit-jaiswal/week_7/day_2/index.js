@@ -1,5 +1,4 @@
-//user array
-const userArr = []
+const mainArray = []
 
 
 $('#submit').click(function() {
@@ -15,13 +14,12 @@ $('#submit').click(function() {
         type: $("input[type=radio]:checked").val()
     }
     console.log(user)
-    userArr.push(user)
-    console.log(userArr)
-    userData(userArr);
+    mainArray.push(user)
+    console.log(mainArray)
+    userData(mainArray);
 })
 
 
-//function to display user details in drop down list
 function userData(arr) {
     $('#user').empty()
     for (var i = 0; i < arr.length; i++) {
@@ -39,10 +37,9 @@ function userData(arr) {
 $('#user').change(function() {
     let index = $('#user').val();
     console.log(index)
-    dropDown(userArr[index])
+    dropDown(mainArray[index])
 })
 
-//function for displaying user data for selected user in drop down
 function dropDown(user) {
     console.log(user)
     var doc = document.getElementById('userInfo')
@@ -54,16 +51,14 @@ function dropDown(user) {
 }
 
 
-//adding event listener on 'see table' button
 $('#seeTable').click(function() {
     event.preventDefault();
-    displayTable(userArr);
+    displayTable(mainArray);
 })
 
 
 
 
-//To display user table
 function displayTable(arr) {
 
     $('#table-body').empty();
@@ -91,7 +86,6 @@ function displayTable(arr) {
         td.textContent = email;
         tr.append(td);
         var td = document.createElement('td');
-        //logic for delete button
         var del = document.createElement('button');
         del.setAttribute('class', 'btn btn-sm btn-danger');
         del.setAttribute('idx', i);
@@ -99,9 +93,9 @@ function displayTable(arr) {
         del.addEventListener('click', function(btn) {
             var index = this.getAttribute('idx');
             console.log(index)
-            userArr[index] = null;
-            displayTable(userArr);
-            userData(userArr);
+            mainArray[index] = null;
+            displayTable(mainArray);
+            userData(mainArray);
         })
         td.append(del);
         tr.append(td);
@@ -112,33 +106,31 @@ function displayTable(arr) {
 }
 
 
-//order drop down check
 
 $('#order').change(function() {
     let order = $('#order').val()
     let arr = []
     console.log('order check')
     if (order === 'asc') {
-        arr = userArr.sort((a, b) => (a.username > b.username))
+        arr = mainArray.sort((a, b) => (a.username > b.username))
     } else if (order === 'desc') {
-        arr = userArr.sort((a, b) => (b.username > a.username))
+        arr = mainArray.sort((a, b) => (b.username > a.username))
     }
     displayTable(arr)
 })
 
 
-//user type drop down check
 
 $('#userType').change(function() {
     let userType = $('#userType').val()
     let arr = []
     console.log(userType)
     if (userType === 'Admin') {
-        arr = userArr.filter(ele => ele.type == 'Admin')
+        arr = mainArray.filter(ele => ele.type == 'Admin')
     } else if (userType === 'User') {
-        arr = userArr.filter(ele => ele.type == 'User')
+        arr = mainArray.filter(ele => ele.type == 'User')
     } else if (userType === 'all') {
-        arr = userArr
+        arr = mainArray
     }
     displayTable(arr)
 })
