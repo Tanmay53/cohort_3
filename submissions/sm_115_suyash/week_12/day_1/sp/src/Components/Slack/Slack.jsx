@@ -4,6 +4,7 @@ import Showcase from "./Showcase";
 import BreakOut from "./BreakOut";
 import GiveFocus from "./GiveFocus";
 import MakeChange from "./MakeChange";
+// import Trusted from "./Trusted";
 
 function Slack() {
   return (
@@ -31,6 +32,7 @@ function Slack() {
       </div>
       <hr />
       <MakeChange />
+      {/* <Trusted /> */}
     </div>
   );
 }

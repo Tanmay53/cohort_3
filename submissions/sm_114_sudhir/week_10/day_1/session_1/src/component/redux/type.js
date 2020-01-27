@@ -1,0 +1,6 @@
+export const INCRE_X = 'INCRE_X'
+export const DECRE_X = 'DECRE_X'
+export const MUL_X = 'MUL_X'
+export const DIV_X = 'DIV_X'
+export const REM_X = 'REM_X'
+export const UPD_X = 'UPD_X'

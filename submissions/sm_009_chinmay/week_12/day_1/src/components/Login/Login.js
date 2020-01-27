@@ -10,8 +10,8 @@ class Login extends React.Component {
             password_to_check: '',
         }
         this.validUser={
-            username: "validUser",
-            password: "validPass"
+            username: "admin",
+            password: "admin"
         }
     }
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Os file</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        table, tr, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Calling</h1>
+    <hr>
+    <label>Select os to Get Information :</label>
+    <select id="selVal">
+        <option value="android">Android</option>
+        <option value="ubuntu">Ubuntu</option>
+        <option value="windows">Window</option>
+        <option value="macos">MacOs</option>
+    </select>
+    <hr>
+    <div id="apidata"></div>
+    <!-- <button onclick="callApi()">submit</button> -->
+    <script type="text/javascript" src="os.js"></script>
+</body>
+</html>

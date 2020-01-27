@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <h2>click on first page</h2>
+    <ul class="pagination">
+
+        <li class="page-item"><a id="fetch1" class="page-link" href="#">1</a></li>
+        <li class="page-item"><a id="fetch2" class="page-link" href="#">2</a></li>
+    </ul>
+    <table id="tbl" border=4 ;"></table>
+    </div>  
+    <script>
+        $("#fetch1").click(function () {
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/posts",
+
+            }).done(function (data) {
+                console.log(data)
+
+                for (var i = 0; i < data.length; i++) {
+                    var tbl = document.querySelector("#tbl")
+                    var tr = document.createElement('tr')
+                    var td1 = document.createElement('td')
+                    td1.textContent = data[i].id
+                    td1.style.backgroundColor="yellow"
+                    var td2 = document.createElement('td')
+                    td2.textContent = data[i].title
+                    td2.style.color="red"
+                    var td3 = document.createElement('td')
+                    td3.textContent = data[i].body
+                    td3.style.color="blue"
+                    tr.appendChild(td1)
+                    tr.appendChild(td2)
+                    tr.appendChild(td3)
+                    tbl.appendChild(tr)
+                }
+            });
+        });
+       
+    </script>
+</body>
+
+</html>
