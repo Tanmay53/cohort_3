@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <title>Showing Alerts</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+<!-- Clicking the buttons should show the alerts with respective content -->
+<div class="container">
+  <button class="btn-primary col-3" id="fname" value="Chinmay">Firstname</button>
+		<button class="btn-primary col-3" id="lname" value="Kude">Lastname</button>
+  <button class="btn-primary col-3" id="name" value="Chinmay Kude">Firstname Lastname</button>
+</div>
+		
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  
+  $(document).ready(function(){
+   $('#fname').click(function(){
+    var firstName = $('#fname').val();
+    alert(firstName);
+   });
+
+   $('#lname').click(function(){
+    var lastName = $('#lname').val();
+    alert(lastName);
+   })
+
+   $('#name').click(function(){
+    var name = $('#name').val();
+    alert(name)
+   })
+
+  });
+  </script>
+	</body>
+</html>

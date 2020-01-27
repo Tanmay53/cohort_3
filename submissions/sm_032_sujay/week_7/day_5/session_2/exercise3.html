@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Entitled</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-dark text-info">
+    
+
+    <div>
+        <label> First Number</label>
+        <input type="number" id="fNum" />
+        <label> Second Number</label>
+        <input type="number" id="sNum" />
+        <button  class="btn btn-outline-info" id="add">ADD</button>
+
+    </div>
+
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+        //Write your code below this line
+
+        var num1 = document.getElementById("fNum").value
+        var num2 = document.getElementById("sNum").value
+        function sum(a, b) {
+            console.log (Number(a) +Number(b))
+            return (Number(a) + Number(b))
+        }
+        var add = document.getElementById("add")
+        add.addEventListener('click', () => sum(num1, num2))
+        var roots = document.getElementById('root')
+        ReactDOM.render(sum(num1,num2), roots)
+        // document.getElementById("fNum").value=""
+        // document.getElementById("sNum").value=""
+
+
+    </script>
+</body>
+
+</html>
