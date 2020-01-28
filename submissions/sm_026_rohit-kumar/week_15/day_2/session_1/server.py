@@ -54,12 +54,14 @@ def read_all_records_from_csv():
 
 def edit_csvfile(item_no, item, quantity, purchased):
     records = read_all_records_from_csv()
-    
+    # validate item no
+    if (item_no - 1) < 0 or (item_no - 1) >= len(records):
+        return
+
     # make changes
-    if item_no - 1 < len(records):
-        records[item_no - 1] = {'item': item, 'quantity': quantity, 'purchased': purchased}
-        # write data back to file
-        write_all_records_to_csv(records)
+    records[item_no - 1] = {'item': item, 'quantity': quantity, 'purchased': purchased}
+    # write data back to file
+    write_all_records_to_csv(records)
 
     return json.dumps(records)
 
@@ -94,8 +96,12 @@ def delete():
     
     # read all records
     records = read_all_records_from_csv()
-    if item_no - 1 < len(records):
-        records.pop(item_no - 1)
+    # validate item no
+    if (item_no - 1) < 0 or (item_no - 1) >= len(records):
+        return
+
+    # delete the record
+    records.pop(item_no - 1)
     
     write_all_records_to_csv(records)
     return json.dumps(records)
@@ -108,10 +114,13 @@ def purchased():
     
     if request.method == 'POST':
         item_no = request.json['item_no']
+        
         # read all records
         records = read_all_records_from_csv()
-        if item_no - 1 < len(records):
-            records[item_no - 1]['purchased'] = 1
-        
+        if (item_no - 1) < 0 or (item_no - 1) >= len(records):
+            return
+
+        records[item_no - 1]['purchased'] = 1
         write_all_records_to_csv(records)
         return json.dumps(records)
+
