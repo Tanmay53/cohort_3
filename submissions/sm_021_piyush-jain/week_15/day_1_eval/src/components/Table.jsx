@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link, Route } from 'react-router-dom'
-import { sort, fill, edit } from './action'
+import { sort, filler, edit } from './action'
 import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField';
 import Edit from './Edit'
 class Table extends React.Component {
   constructor(props) {
@@ -35,22 +33,25 @@ class Table extends React.Component {
   }
   handleSelect = (e) => {
     console.log(this.state.array)
-    if (e.target.value == "rand") {
-      this.props.fill("rand")
+    if (e.target.value == "all") {
+      this.props.filler("all")
+    }
+    else if (e.target.value == "rand") {
+      this.props.filler("rand")
     }
     else if (e.target.value == "gen") {
-      this.props.fill("gen")
+      this.props.filler("gen")
 
     }
     else if (e.target.value == "prog") {
-      this.props.fill("prog")
+      this.props.filler("prog")
 
     }
     else if (e.target.value == "algo"){
-      this.props.fill("algo")
+      this.props.filler("algo")
     }
     else {
-      this.props.fill("sugg")
+      this.props.filler("sugg")
 
     }
   }
@@ -70,6 +71,7 @@ class Table extends React.Component {
           <label style={{marginLeft:"40px"}}>Filter</label>
           <Select onChange={this.handleSelect}>
             <option selected>Filter</option>
+            <option value="all">All</option>
             <option value="rand">Random</option>
             <option value="gen">General</option>
             <option value="prog">Programming</option>
@@ -86,12 +88,14 @@ class Table extends React.Component {
                 <td>{item.category}</td>
                 <td>{item.name}</td>
                 <td>{item.place}</td>
-                <td><Link to={`Table/${item.id}`}>Edit</Link></td>
+                <td><Link to={`Table/${item.id}`}>Edit Comment</Link></td>
                 <td>{item.comment}</td>
                 <Route path="/Table/:id" exact render={props => <Edit data={props.array} {...props} />}></Route>
               </tr>
             ))}
           </table>
+          <Link to="/add">Go to Add page</Link>
+          <div style={{marginLeft:"20px"}}><Link to="/">Go to Dasboard</Link></div>
         </div>
       </React.Fragment>
     )
@@ -104,7 +108,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = dispatch => {
   return ({
     sort:(data)=>dispatch(sort(data)),
-    fill: (data) => dispatch(fill(data)),
+    filler: (data) => dispatch(filler(data)),
     edit: (data) => dispatch(edit(data))
   })
 }
