@@ -56,3 +56,25 @@ def edit(item_no):
             writer.writerow(row)
     return json.dumps({'message':'edited successfully'})
 
+# delete an item
+
+@app.route('/delete',methods=['POST'])
+def delete():
+    item_no=int(request.json["item_no"])
+    item_no-=1
+
+    groceries=[]
+    with open('data/groceries.csv','r') as csvfile:
+        reader=csv.DictReader(csvfile)
+        for row in reader:
+            groceries.append(row)
+    
+    # write edit version to file
+    with open('data/groceries.csv','w') as csvfile:
+        fieldnames=["item","quantity","purchased"]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for i in range(len(groceries)):
+            if i != item_no:
+                writer.writerow(row)
+    return json.dumps({'message':'deleted successfully'})
