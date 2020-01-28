@@ -26,7 +26,7 @@ const reducer = (state = initialState, action) => {
         case DEL:
             return ({
                 ...state,
-                sorted: state.products.filter(item => item.id != action.id)
+                sorted: state.sorted.filter(item => item.id != action.id)
             })
         case FILL:
                 if(action.value=="first")
@@ -56,9 +56,7 @@ const reducer = (state = initialState, action) => {
                         ...state,
                         sorted:state.products.filter(item=>item.mileage>=30)
                     }
-                }
-        // case EDIT:
-        //         <Edit props={action.value}/>        
+                }       
         default:
             return state
     }
