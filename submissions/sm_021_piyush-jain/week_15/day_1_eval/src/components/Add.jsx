@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Route, Link } from 'react-router-dom'
 import { add } from './action'
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
@@ -39,7 +40,25 @@ class Add extends React.Component {
                 date:Date(),
                 dateValue:Date.parse(Date())
             })
-            this.props.add(this.state)
+            if(this.state.title==""||this.state.body==""||this.state.category==""||this.state.name==""||this.state.place=="")
+            {
+                alert("enter data")
+            }
+            else 
+            {
+                alert("Entry accepted")
+                this.props.add(this.state)
+
+            }
+            this.setState({
+                title:"",
+                body:"",
+                category:"",
+                name:"",
+                place:"",
+                date:"",
+                dateValue:""
+            })
         }
         render() {
             return (
@@ -58,19 +77,18 @@ class Add extends React.Component {
                         <TextField id="standard-basic" label="Name" name="name" value={this.state.name} onChange={this.handleChange} /><br></br>
                         <TextField id="standard-basic" label="Place" name="place" value={this.state.place} onChange={this.handleChange} /><br></br>
                         <div style={{ marginTop: "20px" }}> <Button variant="contained" color="secondary" onClick={this.handleClick}>SUBMIT</Button></div>
+                        <Link to="/">Go to Dashboard</Link>
                     </Box>
                 </React.Fragment>
             )
         }
     }
-    const mapStateToProps = (state) => ({
 
-    })
 
     const mapDispatchToProps = dispatch => {
         return ({
             add: (data) => dispatch(add(data))
         })
     }
-    export default connect(mapStateToProps, mapDispatchToProps)(Add)
+    export default connect(null, mapDispatchToProps)(Add)
 

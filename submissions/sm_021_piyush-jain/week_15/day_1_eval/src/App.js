@@ -22,6 +22,8 @@ class App extends React.Component {
   handleClick = () => {
     if (this.state.name == "admin" && this.state.password == "admin")
       this.props.log()
+     else
+     alert("Wrong credentials") 
   }
   handleChange = (e) => {
     this.setState({

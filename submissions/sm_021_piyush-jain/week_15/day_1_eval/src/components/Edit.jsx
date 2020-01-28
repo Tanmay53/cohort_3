@@ -7,8 +7,6 @@ import Button from '@material-ui/core/Button';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
-import { makeStyles } from '@material-ui/core/styles';
-import { Menu } from '@material-ui/core';
 class Add extends React.Component {
     constructor(props) {
         super(props)
@@ -18,11 +16,11 @@ class Add extends React.Component {
             category: "",
             name: "",
             place: "",
-            id: 0,
+            id: "",
             date:0,
             dateValue:0,
-            data: props.value.find((element) => element.id == this.props.match.params.id),
-            comments:""
+            comment:"",
+            temp:{}
         }
     }
 
@@ -31,26 +29,27 @@ class Add extends React.Component {
                 [e.target.name]: e.target.value
             })
         }
-        handleSelect = (e) => {
-            this.setState({
-                category: e.target.value
-            })
-        }
         handleClick = () => {
-            this.setState({
-                id: this.state.id + 1,
-                date:Date(),
-                dateValue:Date.parse(Date())
-            })
-            this.props.edit(this.state,this.state.data.id)
+                // id: this.state.id,
+                const temp ={title:this.state.title,body:this.state.body,category:this.state.category,name:this.state.name,place:this.state.place,id:this.state.id,date:this.state.date,dateValue:this.state.dateValue,comment:this.state.comment}
+                // date:Date(),
+                // dateValue:Date.parse(Date())
+            console.log(temp)
+            this.props.edit(temp,this.state.id)
         }
         componentDidMount=()=>{
+            let data = this.props.value.find((element) => element.id == this.props.match.params.id)
+
             this.setState({
-                title:this.state.data.title,
-                body:this.state.data.body,
-                category:this.state.data.category,
-                name:this.state.data.name,
-                place:this.state.data.place,
+                title:data.title,
+                body:data.body,
+                category:data.category,
+                name:data.name,
+                place:data.place,
+                date:data.date,
+                dateValue:data.dateValue, 
+                id:data.id
+           
             })
         }
         render() {
@@ -78,7 +77,7 @@ class Add extends React.Component {
         }
     }
     const mapStateToProps = (state) => ({
-value:state.products
+        value:state.products
     })
 
     const mapDispatchToProps = dispatch => {

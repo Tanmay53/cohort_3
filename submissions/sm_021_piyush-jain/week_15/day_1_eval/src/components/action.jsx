@@ -2,7 +2,7 @@ import React from 'react'
 const LOG="LOG"
 const ADD="ADD"
 const EDIT="EDIT"
-const FILL="FILL"
+const FILLER="FILLER"
 const DEL="DEL"
 const SORT="SORT"
 const log=()=>{
@@ -25,10 +25,10 @@ const sort=(data)=>{
         data:data
     }
 }
-const fill=(value)=>{
+const filler=(value)=>{
     console.log(value)
     return{
-        type:FILL,
+        type:FILLER,
         value:value
     }
 }
@@ -40,4 +40,4 @@ const edit=(data1,data2)=>{
         id:data2
     }
 }
-export { log,add,sort,fill,edit}
+export { log,add,sort,filler,edit}

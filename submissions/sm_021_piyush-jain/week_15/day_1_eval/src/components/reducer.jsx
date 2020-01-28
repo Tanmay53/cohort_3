@@ -1,9 +1,6 @@
-import React from 'react'
-import Edit from './Edit'
 const LOG = "LOG"
-const DEL = "DEL"
 const ADD = "ADD"
-const FILL = "FILL"
+const FILLER = "FILLER"
 const EDIT = "EDIT"
 const SORT="SORT"
 const initialState = {
@@ -22,7 +19,7 @@ const reducer = (state = initialState, action) => {
             return ({
                 ...state,
                 products: [...state.products, action.data],
-                sorted: [...state.products]
+                sorted: [...state.sorted,action.data]
             })
         case SORT:
             if(action.data=="asc")
@@ -64,12 +61,7 @@ const reducer = (state = initialState, action) => {
                 products: state.products.map((ele)=>(ele.id==action.id)?action.value:ele),
                 sorted: state.sorted.map((ele)=>(ele.id==action.id)?action.value:ele),
             })
-        case DEL:
-            return ({
-                ...state,
-                sorted: state.sorted.filter(item => item.id != action.id)
-            })
-        case FILL:
+        case FILLER:
             if (action.value == "rand") {
                 return {
                     ...state,
@@ -82,6 +74,12 @@ const reducer = (state = initialState, action) => {
                     ...state,
                     sorted:[...state.sorted,state.products],
                     sorted: state.products.filter(item => item.category=="General")
+                }
+            }
+            else if (action.value == "all") {
+                return {
+                    ...state,
+                    sorted:state.products
                 }
             }
             else if (action.value == "prog") {
