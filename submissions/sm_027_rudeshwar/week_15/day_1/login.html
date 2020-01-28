@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login.html</title>
+</head>
+
+<body>
+
+    <!-- <form action="" id="form1"> -->
+
+    <div><label for="email">email</label></div>
+    <div><input type="email" id="email" name="email"></div>
+
+    <div><label for="password">password</label></div>
+    <div><input type="text" id="password" name="password"></div>
+
+    <!-- <input type="button" value="SUBMIT" id="printUser"> -->
+    <button type="submit" id="btn">submit</button>
+    <!-- </form> -->
+
+    <p></p>
+    <div id="one"></div>
+
+
+    <script>
+        // var output1 = ""
+
+        var button = document.getElementById('btn')
+        button.addEventListener("click", getData)
+
+        function getData() {
+            var email = document.getElementById("email").value
+            // console.log(email)
+            var password = document.getElementById("password").value
+            // console.log(password)
+
+
+            var object = {
+                "email": email,
+                "password": password
+            }
+            // console.log(object)
+
+            object = JSON.stringify(object)
+
+            var xhr = new XMLHttpRequest();
+            // console.log(xhr)
+            xhr.open("POST", "https://reqres.in/api/login")
+            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            xhr.send(object)
+
+            xhr.onload = function () {
+                // The HTTP 200 code is returned when your request is successful so we check for that
+                if (xhr.status == 200) {
+                    console.log(xhr.response) // Print the response from the server after a successful request
+                    var result = JSON.parse(xhr.response)
+                
+                    // output1=result.token
+                    // console.log(result.token)
+                }
+                else {
+                    console.log("Error Code is:" + xhr.status)
+                }
+            }
+        }
+        
+        // var btn=document.createElement("BUTTON")
+        // btn.innerHTML="token is " + output1
+        // document.body.appendChild(btn)
+
+
+
+    </script>
+</body>
+
+</html>

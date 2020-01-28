@@ -1,0 +1,41 @@
+<!-- function add(){
+    var num1=document.getElementById("inp1").value
+    var num2=document.getElementById("inp2").value
+    var sum=num1+num2  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+</head>
+
+<body>
+    <input id="inp1" type="number" placeholder="enter first value">
+    <input id="inp2" type="number" placeholder="enter second value">
+    <button id="button">submit</button>
+    <div id="root">
+        
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+    //Write your code below this line
+     function add(){
+    let num1=Number(document.getElementById("inp1").value)
+    let num2=Number(document.getElementById("inp2").value)
+    let sum=num1+num2
+    return (<div><h1>{sum}</h1></div>);
+     }
+     var btn=document.getElementById("button")  
+     btn.addEventListener("click", function(){
+        ReactDOM.render(add(),document.getElementById("root"))
+        });
+</script>
+</body>
+</html>
