@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+    <div id = "root"></div>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    //Write your code below this line
+    function info(){
+        return (<div>
+            <h1>My Todo List</h1>
+            <ul>
+                <li>cooking</li>
+                <li>cleaning</li>
+                <li>house</li>
+                <li>coding</li>
+                <li>sleeping</li>
+                </ul>
+                <p>My name is Divyansh.My age is 23, my DOB is 30th march 1997. MY fav color is black.</p>
+                </div>)
+
+    }
+    ReactDOM.render(info(),document.getElementById("root"))
+
+    </script>
+</body>
+</html>
