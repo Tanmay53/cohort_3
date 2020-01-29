@@ -57,12 +57,15 @@ class Home extends React.Component {
                   Edit
                 </Link>
                 <Divider type='vertical' />
-                <Button
-                  type='primary'
-                  onClick={() => this.purchaseTrue(record.key, record.item)}
+                <Popconfirm
+                  title='Are you sure mark this as purchased?'
+                  onConfirm={() => this.purchaseTrue(record.key, record.item)}
+                  onCancel={this.cancel}
+                  okText='Yes'
+                  cancelText='No'
                 >
-                  Mark Purchased
-                </Button>
+                  <a href='#'>Mark Purchase</a>
+                </Popconfirm>
               </div>
             );
           }
