@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Marriage age validator</title>
+</head>
+
+<body>
+    <h1>Marriage age validator</h1>
+    <select id="geder">
+        <option>choose</option>
+        <option value ="female" id="female">female</option>
+        <option value ="male" id="male">male</option>
+    </select>
+    <label for="yob">YOB</label>
+    <input type="text" id="year" name="year">
+    </hr>
+    <button onclick="ageValidator()">Click here to find age ageValidator</button>
+</body>
+<script type="text/javascript">
+    function ageValidator() {
+
+        var year = document.getElementById("year").value
+        var gender = document.getElementById("male").value
+        var gender1 = document.getElementById("female").value
+
+        console.log(gender)
+        console.log(gender1)
+     var age = 2020-year
+     console.log(age)
+        if (gender1 == "female") {
+            if (age >= "18") {
+                alert("age is valid")
+            }
+            else {
+                alert("age is invalid")
+            }
+
+        }
+        else if (gender == "male") {
+            if (age >= "21") {
+                alert("age is valid")
+            }
+            else {
+                alert("age is invalid")
+            }
+
+
+        }
+        else{
+            alert("enter the yob")
+        }
+    }
+</script>
+
+</html>

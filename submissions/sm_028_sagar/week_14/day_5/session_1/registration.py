@@ -26,7 +26,7 @@ def read_csv_dict(username,password):
         reader = csv.DictReader(csvfile)
         for row in reader:
             if row['username'] == username and row['password'] == password:
-                return True
+                return True 
         return False
 
 print('Enter Username and password')
