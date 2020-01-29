@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FSD.JS.10.5</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 10px;
+            float: left;
+            padding:50px;
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        #demo{
+            margin-top: 400px;
+            margin-left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div onmousemove="myMoveFunction()" onmouseout="myOutFunction()" onmouseover="myOverFunction()">
+        <button type="submit" id="demo">hover over box</button>
+    </div>
+
+
+    <script>
+        function myOverFunction()
+        {
+            document.getElementById("demo").style.background = "red"
+        }
+
+        function myOutFunction()
+        {
+            document.getElementById("demo").style.background = "green"
+
+        }
+
+        
+
+
+    </script>
+
+
+</body>
+
+</html>
