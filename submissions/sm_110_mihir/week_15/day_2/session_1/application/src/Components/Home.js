@@ -32,16 +32,28 @@ export default class Home extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.data.map(ele => (
+            {this.state.data.map((ele, index) => (
               <tr>
                 <td>{ele.item}</td>
                 <td>{ele.quantity}</td>
                 <td>{ele.purchased}</td>
                 <td>
-                  <Link>Change</Link>
+                  <Link
+                    to={`/change/${index + 1}?item=${ele.item}&quantity=${
+                      ele.quantity
+                    }`}
+                  >
+                    Change
+                  </Link>
                 </td>
                 <td>
-                  <Link>Delete</Link>
+                  <Link
+                    to={`/delete/${index + 1}?item_no=${index + 1}&item=${
+                      ele.item
+                    }&quantity=${ele.quantity}`}
+                  >
+                    Delete
+                  </Link>
                 </td>
                 <td>
                   <Link>

@@ -34,13 +34,13 @@ def create():
 @app.route('/edit/<int:item_no>',methods=['POST'])
 def edit(item_no):
     item=request.json["item"]
+    item_no-=1
     quantity=request.json["quantity"]
     groceries=[]
     with open('data/groceries.csv','r') as csvfile:
         reader=csv.DictReader(csvfile)
         for row in reader:
             groceries.append(row)
-    item_no-=1
     for keys in groceries[item_no]:
         if keys == "item":
             groceries[item_no][keys]=item
@@ -76,7 +76,7 @@ def delete():
         writer.writeheader()
         for i in range(len(groceries)):
             if i != item_no:
-                writer.writerow(row)
+                writer.writerow(groceries[i])
     return json.dumps({'message':'deleted successfully'})
 
 # mark item_no purchased as true
