@@ -89,6 +89,7 @@ def edit_item(item_no):
 @app.route('/delete' , methods = ['POST'])
 def delete_item():
     item_no  = request.json['item_no']
+    item_no = int(item_no)
     edit_csv(None,None,None,item_no,"delete")
     return json.dumps({"message":"Data Deleted Successfully"})
 
