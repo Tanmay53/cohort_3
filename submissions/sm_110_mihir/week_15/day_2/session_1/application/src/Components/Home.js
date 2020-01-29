@@ -20,6 +20,9 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
+        <button className="btn btn-outline-primary">
+          <Link to="/add">Add new Item</Link>
+        </button>
         <table className="table table-bordered">
           <thead>
             <tr>
@@ -68,6 +71,9 @@ export default class Home extends React.Component {
             ))}
           </tbody>
         </table>
+        <Link to="/done">
+          <button className="btn btn-primary">See Purchased Items</button>
+        </Link>
       </div>
     );
   }

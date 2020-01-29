@@ -6,6 +6,7 @@ import Add from "./Add";
 import Change from "./Change";
 import Delete from "./Delete";
 import Mark from "./Mark";
+import Done from "./Done";
 export default function Routes(props) {
   return (
     <div>
@@ -16,6 +17,7 @@ export default function Routes(props) {
         <Route path="/change/:id" component={Change} />
         <Route path="/delete/:id" component={Delete} />
         <Route path="/mark/:id" component={Mark} />
+        <Route path="/done" component={Done} />
 
         <Route component={NotFound} />
       </Switch>

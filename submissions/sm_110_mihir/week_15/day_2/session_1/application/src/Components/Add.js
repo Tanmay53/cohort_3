@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export class Add extends Component {
   constructor(props) {
@@ -60,6 +61,9 @@ export class Add extends Component {
             Add item
           </button>
         </form>
+        <button className="btn btn-outline-primary">
+          <Link to="/">Home Page</Link>
+        </button>
       </div>
     );
   }
