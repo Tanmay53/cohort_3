@@ -34,13 +34,13 @@ def create():
 @app.route('/edit/<int:item_no>',methods=['POST'])
 def edit(item_no):
     item=request.json["item"]
+    item_no-=1
     quantity=request.json["quantity"]
     groceries=[]
     with open('data/groceries.csv','r') as csvfile:
         reader=csv.DictReader(csvfile)
         for row in reader:
             groceries.append(row)
-    item_no-=1
     for keys in groceries[item_no]:
         if keys == "item":
             groceries[item_no][keys]=item
@@ -76,11 +76,11 @@ def delete():
         writer.writeheader()
         for i in range(len(groceries)):
             if i != item_no:
-                writer.writerow(row)
+                writer.writerow(groceries[i])
     return json.dumps({'message':'deleted successfully'})
 
 # mark item_no purchased as true
-def mark_purchsed():
+def mark_purchased():
     item_no=int(request.json["item_no"])
     item_no-=1
 
@@ -99,7 +99,7 @@ def mark_purchsed():
         writer.writeheader()
         for row  in groceries:
             writer.writerow(row)
-    return json.dumps({'message':'purchased true'})
+     
 
 
 # return all the items marked as purchased=true
@@ -107,7 +107,8 @@ def mark_purchsed():
 @app.route('/purchased',methods=['POST','GET'])
 def purchased():
     if request.method == 'POST':
-        mark_purchsed()
+        mark_purchased()
+        return json.dumps({'message':'purchased true'})
     else:
         with open('data/groceries.csv','r') as csvfile:
             reader=csv.DictReader(csvfile)
