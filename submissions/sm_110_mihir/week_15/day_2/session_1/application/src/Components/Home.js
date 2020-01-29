@@ -56,7 +56,11 @@ export default class Home extends React.Component {
                   </Link>
                 </td>
                 <td>
-                  <Link>
+                  <Link
+                    to={`/mark/${index + 1}?item_no=${index + 1}&item=${
+                      ele.item
+                    }&quantity=${ele.quantity}`}
+                  >
                     <button className="btn btn-primary">Purchase</button>
                   </Link>
                 </td>
