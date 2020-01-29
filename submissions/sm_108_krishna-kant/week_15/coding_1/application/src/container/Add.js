@@ -4,25 +4,15 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 const { Paragraph, Title } = Typography;
 
-class Edit extends React.Component {
+class Add extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       item_name: '',
-      purchase: '',
-      quality: '',
-      lineno: ''
+      quality: ''
     };
   }
 
-  componentDidMount() {
-    const query = new URLSearchParams(this.props.location.search);
-    let item_name = query.get('item');
-    let purchase = query.get('purchase');
-    let lineno = query.get('key');
-    let quality = query.get('quality');
-    this.setState({ item_name, purchase, quality, lineno });
-  }
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -31,21 +21,22 @@ class Edit extends React.Component {
     e.preventDefault();
     let res = await axios({
       method: 'post',
-      url: `http://localhost:5000/edit/${this.state.lineno + 1}`,
+      url: `http://localhost:5000/create`,
       data: {
         item: this.state.item_name,
         quality: this.state.quality
       }
     });
     console.log(res);
-    message.success('Item Edited Successfully go to home page');
+    this.setState({ item_name: '', quality: '' });
+    message.success('Item Added Successfully go to home page');
   };
   render() {
     return (
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ width: '350px' }}>
           <Title level={2} style={{ color: 'black', marginTop: '10px' }}>
-            Edit Data{' '}
+            Add New Data
           </Title>
           <Paragraph>Item Name</Paragraph>
           <Input
@@ -54,17 +45,9 @@ class Edit extends React.Component {
             value={this.state.item_name}
             onChange={this.onChange}
           ></Input>
-          <Paragraph>Purchase</Paragraph>
-          <Input
-            placeholder='purchase'
-            name='purchase'
-            value={this.state.purchase}
-            disabled
-            onChange={this.onChange}
-          ></Input>
           <Paragraph>Quality</Paragraph>
           <Input
-            placeholder='quality'
+            placeholder='Quality'
             name='quality'
             value={this.state.quality}
             onChange={this.onChange}
@@ -74,7 +57,7 @@ class Edit extends React.Component {
             style={{ marginTop: '10px' }}
             onClick={this.onSubmit}
           >
-            Edit data
+            Add data
           </Button>
           <br></br>
           <Link to='/'>Back to home</Link>
@@ -84,4 +67,4 @@ class Edit extends React.Component {
   }
 }
 
-export default Edit;
+export default Add;
