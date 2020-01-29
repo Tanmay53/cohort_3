@@ -18,7 +18,6 @@ print(camel_case(str))
 
 def snake_case(input_str):
     snake_str = []
-    space_pos = []
     for i in range(len(input_str)):
         if input_str[i] != ' ':
             snake_str.append(input_str[i])
@@ -30,7 +29,6 @@ print(snake_case(str))
 
 def hypen_case(input_str):
     hypen_case = []
-    space_pos = []
     for i in range(len(input_str)):
         if input_str[i] != ' ':
             hypen_case.append(input_str[i])
