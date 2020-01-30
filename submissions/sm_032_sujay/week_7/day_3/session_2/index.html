@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>W7D3C2</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    </head>
+
+<body>
+    <div class="bg-dark text-primary">
+        <h2 class="display-4 text-center"> Mahishmati Students Database</h2>
+    </div>
+<div class="row my-3 ">
+  <form class="form-inline offset-3 mr-5 ">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="ipsrch">
+    <button class="btn btn-outline-success my-2 my-sm-0" onclick="search()" type="submit">Search</button>
+  </form>
+    <button type="button" onclick="show()" class="btn  btn-outline-secondary">Load</button>
+
+    <nav aria-label="..." class="mx-5 mt-2 ">
+        <ul class="pagination pagination-sm">
+          <li class="page-item active" aria-current="page">
+            <span class="page-link">
+              1
+              <span class="sr-only">(current)</span>
+            </span>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+        </ul>
+      </nav>
+</div>
+<div>
+  <button class="btn btn-dark text-success mb-2" onclick="sortData('ascF')">Sort ASC by First Name </button>
+  <button class="btn btn-dark text-success mb-2" onclick="sortData('descF')">Sort DESC by First Name </button>
+  <button class="btn btn-dark text-success mb-2" onclick="sortData('ascL')">Sort ASC by Last Name </button>
+  <button class="btn btn-dark text-success mb-2" onclick="sortData('descL')">Sort DESC by Last Name </button>
+  <button class="btn btn-dark text-success mb-2" onclick="sortData('ascE')">Sort ASC by Email </button>
+  <button class="btn btn-dark text-success mb-2" onclick="sortData('ascM')"> Sort L2H by MARKS </button>
+  <button class="btn btn-dark text-success mb-2" onclick="sortData('descM')"> Sort H2L by MARKS</button>
+
+
+</div>
+    
+
+    <table class="table table-striped table-dark table-hover text-info ">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email ID</th>
+            <th scope="col">Gender</th>
+            <th scope="col">English</th>
+            <th scope="col">Maths</th>
+            <th scope="col">Science</th>
+            <th scope="col">Total Marks</th>
+
+          </tr>
+        </thead>
+
+        <tbody id="tBody">
+          
+          
+        </tbody>
+      </table>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>

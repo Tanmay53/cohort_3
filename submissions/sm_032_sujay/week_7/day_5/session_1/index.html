@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <style type="text/css"> 
+        
+            #userInput{
+                    position:relative;
+                    margin-top:-65px;
+                    width:500px;
+                    margin-left:400px;
+            }
+            #srchimg{
+                position: relative;
+                margin-left:870px;
+                margin-top:20px;
+                width:100px;
+                height:100px;
+            }
+          
+        </style>
+
+
+</head>
+
+<body>
+
+
+    <div>                   
+                    
+    <img id="srchimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPRFuMda-PS7FJtAZapi9iXVKmZVWOQYIhKff9uV8LZwn3fzkOJg&s">
+    <input class="form-control shadow" 
+                id="userInput" 
+                type="search"
+                placeholder="Search GitHub User">
+    </div>
+    <div>
+        <button onclick="searchUser()" class="btn btn-lg btn-outline-dark offset-4 my-3"> Search User</button>
+        <button onclick="" class="btn btn-success">User's Repositories</button>
+    </div>
+
+
+    <table class="table table-hover table-dark " >
+        <thead class="text-info">
+            <tr>
+                <th scope="col">UserName</th>
+                <th scope="col">id</th>
+                <th scope="col">Score</th>
+                <th scope="col">HTML_Url</th>
+                <th scope="col">Followers</th>
+                <th scope="col">Display Picture</th>
+                <th scope="col">Type</th>
+              </tr>
+        </thead>
+        <tbody id="gitUsers">
+
+        </tbody>
+
+    </table>
+    <div class="bg-dark text-white" id="gitUserRepos">
+
+    </div>
+
+
+
+
+    <script type="text/javascript">
+
+        var data = document.getElementById("userInput").value
+        console.log(data)
+        var userId = 'Sujay-N'
+        var baseUrl = 'https://api.github.com/search/users?q='
+        var tBody= document.getElementById("gitUsers")
+
+        function searchUser()
+         {
+            //  fetch(baseUrl+userId)
+            fetch(baseUrl+data)
+            .then(res=> res.json())
+            
+            
+            
+            .then(res=> 
+            {
+                // console.log(res)
+                for(var i = 0 ; i < res.total_count ; i++)
+                {
+                    tBody.innerHTML=""
+                    var tRow= document.createElement('tr')
+
+                    
+                var tCol1 = document.createElement('td')
+                tCol1.textContent = res.items[i].login
+
+                var tCol2 = document.createElement('td')
+                tCol2.textContent = res.items[i].id
+
+                var tCol3 = document.createElement('td')
+                tCol3.textContent = res.items[i].score
+
+                var tCol4 = document.createElement('td')
+                tCol4.textContent = res.items[i].html_url
+
+                var tCol5 = document.createElement('td')
+                tCol5.textContent = res.items[i].followers_url
+
+                var tCol6 = document.createElement("td")
+                tCol6.textContent = res.items[i].avatar_url 
+
+                var tCol7 = document.createElement("td")
+                tCol7.textContent = res.items[i].type
+
+                tRow.appendChild(tCol1)
+                tRow.appendChild(tCol2)
+                tRow.appendChild(tCol3)
+                tRow.appendChild(tCol4)
+                tRow.appendChild(tCol5)
+                tRow.appendChild(tCol6)
+                tRow.appendChild(tCol7)
+                tBody.appendChild(tRow)
+                }
+            
+            })
+            .then(fetchRepos(res))
+            .catch(err=>tBody.textContent=err)
+           
+
+        }
+
+        function fetchRepos(repo)
+        {
+            
+            fetch(repo)
+            .then(res=> {document.getElementById("gitUserRepos").textContent = res.items[0].repos_url})
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

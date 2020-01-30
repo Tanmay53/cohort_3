@@ -1,0 +1,1 @@
+export const BOOK_QUOTES = "BOOK_QUOTES"
