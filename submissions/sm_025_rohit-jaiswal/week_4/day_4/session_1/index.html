@@ -1,0 +1,55 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>W4D4S1</title>
+    </head>
+    <body>
+        <!--FSD.JS.9.1-->
+        <h1> Create your own exponentiation function! </h1>
+        <input type="text" name = "num1" id="n1">
+        <input type="text" name = "num2" id="n2">
+        <p id="p1"></p>
+        <button onclick="exponent()">Click here to find the exponent!</button>
+        <!--FSD.JS.9.1-->
+
+        <!--FSD.JS.9.2-->
+        <h1>Sum of multiples of 3 and 5!</h1>
+        <p id="p2"></p>
+        <input type="text" id="textLimit">
+        <button onclick="sumOf3And5()">Click here for the output!</button>
+        <!--FSD.JS.9.2-->
+
+        <!--FSD.JS.9.3-->
+        <h1>Check if the users email is valid!</h1>
+        <label for="Email">Email</label>
+        <input type="text" />
+        <button onclick="validateEmail()">Check Email!</button>
+        <!--FSD.JS.9.3-->
+        <script type="text/javascript">
+            //FSD.JS.9.1
+            function exponent(){
+			var a = Number(document.getElementById('n1').value);
+            var b = Number(document.getElementById('n2').value);
+            var exp = 1;
+            for (var i = 0; i < a; i++) {
+                exp = exp * b;
+            }
+            document.getElementById('p1').innerHTML = "Answer:" + exp;
+		}
+            //FSD.JS.9.2
+            function sumOf3And5(){
+			var sum = 0;
+			var cap = document.getElementById("textLimit").value
+			for (i = 0; i <= cap; i++) {
+				if (i % 3 === 0 && i % 5 === 0) {
+					sum = sum + i;
+				}
+			}
+			document.getElementById("p2").innerHTML = "Answer:" + sum;
+            }
+            //FSD.JS.9.3
+            function validateEmail(){
+            }
+        </script>
+    </body>
+    </html>
