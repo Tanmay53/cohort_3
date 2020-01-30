@@ -7,7 +7,6 @@
 </head>
 
 <body>
-    <div id="root"></div>
         <div class="container mt-5">
             <div class="form-group">
                 <label for="First Input "><h2>Input First Number:</h2></label>
@@ -16,9 +15,12 @@
                 <label for="Second Input"><h2>Input Second Number:</h2></label>
                 <input type="number" class="form-control" id="inputbox2">
             </div>
-            <button type="submit" id="click" class="btn btn-primary">Let's Add 'em using React.js</button>
-    </div>
+            <button type="submit" id="click" class="btn btn-primary mb-4">Let's Add 'em up..!!!</button>
+            <br>
+            <br>
+            <div id="root"></div>
 
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
@@ -30,7 +32,7 @@
         function addingViaReact() {
             var inputbox1 = document.getElementById("inputbox1").value;
             var inputbox2 = document.getElementById("inputbox2").value;
-            return <p class="text-center display-2">The Sum of the Input Provided below is {Number(inputbox1) + Number(inputbox2)}.</p>
+            return <p class="text-center display-3">The Sum of the Inputs Provided above is: {Number(inputbox1) + Number(inputbox2)}.</p>
 
         }
         click.addEventListener("click", function() {

@@ -1,0 +1,16 @@
+.aaa {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  TextField {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 10px;
+  }
+
+  Button {
+      padding: 10px;
+  }
