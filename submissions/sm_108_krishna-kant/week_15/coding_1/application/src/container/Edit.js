@@ -56,7 +56,7 @@ class Edit extends React.Component {
           ></Input>
           <Paragraph>Purchase</Paragraph>
           <Input
-            placeholder='item name'
+            placeholder='purchase'
             name='purchase'
             value={this.state.purchase}
             disabled
@@ -64,7 +64,7 @@ class Edit extends React.Component {
           ></Input>
           <Paragraph>Quality</Paragraph>
           <Input
-            placeholder='item name'
+            placeholder='quality'
             name='quality'
             value={this.state.quality}
             onChange={this.onChange}

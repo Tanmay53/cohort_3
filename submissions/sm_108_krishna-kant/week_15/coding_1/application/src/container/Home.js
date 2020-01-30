@@ -71,7 +71,9 @@ class Home extends React.Component {
           }
         }
       ],
-      dataset: []
+      dataset: [],
+      purchasedData: [],
+      purchased: false
     };
   }
 
@@ -110,19 +112,44 @@ class Home extends React.Component {
     data.data.items.forEach((item, index) => (item.key = index));
     this.setState({ dataset: data.data.items });
   };
+  showPurchasedData = async () => {
+    let data = await axios.get('http://localhost:5000/purchased');
+    data.data.items.forEach((item, index) => (item.key = index));
+    this.setState({ purchasedData: data.data.items, purchased: true });
+  };
+
   render() {
-    const { columns, dataset } = this.state;
+    const { columns, dataset, purchasedData, purchased } = this.state;
     return (
       <Layout>
         <Header>
           <Title level={2}>Groceries Data</Title>
         </Header>
         <Content>
-          <Table columns={columns} dataSource={dataset}></Table>
+          <Table
+            columns={columns}
+            dataSource={purchased ? purchasedData : dataset}
+          ></Table>
         </Content>
         <Footer>
           <Button type='danger'>
             <Link to='/add'>Add Data</Link>
+          </Button>
+          <Button
+            type='primary'
+            style={{ marginLeft: '10px' }}
+            onClick={this.showPurchasedData}
+          >
+            Show Purchased items
+          </Button>
+          <Button
+            type='primary'
+            style={{ marginLeft: '10px' }}
+            onClick={() => {
+              this.setState({ purchased: false });
+            }}
+          >
+            Show All
           </Button>
         </Footer>
       </Layout>
