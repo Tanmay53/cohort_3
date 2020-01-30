@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- FSD.JS.10.1 !-->
+  <h1>Change the buttons text color random value</h1>
+  <button id="one">Click here to change my color</button>
+
+  <!-- FSD.JS.10.2 !-->
+  <h1 id="chngeHead">My color should change when I double click the button!</h1>
+  <button id="two">Double Click here to change the color of the h1 tag !</button>
+  
+  <!-- FSD.JS.10.3 !-->
+  <h1>The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button id="three">Click here to change my color!</button>
+  <script>
+      var colourBtn = document.getElementById('one');
+function certain(number){
+  return Math.floor(Math.random()*number);
+}
+function newColor(){
+    var clr = 'rgb(' + certain(220) + ',' + certain(100) + ',' + certain(500) + ')';
+    colourBtn.style.backgroundColor=clr;
+}
+colourBtn.addEventListener('click', newColor);
+
+var colourBtn2 = document.getElementById('two');
+var headChng = document.getElementById('chngeHead')
+colourBtn2.addEventListener('dblclick', newClr);
+function newClr(){
+    var color = 'rgb(' + certain(220) + ',' + certain(100) + ',' + certain(500) + ')';
+    headChng.style.backgroundColor=color;
+}
+
+var colourBtn3=document.getElementById('three')
+var count = 0
+function newClr2(){
+var colour2 = 'rgb(' + certain(220) + ',' + certain(100) + ',' + certain(500) + ')';
+if(count < 2)
+colourBtn3.style.backgroundColor = colour2;
+else 
+colourBtn3.removeEventListener('click', newClr2)
+++count
+}
+colourBtn3.addEventListener('click', newClr2);
+  </script>
+</body>
+</html>
