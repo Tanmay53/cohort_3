@@ -44,9 +44,9 @@ function dropDown(user) {
     console.log(user)
     var doc = document.getElementById('userInfo')
     doc.innerHTML = `<div>
-                           <div> Hello ${user.username}, Welcome back ... </div>
-                           <div> You are ${user.type} here...</div>
-                           <div> Thanks for registering with email: ${user.email}</div>
+                           <div>  ${user.username} </div>
+                           <div> You are ${user.type}</div>
+                           <div> The Registered Email Id is: ${user.email}</div>
                      </div>`
 }
 

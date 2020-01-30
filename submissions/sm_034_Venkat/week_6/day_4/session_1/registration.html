@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>w6d4s1-Registration</title>
+    <style>
+        body {
+            background-color: powderblue;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #div1> div, #div2> div{
+            font-size: x-large;
+            margin: 10px 0;
+        }
+        #div2 * {
+            margin: 20px 0
+        }
+        #div1,#div2 {
+            padding: 3%;
+            background-color: rgb(104, 247, 91);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <!-- <div><button id="button">Click me first.!</button></div> -->
+        <div class="name">Name</div>
+        <p id="nameP"></p>
+        <input type="text" name="name" id="name" class="name">
+        <div class="mail">Email</div>
+        <p id="mailP"></p>
+        <input type="text" name="email" id="mail" class="mail">
+        <div class="mobile">Mobile Number</div>
+        <p id="mobileP"></p>
+        <input type="number" name="mobile" id="mobile" class="mobile">
+        <div><button type="submit" id="submit">Submit</button></div>
+    </div>
+    <div id="div2">
+        <p>Name</p>
+        <div id="name2"></div>
+        <p>Email</p>
+        <div id="mail2"></div>
+        <p>Mobile Number</p>
+        <div id="mobile2"></div>
+    </div>
+    <script src="registration.js"></script>
+</body>
+</html>
