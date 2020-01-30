@@ -1,31 +1,127 @@
 <html>
-    <head>
-        <title>index.html</title>
-    </head>
-    <body>
-        <button id ="add customer">Add customer</button>
-        <label for ="firstName">firstName</label>
-        <input type ="text" name = "firstName"/>
-        <label for ="lastName">lastName</label>
-        <input type ="text" name = "lastName"/>
-        <label for ="dateOfBirth">DOB</label>
-        <input type ="text" name = "dateOfBirth"/>
-        <label for ="balance">balance</label>
-        <input type ="text" name = "balance"/>
-        <label for ="accountNumber">accountNumber</label>
-        <input type ="text" name = "accountNumber"/>
-        <label for ="name"> sharedAccountHolders  (Comma separated!</label> </label>
-        <input type ="text" name = "name"/>
-        <script>
-        var Customers ={
+
+<head>
+    <title>index.html</title>
+</head>
+<style>
+label{
+    display:block;
+}
+.newobjdata{
+    display:block;
+    float:right;
+    padding-right: 60%;
+
+
+}
+</style>
+
+<body>
+    <!-- <button id="addcustomer">Add customer</button> -->
+    <h2>Person display</h2>
+    <div class="newobjdata"></div>
+    <div id="customerdetails"></div>
+    <button id="printObject"> click here to print object details</button>
+    <h1>create a new person objects</h1>
+    <div id="inputContainer">
+        <label for="firstName">firstName</label>
+        <input type="text" name="firstName" class="personInput" />
+        <label for="lastName">lastName</label>
+        <input type="text" name="lastName" class="personInput" />
+        <label for="dateOfBirth">DOB</label>
+        <input type="text" name="dateOfBirth" class="personInput" />
+        <label for="balance">balance</label>
+        <input type="text" name="balance" class="personInput" />
+        <label for="accountNumber">accountNumber</label>
+        <input type="text" name="accountNumber" class="personInput" />
+        <label for="name"> sharedAccountHolders (Comma separated!)</label> </label>
+        <input type="text" name="name" class="personInput" />
+        <label for="submit">Submit Information:</label>
+        <button name="submit" id='submitBtn'>Submit</button>
+
+        <label for="displayPeople">Display All People</label>
+        <button name="displayPeople" id='displayBtn'>Display All Poeple</button>
+    </div>
+    <script>
+        var Customers = {
             firstName: "Blessy",
             lastName: "John",
             dateOfBirth: "30 july 1996",
-            balance:1000,
-            accountNumber:123456,
-            sharedAccountHolders: ["Sakshi", "Mariya", "Jilu"]
-
+            balance: 1000,
+            accountNumber: 123456,
+            sharedAccountHolders: ["Sakshi", "Mariya", "Jilu"],
+            getDetails: function () {
+                var output = ""
+                for (key in this) {
+                    output += key + ":" + Customers[key] + "\n"
+                    if (key == 'sharedAccountHolders')
+                        break;
+                }
+                return output
+            }
+        };
+        console.log(Customers)
+        function addcustomer() {
+            var details = document.querySelector("#customerdetails")
+            var outputstring = Customers.getDetails()
+            var outputpara = document.createElement("p")
+            outputpara.innerText = outputstring
+            details.appendChild(outputpara)
         }
-        </script>
-    </body>
+        var btnObj = document.querySelector('#printObject');
+
+        btnObj.addEventListener('click', addcustomer)
+
+
+        function Person(firstName, lastName, dateOfBirth, balance, accountNumber, sharedAccountHolders) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.dateOfBirth = dateOfBirth;
+            this.balance = balance;
+            this.accountNumber = accountNumber;
+            this.sharedAccountHolders = sharedAccountHolders;
+            this.getDetails = function () {
+                var output = ''
+                for (key in this) {
+                    output += key + ":" + this[key] + "\n"
+                    if (key == "sharedAccountHolders") break;
+                }
+                return output
+            }
+        }
+        var personArr = [] //it contain details of new person
+        function createPerson() {
+            var input = document.querySelectorAll(".personInput")
+            var newPerson = new Person
+            var i = 0;
+            for (key in newPerson) {
+                if (newPerson[key] == undefined) {
+                    if (key != 'sharedAccountHolders') {
+                        newPerson[key] = input[i].value
+                    }
+                    else {
+                        newPerson[key] = input[i].value.split(',')
+                    }
+                    input[i].value = ''
+                    i++
+                }
+            }
+            personArr.push(newPerson)
+        }
+        function displayAll() {
+            var display = document.querySelector(".newobjdata")
+            display.innerHTML = ""
+            for (var i = 0; i < personArr.length; i++) {
+                var displayobj = document.createElement("p")
+                displayobj.textContent = personArr[i].getDetails()
+                display.appendChild(displayobj)
+            }
+        }
+        var submitbttn = document.querySelector("#submitBtn")
+        submitbttn.addEventListener('click', createPerson)
+        var displaybttn = document.querySelector("#displayBtn")
+        displaybttn.addEventListener("click", displayAll)
+    </script>
+</body>
+
 </html>
