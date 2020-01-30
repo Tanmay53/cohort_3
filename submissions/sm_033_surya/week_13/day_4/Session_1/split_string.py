@@ -1,15 +1,15 @@
-a = "a,b,c,d"
-scha = ","
-str = []
+input_string = "a,b,c,d"
+check_char = ","
+output_string = []
 temp = ""
-for i in range(0,len(a)):
-    if a[i] == scha:
-        str.append(temp)
-        temp =""
-    else:
-        temp = temp + a[i]
-    if i == len(a)-1:
-       str.append(temp)
 
-print(str)
-    
+for i in range(0, len(input_string)):
+    if input_string[i] == check_char:
+        output_string.append(temp)
+        temp = ""
+    else:
+        temp = temp + input_string[i]
+    if i == len(input_string)-1:
+       output_string.append(temp)
+
+print(output_string)
