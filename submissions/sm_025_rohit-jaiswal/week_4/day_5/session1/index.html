@@ -22,18 +22,14 @@ function newColor(){
     colourBtn.style.backgroundColor=clr;
 }
 colourBtn.addEventListener('click', newColor);
-  
 
 var colourBtn2 = document.getElementById('two');
 var headChng = document.getElementById('chngeHead')
 colourBtn2.addEventListener('dblclick', newClr);
 function newClr(){
     var color = 'rgb(' + certain(220) + ',' + certain(100) + ',' + certain(500) + ')';
-
     headChng.style.backgroundColor=color;
 }
-
-
 
 var colourBtn3=document.getElementById('three')
 var count = 0
