@@ -1,6 +1,15 @@
-a = "surya"
+a = " "
+scha = ","
 str = []
+temp = ""
 for i in range(0,len(a)):
-    str.append(a[i])
+    if a[i] == scha:
+        str.append(temp)
+        temp =""
+    else:
+        temp = temp + a[i]
+    if i == len(a)-1:
+       str.append(temp)
+
 print(str)
     
