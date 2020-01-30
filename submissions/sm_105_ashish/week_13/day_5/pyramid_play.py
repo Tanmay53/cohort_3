@@ -9,7 +9,7 @@ def pyramid_arr(level):
         arr = []
     final_arr.reverse()
     for k in range(len(final_arr)-1):
-        for l in range(k,len(final_arr)-1):
+        for _ in range(k,len(final_arr)-1):
             final_arr[k].append(".")
             final_arr[k].reverse()
             final_arr[k].append(".")
@@ -22,7 +22,7 @@ def pyramid(level):
     for x in pyramid_level:
         print(''.join(x))
 # making pyramid of level 5 
-pyramid(5)
+# pyramid(5)
 
 #  making method to show inverse of pyramid using the previousaly made method which give as pyramid level:
 
@@ -32,16 +32,15 @@ def inverse_pyramid(level):
     for y in pyramid_level:
         print(''.join(y))
 
-inverse_pyramid(5)
+# inverse_pyramid(5)
 
 def rhombus(level):
     pyramid_level = pyramid_arr(level)
-    pyramid_level
     for p in pyramid_level:
         print(''.join(p))
     reverse_pyramid_level = pyramid_arr(level)
     reverse_pyramid_level.reverse()
-    for q in reverse_pyramid_level:
-        print(''.join(q))
+    for q in range(1,len(reverse_pyramid_level)):
+        print(''.join(reverse_pyramid_level[q]))
 
-rhombus(5)
+rhombus(15)
