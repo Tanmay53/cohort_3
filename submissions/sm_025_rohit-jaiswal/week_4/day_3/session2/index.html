@@ -1,0 +1,104 @@
+        <html>
+        <head>
+           <title>
+               W4D3S2
+           </title>
+        </head>
+        <body>
+            <div>
+                <input type="number" id="yourAge" placeholder="Age Input">
+                <br>
+                <br>
+                <br>
+                <button onclick="yourAge()">Input Age</button>
+                <p id="showResult"></p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <input type="text" id="colorMe" placeholder="Color Input">
+                <br>
+                <br>
+                <br>        
+                <div><button onclick="changeButton()" id="newCOlor">I'll Change</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <select id="selectContinent">
+                    <option value="India"> India </option>
+                    <option value="United States of America">United States of America</option>
+                    <option value="China">China</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Australia">Australia</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Sweden">Sweden</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <button onclick="findContinent()">Continent Will be Alerted</button>
+            </div>
+
+
+    <!-- //scriptTAG -->
+
+            <script>
+                function yourAge() {
+                    var age = document.getElementById("yourAge").value;
+                    if (age > 18)
+                        document.getElementById("showResult").innerHTML = "You can drive in India";
+                    else if (age < 18)
+                        document.getElementById("showResult").innerHTML = "You can not drive in India";
+                    else
+                        document.getElementById("showResult").innerHTML = "You are just old enough to drive in India!";
+
+                }
+                function changeButton() {
+                    var color = document.getElementById("colorMe").value;
+                    document.getElementById("newCOlor").style.background = color;
+                }
+                function findContinent(){
+                    var nations=document.getElementById("selectContinent").value;
+                    switch (nations)
+                    {
+                        case "India":
+                        case "China":
+                        case "Singapore":
+                        case "Nepal":
+                            alert("Continent: Asia")
+                            break;
+                        case "United States of America":
+                        case "Canada":
+                        case "Mexico":
+                            alert("Continent: North America")
+                            break;
+                        case "France":
+                        case "Germany":
+                        case "Sweden":
+                            alert("Continent: Europe")
+                            break;
+                        case "South Africa":
+                        case "Nigeria":
+                            alert("Continent: Africa")
+                            break;
+                        case "Argentina":
+                        case "Brazil":
+                            alert("The continent is South America")
+                            break;
+                }
+                }
+            </script>
+        </body>
+        </html>

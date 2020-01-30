@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div>
+        <div>
+            <button id="get-btn">Submit</button>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered text-center">
+        <tr>
+            <th>Id</th>
+            <th>completed</th>
+        </tr>
+    </table>
+    <div aria-label="Navigation Bar" id="pageNum"></div>
+
+    <select name="" id="selectPages">
+        <option value="choose" selected>select</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+    </select>
+
+
+
+    <script>
+
+        $("#get-btn").click(function () {
+            $.ajax({
+                //    method: "post"
+                url: "https://jsonplaceholder.typicode.com/todos",
+            })
+                .done(function (data) {
+                    console.log(data);
+                    showdata(data)
+
+                 showPages(data)
+
+                });
+        });
+
+        function showdata(result) {
+            var obj = result
+            // console.log(obj)
+            var table1 = document.querySelector('table');
+            for (var i = 0; i < result.length; i++) {
+                // console.log(result[i])
+                var tr1 = document.createElement('tr');
+                var td1 = document.createElement('td')
+                td1.textContent = result[i].id;
+                tr1.appendChild(td1);
+                var td2 = document.createElement('td')
+                td2.textContent = result[i].completed;
+                console.log(result.length)
+                // for (var i = 0; i < result.length; i++)
+                if (result[i].completed == true) {
+                    td2.style.color = "green"
+                }
+                else {
+                    td2.style.color = "red"
+                }
+
+                tr1.appendChild(td2);
+                table1.appendChild(tr1)
+            }
+        }
+
+        // <!-- Pagination-->
+
+        document.getElementById("selectPages").addEventListener("change",showPages)
+        function showPages(result) {
+            var div = document.getElementById("pageNum")
+            div.innerHTML = ""
+            var res = document.getElementById("selectPages").value
+            console.log(res)
+
+            var totalPages = Math.ceil(result.length / res)
+            console.log(totalPages)
+for(var i=0;i<=totalPages;i++){
+    var button=document.createElement("button")
+    div.appendChild(button)
+    button.setAttribute("value",i)
+    button.addEventListener("click",displayPages)
+    button.innerHtml=i
+}
+  }
+
+
+function displayPages(e){
+    console.log(e)
+    var perPage=document.getElementById("selectPages").value
+    console.log(perPage)
+
+    var pageNum =e.target.value
+    var start=pageNum*perPage - perPage
+    var limit =Number(start)+Number(perPage)
+    // Var tablediv = document.getElementById("tablediv");
+
+}
+//  var totalpages = result.length/
+
+
+    </script>
+</body>
+
+</html>
