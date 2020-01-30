@@ -1,6 +1,10 @@
-a = [2,2,2,3,4,5]
-x = 0
-for i in range(0,len(a)):
-    if int(a[i]) % 2 == 0:
-        x = x+int(a[i])
-print(x)
+input_list = [2, 2, 2, 3, 4, 5]
+sum = 0
+
+for i in range(0, len(input_list)):
+        
+    if int(input_list[i]) % 2 == 0:
+            
+        sum = sum+int(input_list[i])
+        
+print(input_list)
