@@ -1,0 +1,16 @@
+.background{
+  background-color: grey;
+}
+.box{
+  width: 100%;
+  height: 500px;
+}
+.margin{
+  display: inline-block;
+  margin-top: 10%;
+}
+.buttomBox{
+  width: 100%;
+  height: 200px;
+  background: grey;
+}

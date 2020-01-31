@@ -17,7 +17,7 @@
   <button onclick="myFunction2()">Create 2 H3</button>
   <button onclick="myFunction3()">Create DIVS</button>
   <button onclick="myFunction4()">Add Students</button>
-  <button onclick="myFunction5()">Add Copyright</button>
+  <button onclick="myFunction5()" id="copy">Add Copyright</button>
   <script>
     var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
     function myFunction1() {
@@ -39,7 +39,7 @@
 
       for (var i = 1; i <= 10; i++) {
         var create_divs = document.createElement('DIV')
-        create_divs.innerHTML = "Content 1"
+        create_divs.innerHTML = "Content" + i
         document.getElementById("cont").appendChild(create_divs)
       }
     }
@@ -54,7 +54,8 @@
     }
 
     function myFunction5(){
-      
+      var copy = document.getElementById('copy')
+      copy.insertAdjacentHTML("afterend", "<p>@ masai 2019</p>");
     }
   </script>
 </body>
