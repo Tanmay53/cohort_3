@@ -30,8 +30,6 @@ for items in pyramid[::-1]:
 print(".....rhombus")
 print()
 
-# for items in pyramid[rows - 2::-1]:
-#     pyramid.append(items)
 
 rhombus = []
 for items in pyramid[:len(pyramid)-1]:
