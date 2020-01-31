@@ -1,0 +1,20 @@
+ 
+<html>
+    <style>
+        body {
+            background:coral;
+        }
+    </style>
+    <body>
+        <script>
+         function certain(code) {
+              return Math.floor(Math.random()*code);
+            }
+            function colour() {
+                var swtClr = 'rgb(' + certain(100) + ',' + certain(200) + ',' + certain(500) + ')';
+                document.querySelector("body").style.background = swtClr
+            }
+        window.addEventListener('resize', colour)
+        </script>
+    </body>
+</html>

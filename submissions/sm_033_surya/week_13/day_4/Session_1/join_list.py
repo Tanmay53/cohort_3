@@ -1,6 +1,7 @@
-a = ["a","d","e","g"]
-b = input()
-str = ""
-for i in range(0,len(a)):
-    str = str+a[i]+b
-print(str)
+input_list = ["a","d","e","g"]
+input_char = input()
+output_string = ""
+
+for i in range(0,len(input_list)):
+    output_string = output_string+input_list[i]+input_char
+print(output_string)
