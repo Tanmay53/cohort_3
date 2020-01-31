@@ -9,7 +9,7 @@ Submit to respective folders
 ***You cannot and should not use any JavaScript compliers! Any use of online or offline compliers is considered cheating!***
 
 #### FSD.JS.16.1
-######
+ 
 1. What is the value of arr. If the answer is in an array please use [num1,num2,num3] format
 ```javascript
 let arr = [55,200,215,230,280]

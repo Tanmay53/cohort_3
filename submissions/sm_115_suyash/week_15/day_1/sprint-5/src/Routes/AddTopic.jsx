@@ -67,7 +67,7 @@ class AddVehicle extends Component {
               name="body"
             />
           </div>
-          <div>Manufacturer</div>
+          <div>Category</div>
           <div>
             <input
               className="px-4 py-2 my-2 rounded "
