@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>session2_part2.html</title>
+    </head>
+    <style>
+        #container{
+            background:blue;
+            width:500px;
+            height:500px;
+            padding:10px;
+            margin:auto;
+        }
+        button{
+            height:100px;
+            width:100px;
+            margin-right: 20px;
+        }
+    </style>
+    <body>
+        <div id="container">
+            <button>Submit</button>
+        </div>
+        <script>
+            var mouseon = document.getElementById("container")
+            mouseon.addEventListener("mouseover",function(){
+            document.querySelector("button").style.background = "orange"
+        })
+        var mouselea = document.getElementById("container")
+            mouselea.addEventListener("mouseleave",function(){
+            document.querySelector("button").style.background = "purple"
+        })
+        </script>
+    </body>
+</html>
