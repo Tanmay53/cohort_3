@@ -1,5 +1,4 @@
-a = {1,2,3}
-b = {1,2,3,4,5}
-count = 0
-i = 0
-print(a <= b)
+first_set = {1,2,3}
+second_set = {1,2,3,4,5}
+
+print(first_set <= second_set)
