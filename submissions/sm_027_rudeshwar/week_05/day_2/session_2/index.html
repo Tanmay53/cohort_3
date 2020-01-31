@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -26,10 +27,29 @@
     </form>
 
     <div id="divBlock">
-
     </div>
 
-    <form action=""></form>
+    <!-- ----------------------------------------- -->
+
+    <form name="myform2" onsubmit="settings(event)">
+        <div>
+            <div><label for="changeFont">Font Size</label></div>
+            <div><input type="text" id="changeFont"></div>
+            <button type="submit">changeFont</button>
+        </div>
+
+        <div>
+            <div><label for="fontColor">Font Color</label></div>
+            <div><input type="text" id="fontColor"></div>
+            <button type="submit">change font Color</button>
+        </div>
+
+        <div>
+            <div><label for="bgColor">Background Color</label></div>
+            <div><input type="text" id="textBgColor"></div>
+            <button type="submit">change Background Color</button>
+        </div>
+    </form>
     <script src="index.js"></script>
 </body>
 
