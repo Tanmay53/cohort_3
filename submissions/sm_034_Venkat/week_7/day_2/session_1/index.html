@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>w7d2s1-Index</title>
+    <style>
+        body {
+            background-color: rgb(103, 165, 165);
+            /* margin: 12% 20% 0 25%; */
+        }
+
+        body>div {
+            margin-top: 30px;
+        }
+
+        .div {
+            margin: 1% 20% 0 25%;
+            display: grid;
+            grid-template-columns: 45% 10%;
+            grid-gap: 10px;
+        }
+
+        .margin {
+            margin-left: 25%
+        }
+
+        #userDropDown {
+            padding: 2px;
+            margin-right: 50px;
+            /* font-size: large; */
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid;
+        }
+
+        th,
+        td {
+            border: 1px solid;
+        }
+
+        select {
+            font-size: large;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <div>First Name(optional)</div>
+        <div><input type="text" id="fname"></div>
+        <div>Last Name(optional)</div>
+        <div><input type="text" id="lname"></div>
+        <div>User Name</div>
+        <div><input type="text" id="uname"></div>
+        <div>Password</div>
+        <div><input type="text" id="password"></div>
+        <div>Phone Number(optional)</div>
+        <div><input type="number" id="phNo"></div>
+        <div>Email(optional)</div>
+        <div><input type="text" id="email"></div>
+        <div>Description(optional)</div>
+        <div><input type="text" id="matter"></div>
+        <div>Type</div>
+        <div>
+            <select name="type" id="type">
+                <!-- <option value="--">---</option> -->
+                <option value="user">User</option>
+                <option value="admin">Administer</option>
+            </select>
+        </div>
+        <div><button onclick="createUser()">Submit</button></div>
+    </div>
+    <div class="margin">
+        <select name="users" id="userDropDown" onload="userOptions()"></select>
+        <button onclick="showUserDetails()">Enter</button>
+    </div>
+    <div id="displayProfile"></div>
+    <button onclick=showTheTable(database) class="margin">Show Table View</button>
+    <div id="tableDiv">
+        <div>
+            <select name="selectionShow" id="tableSelect" onchange="showOnlySelectedUsers()">
+                <option value="all">All</option>
+                <option value="users">Users only</option>
+                <option value="admins">Admins only</option>
+            </select>
+            <select name="sortBy" id="tableSort" onchange="showSortedtable()">
+                <!-- <option value="time">Time Based</option> -->
+                <option value="increasing">Ascending</option>
+                <option value="decreasing">Descending</option>
+            </select>
+        </div>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>Remove</th>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <script>
+        var database = []
+        document.getElementById("tableDiv").style.display = "none"
+        var body = document.querySelector("body")
+        function createUser() {
+            console.log(database)
+            var fname = document.getElementById("fname").value
+            var lname = document.getElementById("lname").value
+            var uname = document.getElementById("uname").value
+            var password = document.getElementById("password").value
+            var matter = document.getElementById("matter").value
+            var phNo = document.getElementById("phNo").value
+            var mail = document.getElementById("email").value
+            var type = document.getElementById('type').value
+
+            // var user = new userConstructor(fname, lname, uname, password, phNo, mail, matter, type)
+            var user = {}
+            user.FirstName = fname || "Mr",
+                user.LastName = lname || 'X',
+                user.UserName = uname || "user",
+                user.Password = password || "Password",
+                user.PhoneNumber = phNo || "9848984898",
+                user.Email = mail || "Mr.X@mail.com",
+                user.Description = matter || "I am out of reach",
+                user.Type = type
+            database.push(user)
+            userOptions(database)
+            console.log(user, database.length)
+        }
+
+        // function userConstructor(fname = "Mr", lname = "X", uname = "empty!", password = "password", matter = "matter", phNo = "964062380", mail = "MrX@mail.com", type = "user") {
+        // function userConstructor(fname, lname, uname, password, phNo, mail, matter, type) {
+        //     this.FirstName = fname || "Mr",
+        //         this.LastName = lname || 'X',
+        //         this.UserName = uname || "user",
+        //         this.Password = password || "Password",
+        //         this.PhoneNumber = phNo || "9848984898",
+        //         this.Email = mail || "Mr.X@mail.com",
+        //         this.Description = matter || "I am out of reach",
+        //         this.Type = type
+        // }
+
+        function userOptions(arr) {
+            var selectPart = document.getElementById("userDropDown")
+            selectPart.innerHTML = ""
+            for (i = 0; i < arr.length; i++) {
+                var username = arr[i].UserName
+                var option = document.createElement("option")
+                option.textContent = username
+                selectPart.append(option)
+                console.log(username)
+            }
+        }
+
+        function showUserDetails() {
+            // console.log(database, database[0], typeof (database), typeof (database[0]), database[0].UserName, 'I am console for checking user objects')
+
+            var selectedUser = document.getElementById("userDropDown").value
+            for (j = 0; j < database.length; j++) {
+                if (database[j].UserName == selectedUser) {
+                    var user = database[j]
+
+                    var displayDiv = document.getElementById("displayProfile")
+                    if (database[j].Type == "user") {
+                        // var displayDiv = document.createElement("div")
+                        displayDiv.innerHTML = ""
+                        displayDiv.innerText = `Hello ${user.UserName},welcome back.! 
+                                                    Your registered email is ${user.Email}.`
+                        // `<div>
+                        //     <div> Hello ${user.UserName}, welcome back </div>
+                        //     <div> Registered email is ${user.Email}</div>
+                        // </div>`
+                        body.append(displayDiv)
+                    }
+                    else {
+                        // var displayDiv = document.createElement("div")
+                        displayDiv.innerHTML = ""
+                        // var textContent = <div>
+                        displayDiv.innerText = `Hai Admin- ${user.UserName} ,Have a nice day...
+                                                Your Registered email is ${user.Email}
+                                                We have total ${database.length - 1} members till now in this session`
+                        // `<div>  Hai Admin- ${user.UserName} ,Have a nice day...</div>
+                        //     <div>Your Registered email is ${user.Email}</div>
+                        //         <div>We have total ${database.length - 1} members till now in this session</div>`
+                        body.append(displayDiv)
+                    }
+                }
+            }
+        }
+
+        var table = document.querySelector("table")
+
+        function showTheTable(arr) {
+            var tableDiv = document.getElementById("tableDiv")
+            table.innerHTML = ""
+
+            for (k = 0; k < arr.length; k++) {
+                var user = arr[k]
+                // console.log(user, arr[0], arr[k].UserName)
+                var tr = document.createElement("tr")
+
+                var tdSNo = document.createElement("td")
+                tdSNo.textContent = (k + 1)
+                tr.append(tdSNo)
+                var tdfname = document.createElement("td")
+                tdfname.textContent = user.FirstName //here if I give user[FirstName] , it is not working.//
+                tr.append(tdfname)
+                var tdlname = document.createElement("td")
+                tdlname.textContent = user.LastName
+                tr.append(tdlname)
+                var tduname = document.createElement("td")
+                tduname.textContent = user.UserName
+                tr.append(tduname)
+                var tdpassword = document.createElement("td")
+                tdpassword.textContent = user.Password
+                tr.append(tdpassword)
+                var tdphNo = document.createElement("td")
+                tdphNo.textContent = user.PhoneNumber
+                tr.append(tdphNo)
+                var tdmail = document.createElement("td")
+                tdmail.textContent = user.Email
+                tr.append(tdmail)
+                var tdmatter = document.createElement("td")
+                tdmatter.textContent = user.Description
+                tr.append(tdmatter)
+                var tdType = document.createElement("td")
+                tdType.textContent = user.Type
+                tr.append(tdType)
+                var tdDel = document.createElement("td")
+                var delBtn = document.createElement("button")
+                // console.log(user.UserName)             
+                // delBtn.setAttribute("onclick",deleteUser(user.UserName))  
+                delBtn.setAttribute("onclick", `deleteUser("${user.UserName}")`)
+                delBtn.innerText = "Delete"
+                tdDel.append(delBtn)
+                tr.append(tdDel)
+                table.append(tr)
+            }
+            tableDiv.style.display = "initial"
+        }
+
+        function showOnlySelectedUsers() {
+            var tableSelectVal = document.getElementById("tableSelect").value
+            // console.log(tableSelectVal)
+            if (tableSelectVal == "all") {
+                console.log("all users option is chosen")
+                showTheTable(database)
+            }
+            else if (tableSelectVal == "users") {
+                // table.innerHTML = ""
+                function showUsersOnly(type) {
+                    console.log(type)
+                    return type.Type == "user"
+                }
+                var usersArr = database.filter(showUsersOnly)
+                // console.log(usersArr,tableSelectVal)
+                showTheTable(usersArr)
+            }
+            else {
+                // table.innerHTML = ""
+                function showAdminsOnly(type) {
+                    console.log(type)
+                    return type.Type == "admin"
+                }
+                var adminsArr = database.filter(showAdminsOnly)
+                // console.log(adminsArr,tableSelectVal)
+                showTheTable(adminsArr)
+            }
+        }
+
+        // var database2 = database
+        function showSortedtable() {
+            var sortType = document.getElementById("tableSort").value
+
+            // if (sortType == "time") {
+            //     console.log("Acc to time sorting is done.!")
+            // table.innerHTML = ""
+            //     showTheTable(database)
+            // }
+            if (sortType == "increasing") {
+                // table.innerHTML = ""
+                var ascendingArr = database.sort((a, b) => {
+                    if (a.UserName < b.UserName)
+                        return -1;
+                    if (a.UserName > b.UserName)
+                        return 1;
+                    // return 0;
+                })
+                console.log(ascendingArr, sortType)
+                showTheTable(ascendingArr)
+            }
+            else {
+                // table.innerHTML = ""
+                var descendingArr = database.sort((a, b) => {
+                    if (a.UserName < b.UserName)
+                        return 1;
+                    if (a.UserName > b.UserName)
+                        return -1;
+                    // return 0;
+                })
+                console.log(descendingArr, sortType)
+                showTheTable(descendingArr)
+            }
+        }
+        // var dupData= database
+        function deleteUser(uname) {
+            console.log(uname)
+            // var balDatabase = database.filter(a =>  {
+            //     if(a.UserName== uname) {
+            //         database.splice(a,1)
+            //     }
+            //     return a.UserName != uname
+            // })
+            var balDatabase= []
+            for(s= 0; s< database.length; s++) {
+                if(database[s].UserName== uname) {
+                    database.splice(s,1)
+                }
+                else {
+                    balDatabase.push(database[s])
+                }
+            }
+            showTheTable(balDatabase)
+        }
+    </script>
+</body>
+
+</html>
