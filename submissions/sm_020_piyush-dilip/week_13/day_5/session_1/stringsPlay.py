@@ -2,87 +2,66 @@
 ip = "LEARNING python for THE first TIME           "
 
 #  function to convert string in lowercase
-def lowerCase(string):
-    uppercaseAlphabets = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    lowercaseAlphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+def toLowercase(string):
+    uppercaseAlphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lowercaseAlphabets = "abcdefghijklmnopqrstuvwxyz"
     converted = ""
-    for i in string:
-        for j in range(len(lowercaseAlphabets)):
-            if i == uppercaseAlphabets[j]:
+    for char in string:
+        for j in range(26):
+            if char == uppercaseAlphabets[j]:
                 converted += lowercaseAlphabets[j]
-            elif i == lowercaseAlphabets[j]:
+            elif char == lowercaseAlphabets[j]:
                 converted += lowercaseAlphabets[j]
+
     return converted
+
 
 # function to capitalize first letter of string
 def capitalizeFirstLetter(string):
-    uppercaseAlphabets = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    lowercaseAlphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    uppercaseAlphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lowercaseAlphabets = "abcdefghijklmnopqrstuvwxyz"
     converted = ""
 
-    for j in range(len(lowercaseAlphabets)):
+    for j in range(26):
         if string[0] == lowercaseAlphabets[j]:
             converted += uppercaseAlphabets[j]
 
     converted += string[1:]
     return converted
-
-# function to convert string in snake-case
-def snakeCase(string):
-
-    li = string.split()
-
-    snakeCaseString = ""
-
-    for i in range(len(li)):
-        if i == len(li)-1:
-            snakeCaseString += lowerCase(li[i])
-        else:
-            snakeCaseString +=  lowerCase(li[i]) + "_"
     
-    return snakeCaseString
+# function to convert string in hyphencase or snakecase
+def hypencaseOrSnakecase(string, delimiter):
 
-op = snakeCase(ip)
-print("Snake case : " + op)
+    strings = string.split()
 
+    outputString = ""
+    size = len(strings)
 
-# function to convert string in hyphen-case
-def hypenCase(string):
-
-    li = string.split()
-
-    hypenCaseString = ""
-
-    for i in range(len(li)):
-        if i == len(li)-1:
-            hypenCaseString += lowerCase(li[i])
+    for i in range(size):
+        if i == size - 1 :
+            outputString += toLowercase(strings[i])
         else:
-            hypenCaseString += lowerCase(li[i]) + "-"
+            outputString += toLowercase(strings[i]) + delimiter
     
-    return hypenCaseString
+    return outputString
 
-op1 = hypenCase(ip)
-print("Hyphen case : " +  op1)
+output = hypencaseOrSnakecase(ip, "_")
+print( "converted string : " +  output)
 
-# function to convert string in camel-case
-def camelCase(string):
+# function to convert string in camelcase
+def camelcase(string):
 
-    li = string.split()
+    strings = string.split()
 
-    camelCaseString = ""
+    camelcaseString = ""
 
-    for i in range(len(li)):
+    for i in range(len(strings)):
         if i == 0:
-            camelCaseString += lowerCase(li[i])
+            camelcaseString += toLowercase(strings[i])
         else:
-            camelCaseString += capitalizeFirstLetter(lowerCase(li[i]))
+            camelcaseString += capitalizeFirstLetter(toLowercase(strings[i]))
     
-    return camelCaseString
+    return camelcaseString
 
-op2 = camelCase(ip)
-print("Camel case : " + op2)
-
-
-
-
-        
+outputOfCamelcase = camelcase(ip)
+print("camelcase : " + outputOfCamelcase)
