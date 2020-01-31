@@ -13,7 +13,7 @@ app = Flask(__name__)
 def read_csv():
     try:
         items = list()
-        with open("/home/akamit21/coding/week_15/day_2/session_1/data/groceries.csv", "r") as csvfile:
+        with open("/home/akamit21/coding/week_15/day_2/session_1/server/data/groceries.csv", "r") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 items.append(dict(row))
@@ -27,7 +27,7 @@ def read_csv():
 
 def append_csv(item, quantity, purchased):
     try:
-        with open("/home/akamit21/coding/week_15/day_2/session_1/data/groceries.csv", "a") as csvfile:
+        with open("/home/akamit21/coding/week_15/day_2/session_1/server/data/groceries.csv", "a") as csvfile:
             fieldnames = ["item", "quantity", "purchased"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writerow(
@@ -42,7 +42,7 @@ def append_csv(item, quantity, purchased):
 
 def write_csv(items=None):
     try:
-        with open("/home/akamit21/coding/week_15/day_2/session_1/data/groceries.csv", "w") as csvfile:
+        with open("/home/akamit21/coding/week_15/day_2/session_1/server/data/groceries.csv", "w") as csvfile:
             fieldnames = ["item", "quantity", "purchased"]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             writer.writeheader()
