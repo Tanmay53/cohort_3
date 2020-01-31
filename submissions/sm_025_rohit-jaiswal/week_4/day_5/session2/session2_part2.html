@@ -1,0 +1,23 @@
+    <html>
+        <style>
+        body{
+            background-color:coral;  
+        }
+        </style>
+        <body>
+            <div id="rohit">
+                <button style="background-color:orange;">Horver over me I will change</button>
+            </div>
+        <script>
+                var mouse = document.getElementById("rohit")
+                mouse.addEventListener("mouseover", function() {
+                document.querySelector('button').style.background = "red";
+            });
+
+            var nomouse = document.getElementById("rohit")
+                mouse.addEventListener("mouseleave", function() {
+                document.querySelector('button').style.background = "orange";
+            });
+        </script>
+        </body>
+    </html>
