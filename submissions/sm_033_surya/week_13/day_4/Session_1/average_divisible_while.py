@@ -1,8 +1,10 @@
-a = int(input())
-x = 0
+input_value = int(input())
+sum = 0
 i = 0
-while i <= a:
-    x = x + i
+
+while i <= input_value:
+    sum = sum + i
     i += 1
-x = x / a
-print(x)
+    
+sum = sum / input_value
+print(sum)
