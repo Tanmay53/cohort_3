@@ -13,13 +13,13 @@ export default class Forms extends React.Component {
             salary: '',
             emplyData: []
         }
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
+      
     }
 
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
+
         })
     }
     handleSubmit = (e) => {
@@ -38,7 +38,7 @@ export default class Forms extends React.Component {
  
         
 
-        // this.reset()
+       
 
     }
 
@@ -57,41 +57,7 @@ export default class Forms extends React.Component {
 
    
 
-    // render(){
-
-    // }
-    // table = (e) => {
-        
-
-        
-    //     return(
-    //         <div>
-    //             <div>
-    //                 <table className="table table-hover shadow">
-    //                     <thead className="bg-dark text-white">
-    //                         <tr>
-    //                             <th scope="col">Name</th>
-    //                             <th scope="col">Age</th>
-    //                             <th scope="col">Address</th>
-    //                             <th scope="col">Department</th>
-    //                             <th scope="col">Salary</th>
-    //                         </tr>
-    //                     </thead>
-    //                     <tbody>
-    //                         <tr>
-    //                             <td>{e.name} </td>
-    //                             <td>{e.age} </td>
-    //                             <td>{e.address} </td>
-    //                             <td>{e.department} </td>
-    //                             <td>{e.salary} </td>
-    //                         </tr>
-    
-    //                     </tbody>
-    //                 </table>
-    //             </div>
-    //         </div>
-    //     )
-    // }
+   
 
 
     render() {
@@ -132,33 +98,10 @@ export default class Forms extends React.Component {
                 </div>
 
 
-{}
 
 
-                {/* <div>
-                    <table className="table table-hover shadow">
-                        <thead className="bg-dark text-white">
-                            <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Age</th>
-                                <th scope="col">Address</th>
-                                <th scope="col">Department</th>
-                                <th scope="col">Salary</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{this.state.name} </td>
-                                <td>{this.state.age} </td>
-                                <td>{this.state.address} </td>
-                                <td>{this.state.department} </td>
-                                <td>{this.state.salary} </td>
-                            </tr>
 
-                        </tbody>
-                    </table>
-                </div> */}
-
+              
             </div>
         )
     }
