@@ -1,47 +1,43 @@
 import React from 'react';
-import User from "./component/User";
-import Table from "./component/Table";
-import axios from 'axios';
+import { Switch, Route } from "react-router-dom";
+
+import Navbar from './component/Navbar';
+import About from './component/About/About';
+import Footer from './component/Footer/Footer';
+import Pricing from './component/Pricing';
+import Product from './component/Product';
+import SignUp from './component/SignUp';
+import Support from './component/Support';
+import Zerodha from './component/Zerodha';
+
 import './App.css';
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      data: []
-    }
   }
 
-
-
-
-  //handleUsername function
-  handleUsername = (name) => {
-
-    console.log(this.state.username)
-    //requesting the api call  to  fing the github user
-    axios.get(`https://api.github.com/search/users?q=${name}`)
-      .then((res) => {
-        console.log(res)
-        this.setState({
-          data: res.data.items
-        })
-      })
-      .catch(error => console.log(error))
-
-
-  }
   render() {
-    console.log(this.state.data);
     return (
       <div>
-        <User add={this.handleUsername} />
-        {this.state.data.length !== 0 && <Table data={this.state.data} />}
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Zerodha} />
+          <Route path="/component/About/About" exact component={About} />
+          <Route path="/component/Product" exact component={Product} />
+          <Route path="/component/Pricing" exact component={Pricing} />
+          <Route path="/component/Support" exact component={Support} />
+          <Route path="/component/SignUp" exact component={SignUp} />
+
+
+        </Switch>
+
+        <Footer />
       </div>
-    );
+    )
   }
+
 }
 
 export default App;
