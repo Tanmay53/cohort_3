@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FSD.JS.12.2</title>
+</head>
+
+<body>
+
+    <div id="user">
+        <p></p>
+    </div>
+    <p id="login_time">Login time:</p>
+    <p id="para1">end time for session:</p>
+
+    
+
+    <!-- <button type="submit" id="logout">Logout</button> -->
+
+
+
+    <script>
+        var d = new Date();
+        document.getElementById("login_time").innerHTML = d;
+
+        // var userName = document.getElementById('login_time').value
+        // console.log(userName)
+
+        var storedUser = localStorage.getItem('username')
+        console.log(storedUser)
+
+        // var head1  = document.getElementsByTagName('h1')
+        // console.log(head1)
+        // head1.
+
+        var node = document.createElement('h1')
+        var textnode = document.createTextNode(storedUser)
+        console.log(storedUser)
+        node.appendChild(textnode)
+        document.getElementById('user').appendChild(node)
+
+
+
+        // function myFunction() {
+            // setTimeout(function () { alert("Hello"); }, 300000);
+        // }
+
+        setTimeout(myFunction, 300000)
+
+    </script>
+</body>
+</html>
