@@ -23,8 +23,9 @@
             transform: translate(-50%, -50%);
         }
 
-        #id {
-            background-image: url("https://www.masaischool.com/static/posters/banner_1.jpg")
+        .id {
+            background-image: url("https://www.masaischool.com/static/posters/banner_1.jpg");
+            background: cover;
         }
 
         #text {
@@ -34,90 +35,86 @@
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav class="fixed-top bg-white">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#"><img
-                                src="https://www.masaischool.com/static/img/logo.svg" /></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-10">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><button class="btn ">Courses</button></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><img
+                                    src="https://www.masaischool.com/static/img/logo.svg" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-10">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button class="btn ">Courses</button></a>
 
-                        <!-- <a class="nav-link font-weight-bold px-4 text-dark" href="#">Courses</a> -->
-                    </li>
+                            <!-- <a class="nav-link font-weight-bold px-4 text-dark" href="#">Courses</a> -->
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><button class="btn btn-danger">Apply Now</button></a>
-                        <!-- <a class="nav-link font-weight-bold px-4 text-dark" l href="#">Apply Now</a> -->
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button class="btn btn-danger">Apply Now</button></a>
+                            <!-- <a class="nav-link font-weight-bold px-4 text-dark" l href="#">Apply Now</a> -->
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><button class="btn ">Fees&ISA</button></a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button class="btn ">Fees&ISA</button></a>
 
-                        <!-- <a class="nav-link font-weight-bold px-4 text-dark" class="text-dark" class="nav-link"
+                            <!-- <a class="nav-link font-weight-bold px-4 text-dark" class="text-dark" class="nav-link"
                            href="#">Fees&ISA</a> -->
-                    </li>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><button class="btn ">FAQ</button></a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button class="btn ">FAQ</button></a>
 
-                        <!-- <a class="nav-link font-weight-bold px-4 text-dark" href="#">FAQ</a> -->
-                    </li>
+                            <!-- <a class="nav-link font-weight-bold px-4 text-dark" href="#">FAQ</a> -->
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><button class="btn ">Hire Masai Students</button></a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><button class="btn ">Hire Masai Students</button></a>
 
-                        <!-- <a class="nav-link font-weight-bold px-4 text-dark" href="#">Hire Masai Students</a> -->
-                    </li>
-                </ul>
+                            <!-- <a class="nav-link font-weight-bold px-4 text-dark" href="#">Hire Masai Students</a> -->
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- <img src="https://www.masaischool.com/static/posters/banner_1.jpg" alt="Snow" style="width:100%;"> -->
-    <!-- <div class="col-14">
-        <div class="centered">
-             <h1 class=" m-3">Slack replaces email inside your company</h1> 
-            <h1 class="  text-white font-weight-bolder">A Transformation<br>in Education!</h1>
+    </nav>
 
-            <h1 class="text-white ">learn to earn, pay when you get.</h1>
+        <!-- first block -->
+    <div class="jumbotron jumbotron-fluid id">
+        <div class="py-5">
+
+            <h1 class="display-3 my-5 text-right font-weight-bold" id="text">A Transformation<br>in Education!</h1>
+            <h2 class="display-4 my-5 text-right " id="text">learn to earn, pay when you get.</h2>
         </div>
-    </div>  -->
-    <!-- <div id="id"> -->
-    <!-- <div class="jumbotron jumbotron-fluid  m-5" > -->
-    <div id="id" class="py-5">
-
-        <h1 class="display-3 my-5 text-right font-weight-bold" id="text">A Transformation<br>in Education!</h1>
-        <h2 class="display-4 my-5 text-right " id="text">learn to earn, pay when you get.</h2>
     </div>
-    <!-- </div> -->
-    <!-- </div> -->
+    <!-- second block -->
     <div class="container">
 
         <div class="row my-5 w-auto p-3">
             <div class="col-12 col-lg-4 col-md-12 col-sm-12 ">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://www.masaischool.com/static/topics/skills.svg" class="card-img-top" alt="...">
+                <div style="width: 18rem;">
+                    <img src="https://www.masaischool.com/static/topics/skills.svg" class="card-img-top" height="200px">
                     <div class="card-body">
-                        <h4 class="card-text">Build Industry Relevant Skill</h4>
-                        <p class="card-text">Get industry ready with our courses co-created with industry leaders. Build
+                        <h4 class="text-center">Build Industry Relevant Skill</h4>
+                        <p class="text-center">Get industry ready with our courses co-created with industry leaders.
+                            Build
                             practical skills by working on projects based on challenges faced by industry leaders.</p>
                     </div>
                 </div>
                 <!-- <img src ="https://www.masaischool.com/static/topics/skills.svg" > -->
             </div>
             <div class=" col-12 col-lg-4 col-md-12 col-sm-12 ">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://www.masaischool.com/static/topics/invest.svg" class="card-img-top" alt="...">
+                <div style="width: 18rem;">
+                    <img src="https://www.masaischool.com/static/topics/invest.svg" class="card-img-top" height="200px">
                     <div class="card-body">
-                        <h4>Pay Nothing Until You Are<br> Hired</h4>
-                        <p class="card-text p-2">No Upfront tuition fees. Masai School invests in its students that’s
+                        <h4 class="text-center">Pay Nothing Until You Are<br> Hired</h4>
+                        <p class="text-center p-2">No Upfront tuition fees. Masai School invests in its students that’s
                             why
                             you don’t pay until you land a high paying job. You’ll pay a percentage of income after
                             you’re hired.</p>
@@ -126,11 +123,13 @@
                 <!-- <img src ="https://www.masaischool.com/static/topics/invest.svg" > -->
             </div>
             <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://www.masaischool.com/static/topics/holistic.svg" class="card-img-top" alt="...">
+                <div style="width: 18rem;">
+                    <img src="https://www.masaischool.com/static/topics/holistic.svg" class="card-img-top"
+                        height="200px">
                     <div class="card-body">
-                        <h4>Holistic Development</h4>
-                        <p class="card-text p-3">Masai School is not an ordinary coding bootcamp, but its core focus is
+                        <h4 class=" text-center">Holistic Development</h4>
+                        <p class="text-center p-3">Masai School is not an ordinary coding bootcamp, but its core focus
+                            is
                             to
                             make students disciplined, hard working and better programmers, desirable for all tech
                             companies.</p>
@@ -140,7 +139,7 @@
             </div>
         </div>
     </div>
-
+ <!-- third block -->
     <div class="row ">
         <div class="col-12 col-lg-12 col-md-12 col-sm-12">
             <div class="card text-center">
@@ -151,57 +150,60 @@
                         <p class="h1  font-weight-lighter py-4 text-white">What makes Masai School unique?</p>
 
                     </div>
-                    <!-- <div  class="container" > -->
-                    <div class="card-body m-5">
-                        <div class="row m-5">
-                            <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
-                                <div class="card" style="width:500px; height:200px">
-                                    <div class="card-body">
-                                        <h1 class="card-title text-info">9am-9pm-6days*</h1>
-                                        <p class="card-text text-info">intensive training</p>
+                    <div class="container">
+                        <div class="card-body ">
+                            <div class="row ">
+                                <!-- first card -->
+                                <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
+                                    <div class="card p-5 " style="width:500px; height:200px">
+                                        <div class="card-body ">
+                                            <h1 class="card-title text-info">9am-9pm-6days*</h1>
+                                            <p class="card-text text-info">intensive training</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
-                                <div class="card" style="width:500px;height:200px">
-                                    <div class="card-body">
-                                        <h1 class="card-title text-info">1200hrs</h1>
-                                        <p class="card-text text-info">hands on coding </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body m-5">
-                        <div class="row  m-5">
-                            <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
-                                <div class="card" style="width:500px;height:200px">
-                                    <div class="card-body">
-                                        <h1 class="card-title text-info">100hrs
-                                        </h1>
-                                        <p class="card-text text-info">soft skill training</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
-                                <div class="card" style="width:500px;height:200px">
-                                    <div class="card-body">
-                                        <h1 class="card-title text-info">100hrs</h1>
-                                        <p class="card-text text-info">building logical reasoning</p>
+                               <!-- second card -->
+                                <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
+                                    <div class="card p-5 " style="width:500px;height:200px">
+                                        <div class="card-body">
+                                            <h1 class="card-title text-info">1200hrs</h1>
+                                            <p class="card-text text-info">hands on coding </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="card-body ">
+                            <div class="row  ">
+                                <!-- third card -->
+                                <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
+                                    <div class="card p-5 " style="width:500px;height:200px">
+                                        <div class="card-body">
+                                            <h1 class="card-title text-info">100hrs
+                                            </h1>
+                                            <p class="card-text text-info">soft skill training</p>
+                                        </div>
+                                    </div>
+                                </div>
+                           <!-- fourth card -->
+                                <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
+                                    <div class="card p-5 " style="width:500px;height:200px">
+                                        <div class="card-body">
+                                            <h1 class="card-title text-info">100hrs</h1>
+                                            <p class="card-text text-info">building logical reasoning</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-white"><small>* for women students there is a special privilege to study from
+                                9am-6pm-6days and complete the assignment from home after 6 pm </small></p>
                     </div>
-                    <p class="text-white"><small>* for women students there is a special privilege to study from
-                            9am-6pm-6days and complete the assignment from home after 6 pm </small></p>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+    <!-- masai school campus block -->
     <div class="card text-center">
         <div class="card-header">
             <p class="h1  font-weight-lighter py-4 ">Masai School Campus</p>
@@ -247,21 +249,23 @@
                     </div>
                 </div>
             </div>
-            <div class="card text-center">
+            <!-- course block -->
+            <div class=" text-center">
                 <div class="card-header">
                     <p class="h1 p-3">Courses</p>
                 </div>
                 <div class="card-body py-5">
                     <div class="row m-5">
                         <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
+                         <!-- card 1 -->
 
-                            <div class="card" style="width:500px; height:250px">
-                                <div class="card-header bg-info">
+                            <div style="width:500px; height:250px">
+                                <div class="card-header bg-info ">
                                     <p class=" text-white  h3 ">Backend Developer (Online)</p>
                                 </div>
                                 <!-- <div class="container"> -->
                                 <div class="p3">
-                                    <div class="card-body px-5">
+                                    <div class="shadow px-5">
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="header">LOCATION</div>
@@ -288,17 +292,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-footer text-muted">
+                                <div class="card-footer text-muted    shadow   bg-white rounded p-5">
                                     <button class="btn btn-primary rounded-pill float-right">Details</button>
                                 </div>
                             </div>
                         </div>
+                        <!-- second card -->
 
-                        <div class="card" style="width:500px; height:250px">
+                        <div style="width:500px; height:250px">
                             <div class="card-header bg-info">
                                 <p class=" text-white  h3 ">Full Stack Developer (Campus)</p>
                             </div>
-                            <div class="card-body">
+                            <div class=" shadow">
                                 <div class="row">
                                     <div class="col-6 col-12 col-lg-6 col-md-12 col-sm-12">
                                         <div class="header">LOCATION</div>
@@ -322,7 +327,8 @@
                                 </div>
                                 <!-- </div> -->
                             </div>
-                            <div class="card-footer text-muted">
+                            <div class="card-footer text-muted    shadow  bg-white rounded p-5">
+
                                 <button class="btn btn-primary rounded-pill float-right">Details</button>
                             </div>
                         </div>
@@ -330,16 +336,16 @@
                 </div>
             </div>
 
-
             <div class="card-body">
                 <div class="row m-5">
                     <div class=" col-12 col-lg-6 col-md-12 col-sm-12 ">
+          <!-- third card -->
 
-                        <div class="card" style="width:500px; height:250px">
+                        <div style="width:500px; height:250px">
                             <div class="card-header bg-info">
                                 <p class=" text-white  h3 ">Full Stack Developer (Online)</p>
                             </div>
-                            <div class="card-body">
+                            <div class="shadow">
                                 <div class="row">
                                     <div class="col-6 col-12 col-lg-6 col-md-12 col-sm-12">
                                         <div class="header">LOCATION</div>
@@ -362,17 +368,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer text-muted">
+                            <div class="card-footer text-muted    shadow   bg-white rounded p-5">
+
                                 <button class="btn btn-primary rounded-pill float-right">Details</button>
                             </div>
                         </div>
                     </div>
-
-                    <div class="card" style="width:500px; height:250px">
+           <!-- fourth card -->
+                    <div style="width:500px; height:250px">
                         <div class="card-header bg-info">
                             <p class=" text-white  h3 ">Android Developer</p>
                         </div>
-                        <div class="card-body">
+                        <div class=" shadow ">
                             <div class="row">
                                 <div class="col-6 ">
                                     <div class="header">LOCATION</div>
@@ -395,7 +402,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer text-muted">
+                        <div class="card-footer text-muted    shadow  mb-5 bg-white rounded p-5">
+
                             <button class="btn btn-white rounded-pill float-right">Details coming soon</button>
                         </div>
                     </div>
