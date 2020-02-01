@@ -24,9 +24,10 @@ def write_item_file(item, quantity, purchased):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writerow({"item_name": item, "quantity": quantity ,"purchased" : purchased})
 
-def edit_item_file(new_quantity ,item_no):
+def edit_item_file(edited_name ,new_quantity ,item_no):
     arr = read_item_file()
     arr[item_no-1]["quantity"] = new_quantity
+    arr[item_no-1]["item_name"] = edited_name
     with open("data/groceries.csv", "w") as csvfile:
         fieldnames = ["item_name", "quantity",'purchased']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -57,7 +58,6 @@ def set_purchased(item_no,isPost = True):
     else:
         sold_list = list()
         for data in arr:
-            print(data['purchased'])
             if data['purchased'] == "True":
                 sold_list.append(data)
         return sold_list
@@ -78,23 +78,22 @@ def adding_items():
 
 @app.route('/edit/<int:item_no>' , methods = ['POST'])
 def editing_item(item_no):
-    new_quantity = request.json['new_quantity']
-    edit_item_file(new_quantity, item_no)
-    return json.dumps({'item_no': "quantity updated successfully"})
+    item_name = request.json["item_name"]
+    quantity = request.json["quantity"]
+    edit_item_file(item_name,quantity,item_no)
+    return json.dumps({"msg":"item updated successfully"})
 
 @app.route('/delete/<int:item_no>', methods = ["POST"])
 def deleting(item_no):
-    # item_no = request.json["item_no"]
     deleting_item(item_no)
-    return json.dumps({'item_no': "item deleting successfully"})
+    return json.dumps({'item_no': "item deleted successfully"})
 
 
-@app.route("/purcahsed", methods =['POST','GET'])
-def marking_purchased():
-    if request.method == "POST":
-        item_no = request.json["item_no"]
+@app.route("/purchased/<int:item_no>", methods =['POST','GET'])
+def marking_purchased(item_no):
+    if request.method == 'POST':
         set_purchased(item_no,True)
-        return json.dumps({"purchased_items":"sold"})
+        return json.dumps({"purchased_items":"Item sold"})
     elif request.method == 'GET':
         arr = set_purchased(-1,False)
         return json.dumps({"purchased_items":arr})
