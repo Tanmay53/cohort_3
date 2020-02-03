@@ -1,55 +1,66 @@
-input_string = "Masai school-surya"
-Capitsl_alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-Small_alphabets = "abcdefghijklmnopqrstuvwxyz"
+input_string = "        Mai   S a    --       i"
+capitsl_alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+small_alphabets = "abcdefghijklmnopqrstuvwxyz"
 
 
 def camelcase(input_string):
     i = 0
-    output_string = ""
-
-    while i < len(input_string):
-
-        if input_string[i] in Capitsl_alphabets:
-
-            temp = Capitsl_alphabets.index(input_string[i])
-            output_string = output_string+Small_alphabets[temp]
-
-        elif input_string[i] in [" ", "_", "-"]:
-
-            temp2 = Small_alphabets.index(input_string[i+1])
-            output_string = output_string + Capitsl_alphabets[temp2]
-            i += 1
-
+    out_str = ""
+    while input_string[i] in [" ", "-", "_"]:
+        i += 1
+    j = i
+    while j < len(input_string):
+        if input_string[j] in [" ", "-", "_"]:
+            k = j
+            while input_string[k] in [" ", "-", "_"]:
+                k += 1
+            j = k
+            k = 0
+            if input_string[j] in capitsl_alphabets:
+                out_str = out_str + input_string[j]
+            else:
+                temp = small_alphabets.index(input_string[j])
+                out_str = out_str + capitsl_alphabets[temp]
         else:
-            output_string = output_string + input_string[i]
-        i = i + 1
-    print(output_string)
+            if input_string[j] in capitsl_alphabets:
+                temp2 = capitsl_alphabets.index(input_string[j])
+                out_str = out_str+small_alphabets[temp2]
+            else:
+                out_str = out_str+input_string[j]
+        j += 1
+    print(out_str)
 
 
-def stringplay(input_string, symbol):
+def string_play(input_string, symbol):
     i = 0
-    output_string = ""
-    while i < len(input_string):
-
-        if input_string[i] in Capitsl_alphabets:
-            temp = Capitsl_alphabets.index(input_string[i])
-            output_string = output_string+Small_alphabets[temp]
-
-        elif input_string[i] in [" ", "_", "-"]:
-            output_string = output_string + symbol
-            
+    out_str = ""
+    while input_string[i] in [" ", "-", "_"]:
+        i += 1
+    j = i
+    while j < len(input_string):
+        if input_string[j] in [" ", "-", "_"]:
+            k = j
+            while input_string[k] in [" ", "-", "_"]:
+                k += 1
+            j = k-1
+            k = 0
+            out_str = out_str + symbol
         else:
-            output_string = output_string + input_string[i]
-        i = i + 1
-    print(output_string)
+            if input_string[j] in capitsl_alphabets:
+                temp2 = capitsl_alphabets.index(input_string[j])
+                out_str = out_str+small_alphabets[temp2]
+            else:
+                out_str = out_str+input_string[j]
+        j += 1
+    print(out_str)
 
 
 def snake_case(input_string):
-    stringplay(input_string, "_")
+    string_play(input_string, "_")
 
 
 def hypen_case(input_string):
-    stringplay(input_string, "-")
+    string_play(input_string, "-")
 
 
 camelcase(input_string)
