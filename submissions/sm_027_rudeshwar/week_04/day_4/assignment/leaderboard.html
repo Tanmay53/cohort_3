@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<td lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body>
+
+    <div class="flex">
+        <div id="left" class="box">
+            <div id="top-bar">
+                <div id="max-cont">
+                    <div id="max-score">100</div>
+                    <p id="max-name">Masai</p>
+                    <p>max-score</p>
+                </div>
+                <div id="min-cont">
+                    <div id="min-score">10</div>
+                    <p id="min-name">School</p>
+                    <p>min-score</p>
+                </div>
+            </div>
+            <div id="mid-bar">
+                <p>Score</p>
+                <div id="score1">
+                    <h1 id="curr_score">#</h1>
+                </div>
+                <div id="line-1">
+                    <button id="one" onclick="key_press(1)">1</button>
+                    <button id="two" onclick="key_press(2)">2</button>
+                    <button id="three" onclick="key_press(3)">3</button>
+                </div>
+                <div id="line-2">
+                    <button id="four" onclick="key_press(4)">4</button>
+                    <button id="five" onclick="key_press(5)">5</button>
+                    <button id="six" onclick="key_press(6)">6</button>
+                </div>
+                <div id="line-3">
+                    <button id="seven" onclick="key_press(7)">7</button>
+                    <button id="eight" onclick="key_press(8)">8</button>
+                    <button id="nine" onclick="key_press(9)">9</button>
+                </div>
+                <div id="line-4">
+                    <button id="zero" onclick="key_press(0)">0</button>
+                </div>
+            </div>
+            <div id="bottom-bar">
+                <input type="text" name="name" id="name" />
+                <p>Player Name</p>
+                <button id="enter" onclick="enter_press()">Enter</button>
+            </div>
+        </div>
+        <div id="right" class="box">
+            <h1>Scores</h1>
+            <table id="scores" bord er="1">
+                <tr>
+                    <td>Player name</td>
+                    <td>Score</td>
+                </tr>
+                <tr>
+                    <td>Masai</td>                                                                                                                                                                                                                                                                              
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>School</td>
+                    <td>10</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="leaderboard.js"></script>
+
+</body>
+
+</td>
