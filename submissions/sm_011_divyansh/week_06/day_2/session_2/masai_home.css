@@ -1,0 +1,44 @@
+.jumbotron1 {
+    background-image: url(https://www.masaischool.com/static/posters/banner_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+.jumbotron2 {
+    background-color: blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 900px;
+}
+
+.jumbotext{
+    margin-left: 800px;
+    margin-top: 200px;
+    color:white;
+    font-size: 320%;
+
+}
+
+
+
+#head1{
+font-weight: bold;
+font-family: sans-serif;
+font-size: 110%;
+
+}
+.cardimg{
+    height: 180px;
+    width: 250px;
+}
+.card{
+    border: none;
+}
+.box{
+    height: 260px;
+    width:250px;
+    border-radius: 10px;
+}
+.number{
+     font-size: 220%;
+}

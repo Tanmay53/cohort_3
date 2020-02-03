@@ -1,14 +1,15 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Coding Session 1!</title>
 </head>
+
 <body>
 	<!-- These elements below are for FSD.JS.9.1-->
 	<h1> Create your own exponentiation function! </h1>
-	<input type="number" name = "num1" id="num1">
-	<input type="number" name = "num2" id="num2">
+	<input type="number" name="num1" id="num1">
+	<input type="number" name="num2" id="num2">
 	<p id="exponent"> </p>
 	<hr>
 
@@ -21,47 +22,111 @@
 	<!-- <label for="two">enter limit</label> -->
 	<input type="text" id="two">
 	<button onclick="check_multiple()" id="three">Click here for the output!</button>
-	
+
 
 	<!-- These elements below are for FSD.JS.9.3-->
 	<h1>Check if the users email is valid!</h1>
-	<label for="Email">Email</label>
-	<input type="text" />
-	<button onclick="validateEmail()">Check Email!</button>
-
+	<label for="userEmail">Email</label>
+	<input type="text" id="userEmail" />
+	<button onclick="validateEmail()" id="btn1">Check Email!</button>
+	<!-- ------------------------------------------------------------------------------------------------- -->
 	<script type="text/javascript">
 		//Write javascript for FSD.JS.9.1 here
-		function exponent(){
+		function exponent() {
 			var val1 = document.getElementById("num1").value;
 			var val2 = document.getElementById("num2").value;
-			var val3=val1**val2
+			var val3 = val1 ** val2
 			document.getElementById("exponent").innerHTML = val3;
 		}
 		//Write javascript for FSD.JS.9.2 here
 
-		
+
 		// console.log(input_value)
-		var sum=0
-		function check_multiple(input_value)
-		{
-		var input_value=document.getElementById("two").value;
-			
-			for(var i=1;i<=input_value;i++)
-			{
-				if(i%3==0 && i%5==0)
-				{
-					sum=sum+i
+		var sum = 0
+		function check_multiple(input_value) {
+			var input_value = document.getElementById("two").value;
+
+			for (var i = 1; i <= input_value; i++) {
+				if (i % 3 == 0 && i % 5 == 0) {
+					sum = sum + i
 				}
 			}
 			// console.log(sum)
-			document.getElementById("one").innerHTML=sum;
+			document.getElementById("one").innerHTML = sum;
 		}
-		
-		// console.log(ans)
 
+		// console.log(ans)
+		// -----------------------------------------------------------------------------------------
 		//Write javascript for FSD.JS.9.3 here
-		function validateEmail(){
+
+		// sid@gmail.com
+		function validateEmail() {
+			var email_string = document.getElementById("userEmail").value
+
+			var flag = true//
+			// console.log("value of email_string is",email_string)//
+			var input1 = email_string.split("@")//
+			// console.log(input1)
+			// console.log("value of input1 is", input1)//["sid", "gmail.com"]
+
+
+			// console.log(typeof(input1[0]),input1[0].length)//string,3
+			// console.log(typeof(input1[1]),input1[1].length)//string,9
+			// console.log("value of input[0][0] is",typeof(input1[0][0]),input1[0][0])//string s
+
+			function checkSize(input1) {
+				// console.log(input1.length)
+
+				if (input1.length > 2) {
+					return false
+				}
+				else {
+					return true
+				}
+			}
+			ans = checkSize(input1)
+			alert(ans)
+
+			// console.log(input1[0].length)
+			function checkAlias(input1)//"sid"
+			{
+
+				if (input1[0].length === 0) {
+					// console.log(input1[0].length)
+					return false
+				}
+
+				else if (input1[0][0] === '.') {
+					return false
+				}
+				// for(i=0;i<=input1[0].length-1;i++)
+				// {
+				// 	if()
+				// }
+				else {
+					return true
+				}
+			}
+			ans = checkAlias(input1)//"@gmail.com"
+			alert(ans)
+
+			function checkDomain(input1) {
+				if (input1[0].length === null) {
+					return false
+				}
+
+				else if (input1[1][0] === '.') {
+					return false
+				}
+				else
+				{
+					return true
+				}
+			}
+			ans=checkDomain(input1)
+			alert(ans)
 		}
 	</script>
 </body>
+
 </html>

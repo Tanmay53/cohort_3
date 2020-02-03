@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>user repo</title>
+</head>
+<body>
+  <div id="userRepoData"></div>
+
+  <script>
+    var repos=localStorage.getItem('reposUrl');
+
+    fetch(repos)
+    .then((resp)=>resp.json())
+    .then(res=>{
+      //console.log(res);
+      displayData(res);
+    })
+
+    function displayData(input){
+      var body=document.querySelector('body');
+      var table=document.createElement('table');
+      $(table).html('')
+      $(table).addClass('table-dark text-center')
+      var headingRow=document.createElement('tr');
+
+      var idHeading=document.createElement('th');
+      var nameHeading=document.createElement('th');
+      var descriptionHeading=document.createElement('th');
+      var htmlUrlheading=document.createElement('th');
+      var createdAtHeading=document.createElement('th');
+
+      $(idHeading).text('Id');
+      $(nameHeading).text('Name');
+      $(descriptionHeading).text('Description');
+      $(htmlUrlheading).text('URL');
+      $(createdAtHeading).text('Created At');
+
+      $(headingRow).append(idHeading);
+      $(headingRow).append(nameHeading);
+      $(headingRow).append(descriptionHeading);
+      $(headingRow).append(htmlUrlheading);
+      $(headingRow).append(createdAtHeading);
+
+      $(table).append(headingRow);
+
+      for(var i=0;i<input.length;i++){
+        var row=document.createElement('tr');
+
+        var id=document.createElement('td');
+        var name=document.createElement('td');
+        var description=document.createElement('td');
+        var htmlUrl=document.createElement('td');
+        var creationTime=document.createElement('td');
+
+        $(id).text(`${input[i].id}`);
+        $(name).text(`${input[i].name}`);
+        $(description).text(`${input[i].description}`);
+
+
+        //$(htmlUrl).html(`<a href=${input[i].html_url}></a>`);
+        var newLink=document.createElement('a');
+
+        newLink.setAttribute('target','blank');
+
+        $(newLink).html(`<a href=${input[i].html_url}>${input[i].html_url}</a>`);
+
+        $(htmlUrl).append(newLink);
+
+        $(creationTime).text(`${input[i].created_at}`);
+
+        $(row).append(id);
+        $(row).append(name);
+        $(row).append(description);
+        $(row).append(htmlUrl);
+        $(row).append(creationTime);
+
+        $(table).append(row);
+      }
+      $(body).append(table);
+    }
+
+  </script>
+</body>
+</html>
