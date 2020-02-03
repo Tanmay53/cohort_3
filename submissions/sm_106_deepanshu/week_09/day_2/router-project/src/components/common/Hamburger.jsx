@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Hamburger.css";
 import Search from "../common/Search";
+import Accordion from "./Accordion";
 
 export class Hamburger extends Component {
   constructor(props) {
@@ -45,19 +46,19 @@ export class Hamburger extends Component {
                     </Link>
                   </li>
                   <li>
-                    <li>Shop</li>
+                    <Accordion />
+                    <Link onClick={this.clickMe} to="/shop">
+                      Shop
+                    </Link>
+                  </li>
+                  <li>
+                    <Link onClick={this.clickMe} to="/faq">
+                      FAQ
+                    </Link>
+                  </li>
+                  <li>
                     <Link onClick={this.clickMe} to="/about">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link onClick={this.clickMe} to="/services">
-                      Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link onClick={this.clickMe} to="/login">
-                      Login
+                      About Us
                     </Link>
                   </li>
                   <li>
@@ -66,12 +67,28 @@ export class Hamburger extends Component {
                     </Link>
                   </li>
                 </ul>
-                <ul>
-                  <li>Log In</li>
-                  <li>Create Account</li>
-                </ul>
 
                 <Search />
+                <td className="p-2">
+                  <Link
+                    onClick={this.clickMe}
+                    style={{ textDecoration: "none" }}
+                    to="/"
+                  >
+                    <i class="fas fa-sign-in-alt mx-2"></i>
+                    Log In
+                  </Link>
+                </td>
+                <td className="p-2">
+                  <Link
+                    onClick={this.clickMe}
+                    style={{ textDecoration: "none" }}
+                    to="/"
+                  >
+                    <i class="fas fa-user-plus mx-2"></i>
+                    Create account
+                  </Link>
+                </td>
               </div>
             </div>
           </div>

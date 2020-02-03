@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Avenir-Next-Bold;
   line-height: 1.4;
 }
 
@@ -131,10 +131,14 @@ body {
   transition: opacity 0.4s ease;
 }
 .menu-wrap .menu > div > div > ul > li {
+  font-family: Avenir-Medium;
   list-style: none;
   color: #000;
   font-size: 1.2rem;
   padding: 1rem;
+}
+.menu-wrap .menu > div > div > ul > li:hover {
+  border-bottom: 1px solid black;
 }
 .menu-wrap .menu > div > div > ul > li > a {
   color: inherit;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import video from "../assets/video/video.mp4";
-
+import "./Home.modules.css";
 export class Home extends Component {
   constructor(props) {
     super(props);
@@ -32,27 +32,15 @@ export class Home extends Component {
 
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                  <img
-                    class="d-block w-100"
-                    src="https://cdn.shopify.com/s/files/1/0112/3682/files/so-worth-loving-sincerely-collection-slider-image-1_1512x.jpeg?v=1579130605"
-                    alt="First slide"
-                  />
+                  <div className="bg-home-1"></div>
                 </div>
 
                 <div class="carousel-item">
-                  <img
-                    class="d-block w-100"
-                    src="https://cdn.shopify.com/s/files/1/0112/3682/files/so-worth-loving-sincerely-collection-slider-image-1_1512x.jpeg?v=1579130605"
-                    alt="Second slide"
-                  />
+                  <div className="bg-home-2"></div>
                 </div>
 
                 <div class="carousel-item">
-                  <img
-                    class="d-block w-100"
-                    src="https://cdn.shopify.com/s/files/1/0112/3682/files/so-worth-loving-sincerely-collection-slider-image-1_1512x.jpeg?v=1579130605"
-                    alt="Third slide"
-                  />
+                  <div className="bg-home-3"></div>
                 </div>
               </div>
 

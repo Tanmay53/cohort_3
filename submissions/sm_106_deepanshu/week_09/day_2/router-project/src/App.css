@@ -1,3 +1,19 @@
+@font-face {
+  font-family: Avenir-Heavy;
+  src: url(./assets/fonts/Avenir-Heavy.ttf);
+}
+@font-face {
+  font-family: Avenir-Medium;
+  src: url(./assets/fonts/Avenir-Medium.ttf);
+}
+@font-face {
+  font-family: Avenir-Next-Bold;
+  src: url(./assets/fonts/AvenirNext-Bold.ttf);
+}
+body {
+  font-family: Avenir-Medium;
+}
+
 .h-100 {
   height: 100vh;
 }
