@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FSD.JS.12.1</title>
+</head>
+
+<body>
+    <h1>login form</h1>
+    <form action="" id="form1" onsubmit="redirect(event)">
+
+        <div> <label for="username">username</label>
+            <input type="text" id="username" name="username"></div>
+
+
+        <div> <label for="password">password</label>
+            <input type="text" id="password" name="password"></div>
+
+
+        <button type="submit">submit</button>
+    </form>
+    <!-- <button type="submit" id="btn1" onclick="setTimeout(myFunction, 3000);">Verify login</button>
+     -->
+    <!-- <button onclick="openWin()">Open "myWindow"</button> -->
+
+    <script>
+        // Check browser support
+        // if (typeof (Storage) !== "undefined") {
+        //     // Store
+        //     localStorage.setItem("username", "Sam");
+        //     // console.log("value of localStorage.setItem()",localStorage.setItem("username", "Sam"))
+        //     localStorage.setItem("password", "123456789");
+
+        //     // Retrieve
+        //     document.getElementById("username").value = localStorage.getItem("username");
+        //     document.getElementById("password").value = localStorage.getItem("password");
+        // }
+        // else {
+        //     document.getElementById("").innerHTML = "Sorry, your browser does not support Web Storage...";
+        // }
+        // function myFunction() {
+        //     alert('Hello');
+        // }
+
+        // function openWin() {
+
+        //     var myWindow = window.open("", "myWindow", "width=200, height=100");
+        //     myWindow.document.write("<p>This is 'myWindow'</p>");
+        //     setTimeout(function () { myWindow.close() }, 300000);
+        // }
+        // alert(location); // alerts "https://developer.mozilla.org/en-US/docs/Web/API/Window/location"
+        // location.assign("http://www.mozilla.org"); // or
+        // location = "http://www.mozilla.org";
+
+        function redirect() {
+            event.preventDefault()
+            // window.location.replace("dash.html")
+            // var  storedUser =localStorage.setItem("username", "Sam");
+            // console.log(storedUser)//undefined
+            localStorage.setItem("username", "Sam");
+            localStorage.setItem("password", "123456789");
+
+            var storedUser = localStorage.getItem('username')
+            console.log(storedUser)
+            var storedPassword = localStorage.getItem('password')
+            console.log(storedPassword)
+
+            var userName = document.getElementById('username').value
+            console.log(userName)
+            var userPass = document.getElementById('password').value
+            console.log(userPass)
+
+            if (storedUser === userName && storedPassword === userPass) {
+                window.location.href = "dash.html";
+            }
+        }
+    </script>
+</body>
+
+</html>
