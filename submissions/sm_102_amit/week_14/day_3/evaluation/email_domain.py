@@ -1,13 +1,9 @@
 # Find the email domain
 email = input("Enter email address: ")
-flg = False
 result = ""
-for x in email:
-    if flg:
-        result += x
-
-    if x == "@":
-        flg = True
+for i in range(len(email)):
+    if email[i] == "@":
+        result = email[i + 1:]
 print(result)
 
 # Sample Case:

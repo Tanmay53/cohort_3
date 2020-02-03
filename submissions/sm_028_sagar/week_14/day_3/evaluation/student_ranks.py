@@ -1,7 +1,7 @@
 scores = {"Thor": [1,2,3], "Ironman": [3,4,5], "Hulk": [2,3,4]}
 
 def student_ranks(scores):
-    total = list([])
+    total = []
     max = 0
     for key in scores:
         sum = 0
@@ -17,6 +17,7 @@ def student_ranks(scores):
 
 
 student_ranks(scores)
+
 
 #tc 
     # scores = {

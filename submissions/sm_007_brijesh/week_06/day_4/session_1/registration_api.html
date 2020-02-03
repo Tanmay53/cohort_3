@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="col">
+
+            <div id="inputdiv" class="col  text-center">
+                <h1 class="text-center">Fill the details</h1>
+                <div id="dinpName">
+                    <label>NAME</label><br>
+                    <input class="col" id="lname" type="text"><br>
+                    <p id="live"></p>
+                </div>
+                <div id="dinpEmail">
+                    <label>EMAIL</label><br>
+                    <input class="col" id="lemail" type="text"><br>
+                    <p id="live2"></p>
+                </div>
+                <div id="dinpPassword">
+                    <label>PASSWORD</label><br>
+                    <input class="col" id="lpassword" type="text"><br>
+                    <p id="live3"></p>
+                </div>
+                <div id="dinpUsername">
+                    <label>USERNAME</label><br>
+                    <input class="col" id="lusername" type="text"><br>
+                    <p id="live4"></p>
+                </div>
+                <div id="dinpMobile">
+                    <label>MOBILE</label><br>
+                    <input class="col" id="lmobile" type="text"><br>
+                    <p id="live5"></p>
+                </div>
+                <div id="dinpDesc">
+                    <label>DESCRIPTION</label><br>
+                    <input class="col" id="ldesc" type="text"><br>
+                    <p id="live6"></p>
+                </div>
+                <div id="dregister" class="mt-2">
+                    <button id="lregister" class="btn btn-dark col-6 p-3">REGISTER</button>
+                </div>
+            </div>
+            <!-- <div id="rmaindiv" class="col bg-black p-3 mb-2 bg-dark text-white">
+
+                <div class="mt-2 h4 ">NAME</div>
+                <div id="displayname" class="mt-2 h1">Masai</div>
+                <div class="mt-2 h4 ">EMAIL</div>
+                <div id="displayemail" class="mt-2 h1">email@gmail.com</div>
+                <div class="mt-2 h4 ">MOBILE</div>
+                <div id="displaymobile" class="mt-2 h1">9994445551</div>
+
+            </div> -->
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            // $("#dinpemail").hide();
+            // $("#dinpmobile").hide();
+            // $("#dregister").hide();
+            // $("#rmaindiv").hide();
+        }
+
+        $("#lname").keyup(function () {
+            $("#dinpemail").hide();
+            // $("#dinpmobile").hide();
+            // $("#dregister").hide();
+            // $("#rmaindiv").hide();
+            var value = $(this).val();
+            if (value.length < 3) {
+                $("#live").text("More than 3 character required");
+            }
+            else if (value.length > 7) {
+                $("#rmaindiv").show();
+                $("#dinpemail").show();
+                $("#rnamediv").show();
+                $("#live").text("only " + (10 - value.length) + " characters remaining");
+            }
+            else if (value.length > 3) {
+                $("#dinpemail").show();
+            }
+            else {
+                $("#live").text("")
+            }
+
+        });
+
+
+        $("#lemail").keyup(function () {
+            // $("#dinpusername").hide();
+            $("#rmaindiv").hide();
+            var value = $(this).val();
+            checkemail(value)
+            if (checkemail(value) == true) {
+                $("#live2").text("valid email")
+
+                $("#dinpmobile").show();
+            }
+            else {
+                $("#live2").text("invalid email")
+            }
+
+        });
+
+        $("#lmobile").keyup(function () {
+            $("#rmaindiv").hide();
+            var value = $(this).val();
+
+            if (value.length != 10) {
+                $("#live3").text("Enter a valid mobile ")
+            } else {
+                $("#live3").text("Valid mobile no")
+                $("#dregister").show();
+            }
+
+        });
+
+
+        $("#lregister").click(function () {
+            // $("#inputdiv").hide();
+            // $("#rmaindiv").show();
+            // var namevalue = $("#lusername").val()
+            // var emailvalue = $("#lemail").val()
+            // var mobilevalue = $("#lmobile").val()
+            // // var namefrominp =document.getElementById("lusername").value
+            // console.log(namevalue, emailvalue, mobilevalue)
+            // event.preventDefault();
+
+            var name = document.getElementById("lname").value
+            var email = document.getElementById("lemail").value
+            var username = document.getElementById("lusername").value
+            var mobile = document.getElementById("lmobile").value
+            var password = document.getElementById("lpassword").value
+            var desc = document.getElementById("ldesc").value
+
+
+                obj= {
+                    name: name,
+                    email: email,
+                    password: password,
+                    username: username,
+                    mobile: mobile,
+                    description: desc
+                }
+
+                var dataObj = JSON.stringify(obj)
+
+
+
+            console.log(dataObj)
+
+            console.log(name,
+                email,
+                password,
+                username,
+                mobile,
+                desc
+                )
+                postData(dataObj)
+        })
+        function postData(dataObj){
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/auth/register",
+                data: dataObj,
+
+        beforeSend: function( xhr ) {
+            xhr.setRequestHeader( "Content-type","application/json; charset=utf-8" );
+        }
+
+                // console.log(alert("success"))
+            })
+                .done(function (data) {
+                    // event.preventDefault();
+                    console.log(data)
+                    // console.log(xhr.response, xhr.status)
+                    // showdata(data)
+                    var result = JSON.parse(data);
+                    var div = document.querySelector("body")
+                    var child = document.createElement("div")
+                    child.textContent = result.message
+                    div.append(child)
+                    // var message = JSON.parse(data);
+                });
+
+
+            // $("#displayname").text(namevalue)
+            // $("#displayemail").text(emailvalue)
+            // $("#displaymobile").text(mobilevalue)
+
+        }
+
+        function checkemail(email) {
+            for (var i = 0; i < email.length; i++) {
+
+                if (email[0] == "." || email[0] == "@" || email[0] == "#" || email[0] == "$" || email[0] == "%") {
+                    return false
+                }
+                else if (email[i] == "@" || email[i] == ".") {
+                    return true
+                }
+                else if (email[i] == "." && email[i + 1] == ".") {
+                    return false
+                }
+                else (false)
+            }
+        }
+
+    </script>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>

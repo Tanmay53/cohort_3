@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <!-- FSD.W4.3.1_1 !-->
+  <h1>Click the button to add a new customer!</h1>
+  <div class="container">
+    <form>
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstName"> <br>
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastName"> <br>
+        <label for="date-of-birth">Date of Birth:</label>
+        <input type="text" id="date-of-birth"> <br>
+        <label for="balance">balance</label>
+        <input type="text" id="balance"> <br>
+        <label for="account-number">Account Number:</label>
+        <input type="text" id="account-number"> <br>
+        <label for="sharedAccountHolders">sharedAccountHolders:</label>
+        <input type="text" id="sharedAccountHolders">
+        <button onclick="addCustomer()">Add customer</button>
+    </form> 
+  </div>
+ 
+  <!-- FSD.W4.3.1_3 !-->
+  <h1> Click here to print all customers! <h1>
+  <button onclick="printcustomers()">Print Customers</button>  
+  <div id="displayContainer"> </div>
+  
+
+  <script>
+    var allUsers = []
+    //input values from the users upon clicking the add customer button. 
+      function addCustomer(){
+        event.preventDefault();
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var dateOfBirth = document.getElementById('date-of-birth').value;
+        var balance = document.getElementById('balance').value;
+        var accountNumber = document.getElementById('account-number').value;
+        var sharedAccountHolders = document.getElementById('sharedAccountHolders').value;
+        var user = new Details(firstName, lastName,dateOfBirth, balance, accountNumber, sharedAccountHolders)
+        console.log(user)
+        allUsers.push(user)
+        console.log(allUsers)
+        console.log(user.sharedAccountHolders)
+
+      }
+      console.log(Details.firstName)
+      console.log(allUsers)
+      console.log(user.firstName)
+      // var user = new Details(firstName, lastName, dateOfBirth, balance, accountNumber, sharedAccountHolders)
+      //   console.log(user)
+      //   allUsers.push(user)
+
+
+      //constructor object for the input user details 
+      function Details(firstName, lastName,dateOfBirth, balance, accountNumber, sharedAccountHolders){
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.dateOfBirth = dateOfBirth;
+          this.balance = balance;
+          this.accountNumber = accountNumber;
+          this.sharedAccountHolders = [sharedAccountHolders]
+          this.getDetails = function(){
+            var output = ''
+            for(key in this){
+              output += key + ':' + this[key] + '\n'
+              if(key == 'sharedAccountHolders') break;
+            }
+            return output
+          }
+      }
+
+    function printcustomers(){
+      var displayContainer = document.querySelector('#displayContainer');
+      displayContainer.innerHTML = ''
+      for(var i=0; i<allUsers.length; i++){
+        var displayPara = document.createElement('p')
+        displayPara.textContent = allUsers[i].getDetails()
+        displayContainer.appendChild(displayPara)
+      }
+
+    }
+     
+
+  </script>
+</body>
+</html>

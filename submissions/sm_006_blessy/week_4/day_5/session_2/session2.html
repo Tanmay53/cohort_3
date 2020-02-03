@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>session2.html</title>
+    </head>
+    <style>
+       
+    </style>
+    <body>
+        <script>
+
+        function random(number){
+            return Math.floor(Math.random()*number);
+          }
+          
+          function switchColor(){
+              var randomcolor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+              document.querySelector("body").style.background = randomcolor
+          }
+          window.addEventListener('resize', switchColor);
+
+          </script>
+    </body>
+</html>
+
+
+
+

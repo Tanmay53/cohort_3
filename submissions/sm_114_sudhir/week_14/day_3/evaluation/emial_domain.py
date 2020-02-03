@@ -3,9 +3,7 @@ given_email = input()
 
 email_flag = False
 email_domain = ""
-for i in given_email:
-    if i == "@":
-        email_flag = True
-    elif email_flag == True:
-        email_domain += i
+for i in range(len(given_email)):
+    if given_email[i] == "@":
+       email_domain += given_email[i+1:]
 print(email_domain)
