@@ -1,9 +1,11 @@
-str = input()
+input_string = input()
 count = 0
 li = ["a","e","i","o","u"]
 i = 0
+
 while i < len(li):
-    if li[i] in str:
+    if li[i] in input_string:
         count += 1
     i += 1
+    
 print(count)

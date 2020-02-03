@@ -1,0 +1,68 @@
+    <html>
+    <head>
+        <title>W5D2S1</title>
+        <style>
+        .class-h1 {
+            color: coral;
+            font-size: 37px;
+        }
+        .class-h3 {
+            color: pink;
+            font-size: 47px;
+        }
+        .class-h5 {
+            color: orange;
+            font-size: 57px;
+        }
+        .class-div{
+            color: peru;
+            font: outline;
+            font-size: large;
+        }
+
+        .class-p {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+        #temp {
+            color:coral;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>First Heading</h1>
+        <h3>Second Heading</h3>
+        <h5>Third Heading</h5>
+
+        <div id="box">
+            <div>I'm Div without ID box</div>
+            <div>I'm Div with ID box</div>
+            <div>I'm Div without ID box</div>
+        </div>
+        <div id="cont">
+            <p>First para</p>
+            <p id="temp">First para</p>
+            <p>First para</p>
+        </div>
+
+        <p>Second para</p>
+        <button onclick="changeStyle()">Change Style</button>
+        <script>
+        function changeStyle() {
+            var firstH1 = document.querySelector("h1");
+            firstH1.setAttribute("class", "class-h1");
+            var secondH3 = document.querySelector("h3");
+            secondH3.setAttribute("class", "class-h3");
+            var thirdH5 = document.querySelector("h5");
+            thirdH5.setAttribute("class", "class-h5");
+            var forthDivID = document.querySelector("#box");
+            forthDivID.setAttribute("class", "class-div");
+            var firstP = document.querySelector("#cont");
+            firstP.setAttribute("class", "class-p");
+            var secondP = document.querySelector("#temp");
+            firstP.setAttribute("id", "temp");
+        }
+        </script>
+    </body>
+    </html>
