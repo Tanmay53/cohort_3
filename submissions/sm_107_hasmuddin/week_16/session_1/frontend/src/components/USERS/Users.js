@@ -58,6 +58,7 @@ pageBtnClick=(e)=>{
         .then(res=>{this.setState({data:res.data.data, page:res.data.page})}
         )
 }
+
     render() {
         const {data, page,  total_pages, total_user} = this.state
         return (
@@ -75,7 +76,7 @@ pageBtnClick=(e)=>{
                     </select>
                 </div>
 
-            <button className="btn btn-dark">Total Users : {total_user}</button>
+            <p className="p-1 text-white bg-dark">Total Users : {total_user}</p>
             </div>
             <table className="table">
                 <thead className="bg-dark fixed-thead text-warning">
@@ -85,6 +86,8 @@ pageBtnClick=(e)=>{
                         <td>Mobile</td>
                         <td>Email</td>
                         <td>age</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
                     </tr>
                 </thead>
     
