@@ -2,72 +2,52 @@
 
 <head>
     <title>posts.html</title>
-    <script type="text/javascript" src="posts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
+        <div class="container">
+                <div class="row">
+                    <h1>LIST OF USERS</h1>
+                </div>
+                <div class="row">
+                    <nav aria-label="...">
+                        <ul class="pagination pagination-lg">
+                            <li class="page-item active" aria-current="page" id="page1">
+                                <span class="page-link">
+                                    1
+                                    <span class="sr-only">(current)</span>
+                                </span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#" id="page2">2</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 table">
+                    <table class="tableForm table text-center"></table>
+                </div>
+            </div>
 
-    <button id="get-btn">GET</button>
-    <button id="post-btn">POST</button>
-    <div>
-        <table class="table">
-            <tr>
-                <th>id</th>
-                <th>userid</th>
-                <th>title</th>
-                <th>body</th>
-            </tr>
-        </table>
-    </div>
-    <div id="cont"></div>
-    <script>
-        $(document).ready(function () {
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="posts.js"></script>
 
-            $("#post-btn").click(function () {
-                $.ajax({
-                    method: "POST",
-                    url: 'https://jsonplaceholder.typicode.com/posts',
-                    data: {
-                        userId: "blessy",
-                        password: "123"
-                    }
-                })
-                    .done(function (data) {
-                        console.log(data);
-                        var tble = document.querySelector(".table")
-                        //   for(var i =0;i<data["post"];i++){
 
-                        var child = document.createElement('tr')
-                        var tr = document.createElement("tr")
 
-                        tble.append(tr)
-                        var th = document.createElement("th")
-                        th.innerHTML = data.id
-                        tble.appendChild(th)
-                        var th1 = document.createElement("th")
-                        th1.innerHTML = data.title
-                        tble.appendChild(th1)
-                        var th2 = document.createElement("th")
-                        th1.innerHTML = data.body
-                        tble.appendChild(th2)
-                        var th3 = document.createElement("th")
-                        th1.innerHTML = data.userId
-                        tble.appendChild(th3)
-
-                    });
-            });
-            $("#get-btn").click(function () {
-                $.ajax({
-                    url: "https://jsonplaceholder.typicode.com/posts",
-                })
-                    .done(function (data) {
-                        console.log(data);
-                    });
-            });
-        });
-    </script>
+           
 </body>
 
 </html>
