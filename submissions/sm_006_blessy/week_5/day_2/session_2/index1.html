@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>index1.html</title>
+    <style>
+        .form {
+            height: 300px;
+            width: 200px;
+            padding: 30px;
+            border: 5px solid black;
+
+        }
+
+        .settings {
+            float: right;
+            height: 300px;
+            width: 200px;
+            padding: 30px;
+            margin-top: -400px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- first block form to add product -->
+    <div class="form">
+        <label for="product" id="productlabel"> Enter Product</label>
+        <input type="text" id="product">
+        <label for="price" id="pricelabel"> Enter Price</label>
+        <input type="text" id="price">
+        <label for="quantity" id="qntylabel"> Enter Quantity</label>
+        <input type="number" id="qty">
+        <div>
+            <button onclick="add()" id="sbmit">Add</button>
+        </div>
+    </div>
+
+    <!-- second block for table -->
+    <div>
+        <table class="table">
+            <!-- <tr>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                </tr> -->
+        </table>
+    </div>
+    <!-- third block for settings -->
+    <div class="settings">
+        <label for="chngefont" id="size"> Enter the Required font value</label>
+        <input type="text" id="chngefont">
+        <button onclick="chngefont()">submit</button>
+
+        <label for="changecolor" id="color">Enter the required color</label>
+        <input type="text" id="chgecolor">
+        <button onclick="chngecolor()">submit</button>
+
+        <label for="changebgcolor" id="bgcolor">Enter the required color</label>
+        <input type="text" id="backgrndcolor">
+        <button onclick="chngebgcolor()">submit</button>
+    </div>
+    <script>
+        arr = []
+        var obj = {}
+        function add() {
+            var prod = document.getElementById("product").value
+            var pric = document.getElementById("price").value
+            var qnty = document.getElementById("qty").value
+
+            obj = {
+                prod: prod,
+                pric: pric,
+                qnty: qnty
+            }
+            arr.push(obj)
+            createtable(obj)
+        }
+        var table = document.querySelector("table")
+        table.style.background = "pink"
+        table.style.border = "2px solid black"
+
+        var tr = document.createElement("tr")
+        table.appendChild(tr)
+        var firstcol = document.createElement("td")
+        firstcol.textContent = "Product"
+        firstcol.style.color = "red"
+        firstcol.style.padding = "10px"
+        table.appendChild(firstcol)
+        var secondcol = document.createElement("td")
+        secondcol.textContent = "Price"
+        secondcol.style.color = "red"
+        secondcol.style.padding = "10px"
+        table.appendChild(secondcol)
+        var thirdcol = document.createElement("td")
+        thirdcol.textContent = "Quantity"
+        thirdcol.style.color = "red"
+        thirdcol.style.padding = "10px"
+        table.appendChild(thirdcol)
+        var row2 = document.createElement("tr")
+        row2.style.padding = "10px"
+        table.appendChild(row2)
+        function createtable(obj) {
+            var table = document.querySelector("table")
+            var tr = document.createElement("tr")
+             table.appendChild(tr)
+            var r2col1 = document.createElement("td")
+            r2col1.style.padding = "10px"
+
+            r2col1.innerHTML = obj.prod
+            table.appendChild(r2col1)
+            var r2col2 = document.createElement("td")
+            r2col2.style.padding = "10px"
+
+            r2col2.innerHTML = obj.pric
+            table.appendChild(r2col2)
+            var r2col3 = document.createElement("td")
+            r2col3.style.padding = "10px"
+
+            r2col3.innerHTML = obj.qnty
+            table.appendChild(r2col3)
+        }
+        function chngefont() {
+            var table = document.querySelector("table")
+            var font = document.getElementById("chngefont").value;
+            table.style.fontSize = font
+
+        }
+        function chngecolor() {
+            var table = document.querySelector("table")
+            var colour = document.getElementById("chgecolor").value;
+            table.style.color = colour
+        }
+        function chngebgcolor() {
+            var table = document.querySelector("table")
+            var bg = document.getElementById("backgrndcolor").value
+            table.style.backgroundColor = bg
+        }
+    </script>
+</body>
+
+</html>
