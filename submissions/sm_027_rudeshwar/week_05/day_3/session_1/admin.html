@@ -1,12 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FSD.JS.12.5</title>
 </head>
+
 <body>
-    
+    <form action="" onsubmit="login(event)">
+        <div><label for="username">username</label>
+            <input type="text" id="username"></div>
+
+        <div><label for="password">password</label>
+            <input type="text" id="password"></div>
+
+        <button type="submit">submit</button>
+    </form>
+
+    <div id="divBlock">
+    </div>
+
+    <br><br>
+
+    <div>Select the specific user to see their login Time</div>
+    <select name="userName" id="userId" style="width: 200px; height: 20px;">
+    </select>
+
+    <script>
+        var storedUser = []
+        var storedPassword = []
+        var loginTime = []
+
+        function login() {
+            event.preventDefault()
+
+            storedUser.push(document.getElementById('username').value)
+            // console.log(user)
+            storedPassword.push(document.getElementById('password').value)
+            // console.log(pass)
+
+            // -------------------------------------------
+            var t1 = document.getElementById('divBlock')
+            var table1 = document.createElement('table')
+            t1.innerHTML = ""//*********************
+            var row1 = document.createElement('tr')
+            // ------------------------------------------------
+
+            // var t1 = window.localStorage.setItem('username',user)//check syntax
+            // console.log("t1",t1)//undefined
+            // var t1 = window.localStorage.setItem('username', JSON.stringify(user))
+            // console.log('t1',t1)//undefined
+            // var t1 =  localStorage.setItem('usename',user)
+            // console.log("t1",t1)//undefined
+
+            loginTime.push(new Date())
+            // console.log("date", d)
+
+            localStorage.setItem('username', storedUser)
+            localStorage.setItem('password', storedPassword)
+            localStorage.setItem('date', loginTime)
+            // console.log("______________")
+
+            localStorage.getItem('storedUser')
+            console.log("stored user", storedUser)
+            localStorage.getItem('storedPassword')
+            console.log("stored password", storedPassword)
+            localStorage.getItem('loginTime')
+            console.log("logintime", loginTime)
+
+
+            var colHead0 = document.createElement('th')
+            colHead0.innerHTML = "username"
+            var colHead1 = document.createElement('th')
+            colHead1.innerHTML = "login Time"
+
+
+            row1.appendChild(colHead0)
+            row1.appendChild(colHead1)
+            table1.appendChild(row1)
+            var t1 = document.getElementById('divBlock')
+            t1.appendChild(table1)
+            // -----------------------------------------------------------
+
+            for (var i = 0; i < storedUser.length; i++) {
+                var row2 = document.createElement('tr')
+                // console.log(row2)
+
+                var columnValue1 = document.createElement('td')
+                var columnValue2 = document.createElement('td')
+
+                columnValue1.innerHTML = storedUser[i]
+                // console.log(columnValue1)
+                columnValue2.innerHTML = loginTime[i]
+                // console.log(columnValue2)
+
+                row2.appendChild(columnValue1)
+                row2.appendChild(columnValue2)
+                table1.appendChild(row2)
+            }
+
+            // selecting users from the options
+            // opt1.innerHTML=""//cannot set property of undefined  
+
+
+            console.log("storedUser", storedUser)
+            var obj1 = {}
+            var result = []
+            for (i = 0; i < storedUser.length; i++) {
+                obj1[storedUser[i]] = storedUser[i]
+                console.log("obj1", obj1)
+                console.log("storedUser", storedUser[i])
+
+                // var opt1 = document.createElement('option')
+                // console.log("opt1",opt1)
+                // console.log("storedUser[i]",storedUser[i])
+                // opt1.innerHTML=storedUser[i]
+                console.log("Object.keys(obj1)", Object.keys(obj1))
+                // opt1.innerHTML=obj1[i]
+                // opt1.innerHTML=Object.keys(obj1)
+
+                // console.log("obj1",obj1)
+                // opt1.appendChild(select1)//wrong
+                // select1.appendChild(opt1)
+            }
+
+            console.log('obj1', obj1)
+            for (var i = 0; i < storedUser.length; i++) {
+                // console.log("1st for", storedUser[i])
+                // console.log("Object.keys(obj1)", Object.keys(obj1))
+                for (var key in obj1) {
+                    // console.log("Object.keys(obj1)", Object.keys(obj1))
+                    // console.log("2nd for", storedUser[i])
+                    if (key == storedUser[i]) {
+                        // console.log("3rd if", storedUser[i])
+                        // console.log("Object.keys(obj1)", Object.keys(obj1))
+
+                        result.push(storedUser[i])
+                        console.log(result)
+                    }
+                }
+            }
+            console.log("result",result)
+
+
+
+            for (i = 0; i < result.length; i++) {
+                var select1 = document.getElementById('userId')
+                console.log("select1",select1)
+                select1.innerHTML = ""
+                console.log("select1",select1)
+                var opt1 = document.createElement('option')
+                opt1.innerHTML = result[i]
+                select1.appendChild(opt1)
+            }
+        }
+
+
+
+
+    </script>
 </body>
+
 </html>
