@@ -1,0 +1,77 @@
+.flex, #top-bar
+{
+    display: flex;
+    /* flex-basis:   ; */
+}
+
+.box
+{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#top-bar div{
+    text-align:center;
+    margin: 20px 30px;
+    font: size 20px;
+}
+
+#mid-bar, #bottom-bar
+{
+    text-align: center;
+}
+
+#mid-bar button , #enter
+{
+
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid greenyellow;
+    font-size: 16px;
+}
+
+#scores td {
+
+    padding:10px ;
+
+}
+
+#score1
+{
+    background-color: blue;
+    padding: 20px;
+    border: 3px solid black;
+}
+
+#max-score{
+    background-color: chartreuse;
+    padding: 20px;
+    border: 3px solid black;
+
+}
+
+#min-score{
+    background-color:red;
+    padding: 20px;
+    border: 3px solid black;
+
+}
+
+#one, #three, #nine, #seven
+{
+    background-color: green;
+}
+
+#two,#four,#five,#six,#eight{
+    background-color: rgb(218, 84, 36);
+}
+#zero
+{
+    background-color: purple;
+}
+
+#enter
+{
+    background-color: black;
+    color: white
+}

@@ -1,23 +1,34 @@
 import React, { Component } from 'react'
-import { Link, Route} from 'react-router-dom';
-import AddNewTopic from './Common/AddNewTopic'
-import ViewTopic from './Common/ViewTopic';
-import { Container, Typography, Paper, TextField,Box, Button,styles } from '@material-ui/core'
+import { Link } from 'react-router-dom';
+import { Container, Button, Typography } from '@material-ui/core'
 
 
+
+const root = {
+    padding : 100,
+    width : 800,
+    textDecoration : "none"
+
+}
+const center = {
+    marginLeft : "auto",
+    marginRight : "auto",
+    display : "block",
+    padding : 15,
+    marginTop : 30,
+}
 
 export default class Dashboard extends Component {
+    
     render() {
         console.log('route')
         return (
             <React.Fragment>
-                <Container>
-                    <Link to="/login/addtopic"><Button variant="outlined">ADD A NEW TOPIC</Button></Link>
-                    <Link to="/login/viewtopic"><Button variant="outlined">VIEW TOPICS</Button></Link>
+                <Typography variant='h1' align='center'>Welcome To Dash Board</Typography>
+                <Container style ={root}>
+                    <Link to="/dashboard/addtopic"><Button style={center} variant="outlined">ADD A NEW TOPIC</Button></Link>
+                    <Link to="/dashboard/viewtopic"><Button style={center} variant="outlined">VIEW TOPICS</Button></Link>
                 </Container>
-
-                <Route path="/login/addtopic" exact component={AddNewTopic}></Route>
-                <Route path="/login/viewtopic" component ={ViewTopic}></Route>
             </React.Fragment>
         )
     }
