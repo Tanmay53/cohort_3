@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FSD.JS.12.2</title>
+</head>
+
+<body>
+
+    <div id="user">
+        <p></p>
+    </div>
+    <p id="login_time">Login time:</p>
+    <p id="para1">end time for session 5 min </p>
+
+    <!-- <button onclick="setTimeout(myFunction, 4000)">Try it</button> -->
+
+    <button type="submit" id="logout">Logout</button>
+
+    <script>
+        var d = new Date();
+        document.getElementById("login_time").innerHTML = d;
+
+        // var userName = document.getElementById('login_time').value
+        // console.log(userName)
+
+        var storedUser = localStorage.getItem('username')
+        console.log(storedUser)
+
+        // var head1  = document.getElementsByTagName('h1')
+        // console.log(head1)
+        // head1.
+
+        var node = document.createElement('h1')
+        var textnode = document.createTextNode(storedUser)
+        console.log(storedUser)
+        node.appendChild(textnode)
+        document.getElementById('user').appendChild(node)
+
+
+        var time1 = document.getElementById('mypara')
+        function myFunction() {
+            // setTimeout(function () { alert("5 min session got over"); }, 3000);
+            window.location.href = "index.html";
+        }
+        setTimeout(myFunction, 5000 * 60)
+
+        // ----------------------------------------12.4
+        document.getElementById('logout').addEventListener('click', logoutFunction)
+        function logoutFunction() {
+            window.location.href = "index.html";
+        }
+
+    </script>
+</body>
+
+</html>
