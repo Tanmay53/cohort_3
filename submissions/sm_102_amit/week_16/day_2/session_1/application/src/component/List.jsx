@@ -83,11 +83,33 @@ class List extends Component {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            <li>
+              <Link
+                to={`${match.url}?page=1&limit=10`}
+                className="dropdown-item"
+              >
+                10
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={`${match.url}?page=1&limit=25`}
+                className="dropdown-item"
+              >
+                25
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={`${match.url}?page=1&limit=50`}
+                className="dropdown-item"
+              >
+                50
+              </Link>
+            </li>
           </Dropdown.Menu>
         </Dropdown>
+        <hr />
         <Table striped bordered hover responsive>
           <thead>
             <tr>
