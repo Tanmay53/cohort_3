@@ -102,7 +102,119 @@
 
 # print(id(x), id(y))
 
-m = list([1,2,3])
-n = m
-m.pop()
-print(n,m,id(m), id(n))
+# m = list([1,2,3])
+# n = m
+# m.pop()
+# print(n,m,id(m), id(n))
+
+
+# //FILE HANDLING
+
+# read the file
+# f1 = open("session1/name.txt", "r")
+# for line in f1:
+#     print(line)
+# print(f1.read())
+# f1.close()
+
+# write into the file
+# f1 = open("session1/name.txt", "w")
+# f1.write("Ashish added one line to the file.")
+# f1.close()
+
+# appending to the file
+# f1 = open("session1/name.txt", "a")
+# f1.write("\n This time Ashish is appending to the file.")
+# f1.close()
+
+
+
+# taking input from terminal
+# import sys
+# print(sys.argv)
+
+# import sys
+# actualInput = sys.argv[1:]
+# print(actualInput)
+
+# import sys
+# li = sys.argv[1:]
+# sum = 0
+# for ele in li:
+#     sum += int(ele)
+# print(sum)
+
+
+# EXCEPTION HANDLING
+
+# import syss
+# a = 5
+# print(a)
+
+# a = 4/0
+# print(a)
+# print(4 + 5)
+
+# try:
+#     # a = 4/0
+#     a = 4/3
+#     print(a)
+# except ZeroDivisionError:
+#     print("there is an exception error")
+
+# print(4 + 5)
+
+# try:
+#     import sys
+#     print(sys)
+# except ImportError:
+#     print("You imported a wrong module.")
+
+
+# TAKING INPUT IN PYTHON
+
+# m, n = input().split()
+# print(m, n)
+
+# m, n = map(int, input().split())
+# print(type(m))
+
+# n = int(input())
+# arr = []
+# for i in range(n):
+#     arr.append(input())
+# print(arr)
+
+# n = int(input())
+# arr = list(map(int, input().split()))
+# print(arr)
+
+# n = int(input())
+# arr = set(map(int, input().split()))
+# print(arr)
+
+# n = int(input())
+# arr = []
+# for i in range(n):
+#     arr.append(int(input()))
+# print(arr)
+
+# m,n = map(int, input().split())
+# arr = []
+# for i in range(n):
+#     arr.append(list(map(int, input().split())))
+# print(arr)
+
+# word, *l = input().split()
+# l = list(map(int, l))
+# print(word, l)
+
+noOfTest = int(input())
+mainList = []
+for i in range(noOfTest):
+    noOfRows = int(input())
+    tempList = []
+    for j in range(noOfRows):
+        tempList.append(list(map(int, input().split())))
+    mainList.append(tempList)
+print(mainList)

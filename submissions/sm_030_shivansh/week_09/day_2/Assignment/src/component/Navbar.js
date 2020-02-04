@@ -1,0 +1,71 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './component.module.css';
+
+
+const Navbar = () => {
+
+    return (
+        <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom navbar-fixed-top">
+            <Link className="navbar-brand" to="/">
+                <img src='/images/logo.png' className={styles.navbarLogo} alt="company-logo" />
+            </Link>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav ml-auto ">
+                    <li className="nav-item m-2 mx-3">
+                        <Link className="nav-link h5" to="/component/About">About</Link>
+                    </li>
+                    <li className="nav-item m-2 mx-3">
+                        <Link className="nav-link h5" to="/component/Stores">Stores</Link>
+                    </li>
+                    <li className="nav-item m-2 mx-3">
+                        <Link className="nav-link h5" to="/component/Faq">FAQ</Link>
+                    </li>
+
+                    <li className="nav-item dropdown m-2 mx-3">
+                        <a className="nav-link btn-secondary rounded-pill dropdown-toggle text-white h5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Shop by Category
+                         </a>
+
+                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <Link className="dropdown-item" to="/component/categories/Mobile">
+                                <i className="fas fa-mobile-alt mr-2 fa-lg"></i>Mobile
+                            </Link>
+                            <Link className="dropdown-item" to="/component/categories/Television">
+                                <i className="fas fa-tv mr-2"></i>Televisions
+                            </Link>
+                            <Link className="dropdown-item" to="/component/categories/Laptop">
+                                <i className="fas fa-laptop mr-2"></i>Laptop
+                            </Link>
+                            <Link className="dropdown-item" to="/component/categories/Accesories">
+                                <i className="fas fa-keyboard mr-2"></i>Accessories
+                            </Link>
+                            <Link className="dropdown-item" to="/component/categories/Gaming">
+                                <i className="fas fa-gamepad mr-2"></i>Gaming
+                            </Link>
+                            <Link className="dropdown-item" to="/component/categories/Appliance">
+                                <i className="fas fa-blender mr-2"></i>Home Appliance
+                            </Link>
+                        </div>
+                    </li>
+
+                    <li class="nav-item m-2">
+                        <a class="nav-link" href="#"><i className="far fa-heart fa-lg"></i></a>
+                    </li>
+                    <li class="nav-item m-2">
+                        <a class="nav-link" href="#"><i className="fas fa-shopping-cart fa-lg"></i></a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </nav>
+    )
+}
+
+
+export default Navbar;
