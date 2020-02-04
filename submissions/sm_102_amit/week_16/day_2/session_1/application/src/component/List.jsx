@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Table, ButtonGroup, Pagination } from "react-bootstrap";
+import { Dropdown, Table, ButtonGroup, Pagination } from "react-bootstrap";
 
 class List extends Component {
   // changePage = () => {
@@ -48,7 +48,7 @@ class List extends Component {
       ))
     ) : (
       <tr className="text-center">
-        <td colSpan="4">No result found!</td>
+        <td colSpan="6">No result found!</td>
       </tr>
     );
 
@@ -77,6 +77,17 @@ class List extends Component {
     // return
     return (
       <>
+        <Dropdown>
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Dropdown Button
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
         <Table striped bordered hover responsive>
           <thead>
             <tr>

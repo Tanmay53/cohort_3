@@ -8,8 +8,6 @@ import Home from "./component/Home";
 import List from "./component/List";
 import NotFound from "./component/NotFound";
 
-import "./App.css";
-
 class App extends Component {
   constructor() {
     super();

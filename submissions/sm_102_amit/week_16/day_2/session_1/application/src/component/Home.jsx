@@ -1,10 +1,11 @@
 import React from "react";
-
+import { Jumbotron } from "react-bootstrap";
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <Jumbotron>
+      <h1 className="display-1">Hello, world!</h1>
+      <h6 className="h1">React Flask App</h6>
+    </Jumbotron>
   );
 }
 
