@@ -1,0 +1,55 @@
+    <html>
+        <head>
+                <title> 
+                    W4D4S1
+                </title>
+        </head>
+        <body>
+            <div style="text-align: center;margin-top: 100px;">
+                <h1 style="color:coral; font-family:monospace;">Please Enter Your Name</h1>
+                <input type="text" id="name" placeholder="enter you name">
+                <h1 style="color:coral; font-family:monospace;">Please Select you Gender</h1>
+                <select id="selectGender">
+                    <option value="">Select Gender:</option>
+                    <option value="m">Male</option>
+                    <option value="f">Female</option>
+                </select>
+                <h1 style="color:coral; font-family:monospace;">Please Enter Your B'Day Year</h1>
+                <input type="number" id="year" placeholder="YYYY">
+                
+                <br>
+                <br>
+                <button onclick="marraiageAgeValidator()">Enter to Check</button>
+                <p style="color: grey;"><i>**the data provided is according to 2020</i></p>
+
+            </div>
+                <script>
+                    
+                function marraiageAgeValidator()
+                {
+                    var Name = document.getElementById('name')
+                    console.log(Name)
+                    if (selectGender.value == 'm')
+                    {
+                        if (year.value <=1999){
+                            alert('You Can Get Married')
+                        }
+                        else{
+                            alert('Sorry, you cant get Married')
+                        }
+                    }
+                    else if(selectGender.value == 'f'){
+                        if(year.value <= 2002){
+                            alert('You Can Get Married')
+                        }
+                        else{
+                            alert('Sorry, you cant get Married')
+                        }
+                    }
+                    else{
+                        alert('Please Select Gender from the Dropdown Option')
+                    }
+                }
+                </script>
+        </body>
+    </html>

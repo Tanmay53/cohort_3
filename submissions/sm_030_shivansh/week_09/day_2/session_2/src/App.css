@@ -1,0 +1,17 @@
+/* Zerodha styling */
+/* 
+#zerodha-btn{
+   width: 200px;
+   background-color: #b0b0cf;
+} */
+
+
+.zerodha-anchor{
+  text-decoration: none;
+  color: #4D5DD5;
+}
+
+.zerodha-anchor:hover{
+  text-decoration: none;
+  color: #000;
+}
