@@ -26,20 +26,19 @@ export default class Home extends Component {
   }
   fetch = async () => {
     const { search } = this.props.location;
-    let page_no = 1;
-    let item_to_show = 25;
     if (search != "") {
       let query = new URLSearchParams(search);
-      page_no = query.get("page");
-      item_to_show = query.get("per_page");
+      let page_no = query.get("page");
+      let item_to_show = query.get("per_page");
+      this.setState({ page_no, item_to_show });
     }
 
     let config = {
       method: "GET",
       baseURL: "http://localhost:5000",
       params: {
-        page: page_no,
-        per_page: item_to_show
+        page: this.state.page_no,
+        per_page: this.state.item_to_show
       }
     };
 
