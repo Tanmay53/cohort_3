@@ -4,13 +4,6 @@ import csv
 from flask import request
 import json
    
-
-def writeHeaders():
-    with open('data/groceries.csv', 'a') as data:
-        fieldnames = ['item', 'quantity', 'purchased']
-        data = csv.DictWriter(data, fieldnames=fieldnames)
-        data.writeheader()
-
 @app.route('/listing')
 def listing():   
     with open("data/groceries.csv") as grocery:
@@ -33,52 +26,19 @@ def create():
         writeData.writerow({'item' : item, 'quantity': quantity, 'purchased': False})
         return 'Successfully added'
 
-@app.route('/edit/<int:itemNo>', methods = ['POST', 'GET'])
+@app.route('/edit/<int:itemNo>', methods = ['POST'])
 def edit(itemNo):
-    if request.method == "POST":
-        with open('data/groceries.csv') as data:
-            readData = csv.DictReader(data)
-            count = 0
-            item = request.json['item']
-            qty = request.json['quantity']
-            dataList = []
-            for row in readData:
-                if count != itemNo:
-                    dataList.append({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : 'False'})
-                count += 1
-            dataList.insert(itemNo, { 'item' : item, 'quantity' : qty, 'purchased' : 'False'})
-
-        with open('data/groceries.csv', 'w') as data:
-            fieldnames = ['item', 'quantity', 'purchased']
-            writeData = csv.DictWriter(data, fieldnames = fieldnames)
-            writeData.writeheader()
-            for row in dataList:
-                writeData.writerow({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
-
-        return 'Data updated successfully'
-    elif request.method == 'GET':
-        with open('data/groceries.csv') as data:
-            readData = csv.DictReader(data)
-            count = 0
-            dataList = []
-            for row in readData:
-                if count == itemNo:
-                    dataList.append({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
-                count += 1
-        return json.dumps(dataList)
-        
-
-@app.route('/delete', methods = ['POST'])
-def delete():
     with open('data/groceries.csv') as data:
         readData = csv.DictReader(data)
         count = 0
-        itemNo = request.json['itemNo']
+        item = request.json['item']
+        qty = request.json['quantity']
         dataList = []
         for row in readData:
             if count != itemNo:
-                dataList.append({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
+                dataList.append({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : 'False'})
             count += 1
+        dataList.insert(itemNo, { 'item' : item, 'quantity' : qty, 'purchased' : 'False'})
 
     with open('data/groceries.csv', 'w') as data:
         fieldnames = ['item', 'quantity', 'purchased']
@@ -86,19 +46,43 @@ def delete():
         writeData.writeheader()
         for row in dataList:
             writeData.writerow({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
-    return 'Data deleted successfully'
+
+    return 'Data updated successfully'
+        
+
+@app.route('/delete', methods = ['POST'])
+def delete():
+    dataDict = {
+        "dataList" : []
+    }
+    with open('data/groceries.csv') as data:
+        readData = csv.DictReader(data)
+        count = 0
+        itemNo = int(request.json['itemNo'])
+        for row in readData:
+            if count != itemNo:
+                dataDict["dataList"].append({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
+            count += 1
+
+    with open('data/groceries.csv', 'w') as data:
+        fieldnames = ['item', 'quantity', 'purchased']
+        writeData = csv.DictWriter(data, fieldnames = fieldnames)
+        writeData.writeheader()
+        for row in dataDict["dataList"]:
+            writeData.writerow({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
+    return "Data deleted successfully"
 
 @app.route('/purchased', methods = ['POST', 'GET'])
 def markPurchased():
+    dataList = []
     if request.method == "POST":
         with open('data/groceries.csv') as data:
             readData = csv.DictReader(data)
             count = 0
-            itemNo = request.json['itemNo']
+            itemNo = int(request.json['itemNo'])
             itemPurchased = []
-            dataList = []
             for row in readData:
-                if count != itemNo:
+                if count != itemNo: 
                     dataList.append({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
                 elif count == itemNo:
                     itemPurchased.append({ 'item': row['item'], 'quantity': row['quantity'], 'purchased': row['purchased']})
@@ -117,6 +101,6 @@ def markPurchased():
             readData = csv.DictReader(data)
             dataList = []
             for row in readData:
-                if row['purchased'] == "True":
+                if row['purchased'] == 'True':
                     dataList.append({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
         return json.dumps(dataList)
