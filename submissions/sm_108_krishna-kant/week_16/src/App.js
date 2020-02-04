@@ -11,7 +11,7 @@ function App() {
       <div>
         <Navbar></Navbar>
         <Switch>
-          <Route path="/users/listing" component={Home}></Route>
+          <Route path="/users" component={Home}></Route>
         </Switch>
       </div>
     </div>

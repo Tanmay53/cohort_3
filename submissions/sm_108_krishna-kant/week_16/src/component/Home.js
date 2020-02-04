@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import Table from "./Table";
+import { Route, Switch } from "react-router-dom";
+import List from "./List";
 export default class Home extends Component {
   constructor() {
     super();
     this.state = {
       items: [],
       page_no: 1,
-      item_to_show: 10,
+      item_to_show: 25,
       total_pages: 0
     };
   }
@@ -23,15 +25,21 @@ export default class Home extends Component {
     }
   }
   fetch = async () => {
+    const { search } = this.props.location;
+    let page_no = 1;
+    let item_to_show = 25;
+    if (search != "") {
+      let query = new URLSearchParams(search);
+      page_no = query.get("page");
+      item_to_show = query.get("per_page");
+    }
+
     let config = {
       method: "GET",
       baseURL: "http://localhost:5000",
-      headers: {
-        "Content-Type": "application/json"
-      },
       params: {
-        page: this.state.page_no,
-        per_page: this.state.item_to_show
+        page: page_no,
+        per_page: item_to_show
       }
     };
 
@@ -45,57 +53,32 @@ export default class Home extends Component {
     this.setState({ [e.target.name]: e.target.value, page_no: 1 });
   };
 
-  changePage = e => {
-    this.setState({ page_no: parseInt(e.target.value) }, () => {
+  changePage = page_no => {
+    this.setState({ page_no }, () => {
       this.fetch();
       this.forceUpdate();
     });
   };
   render() {
     const { items, page_no, item_to_show, total_pages } = this.state;
-    let pagination = [];
-    for (let i = 1; i <= total_pages; i++) {
-      pagination.push(
-        <li key={i} className="page-item">
-          <button value={i} className="page-link" onClick={this.changePage}>
-            {i}
-          </button>
-        </li>
-      );
-    }
+    const { match } = this.props;
     return (
-      <div className="col">
-        <div className="row px-5 pt-4">
-          <div className="col-4">
-            <div className="form-group">
-              <label className="float-left">Items per page</label>
-              <select
-                className="form-control"
-                name="item_to_show"
-                onChange={this.handleChange}
-                value={item_to_show}
-              >
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select>
-            </div>
-          </div>
-          <div className="col-4"></div>
-          <div className="col-4"></div>
-        </div>
-        <Table items={items}></Table>
-        <div className="d-flex justify-content-center w-100">
-          <div>
-            <nav
-              aria-label="Page navigation example"
-              className="justify-content-center"
-            >
-              <ul className="pagination">{pagination}</ul>
-            </nav>
-          </div>
-        </div>
+      <div>
+        <Switch>
+          <Route
+            path={`${match.path}/listing`}
+            render={props => (
+              <List
+                total_pages={total_pages}
+                item_to_show={item_to_show}
+                items={items}
+                handleChange={this.handleChange}
+                changePage={this.changePage}
+                {...props}
+              ></List>
+            )}
+          ></Route>
+        </Switch>
       </div>
     );
   }
