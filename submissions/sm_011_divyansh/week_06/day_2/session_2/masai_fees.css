@@ -1,0 +1,27 @@
+.jumbotron {
+    background-color:#276ba8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+} 
+.box{
+    height: 390px;
+    background-color: white;
+    border-radius: 10px;
+}
+.box>h3{
+    color:grey
+}
+.box>h2{
+    color:blue
+}
+.box>p{
+    color:red;
+}
+.grid div{
+    height:90px;
+    
+}
+.grid h3{
+    color:blue;
+}
