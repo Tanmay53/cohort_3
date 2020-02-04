@@ -3,12 +3,35 @@ import React, { Component } from "react";
 import Hamburger from "../components/common/Hamburger";
 import "../App.css";
 import Home from "./Home";
-import About from "./About";
+import Shop from "./Shop";
 import Contact from "./Contact";
-import Services from "./Services";
-import Login from "./Login";
+import FAQ from "./Faq";
+import About from "./About";
+import axios from "axios";
+import Cart from "./Cart";
 
 export class Routes extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: []
+    };
+  }
+
+  componentDidMount = () => {
+    axios
+      .get("./data.json")
+      .then(res => {
+        this.setState({
+          data: res.data
+        });
+        // console.log(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
   render() {
     const Footer = () => {
       return (
@@ -17,33 +40,28 @@ export class Routes extends Component {
             <div className="col-md-12 d-flex justify-content-center ">
               <ul className="inline d-flex align-items-center">
                 <li>
-                  <Link style={{ textDecoration: "none" }} to="/">
-                    OUR STORY
+                  <Link style={{ textDecoration: "none" }} exact to="/">
+                    Home
                   </Link>
                 </li>
                 <li>
-                  <Link style={{ textDecoration: "none" }} to="/">
-                    SHOP
+                  <Link style={{ textDecoration: "none" }} to="/shop">
+                    Shop
                   </Link>
                 </li>
                 <li>
-                  <Link style={{ textDecoration: "none" }} to="/">
-                    BLOG
+                  <Link style={{ textDecoration: "none" }} to="/faq">
+                    Faq
                   </Link>
                 </li>
                 <li>
-                  <Link style={{ textDecoration: "none" }} to="/">
-                    CONTACT
+                  <Link style={{ textDecoration: "none" }} to="/about">
+                    About
                   </Link>
                 </li>
                 <li>
-                  <Link style={{ textDecoration: "none" }} to="/">
-                    POLICIES
-                  </Link>
-                </li>
-                <li>
-                  <Link style={{ textDecoration: "none" }} to="/">
-                    SEARCH
+                  <Link style={{ textDecoration: "none" }} to="/contact">
+                    Contact
                   </Link>
                 </li>
               </ul>
@@ -62,7 +80,7 @@ export class Routes extends Component {
               </Link>
             </div>
             <div className="">
-              <p>Copyright © 2020, So Worth Loving</p>
+              <p>Copyright © 2020 Masai</p>
             </div>
           </div>
         </div>
@@ -70,8 +88,8 @@ export class Routes extends Component {
     };
     return (
       <>
-        <div className="container fixed">
-          <div className="row justify-content-around">
+        <div className="container ">
+          <div className="row  justify-content-around">
             <div className="">
               <Hamburger />
             </div>
@@ -84,21 +102,26 @@ export class Routes extends Component {
               />
             </div>
             <div className="">
-              <img
-                src="https://img.icons8.com/ios/1000/000000/shopping-mall.png"
-                width="40px"
-                className="m-2"
-                alt=""
-              />
+              <Link to="/cart">
+                <img
+                  src="https://img.icons8.com/ios/1000/000000/shopping-mall.png"
+                  width="40px"
+                  className="m-2"
+                  alt=""
+                />
+              </Link>
             </div>
           </div>
         </div>
         <Route path="/" exact component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/services" component={Services} />
+        <Route
+          path="/shop"
+          component={props => <Shop {...props} data={this.state.data} />}
+        />
+        <Route path="/faq" component={FAQ} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-
+        <Route path="/cart" component={Cart} />
         <Footer />
       </>
     );
