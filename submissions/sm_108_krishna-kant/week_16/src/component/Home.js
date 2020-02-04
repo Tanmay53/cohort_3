@@ -49,7 +49,11 @@ export default class Home extends Component {
   };
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value, page_no: 1 });
+    this.setState({ [e.target.name]: e.target.value, page_no: 1 }, () => {
+      this.props.history.push(
+        `/users/listing/?page=${this.state.page_no}&per_page=${this.state.item_to_show}`
+      );
+    });
   };
 
   changePage = page_no => {
