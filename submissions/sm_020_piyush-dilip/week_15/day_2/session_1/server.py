@@ -28,8 +28,8 @@ def create():
 
 @app.route('/edit/<int:itemNo>', methods = ['POST'])
 def edit(itemNo):
-    with open('data/groceries.csv') as data:
-        readData = csv.DictReader(data)
+    with open('data/groceries.csv') as groceryData:
+        readData = csv.DictReader(groceryData)
         count = 0
         item = request.json['item']
         qty = request.json['quantity']
@@ -40,9 +40,9 @@ def edit(itemNo):
             count += 1
         dataList.insert(itemNo, { 'item' : item, 'quantity' : qty, 'purchased' : 'False'})
 
-    with open('data/groceries.csv', 'w') as data:
+    with open('data/groceries.csv', 'w') as groceryData:
         fieldnames = ['item', 'quantity', 'purchased']
-        writeData = csv.DictWriter(data, fieldnames = fieldnames)
+        writeData = csv.DictWriter(groceryData, fieldnames = fieldnames)
         writeData.writeheader()
         for row in dataList:
             writeData.writerow({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
@@ -55,8 +55,8 @@ def delete():
     dataDict = {
         "dataList" : []
     }
-    with open('data/groceries.csv') as data:
-        readData = csv.DictReader(data)
+    with open('data/groceries.csv') as groceryData:
+        readData = csv.DictReader(groceryData)
         count = 0
         itemNo = int(request.json['itemNo'])
         for row in readData:
@@ -64,9 +64,9 @@ def delete():
                 dataDict["dataList"].append({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
             count += 1
 
-    with open('data/groceries.csv', 'w') as data:
+    with open('data/groceries.csv', 'w') as groceryData:
         fieldnames = ['item', 'quantity', 'purchased']
-        writeData = csv.DictWriter(data, fieldnames = fieldnames)
+        writeData = csv.DictWriter(groceryData, fieldnames = fieldnames)
         writeData.writeheader()
         for row in dataDict["dataList"]:
             writeData.writerow({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
@@ -76,8 +76,8 @@ def delete():
 def markPurchased():
     dataList = []
     if request.method == "POST":
-        with open('data/groceries.csv') as data:
-            readData = csv.DictReader(data)
+        with open('data/groceries.csv') as groceryData:
+            readData = csv.DictReader(groceryData)
             count = 0
             itemNo = int(request.json['itemNo'])
             itemPurchased = []
@@ -89,16 +89,16 @@ def markPurchased():
                 count += 1
             dataList.insert(itemNo, { 'item' : itemPurchased[0]['item'], 'quantity' : itemPurchased[0]['quantity'], 'purchased' : 'True'})
         
-        with open('data/groceries.csv', 'w') as data:
+        with open('data/groceries.csv', 'w') as groceryData:
             fieldnames = ['item', 'quantity', 'purchased']
-            writeData = csv.DictWriter(data, fieldnames = fieldnames)
+            writeData = csv.DictWriter(groceryData, fieldnames = fieldnames)
             writeData.writeheader()
             for row in dataList:
                 writeData.writerow({ 'item' : row['item'], 'quantity' : row['quantity'], 'purchased' : row['purchased']})
         return 'Item purchased'
     else:
-        with open('data/groceries.csv') as data:
-            readData = csv.DictReader(data)
+        with open('data/groceries.csv') as groceryData:
+            readData = csv.DictReader(groceryData)
             dataList = []
             for row in readData:
                 if row['purchased'] == 'True':
