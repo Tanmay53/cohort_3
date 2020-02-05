@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class AllUsers extends React.Component {
   constructor(props) {
@@ -28,8 +29,15 @@ class AllUsers extends React.Component {
     this.state.users_data.map((user, index1) => {
       return (
         <tr key={index1}>
+          {console.log(this.props)}
           {Object.values(user).map((val, index2) => (
-            <td key={index2}>{val}</td>
+            <td key={index2}>
+              {index2 === 0 ? (
+                <Link to={`/users/show/${Number(val)}`}>{val}</Link>
+              ) : (
+                val
+              )}
+            </td>
           ))}
         </tr>
       );
@@ -49,9 +57,7 @@ class AllUsers extends React.Component {
               <thead className='thead-dark'>
                 <tr>{this.renderTableHeader()}</tr>
               </thead>
-              <tbody>
-                {this.renderTableData()}
-              </tbody>
+              <tbody>{this.renderTableData()}</tbody>
             </table>
           )}
         </div>

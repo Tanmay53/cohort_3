@@ -23,7 +23,7 @@ export default class Mobile extends React.Component {
 
         return(
             <div>
-                <h2>{this.props.h}</h2>
+                <h3 className="display-4">{this.props.h}</h3>
                 <ul>
                      <li>{this.props.ele}</li>
                 </ul>
