@@ -81,7 +81,7 @@ def show(user_id):
 
     return json.dumps(users_data[user_id-1])
 
-@app.route("/users/<int:user_id>", methods=["PATCH"])
+@app.route("/users/<int:user_id>", methods=["PUT"])
 def edit(user_id):
     users_data = read_file()
 
