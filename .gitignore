@@ -13,7 +13,7 @@
 *.rar
 *.tar
 *.zip
-*.csv
+# *.csv
 
 *.jpg
 *.jpeg
