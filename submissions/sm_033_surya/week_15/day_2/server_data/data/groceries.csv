@@ -1,0 +1,4 @@
+item,quantity,purchased,id
+table,1,True,0
+chairs,3,False,1
+laptop,1,False,2
