@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complex JSX</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <div>
+        <input type="text" id="input1" placeholder="enter input1 value here" />
+        <input type="text" id="input2" placeholder="enter input2 value here" />
+    </div>
+    <br>
+    <button id="add">Click here to add two inputs</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+        // var btn = document.getElementById("add")
+        
+        // console.log(sum)
+        function Sum() {
+    
+            let inp1 = Number(document.getElementById("input1").value);
+        let inp2 = Number(document.getElementById("input2").value);
+        let sum =inp1+inp2;
+            return (
+                <div>
+                    <h2>sum of the two inputs is {sum}</h2>
+                </div>
+            );
+        }
+        let btn = document.getElementById("add")
+        btn.addEventListener('click', function () {
+            ReactDOM.render(<Sum/>, document.querySelector('#root'));
+        })
+    </script>
+</body>
+
+</html>
