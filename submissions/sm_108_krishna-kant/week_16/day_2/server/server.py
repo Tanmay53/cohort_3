@@ -32,6 +32,7 @@ def get_users():
     per_page = request.args.get('per_page', default = 25, type = int)
     data = read_csv()
     total_pages = math.ceil(len(data["items"])/per_page)
+    print(total_pages)
     prev_page_end = (page - 1) * per_page
     curr_page_end = page * per_page
     item_to_send = data['items'][prev_page_end:curr_page_end]
