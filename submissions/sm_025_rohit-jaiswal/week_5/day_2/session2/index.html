@@ -1,0 +1,159 @@
+        <html>
+        <head>
+            <title>W5D2S2</title>
+            <style>
+            .updateForm {
+                height: 525px;
+                text-align: left;
+                width: 180px;
+                float: right;
+                color: white;
+                background-color: grey;
+
+            }
+            .buttons {
+                text-align: center;
+                background-color: coral;
+                color: white;
+            }
+            #tableData {
+                width: 900px;
+                display: flex;
+                flex-direction: column;
+            }
+            th {
+                border: 1px solid grey;
+                width: 100px;
+                text-align: center;
+                color: white;
+                background-color: coral;
+            }
+            td{
+                border: 1px solid grey;
+                width: 100px;
+                text-align: center;
+                color: grey;
+            }
+            .formInput {
+                float: left;
+                background-color: grey;
+                color: white;
+                height: 525px;
+            }
+            .formInput > div {
+                margin-top: 20px;
+            }
+            h1,h2{
+                text-align: center;
+            }
+            body {
+                display: flex;
+                font-family: monospace;
+                text-decoration: honeydew;
+            }
+            </style>
+        </head>
+
+        <body>
+            <!-- FORM to add -->
+            <div class="formInput">
+            <div>
+                <h2>
+                    Enter Data:
+                </h2>
+                <br>
+                <br>
+                <input type="text" id="prd" placeholder="Enter Product Name">
+            </div>
+            <div>
+                <input type="number" id="price" placeholder="Enter Price">
+            </div>
+            <div>
+                <input type="number" id="qty" placeholder="Decide Quantity">
+            </div>
+            <br>
+            <br>
+            <button onclick="addInputs()">Add Data to the table</button>
+            </div>
+
+            <!-- TABLE -->
+            <div id="tableData">
+                <h1 style="color: grey;">-----------------  <u>W5D2S2</u>  -----------------</h1>
+            <table>
+                <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                </tr>
+            </table>
+            </div>
+            <!-- SETTINGS -->
+            <div class="updateForm">
+                <h2>
+                    Settings:
+                </h2>
+                <br>
+                <br>
+            <div>
+                <input type="text" id="fsize" placeholder="Enter Font Size in px"><br >
+                <button onclick="textSize()">Change Font Size</button>
+            </div>
+            <br>
+            <div>
+                <input type="text" id="fcolor" placeholder="Enter Font Color"><br >
+                <button onclick="textColor()">Change Font Color</button>
+            </div>
+            <div>
+            <br>
+                <input type="text" id="bgcolor" placeholder="Enter Background Color">
+                <button onclick="bgColor()">Change Background Color</button>
+            </div>
+            </div>
+            <!-- Script Tag-->
+            <script>
+            function addInputs() {
+                var product = document.getElementById("prd").value;
+                var price = document.getElementById("price").value;
+                var qty = document.getElementById("qty").value;
+                var one = document.querySelector("table");
+                var trF = document.createElement("tr");
+                trF.innerHTML = "<td>" + product + "<td>" + price + "<td>" + qty;
+                one.appendChild(trF);
+                document.getElementById("prd").value = "";
+                document.getElementById("price").value = "";
+                document.getElementById("qty").value = "";
+            }
+            function textSize() {
+                var one = document.getElementById("fsize").value;
+                var tdF = document.querySelectorAll("td");
+                for (var i = 0; i < tdF.length; i++) {
+                var tdS = tdF[i];
+                tdS.style.fontSize = one;
+                }
+            }
+            function textColor() {
+                var one = document.getElementById("fcolor").value;
+                var tdF = document.querySelectorAll("td");
+                for (var i = 0; i < tdF.length; i++) {
+                var tdS = tdF[i];
+                tdS.style.color = one;
+                }
+            }
+            function bgColor() {
+                var one = document.getElementById("bgcolor").value;
+                var tr1 = document.querySelectorAll("tr");
+                for (var i = 2; i < tr1.length; i++) {
+                if (i % 2 == 0) {
+                    var tr2 = tr1[i];
+                    tr2.style.backgroundColor  = one;
+                }
+                }
+            }
+            var button = document.querySelectorAll("button");
+            for (var i = 0; i < button.length; i++) {
+                var btn = button[i];
+                btn.setAttribute("class", "buttons");
+            }
+            </script>
+        </body>
+        </html>

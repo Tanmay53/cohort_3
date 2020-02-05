@@ -1,0 +1,38 @@
+
+<html>
+<head>
+    <title>Exercise1</title>
+
+</head>
+<body>
+    <div id = "root"></div>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type ="text/babel">
+    // var title = React.createElement("h1",null,"My Todo List");
+    var name = "Gangi Reddy";
+    var age = "27";
+    var DOB = "13-05-1993";
+    var favorite_color  = "deeppink";
+        function App() {
+            return (<div>
+                        <h1>My Todo List</h1>
+                        <ul>
+                            <li>Cooking</li>
+                            <li>Cleaning</li>
+                            <li>coding</li>
+                            <li>Eating</li>
+                            <li>sleeping</li>
+                        </ul>
+                        <p>My name is {name}</p>
+                        <p>My age is {age}</p>
+                        <p>My Date of Birth is {DOB}</p>
+                        <p>My favorite color is {favorite_color}</p>
+                        
+                    </div>)
+        }
+        ReactDOM.render(<App />,document.getElementById('root'));
+    </script>
+</body>
+</html>
