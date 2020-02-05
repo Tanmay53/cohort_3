@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from "axios"
 import UserTable from "./UserTable"
 import PageButton from "./PageButton"
+import {Link} from "react-router-dom"
 
 
 
@@ -58,11 +59,12 @@ pageBtnClick=(e)=>{
         .then(res=>{this.setState({data:res.data.data, page:res.data.page})}
         )
 }
+
     render() {
         const {data, page,  total_pages, total_user} = this.state
         return (
             <div className="table-responsive">
-            <div className="bg-light d-flex">
+            <div className="bg-light row justify-content-right">
                 <div className="col-lg-4 col-md-4 col-6">
                     <h5>
                         Select Users per page
@@ -74,9 +76,13 @@ pageBtnClick=(e)=>{
                         <option value="20">20</option>
                     </select>
                 </div>
-
-            <button className="btn btn-dark">Total Users : {total_user}</button>
+            
+            <p className="col-4 mx-4 text-center text-white bg-dark">Total Users : {total_user}</p>
+            <Link className="btn btn-success " to="/create">
+                <h5>Add More users</h5>
+            </Link>
             </div>
+        
             <table className="table">
                 <thead className="bg-dark fixed-thead text-warning">
                     <tr>
@@ -85,6 +91,8 @@ pageBtnClick=(e)=>{
                         <td>Mobile</td>
                         <td>Email</td>
                         <td>age</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
                     </tr>
                 </thead>
     

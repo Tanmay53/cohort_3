@@ -13,7 +13,7 @@ app = Flask(__name__)
 def read_csv():
     try:
         items = list()
-        with open("/home/akamit21/coding/week_16/day_2/session_1/server/data/users.csv", "r") as csvfile:
+        with open("/home/akamit21/repos/cohort_3/submissions/sm_102_amit/week_16/day_2/session_1/server/data/users.csv", "r") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 items.append(dict(row))
