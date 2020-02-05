@@ -1,0 +1,34 @@
+id,country,continent_id
+1,India,1
+2,Pakistan,1
+3,Bangladesh,1
+4,China,1
+5,Nepal,1
+6,Bhutan,1
+7,SriLanka,1
+8,Japan,1
+9,South Korea,1
+10,North Korea,1
+11,Russia,1
+12,Egypt,2
+13,South Africa,2
+14,Zambia,2
+15,Sierra Leone,2
+16,South Sudan,2
+17,Great Britain,3
+18,Germany,3
+19,France,3
+20,Sweden,3
+21,Netherlands,3
+22,Italy,3
+23,Norway,3
+24,USA,4
+25,Canada,4
+26,Mexico,4
+27,Brazil,5
+28,Peru,5
+29,Chilli,5
+30,Uruguay,5
+31,Australia,6
+32,New Zealand,6
+33,Fiji,6

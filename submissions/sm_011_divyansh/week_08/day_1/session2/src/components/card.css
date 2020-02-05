@@ -1,0 +1,42 @@
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 48px;
+    border: 1px solid white;
+}
+
+.card{
+    height: 460px;
+    width: 420px;
+    border: 1px;
+}
+.container1{
+    height: 490px;
+    width: 600px;
+    background-color:purple;
+
+}
+.desc{
+    display: flex;
+    flex-flow: row wrap;
+    height: 130px;
+    border:1px solid white;
+
+}
+.flex-desc
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.Skills p 
+{
+     border: 1px solid white;
+     margin:2px;
+} 
+.protag {
+    background-color:yellow;
+    border-radius: 15px;
+    padding:2px;
+    color: black;
+}

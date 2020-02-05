@@ -7,13 +7,27 @@ import math
 
 app = Flask(__name__)
 
+# function to add data to csv file
+
+
+def append_csv(id, name, email, mobile, age):
+    try:
+        with open("/home/akamit21/repos/cohort_3/submissions/sm_102_amit/week_16/day_2/session_1/server/data/users.csv", "a") as csvfile:
+            fieldnames = ["_id", "name", "email", "mobile", "age"]
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writerow(
+                {"_id": id, "name": name, "email": email, "mobile": mobile, "age": age})
+        return True
+    except Exception as e:
+        return (e)
+
 # read csv file
 
 
 def read_csv():
     try:
         items = list()
-        with open("/home/akamit21/coding/week_16/day_2/session_1/server/data/users.csv", "r") as csvfile:
+        with open("/home/akamit21/repos/cohort_3/submissions/sm_102_amit/week_16/day_2/session_1/server/data/users.csv", "r") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 items.append(dict(row))
@@ -47,3 +61,16 @@ def get_user_list():
     users = read_csv()
     data = filter_data(users, page, size)
     return json.dumps(({"status": 200, "users": data["users"], "pages": data["pages"]}))
+
+# create route
+@app.route("/create", methods=["POST"])
+def add_item():
+    id = request.json["id"]
+    name = request.json["name"]
+    email = request.json["email"]
+    mobile = request.json["mobile"]
+    age = request.json["age"]
+    if append_csv(id, name, email, mobile, age):
+        return json.dumps({"status": 200, "message": name + " added ..."})
+    else:
+        return json.dumps({"status": 400, "message": name + " not added ..."})

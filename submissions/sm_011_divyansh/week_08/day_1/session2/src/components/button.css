@@ -1,0 +1,32 @@
+
+ button {
+     color: white;
+     border-radius: 13px;
+     margin:5px;
+     border: 1px solid white;
+     height: 18px;
+ }
+ .blue {
+     background-color: blue;
+ }
+ .orange {
+    background-color: orange;
+ }
+ .greenyellow {
+    background-color: greenyellow;
+}
+.pink {
+    background-color:pink;
+}
+.green {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
+.purple {
+    background-color: purple;
+ }
+ .grey {
+    background-color: grey;
+ }

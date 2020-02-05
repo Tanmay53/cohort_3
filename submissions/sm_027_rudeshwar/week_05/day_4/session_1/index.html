@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>index</title>
+  <style>
+    label {
+      /* Other styling... */
+      display: block;
+    }
+
+    .displayContainer {
+      display: block;
+      float: right;
+      padding-right: 30%;
+    }
+
+    p {
+      padding-top: 2%;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Click the button to add a new customer</h1>
+
+  <!-- <form action="" name="myform1" class="inputContainer"> -->
+
+  <!-- <div class="inputContainer">
+    <label for="fname">firstName</label>
+    <input type="text" id="fname">
+
+    <label for="lname">lastName</label>
+    <input type="text" id="lname">
+
+    <label for="dob">dateOfBirth</label>
+    <input type="text" id="dob">
+
+    <label for="bal">balance</label>
+    <input type="text" id="bal">
+
+    <label for="accNum">accountNumber</label>
+    <input type="text" id="accNum">
+
+    <label for="sharedAcc">sharedAccountHolders</label>
+    <input type="text" id="sharedAcc">
+
+    <label for="submitBtn">Submit Information</label>
+    <button id="submitBtn">Add customer</button>
+  </div> -->
+
+
+  <div class="allContainer">
+    <div class="displayContainer">
+      <h2>Person Display</h2>
+      <div class="paraContainer"></div>
+    </div>
+
+    <div class="inputContainer">
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" class="personInput" />
+
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" class="personInput" />
+
+      <label for="dateOfBirth">Date of Birth</label>
+      <input type="text" name="dateOfBirth" class="personInput" />
+
+      <label for="gender">balance</label>
+      <input type="text" name="balance" class="personInput" />
+
+      <label for="accountNumber">Account Number</label>
+      <input type="text" name="accountNumber" class="personInput" />
+
+      <label for="sharedAccountHolders">Shared Account Holders</label>
+      <input type="text" name="sharedAccountHolders" class="personInput" />
+
+      <label for="submit">Submit Information:</label>
+      <button name="submit" id='submitBtn'>Submit</button>
+
+      <label for="displayPeople">Print Customers</label>
+      <button name="displayPeople" id='displayBtn'>Print Customers</button>
+    </div>
+  </div>
+  <!-- **************************************************************************** -->
+
+      <script>
+
+        function Customer(firstName, lastName, dateOfBirth, balance, accountNumber, sharedAccountHolders) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.dateOfBirth = dateOfBirth;
+          this.balance = balance;
+          this.accountNumber = accountNumber
+          this.sharedAccountHolders = sharedAccountHolders;
+          this.getDetails = function () {
+            var output = ''
+            for (key in this) {
+              output += key + ":" + this[key] + "\n"
+              if (key == 'sharedAccountHolders') break;
+            }
+            return output
+          }
+        }
+
+        var customerArr = []//global empty array
+        function createCustomer() {
+          // e.preventDefault()
+          // customerArr.push(document.getElementById('fname').value)
+          // customerArr.push(document.getElementById('lname').value)
+          // customerArr.push(document.getElementById('dob').value)
+          // customerArr.push(document.getElementById('bal').value)
+          // customerArr.push(document.getElementById('accNum').value)
+          // customerArr.push(document.getElementById('sharedAcc').value)
+          var inputs = document.querySelectorAll('.personInput')
+          // console.log("customerArr", customerArr)
+          var newCustomer = new Customer()
+          // console.log("newCustomer", newCustomer)
+          var i = 0
+          for (key in newCustomer) {
+            // console.log("i values", i)
+            // console.log("key are", key)
+            if (newCustomer[key] == undefined) {
+              // console.log("******inside 1st if**********")
+              // console.log("newCustomer[key]", newCustomer[key])
+              if (key != 'sharedAccountHolders') {
+                // console.log("*********2nd if**********")
+                // console.log("newCustomer[key]", newCustomer[key])
+                // console.log("customerArr[i].value", inputs[i].value)
+                newCustomer[key] = inputs[i].value
+                // console.log("newCustomer[key]", newCustomer[key])
+              }
+              else {
+                // console.log("**********inside else*********")
+                // console.log("newCustomer[key]", newCustomer[key])
+                // console.log("customerArr[i].value", inputs[i].value.split(','))
+                newCustomer[key] = inputs[i].value.split(',')
+                // console.log("newCustomer[key]", newCustomer[key])
+                // console.log("customerArr[i].value.split('i')", inputs[i].value.split('i'))
+              }
+              inputs[i].value = ''
+              i++
+            }
+          }
+          // console.log("newCustomer", newCustomer)
+          // console.log("customerArr.push(newCustomer)", customerArr.push(newCustomer))
+          customerArr.push(newCustomer)
+        }
+        // console.log("*******outside for*********")
+
+
+        function displayDetails() 
+        {
+          var displayContainer = document.querySelector('.paraContainer')
+          // console.log("displayContainer", displayContainer)
+          displayContainer.innerHTML = ''
+
+          for (var i = 0; i < customerArr.length; i++) 
+          {
+            var displayPara = document.createElement('p')
+            displayPara.textContent = customerArr[i].getDetails()
+            displayContainer.appendChild(displayPara)
+          }
+        }
+        var submitBtn = document.querySelector('#submitBtn')
+        submitBtn.addEventListener('click', createCustomer)
+
+        var displayBtn = document.querySelector('#displayBtn')
+        displayBtn.addEventListener('click', displayDetails) // This is the listener for the display all people button
+
+      </script>
+</body>
+
+</html>
