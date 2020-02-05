@@ -10,15 +10,15 @@ def listing():
     with open('data/users.csv') as usersDb:
         fieldnames = ['id', 'name', 'email', 'mobile', 'age']
         readData = csv.DictReader(usersDb, fieldnames = fieldnames)
-        DictData = {
+        dictData = {
             'data': []
         }
 
         for row in readData:
             if row['id'] != "id":
-                DictData['data'].append({'id' : row['id'], 'name' : row['name'], 'email' : row['email'], 'mobile' : row['mobile'], 'age' : row['age']})
+                dictData['data'].append({'id' : row['id'], 'name' : row['name'], 'email' : row['email'], 'mobile' : row['mobile'], 'age' : row['age']})
 
-        return json.dumps(DictData)
+        return json.dumps(dictData)
 
 # create route
 @app.route('/users/create', methods = ['POST'])
@@ -88,5 +88,5 @@ def show(id):
         for row in readData:
             if int(row['id']) == id:
                 user.append({ 'id' : row['id'], 'name' : row['name'], 'email' : row['email'], 'mobile' : row['mobile'], 'age' : row['age'] })
-                
+
     return json.dumps(user)

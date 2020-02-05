@@ -1,7 +1,6 @@
 import React from 'react'
 import swal from 'sweetalert'
 import axios from "axios"
-import Users from "./Users"
 
 
 const deleteUser = (e)=>{
@@ -44,7 +43,6 @@ export default function UserTable({user}) {
             <td><button className="btn btn-warning">Edit</button></td>
             <td><button onClick={(e)=>{
               deleteUser(user.id)
-              ToggleChange(false)
             }} className="btn btn-danger">Delete</button></td>      
         </tr>
     )
