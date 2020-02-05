@@ -4,11 +4,16 @@ import AllUsers from './AllUsers';
 import AddUser from './AddUser';
 import ShowUser from './ShowUser';
 import EditUser from './EditUser';
+import DeleteUser from './DeleteUser';
 
 function Routes() {
   return (
     <React.Fragment>
       <Switch>
+        <Route
+          path='/users/delete/:id'
+          render={props => <DeleteUser {...props} />}
+        />
         <Route
           path='/users/edit/:id'
           render={props => <EditUser {...props} />}
