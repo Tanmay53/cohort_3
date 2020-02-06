@@ -6,6 +6,7 @@ import Axios from "axios";
 import Menubar from "./component/Menubar";
 import Home from "./component/Home";
 import List from "./component/List";
+import Add from "./component/Add";
 import NotFound from "./component/NotFound";
 
 class App extends Component {
@@ -70,6 +71,11 @@ class App extends Component {
               component={props => (
                 <List {...props} data={this.state} getParams={this.getParams} />
               )}
+            />
+            <Route
+              path="/users/create"
+              exact={true}
+              component={props => <Add {...props} fetchUsers={this.getUsers} />}
             />
             <Route path="*">
               <NotFound />
