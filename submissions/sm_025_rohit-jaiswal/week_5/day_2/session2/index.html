@@ -95,52 +95,36 @@
                 <br>
                 <br>
             <div>
-                <input type="text" id="fsize" placeholder="Enter Font Size in px"><br >
+                <input type="text" id="fSz" placeholder="Enter Font Size in px"><br >
                 <button onclick="textSize()">Change Font Size</button>
             </div>
             <br>
             <div>
-                <input type="text" id="fcolor" placeholder="Enter Font Color"><br >
+                <input type="text" id="fClr" placeholder="Enter Font Color"><br >
                 <button onclick="textColor()">Change Font Color</button>
             </div>
             <div>
             <br>
-                <input type="text" id="bgcolor" placeholder="Enter Background Color">
+                <input type="text" id="bgClr" placeholder="Enter Background Color">
                 <button onclick="bgColor()">Change Background Color</button>
             </div>
             </div>
             <!-- Script Tag-->
             <script>
             function addInputs() {
-                var product = document.getElementById("prd").value;
+                var product = document.getElementById("pro").value;
                 var price = document.getElementById("price").value;
                 var qty = document.getElementById("qty").value;
                 var one = document.querySelector("table");
                 var trF = document.createElement("tr");
                 trF.innerHTML = "<td>" + product + "<td>" + price + "<td>" + qty;
                 one.appendChild(trF);
-                document.getElementById("prd").value = "";
+                document.getElementById("pro").value = "";
                 document.getElementById("price").value = "";
                 document.getElementById("qty").value = "";
             }
-            function textSize() {
-                var one = document.getElementById("fsize").value;
-                var tdF = document.querySelectorAll("td");
-                for (var i = 0; i < tdF.length; i++) {
-                var tdS = tdF[i];
-                tdS.style.fontSize = one;
-                }
-            }
-            function textColor() {
-                var one = document.getElementById("fcolor").value;
-                var tdF = document.querySelectorAll("td");
-                for (var i = 0; i < tdF.length; i++) {
-                var tdS = tdF[i];
-                tdS.style.color = one;
-                }
-            }
             function bgColor() {
-                var one = document.getElementById("bgcolor").value;
+                var one = document.getElementById("bgClr").value;
                 var tr1 = document.querySelectorAll("tr");
                 for (var i = 2; i < tr1.length; i++) {
                 if (i % 2 == 0) {
@@ -154,6 +138,23 @@
                 var btn = button[i];
                 btn.setAttribute("class", "buttons");
             }
+            function textSize() {
+                var one = document.getElementById("fSz").value;
+                var tdF = document.querySelectorAll("td");
+                for (var i = 0; i < tdF.length; i++) {
+                var tdS = tdF[i];
+                tdS.style.fontSize = one;
+                }
+            }
+            function textColor() {
+                var one = document.getElementById("fClr").value;
+                var tdF = document.querySelectorAll("td");
+                for (var i = 0; i < tdF.length; i++) {
+                var tdS = tdF[i];
+                tdS.style.color = one;
+                }
+            }
+
             </script>
         </body>
         </html>
