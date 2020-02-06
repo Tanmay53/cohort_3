@@ -1,0 +1,41 @@
+.bord {
+    border:1px solid black;
+    padding:5px;
+    margin:5px;
+}
+.container {
+    width:600px;
+    height:600px;
+    background-color: rgb(66, 47, 192);
+    padding-top:50px;
+    margin-right:700px;
+}
+.card {
+     width:400px;
+    /* height:400px; */
+    background-color: rgb(84, 117, 180);
+    margin-left:80px;
+    
+}
+#blue {
+    background-color: rgb(24, 146, 194);
+    padding:8px;
+    text-align:center;
+    margin-right:10px;
+}
+#cen {
+    border:2px solid rgb(75, 240, 231);
+    padding:4px;
+}
+.badge {
+    width:50px;
+    padding-top: 5px;
+}
+.row1 {
+    background-color: cadetblue;
+}
+#img {
+    height:100px;
+    width:100px;
+    margin-left:150px;
+}
