@@ -1,0 +1,5 @@
+uinput=input("provide input here : ")
+uinput=list(uinput.split(" "))
+uinput=set(uinput)
+output=len(uinput)
+print("number of unique items => ",output)
