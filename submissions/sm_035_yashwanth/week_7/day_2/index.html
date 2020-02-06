@@ -2,33 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>index.html</title>
   </head>
   <body>
-    <input type="text" placeholder="firstname" id="firstname" />
-    <input type="text" placeholder="lastname" id="lastname" />
-    <input type="text" placeholder="username" id="username" />
-    <input type="text" placeholder="password" id="password" />
-    <input type="text" placeholder="email" id="email" />
-    <input type="text" placeholder="address" id="address" />
-    <input type="text" placeholder="phoneno" id="phoneno" />
-    <select name="" id="selct">
-      <option value="admin">admin</option>
-      <option value="user">user</option>
-    </select>
-    <button id="btn_sub">submit</button>
-
-    <select id="userInform"> </select>
-    <div>
-      <div id="use">user</div>
-      <div id="admin">admin</div>
+    <div class="row">
+      <div class="col-2"></div>
+        <div class="col-4">
+          <h1 class="text-center text-white bg-dark mt-3">Enter details to create account</h1>
+            <form>
+                <div class="form-group">
+                    <label for="">FirstName(Optional):</label>
+                    <input type="text" class="form-control" id="firstname">
+                    <label for="">LastName(Optional):</label>
+                    <input type="text" class="form-control" id="lastname">
+                    <label for="">Username:</label>
+                    <input type="text" class="form-control" id="username">
+                    <label for="">Password:</label>
+                    <input type="text" class="form-control" id="password">
+                    <label for="">Email:</label>
+                    <input type="text" class="form-control" id="email">
+                    <label for="">Address(Optional):</label>
+                    <input type="text" class="form-control" id="address">
+                    <label for="">Phone.no (Optional):</label>
+                    <input type="text" class="form-control" id="phoneNo">
+                    <label for="">SelectType:</label>
+                    <select name="" id="type" class="custom-select">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+            </form>
+            <div class="d-flex justify-content-center">
+              <button id="btn_submit" type="button" class="btn btn-lg bg-dark text-white">Submit</button>
+          </div>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      crossorigin="anonymous"
-    ></script>
+    <div class="col-1"></div>
+    <div class="col-4">
+      <h3 class="mt-5 p-1 text-white bg-dark">select user type:</h3>
+      <select id="typeofUser" class="custom-select">
+        <option value="all" id="all">all</option>
+        <option value="admin"  id="allAdmin">admin</option>
+        <option value="user" id="allUsers">user</option>
+     </select>
+        <h3 class="mt-5 text-white bg-dark ">sort user by ascending or descending order:</h3>
+        <select id="sortingUser" class="custom-select">
+        <option id="acc" value="acc">Accending order</option>
+        <option id="dec" value="des">Decending order</option>
+    </select>
+    </div>
+    </div>
+    
+
+  <div class="container mt-3">
+  <div class="row">
+    <div class="col">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+          <tr>
+              <th>First Name:</th>
+              <th>Last Name:</th>
+              <th>Username:</th>
+              <th>Password:</th>
+              <th>Email:</th>
+              <th>Address:</th>
+              <th>Phone No:</th>
+              <th>User Type:</th>
+              <th>Delete option:</th>
+          </tr>
+          <tbody id="display">
+          </tbody>
+      </thead>
+  </table>
+</div>
+</div>
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>
   </body>
