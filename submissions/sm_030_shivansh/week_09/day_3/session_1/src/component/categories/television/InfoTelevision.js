@@ -1,5 +1,7 @@
 import React from 'react';
-const verbose = 0;
+import { Redirect, Route } from "react-router-dom";
+//developer mode
+const verbose = 1;
 const InfoTelevision = (props) => {
 
 
@@ -9,12 +11,22 @@ const InfoTelevision = (props) => {
         console.log("InfoTV", props);
         console.log("InfoTV", props.match.params.id);
         console.log("InfoTV", props.data);
+        console.log("Info TV islogged", props.islogged);
         console.log(productObj);
     }
 
 
     const specification = productObj.description.map((ele) => <li>{ele}</li>)
 
+    //function  to add a product to  the cart
+    const addToCart = () => {
+        console.log("clicked")
+
+        //         if (props.islogged)
+        //     return <InfoTelevision />
+        // else
+        //     return <Redirect to="/component/login" />
+    }
 
     return (
         <div>
@@ -32,7 +44,7 @@ const InfoTelevision = (props) => {
                         {specification}
                     </ul>
                     <div className="text-center m-3">
-                        <button className="btn btn-lg  btn-danger">Add to Cart</button>
+                        <button className="btn btn-lg  btn-danger" onClick={addToCart}>Add to Cart</button>
                     </div>
 
                 </div>

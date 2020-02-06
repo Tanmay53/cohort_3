@@ -1,0 +1,34 @@
+.mainDiv {
+    display: grid;
+    grid-template-columns: 140px 140px;
+    grid-gap: 20px;
+    text-align: center;
+}
+.mainDiv div {
+    border-radius: 14px;
+    padding: 4px;
+}
+#child1 {
+    background: rgb(211, 30, 24);
+}
+#child2 {
+    background: rgb(125, 226, 116);
+}
+#child3 {
+    background: rgb(182, 100, 237);
+}
+#child4 {
+    background: rgb(102, 72, 173);
+}
+#child5 {
+    background: rgb(16, 131, 6);
+}
+#child6 {
+    background: rgb(88, 146, 105);
+}
+#child7 {
+    background: rgb(147, 155, 170);
+}
+#child8 {
+    background: rgb(237, 178, 100);
+}
