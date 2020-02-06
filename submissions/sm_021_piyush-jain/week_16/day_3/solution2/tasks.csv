@@ -1,0 +1,6 @@
+id task Checklist_id Task_id
+1  SQL     1|1         1|1|1
+2  Crud    2|1         2|2|1
+3  React   3|2         3|3|2
+4  Redux   4|3         4|4|3
+5  React   5|4         5|5|4
