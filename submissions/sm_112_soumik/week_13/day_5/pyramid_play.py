@@ -20,7 +20,7 @@ def pyramid_pattern(rows):
 pyramid = pyramid_pattern(rows)
 for items in pyramid:
     print(items)
-
+print()
 # inverse pyramid
 print("Inverse Pyramid :")
 for items in pyramid[::-1]:
@@ -30,13 +30,4 @@ for items in pyramid[::-1]:
 print(".....rhombus")
 print()
 
-
-rhombus = []
-for items in pyramid[:len(pyramid)-1]:
-    rhombus.append(items)
-
-for items in pyramid[::-1]:
-    rhombus.append(items)
-
-for lines in rhombus:
-    print(lines)
+            print("j is", j)
