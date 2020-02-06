@@ -1,15 +1,6 @@
-## Week 16 Day 4
+# Week 16 Day 4
 
-Submission folder `submissions/<your_folder>/week_16/day_4/session_1`
-
-https://github.com/masai-school/full-stack-dev-1910/blob/master/week_16/day_3/coding_1.md
-
-- Write the queries for the schema designed in the previous session
-- Fill the queries in the space provide, one query per line
-
-**NOTE: Test the queries in your machine before submission**
-
-### FSD.SQL.2.1 (Continents, Countries & Cities)
+## FSD.SQL.2.1 (Continents, Countries & Cities)
 
 **Create Database**
 
@@ -90,7 +81,7 @@ DROP TABLE continent, country, city;
 DROP DATABASE world;
 ```
 
-### FSD.SQL.2.2 (User Checklists)
+## FSD.SQL.2.2 (User Checklists)
 
 **Create Database**
 
