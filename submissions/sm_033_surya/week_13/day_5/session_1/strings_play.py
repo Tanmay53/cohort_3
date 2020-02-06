@@ -1,6 +1,6 @@
 input_string = "        Mai   S a    --       i"
-Capitsl_alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-Small_alphabets = "abcdefghijklmnopqrstuvwxyz"
+capitsl_alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+small_alphabets = "abcdefghijklmnopqrstuvwxyz"
 
 
 def camelcase(input_string):
@@ -16,15 +16,15 @@ def camelcase(input_string):
                 k += 1
             j = k
             k = 0
-            if input_string[j] in Capitsl_alphabets:
+            if input_string[j] in capitsl_alphabets:
                 out_str = out_str + input_string[j]
             else:
-                temp = Small_alphabets.index(input_string[j])
-                out_str = out_str + Capitsl_alphabets[temp]
+                temp = small_alphabets.index(input_string[j])
+                out_str = out_str + capitsl_alphabets[temp]
         else:
-            if input_string[j] in Capitsl_alphabets:
-                temp2 = Capitsl_alphabets.index(input_string[j])
-                out_str = out_str+Small_alphabets[temp2]
+            if input_string[j] in capitsl_alphabets:
+                temp2 = capitsl_alphabets.index(input_string[j])
+                out_str = out_str+small_alphabets[temp2]
             else:
                 out_str = out_str+input_string[j]
         j += 1
@@ -46,9 +46,9 @@ def string_play(input_string, symbol):
             k = 0
             out_str = out_str + symbol
         else:
-            if input_string[j] in Capitsl_alphabets:
-                temp2 = Capitsl_alphabets.index(input_string[j])
-                out_str = out_str+Small_alphabets[temp2]
+            if input_string[j] in capitsl_alphabets:
+                temp2 = capitsl_alphabets.index(input_string[j])
+                out_str = out_str+small_alphabets[temp2]
             else:
                 out_str = out_str+input_string[j]
         j += 1

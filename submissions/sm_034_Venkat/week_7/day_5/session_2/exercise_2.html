@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exercise_2</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+        //Write your code below this line
+        const toDoTasksArr = ["Eating", "Coding", "Sleeping", "Watching Movies And You Tube", "Obseving Outside"]
+        const myInfoObject = {
+            Name: "venkat",
+            Age: "24",
+            DateOfBirth: "25-06-1995",
+            FavoriteColor: "Green"
+        }
+        const element = (<div>
+            <h2>My Todo List</h2>
+            <ol>
+                <li>{toDoTasksArr[0]}</li>
+                <li>{toDoTasksArr[1]}</li>
+                <li>{toDoTasksArr[2]}</li>
+                <li>{toDoTasksArr[3]}</li>
+                <li>{toDoTasksArr[4]}</li>
+            </ol>
+            <p>Name: {myInfoObject.Name} ; Age : {myInfoObject.Age} ; Date Of Birth: {myInfoObject.DateOfBirth}  ; Favorite Color: {myInfoObject.FavoriteColor} </p>
+        </div>)
+        const path = document.getElementById('root')
+        ReactDOM.render(element, path)
+    </script>
+</body>
+
+</html>

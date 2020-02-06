@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>W7D4S2-Car</title>
+    <style>
+        #carDetails div {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body style="background: rgb(92, 139, 141);">
+    <div class="container-fluid p-2">
+        <div id="carDetails" class="d-flex justify-content-between flex-wrap border border-success">
+            <div>Name : <input type="text" name="car" id="carName" placeholder="Car Name"></div>
+            <div> Model : <input type="text" name="model" id="carModel" placeholder="Car Model"></div>
+            <div>Top Speed : <input type="number" name="topSpeed" id="carTopSpeed" placeholder="Speed"></div>
+            <!-- <div>Avg Speed : <input type="number" name="avgSpeed" id="carAvgSpeed" placeholder="Averege Speed"></div>
+            <div> Distance : <input type="number" name="dist" id="carDist" placeholder="Distance Traveled"></div>
+            <div> Trips : <input type="number" name="trips" id="carTrips" placeholder="Trips"></div> -->
+            <div><button type="submit" id="carSubmit">Submit</button></div>
+            
+        </div>
+     
+        <div class="border border-primary p-2 mt-3">
+            <div class="ml-4">
+                <select name="cars" id="selectedCarForTrip" style="background: green; border-radius: 5px;padding: 3px;">
+                </select>
+            </div>
+
+            <div class=" border ml-2">
+                <div class="row p-2">
+                    <div class="col">Distance</div>
+                    <div class="col">
+                        <input type="number" name="distance" id="tripDist" placeholder="Trip Distance">
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col">Draving Time</div>
+                    <div class="col">
+                        <input type="number" name="time" id="tripTime" placeholder="Trip Time">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button type="submit" id="tripSubmit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-3 d-flex">
+            <select name="cars" id="selectedCarToShowStatus" style="background: green; border-radius: 5px;">
+            </select>
+            <button type="button" class="ml-2 mr-4 btn-success rounded" id="statusBtn">Show Status</button>
+            <button type="button" class="ml-4 btn-success rounded" id="showAllTripsBtn">Show all Rides of all Cars</button>
+        </div>
+        <div id="statusDiv"></div>
+        <div id="allTripsDiv"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
