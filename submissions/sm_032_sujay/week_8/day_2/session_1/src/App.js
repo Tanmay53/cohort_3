@@ -2,17 +2,13 @@ import React from 'react';
 import './App.css';
 import RestaurantDetails from "./components/Restaurant/RestaurantDetails"
 
-
-
-
-
 class App extends React.Component{
 
   constructor(props){
     super(props)
     this.state ={
          details:  [
-        {name:'Punjab Bistro',costfor2:'2500',cuisines:['Indian,Italian,Punjabi,Afghani'],rating:'5',reviews:'2000'},
+        {name:'Punjab Bistro',costfor2:'2500',cuisines:['Indian,Italian,Punjabi,Chineese'],rating:'5',reviews:'2000'},
         {name:'Toit',costfor2:'2200',cuisines:['brewery,snacks,italian,mexican'],rating:'4.8',reviews:'1800',},
         {name:'Loft',costfor2:'2000',cuisines:['chinese,mexican,italian'],rating:'4.7',reviews:'1500',},
         {name:'Sheraton',costfor2:'4000',cuisines:['continental,italian,indian'],rating:'4.6',reviews:'1200',},
