@@ -112,4 +112,4 @@ def delete(user_id):
 
     write_to_file(users_data, "w")
 
-    return json.dumps(read_file())
+    return "User deleted successfully"
