@@ -1,16 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { total } from "../redux/actions"
 
 class Total extends React.Component{
     constructor(props){
         super(props)
     }
-    // componentDidUpdate=()=>{
-    //     this.props.total()
-    // }
     render(){
-        // this.props.total()
         return(
             <div>
                 <div>
@@ -25,13 +20,8 @@ class Total extends React.Component{
 const mapStateToProps = state=>{
    return {num: state.num}
 }
-const mapDispatchToProps = dispatch=>{
-    return {
-        total:()=>dispatch(total())
-    }
-}
+
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+    mapStateToProps
 )(Total)
