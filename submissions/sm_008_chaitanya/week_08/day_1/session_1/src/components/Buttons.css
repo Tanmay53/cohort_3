@@ -1,0 +1,38 @@
+.main{
+    display:grid;
+    grid-template-rows:repeat(4,50px);
+    grid-template-columns:repeat(2,180px);
+    grid-gap:15px;
+    padding:10px;
+    text-align:center; 
+}
+
+.main button{
+    font-size:18px;
+    border-radius:50px;
+    color:white;
+}
+.blue{
+    background:blue; 
+}
+.info{
+    background:slategray;
+}
+.orange{
+    background:orange;
+}
+.red{
+    background:red;
+}
+.green{
+    background:green;
+}
+.purple{
+    background:purple;
+}
+.pink{
+    background:palevioletred;
+}
+.brown{
+    background:brown;
+}

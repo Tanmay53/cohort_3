@@ -1,0 +1,236 @@
+[
+    {
+        "id": "001",
+        "name": "Capcicum",
+        "UUID":"12345678123456781234567812345678",
+        "price": "40",
+        "description":"Capsicum, the pepper, is a genus of flowering plants in the nightshade family Solanaceae. Its species are native to the Americas, where they have been cultivated for thousands of years. Peppers are cultivated worldwide and used in many cuisines.",
+        "img": "https://images.unsplash.com/photo-1526470498-9ae73c665de8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetables"
+    },
+    {
+        "id": "002",
+        "name": "LIme Orange",
+        "UUID":"1234567812345678123456781298645678",
+        "price": "40",
+        "description":"A lime (from French lime, from Arabic līma, from Persian līmū is a citrus fruit, which is typically round, green in color, 3–6 centimetres (1.2–2.4 in) in diameter, and contains acidic juice vesicles.",
+        "img": "https://images.unsplash.com/photo-1571211905393-6de67ff8fb61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    },
+    {
+        "id": "003",
+        "name": "Green Apple",
+        "UUID":"12345678156778123456781298645678",
+        "price": "90",
+        "description":"Green apples have a high fiber content which helps in increasing the body's metabolism. While consuming an apple, make sure that you're not tossing the peel in the trash. Consuming apple with its peel improves the overall health. Due to its high fiber content, apple helps in detoxification process. It keeps the liver and digestive system away from harmful elements.",
+        "img": "https://images.unsplash.com/photo-1464374288807-174911d4adb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    },
+    {
+        "id": "004",
+        "name": "Mango",
+        "UUID":"12345678156776781298645678",
+        "price": "90",
+        "description":"A mango is a juicy stone fruit (drupe) produced from numerous species of tropical trees belonging to the flowering plant genus Mangifera, cultivated mostly for their edible fruit.",
+        "img": "https://images.unsplash.com/photo-1534723570441-4c448d1010e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    },
+    {
+        "id": "005",
+        "name": "Fish",
+        "UUID":"123456778123456781298645678",
+        "price": "93",
+        "description":"Many species of fish are consumed as food in virtually all regions around the world. Fish has been an important source of protein and other nutrients for humans throughout history.",
+        "img": "https://images.unsplash.com/photo-1472721001698-bec7e575837d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Non-veg"
+    },
+    {
+        "id": "006",
+        "name": "Cheeries",
+        "UUID":"123456781567781234567812986678",
+        "price": "93",
+        "description":"A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit) are obtained from cultivars of several species, such as the sweet Prunus avium and the sour Prunus cerasus. The name 'cherry' also refers to the cherry tree and its wood, and is sometimes applied to almonds",
+        "img": "https://images.unsplash.com/photo-1464374288807-174911d4adb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    },
+    {
+        "id": "007",
+        "name": "Banana",
+        "UUID":"12345678156778123456781645678",
+        "price": "93",
+        "description":"A banana is an edible fruit – botanically a berry[1][2] – produced by several kinds of large herbaceous flowering plants in the genus Musa.[3] In some countries, bananas used for cooking may be called, distinguishing them from dessert bananas. The fruit is variable in size, color, and firmness, but is usually elongated and curved, with soft flesh rich in starch covered with a rind, which may be green, yellow, red, purple, or brown when ripe. ",
+        "img": "https://images.unsplash.com/photo-1529737902881-35c2748ca59a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    },
+    {
+        "id": "008",
+        "name": "Cheery",
+        "UUID":"12345678156778123456781298645678",
+        "price": "93",
+        "description":"A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe (stone fruit) are obtained from cultivars of several species, such as the sweet Prunus avium and the sour Prunus cerasus. The name 'cherry' also refers to the cherry tree and its wood, and is sometimes applied to almonds",
+        "img": "https://images.unsplash.com/photo-1571126558342-f20424cfb38b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    },
+    {
+        "id": "009",
+        "name": "Lemon",
+        "UUID":"12345678156778123456781294567890",
+        "price": "20",
+        "description":"The lemon, Citrus limon (L.) Osbeck, is a species of small evergreen tree in the flowering plant family Rutaceae, native to South Asia, primarily North eastern India.  tree's ellipsoidal yellow fruit is used for culinary and non-culinary purposes throughout the world, primarily for its juice, which has both culinary and cleaning uses",
+        "img": "https://images.unsplash.com/photo-1498060059232-54fd57716ac6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetable"
+    },
+    {
+        "id": "010",
+        "name": "Tomato",
+        "UUID":"123456781567781234567812986478",
+        "price": "50",
+        "description":"The tomato is the edible, often red, berry of the plant Solanum lycopersicum,[2][1] commonly known as a tomato plant. The species originated in western South America and Central America.[2][3] The Nahuatl (Aztec language) word tomatl gave rise to the Spanish word tomate, from which the English word tomato derived",
+        "img": "https://images.unsplash.com/flagged/photo-1579410137879-fb3835b4f2eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetable"
+    },
+    {
+        "id": "011",
+        "name": "Orange",
+        "UUID":"12345678156778123456781298645678",
+        "price": "90",
+        "description":"The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae, native to China.[1] It is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange.",
+        "img": "https://images.unsplash.com/photo-1519609511997-d8ef5b010fba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    },
+    {
+        "id": "012",
+        "name": "Beans",
+        "UUID":"12345670987987683456781298645678",
+        "price": "30",
+        "description":"A bean is the seed of one of several genera of the flowering plant family Fabaceae, which are used for human or animal food. They are a part of the vegetable family,[1]and can be cooked in many different ways,[2] including boiling, frying, and baking, and are used in several traditional dishes throughout the world.",
+        "img": "https://images.unsplash.com/uploads/141143339879512fe9b0d/f72e2c85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetable"
+    },
+    {
+        "id": "013",
+        "name": "Brown chestnut",
+        "UUID":"123458156778123456781298645678",
+        "price": "200",
+        "description":"The chestnuts are a group of eight or nine species of deciduous trees and shrubs in the genus Castanea, in the beech family Fagaceae. They are native to temperate regions of the Northern Hemisphere. The name also refers to the edible nuts they produce.",
+        "img": "https://images.unsplash.com/photo-1573851552153-816785fecf4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    },
+    {
+        "id": "014",
+        "name": "Onion",
+        "UUID":"1234876543567456789087654323456789",
+        "price": "85",
+        "description":"The onion (Allium cepa L., from Latin cepa onion, also known as the bulb onion or common onion, is a vegetable that is the most widely cultivated species of the genus Allium. Its close relatives include the garlic, shallot, leek, chive,[2] and Chinese onion.",
+        "img": "https://images.unsplash.com/photo-1467019972079-a273e1bc9173?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetable"
+    },
+    {
+        "id": "015",
+        "name": "Cucumber",
+        "UUID":"12348765435674567890823456789",
+        "price": "25",
+        "description":"Cucumber (Cucumis sativus) is a widely cultivated plant in the gourd family, Cucurbitaceae. It is a creeping vine that bears cucumiform fruits that are used as vegetables. There are three main varieties of cucumber: slicing, pickling, and seedless. Within these varieties, several cultivars have been created. In North America, the term wild cucumber refers to plants in the genera Echinocystis and Marah, but these are not closely related. ",
+        "img": "https://images.unsplash.com/flagged/photo-1579410137904-03cda8069b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetable"
+    },
+    {
+        "id": "015",
+        "name": "cabbage",
+        "UUID":"1287654367456789087654323456789",
+        "price": "40",
+        "description":"Cabbage (comprising several cultivars of Brassica oleracea) is a leafy green, red (purple), or white (pale green) biennial plant grown as an annual vegetable crop for its dense-leaved heads. It is descended from the wild cabbage, B. oleracea var. oleracea, and belongs to the cole crops or brassicas, meaning it is closely related to broccoli and cauliflower (var. botrytis); Brussels sprouts (var. gemmifera); and savoy cabbage",
+        "img": "https://images.unsplash.com/photo-1575616192730-f8dd6c067b08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetable"
+    },
+    {
+        "id": "016",
+        "name": "Pomegranite",
+        "UUID":"12348765435674567890876543234589",
+        "price": "90",
+        "description":"The fruit is typically in season in the Northern Hemisphere from September to February,[3] and in the Southern Hemisphere from March to May. As intact sarcotestas or juice, pomegranates are used in baking, cooking, juice blends, meal garnishes, smoothies, and alcoholic beverages, such as cocktails and wine.",
+        "img": "https://images.unsplash.com/photo-1541344999736-83eca272f6fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    },
+    {
+        "id": "017",
+        "name": "Garlic",
+        "UUID":"12348765437456789087654323456789",
+        "price": "15",
+        "description":"Garlic (Allium sativum) is a species in the onion genus, Allium. Its close relatives include the onion, shallot, leek, chive, and Chinese onion.Garlic is native to Central Asia and northeastern Iran, and has long been a common seasoning worldwide, with a history of several thousand years of human consumption and use",
+        "img": "https://images.unsplash.com/photo-1536862096787-ff035b157d82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetable"
+    },
+    {
+        "id": "018",
+        "name": "Brinjal",
+        "UUID":"12348876435674567887654323456789",
+        "price": "60",
+        "description":"Most commonly purple, the spongy, absorbent fruit is used in several cuisines. Although often considered a vegetable, it is a berry by botanical definition. As a member of the genus Solanum, it is related to tomato and potato. Like the tomato, its skin and seeds can be eaten, but, like the potato, it is usually eaten cooked. Eggplant is nutritionally low in macronutrient and micronutrient content, but the capability of the fruit to absorb oils and flavors into its flesh through cooking expands its use in the culinary arts.",
+        "img": "https://images.unsplash.com/photo-1534868234895-c3c2a2aadc2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetable"
+    },
+    {
+        "id": "019",
+        "name": "Potatoes",
+        "UUID":"1234876543567456789087654323456789",
+        "price": "40",
+        "description":"The potato is a root vegetable native to the Americas, a starchy tuber of the plant Solanum tuberosum, and the plant itself, a perennial in the family Solanaceae.Wild potato species can be found throughout the Americas, from the United States to southern Chile.",
+        "img": "https://images.unsplash.com/photo-1566055803687-0665ef48df90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Vegetable"
+    },
+    {
+        "id": "020",
+        "name": "Indian Egg",
+        "UUID":"1234876567456789087654323456789",
+        "price": "90",
+        "description":"Green apples have a high fiber content which helps in increasing the body's metabolism. While consuming an apple, make sure that you're not tossing the peel in the trash. Consuming apple with its peel improves the overall health. Due to its high fiber content, apple helps in detoxification process. It keeps the liver and digestive system away from harmful elements.",
+        "img": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Non-veg"
+    },
+    {
+        "id": "021",
+        "name": "Chicken",
+        "UUID":"1234876547456789087654323456789",
+        "price": "220",
+        "description":"Chicken is the most common type of poultry in the world.[1] Owing to the relative ease and low cost of raising them in comparison to animals such as cattle or hogs, chickens have become prevalent throughout the cuisine of cultures around the world, and their meat has been variously adapted to regional tastes.",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Chickens_in_market.jpg/220px-Chickens_in_market.jpg",
+        "category":"Non-veg"
+    },
+    {
+        "id": "022",
+        "name": "Prawn",
+        "UUID":"12346547456789087654323456789",
+        "price": "250",
+        "description":"Prawn is a common name for small aquatic crustaceans with an exoskeleton and ten legs (which is a member of the order decapoda), some of which can be eaten",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Penaeus_monodon.jpg/220px-Penaeus_monodon.jpg",
+        "category":"Non-veg"
+    },
+    {
+        "id": "023",
+        "name": "Meat",
+        "UUID":"1234877456789087654323456789",
+        "price": "520",
+        "description":"Meat is animal flesh that is eaten as food.[1] Humans have hunted and killed animals for meat since prehistoric times. The advent of civilization allowed the domestication of animals such as chickens, sheep, rabbits, pigs and cattle. This eventually led to their use in meat production on an industrial scale with the aid of slaughterhouses.",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/FoodMeat.jpg/220px-FoodMeat.jpg",
+        "category":"Non-veg"
+    },
+    {
+        "id": "024",
+        "name": "Crab",
+        "UUID":"12348747456789087654323456789",
+        "price": "420",
+        "description":"Crab meat or crabmeat is the meat found within a crab. It is used in many cuisines across the world, prized for its soft, delicate and sweet taste. Crab meat is low in fat and contains around 340 kJ (82 kcal) per 85-gram (3 oz) serving. Brown crab (Cancer pagurus), blue crabs (Callinectes sapidus), blue swimming crabs (Portunus pelagicus), and red swimming crabs (Portunus haanii) are among the most commercially available species of crabmeat globally",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Cancer_pagurus.jpg/250px-Cancer_pagurus.jpg",
+        "category":"Non-veg"
+    },
+    {
+        "id": "025",
+        "name": "Grappes",
+        "UUID":"1236547456789087654323456789",
+        "price": "100",arraydata
+        "description":"A grape is a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis.Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, grape juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil. Grapes are a non-climacteric type of fruit, generally occurring in clusters.",
+        "img": "https://images.unsplash.com/photo-1578903016352-f2d7f3940d03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "category":"Fruit"
+    }
+]

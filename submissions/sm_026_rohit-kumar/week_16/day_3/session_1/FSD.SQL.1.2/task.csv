@@ -1,0 +1,19 @@
+task_id,checklist_id,task_name
+1,1,Gym Fee
+2,1,Gym Kit
+3,1,Gym Towel
+4,2,Chetan Bhagat
+5,2,Algorithms
+6,2,Novels
+7,2,Jokes
+8,3,Running
+9,3,Joggin
+10,3,Squats
+11,3,Cycling
+12,3,Jumping
+13,5,Physical Health
+14,5,Mental Health
+15,5,Studies
+16,5,Skills
+17,5,Conversation
+18,5,Networking
