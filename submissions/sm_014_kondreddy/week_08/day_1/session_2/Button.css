@@ -1,0 +1,44 @@
+#blue {
+width:100px;
+}
+#lightblue {
+width:100px;
+
+}
+#orange {
+background-color: darkorange;
+width:100px;
+
+}
+#brown {
+background-color:rgb(223, 83, 83);
+width:100px;
+
+}
+#green {
+background-color: lawngreen;
+width:100px;
+
+}
+#purple {
+background-color: rgb(95, 95, 165);
+width:100px;
+
+}
+#pink {
+background-color: violet;
+width:100px;
+
+}
+#gold {
+background-color: goldenrod;
+width:100px;
+
+}
+.badge {
+    margin:10px;
+
+}
+
+
+    
