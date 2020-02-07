@@ -10,6 +10,8 @@ import Stores from "./component/Stores";
 import Faq from "./component/Faq";
 import Career from "./component/Career";
 import NotFound from "./component/NotFound";
+import Cart from "./component/Cart";
+import Login from "./component/Login";
 
 import Accesories from "./component/categories/accessories/Accessories";
 import InfoAccesories from "./component/categories/accessories/InfoAccessories";
@@ -24,6 +26,8 @@ import InfoGaming from "./component/categories/gaming/InfoGaming";
 import Television from "./component/categories/television/Television";
 import InfoTelevision from "./component/categories/television/InfoTelevision";
 
+//developer mode
+const verbose = 0;
 
 class App extends React.Component {
 
@@ -31,6 +35,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      isLogged: false,
+      cart: [],
       television: [],
       mobile: [],
       accesories: [],
@@ -39,12 +45,34 @@ class App extends React.Component {
       appliance: []
     }
   }
+
+  //callback function  to  set the login  state 
+  loginState = (value) => {
+
+    this.setState({
+      isLogged: value
+    })
+
+  }
+
+  //callback function to  add items to  cart
+  addToCart = (element) => {
+
+    this.setState({
+      cart: [...this.state.cart, element]
+    })
+  }
   componentDidMount() {
 
+    //fetching data from data.json
     axios("/data.json")
       .then((res) => {
-        console.log(res);
-        console.log("componentDidMount", res.data);
+
+        if (verbose) {
+          console.log(res);
+          console.log("componentDidMount", res.data);
+        }
+
         this.setState({
           television: res.data.Television,
           mobile: res.data.Mobile,
@@ -64,6 +92,7 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
+
         <Switch>
           <Route exact path="/"> <Home /> </Route>
           <Route path="/component/about"><About /></Route>
@@ -71,24 +100,55 @@ class App extends React.Component {
           <Route path="/component/faq" > <Faq /></Route>
           <Route path="/component/career" > <Career /></Route>
 
+          <Route path="/component/login">
+            <Login loginState={this.loginState} />
+          </Route>
+
+          <Route path="/component/cart">
+            <Cart data={this.state.cart} />
+          </Route>
+
           {/* categories of products    */}
-          <Route exact path="/component/categories/mobile"> <Mobile data={this.state.mobile} /> </Route>
+          <Route exact path="/component/categories/mobile">
+            <Mobile
+              data={this.state.mobile}
+              islogged={this.state.isLogged}
+              addToCart={this.addToCart}
+            />
+          </Route>
+
           <Route path="/component/categories/appliance"> <Appliance /></Route>
           <Route path="/component/categories/laptop"> <Laptop /> </Route>
-          <Route exact path="/component/categories/television"> <Television data={this.state.television} /> </Route>
+
+          <Route exact path="/component/categories/television">
+            <Television
+              data={this.state.television}
+              islogged={this.state.isLogged}
+              addToCart={this.addToCart}
+            />
+          </Route>
           <Route path="/component/categories/gaming"> <Gaming /></Route>
           <Route path="/component/categories/accesories"> <Accesories /></Route>
 
           {/* Routing for Details page category wise */}
           <Route
             path="/component/categories/television/:id"
-            render={(props) => <InfoTelevision data={this.state.television} {...props} />}
+            render={(props) =>
+              <InfoTelevision
+                data={this.state.television} {...props}
+                islogged={this.state.islogged}
+                addToCart={this.state.addToCart}
+              />}
           />
 
 
           <Route
             path="/component/categories/mobile/:id"
-            render={(props) => <InfoMobile data={this.state.mobile} {...props} />}
+            render={(props) =>
+              <InfoMobile
+                data={this.state.mobile} {...props}
+                addToCart={this.state.addToCart}
+              />}
           />
 
           <Route><NotFound /></Route>
