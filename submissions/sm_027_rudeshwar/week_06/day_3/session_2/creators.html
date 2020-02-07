@@ -3,8 +3,8 @@
 <head>
     <title>Practise Creators</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <script>
+        var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
         $(document).ready(function () {
             $("#btn1").click(function () {
                 $("h1").append(" <div>MASAI</div>");
@@ -23,32 +23,63 @@
             });
         });
 
+        $(document).ready(function () {
+            $('#btn3').click(function () {
+                for (i = 0; i <= 10; i++) {
+                    var elem = document.createElement('li')
+                    console.log("elem", elem)
+                    elem.textContent = "div" + i
+                    $('#log').append(elem)
+                }
+            })
+        })
+
+        // $('#btn-3').click(function(){
+        //     console.log("length",students.length)
+        //     for(i=0;i<=students.length-1;i++)
+        //     {
+        //         var elem = document.createElement("li");
+        //         console.log("elem",elem)
+        //         elem.textContent = "div" + i
+        //         $('#vikings').append(elem)
+        //     }
+        // })
+
+        $(document).ready(function () {
+            $('#addStudents').click(function () {
+                for (i = 0; i <= students.length - 1; i++) {
+                    var elem = document.createElement('li')
+                    console.log('elem')
+                    elem.textContent = students[i]
+                    $('#vikings').append(elem)
+                }
+            })
+        })
+
+        $(document).ready(function () {
+            $('#addCopyRight').click(function () {
+                var para1 = document.createElement('p')
+                para1.textContent = "@ masai 2019"
+                $('#headings').prepend(para1)
+            })
+        })
 
     </script>
 </head>
-
 <body>
-
     <h1 id="headings"></h1>
     <h3></h3>
 
-
     <div id="log"></div>
-
-
 
     <ul id="vikings">
         <li>Priyanshu</li>
     </ul>
-
     <button id="btn1">Create H1</button>
     <button id="btn2">Create 2 H3</button>
     <button id="btn3">Create DIVS</button>
-    <button>Add Students</button>
-    <button>Add Copyright</button>
-    <script>
-        var students = ['Ajay', 'Akshay', 'Anusha', 'Chandrashekhara', 'Haren', 'Hasaan', 'Mahesh', 'Mousumi', 'Pavan', 'Rahul', 'Sumanta', 'Venkatesh', 'Vetrival', 'Vijayendra'];
-    </script>
+    <button id="addStudents">Add Students</button>
+    <button id="addCopyRight">Add Copyright</button>
 </body>
 
 </html>

@@ -1,0 +1,52 @@
+id,city,country_id
+1,Delhi,1
+2,Lucknow,1
+3,Unnao,1
+4,Kanpur,1
+5,Bengaluru,1
+6,Chennai,1
+7,Patna,1
+8,Hyderabad,1
+9,Sikkim,1
+10,Himanchal Pradesh,1
+11,Islamabad,2
+12,Lahore,2
+13,Dhaka,3
+14,Chittagong,3
+15,Beijing,4
+16,Wuhan,4
+17,Kathmandu,5
+18,Thimpu,6
+19,Colombo,7
+20,Tokyo,8
+21,Seoul,9
+22,Pyongyang,10
+23,St. Petersburg,11
+24,Mosco,11
+25,Kairo,12
+26,Cape Town,13
+27,Durban,13
+28,Lusaka,14
+29,Freetown,15
+30,Juba,16
+31,London,17
+32,Manchester,17
+33,Berlin,18
+34,Frankfurt,18
+35,New York,24
+36,Chicago,24
+37,Los Angeles,24
+38,Caneberra,31
+39,Perth,31
+40,Suva,33
+41,Toronto,25
+42,Montreal,25
+43,Cancun,26
+44,Oslo,23
+45,Rome,22
+46,Sao Paulo,27
+47,Salto,30
+48,Hamilton,32
+49,Auckland,32
+50,Lima,28
+51,Cusco,28
