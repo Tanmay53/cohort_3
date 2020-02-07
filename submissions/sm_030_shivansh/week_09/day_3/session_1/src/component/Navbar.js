@@ -17,13 +17,13 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto ">
                     <li className="nav-item m-2 mx-3">
-                        <Link className="nav-link h5" to="/component/About">About</Link>
+                        <Link className="nav-link h5" to="/component/about">About</Link>
                     </li>
                     <li className="nav-item m-2 mx-3">
-                        <Link className="nav-link h5" to="/component/Stores">Stores</Link>
+                        <Link className="nav-link h5" to="/component/stores">Stores</Link>
                     </li>
                     <li className="nav-item m-2 mx-3">
-                        <Link className="nav-link h5" to="/component/Faq">FAQ</Link>
+                        <Link className="nav-link h5" to="/component/faq">FAQ</Link>
                     </li>
 
                     <li className="nav-item dropdown m-2 mx-3">
@@ -57,7 +57,10 @@ const Navbar = () => {
                         <a class="nav-link" href="#"><i className="far fa-heart fa-lg"></i></a>
                     </li>
                     <li class="nav-item m-2">
-                        <a class="nav-link" href="#"><i className="fas fa-shopping-cart fa-lg"></i></a>
+                        <Link class="nav-link" to="/component/cart"><i className="fas fa-shopping-cart fa-lg"></i></Link>
+                    </li>
+                    <li className="nav-item m-2 mx-3">
+                        <Link className="nav-link h5" to="/component/login">Login</Link>
                     </li>
                 </ul>
 
