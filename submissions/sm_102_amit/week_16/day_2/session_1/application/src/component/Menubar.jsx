@@ -20,7 +20,7 @@ const Menubar = () => {
             </Link>
           </Nav.Item>
           <Nav.Item as="li">
-            <Link to="/add" className="nav-link">
+            <Link to="/users/create" className="nav-link">
               Add User
             </Link>
           </Nav.Item>

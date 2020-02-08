@@ -1,0 +1,7 @@
+.container {
+  padding: 2rem 2rem;
+}
+
+.table-striped tr:nth-child(even) {
+  background: #999;
+}
