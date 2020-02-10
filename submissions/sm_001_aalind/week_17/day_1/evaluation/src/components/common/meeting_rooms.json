@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Room 1",
+    "floor": 1,
+    "capacity": 10,
+    "price_per_day": 899,
+    "booked": false,
+    "dates": {}
+  },
+  {
+    "name": "Room 2",
+    "floor": 2,
+    "capacity": 20,
+    "price_per_day": 3999,
+    "booked": true,
+    "dates": {}
+  },
+  {
+    "name": "Room 3",
+    "floor": 4,
+    "capacity": 5,
+    "price_per_day": 2999,
+    "booked": true,
+    "dates": {}
+  },
+  {
+    "name": "Room 4",
+    "floor": 1,
+    "capacity": 50,
+    "price_per_day": 5999,
+    "booked": false,
+    "dates": {}
+  },
+  {
+    "name": "Room 5",
+    "floor": 1,
+    "capacity": 100,
+    "price_per_day": 2999,
+    "booked": false,
+    "dates": {}
+  },
+  {
+    "name": "Room 6",
+    "floor": 2,
+    "capacity": 50,
+    "price_per_day": 599,
+    "booked": false,
+    "dates": {}
+  }
+]
