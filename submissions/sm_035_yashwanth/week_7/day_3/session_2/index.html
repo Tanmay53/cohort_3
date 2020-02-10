@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>index.html</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h3 class=" mt-5 bg-dark text-light text-center">Students per Page:</h3>
+      <select class="custom-select" id="usersperPage">
+        <option selected>Choose No. of students Per Page</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select> 
+    </div>
+    <div class="col">
+      <h3 class="mt-5 text-white bg-dark text-center">Student gender Type:</h3>
+      <select id="typeofUser" class="custom-select">
+        <option value="All" id="all">All</option>
+        <option value="Male"  id="male">Male</option>
+        <option value="Female" id="female">Female</option>
+     </select>
+    </div>
+    <div class="col">
+      <h3 class="mt-5 text-white bg-dark text-center">Mark order : English</h3>
+      <select id="marksOrderEng" class="custom-select">
+        <option value="HtoL"  id="HtoL">High to Low</option>
+        <option value="LtoH" id="LtoH">Low to High</option>
+     </select>
+    </div>
+    <div class="col">
+      <h3 class="mt-5 text-white bg-dark text-center">Mark order : Maths</h3>
+      <select id="marksOrdermath" class="custom-select">
+        <option value="HtoL"  id="HtoL">High to Low</option>
+        <option value="LtoH" id="LtoH">Low to High</option>
+     </select>
+    </div>
+    <div class="col">
+      <h3 class="mt-5 text-white bg-dark text-center">Mark order :Science</h3>
+      <select id="marksOrdersci" class="custom-select">
+        <option value="HtoL"  id="HtoL">High to Low</option>
+        <option value="LtoH" id="LtoH">Low to High</option>
+     </select>
+    </div>
+
+    <div class="col">
+      <h3 class="mt-5 text-white bg-dark text-center">Students sort by Name:</h3>
+      <select id="sortingUser" class="custom-select">
+        <option id="acc" value="acc">Accending order</option>
+        <option id="dec" value="des">Decending order</option>
+    </select>
+    </div>
+    <div class="col">
+      <h3 class="mt-5  text-white bg-dark text-center">Search Student by FirstName:</h3>
+      <input type="text" id="typingName" placeholder="type exact name to see ">
+    </div>
+    <div class="col">
+      <h3 class="mt-5  text-white bg-dark text-center">Search Student by Email:</h3>
+      <input type="text" id="typingEmail" placeholder="type exact email to see">
+    </div>
+  </div>
+</div>
+</div>
+    <div class="container-fluid" id="tablediv">
+    </div>
+    <div class="container mt-3" id="orderTable">
+      <div class="row">
+        <div class="col">
+        <table class="table table-bordered">
+          <thead class="thead-dark">
+              <tr>
+                <th>Id:</th>
+                  <th>First Name:</th>
+                  <th>Last Name:</th>
+                  <th>Email:</th>
+                  <th>Gender</th> 
+                  <th>English:</th>
+                  <th>Maths:</th>
+                  <th>Science:</th>
+                  <th>Total</th>
+                  <th>Delete option:</th>
+              </tr>
+              <tbody id="display">
+              </tbody>
+          </thead>
+      </table>
+    </div>
+  </div>
+</div>
+    <div class="d-flex justify-content-center" id="pageNoButton"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
+

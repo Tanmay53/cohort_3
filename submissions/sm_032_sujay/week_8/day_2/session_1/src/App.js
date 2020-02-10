@@ -22,16 +22,40 @@ class App extends React.Component{
         {name:'Upahara Darshini',costfor2:'100',cuisines:['south indian'],rating:'1.6',reviews:'32',},
       ]
     }
-      
-
     } 
 
 
+//     sortRatings = x => {
+//       this.setState({ 
+//             details : this.state.details.filter( a => a.rating >= Number(x) ) 
+//    })
+// }
   
+  sortRatings = (x) => {
+    let sortFil = this.state.details.filter((a) => 
+      a.rating >= Number(x) 
+      )
+      console.log("inside filter func",sortFil)
+      this.setState({
+        details : sortFil
+      })
+    }
+
+   
+
   
 render(){
   return(
     <div>
+       <h3 className="text-center text-info my-2">Restaurants Near You!</h3>
+        <button className="btn btn-outline-success offset-5">Sort By Ratings</button>
+        <button onClick={ () => this.sortRatings(4)} className="badge badge-pill badge-warning ml-1">4</button>
+        <button onClick={() => this.sortRatings(3)} className="badge badge-pill badge-warning ml-1">3</button>
+        <button onClick={()=>this.sortRatings(2)} className="badge badge-pill badge-warning ml-1">2</button>
+        <button onClick={()=>this.sortRatings(1)} className="badge badge-pill badge-warning ml-1">1</button>
+         
+       
+       
       {/* {info.map[items=> <RestaurantDetails label={items} />]} */}
       <RestaurantDetails data = {this.state.details} />
     </div>
