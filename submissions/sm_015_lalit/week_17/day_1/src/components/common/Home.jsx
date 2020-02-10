@@ -66,8 +66,8 @@ class Home extends React.Component {
   render() {
     return (
       <>
-      <div class="input-group col col-md-4 col-lg-3">
-        <label className="m-2" for="">Sort</label>
+      <div class=" mx-2 input-group col col-md-4 col-lg-3">
+        <label className="m-2">Sort</label>
         <select onChange={this.handleChange} class="custom-select form-control" name="" id="">
           <option value="default" default selected>Default</option>
           <option value="name">Name</option>
