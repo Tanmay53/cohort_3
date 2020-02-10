@@ -1,0 +1,25 @@
+  .App {
+    text-align: center;
+    background-color:coral;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 30px;
+    color: white;
+  }
+  .Container {
+    text-align: center;
+    /* margin-left: 210px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    color: black;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding-left: 20%; */
+  }
+
+
+
+
+
