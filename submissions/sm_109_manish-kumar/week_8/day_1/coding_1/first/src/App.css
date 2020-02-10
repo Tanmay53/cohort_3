@@ -1,0 +1,24 @@
+.background{
+  background-color: #27223f;
+  width: 700px;
+  margin-left: 25%;
+}
+.cardbg{
+  background-color: #231e39;
+}
+
+.pic{
+  height: 150px;
+  width: 170px;
+  border-radius: 50%;
+  border: 3px solid #165a6f;
+}
+
+.skill{
+  background-color: #1f1936;
+}
+
+.size{
+  font-size: 8px;
+  border: 1px solid grey;
+}
