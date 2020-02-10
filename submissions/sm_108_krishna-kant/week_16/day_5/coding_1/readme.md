@@ -73,59 +73,59 @@ Table - `cars_data`
 Men who own a Pink car
 
 ```sql
-
+select * from cars_data where car_color = "Pink" and gender = "Male";
 ```
 
 Women who own a Red or a Blue Car
 
 ```sql
-
+select * from cars_data where car_color in ("Red", "Blue") and gender = "Female";
 ```
 
 Men who purchased the car in the year 1998
 
 ```sql
-
+select * from cars_data where purchase_year = "1998" and gender = "Male";
 ```
 
 Women who purchased a Yellow car in the year 1985
 
 ```sql
-
+select * from cars_data where car_color = "Yellow" and purchase_year = "1985" and gender ="Female";
 ```
 
 Men who either have a Red or Green car and either live in Germany or Kenya
 
 ```sql
-
+select * from cars_data where gender = "Male" and car_color in ("red","green") and country in ("Germany","Kenya");
 ```
 
 People from India who purchased cars in the year 2001
 
 ```sql
-
+select * from cars_data where country = "India" and purchase_year = “2001”;
 ```
 
 People from Germany or Egypt who purchased cars in the year 1998 or 1992
 
 ```sql
-
+select * from cars_data where country in ("Germany","Egypt") and purchase_year in ("1998","1992");
 ```
 
 Women from India who own a Blue car
 
 ```sql
-
+select * from cars_data where gender = "Female" and country = "India" and car_color = "Blue";
 ```
 
 Men from Germany who purchased cars in 1998 and Men from Egypt who purchased cars in 1992
 
 ```sql
-
+select * from cars_data where gender = "Male" and (country = "Germany" and purchase_year = "1998") or (country = "Egypt" and purchase_year = "1992");
 ```
 
 Women who own a Green car and are not from Pakistan
 
 ```sql
-
+select * from cars_data where gender = "Female" and car_color = "Green" and not country = "Pakistan";
 ```
