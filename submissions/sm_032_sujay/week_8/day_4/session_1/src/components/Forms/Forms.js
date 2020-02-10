@@ -33,33 +33,54 @@ export default class Forms extends React.Component {
             salary : this.state.salary
 
         }
-        this.setState({emplyData: [...this.state.emplyData,obj] })
-        
- 
-        
+        this.setState({emplyData: [...this.state.emplyData,obj] })    
 
-       
-
-    }
-
-
-    reset = () => {
-       
         this.setState({
             name: "",
             age: '',
             address: '',
             department: '',
             salary: ''
-
+    
         })
     }
 
-   
 
-   
+    // to be edited to make edit work
+    // editData = () => {
+    //     console.log("inside update")
+    //     let update = this.state.emplyData.filer()
+    //     this.setState({
+    //         emplyData:update
+          
+    //     })
+    //     console.log("edit",update)
+    // }
+
+    delData = (index) => {
+        // var del= this.props.data.filter(a=>a.name!=name)
+            // console.log("inside delete function",name)
+
+        let deleted = this.state.emplyData.filter((item,index) => index !== index)
+        this.setState({
+            emplyData: deleted
+        })
+        console.log("del",this.state.emplyData)
+    }
+
+    
+     sortData = () =>{
+         console.log("inside sortData")
+        let sorted = this.state.emplyData.sort((a,b) => Number(a.salary)-Number(b.salary))
+        this.setState({
+            emplyData : sorted
+        })
+        console.log("srt",sorted)
+     }
 
 
+
+     
     render() {
         return (
             <div>
@@ -92,16 +113,16 @@ export default class Forms extends React.Component {
                         </div>
                     </form>
                     <button className="btn btn-lg btn-outline-dark offset-5" onClick={this.handleSubmit}>Submit</button>
-                       <button className="btn btn-lg btn-outline-dark offset-5" onClick={this.reset}>Reset</button>
-                       <Table data = {this.state.emplyData}/>
+                  
 
                 </div>
 
+                <div className="container-fluid">
+
+                <Table data = {this.state.emplyData} del ={this.delData} srt = {this.sortData} updt ={this.editData}/>
 
 
-
-
-              
+                </div>
             </div>
         )
     }
