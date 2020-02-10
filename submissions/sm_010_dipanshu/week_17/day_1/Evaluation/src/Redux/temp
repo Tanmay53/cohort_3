@@ -1,0 +1,35 @@
+const AUTH = "auth";
+const LOGOUT = "logout";
+const ADD = "add";
+const DELETE = "delete";
+const UPDATE = "update";
+
+export const authenticateUser = (username, password) => ({
+  type: AUTH,
+  payload: { username, password }
+});
+
+export const logoutUser = () => ({
+  type: LOGOUT
+});
+
+export const addVehicle = vehicleInfo => ({
+  type: ADD,
+  payload: vehicleInfo
+});
+
+export const deleteVehicle = index => ({
+  type: DELETE,
+  payload: index
+});
+
+export const updateVehicle = (
+  updatedVehicles,
+  saleToBeRemoved,
+  saleToBeAdded
+) => ({
+  type: UPDATE,
+  payload: updatedVehicles,
+  saleToBeRemoved: saleToBeRemoved,
+  saleToBeAdded: saleToBeAdded
+});
