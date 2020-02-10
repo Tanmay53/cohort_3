@@ -1,11 +1,18 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+//developer mode
+const verbose = 1;
+
 const Television = (props) => {
 
 
     const data = props.data;
-    console.log("televisions", props.data);
+    if (verbose) {
+        console.log("televisions", props.data);
+        console.log("televisions", props.islogged);
+    }
+
 
     const listItems = data.map((ele) => (
 
