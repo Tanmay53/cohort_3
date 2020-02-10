@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        exercise2.html
+    </title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+    const parent=document.getElementById('root')
+    const arr=['Coding','Singing','Teaching','Cooking','Sleeping']
+    const user={
+        name:'chaitanya',
+        age:28,
+        DOB:'25/08/1991',
+        FavouriteColor:'purple'
+    }
+
+    function Details(data){
+            return `UserName:${data.name}
+                    Age:${data.age}
+                    Date Of Birth:${data.DOB}
+                    Favourite Color:${data.FavouriteColor}`
+    }
+
+    function info(array){
+        return (<div>
+                    <ul>
+                        <li>{array[0]}</li>
+                        <li>{array[1]}</li>
+                        <li>{array[2]}</li>
+                        <li>{array[3]}</li>
+                        <li>{array[4]}</li>
+                    </ul>
+                </div> )
+        
+    }
+
+    const element=(
+        <div>
+            <h1>My Todo List</h1>
+            <div>{info(arr)}</div>
+            <p>{Details(user)}</p>
+        </div>
+    )
+
+    ReactDOM.render(element,parent)
+    
+    </script>
+</body>
+
+</html>
