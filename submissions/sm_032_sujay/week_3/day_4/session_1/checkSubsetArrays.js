@@ -4,8 +4,9 @@ netflixShows =['sacred games','money heist','little things']
 
 function checkSubset(a,b)
 {
+    var count = b.length
     for(j=0;j<a.length;j++)
-    count = a.length
+   
     {
         for(i=0;i<b.length;i++)
         {
