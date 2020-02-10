@@ -1,0 +1,56 @@
+.anchorTag{
+    height: 30px;
+    width: 50px;
+}
+.cont{
+    background-color: rgb(40, 34, 63);
+}
+.box{
+    height: 610px;
+    width: 450px;
+    border: solid black 1px;
+    background-color: rgb(35,30,57);
+}
+#img{
+    border-radius: 50%;
+    padding: 1px;
+    
+}
+.imgDiv{
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+    border: 1px solid rgb(99, 193, 203);
+    padding: 1px;
+    margin-left: 20px;
+    margin-top: 10px;
+    
+
+}
+.btnMessage{
+    background-color:rgb(99, 193, 203) ;
+}
+.btnFollow{
+    color: rgb(99, 193, 203);
+    border: 1px solid rgb(99, 193, 203);
+}
+.skills{
+    background-color: #1f1a36;
+    text-align: left;
+    padding: 15px;
+    margin-top:30px;
+}
+.skills ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills ul li{
+    border: 1px solid white;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 7px 7px 0;
+    padding: 7px;
+}

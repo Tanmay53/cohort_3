@@ -1,0 +1,7 @@
+.covered{
+    background-image: url("");
+    background-size:cover;
+    height:500px;
+    margin-left:200px;
+    margin-top:150px;
+}

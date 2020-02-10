@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div>
+        <select id="opsys">
+          <option value="android">Android</option>
+          <option value="ubuntu">Ubuntu</option>
+          <option value="windows">Windows</option>
+          <option value="mac">Mac</option>
+        </select>
+        <button id="submit">submit</button>
+
+        <table>
+          <tr>
+            <th>Version-Name</th>
+            <th>Number</th>
+          </tr>
+        </table>
+      </div>
+
+      <script>
+
+$("#submit").click(function(){
+    var opersys = document.getElementById("opsys").value;
+
+        $.ajax({
+
+          url: "http://localhost:8080/codenames/" + opersys
+        })
+        .done(function(data) {
+          console.log(data);
+          showdata(data)
+        });
+      });
+
+
+function showdata(result) {
+  var obj = JSON.parse(result)
+  console.log(obj)
+  var table1 = document.querySelector('table');
+  for (var i = 0; i < obj["codenames"]["length"]; i++) {
+    console.log(i)
+    var tr1 = document.createElement('tr');
+    var td1 = document.createElement('td')
+    td1.textContent = obj["codenames"][i]["version"];
+    tr1.appendChild(td1);
+    var td2 = document.createElement('td')
+    td2.textContent = obj["codenames"][i]["name"];
+    tr1.appendChild(td2);
+    table1.appendChild(tr1)
+  }
+}
+      </script>
+
+
+</body>
+</html>

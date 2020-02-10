@@ -1,0 +1,105 @@
+{
+    "Television": [
+        {
+            "id": "tv1",
+            "brand": "oneplus",
+            "price": "69,899",
+            "images": "/images/television/oneplus.webp",
+            "seller": "Cloudtail India",
+            "description": {
+                "brief": "OnePlus 138.8 cm (55 inches) Q1 Series 4K Certified Android QLED TV 55Q1IN-1 (Black) (Without Stand)",
+                "1": "Resolution: HD Ready (1366x768) | Refresh Rate: 50 hertz | BackLight Module: Slim LED",
+                "2": "Connectivity: 2 HDMI ports to connect set top box, Blu Ray players, gaming console | 1 USB ports to connect hard drives and other USB devices",
+                "3": "Sound:10 Watts Output",
+                "4": "Smart TV Features: Web OS smart TV | Quick access | Quad core processor | Screen share | Web browser | Cloud photo and video  Expandable memory",
+                "5": "Display: IPS panel | Active HDR | DTS virtual: X",
+                "6": "Warranty Information: 1 Year LG India Comprehensive Warranty and additional 1 year Warranty is applicable on panel module",
+                "7": "Installation: For requesting installation/wall mounting/demo of this product once delivered, please directly call LG support on 1800 180 9999/1800 315 9999 and provide product's model name as well as seller's details mentioned on the invoice",
+                "8": "Easy returns: This product is eligible for replacement within 10 days of delivery in case of any product defects, damage or features not matching the description provided"
+            }
+        },
+        {
+            "id": "tv2",
+            "brand": "TCL",
+            "price": "20,999",
+            "images": "/images/television/TCL.webp",
+            "seller": "Cloudtail India",
+            "description": {
+                "brief": "TCL 107.88 cm (43 inches) 4K Ultra HD Smart LED TV 43P65US-2019 (Black) | Built-In Alexa",
+                "1": "Resolution: HD Ready (1366x768) | Refresh Rate: 50 hertz | BackLight Module: Slim LED",
+                "2": "Connectivity: 2 HDMI ports to connect set top box, Blu Ray players, gaming console | 1 USB ports to connect hard drives and other USB devices",
+                "3": "Sound:10 Watts Output",
+                "4": "Smart TV Features: Web OS smart TV | Quick access | Quad core processor | Screen share | Web browser | Cloud photo and video  Expandable memory",
+                "5": "Display: IPS panel | Active HDR | DTS virtual: X",
+                "6": "Warranty Information: 1 Year LG India Comprehensive Warranty and additional 1 year Warranty is applicable on panel module",
+                "7": "Installation: For requesting installation/wall mounting/demo of this product once delivered, please directly call LG support on 1800 180 9999/1800 315 9999 and provide product's model name as well as seller's details mentioned on the invoice",
+                "8": "Easy returns: This product is eligible for replacement within 10 days of delivery in case of any product defects, damage or features not matching the description provided"
+            }
+        },
+        {
+            "id": "tv3",
+            "brand": "LG",
+            "price": "19,999",
+            "images": "/images/television/LG.webp",
+            "seller": "Cloudtail India",
+            "description": {
+                "brief": "LG 80 cms (32 Inches) HD Ready LED Smart TV 32LM560BPTC with IPS Display & WebOS (2019 Model)",
+                "1": "Resolution: HD Ready (1366x768) | Refresh Rate: 50 hertz | BackLight Module: Slim LED",
+                "2": "Connectivity: 2 HDMI ports to connect set top box, Blu Ray players, gaming console | 1 USB ports to connect hard drives and other USB devices",
+                "3": "Sound:10 Watts Output",
+                "4": "Smart TV Features: Web OS smart TV | Quick access | Quad core processor | Screen share | Web browser | Cloud photo and video  Expandable memory",
+                "5": "Display: IPS panel | Active HDR | DTS virtual: X",
+                "6": "Warranty Information: 1 Year LG India Comprehensive Warranty and additional 1 year Warranty is applicable on panel module",
+                "7": "Installation: For requesting installation/wall mounting/demo of this product once delivered, please directly call LG support on 1800 180 9999/1800 315 9999 and provide product's model name as well as seller's details mentioned on the invoice",
+                "8": "Easy returns: This product is eligible for replacement within 10 days of delivery in case of any product defects, damage or features not matching the description provided"
+            }
+        }
+    ],
+    "Mobile": [
+        {
+            "id": "mb1",
+            "brand": "Redmi",
+            "price": "14,999",
+            "images": "/images/mobile/redmi.jpg",
+            "seller": "Cloudtail India",
+            "description": {
+                "brief": "Redmi Note 8 Pro (Halo White, 6GB RAM, 64GB Storage with Helio G90T Processor) - Upto 6 Months No Cost EMI",
+                "1": "64MP AI Quad rear camera with portrait, ultra-wide lens, macro lens, LED flash, AI support, beautify support | 20MP front camera",
+                "2": "Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology 16.58 centimeters (6.53-inch) Dot Notch HDR Display with 2340 x 1080 pixels resolution and 19.5:9 aspect ratio | 2.5D curved glass | Dedicated depth sensor With Amazon Alexa built-in: Simply say “Alexa” to play music, hear the news, control your smart devices or check the weather wherever you are. Just ask - and Alexa will respond instantly",
+                "3": "Memory, Storage & SIM: 6GB RAM | 64GB internal memory expandable up to 512GB | Dual SIM (nano+nano) dual-standby (4G+4G)",
+                "4": "Android Pie v9 operating system with 2.05GHz MediaTek Helio G90T octa core processor",
+                "5": "4500mAH lithium-polymer battery providing talk-time of 41 hours and standby time of 666 hours | 18W fast charger"
+            }
+        },
+        {
+            "id": "mb2",
+            "brand": "Oneplus",
+            "price": "53,999",
+            "images": "/images/mobile/onePlus.jpg",
+            "seller": "Cloudtail India",
+            "description": {
+                "brief": "OnePlus 7T Pro (Haze Blue, 8GB RAM, Fluid AMOLED Display, 256GB Storage, 4085mAH Battery)",
+                "1": "64MP AI Quad rear camera with portrait, ultra-wide lens, macro lens, LED flash, AI support, beautify support | 20MP front camera",
+                "2": "Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology 16.58 centimeters (6.53-inch) Dot Notch HDR Display with 2340 x 1080 pixels resolution and 19.5:9 aspect ratio | 2.5D curved glass | Dedicated depth sensor With Amazon Alexa built-in: Simply say “Alexa” to play music, hear the news, control your smart devices or check the weather wherever you are. Just ask - and Alexa will respond instantly",
+                "3": "Memory, Storage & SIM: 6GB RAM | 64GB internal memory expandable up to 512GB | Dual SIM (nano+nano) dual-standby (4G+4G)",
+                "4": "Android Pie v9 operating system with 2.05GHz MediaTek Helio G90T octa core processor",
+                "5": "4500mAH lithium-polymer battery providing talk-time of 41 hours and standby time of 666 hours | 18W fast charger"
+            }
+        },
+        {
+            "id": "mb3",
+            "brand": "Samsung",
+            "price": "33,999",
+            "images": "/images/mobile/redmi.jpg",
+            "seller": "Cloudtail India",
+            "description": {
+                "brief": "Samsung Galaxy M30s (Blue, 4GB RAM, 64GB Storage)",
+                "1": "64MP AI Quad rear camera with portrait, ultra-wide lens, macro lens, LED flash, AI support, beautify support | 20MP front camera",
+                "2": "Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology 16.58 centimeters (6.53-inch) Dot Notch HDR Display with 2340 x 1080 pixels resolution and 19.5:9 aspect ratio | 2.5D curved glass | Dedicated depth sensor With Amazon Alexa built-in: Simply say “Alexa” to play music, hear the news, control your smart devices or check the weather wherever you are. Just ask - and Alexa will respond instantly",
+                "3": "Memory, Storage & SIM: 6GB RAM | 64GB internal memory expandable up to 512GB | Dual SIM (nano+nano) dual-standby (4G+4G)",
+                "4": "Android Pie v9 operating system with 2.05GHz MediaTek Helio G90T octa core processor",
+                "5": "4500mAH lithium-polymer battery providing talk-time of 41 hours and standby time of 666 hours | 18W fast charger"
+            }
+        }
+    ]
+}

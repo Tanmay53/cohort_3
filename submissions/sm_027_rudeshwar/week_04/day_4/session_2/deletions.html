@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1 id="head1">First H1</h1>
+        <h1>Second H1</h1>
+        <h3 id="head3">First H3</h3>
+        <h3 id="head3.1">Second H3</h3>
+        <div id="headings">
+            <h5 id="head5">First H5</h5>
+            <h5 id="head5.1">Second H5</h5>
+            <h5 id="head5.2">Third H5</h5>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeH1()">Remove H1</button>
+        <button onclick="removeH3()">Remove H3</button>
+        <button onclick="removeH5()">Remove H5</button>
+        <button onclick="removeRed()">Remove Red</button>
+        <button onclick="removeDivs()">Remove DIVS</button>
+        <script>
+            function removeH1(){
+                var bodyElem=document.querySelector('body');
+                var firstH1=document.getElementById('head1')
+                bodyElem.removeChild(firstH1);
+            }
+
+            function removeH3()
+            {
+                var bodyElemement=document.querySelector('body')
+                var firstH3=document.getElementById('head3')
+                var secondH3=document.getElementById('head3.1')
+                bodyElemement.removeChild(firstH3)
+                bodyElemement.removeChild(secondH3)
+            }
+
+            function removeH5()
+            {
+                var divElemement=document.querySelector('div')
+                var firstH5=document.getElementById('head5')
+                var secondH5=document.getElementById('head5.1')
+                var thirdH5=document.getElementById('head5.2')
+
+                divElemement.removeChild(firstH5)
+                divElemement.removeChild(secondH5)
+                divElemement.removeChild(thirdH5)
+            }
+            function removeRed()
+            {
+                var containerDiv=document.getElementById('cont');
+                console.log(containerDiv)
+                var redClass=document.querySelectorAll('.red');
+                for(var i = 0;i<redClass.length;i++){
+                    containerDiv.removeChild(redClass[i])
+                }
+                console.log(redClass)
+            }
+
+            function removeDivs()
+            {
+                var containerDiv=document.getElementById('cont')
+                var divElement=document.querySelectorAll('#cont > div');
+                // console.log(divElement.length)
+                for(var i=0;i<divElement.length;i++)
+                {
+                    containerDiv.removeChild(divElement[i])
+                }
+            }
+        </script>
+    </body>
+</html>
