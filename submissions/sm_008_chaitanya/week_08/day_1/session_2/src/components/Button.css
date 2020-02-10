@@ -1,0 +1,11 @@
+.header{
+    display:grid;
+    grid-template-columns:repeat(2,150px);
+    grid-gap:15px;
+    padding:10px;
+}
+.header button{
+    padding:5px;
+    border-radius:50px;
+    color:white;
+}
