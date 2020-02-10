@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>registration.html</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="myForm1">
+        <div><label for="name">Enter your Full Name</label>
+            <input type="text" id="name"></div>
+        <p id="live1"></p>
+        <p id="live2"></p>
+
+
+        <div id="emailField" style="display: none;">
+            <label for="email" id="emailLabel">Enter your email</label>
+            <input type="email" id="emailInput">
+            <p id="live3"></p>
+            <p id="live4"></p>
+        </div>
+
+        <div id="mobileField" style="display: none;">
+            <label for="mobileInput">Enter your Mobile Number</label>
+            <input type="text" id="mobileInput">
+            <p id="live5"></p>
+            <p id="live6"></p>
+        </div>
+
+        <button id="submitBtn" style="display: none;">SUBMIT</button>
+
+    </div>
+
+    <!-- <form action="" id="form1">
+    </form> -->
+
+    <div id="dispForm">
+        <div id="getter1"></div>
+        <div id="getter2"></div>
+        <div id="getter3"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#name').keyup(function () {
+                var value = $(this).val();
+                // console.log("value", value)
+                if (value.length <= 3) {
+                    $("#live1").text("name should be more than 3 characters")
+                    $("#live2").text("Invalid name")
+                }
+                else if (value.length > 3) {
+                    $("#live1").text("only " + (10 - value.length) + "characters remaining")
+                    $("#live2").text("valid name")
+
+                    if (value.length > 3) {
+                        $("#emailField").show()
+                        //validate email
+                        // validateEmail()
+                    }
+                }
+                else {
+                    $("#live1").text("")
+                    $("#live2").text("Invalid name")
+                }
+            })
+        })
+
+
+        //function for validate email
+        $(document).ready(function () {
+            $("#emailInput").keyup(function () {
+                var value1 = $(this).val()
+                var input1 = value1.split("@")
+                console.log("value1", value1)
+                function validateEmail(input1) {
+                    // var flag = true
+                    console.log("ok")
+                    console.log("input1.length", input1.length)
+                    if (input1.length > 2) {
+                        console.log("inside if")
+                        var ans = $("#live3").text("Invalid Email")
+                    }
+                    else {
+                        var ans = $("#live4").text("valid Email")
+                        console.log(" inside else ans", ans)
+
+                        // console.log("*******")
+                        $("#mobileField").show()
+                    }
+                    return ans
+                }
+                validateEmail(input1)
+            })
+        })
+
+        // validate mobile number
+        $(document).ready(function () {
+            $("#mobileInput").keyup(function () {
+                var value2 = $(this).val()
+
+                if (value2.length > 10) {
+                    $("#live5").text("Invalid mobile number")
+                }
+                else {
+                    $("#live6").text("valid mobile number")
+                    $("#submitBtn").show()
+                }
+            })
+
+        })
+
+        // disappear form when clicked on submit button
+
+        $(document).ready(function () {
+            $("#submitBtn").click(function () {
+                $("#myForm1").hide()
+            })
+        })
+
+        //To display the values at the right side in the browser
+        $(document).ready(function () {
+            $("#submitBtn").click(function () {
+                var name = $("#name").val();
+                //  console.log("name",name)
+                $("#getter1").text(name)
+
+                var email = $("#emailInput").val();
+                console.log("name", email)
+                $("#getter2").text(email)
+
+                var mobile = $("#mobileInput").val();
+                console.log("mobile", mobile)
+                $("#getter3").text(mobile)
+            })
+        })
+    </script>
+</body>
+
+</html>
