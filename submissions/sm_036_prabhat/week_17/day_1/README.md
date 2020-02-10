@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+Netlify Link 
+https://upbeat-bassi-7b9321.netlify.com/
+
+Project Reviev
+https://drive.google.com/file/d/15uB1rWkf8Ne-vKwgxYoRB61fNcwJj6oe/view?usp=sharing
+
+State and Lifecycle Video 
+https://drive.google.com/file/d/1DpUri32A4QEv1GqbJNiTsl-RRVlqfd3e/view?usp=sharing
+
+
 ## Available Scripts
 
 In the project directory, you can run:
