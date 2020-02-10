@@ -1,1 +1,1 @@
-200 names_100.txt
+370 countries.txt

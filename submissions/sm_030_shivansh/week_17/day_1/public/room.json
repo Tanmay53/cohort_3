@@ -1,0 +1,67 @@
+{
+    "room": [
+        {
+            "id": "RM-11",
+            "capacity": "6",
+            "image": "/images/meeting-room.png",
+            "floor": "1",
+            "price": "1500"
+        },
+        {
+            "id": "RM-12",
+            "capacity": "4",
+            "image": "/images/meeting-room.png",
+            "floor": "1",
+            "price": "1000"
+        },
+        {
+            "id": "RM-13",
+            "capacity": "8",
+            "image": "/images/meeting-room.png",
+            "floor": "1",
+            "price": "2000"
+        },
+        {
+            "id": "RM-21",
+            "capacity": "6",
+            "image": "/images/meeting-room.png",
+            "floor": "2",
+            "price": "1500"
+        },
+        {
+            "id": "RM-22",
+            "capacity": "12",
+            "image": "/images/meeting-room.png",
+            "floor": "2",
+            "price": "3000"
+        },
+        {
+            "id": "RM-23",
+            "capacity": "8",
+            "image": "/images/meeting-room.png",
+            "floor": "2",
+            "price": "2000"
+        },
+        {
+            "id": "RM-31",
+            "capacity": "6",
+            "image": "/images/meeting-room.png",
+            "floor": "3",
+            "price": "1500"
+        },
+        {
+            "id": "RM-32",
+            "capacity": "4",
+            "image": "/images/meeting-room.png",
+            "floor": "3",
+            "price": "1000"
+        },
+        {
+            "id": "RM-13",
+            "capacity": "12",
+            "image": "/images/meeting-room.png",
+            "floor": "3",
+            "price": "3000"
+        }
+    ]
+}
