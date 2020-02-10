@@ -16,7 +16,7 @@ function checkSuperset( brands, favBrands)
      }
 
      //console.log(count)
-     if (count == favBrands.length-1)
+     if (count == favBrands.length)
      {
          console.log('It is a super set')
 
