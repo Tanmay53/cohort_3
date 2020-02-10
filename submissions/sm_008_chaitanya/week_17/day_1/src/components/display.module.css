@@ -1,0 +1,13 @@
+.header{
+    text-align:center;
+    font-size:20px;
+}
+.header label{
+    color:purple;
+}
+.deco{
+    background:black;
+    color:white;
+    font-size:30px;
+    padding:0px 30px;
+}
