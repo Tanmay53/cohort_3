@@ -1,0 +1,7 @@
+.container{
+    background-color: chartreuse;
+}
+.container-fluid{
+    background-color: cornflowerblue;
+    height: 800px;
+}

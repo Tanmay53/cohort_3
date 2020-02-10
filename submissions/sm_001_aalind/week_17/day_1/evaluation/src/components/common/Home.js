@@ -5,8 +5,9 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      all_rooms: [],
       sort_by: {
-        price: true,
+        price_per_day: true,
         capacity: true
       }
     };
@@ -14,44 +15,53 @@ class Home extends React.Component {
 
   sortFunction = event => {
     let name = event.target.name;
-    this.setState(
-      prevState => {
-        return {
-          sort_by: {
-            ...prevState.sort_by,
-            [name]: !prevState.sort_by[name]
-          }
-        };
-      },
-      () => console.log(this.state)
-    );
+    this.setState(prevState => {
+      let sorted_rooms = [];
+
+      if (!prevState.sort_by[name]) {
+        sorted_rooms = prevState.all_rooms.sort(
+          (r1, r2) => r1[name] - r2[name]
+        );
+      } else {
+        sorted_rooms = prevState.all_rooms.sort(
+          (r1, r2) => r2[name] - r1[name]
+        );
+      }
+
+      return {
+        all_rooms: sorted_rooms,
+        sort_by: {
+          ...prevState.sort_by,
+          [name]: !prevState.sort_by[name]
+        }
+      };
+    });
+  };
+
+  componentDidMount = () => {
+    this.setState({
+      ...this.state,
+      all_rooms: this.props.all_rooms.filter(room => !room.booked)
+    });
   };
 
   render() {
     return (
-      <div
-        className='container'
-        // style={{ background: 'red' }}
-      >
-        <div
-          className='row d-flex justify-content-center'
-          // style={{ background: 'blue' }}
-        >
+      <div className='container'>
+        <div className='row d-flex justify-content-center'>
           <h1>Room List</h1>
         </div>
         <div className='row'>
           Sort by:{' '}
-          <button name='price' onClick={this.sortFunction}>
+          <button name='price_per_day' onClick={this.sortFunction}>
             price
-          </button>{' '}
-          {/* <button name='capacity' onClick={this.sortFunction}>
+          </button>
+          <button name='capacity' onClick={this.sortFunction}>
             capacity
-          </button> */}
+          </button>
         </div>
         <div className='row d-flex justify-content-sm-center justify-content-center justify-content-md-between justify-content-lg-center'>
-          {/* {console.log(this.props.all_rooms)} */}
-
-          {this.props.all_rooms
+          {this.state.all_rooms
             .filter(room => !room.booked)
             .map((room, index) => {
               return <Room key={index + 1} room_info={room} />;
