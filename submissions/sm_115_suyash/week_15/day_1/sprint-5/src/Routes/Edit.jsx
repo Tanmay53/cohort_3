@@ -20,7 +20,7 @@ class Edit extends Component {
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
-    });
+    }); 
   };
 
   handleClick = () => {
