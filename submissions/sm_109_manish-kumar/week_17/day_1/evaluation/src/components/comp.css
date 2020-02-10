@@ -1,0 +1,14 @@
+.tophead{
+    background-color: skyblue;
+    height: 25px;
+}
+
+.ulitem{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+.list{
+    list-style: none;
+    color: white;
+}
