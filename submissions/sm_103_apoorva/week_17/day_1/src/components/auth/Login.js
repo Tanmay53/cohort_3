@@ -116,7 +116,6 @@ class Login extends React.Component{
             </div>
           </div>
         </div>
-        <button className="btn btn-primary ml-5" onClick={this.signOut}>Sign Out</button>
       </div>
       )
     )
