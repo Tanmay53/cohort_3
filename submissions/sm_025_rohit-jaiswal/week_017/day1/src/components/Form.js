@@ -5,13 +5,35 @@ export default class Forms extends React.Component {
       <div>
         <div class="jumbotron jumbotron-fluid">
           <div class="container">
-          <h1 class="display-2 text-center text-danger"><b>Movie Entery Database</b></h1>
+            <h1 class="display-2 text-center text-danger">
+              <b>Movie Entery Database</b>
+            </h1>
 
             <p class="lead text-center text-primary">
-                <b>
-              This is an assigned task of W17D1Ev
-              </b>
+              <b>This is an assigned task of W17D1Ev</b>
             </p>
+          </div>
+          <div class="container-fluid">
+            <div class="row float-right">
+              <div class="col">
+                <div class="input-group input-group-sm mb-1">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">
+                      Search Here
+                    </span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"
+                  />
+                  <button type="button" class="btn btn-danger btn-sm ml-2">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="container">
@@ -146,7 +168,7 @@ export default class Forms extends React.Component {
                       />
 
                       <label class="form-check-label" for="exampleCheck1">
-                      <b>"R" rated?</b>
+                        <b>"R" rated?</b>
                       </label>
                     </div>
                   </small>
@@ -154,8 +176,9 @@ export default class Forms extends React.Component {
               </div>
             </form>
 
-            <button type="button" class="btn btn-danger btn-block"><b>Submit</b></button>
-
+            <button type="button" class="btn btn-danger btn-block">
+              <b>Submit</b>
+            </button>
           </form>
         </div>
       </div>
