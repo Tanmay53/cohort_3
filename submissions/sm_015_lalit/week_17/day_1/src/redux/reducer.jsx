@@ -14,7 +14,7 @@ const initialState={
             },
             {
                 floor:5,
-                name:"spattula",
+                name:"Spattula",
                 capacity:8,
                 price:1400,
                 id:"445f6df64",
@@ -24,7 +24,7 @@ const initialState={
                 },
                 {
                     floor:1,
-                    name:"hostur",
+                    name:"Hostur",
                     capacity:7,
                     price:1680,
                     id:"1v3fd21v5d",
@@ -34,7 +34,7 @@ const initialState={
                     },
                     {
                         floor:3,
-                        name:"bestie",
+                        name:"Bestie",
                         capacity:10,
                         price:2200,
                         id:"gfd8g74g6f",
@@ -44,7 +44,7 @@ const initialState={
                         },
                         {
                             floor:1,
-                            name:"ninjax",
+                            name:"Ninjax",
                             capacity:5,
                             price:1900,
                             id:"97fvdf65v6df",
@@ -54,7 +54,7 @@ const initialState={
                             },
                             {
                                 floor:3,
-                                name:"viking",
+                                name:"Viking",
                                 capacity:6,
                                 price:1550,
                                 id:"fd6g54df62",
@@ -64,7 +64,7 @@ const initialState={
                                 },
                                 {
                                     floor:4,
-                                    name:"vikartan",
+                                    name:"Vikartan",
                                     capacity:5,
                                     price:1400,
                                     id:"vffd9v45d6b23",
