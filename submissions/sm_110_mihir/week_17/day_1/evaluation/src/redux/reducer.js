@@ -1,12 +1,4 @@
-import {
-  LOAD_DATA,
-  loadData,
-  ADD_BOOKING_ID,
-  TIMER,
-  TOHOME,
-  SET_AVAILABLE,
-  ATHOME
-} from "./action";
+import { ADD_BOOKING_ID, TIMER, TOHOME, SET_AVAILABLE, ATHOME } from "./action";
 import data from "../components/common/meeting_room_data";
 
 const initialState = {
