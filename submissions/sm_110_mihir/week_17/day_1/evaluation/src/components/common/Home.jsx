@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { loadData } from "../../redux/action";
+import { atHome } from "../../redux/action";
 import Card from "./Card";
 export class Home extends Component {
-  componentDidMount() {
-    let data = localStorage.getItem("meeting");
-    if (data !== undefined) loadData(data);
+  constructor(props) {
+    super(props);
+  }
+
+  componentWillUnmount() {
+    localStorage.setItem("meeting", JSON.stringify(this.props.data));
   }
   render() {
+    this.props.atHome();
     let resultPerPage = 5; //given
     let totalPages = Math.ceil(this.props.data.length / resultPerPage);
     let query = new URLSearchParams(this.props.location.search);
@@ -62,4 +66,10 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { loadData })(Home);
+const mapDispatchToProps = dispatch => {
+  return {
+    atHome: () => dispatch(atHome())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
