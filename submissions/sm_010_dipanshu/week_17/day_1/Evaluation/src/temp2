@@ -1,0 +1,66 @@
+import { dummyData } from "./DummyData";
+
+const AUTH = "auth";
+const LOGOUT = "logout";
+const ADD = "add";
+const DELETE = "delete";
+const UPDATE = "update";
+
+const intitalState = {
+  vehicles: dummyData,
+  totalSales: 0,
+  credentials: { username: "masai", password: "school" },
+  isLoggedIn: false
+};
+
+let newVehicles = [];
+let addedSales;
+let removedSales;
+
+const reducer = (state = intitalState, action) => {
+  switch (action.type) {
+    case AUTH:
+      if (
+        action.payload.username === state.credentials.username &&
+        action.payload.password === state.credentials.password
+      ) {
+        return { ...state, isLoggedIn: true };
+      } else {
+        alert("Credentials do not match. Try again");
+      }
+      return state;
+
+    case LOGOUT:
+      return { ...state, isLoggedIn: false };
+
+    case ADD:
+      addedSales = state.totalSales + action.payload.totalSales;
+      alert("Vehicle added");
+      return {
+        ...state,
+        vehicles: [...state.vehicles, action.payload],
+        totalSales: addedSales
+      };
+
+    case DELETE:
+      newVehicles = [];
+      newVehicles = state.vehicles.filter((vehicle, index) => {
+        return index !== action.payload;
+      });
+      removedSales =
+        state.totalSales - state.vehicles[action.payload].totalSales;
+      alert("Vehicle removed");
+      return { ...state, vehicles: newVehicles, totalSales: removedSales };
+
+    case UPDATE:
+      removedSales = state.totalSales - action.saleToBeRemoved;
+      addedSales = removedSales + action.saleToBeAdded;
+      alert("Vehicle updated");
+      return { ...state, vehicles: action.payload, totalSales: addedSales };
+
+    default:
+      return state;
+  }
+};
+
+export default reducer;

@@ -1,0 +1,18 @@
+
+fieldset{
+    border: 6px solid black;
+    margin: 0px;
+}
+label{
+    color: crimson;
+    font-size: 20px;
+    font-weight: bold;
+}
+button:hover{
+    background-color:blue;
+    font-size: 15px;
+}
+legend{
+    font-weight: bold;
+    font-size: 30px;
+}
