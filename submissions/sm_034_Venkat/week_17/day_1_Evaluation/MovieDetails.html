@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Feb10ReactExp</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+
+        #gridForForm {
+            background: linear-gradient(90deg, rgba(250, 225, 145, 0.978) 15%, rgba(179, 228, 84, 0.9749703345360694) 100%);
+            border: 1px solid lime;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-gap: 15px;
+            margin: 10px 0;
+        }
+
+        #actorsDiv div {
+            margin: 5px 0;
+        }
+
+        #allMoviesBtn {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: limegreen;
+            border-radius: 3px;
+            /* border: 1px solid rgb(194, 106, 106); */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="movieInfoForm">
+        <h3>Enter Movie Details :</h3>
+        <div id="gridForForm">
+            <div>Name :</div>
+            <div><input type="text" name="movie" id="movie" placeholder="Movie Name"></div>
+            <div>Poster Url :</div>
+            <div><input type="text" name="poster" id="poster" placeholder="Poster url"></div>
+            <div>Year Of Release :</div>
+            <div><input type="text" name="release" id="release" placeholder="Ex: 1995"></div>
+            <div>Language :</div>
+            <div>
+                <select name="language" id="language">
+                    <option value="Telugu">Telugu</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+                </select>
+            </div>
+            <div>Rating :</div>
+            <div><input type="number" name="rating" id="rating" placeholder="Enter a number from 1-10"></div>
+            <div>Actors :</div>
+            <div id="actorsDiv">
+                <div><input type="text" name="actors" class="actor" placeholder="Ex: Hero,Vijay"></div>
+                <div><button id="addCharsBtn">Add More Characters</button></div>
+            </div>
+            <div>Summary :</div>
+            <div><input type="text" name="summary" id="summary" placeholder="Write something about this movie.."></div>
+        </div>
+        <button id="movieFormSubmitBtn">Submit</button>
+        <!-- <button id="movieFormResetBtn">Reset</button> -->
+    </div>
+    <button id="allMoviesBtn">Show all movie details in the Storage</button id="AllMoviesBtn">
+    <div id="root" class="d-flex flex-wrap"></div>
+    <div id="showMoreDetailsDiv"></div>
+
+    <script>
+        var moviesArr = [{
+            Movie: "Bahubali",
+            PosterUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Baahubali_The_Beginning_Movie_Poster.jpg/220px-Baahubali_The_Beginning_Movie_Poster.jpg",
+            Year: 2015,
+            Language: "Telugu",
+            Rating: 8,
+            Actors: { hero: "Prabhas", heroin: "Tamanna", Director: "S.s.Rajamouli" },
+            Summary: "It is one of the gratest histprical movie in india"
+        },
+        {
+            Movie: "Mirchi",
+            PosterUrl: "https://upload.wikimedia.org/wikipedia/en/b/bf/Mirchi_Poster.jpg",
+            Year: 2016,
+            Language: "Telugu",
+            Rating: 8,
+            Actors: { hero: "Prabhas", heroin: "Anushka", Director: "Koratala siva" },
+            Summary: "It is one of the hit movie of Prabhas"
+        }]
+        $("#addCharsBtn").click(() => {
+            console.log("Add one more Character button pressed.!")
+            $("#actorsDiv").append(`<div><input type="text" name="actors" class="actor" placeholder="Ex: Director,Shankar"></div>`)
+        })
+        $("#movieFormSubmitBtn").click(() => {
+            console.log("Movie details are submitted.!")
+            var actorInputs = document.querySelectorAll(".actor")
+            var actors = {}
+            for (a = 0; a < actorInputs.length; a++) {
+                let eachActor = (document.querySelectorAll(".actor")[a].value).split(',')
+                console.log("eachActor array ", eachActor)
+                actors[eachActor[0]] = eachActor[1]
+            }
+            console.log(actors, "all actors in an obj")
+
+            var movieObj = {
+                Movie: $("#movie").val() || "Movie Name = I",
+                PosterUrl: $("#poster").val() || "url only",
+                Year: $("#year").val() || "1995",
+                Language: $("#language").val(),
+                Rating: $("#rating").val() || "7",
+                Actors: actors,
+                Summary: $("#summary").val() || "It is just for the sake of filing some info to this line",
+            }
+            console.log("movie Object is ", movieObj)
+            moviesArr.push(movieObj)
+            console.log("moviesArr length is", moviesArr.length)
+            // localStorage.setItem("moviesArr",moviesArr) //also we can write like 
+            // var moviesArrString= JSON.stringify(moviesArr)
+            // localStorage["moviesArr"]= moviesArrString
+        })
+        // $("#movieFormResetBtn").click( () => {
+        //     console.log("form reset is clicked..!")
+        //     $("#movie").val()= ""
+        //     // $("#poster").val()= ""
+        //     // $("#year").val()= ""
+        //     document.querySelectorAll(".actor").value= ""
+        // })
+        $("#allMoviesBtn").click(() => {
+            // var allMoviesStr= localStorage.getItem("moviesArr")
+            // allMovies= JSON.parse(allMoviesStr)
+            // console.log(allMovies,"allMoviesParse")
+            // console.log(allMoviesStr,"showing all moviesStr")
+            // for(i= 0; i< moviesArr.length; i++) {
+            // }
+            $("#root").html("")
+            // var heading= `<div><h3>Movies Card View</h3></div>`
+            // $("#root").append(heading)
+            moviesArr.forEach((each) => {
+                var card = `<div class="card" style="width: 18rem;">
+                                <img src="${each.PosterUrl}" height="200px" width="80px" class="card-img-top" alt="${each.Movie}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${each.Movie}</h5>
+                                    <p class="card-text">Language :${each.Language}</p>
+                                    <button class="btn btn-success" onclick= showMoreDetails(${each.Movie})>More details</button>
+                                </div>
+                            </div>`
+                $("#root").append(card)
+            })
+        })
+        function showMoreDetails(name) {
+            console.log(name, "this is selected movie name for details..")
+            for (n = 0; n < moviesArr.length; n++) {
+                console.log(moviesArr, name, "this is moviesArr and selected movie")
+                if (moviesArr[n].Movie == name) {
+                    let m = moviesArr[n]
+                    let actorsLen = m.Actors.length
+                    let crewDiv = document.createElement("div")
+                    // crewDiv.setAttribute("id", "crewId")
+                    // for(j= 0; j< actorsLen; j++) {
+                    //     $("#crewId").append(<div>)
+                    // }
+                    var output = ''
+                    for (key in this) {
+                        output += key + ":" + sid[key] + "\n"
+                    }
+                    crewDiv.append(output)
+
+                    let selectedMovieDetails = `<div>
+                                                    <div>
+                                                        <img src="${m.PosterUrl}" alt="${m.Movie}">
+                                                    </div>
+                                                    <div>Movie Name: ${m.Movie}</div>
+                                                    <div>Releashed in : ${m.Year}</div>
+                                                    <div>Language is : ${m.Language}</div>
+                                                    <div>:Rating from Imdb is : ${m.Rating}</div>
+                                                    <div>:Starring  ${crewDiv}</div>
+                                                    <div>:Summry is ${m.Summary}</div>
+                                                </div>`
+
+                    $("#showMoreDetailsDiv").append(selectedMovieDetails)
+                    break
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
