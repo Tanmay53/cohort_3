@@ -4,14 +4,16 @@ import Login from '../components/auth/Login'
 import Home from '../components/common/Home'
 import Orders from '../components/common/Orders'
 import Error from '../components/common/Error'
+import Confirm from '../components/common/Confirm'
 import { connect } from 'react-redux';
+import { signout } from '../Redux/Action'
 
 function Routes(props)
 {
     return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:"white"}}>
-                <h3 className="navbar-brand" >Book Metting Rooms</h3>
+                <h3 className="navbar-brand" >Book Meeting Rooms</h3>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
@@ -31,10 +33,12 @@ function Routes(props)
                         </li>
                     </ul>
                 </div>
+                <button className="btn btn-info float-right" onClick={()=> props.signout(false)}>Sign Out</button>
             </nav>
             <Switch>
                 <Route path="/" exact component = {Home} />
-                <Route path="/orders" component  = {Orders} />
+                <Route exact path="/orders" component  = {Orders} />
+                <Route path ="/orders/confirm" exact component = {(props) => <Confirm {...props} />} />
                 <Route path="/login" component  = {Login} />
                 <Route path="/error" component  = {Error} />
             </Switch>
@@ -46,5 +50,8 @@ const mapStateToProps = (state) => ({
     token: state.token
 })
 
+const mapDispatchToProps = (dispatch) => ({
+    signout : (payload) => (dispatch(signout(payload))),
+})
 
-export default connect(mapStateToProps)(Routes)
+export default connect(mapStateToProps,mapDispatchToProps)(Routes)
