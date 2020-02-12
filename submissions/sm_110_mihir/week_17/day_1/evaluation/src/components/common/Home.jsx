@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { atHome } from "../../redux/action";
 import Card from "./Card";
 export class Home extends Component {
@@ -61,6 +61,7 @@ export class Home extends Component {
     let totalPages = Math.ceil(this.displayData.length / resultPerPage);
     let query = new URLSearchParams(this.props.location.search);
     let currPage = query.get("page") || 1;
+    if (totalPages == 1) currPage = 1;
     let prevPageEnd = (currPage - 1) * resultPerPage;
     let currPageEnd = currPage * resultPerPage;
     let currPageItems = [];
