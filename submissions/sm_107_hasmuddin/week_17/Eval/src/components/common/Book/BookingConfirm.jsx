@@ -1,9 +1,15 @@
 import React, {useState} from 'react'
-import { connect } from 'react-redux'
+import swal from "sweetalert"
+import {addToBook, updateAvailablity} from "../../Redux/Action"
+import {connect} from "react-redux"
+
 
 function BookingConfirm(props) {
-    console.log(props.match)
-    const room = props.rooms.find(rooms=>{
+    const roomsData = JSON.parse(localStorage.getItem("rooms"))
+    if(roomsData==null){
+        roomsData=[]
+    }
+    const room = roomsData.find(rooms=>{
         return rooms.id == props.match.params.id
     })
 
@@ -21,6 +27,24 @@ function BookingConfirm(props) {
     }
     console.log("from", from)
     console.log("to", to)
+
+    //booking function
+
+    function booking(){
+        if(from=="" || to==""){
+            swal("Select 'from' and 'to' date both", "","warning")
+        }
+        else{
+          const booked = {...room, from:from, to:to}
+
+          //booking done by redux axion
+          props.addToBook(booked)
+          props.updateAvailablity(room.id)
+        swal("Booking Completed", "","success")
+        props.history.push(`/meetingRooms/${room.id}/confirm?id=${room.id}`)
+        }
+
+    }
     return (
         <div className="container  row justify-content-center text-left">
             
@@ -33,7 +57,7 @@ function BookingConfirm(props) {
                        <p>Floor : {room.floor_num}</p>
                         From:  <input onChange={handleChange} name="from" type="date" className="form-control"/>
                         TO: <input onChange={handleChange} name="to" type="date" className="form-control"/>
-                        {room.available?<button className="btn btn-outline-success my-3">Confirm To Book</button>:<button className="my-3" disabled>Not Available</button>}
+                        {room.available?<button onClick={booking} className="btn btn-outline-success my-3">Confirm To Book</button>:<button className="my-3" disabled>Not Available</button>}
                     </div>
                 </div>
 
@@ -42,11 +66,15 @@ function BookingConfirm(props) {
         </div>
     )
 }
-const mapStateToProps = state=>{
+const mapStateToProps=state=>{
     return {
-        state:state,
-        rooms:state.rooms
+        rooms:state.rooms.rooms
     }
 }
-
-export default connect(mapStateToProps)(BookingConfirm)
+const mapDispatchToProps=dispatch=>{
+    return {
+        addToBook:user=>dispatch(addToBook(user)),
+        updateAvailablity:id=>dispatch(updateAvailablity(id))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(BookingConfirm)
