@@ -11,18 +11,73 @@ import uuid from 'uuid-random'
 
 
 class Home extends React.Component {
+ constructor(props) {
+   super(props)
+   this.state = {
+    data:[],
+    ready:false 
+   };
+ };
  
 
-//   componentDidMount() {
-    
+  componentDidMount() {
+    let datax=this.props.data
+    this.setState({
+      data:datax,
+      ready:true,
+    })
    
-//   }
+  }
+
+  handleChange=e=>{
+    let datax=this.props.data
+    let sBasis=e.target.value
+    if (sBasis=="name"){
+      datax.sort(function(a, b){
+        if(a.name.toLowerCase() < b.name.toLowerCase()) { return -1; }
+        if(a.name.toLowerCase() > b.name.toLowerCase()) { return 1; }
+        return 0;
+    })
+      this.setState({
+        data:datax
+      })
+    }
+    if (sBasis=="capacity"){
+      datax.sort((a,b)=>(a.capacity-b.capacity))
+      this.setState({
+        data:datax
+      })
+    }
+  if (sBasis=="price"){
+    datax.sort((a,b)=>(a.price-b.price))
+    this.setState({
+      data:datax
+    })
+  }
+  if (sBasis=="floor"){
+    datax.sort((a,b)=>(a.floor-b.floor))
+    this.setState({
+      data:datax
+    })
+  }
+
+}
 
   render() {
     return (
       <>
+      <div class=" mx-2 input-group col col-md-4 col-lg-3">
+        <label className="m-2">Sort</label>
+        <select onChange={this.handleChange} class="custom-select form-control" name="" id="">
+          <option value="default" default selected>Default</option>
+          <option value="name">Name</option>
+          <option value="capacity">Capacity</option>
+          <option value="price">Price</option>
+          <option value="floor">Floor</option>
+        </select>
+      </div>
           <div className="row mt-2">
-            {this.props.data.map(e => {
+            {(this.state.ready) && this.state.data.map(e => {
               return (
                 <Card key={uuid()} className="mx-auto m-1 my-2" style={{ width: "300px" }}>
                   <CardActionArea className="text-center">
@@ -53,7 +108,7 @@ class Home extends React.Component {
               );
             })}
           </div>
-        }
+        
       </>
     );
   
