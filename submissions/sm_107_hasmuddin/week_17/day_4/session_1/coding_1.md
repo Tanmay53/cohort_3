@@ -152,14 +152,14 @@ SELECT * FROM employee_salary WHERE department='Legal' ORDER BY salary ASC LIMIT
 Women ranked 30 to 50 in terms of salary earned
 
 ```sql
-SELECT * FROM employee_salary WHERE gender="Female" ORDER BY salary DESC LIMIT 30,50;
+SELECT * FROM employee_salary WHERE gender="Female" ORDER BY salary DESC LIMIT 30,20;
 
 ```
 
 Men ranked 50 to 100 in terms of salary earned
 
 ```sql
-SELECT * FROM employee_salary WHERE gender="Male" ORDER BY salary DESC LIMIT 50,100;
+SELECT * FROM employee_salary WHERE gender="Male" ORDER BY salary DESC LIMIT 50,50;
 
 ```
 
