@@ -36,11 +36,11 @@ class Login extends Component {
                     <div className="col-5 m-auto border rounded bg-dark py-4">
                         <form onSubmit= {(e) => e.preventDefault}>
                             <div className="form-group">
-                                <label className="text-white" for="exampleInputEmail1">Username</label>
+                                <label className="text-white">Username</label>
                                 <input onChange={this.hnadleChange} name="username" type="text" className="form-control" />
                             </div>
                             <div className="form-group">
-                                <label className="text-white" for="exampleInputPassword1">Password</label>
+                                <label className="text-white">Password</label>
                                 <input onChange={this.hnadleChange} name="password" type="password" className="form-control" />
                             </div>
                             <button onClick={this.submit} type="submit" className="btn btn-otline-light bg-light">Submit</button>
@@ -57,7 +57,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    loginUsers: payload => dispatch(loginUsers(payload)) 
+    loginUsers: (payload, obj) => dispatch(loginUsers(payload, obj)) 
 })
 
 export default connect(mapStateToProps,
