@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid bg-dark text-light">
+        <div class="row">
+            <div class="col-6 p-5">
+                <form id="form">
+                    <h1>Create Employee Data</h1>
+                    <div class="form-group">
+                        <label>Employee Name</label>
+                        <input type="text" class="form-control" id="EmployeeName" placeholder="Enter Employee Name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" class="form-control" id="CompanyName" placeholder="Enter Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Salary</label>
+                        <input type="number" class="form-control" id="Salary" placeholder="Enter Salary" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Designation</label>
+                        <input type="text" class="form-control" id="Designation" placeholder="Enter Designation"
+                            required>
+                    </div>
+                    <button class="btn btn-success" id="submit">Submit</button>
+                </form>
+            </div>
+            <div class="display container-fluid">
+                <button id="sort" class="btn btn-primary">Salary Up</button>
+                <button id="reverse" class="btn btn-danger ml-2">Salary down</button>
+                <table class="table mt-2 text-white">
+                    <thead>
+                        <th>Employee Name</th>
+                        <th>Company Name</th>
+                        <th>Salary</th>
+                        <th>Designation</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="form.js"></script>
+</body>
+
+</html>
