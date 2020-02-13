@@ -1,0 +1,13 @@
+.cont{
+    text-align: center;
+    color: gray;
+    font-style: inherit;
+    background-color: lightblue;
+    height: 900px;
+    box-shadow: black;
+}
+
+#cont1{
+    width: 400px;
+    
+}
