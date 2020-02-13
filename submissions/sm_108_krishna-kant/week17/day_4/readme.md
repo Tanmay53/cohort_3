@@ -94,71 +94,71 @@ Table - `employee_salary`
 Count of Men in Engineering
 
 ```sql
-
+select count(id) from employee_salary where department = "Engineering" and gender ="Male";
 ```
 
 Count of Women in Engineering who earn less than one million
 
 ```sql
-
+select count(id) from employee_salary where gender = "Female" and department = "Engineering" and salary < 1000000;
 ```
 
 Count of people make less than 80k
 
 ```sql
-
+select count(id) from employee_salary where salary < 80000;
 ```
 
 People who belong Accounting and Legal who make less than 100k
 
 ```sql
-
+select * from employee_salary where department in ("Legal","Accounting") and salary < 100000;
 ```
 
 Top 10 earning Men
 
 ```sql
-
+select * from employee_salary order by salary desc limit 10;
 ```
 
 Bottom 10 earning Women
 
 ```sql
-
+select * from employee_salary where gender = "Female" order by salary asc limit 10;
 ```
 
 Top 5 earning Engineering people
 
 ```sql
-
+select * from employee_salary where department = "Engineering" order by salary desc limit 5;
 ```
 
 Bottom 5 earning Legal people
 
 ```sql
-
+select * from employee_salary where department = "Legal" order by salary asc limit 5;
 ```
 
 Women ranked 30 to 50 in terms of salary earned
 
 ```sql
-
+select * from employee_salary where gender="Female" order by salary desc limit 30,20;
 ```
 
 Men ranked 50 to 100 in terms of salary earned
 
 ```sql
-
+select * from employee_salary where gender="Male" order by salary desc limit 50,50;
 ```
 
 Bottom 50 earning women in Engineering
 
 ```sql
-
+select * from employee_salary where gender="Female" and department="Engineering" order by salary asc limit 50;
 ```
 
 Top 50 earning men in Human Resources
 
 ```sql
-
+select * from employee_salary where gender="Male" and department="Human Resources" order by salary desc limit 50;
 ```
