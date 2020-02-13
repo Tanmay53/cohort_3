@@ -14,7 +14,6 @@ class SignUP extends Component {
              username: "",
              mobile: "",
              description: "",
-             token: "abc"
         }
     }
 
@@ -27,15 +26,17 @@ class SignUP extends Component {
     submit = (e) => {
         e.preventDefault()
         let obj = {
-            name: this.state.name,
-            email: this.state.email,
-            password: this.state.password,
-            username: this.state.username,
-            mobile: this.state.mobile,
-            description: this.state.description,
+            ...this.state
+            // name: this.state.name,
+            // email: this.state.email,
+            // password: this.state.password,
+            // username: this.state.username,
+            // mobile: this.state.mobile,
+            // description: this.state.description,
+            
         }
-
-        this.props.signUpUser("http://localhost:8080/auth/register", obj)
+        let url = "http://localhost:8080/auth/register"
+        this.props.signUpUser(url, obj)
     }
     
     render() {
@@ -51,7 +52,7 @@ class SignUP extends Component {
                             </div>
                             <div className="form-group">
                                 <label className="text-white">Email</label>
-                                <input onChange={this.hnadleChange} name="eamil" type="email" className="form-control"  aria-describedby="emailHelp"/>
+                                <input onChange={this.hnadleChange} name="email" type="email" className="form-control"  aria-describedby="emailHelp"/>
                             </div>
                             <div className="form-group">
                                 <label className="text-white" for="exampleInputPassword1">Password</label>
@@ -85,7 +86,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => {
     return {
-        signUpUser: payload => dispatch(signUpUser(payload)) 
+        signUpUser: (payload, obj) => dispatch(signUpUser(payload, obj)) 
     }
 }
 

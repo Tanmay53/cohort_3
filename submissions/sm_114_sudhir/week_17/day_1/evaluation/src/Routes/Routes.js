@@ -14,8 +14,8 @@ function Routes() {
         <React.Fragment>
             {/* <Navbar/> */}
             <Switch>
-                <Route exact path="/" component = {Home} />
-                <Route path="/rooms" component = {Rooms} />
+                <Route exact path="/" component = {(props) => <Home {...props} />} />
+                <Route path="/rooms" component = {(props) => <Rooms {...props} />} />
                 <Route path="/login" component = {Login} />
                 <Route path="/signup" component = {SignUp} />
                 <Route path="/orders" component = {Orders} /> 

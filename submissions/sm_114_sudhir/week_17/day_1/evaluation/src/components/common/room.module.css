@@ -1,5 +1,5 @@
-.home {
-    background-image: url('https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+.room {
+    background-image: url('https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.5);
     background-size: cover;
     color: white;
@@ -10,7 +10,7 @@
     justify-content: center;
     transition: box-shadow .3s ease-out;
   }
-  .bg_makeTrip {
+  .bg_room {
       /* background-color: #172052; */
       box-shadow:rgba(0,0,0,0.3);
   }
