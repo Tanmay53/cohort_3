@@ -43,27 +43,27 @@ export default class Form extends Component {
         const { address, age, name,salary} = {...this.state.details}
         console.log(name, age, address, salary)
         if(name.length === 0){
-            alert("You got a name right chu****?")
+            alert("You got a name right, so please enter that?")
             return true
         }
         else if((Number(age) < 18) || (Number(age) > 100) || (isNaN(age))){
             if(Number(age) < 18)
                 alert("Sorry Kiddo but we don't do child labour")
-            else
+            else if(Number(age) > 100)
                 alert("You have crossed your retirement age")
             return true
         }
         else if(address.length === 0){
-            alert("Do you live on the road?")
+            alert("Are you homeless?")
             return true
         }
         else if(isNaN(salary) || (Number(salary) <= 0) || (Number(salary) > 10000000)){
             console.log(salary)
-            if(salary === 0)
+            if(salary.length === 0)
                 alert("Please enter a salary")
-            else if(Number(salary) < 0)
+            else if(Number(salary) <= 0)
                 alert("Hey Liar! We pay more than this")
-            else
+            else if(Number(salary) > 10000000)
                 alert("Our CTO earns less than this, plz find another job")
             return true
         }
@@ -81,7 +81,7 @@ export default class Form extends Component {
         const updated = { ...this.state.details }
         updated.id += 1
         this.setState({ details : updated })
-        // this.handleReset()
+        this.handleReset()
         this.props.data(updated)
     }
 
