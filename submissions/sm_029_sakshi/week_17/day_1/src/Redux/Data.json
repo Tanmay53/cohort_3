@@ -1,0 +1,93 @@
+[
+    {
+        "id": "001",
+        "name": "Meetingroom11",
+        "floor":"1st",
+        "price": "400",
+         "capacity":"6",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    },
+    {
+        "id": "002",
+        "name": "Meetingroom22",
+        "floor":"2st",
+        "price": "540",
+         "capacity":"2",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    },
+    {
+        "id": "003",
+        "name": "Meetingroom33",
+        "floor":"3st",
+        "price": "900",
+         "capacity":"4",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    },
+    {
+        "id": "004",
+        "name": "Meetingroom44",
+        "floor":"4st",
+        "price": "500",
+         "capacity":"3",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    },
+    {
+        "id": "005",
+        "name": "Meetingroom55",
+        "floor":"3st",
+        "price": "250",
+         "capacity":"1",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    },
+    {
+        "id": "006",
+        "name": "Meetingroom66",
+        "floor":"2st",
+        "price": "350",
+         "capacity":"3",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    },
+    {
+        "id": "007",
+        "name": "Meetingroom77",
+        "floor":"4th",
+        "price": "600",
+         "capacity":"6",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    },
+    {
+        "id": "008",
+        "name": "Meetingroom88",
+        "floor":"1st",
+        "price": "400",
+         "capacity":"5",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    },
+    {
+        "id": "009",
+        "name": "Meetingroom99",
+        "floor":"3rd",
+        "price": "500",
+         "capacity":"5",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    },
+    {
+        "id": "010",
+        "name": "Meetingroom100",
+        "floor":"1st",
+        "price": "550",
+         "capacity":"4",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-4nyD2yN35zIA3JQ_GPuGevUpe0vda8t5eTfixrs9ZM0FyA4k",
+        "count":"1"
+    }
+    
+]
