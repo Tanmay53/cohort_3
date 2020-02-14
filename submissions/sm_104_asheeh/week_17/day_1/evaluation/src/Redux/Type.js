@@ -1,0 +1,2 @@
+export const CHECK_USER = "CHECK_USER"
+export const DISPAY_MEETING_ROOMS = "DISPAY_MEETING_ROOMS"

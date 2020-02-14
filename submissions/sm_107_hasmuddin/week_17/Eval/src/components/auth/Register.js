@@ -1,7 +1,17 @@
 import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-
+import axios from "axios"
+import swal from "sweetalert"
+import {Link} from "react-router-dom"
+// {
+//   "name": "MASAI School",
+//   "email": "hello@masai.com"
+//   "password": "secret",
+//   "username": "masai-school",
+//   "mobile": "9876543210",
+//   "description": "A Transformation in education!" 
+// }
 
 export class Register extends Component {
   constructor(props) {
@@ -10,9 +20,10 @@ export class Register extends Component {
       form: {
         name: "",
         email: "",
-        mobile: "",
+        password: "",
         username: "",
-        password: ""
+        mobile: "",
+        description:""
       }
     };
   }
@@ -25,18 +36,46 @@ export class Register extends Component {
     });
   };    
   submit = () => {
-    const { email } = this.state.form
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(email.match(mailformat)){
-      
-    }
-    else {
-      alert("Email is Incorrect")
-    }
+      const {name, email, password, username, mobile, description} = this.state.form
+      if(name=="" || email=="" || username=="" || mobile=="" || password=="" || description==""){
+        swal("All field mendotary to fill", "", "warning")
+      }
+      else{
+        const config = {
+          method:"post",
+          baseURL:"http://localhost:8080",
+          url: '/auth/register',
+          headers: {'Content-Type': 'application/json',},
+          data:{...this.state.form}}
+          axios(config).then(res=>{
+            const message = res.data.message
+            if(message=="Registration Success"){
+              swal("Registration Success", "", "success")
+              this.reset()
+            }
+            else{
+              swal(message, "", "warning")
+            }
+          })
+      }
   };
+  reset = ()=>{
+    this.setState({
+      form:{
+        ...this.state.form,
+        name: "",
+        email: "",
+        password: "",
+        username: "",
+        mobile: "",
+        description:""
+
+      }
+    })
+  }
   render() {
     return (
-      <div className="container d-flex justify-content-center align-items-center p-5">
+      <div className="container d-flex justify-content-center align-items-center p-1">
         <form className="flex-column col-md-5 col-12 bg-light  border p-2 d-flex">
           <h2 className="text-center text-danger">Register</h2>
           <TextField
@@ -45,22 +84,34 @@ export class Register extends Component {
             onChange={this.handleChange}
             name="name"
             label="Name"
+            value={this.state.form.name}
             variant="outlined"
           />
           <TextField
             id="outlined-basic"
             className="m-2"
             onChange={this.handleChange}
-            name="username"
-            label="Username"
+            name="email"
+            label="Email"
+            value={this.state.form.email}
             variant="outlined"
           />
           <TextField
             id="outlined-basic"
             className=" m-2"
             onChange={this.handleChange}
-            name="email"
-            label="Email"
+            name="password"
+            label="password"
+            value={this.state.form.password}
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-basic"
+            className=" m-2"
+            onChange={this.handleChange}
+            name="username"
+            label="Username"
+            value={this.state.form.username}
             variant="outlined"
           />
           <TextField
@@ -68,9 +119,20 @@ export class Register extends Component {
             className=" m-2"
             onChange={this.handleChange}
             name="mobile"
+            value={this.state.form.mobile}
             label="Mobile Number"
             variant="outlined"
           />
+          <TextField
+            id="outlined-basic"
+            className=" m-2"
+            onChange={this.handleChange}
+            name="description"
+            label="Description"
+            value={this.state.form.description}
+            variant="outlined"
+          />
+          {/* description */}
           <Button
             onClick={this.submit}
             variant="outlined"
@@ -79,6 +141,7 @@ export class Register extends Component {
           >
             Register
           </Button>
+          <p>Already have an Account? <Link to="/login">click Here</Link></p>
         </form>
       </div>
     );
