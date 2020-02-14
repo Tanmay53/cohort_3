@@ -126,14 +126,17 @@ mysql> SELECT AVG(salary) FROM employee_salary WHERE department IN ("Accounting"
 Average salary top 10 earning Men
 
 ```sql
-mysql> SELECT AVG(salary) FROM employee_salary WHERE gender="Male" ORDER BY salary DESC LIMIT 10;
+
+mysql> SELECT AVG(salary) FROM (SELECT salary FROM employee_salary WHERE gender="Male" ORDER BY salary DESC LIMIT 10) AS top_men_salary;
+
 
 ```
 
 Total salary of bottom 10 earning Women
 
 ```sql
-mysql> SELECT SUM(salary) FROM employee_salary WHERE gender="Female" ORDER BY salary ASC LIMIT 10;
+mysql> SELECT SUM(salary) FROM (SELECT salary FROM employee_salary WHERE gender="Female" ORDER BY salary ASC LIMIT 10) AS bottom_women_salary;
+
 
 ```
 
@@ -147,6 +150,7 @@ mysql> SELECT AVG(salary) FROM employee_salary WHERE department="Engineering";
 Average salary of the Women ranked 30 to 50 in terms of salary earned
 
 ```sql
+mysql> SELECT AVG(salary) FROM (SELECT salary FROM employee_salary WHERE gender="Female" ORDER BY salary DESC LIMIT 30,20) AS women_rank_30_50;
 
 
 ```
@@ -154,18 +158,29 @@ Average salary of the Women ranked 30 to 50 in terms of salary earned
 Total Salary of Men ranked 50 to 100 in terms of salary earned
 
 ```sql
+mysql> SELECT SUM(salary) FROM (SELECT salary FROM employee_salary WHERE gender="Male" ORDER BY salary DESC LIMIT 50,50) AS men_salary_50_100;
 
 ```
 
 Total salary of bottom 50 earning women in Engineering
 
 ```sql
+mysql> SELECT SUM(salary) FROM
+    -> (SELECT salary FROM employee_salary
+    -> WHERE gender="Female" AND department="Engineering"
+    -> ORDER BY salary LIMIT 50)
+    -> AS bottom50_er_women;
 
 ```
 
 Average salary of the top 50 earning men in Human Resources
 
 ```sql
+mysql> SELECT AVG(salary) FROM
+    -> (SELECT salary FROM employee_salary
+    -> WHERE gender="Male" AND department="Human Resources"
+    -> ORDER BY salary DESC LIMIT 50)
+    -> AS top50_er_men;
 
 ```
 
