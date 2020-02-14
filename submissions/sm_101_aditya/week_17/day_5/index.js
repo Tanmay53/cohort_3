@@ -53,8 +53,8 @@ $(document).ready(function (e) {
     $("#formHide").hide();
     $("id2").hide()
     var count = 1
-    take.forEach(ele => {
-      $('#id1').append(`<div id="allDetailsHide" class="container-fluid p-5 m-2 d-flex flex-row justify-content-center">
+    take.forEach((ele, i) => {
+      $('#id1').append(`<div id="allDetailsHide${i}" class="container-fluid p-5 m-2 d-flex flex-row justify-content-center">
       <h1 class="text-center">${count++ + "."}</h1>
         <div class="col">
         <div class="card mb-3" style="max-width: 540px;">
@@ -68,7 +68,7 @@ $(document).ready(function (e) {
               <p class="card-text">${ele["empName"]}</p>
               <p class="card-text">${ele["salary"]}</p>
               <p class="card-text">${ele["designation"]}</p>
-              <button type="button" onclick="delEmp1()" class="btn btn-outline-danger">Delete</button>
+              <button type="button" onclick="delEmp1(${i})" class="btn btn-outline-danger">Delete</button>
             </div>
           </div>
         </div>
@@ -91,8 +91,8 @@ function sortby() {
   $("#id1").hide()
   $("#formHide").hide()
   count = 1
-  take.forEach(ele => {
-    $('#id2').append(`<div id="sortBySalary" class="container-fluid p-5 m-2 d-flex flex-row justify-content-center">
+  take.forEach((ele, i) => {
+    $('#id2').append(`<div id="sortBySalary${i}" class="container-fluid p-5 m-2 d-flex flex-row justify-content-center">
     <h1>${count++ + "."}</h1>
     <div class="col">
     <div class="card mb-3" style="max-width: 540px;">
@@ -106,7 +106,7 @@ function sortby() {
           <p class="card-text">${ele["empName"]}</p>
           <p class="card-text">${ele["salary"]}</p>
           <p class="card-text">${ele["designation"]}</p>
-          <button type="button" onclick="delEmp2()" class="btn btn-outline-danger">Delete</button>
+          <button type="button" onclick="delEmp2(${i})" class="btn btn-outline-danger">Delete</button>
         </div>
       </div>
     </div>
@@ -120,7 +120,7 @@ function sortby() {
 // filter by Company Name
 
 
-function selectCompany(e) {
+function selectCompany() {
 
   var selectVal = document.getElementById("selectValue").value
   console.log(selectVal)
@@ -171,15 +171,15 @@ function selectCompany(e) {
 // delete function
 
 
-function delEmp1() {
-  $("#allDetailsHide").remove()
+function delEmp1(e) {
+  $("#allDetailsHide"+e).remove()
   alert("remove from all data")
 }
 function delEmp2(e) {
-  $("#sortBySalary").remove()
+  $("#sortBySalary"+e).remove()
   alert("remove from sorted data")
 }
 function delEmp3(e) {
-  $("#filterDelete").remove()
+  $("#filterDelete"+e).remove()
   alert("remove from company data")
 }
