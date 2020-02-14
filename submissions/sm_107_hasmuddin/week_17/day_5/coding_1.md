@@ -115,13 +115,13 @@ SELECT AVG(salary) FROM employee_salary  WHERE department IN ("Accounting", "Leg
 Average salary top 10 earning Men
 
 ```sql
-SELECT AVG(salary) FROM employee_salary WHERE gender="Male" ORDER BY salary DESC LIMIT 10;
+SELECT AVG(salary) FROM (SELECT * FROM employee_salary WHERE gender="Male" ORDER BY salary DESC LIMIT 10) as Avg_top_earning;
 ```
 
 Total salary of bottom 10 earning Women
 
 ```sql
-SELECT SUM(salary) FROM employee_salary WHERE gender="Female" ORDER BY salary ASC LIMIT 10;
+SELECT SUM(salary) FROM (SELECT * FROM employee_salary WHERE gender="Female" ORDER BY salary ASC LIMIT 10) as btm_top;
 ```
 
 Average salary of  Engineering people
@@ -133,25 +133,25 @@ SELECT AVG(salary) FROM employee_salary WHERE department="Engineering";
 Average salary of the Women ranked 30 to 50 in terms of salary earned
 
 ```sql
-
+SELECT AVG(salary) FROM (SELECT * FROM employee_salary WHERE gender="Female" ORDER BY salary DESC LIMIT 30,20) as Rank;
 ```
 
 Total Salary of Men ranked 50 to 100 in terms of salary earned
 
 ```sql
-
+SELECT SUM(salary) FROM ( SELECT * FROM employee_salary WHERE gender="Male" ORDER BY salary DESC LIMIT 50,50) as Salary_sum;
 ```
 
 Total salary of bottom 50 earning women in Engineering
 
 ```sql
-SELECT SUM(salary) FROM employee_salary WHERE gender="Female" AND department="Engineering" ORDER BY salary ASC LIMIT 50;
+SELECT SUM(salary) FROM (SELECT * FROM employee_salary WHERE gender="Female" AND department="Engineering" ORDER BY salary ASC LIMIT 50) as btm_fifty;
 ```
 
 Average salary of the top 50 earning men in Human Resources
 
 ```sql
-SELECT AVG(salary) FROM employee_salary WHERE gender="Male" AND department="Human Resources" ORDER BY salary DESC LIMIT 50;
+SELECT AVG(salary) FROM (SELECT * FROM employee_salary WHERE gender="Male" AND department="Human Resources" ORDER BY salary DESC LIMIT 50) as hmn_rs_top;
 ```
 
 ### FSD.SQL.5.3
