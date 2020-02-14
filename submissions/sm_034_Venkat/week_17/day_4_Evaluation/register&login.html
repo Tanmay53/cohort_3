@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Register&LogIn</title>
+    <style>
+        body * {
+            white-space: pre-line;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body class="m-3">
+    <div class="d-flex p-4 border justify-content-around bg-secondary">
+        <div id="registrationPage" class="border bg-success px-4">
+            <h3 class="text-warning">Registration Form</h3>
+            <input type="text" id="name" placeholder="  Enter your Name">
+            <input type="text" id="email" placeholder="  Enter your email address">
+            <input type="text" id="password" placeholder="  Enter your password">
+            <input type="text" id="username" placeholder="Enter your Username">
+            <input type="text" id="mobile" placeholder="Enter your Mobile Number">
+            <input type="text" id="matter" placeholder="Write few words about you">
+            <button id="regSubmitBtn">submit</button>
+        </div>
+        <div id="logInPage" class="border bg-success px-4">
+            <h3 class="text-warning">Log In Form</h3>
+            <input type="text" name="user" id="loginName" placeholder="Enter User Name" required>
+            <input type="text" name="password" id="loginPassword" placeholder="PassWord" required>
+            <button id="loginBtn">Submit</button>
+        </div>
+    </div>
+
+    <script src="reg&logIn.js"></script>
+</body>
+
+</html>
