@@ -132,6 +132,8 @@ select avg(salary) as avg_salary from employee_salary where department IN ("Acco
 Average salary top 10 earning Men
 
 ```sql
+select avg(salary) as avg_top_salary from (select * from employee_salary where gender = "male" order by salary desc limit 10) as salary ;
+
 
 
 ```
@@ -139,6 +141,8 @@ Average salary top 10 earning Men
 Total salary of bottom 10 earning Women
 
 ```sql
+select sum(salary) as total_btm_salary from (select * from employee_salary where gender ="female" order by salary asc limit 10) as top_10 ;
+
 
 ```
 
@@ -153,25 +157,29 @@ select avg(salary) from employee_salary where department = "Engineering" ;
 Average salary of the Women ranked 30 to 50 in terms of salary earned
 
 ```sql
-select avg(salary) from employee_salary where gender="female" limit 30,20 ;
+select avg(salary) from (select * from employee_salary where gender = "female" order by salary desc limit 30,20) as 30_50_salary ;
 
 ```
 
 Total Salary of Men ranked 50 to 100 in terms of salary earned
 
 ```sql
+select sum(salary) from (select * from employee_salary where gender = "Male" order by salary desc limit 50,50) as 50_100_salary ;
 
 ```
 
 Total salary of bottom 50 earning women in Engineering
 
 ```sql
+ select sum(salary) from (select * from employee_salary where gender = "Female" and department ="Engineering" order by salary asc limit 50) as bottom_50_salary ;
 
 ```
 
 Average salary of the top 50 earning men in Human Resources
 
 ```sql
+ select avg(salary) from (select * from employee_salary where gender = "male" and department ="Human Resources" order by salary desc limit 50) as top_50_salary ;
+
 
 ```
 
@@ -207,41 +215,42 @@ Table - `users_data`
 List all the available shirt sizes
 
 ```sql
-
+select distinct(shirt_size)  from user_data ;
 ```
 
 List all the country names
 
 ```sql
+select distinct(language) from user_data ;
 
 ```
 
 Count all the females whose name end with vowels
 
 ```sql
-
+select * from user_data where name like '%a' or name like '%e' or name like "%i" or name like "%o" or name like "%u" ;
 ```
 
 List all the males whose name has a vowel as the 2nd character
 
 ```sql
-
+select * from user_data where name like '_a%' or name like '_e%' or name like "_i%" or name like "_o%" or name like "_u%" ;
 ```
 
 List all the users whose name starts and ends with the letter `a`
 
 ```sql
-
+select * from user_data where name like 'a%a' ;
 ```
 
 Count of all users who have the letter `z` in their name
 
 ```sql
-
+select * from user_data where name like '%z%' ;
 ```
 
 Count of all male users who have the word `dev` in their names
 
 ```sql
-
+select * from user_data where name like '%dev%' ;
 ```
