@@ -6,7 +6,7 @@ export default class Forms extends React.Component {
         <div class="jumbotron jumbotron-fluid">
           <div class="container">
             <h1 class="display-2 text-center text-danger">
-              <b>Movie Entery Database</b>
+              <b>Movie Entry Database</b>
             </h1>
 
             <p class="lead text-center text-primary">
