@@ -3,11 +3,15 @@
     color: gray;
     font-style: inherit;
     background-color: lightblue;
-    height: 900px;
+    height: 1900px;
     box-shadow: black;
 }
 
 #cont1{
-    width: 400px;
-    
+    width: 400px;   
+}
+#thatDiv{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

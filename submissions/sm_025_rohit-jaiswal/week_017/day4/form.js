@@ -22,5 +22,28 @@ function setData(){
 
   function displayEmp(){
     $('#cont1').hide()
-    location="employee.html"
-  }
+    var user = JSON.parse(localStorage.getItem("arr"))
+    console.log(user)
+    user.forEach(evrObj => {
+      let card = `<div class="card" style="width: 18rem;">
+                <img src="${evrObj.url}" height="100px" class="card-img-top">
+                <div class="card-body">
+                <h5 class="card-title"><b>${evrObj.name}</b></h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Previous Salary:</b>${evrObj.salary}</li>
+                <li class="list-group-item"><b>Designation :</b>${evrObj.design}</li>
+                <li class="list-group-item"><b>Previous Employer:</b>${evrObj.excomp}</li>
+              </ul>
+              <div class="card-body">
+              <a href="#" class="card-link">Delete</a>
+            </div>
+                </div>`
+              
+                $("#thatDiv").append(card)
+       
+    })
+      }
+
+  
+  
