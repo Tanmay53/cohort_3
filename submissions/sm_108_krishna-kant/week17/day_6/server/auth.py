@@ -49,6 +49,7 @@ def read_user(email):
         for row in reader:
             if row['email'] == email:
                 user_data = row
+                break
     return user_data
 
 def auth_middleware(email,password):
@@ -59,9 +60,9 @@ def auth_middleware(email,password):
     password = md5_hash(password)
     if password == user['password']:
         token = md5_hash(email)
-        return {"token":token}
+        return {"msg":"Login Successful","token":token}
     else:
-        return {"msg":"Invalid Password"}
+        return {"msg":"Invalid Password"} 
 
 def md5_hash(string):
     hash = hashlib.md5()
