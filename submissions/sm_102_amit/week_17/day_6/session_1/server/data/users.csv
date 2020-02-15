@@ -1,0 +1,4 @@
+uid,name,email,salt,password_hash
+1,Amit Kumar,amit@gmail.com,b'B63mDIa1j4qxTyOjg6XLfw==',e93f02fedcad17d7527e947bbb3801fa
+2,Amit Kumar,amit12@gmail.com,b'YbiQ0orQQEQtf54XvhzTZQ==',422c5b971731b6d1e14f9341586566f0
+3,Amit Kumar Singh,akamit21@gmail.com,b'jjWJ81NBNuQ4mBKC6gjjCw==',a9300f9cddff59a44a40c5e38bdffbda
