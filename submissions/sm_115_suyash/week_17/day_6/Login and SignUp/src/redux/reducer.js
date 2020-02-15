@@ -1,9 +1,10 @@
-import { AXIOS_LODING, SIGN_UP_SUCCESS, LOGIN_SUCCESS } from "./action";
+import { AXIOS_LODING, SIGN_UP_SUCCESS, LOGIN_SUCCESS, LOGOUT } from "./action";
 
 const initialState = {
   loginMsg: "",
   signUpMsg: "",
   isAuth: false,
+  signupAuth: false,
   loading: false
 };
 
@@ -20,6 +21,7 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           loading: false,
+          signupAuth: true,
           signUpMsg: action.payload
         };
       } else {
@@ -30,7 +32,6 @@ const reducer = (state = initialState, action) => {
         };
       }
     case LOGIN_SUCCESS:
-      console.log(state.loading);
       if (action.payload == "Login successfully") {
         return {
           ...state,
@@ -45,6 +46,12 @@ const reducer = (state = initialState, action) => {
           loginMsg: action.payload
         };
       }
+    case LOGOUT:
+      return {
+        ...state,
+        isAuth: false,
+        signupAuth:false,
+      };
     default:
       return state;
   }

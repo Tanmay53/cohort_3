@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { loginForm } from "../../redux/action";
+import { loginForm, logout } from "../../redux/action";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
@@ -17,24 +17,26 @@ const Login = ({ logout, loginForm, message, isAuth }) => {
     });
   };
   const handleSubmit = () => {
-    loginForm(email);
-    setEmail({
-      ...email,
-      email: "",
-      password: ""
-    });
-    setTimeout(() => {
-      if (isAuth) {
-        swal("Login Successful", "Welcome to my website", "success");
-      } else {
-        swal("Here's the title!", message);
-      }
-    }, 2000);
+    if (email.email != "" && email.password != "") {
+      loginForm(email);
+      setEmail({
+        ...email,
+        email: "",
+        password: ""
+      });
+      if (!isAuth) swal("Here's the title!", "Invalid User OR password");
+    } else {
+      swal("Invalid Inputs!", "Fill input properly");
+    }
   };
 
   const handleLogout = () => {
     logout();
+    swal("Logged out", "Thankyou! for visiting", "success");
   };
+  if (isAuth) {
+    swal("Login Successful", "Welcome to my website", "success");
+  }
   return (
     <div className="container">
       {isAuth ? (
