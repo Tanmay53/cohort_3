@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+        <div class="container-fluid">
+            <div class="d-flex flex-row col-sm-12 col-md-8 col-lg-8">
+                <div>
+                    <a class="navbar-brand" href="#"><img
+                            src="https://img1a.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_4ee2f9.png"
+                            style="width: 100px;"></a>
+                </div>
+                <div>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" id="searchCat"
+                            placeholder="Search for products,brands,and more" aria-label="Search">
+                        <button type="button" id="searchBtn" class="btn btn-default border btn-success">search
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class=" col-sm-12 col-md-4 col-lg-8">
+                <button id="add" class="btn  btn-warning">ADD Product</button>
+                <button class="btn border text-white font-weight-bold ml-1">Cart</button>
+            </div>
+        </div>
+
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div
+            class="container-fluid justify-content-lg-between  text-dark justify-content-md-around justify-content-sm-center">
+            <div><button id="Electronic" class="btn border font-weight-bold">Electronics</button></div>
+            <div><button id="Tv" class="btn border font-weight-bold">TV&Appliances</button></div>
+            <div><button id="Men" class="btn border font-weight-bold">Men</button></div>
+            <div><button id="Women" class="btn border font-weight-bold">Women</button></div>
+            <div><button id="Baby" class="btn border font-weight-bold">Baby&Kids</button></div>
+            <div><button id="Home" class="btn border font-weight-bold">Home&Furniture</button></div>
+            <div><button id="Sports" class="btn border font-weight-bold">Sports,books&more</button></div>
+        </div>
+    </nav>
+    <div class="container-fluid bg-dark text-light mt-1 m-0  ">
+        <div class="row">
+            <form id="form">
+                <h1>ADD PRODUCT DETAILS</h1>
+                <div class="row">
+                    <div class="form-group col-sm-12  col-lg-3">
+                        <label>Add image Url</label>
+                        <input type="text" class="form-control" id="Image" placeholder="Enter Image Url" required>
+                    </div>
+                    <div class="form-group col-sm-12 col-lg-3">
+                        <label>Add product name</label>
+                        <input type="text" class="form-control" id="Product" placeholder="Enter Product Name" required>
+                    </div>
+                    <div class="form-group col-sm-12 col-lg-3">
+                        <label>Add Price</label>
+                        <input type="number" class="form-control" id="Price" placeholder="Enter Price" required>
+                    </div>
+
+                    <div class="col-sm-10 col-lg-3">
+                        <label>Category</label>
+                        <select id="Category">
+                            <option value="electronic">Electronics</option>
+                            <option value="tv">TV&Appliances</option>
+                            <option value="men">Men</option>
+                            <option value="women">Women</option>
+                            <option value="baby">Baby&Kids</option>
+                            <option value="home">Home&Furniture</option>
+                            <option value="sports">Sports,books&more</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-success" id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="showDiv" class="container-fluid m-0 mt-1 p-0">
+        <button id="showData" class="btn btn-info">Show All Products</button>
+        <button id="sort" class="btn btn-primary ml-2">Price Up</button>
+        <button id="reverse" class="btn btn-danger ml-2">Down Up</button>
+        <div id="buttonDiv"></div>
+        <div id="cardsDiv" class="container-fluid row m-0 mt-1 p-0"></div>
+    </div>
+    <script src="landing.js"></script>
+</body>
+
+</html>
