@@ -6,10 +6,12 @@ export default function Login() {
     email: "",
     password: "",
     loading: false,
-    isError: false
+    res: false,
+    isLogin: false,
+    token: ""
   });
 
-  const { email, password, loading, isError, response } = login;
+  const { email, password, loading, isLogin, res, token } = login;
 
   const handleChange = e => {
     setLogin({
@@ -31,15 +33,26 @@ export default function Login() {
       }))
     }.data;
 
-    console.log(response);
+    let flag = false;
+
+    response.token ? (flag = true) : (flag = false);
 
     setLogin({
       ...login,
-      loading: false
+      loading: false,
+      res: flag,
+      token: response.token || response.msg
     });
-
-    alert(response.msg);
   };
+
+  useEffect(() => {
+    if (loading === false && res === true) {
+      setLogin({
+        ...login,
+        isLogin: true
+      });
+    }
+  }, [loading, res]);
 
   return (
     <div className="card col-lg-4 col-md-6 col-sm-10 col-xs-10 p-3 mx-auto mt-5">
@@ -69,6 +82,18 @@ export default function Login() {
         </div>
         <button className="btn  btn-primary btn-block">Login</button>
       </form>
+      {isLogin ? (
+        <div className="alert alert-success m-4" role="alert">
+          {token}
+        </div>
+      ) : null}
+      {loading ? (
+        <div className="text-center m-4">
+          <div className="spinner-border" role="status">
+            <span className="sr-only">Loading...</span>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
