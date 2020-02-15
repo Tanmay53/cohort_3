@@ -27,7 +27,7 @@ class Login extends Component {
       swal({
         title: "Done!",
         text: res.data.message,
-        icon: "success",
+        icon: "info",
         timer: 2000,
         button: false
       }).then(() => {
