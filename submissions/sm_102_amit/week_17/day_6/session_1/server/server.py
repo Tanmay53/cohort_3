@@ -92,7 +92,7 @@ def home():
 @app.route("/user/list")
 def list_users():
     users = read_file()
-    return json.dumps({"status": 200, "data": users})
+    return json.dumps({"status": 200, "users": users})
 
 # signup route
 @app.route("/auth/signup", methods=["POST"])
