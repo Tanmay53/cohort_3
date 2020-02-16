@@ -1,7 +1,9 @@
 import { LOGIN_SUCCESS, REGISTER_SUCCESS } from "./actionType";
 import axios from "axios";
+import swal from "sweetalert";
 
 export const userLogin = item => {
+  swal(item);
   return {
     type: LOGIN_SUCCESS,
     payload: item
@@ -9,6 +11,7 @@ export const userLogin = item => {
 };
 
 export const userRegister = item => {
+  swal(item);
   return {
     type: REGISTER_SUCCESS,
     payload: item
