@@ -3,6 +3,8 @@ import {connect} from "react-redux"
 import {fetch_response} from "../REDUX/Action"
 import {Link} from "react-router-dom"
 import Alert from "../Alert/Alert"
+import { Button } from 'antd';
+import 'antd/dist/antd.css'
 
 
 function Login(props) {
@@ -21,7 +23,7 @@ function Login(props) {
         setDisapper(true)
         setTimeout(()=>{
             setDisapper(false)
-        },3000)
+        },2000)
         
     }
     return (
@@ -32,7 +34,9 @@ function Login(props) {
                 <input placeholder="Name" className="form-control my-3" type="text" onChange={(e)=>setName(e.target.value)}/>
                 <input placeholder="Email" className="form-control my-3" type="email" onChange={(e)=>setEmail(e.target.value)}/>
                 <input placeholder="Passsword" className="form-control my-3" type="password" onChange={(e)=>setPass(e.target.value)}/>
-               <span> <input className="btn btn-success my-3 mr-3" type="submit" value="Register" onClick={submit}/><Link className="border border-dark p-2" to="/login">Already have an Account. Login</Link></span>
+               <span> <Button className="mr-2" type="primary" loading={disappear} onClick={()=>{
+                   submit()
+                        }}>Register </Button><Link className="border border-dark p-2" to="/login">Already have an Account. Login</Link></span>
             
             </div>
         </div>
