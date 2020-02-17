@@ -4,26 +4,28 @@ $(document).ready(function () {
     performFilter(product)
 })
 
+var filteredData
 function performFilter(product){
     // console.log(localStorage.getItem('myproducts'))
     var productData = JSON.parse(localStorage.getItem('myproducts'))
     // console.log(productData)
-    var filteredData = productData.data.filter(a=>a.subcategory===product)  
+    filteredData = productData.data.filter(a=>a.subcategory===product)  
     //console.log(productData)
-    console.log(productData)
     populatePages(filteredData)
 }
 
 function populatePages(productData) {
 
     // console.log(productData)
-
-    var bodydiv = document.querySelector('body')
+    
+    var bodydiv = document.getElementById("out")
+    bodydiv.innerHTML=""
     var container = document.createElement('div')
     container.setAttribute('class', 'container-fluid px-5 py-2')
     bodydiv.append(container)
 
     var row = document.createElement('div')
+    row.innerHTML=""
     row.setAttribute('class', 'row text-center')
     container.append(row)
 
@@ -60,3 +62,17 @@ function populatePages(productData) {
         col.append(card)
     }
 }
+
+$("#sortPrice").change(function(){
+    // var productData = JSON.parse(localStorage.getItem('myproducts'))
+    if($(this).val()=="asc"){
+        var sortedOut=filteredData.sort((a,b)=>{return a.price-b.price})
+        // console.log(sortedOut)
+        populatePages(sortedOut)
+    }
+    else if($(this).val()=="dec"){
+        var sortedOut=filteredData.sort((a,b)=>{return b.price-a.price})
+        populatePages(sortedOut)
+        // console.log(sortedOut)
+    }
+})
