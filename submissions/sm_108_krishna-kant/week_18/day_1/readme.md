@@ -69,43 +69,43 @@ Table - `employee_salary`
 Department wise average salaries
 
 ```sql
-
+select avg(salary) , department  from employee_salary group by department;
 ```
 
 Company wise average salaries
 
 ```sql
-
+select avg(salary) , company  from employee_salary group by company;
 ```
 
 Company and department wise count of people who make less than one million
 
 ```sql
-
+select count(id) , department,company from employee_salary where salary < 1000000 group by company ,department;
 ```
 
 Average salary of people who belong Engineering who make less than 100k
 
 ```sql
-
+select avg(salary) from employee_salary where department ="Engineering" and salary < 100000;
 ```
 
 Comapny wise average salary of Engineering people who earn more than 100k
 
 ```sql
-
+select avg(salary),company from employee_salary where department ="Engineering" and salary > 100000 group by company;
 ```
 
 Department wise total salary of women
 
 ```sql
-
+select SUM(salary) , department from employee_salary where gender = "Female" group by department;
 ```
 
 Company wise average salary of men in Human Resources
 
 ```sql
-
+select AVG(salary),company from employee_salary where gender = "Male" and department = "Human Resources" group by company;
 ```
 
 ### FSD.SQL.6.3
@@ -115,19 +115,19 @@ Table - `cars_data`
 Count of cars based on the make
 
 ```sql
-
+select count(id) , car_make from cars_data group by car_make;
 ```
 
 List of all the car colors whose count is more 50
 
 ```sql
-
+select count(id) as count_color,car_color from cars_data group by car_color having count_color > 50;
 ```
 
 Country wise average age of all cars
 
 ```sql
-
+select round(avg(2020-purchase_year),2),country from cars_data group by country;
 ```
 
 ### FSD.SQL.6.4
@@ -137,23 +137,23 @@ Table - `users_data`
 List all the available shirt sizes with the count of users
 
 ```sql
-
+select count(id) , shirt_size from user_data group by shirt_size;
 ```
 
 Count of users segregated by language and gender
 
 ```sql
-
+select count(id) ,language,gender from user_data group by language,gender;
 ```
 
 Count all the females segregrated by shirt sizes
 
 ```sql
-
+select count(id) , shirt_size from user_data where gender = "Female" group by shirt_size;
 ```
 
 Count of all male users who wear the size `2XL`
 
 ```sql
-
+select count(id),shirt_size from user_data where gender ="Male" and shirt_size = "2XL" group by shirt_size;
 ```
