@@ -6,6 +6,7 @@ export const fetch_res = (response)=>{
         payload:response
     }
 }
+
 export const fetch_response = (data, url)=>{
     return dispatch=>{
         const config = {
@@ -16,7 +17,7 @@ export const fetch_response = (data, url)=>{
             data:data
         }
         axios(config).then((res)=>{
-           dispatch(fetch_res(res.data))
+        dispatch(fetch_res(res.data))
         }).catch(er=>console.log(er))
     }
 }
