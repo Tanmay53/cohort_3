@@ -65,43 +65,43 @@ Table - `employee_salary`
 Department wise average salaries
 
 ```sql
-
+SELECT department, AVG(salary) FROM employee_salary GROUP BY department;
 ```
 
 Company wise average salaries
 
 ```sql
-
+SELECT company, AVG(salary) FROM employee_salary GROUP BY company;
 ```
 
 Company and department wise count of people who make less than one million
 
 ```sql
-
+SELECT company, department, COUNT(id) FROM employee_salary WHERE salary < 1000000 GROUP BY company, department;
 ```
 
 Average salary of people who belong Engineering who make less than 100k
 
 ```sql
-
+SELECT AVG(salary) FROM employee_salary WHERE department = "Engineering" AND salary < 100000;
 ```
 
 Comapny wise average salary of Engineering people who earn more than 100k
 
 ```sql
-
+SELECT company, AVG(salary) FROM employee_salary WHERE department = "Engineering" AND salary > 100000 GROUP BY company;
 ```
 
 Department wise total salary of women
 
 ```sql
-
+SELECT department, SUM(salary) FROM employee_salary WHERE gender = "Female" GROUP BY department;
 ```
 
 Company wise average salary of men in Human Resources
 
 ```sql
-
+SELECT company, AVG(salary) FROM employee_salary WHERE gender = "Male" AND department = "Human Resources" GROUP BY company;
 ```
 
 ### FSD.SQL.6.3
