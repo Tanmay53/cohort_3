@@ -31,6 +31,8 @@ def md5_hash(string, salt):
 
 
 def write_csv(name, email, password):
+    if len(email) < 5 or len(name) < 2:
+        return "Invalid Credentials"
     salt = generate_salt()
     cur_data = read_csv()
     for items in cur_data:
