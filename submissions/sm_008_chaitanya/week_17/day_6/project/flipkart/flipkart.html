@@ -42,7 +42,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search for products,brands and more"
+                  <input type="text" class="form-control" placeholder="Search for products,brands and more..."
                      aria-label="Recipient's username" aria-describedby="basic-addon2">
                   <div class="input-group-append">
                      <span class="input-group-text text-primary bg-white" id="basic-addon2"><i
@@ -50,10 +50,56 @@
                   </div>
                </div>
 
+
                <ul class="navbar-nav mr-auto ml-3">
-                  <li class="nav-item active mt-1">
-                     <button class="btn px-3 mr-3 text-primary bg-light py-1"><b>Login</b></button>
-                  </li>
+                     <li class="nav-item">
+                           <!-- <a class="nav-link text-white ml-5" href="#">More</a> -->
+                           <p id="dispUser" class="text-white mt-2 font-weight-bold"></p>
+                        </li>
+                  <div id="hidelogin">
+                     <li class="nav-item active mt-1">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn px-3 mr-3 text-primary bg-light py-1" data-toggle="modal"
+                           data-target="#exampleModalCenter">
+                           <b>Login</b></button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                           aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title text-primary" id="exampleModalLongTitle">Login Page</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                       <span aria-hidden="true">&times;</span>
+                                    </button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <div class="form-group h5">
+                                       <label for="username">Username</label>
+                                       <input type="text" class="form-control" id="username"
+                                          placeholder="Enter the Username">
+                                    </div>
+                                    <div class="form-group h5">
+                                       <label for="pwd">Password</label>
+                                       <input type="password" class="form-control" id="pwd"
+                                          placeholder="Enter the Password">
+                                    </div>
+                                    <div class="text-center">
+                                       <button type="submit" id="loginButton"
+                                          class="btn btn-primary btn-lg">Submit</button>
+                                    </div>
+                                 </div>
+                                 <div class="modal-footer justify-content-center">
+                                    <a href="Registration.html"><small class="text-center">New to Flipkart? Create an
+                                          account</small> </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                  </div>
+
                   <li class="nav-item">
                      <a class="nav-link text-white ml-5" href="#">More</a>
                   </li>
@@ -75,15 +121,18 @@
                   <td>
                      <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
                         data-target="#one"><b>Electronics</b></a>
-                     <div class="modal fade" id="one" tabindex="-1" role="dialog"
-                        aria-labelledby="electronics" aria-hidden="true">
+                     <div class="modal fade" id="one" tabindex="-1" role="dialog" aria-labelledby="electronics"
+                        aria-hidden="true">
                         <div class="modal-dialog" role="document">
                            <div class="modal-content">
                               <div class="modal-header">
                                  <h5 class="modal-title" id="electronics">
-                                    <a href="loaddata.html?product=Mobile" > <small class="text-muted">Mobile</small></a><br>
-                                    <a  href="loaddata.html?product=Speakers"> <small class="text-muted">Speakers</small></a><br>
-                                    <a  href="loaddata.html?product=Laptops"><small class="text-muted">Laptops</small></a>
+                                    <a href="loaddata.html?product=Mobile"> <small
+                                          class="text-muted">Mobile</small></a><br>
+                                    <a href="loaddata.html?product=Speakers"> <small
+                                          class="text-muted">Speakers</small></a><br>
+                                    <a href="loaddata.html?product=Laptops"><small
+                                          class="text-muted">Laptops</small></a>
                                  </h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -95,17 +144,20 @@
                   </td>
 
                   <td>
-                     <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
-                        data-target="#two"><b>Tvs & Appliances</b></a>
-                     <div class="modal fade" id="two" tabindex="-1" role="dialog"
-                        aria-labelledby="tv" aria-hidden="true">
+                     <a href="#" type="button" class="dropdown text-dark" data-toggle="modal" data-target="#two"><b>Tvs
+                           & Appliances</b></a>
+                     <div class="modal fade" id="two" tabindex="-1" role="dialog" aria-labelledby="tv"
+                        aria-hidden="true">
                         <div class="modal-dialog" role="document">
                            <div class="modal-content">
                               <div class="modal-header">
                                  <h5 class="modal-title" id="tv">
-                                    <a href="loaddata.html?product=Televisions"> <small class="text-muted">Televisions</small></a><br>
-                                    <a href="loaddata.html?product=Air conditions"> <small class="text-muted">Air conditions</small></a><br>
-                                    <a href="loaddata.html?product=Washing Machines"><small class="text-muted">Washing Machines</small></a>
+                                    <a href="loaddata.html?product=Televisions"> <small
+                                          class="text-muted">Televisions</small></a><br>
+                                    <a href="loaddata.html?product=Air Conditions"> <small class="text-muted">Air
+                                          conditions</small></a><br>
+                                    <a href="loaddata.html?product=Washing Machines"><small class="text-muted">Washing
+                                          Machines</small></a>
                                  </h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -119,15 +171,18 @@
                   <td>
                      <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
                         data-target="#three"><b>Men</b></a>
-                     <div class="modal fade" id="three" tabindex="-1" role="dialog"
-                        aria-labelledby="menn" aria-hidden="true">
+                     <div class="modal fade" id="three" tabindex="-1" role="dialog" aria-labelledby="menn"
+                        aria-hidden="true">
                         <div class="modal-dialog" role="document">
                            <div class="modal-content">
                               <div class="modal-header">
                                  <h5 class="modal-title" id="menn">
-                                    <a href="loaddata.html?product=Footwear"> <small class="text-muted">FootWear</small></a><br>
-                                    <a href="loaddata.html?product=Clothing"> <small class="text-muted">Clothing</small></a><br>
-                                    <a href="loaddata.html?product=Min's Grooming"><small class="text-muted">Men's Grooming</small></a>
+                                    <a href="loaddata.html?product=Footwear"> <small
+                                          class="text-muted">FootWear</small></a><br>
+                                    <a href="loaddata.html?product=Clothing"> <small
+                                          class="text-muted">Clothing</small></a><br>
+                                    <a href="loaddata.html?product=Min's Grooming"><small class="text-muted">Men's
+                                          Grooming</small></a>
                                  </h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -141,15 +196,18 @@
                   <td>
                      <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
                         data-target="#four"><b>Women</b></a>
-                     <div class="modal fade" id="four" tabindex="-1" role="dialog"
-                        aria-labelledby="womenn" aria-hidden="true">
+                     <div class="modal fade" id="four" tabindex="-1" role="dialog" aria-labelledby="womenn"
+                        aria-hidden="true">
                         <div class="modal-dialog" role="document">
                            <div class="modal-content">
                               <div class="modal-header">
                                  <h5 class="modal-title" id="womenn">
-                                    <a href="loaddata.html?product=Sandals"> <small class="text-muted">Sandals</small></a><br>
-                                    <a href="loaddata.html?product=Accessories"> <small class="text-muted">Accessories</small></a><br>
-                                    <a href="loaddata.html?product=Clothing"><small class="text-muted">Clothing</small></a>
+                                    <a href="loaddata.html?product=Sandals"> <small
+                                          class="text-muted">Sandals</small></a><br>
+                                    <a href="loaddata.html?product=Accessories"> <small
+                                          class="text-muted">Accessories</small></a><br>
+                                    <a href="loaddata.html?product=Clothing"><small
+                                          class="text-muted">Clothing</small></a>
                                  </h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -163,14 +221,16 @@
                   <td>
                      <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
                         data-target="#five"><b>Baby & kids</b></a>
-                     <div class="modal fade" id="five" tabindex="-1" role="dialog"
-                        aria-labelledby="baby" aria-hidden="true">
+                     <div class="modal fade" id="five" tabindex="-1" role="dialog" aria-labelledby="baby"
+                        aria-hidden="true">
                         <div class="modal-dialog" role="document">
                            <div class="modal-content">
                               <div class="modal-header">
                                  <h5 class="modal-title" id="baby">
-                                    <a href="loaddata.html?product=Kid's Clothing"> <small class="text-muted">Kid's Clothing</small></a><br>
-                                    <a href="loaddata.html?product=Baby care"> <small class="text-muted">Baby care</small></a><br>
+                                    <a href="loaddata.html?product=Kid's Clothing"> <small class="text-muted">Kid's
+                                          Clothing</small></a><br>
+                                    <a href="loaddata.html?product=Baby care"> <small class="text-muted">Baby
+                                          care</small></a><br>
                                     <a href="loaddata.html?product=Toys"><small class="text-muted">Toys</small></a>
                                  </h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -183,16 +243,18 @@
                   </td>
 
                   <td>
-                     <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
-                        data-target="#six"><b>Home & Furniture</b></a>
-                     <div class="modal fade" id="six" tabindex="-1" role="dialog"
-                        aria-labelledby="homee" aria-hidden="true">
+                     <a href="#" type="button" class="dropdown text-dark" data-toggle="modal" data-target="#six"><b>Home
+                           & Furniture</b></a>
+                     <div class="modal fade" id="six" tabindex="-1" role="dialog" aria-labelledby="homee"
+                        aria-hidden="true">
                         <div class="modal-dialog" role="document">
                            <div class="modal-content">
                               <div class="modal-header">
                                  <h5 class="modal-title" id="homee">
-                                    <a href="loaddata.html?product=Bed Room Furniture"> <small class="text-muted">Bed Room Furniture</small></a><br>
-                                    <a href="loaddata.html?product=Living Room Furniture"> <small class="text-muted">Living Room Furniture</small></a><br>
+                                    <a href="loaddata.html?product=Bed Room Furniture"> <small class="text-muted">Bed
+                                          Room Furniture</small></a><br>
+                                    <a href="loaddata.html?product=Living Room Furniture"> <small
+                                          class="text-muted">Living Room Furniture</small></a><br>
                                  </h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -206,14 +268,16 @@
                   <td>
                      <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
                         data-target="#seven"><b>Sports, Books & More</b></a>
-                     <div class="modal fade" id="seven" tabindex="-1" role="dialog"
-                        aria-labelledby="sportt" aria-hidden="true">
+                     <div class="modal fade" id="seven" tabindex="-1" role="dialog" aria-labelledby="sportt"
+                        aria-hidden="true">
                         <div class="modal-dialog" role="document">
                            <div class="modal-content">
                               <div class="modal-header">
                                  <h5 class="modal-title" id="sportt">
-                                    <a href="loaddata.html?product=Books"> <small class="text-muted">Books</small></a><br>
-                                    <a href="loaddata.html?product=Sports"> <small class="text-muted">Sports</small></a><br>
+                                    <a href="loaddata.html?product=Books"> <small
+                                          class="text-muted">Books</small></a><br>
+                                    <a href="loaddata.html?product=Sports"> <small
+                                          class="text-muted">Sports</small></a><br>
                                  </h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -224,7 +288,8 @@
                      </div>
                   </td>
                   <td>
-                     <a href="file:///home/chaitanya/projects/masai/flipkart/addproducts.html" class="text-dark"><b>Add Product</b></a>
+                     <a href="file:///home/chaitanya/projects/masai/flipkart/addproducts.html" class="text-dark"><b>Add
+                           Product</b> <i class="fas fa-plus-circle"></i> </a>
                   </td>
                </tr>
             </thead>
@@ -297,7 +362,7 @@
             </div>
          </div>
          <div class="col-6 col-md-4 col-lg-2">
-            <div class="card">
+            <div class="card mb-2">
                <div class="card-body">
                   <img
                      src="https://rukminim1.flixcart.com/image/150/150/jdlzfrk0/valentine-gift-set/j/g/t/valentine-day-gifts-for-lover-girlfriend-boyfriend-wife-birthday-original-imaf2hq36gvype4a.jpeg?q=70"
@@ -309,12 +374,12 @@
             </div>
          </div>
          <div class="col-6 col-md-4 col-lg-2">
-            <div class="card">
+            <div class="card mb-2">
                <div class="card-body">
                   <img
                      src="https://rukminim1.flixcart.com/image/150/150/shoe/k/m/z/ntan-gb-1207112-woodland-42-original-imaegnzcuyngfswq.jpeg?q=70"
                      class="size"><br>
-                  <span class="p-0">Woodland, Lee cooper...</span><br>
+                  <span class="p-0">Woodland, Lee...</span><br>
                   <span class="text-success p-0">30 - 70% off</span><br>
                   <span class="text-muted">Causal,Formal shoes</span>
                </div>
@@ -326,9 +391,9 @@
                   <img
                      src="https://rukminim1.flixcart.com/image/150/150/jv44mfk0/rack-shelf/5/7/2/3-in-1-multi-shelf-wb-7cr-original-imaeuk5rkfjpvhzc.jpeg?q=70"
                      class="size"><br>
-                  <span class="p-0">Mobile Holders & Protect.</span><br>
+                  <span class="p-0">Mobile Holders...</span><br>
                   <span class="text-success p-0">From <i class="fas fa-rupee-sign"></i>59 </span><br>
-                  <span class="text-muted">Causal,Formal shoes</span>
+                  <span class="text-muted">Flipkart Assured</span>
                </div>
             </div>
          </div>
@@ -363,7 +428,9 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
    <script src="https://kit.fontawesome.com/f90b59850b.js" crossorigin="anonymous"></script>
-   
+   <script src="Registration.js"></script>
+   <script src="Login.js"></script>
+
 </body>
 
 </html>
