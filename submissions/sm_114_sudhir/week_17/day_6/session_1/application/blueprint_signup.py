@@ -66,10 +66,11 @@ def user_signup():
     password = request.json['password']
 
     salt = generate_salt()
-    password_hash = str(salt) + str(password)
+    password_hash = salt + password
     new_pswrd = ""
-    for password_hash in range(10):
+    for i in range(10):
         new_pswrd = md5_hash(str(password_hash))
+        password_hash = new_pswrd
 
     user_reg = register_user(name, email, salt, new_pswrd)
     return json.dumps(user_reg)

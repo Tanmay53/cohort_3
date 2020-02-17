@@ -7,7 +7,6 @@
 //       this.price = price, 
 //   };
 //   var data = new AllData(id, Brand, Price, Details, Color, Manufacture)
-var addedArr1;
 
 var productData = [{ "si": 1, "icons": "http://dummyimage.com/117x232.jpg/dddddd/000000", "brand": "Suzuki", "manufacture": "10/25/2019", "price": 1221532 },
 { "si": 2, "icons": "http://dummyimage.com/126x242.bmp/dddddd/000000", "brand": "Hyundai", "manufacture": "7/10/2019", "price": 1063950 },
@@ -114,10 +113,10 @@ var arr = JSON.stringify(productData)
 localStorage.setItem("data", arr)
 
 function all1() {
-    alert("get")
-    let getArr = JSON.parse(localStorage.getItem("data"))
-    getArr.forEach((ele, i) => {
-        $("#all2").append(`<div class="container">
+  alert("get")
+  let getArr = JSON.parse(localStorage.getItem("data"))
+  getArr.forEach((ele, i) => {
+    $("#all2").append(`<div class="container">
         <div id="cartid${i}">
         <div class="card mt-2" style="width: 18rem;">
   <img src="https://icdn3.digitaltrends.com/image/digitaltrends/p90262036-highres-500x300-c.jpg"]}" class="card-img-top img-fluid" alt="icon image">
@@ -137,20 +136,19 @@ function all1() {
 </div>
 </div>
         `)
-    });
+  });
 }
-
+var addedArr1 = []
 function cartbtn(i) {
-    alert("Added")
-    event.preventDefault();
-    var addedArr1 = []
-    let addArr = JSON.parse(localStorage.getItem("data"))
-  
-    addedArr1.push(addArr[i])
-    console.log(addedArr1)
-    localStorage.setItem("data1", JSON.stringify(Addedarr1))
-    window.location.href = "cart.html"
-
+  alert("Added")
+  event.preventDefault();
+  let addArr = JSON.parse(localStorage.getItem("data"))
+  addedArr1.push(addArr[i])
+  var addedArr2 = JSON.stringify(addedArr1)
+  localStorage.setItem("data1", addedArr2)
+}
+function openCart() {
+  window.location.href = "cart.html"
 }
 
 // cart items
@@ -162,18 +160,18 @@ function cartbtn(i) {
 // console.log(arr1)
 
 function cartItems() {
-    event.preventDefault();
-console.log(arr1)
-    alert("ready")
-    let getArr1 = JSON.parse(localStorage.getItem("data1"))
-    console.log(getArr1)
-    addedData.forEach((ele, i) => {
-        $("#cartShow").append(`<div class="container">
-        <div id="cartid${i}">
+  event.preventDefault();
+  alert("ready")
+  let getArr1 = JSON.parse(localStorage.getItem("data1"))
+  console.log(getArr1.icons)
+  getArr1.forEach((ele, i) => {
+
+    $("#cartShow").append(`<div class="container">
+        <div id="getCartid${i}">
         <div class="card mt-2" style="width: 18rem;">
   <img src="https://icdn3.digitaltrends.com/image/digitaltrends/p90262036-highres-500x300-c.jpg"]}" class="card-img-top img-fluid" alt="icon image">
   <div class="card-body" >
-    <h5 class="card-title">Brand :${ele["brand"]}</h5>
+    <h5 class="card-title">Brand : ${ele["brand"]}</h5>
     <p class="card-text"></p>
   </div>
   <ul class="list-group list-group-flush">
@@ -182,13 +180,17 @@ console.log(arr1)
     <li class="list-group-item"></li>
   </ul>
   <div class="card-body">
-  <button type="button" class="btn btn-outline-success" onclick= "cartbtnDelete(${i})">Add to Cart</button>
+  <button type="button" class="btn btn-outline-success" onclick= "cartbtnDelete(${i})">Remove</button>
   </div>
 </div>
 </div>
 </div>
         `)
-    });
+  })
+
+}
+function cartbtnDelete(e) {
+  $("#getCartid"+e).remove()
 }
 
 

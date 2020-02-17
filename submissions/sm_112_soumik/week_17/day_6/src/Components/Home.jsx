@@ -1,11 +1,8 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 
 function Home() {
-  return (
-    <div>
-      <h2>Authenticate and regsiter</h2>
-    </div>
-  );
+  return <Redirect to="/login" />;
 }
 
 export default Home;
