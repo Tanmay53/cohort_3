@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .flipkartImg {
+            height: 50px;
+        }
+
+        .font {
+            font-size: 10px;
+        }
+
+        .size {
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+    <title>loaddata.html</title>
+</head>
+
+<body>
+    <div class="container-fluid jumbotron-fluid bg-primary">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" href="flipkart.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdd-qzkVUo0dBoxPSfHqX6f1uOkJfLOcKdExSY-s0PiK3Ox3DY"
+                        class="flipkartImg" alt="flip">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for products,brands and more"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <span class="input-group-text text-primary bg-white" id="basic-addon2"><i
+                                    class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+
+                    <ul class="navbar-nav mr-auto ml-3">
+                        <li class="nav-item  mt-2">
+                            <a href="#"><small class="text-white h5 px-3 d-flex"><i class="fas fa-shopping-cart"></i>
+                                    <span class="px-1">cart</span></small></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-fluid mx-2">
+        <div class="container">
+            <table class="table table-responsive text-decoration-none">
+                <thead>
+                    <tr>
+                        <td>
+                            <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
+                                data-target="#one"><b>Electronics</b></a>
+                            <div class="modal fade" id="one" tabindex="-1" role="dialog" aria-labelledby="electronics"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="electronics">
+                                                <a href="loaddata.html?product=Mobile"> <small
+                                                        class="text-muted">Mobile</small></a><br>
+                                                <a href="loaddata.html?product=Speakers"> <small
+                                                        class="text-muted">Speakers</small></a><br>
+                                                <a href="loaddata.html?product=Laptops"><small
+                                                        class="text-muted">Laptops</small></a>
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
+                                data-target="#two"><b>Tvs & Appliances</b></a>
+                            <div class="modal fade" id="two" tabindex="-1" role="dialog" aria-labelledby="tv"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="tv">
+                                                <a href="loaddata.html?product=Televisions"> <small
+                                                        class="text-muted">Televisions</small></a><br>
+                                                <a href="loaddata.html?product=Air conditions"> <small
+                                                        class="text-muted">Air conditions</small></a><br>
+                                                <a href="loaddata.html?product=Washing Machines"><small
+                                                        class="text-muted">Washing Machines</small></a>
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
+                                data-target="#three"><b>Men</b></a>
+                            <div class="modal fade" id="three" tabindex="-1" role="dialog" aria-labelledby="menn"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="menn">
+                                                <a href="loaddata.html?product=Footwear"> <small
+                                                        class="text-muted">FootWear</small></a><br>
+                                                <a href="loaddata.html?product=Clothing"> <small
+                                                        class="text-muted">Clothing</small></a><br>
+                                                <a href="loaddata.html?product=Min's Grooming"><small
+                                                        class="text-muted">Men's Grooming</small></a>
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
+                                data-target="#four"><b>Women</b></a>
+                            <div class="modal fade" id="four" tabindex="-1" role="dialog" aria-labelledby="womenn"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="womenn">
+                                                <a href="loaddata.html?product=Sandals"> <small
+                                                        class="text-muted">Sandals</small></a><br>
+                                                <a href="loaddata.html?product=Accessories"> <small
+                                                        class="text-muted">Accessories</small></a><br>
+                                                <a href="loaddata.html?product=Clothing"><small
+                                                        class="text-muted">Clothing</small></a>
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
+                                data-target="#five"><b>Baby & kids</b></a>
+                            <div class="modal fade" id="five" tabindex="-1" role="dialog" aria-labelledby="baby"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="baby">
+                                                <a href="loaddata.html?product=Kid's Clothing"> <small
+                                                        class="text-muted">Kid's Clothing</small></a><br>
+                                                <a href="loaddata.html?product=Baby care"> <small
+                                                        class="text-muted">Baby care</small></a><br>
+                                                <a href="loaddata.html?product=Toys"><small
+                                                        class="text-muted">Toys</small></a>
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
+                                data-target="#six"><b>Home & Furniture</b></a>
+                            <div class="modal fade" id="six" tabindex="-1" role="dialog" aria-labelledby="homee"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="homee">
+                                                <a href="loaddata.html?product=Bed Room Furniture"> <small
+                                                        class="text-muted">Bed Room Furniture</small></a><br>
+                                                <a href="loaddata.html?product=Living Room Furniture"> <small
+                                                        class="text-muted">Living Room Furniture</small></a><br>
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <a href="#" type="button" class="dropdown text-dark" data-toggle="modal"
+                                data-target="#seven"><b>Sports, Books & More</b></a>
+                            <div class="modal fade" id="seven" tabindex="-1" role="dialog" aria-labelledby="sportt"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="sportt">
+                                                <a href="loaddata.html?product=Books"> <small
+                                                        class="text-muted">Books</small></a><br>
+                                                <a href="loaddata.html?product=Sports"> <small
+                                                        class="text-muted">Sports</small></a><br>
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#" class="text-dark"><b>Offers Zone</b></a>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div class="container col-8 col-mg-6 col-lg-3 mb-2">
+        <select id="sortPrice" class="form-control">
+            <option value="--">-- Apply Sort --</option>
+            <option value="asc">Ascending</option>
+            <option value="dec">Descending</option>
+        </select>
+    </div>
+    <div id="out">
+
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f90b59850b.js" crossorigin="anonymous"></script>
+    <script src="loaddata.js"></script>
+</body>
+
+</html>
