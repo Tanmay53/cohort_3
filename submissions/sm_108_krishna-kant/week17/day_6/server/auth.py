@@ -40,7 +40,7 @@ def write_user(name,email,password):
         writer.writerow(user_data)
     user_data.pop('password',None)
     user_data.pop('salt',None)
-    return user_data
+    return {"msg":"User Signup Successfully","data":user_data}
 
 def read_user(email):
     user_data = None

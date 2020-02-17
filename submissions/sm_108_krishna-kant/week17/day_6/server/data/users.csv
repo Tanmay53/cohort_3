@@ -3,3 +3,5 @@ id,name,email,password,salt
 431b2924-4fe1-11ea-a739-ec8eb5fd2381,Krishna,Krishna.8574@gmail.com,61159d5adeeea37f5ed9840541aa9092,431b2925-4fe1-11ea-a739-ec8eb5fd2381
 214baf8a-4feb-11ea-a739-ec8eb5fd2381,Krishna,Krish.8574@gmail.com,b0b2ecaa750837d735685be4fd21283a,214baf8b-4feb-11ea-a739-ec8eb5fd2381
 c9594c16-4ff8-11ea-a739-ec8eb5fd2381,Admin,admin@gmail.com,b71ff2e4e46e10e9f35ddf33543de584,c9594c17-4ff8-11ea-a739-ec8eb5fd2381
+486573a2-5000-11ea-a739-ec8eb5fd2381,Krishna,Krishna@gmail.com,7ee541a9ca34c7a915cfb3d528a664a3,486573a3-5000-11ea-a739-ec8eb5fd2381
+a22567ee-5000-11ea-a739-ec8eb5fd2381,Krishna,admin2@gmail.com,a5cd982115520ed00c4ecb6543b50fc8,a22567ef-5000-11ea-a739-ec8eb5fd2381
