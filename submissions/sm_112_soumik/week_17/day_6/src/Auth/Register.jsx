@@ -1,22 +1,31 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { fetchRegister } from "../Redux/auth_action";
+import { Link } from "react-router-dom";
+import Loading from "../Components/Loading";
 
 function Register({ fetchRegister }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
   const clickHandler = () => {
-    console.log(email);
-    console.log(password);
-    console.log(name);
     let obj = {
       name,
       email,
       pass: password
     };
-    fetchRegister(obj);
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+      fetchRegister(obj);
+    }, 3000);
+    return () => clearTimeout(timer);
   };
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div>
@@ -43,9 +52,15 @@ function Register({ fetchRegister }) {
             type="password"
             onChange={e => setPassword(e.target.value)}
           />
-          <button className="btn btn-success mt-4" onClick={clickHandler}>
+          <button className="btn btn-success my-4" onClick={clickHandler}>
             Register
           </button>
+          <p>
+            Already Registered ?
+            <small>
+              <Link to="/login"> Click Here To Sign In </Link>
+            </small>
+          </p>
         </div>
       </div>
     </div>
