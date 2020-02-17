@@ -7,9 +7,13 @@ import './App.css';
 function App() {
   return (
     <div>
+    <div class="container text-center">
       <Mobile/>
       <Buttons/>
+      </div>
+      <div>
       <Cards/>
+    </div>
     </div>
   );
 }
