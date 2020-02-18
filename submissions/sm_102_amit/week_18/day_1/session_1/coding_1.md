@@ -133,23 +133,23 @@ Table - `users_data`
 List all the available shirt sizes with the count of users
 
 ```sql
-
+SELECT shirt_size, COUNT(id) FROM user_data GROUP BY shirt_size ORDER BY shirt_size;
 ```
 
 Count of users segregated by language and gender
 
 ```sql
-
+SELECT language, gender, COUNT(id) FROM user_data GROUP BY language, gender ORDER BY language;
 ```
 
 Count all the females segregrated by shirt sizes
 
 ```sql
-
+SELECT shirt_size, COUNT(id) FROM user_data WHERE gender = "Female" GROUP BY shirt_size ORDER BY shirt_size;
 ```
 
 Count of all male users who wear the size `2XL`
 
 ```sql
-
+SELECT shirt_size, COUNT(id) FROM user_data WHERE gender = "Male" AND  shirt_size = "2XL";
 ```
