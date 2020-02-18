@@ -1,0 +1,158 @@
+<!-- Main Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- Nav FlipKart -->
+
+<div class="container-fluid jumbotron-fluid bg-primary" style="height: 80px;">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdd-qzkVUo0dBoxPSfHqX6f1uOkJfLOcKdExSY-s0PiK3Ox3DY"
+                    class="img-fluid" style="height: 60px;" alt="flip">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for products,brands and more..."
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text text-primary bg-white" id="basic-addon2"><i
+                                class="fas fa-search">
+                                <button><img
+                                        src="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/01-512.png"
+                                        style="height: 30px; width: 40;" class="img-fluid" alt="search"></button>
+                            </i></span>
+                    </div>
+                </div>
+                <ul class="navbar-nav mr-auto ml-3">
+                    <li class="nav-item">
+                        <!-- <a class="nav-link text-white ml-5" href="#">More</a> -->
+                        <p id="dispUser" class="text-white mt-2 font-weight-bold"></p>
+                    </li>
+                    <div id="hidelogin">
+                        <li class="nav-item active mt-1">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn px-3 mr-3 text-primary bg-light py-1"
+                                data-toggle="modal" data-target="#exampleModalCenter">
+                                <b>Login</b></button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-primary" id="exampleModalLongTitle">Login
+                                                Page</h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group h5">
+                                                <label for="username">Username</label>
+                                                <input type="text" class="form-control" id="username"
+                                                    placeholder="Enter the Username">
+                                            </div>
+                                            <div class="form-group h5">
+                                                <label for="pwd">Password</label>
+                                                <input type="password" class="form-control" id="pwd"
+                                                    placeholder="Enter the Password">
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="submit" id="loginButton"
+                                                    class="btn btn-primary btn-lg">Submit</button>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer justify-content-center">
+                                            <a href="Registration.html"><small class="text-center">New to Flipkart?
+                                                    Create an
+                                                    account</small> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- modal end -->
+
+                        </li>
+                    </div>
+
+                    <li class="nav-item">
+                        <!-- <a class="nav-link text-white ml-5" href="#">More</a> -->
+                        <button type="button" class="btn btn-lg btn-primary" onclick="all1()">All Products</button>
+                    </li>
+                    <li class="nav-item ">
+                        <!-- <a href="#"><small class="text-white h5 px-3 d-flex"><i class="fas fa-shopping-cart"></i> <span
+                            class="px-1">cart</span></small></a> -->
+                        <button type="button" class="btn btn-lg btn-primary " onclick="openCart()">Go to
+                            Cart</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+
+
+
+<!-- Nav end -->
+<h2 class="text-center">Signup Form</h2>
+
+<!-- form -->
+<form>
+    <div class="container border border-success">
+        <div class="row m-3">
+            <div class="col">
+                <input type="text" id="name" class="form-control" placeholder="Full name">
+            </div>
+            <div class="col">
+                <input type="email" id="email" class="form-control" placeholder="email">
+            </div>
+        </div>
+        <div class="row m-2 p-2">
+            <div class="col">
+                <input type="password" id="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="col">
+                <input type="text" id="username" class="form-control" placeholder="username">
+            </div>
+        </div>
+        <div class="row m-2 p-2">
+            <div class="col">
+                <input type="number" id="mobile" class="form-control" placeholder="mobile">
+            </div>
+            <div class="col">
+                <input type="text" id="description" class="form-control" placeholder="description">
+            </div>
+        </div>
+        <div class="m-5">
+            <button type="button" class="btn btn-primary" onclick="signup()">Submit</button>
+            <a class="ml-5" href="./login.html">Go to Login Page</a>
+        </div>
+    </div>
+</form>
+
+<script src="./index.js"></script>
+
+</body>
+
+</html>
