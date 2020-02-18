@@ -93,5 +93,5 @@ Select * from blogs where author_id = <users:id>
 Find Blogs of a particular category
 
 ```mysql
-Select * from blogs where catagory = <catagory:id>
+select * from blogs where catagory = (select id from catagory where name="FLASK");
 ```
