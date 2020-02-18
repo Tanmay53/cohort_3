@@ -80,7 +80,7 @@ def deleteUser(user_id):
       error = False
       users[i] = {}
       break
-
+  
   for i in range(len(user_addresses)):
     if int(user_addresses[i]['user_id']) == user_id:
       user_addresses[i] = {}
@@ -103,10 +103,10 @@ def deleteUser(user_id):
       writer = csv.DictWriter(file, fieldnames=fieldnames)
       writer.writeheader()
       for address in user_addresses:
-      if len(address) != 0:
-        writer.writerow(address)
+        if len(address) != 0:
+          writer.writerow(address)
 
-    return {'error': error, 'message': 'User Deleted Successfully'}
+  return {'error': error, 'message': 'User Deleted Successfully'}
 
 def addAddress(user_id, line_1, line_2, city, pincode):
   user = getUser(user_id)
