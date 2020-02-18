@@ -81,43 +81,43 @@ Table - `employee_salary`
 Names of all the departments
 
 ```sql
-
+select distinct(department) from employee_salary;
 ```
 
 Names of all the companies
 
 ```sql
-
+select distinct(company) from employee_salary;
 ```
 
 Total salaries all of Women in Engineering who earn less than one million
 
 ```sql
-
+select sum(salary) as total_salary from employee_salary where gender = "Female" and department="Engineering" and salary < 1000000;
 ```
 
 Company and department where people make less than 80k
 
 ```sql
-
+select company , department from employee_salary where salary < 80000;
 ```
 
 Average salary of people who belong Accounting and Legal who make less than 100k
 
 ```sql
-
+select avg(salary) as avg_salary from employee_salary where department in ("Legal","Accounting") and salary < 100000;
 ```
 
 Average salary top 10 earning Men
 
 ```sql
-
+ select avg(top_ten) as top_ten_avg from (select salary as top_ten from employee_salary where gender="Male" order by salary desc limit 10) as top_salary;
 ```
 
 Total salary of bottom 10 earning Women
 
 ```sql
-
+select sum(bottom) from (select salary as bottom from employee_salary where gender = "Female" order by salary limit 10) as bottom_ten;
 ```
 
 Average salary of Engineering people
