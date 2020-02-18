@@ -29,13 +29,16 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        data: action.payload.data
+        data: action.payload.data,
+        status: action.payload.status
       };
     case FETCH_FAILURE:
+      console.log(action.payload);
       return {
         ...state,
         isLoading: false,
-        data: action.payload.data
+        data: action.payload.data,
+        status: action.payload
       };
     case TOGGLE_LOGIN:
       return {
