@@ -33,6 +33,7 @@ CREATE TABLE blogs (
 id INT(11) NOT NULL AUTO_INCREMENT,
 title VARCHAR(255),
 catagory INT(11) NOT NULL,
+author_id INT(11) NOT NULL,
 body TEXT,
 comment_count INT(11),
 like_count INT(11),
@@ -40,7 +41,8 @@ isPublished ENUM("TRUE","FALSE"),
 draft ENUM("TRUE","FALSE"),
 created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
 PRIMARY KEY(id),
-FOREIGN KEY (catagory) REFERENCES catagory(id));
+FOREIGN KEY (catagory) REFERENCES catagory(id),
+FOREIGN KEY (author_id) REFERENCES users(id));
 
 create table comments (
 id INT(11) NOT NULL AUTO_INCREMENT,
@@ -59,7 +61,7 @@ FOREIGN KEY (author_id) REFERENCES users(id));
 User Creation Queries
 
 ```mysql
-
+insert into users (id,name,email,gender,is_verified,password,profile_img) values(1,"Krishna Kant Sharma","rohansharma.8574@gmail.com","Male","False","SAHjhsjhajh1h2j12hj1h212","/user/images/id1.png");
 ```
 
 #### FSD.SQL.8.3
@@ -67,7 +69,7 @@ User Creation Queries
 Blog Creation Queries
 
 ```mysql
-
+insert into blogs (id,title,catagory,body,comment_count,like_count,isPublished,draft,author_id) values(1,"Javascript Pattern: Module pattern", 2,"Blog Body 1", 0,0,"FALSE","TRUE",1);
 ```
 
 #### FSD.SQL.8.4
@@ -75,7 +77,7 @@ Blog Creation Queries
 Comment Creation Queries
 
 ```mysql
-
+insert into comments (id,blog_id,author_id,comment_body) values(1,1,1,"This is a comment");
 ```
 
 #### FSD.SQL.8.5
@@ -83,7 +85,7 @@ Comment Creation Queries
 Find Blogs of a particular user
 
 ```mysql
-
+Select * from blogs where author_id = <users:id>
 ```
 
 #### FSD.SQL.8.6
@@ -91,5 +93,5 @@ Find Blogs of a particular user
 Find Blogs of a particular category
 
 ```mysql
-
+Select * from blogs where catagory = <catagory:id>
 ```
