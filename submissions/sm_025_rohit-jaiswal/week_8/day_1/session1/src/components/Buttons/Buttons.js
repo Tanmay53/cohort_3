@@ -13,7 +13,7 @@ render(){
             </div>
             <div>
                 <button type="button" class="btn btn-warning m-2">Search</button>
-                <button type="button" class="btn btn-info">Help</button>
+                <button type="button" class="btn btn-light">Help</button>
             </div>
             <div>
                 <button type="button" class="btn btn-dark m-2">Home</button>
