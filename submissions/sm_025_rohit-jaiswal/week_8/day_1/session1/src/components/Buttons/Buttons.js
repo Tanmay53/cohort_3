@@ -16,7 +16,7 @@ render(){
                 <button type="button" class="btn btn-info">Help</button>
             </div>
             <div>
-                <button type="button" class="btn btn-light m-2">Home</button>
+                <button type="button" class="btn btn-dark m-2">Home</button>
                 <button type="button" class="btn btn-dark">Download</button>
             </div>
         </div>
