@@ -9,7 +9,7 @@ render(){
             </div>
             <div>
                 <button type="button" class="btn btn-success m-2">Login</button>
-                <button type="button" class="btn btn-danger">Contact Us</button>
+                <button type="button" class="btn btn-secondary">Contact Us</button>
             </div>
             <div>
                 <button type="button" class="btn btn-warning m-2">Search</button>
