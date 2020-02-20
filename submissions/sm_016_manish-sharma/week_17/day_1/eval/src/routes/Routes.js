@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import Home from "../components/common/Home";
 import BookingPage from "../components/common/BookingPage";
 import Confirmation from "../components/common/Confirmation";
@@ -7,6 +7,7 @@ import Orders from "../components/common/Orders";
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
 import Error from "../components/common/Error";
+import { connect } from "react-redux";
 
 class Routes extends React.Component{
     constructor(props){
@@ -16,7 +17,13 @@ class Routes extends React.Component{
         return(
             <div>
                 <Switch>
-                    <Route exact path='/' render={()=><Home/>}/>
+                    <Route exact path='/' 
+                     render={()=>(
+                         this.props.validNot==false?
+                         <Home/>:
+                         <Redirect to={{pathname:'/login'}} />   
+                     )}
+                     />
                     <Route exact path='/bookingpage/:id' render={()=><BookingPage/>}/>
                     <Route exact path='/confirm/:id' render={(props)=> <Confirmation {...props}/>}/>
                     <Route exact path='/orders' render={()=><Orders/>}/>
@@ -28,5 +35,9 @@ class Routes extends React.Component{
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {validNot:state.validNot}
+}
 
-export default Routes
+
+export default connect(mapStateToProps,null)(Routes)
