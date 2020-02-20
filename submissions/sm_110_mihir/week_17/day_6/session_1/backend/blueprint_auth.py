@@ -66,5 +66,4 @@ def auth_login():
                 hash_password = md5_hash(hash_password)
             if hash_password==row["password"]:
                 return json.dumps({"error":False,"token":md5_hash(email)})
-            else:
-                return json.dumps({"error":True,"message": "Invalid login creadentials"})
+    return json.dumps({"error":True,"message": "Invalid login creadentials"})

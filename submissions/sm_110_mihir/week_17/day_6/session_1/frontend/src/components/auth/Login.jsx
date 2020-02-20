@@ -16,7 +16,7 @@ export class Login extends Component {
       [e.target.name]: e.target.value
     });
   };
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
 
     //   api call
@@ -28,15 +28,15 @@ export class Login extends Component {
         password: this.state.password
       }
     };
-    this.props.fetchData(config);
-    if (this.props.data)
-      if (this.props.data.error) alert("error");
-      else {
+    const result = await this.props.fetchData(config);
+    if (result.payload.status === 200) {
+      if (result.payload.data.error) alert(result.payload.data.message);
+      else if (!this.props.data.error) {
         this.props.toggleLogin();
         alert("success login.");
         this.props.history.push("/");
       }
-
+    } else alert("server error");
     // reset state
     this.setState({
       email: "",
