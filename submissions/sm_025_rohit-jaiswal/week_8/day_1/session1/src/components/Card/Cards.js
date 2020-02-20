@@ -15,9 +15,11 @@
                 alt="dp"
                 />
                 <div class="card-body">
-                <h5 class="card-title text-center">Rohit Jaiswal</h5>
+                <h5 class="card-title text-center">ROHIT JAISWAL</h5>
                 <p class="text-center"><b>NEW DELHI</b></p>
                 <p class="text-center"> User Interface Designer and <br/> Front-end Devloper</p>
+                <p class="text-center"> 9759954954</p>
+
                 <p class="card-text text-center">
                     <button type="button" class="btn btn-outline-danger btn-md m-2">
                     Messege
