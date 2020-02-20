@@ -24,17 +24,13 @@ def writefile(name,email,salt,password_hash):
         else:
             continue
     else:
-        if len(mydata) is 0:
-            with open('users.csv',"w") as csvfile:
-                fieldnames = ["id","name","email","salt","password_hash"]
-                writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
+        with open('users.csv',"a") as csvfile:
+            fieldnames = ["id","name","email","salt","password_hash"]
+            writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
+            if len(mydata) is 0:
                 writer.writeheader()
-                writer.writerow({"id":0,"name":name,"email":email,"salt":salt,"password_hash":password_hash})
-        else:
-            with open('users.csv',"a") as csvfile:
-                fieldnames = ["id","name","email","salt","password_hash"]
-                writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
-                writer.writerow({"id":len(mydata),"name":name,"email":email,"salt":salt,"password_hash":password_hash})
+            writer.writerow({"id":len(mydata)+1,"name":name,"email":email,"salt":salt,"password_hash":password_hash})
+            
         return True
 
 @signup.route('/register',methods=["POST"])
@@ -50,9 +46,9 @@ def register():
         password_hash =  new_password
     status = writefile(name,email,salt,new_password)
     if status:
-        return json.dumps({"message":"user registered successfully"})
+        return json.dumps({"error":email,"message":"user registered successfully"})
     else:
-        return json.dumps({"error":email +'is already taken',"message":"registraion failed"})
+        return json.dumps({"error":email +' already exists',"message":"registraion failed"})
 def md5_hash(string):
     hash = hashlib.md5()
     hash.update(string.encode('utf-8'))
