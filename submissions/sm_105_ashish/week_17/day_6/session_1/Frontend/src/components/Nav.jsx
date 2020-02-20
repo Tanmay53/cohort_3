@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from "react-redux"
+import {signOut} from "../redux/Action"
 
 class Nav extends Component {
     render() {
@@ -12,16 +14,22 @@ class Nav extends Component {
                     <Link className="navbar-brand" href="#">Navbar</Link>
 
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-                        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <ul className="navbar-nav mt-2 mt-lg-0">
                             <li className="nav-item active">
                                 <Link className="nav-link" to = "/">Home <span className="sr-only">(current)</span></Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/auth/register">Register</Link>
                             </li>
-                            <li className="nav-item">
+                            {(this.props.token=='')?(<li className="nav-item">
                                 <Link className="nav-link" to="/auth/login">Login</Link>
+                            </li>):(<><li className="nav-item ml-auto">
+                                <Link className="nav-link ml-auto" to="/user">MY Account</Link>
                             </li>
+                            <li className="nav-item">
+                            <button onClick={()=>this.props.signOut()} className="nav-link btn-danger text-light" >Logout</button>
+                        </li></>)}
+                            
                         </ul>
                     </div>
                 </nav>
@@ -29,5 +37,12 @@ class Nav extends Component {
         )
     }
 }
+const mapStateToProps = (state) => ({
+    token:state.token
+})
 
-export default Nav
+const mapDispatchToProps = dispatch => ({
+    signOut:()=>dispatch(signOut())
+})
+
+export default connect(mapStateToProps,mapDispatchToProps) (Nav)
