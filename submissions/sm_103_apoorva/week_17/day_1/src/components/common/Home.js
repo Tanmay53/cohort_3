@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import {Link,Redirect} from 'react-router-dom'
-
+import {orders} from '../../Redux/Action'
 class Home extends React.Component {
     constructor(props){
         super(props)
@@ -9,6 +8,7 @@ class Home extends React.Component {
             data : [],
             duplicate : [],
             page_no : '',
+            search : ''
         }
     }
     componentDidMount = () =>{
@@ -27,9 +27,63 @@ class Home extends React.Component {
         })
     }
 
+    book = (e) =>{
+        alert("item added-check in orders")
+        let n = e.target.value
+        this.props.orders(n)
+    }
+
+    handlechange = (e) =>{
+        let n = e.target.value
+        console.log(n)
+        let data = this.state.duplicate
+        if(n == "asc-price"){
+            data.sort(function(a,b){
+                return a.Price - b.Price
+            })
+            this.setState({
+                duplicate : data
+            })
+        }
+        else if(n == "dsc-price"){
+            data.sort(function(a,b){
+                return b.Price - a.Price
+            })
+            this.setState({
+                duplicate : data
+            })
+        }
+        else if(n == "asc-capacity"){
+            data.sort(function(a,b){
+                return a.Capacity - b.Capacity
+            })
+            this.setState({
+                duplicate : data
+            })
+        }
+        else if(n == "dsc-capacity"){
+            data.sort(function(a,b){
+                return b.Capacity - a.Capacity
+            })
+            this.setState({
+                duplicate : data
+            })
+        }
+    }
+
+    search = (e) => {
+        let n = this.state.search
+        console.log(n)
+        let data = this.state.data
+        let new_data = data.filter(ele => ele.Floor_No == n)
+        this.setState({
+            duplicate : new_data
+        })
+    }
+
     render()
     {
-        let val = this.props.data.length/5
+        let val = Math.ceil(this.props.data.length/5)
         let pages = []
         for(let i = 1; i < val+1; i++){
                     pages.push(
@@ -37,41 +91,48 @@ class Home extends React.Component {
                     )
         }
         return(
-            this.props.form ? (
             <div>
-                <table class="table table-sm table-dark">
-                    <thead>
-                        <tr>
-                            <th scope="col">Floor_No</th>
-                            <th scope="col">Meeting_Room_Name</th>
-                            <th scope="col">Capacity</th>
-                            <th scope="col">Price(in Rs)</th>
-                            <th scope="col">Book</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.duplicate.map((ele) =>
-                            <tr key={ele.Meeting_Room_Name}>
-                                <td>{ele.Floor_No}</td>
-                                <td>{ele.Meeting_Room_Name}</td>
-                                <td>{ele.Capacity}</td>
-                                <td>{ele.Price}</td>
-                                <td>
-                                    <Link to="/orders">
-                                        <button className="btn btn-warning">Book</button>
-                                    </Link>
-                                </td>
-                            </tr>
-                        )}
-                    </tbody>
-                </table>
+                <div className="row ml-2">
+                    <div className="col-3">
+                        <label>Sort Table</label>
+                        <select class="custom-select" onChange={this.handlechange}>
+                            <option selected>Sort</option>
+                            <option value="asc-price">Ascending Price</option>
+                            <option value="dsc-price">Descending Price</option>
+                            <option value="asc-capacity">Ascending Capacity</option>
+                            <option value="dsc-capacity">Descending Capacity</option>
+                        </select>
+                    </div>
+                    <div className="col-3 row">
+                        <div className="col">
+                            <label>Search For Floor</label>
+                            <input className="form-control" type="number" value={this.state.search} onChange={(e) => this.setState({search : e.target.value})} placeholder="1-20"></input>
+                        </div>
+                        <div className="col">
+                            <button className="btn btn-info" style={{marginTop:"32px"}} onClick={this.search}>Search</button>
+                        </div>                       
+                    </div>
+                </div>
+                <div className = "mt-3 row">
+                    {this.state.duplicate.map((ele) =>
+                        <div className="card col-lg-3 col-md-6 m-5" style={{width: "18rem"}}>
+                            <img className="card-img-top" src={ele.image} alt="placeholder image" />
+                            <div className="card-body">
+                                <h3 className="card-title">{ele.Meeting_Room_Name}</h3>
+                                <h5 className="card-title">Floor No. :- {ele.Floor_No}</h5>
+                                <h5 className="card-text">Capacity :- {ele.Capacity}</h5>
+                                <h5 className="card-text">Price per Day :- {ele.Price}</h5>
+                                <button className="btn btn-warning" value = {ele.Meeting_Room_Name} onClick={this.book}>Book</button>
+                            </div>
+                        </div>
+                    )}
+                </div>
                 <ul className="pagination">
-                    <div className="col-10 m-auto row">
+                    <div className="col-10 row m-auto">
                         {pages}
                     </div>
-                    </ul>
+                </ul>
             </div>
-            ):(<Redirect to="/login" />)
         )
     }
 }
@@ -82,7 +143,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    
+    orders : (payload) => (dispatch(orders(payload))),
 })
 
 
