@@ -110,29 +110,40 @@ class App extends React.Component{
   /* FUNCTIONALITIES OF A TIMER */
   handleTimerInput=(e)=>{
     if (e.target.name==='timerSec'){
-      if ((e.target.value>=0 && e.target.value<=59)||(e.target.value==='')){
+      if ((parseInt(e.target.value)>=0 && parseInt(e.target.value)<=59)){
         this.setState({
-          timerSec:e.target.value
+          timerSec:parseInt(e.target.value)
         })
       }
       else{
-        alert('please enter valid seconds')
+        this.setState({
+          timerSec:parseInt(0)
+        })
       }
     }
+
     if (e.target.name==='timerMin'){
-      if ((e.target.value>=0 && e.target.value<=59)||(e.target.value==='')){
+      if ((parseInt(e.target.value)>=0 && parseInt(e.target.value)<=59)){
         this.setState({
-          timerMin:e.target.value
+          timerMin:parseInt(e.target.value)
         })
       }
       else{
-        alert('please enter valid minutes')
+        this.setState({
+          timerMin:parseInt(0)
+        })
       }
     }
-    else if(e.target.name==='timerHour'){
-      if (e.target.value<23 || e.target.value===''){
+
+    if(e.target.name==='timerHour'){
+      if (parseInt(e.target.value)>=0){
         this.setState({
-          timerHour:e.target.value
+          timerHour:parseInt(e.target.value)
+        })
+      }
+      else{
+        this.setState({
+          timerHour:parseInt(0)
         })
       }
     }
@@ -166,16 +177,20 @@ class App extends React.Component{
               }
             })
           }
-        }
-
-        if (this.state.timerMin===0){
-          if (this.state.timerHour>0){
-            this.setState(prevState=>{
-              return {
-                timerMin:59,
-                timerHour:prevState.timerHour-1
-              }
-            })
+          if (this.state.timerMin===0){
+            if (this.state.timerHour>0){
+              this.setState(prevState=>{
+                return {
+                  timerMin:59,
+                  timerHour:prevState.timerHour-1
+                }
+              })
+            }
+            if (this.state.timerHour===0 && this.state.timerMin===0 && this.state.timerSec===0){
+              this.setState({
+                timerToggle:false
+              })
+            }
           }
         }
     },1000)
@@ -184,7 +199,7 @@ class App extends React.Component{
   handleTimerStop=()=>{
     this.setState((prevState)=>{
       return {
-        timerToggle:!prevState.timerToggle
+        timerToggle:false
       }
     })
 
@@ -214,21 +229,19 @@ class App extends React.Component{
         <div>
           <div className="card text-center">
             <div className="card-header">
-              <ul className="nav nav-tabs card-header-tabs bg-info">
-                <li className="nav-item">
+              <ul className="nav nav-tabs card-header-tabs bg-transparent row">
+                <li className="nav-item col-6">
                   <button 
                     className={this.state.timerTab ? "nav-link active":"nav-link"}
                     onClick={this.timerTab}
-                    style={{width:'300px',marginInlineStart:'300px'}}
                   >
                     <h5>TIMER</h5>
                   </button>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item col-6">
                   <button 
                     className={this.state.stopwatchTab ? "nav-link active":"nav-link"}
                     onClick={this.stopwatchTab}
-                    style={{width:'300px',marginInlineStart:'300px'}}
                   >
                     <h5>STOP WATCH</h5>
                     </button>
