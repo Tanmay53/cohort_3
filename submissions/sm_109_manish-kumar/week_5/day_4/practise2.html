@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practise 2</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<style type="text/css">
+		.heading{
+			font-size: 30px;
+		}
+		.other{
+			font-size: 16px;
+		}
+		.bor{
+			border: 1px solid lightgrey;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container-fluid bg-light pt-4">
+		<div class="row">
+			<div class="col-8">
+				<p class="heading">Billing address</p>
+				 <form>
+				  	<div class="form-row">
+					    <div class="form-group col-md-6">
+					      <label for="inputEmail4">First Name</label>
+					      <input type="text" class="form-control" id="inputEmail4">
+					    </div>
+					    <div class="form-group col-md-6">
+					      <label for="inputPassword4">Last Name</label>
+					      <input type="text" class="form-control" id="inputPassword4">
+					    </div>
+					</div>
+					<label for="inputPassword4">Username</label>
+					<div class="input-group mb-2">
+				        <div class="input-group-prepend">
+				          <div class="input-group-text">@</div>
+				        </div>
+				        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+				    </div>
+					  <div class="form-group">
+					    <label for="inputAddress">Email<small class="text-secondary other">(Optional)</small></label>
+					    <input type="text" class="form-control" id="inputAddress" placeholder="you@example.com">
+					  </div>
+					  <div class="form-group">
+					    <label for="inputAddress2">Address</label>
+					    <input type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St">
+					  </div>
+					  <div class="form-group">
+					    <label for="inputAddress2">Address 2 <small class="text-secondary other">(Optional)</small></label>
+					    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment or suite">
+					  </div>
+					  <div class="form-row">
+					    <div class="form-group col-md-6">
+					      <label for="inputCity">Country</label>
+					      <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+						<option selected>Choose...</option></select>
+					    </div>
+					    <div class="form-group col-md-4">
+					      <label for="inputState">State</label>
+					      <select id="inputState" class="form-control">
+					        <option selected>Choose...</option>
+					      </select>
+					    </div>
+					    <div class="form-group col-md-2">
+					      <label for="inputZip">Zip</label>
+					      <input type="text" class="form-control" id="inputZip">
+					    </div>
+					  </div>
+					</form>
+					<hr>
+					<div class="form-check">
+  						<input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Shipping address is the same as my billing address
+					</div>
+					<div class="form-check">
+  						<input class="form-check-input position-static" type="checkbox" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."> Save this information for next time
+					</div>
+					<hr>
+					<h3>Payment</h3>
+
+					<div class="form-check">
+  						<input class="form-check-input position-static" type="radio" id="blankCheckbox" value="option1" aria-label="..."> Credit card
+					</div>
+					<div class="form-check">
+  						<input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."> Debit card
+					</div>
+					<div class="form-check">
+  						<input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."> Paypal
+					</div>
+					<div class="row" style="height:20px"></div>
+					<div class="form-row">
+					    <div class="form-group col-md-6">
+					      <label for="inputEmail4">Name on Card</label>
+					      <input type="text" class="form-control" id="inputEmail4">
+					      <small class="text-secondary">Full name as displayed on card</small>
+					    </div>
+					    <div class="form-group col-md-6">
+					      <label for="inputPassword4">Credit card number</label>
+					      <input type="text" class="form-control" id="inputPassword4">
+					    </div>
+					</div>
+			</div>
+			<div class="col-4">
+				<p class="text-secondary heading">Your Cart
+				<span class="badge badge-secondary badge-pill text-right" style="margin-left:200px;">3</span></p>
+
+			<ul class="list-group">
+			  <li class="list-group-item"><div>Product Name
+			  	<span class="text-secondary"style="margin-left:220px;">$12</span></div>
+			  	<small class="text-secondary other">Brief description</small>
+			  </li>
+			  <li class="list-group-item"><div>Second Product
+			  	<span class="text-secondary"style="margin-left:210px;">$8</span></div>
+			  	<small class="text-secondary other">Brief description</small>
+			  </li>
+			  <li class="list-group-item"><div>Third item
+			  	<span class="text-secondary"style="margin-left:255px;">$5</span></div>
+			  	<small class="text-secondary other">Brief description</small>
+			  </li>
+			  <li class="list-group-item"><div class="text-success">Promo code
+			  	<span class="text-secondary"style="margin-left:240px;">-$5</span></div>
+			  	<small class="text-success other">Examplecode</small>
+			  </li>
+			  <li class="list-group-item">Total (USD)
+			  	<span style="margin-left:243px;"><b>$20</b></span>
+			  </li>
+			</ul>
+
+			<div class="bor mt-3">
+  				<div class="input-group p-3">
+					<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Promo code"><div class="input-group-prepend">
+					<div class="input-group-text">Reedem</div>
+				</div>
+  			</div>
+		</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
