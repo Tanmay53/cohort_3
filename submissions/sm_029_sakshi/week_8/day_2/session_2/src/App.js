@@ -28,21 +28,6 @@ class App extends React.Component{
       })
     }
 
-    // toggleDone = (id) =>{
-    //     this.setState({
-    //         todo:this.state.todo.map((item) => {
-    //             return
-    //                 if(id === item.id){
-    //                  return {...item,isDone:!item.isDone}
-    //                 }
-    //                  else{
-    //                     return {item:item}
-    //                  }
-    //                 }
-    //         )
-    //     })
-    // }
-
     taskDone = (id) =>{
         this.setState({
             todo:this.state.todo.map(item =>
@@ -59,6 +44,16 @@ class App extends React.Component{
  
    }
 
+   handleUpdate=(data,id)=>{
+console.log(data,id)
+  this.setState({
+    todo:this.state.todo.map(item =>
+        id === item.id ? {...item,name:data} : item
+    )
+})
+   }
+
+
    handleshowCompleted=()=>{
        this.setState({
            showCompleted: true})
@@ -70,7 +65,7 @@ class App extends React.Component{
                 <div style={{width:'400px',margin:'50px auto'}} className='border border-dark shadow bg bg-info p-5'>
                     <h3>This is your Todo List</h3>
                     <Add add={this.handleAdd}/>
-                    <Todo data={this.state.todo} taskDone={this.taskDone}  label={'TODO:'} del={this.handleDel}/>
+                    <Todo data={this.state.todo} taskDone={this.taskDone} updatecallback={this.handleUpdate} label={'TODO:'} del={this.handleDel}/>
                     {/* <button className='btn btn-sm  mt-5 btn-primary' onClick={this.handleshowCompleted}>SHOW COMPLETED TODO</button>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */}
                  
                     <CompletedTodo data={this.state.todo.filter(item => item.isDone)}

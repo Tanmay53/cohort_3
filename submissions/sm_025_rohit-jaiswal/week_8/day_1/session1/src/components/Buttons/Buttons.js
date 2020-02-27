@@ -9,14 +9,14 @@ render(){
             </div>
             <div>
                 <button type="button" class="btn btn-success m-2">Login</button>
-                <button type="button" class="btn btn-danger">Contact Us</button>
+                <button type="button" class="btn btn-secondary">Contact Us</button>
             </div>
             <div>
                 <button type="button" class="btn btn-warning m-2">Search</button>
-                <button type="button" class="btn btn-info">Help</button>
+                <button type="button" class="btn btn-light">Help</button>
             </div>
             <div>
-                <button type="button" class="btn btn-light m-2">Home</button>
+                <button type="button" class="btn btn-dark m-2">Home</button>
                 <button type="button" class="btn btn-dark">Download</button>
             </div>
         </div>
