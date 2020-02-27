@@ -36,16 +36,15 @@ export class Login extends Component {
         alert("success login.   token :" + result.payload.data.token);
         localStorage.setItem("user", JSON.stringify(result.payload.data));
         console.log("heelo");
-        // this.props.history.push("/");
+        this.props.history.push("/");
       }
     } else {
-      // this.setState({
-      //   email: "",
-      //   password: ""
-      // });
+      this.setState({
+        email: "",
+        password: ""
+      });
       alert("server error");
     }
-    // reset state
   };
 
   // componentDidUpdate(prevProps) {
