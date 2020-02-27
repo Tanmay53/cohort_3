@@ -1,5 +1,6 @@
 const init_user_state = {
     status: 'Login',
+    
     user_id: '',
     token: ''
 }
