@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from "react";
 import axios from "../../utils/axios";
 
-export default function Login() {
+export default function Login({ history }) {
   const [login, setLogin] = useState({
     email: "",
     password: "",
     loading: false,
     res: false,
     isLogin: false,
+    error: "",
+    isError: false,
     token: ""
   });
 
-  const { email, password, loading, isLogin, res, token } = login;
+  const {
+    email,
+    password,
+    loading,
+    isLogin,
+    res,
+    token,
+    isError,
+    error
+  } = login;
 
   const handleChange = e => {
     setLogin({
@@ -34,14 +45,17 @@ export default function Login() {
     }.data;
 
     let flag = false;
+    let iserror = false;
 
-    response.token ? (flag = true) : (flag = false);
+    response.token ? (flag = true) : (iserror = true);
 
     setLogin({
       ...login,
       loading: false,
       res: flag,
-      token: response.token || response.msg
+      token: response.token || undefined,
+      error: response.msg,
+      isError: iserror
     });
   };
 
@@ -51,6 +65,13 @@ export default function Login() {
         ...login,
         isLogin: true
       });
+      localStorage.setItem("token", token);
+      localStorage.setItem("isLoggedIn", "true");
+      setTimeout(() => {
+        history.push("/profile");
+      }, 1000);
+    } else if (loading === false && isError === true) {
+      localStorage.setItem("isLoggedIn", "false");
     }
   }, [loading, res]);
 
@@ -85,6 +106,10 @@ export default function Login() {
       {isLogin ? (
         <div className="alert alert-success m-4" role="alert">
           {token}
+        </div>
+      ) : isError ? (
+        <div className="alert alert-danger m-4" role="alert">
+          {error}
         </div>
       ) : null}
       {loading ? (
