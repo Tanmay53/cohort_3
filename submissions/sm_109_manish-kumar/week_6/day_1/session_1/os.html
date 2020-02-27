@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Opereting system</title>
+    <style>
+        .container{
+            height:400px;
+            width:100%;
+            
+        }
+        .os{
+            padding-left: 43%;
+            padding-top: 10%;
+        }
+        p{
+            padding-left: 25%;
+        }
+        td{
+            border: 1px black solid;
+            padding: 5px;
+            width: 50px;
+            text-align: center;
+        }
+        table{
+            border: 2px solid black;
+            margin-left: 37%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="os">
+            <select name="options" id="os">Choose
+                <option value="android" id="android">android</option>
+                <option value="ubuntu" id="ubuntu">ubuntu</option>
+                <option value="macos" id="macos">macos</option>
+            </select>
+            <button onclick="press()">click</button>
+        </div>
+        <br>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td id="print1">    
+                </td>
+                <td id="print2"></td>
+                <td id="print3"></td>
+            </tr>
+            <tr>
+                <td>version</td>
+                <td id="ver">    
+                </td>
+                <td id="ver1"></td>
+                <td id="ver2"></td>
+                </tr>
+        </table>
+    </div>
+    <script src= "os.js"></script>
+</body>
+</html>

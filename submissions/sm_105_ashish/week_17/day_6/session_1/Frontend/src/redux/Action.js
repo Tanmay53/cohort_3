@@ -2,6 +2,7 @@ import axios from 'axios'
 const FETCH_USERS_REQUEST = "FETCH_USERS_REQUEST"
 const FETCH_USERS_SUCCESS = "FETCH_USERS_SUCCESS"
 const FETCH_USERS_FAILURE = "FETCH_USERS_FAILURE"
+const LOG_OUT = "LOG_OUT"
 
 
 const fetchUsersRequest = (query) =>{
@@ -30,6 +31,11 @@ const loginUser = (url,payload) =>{
         .post(url,payload)
         .then(res=>{
             alert(res.data.message)
+            console.log(res.data)
+            if(!res.data.error){
+                let data = {"isLoggedIn":true,"token":res.data.token}
+                localStorage.setItem("user",JSON.stringify(data))
+            }
             return dispatch(fetchUsersSuccess(res.data))
         })
         .catch(res=>{
@@ -44,7 +50,7 @@ const createNewUser = (url,payload) =>{
         return axios
         .post(url,payload)
         .then(res=>{
-            alert(res.data.error+" ! "+res.data.message)
+            alert(res.data.email+" ! "+res.data.message)
             return dispatch(fetchUsersSuccess(res.data))
         })
         .catch(res=>{
@@ -52,5 +58,10 @@ const createNewUser = (url,payload) =>{
         })
     }
 }
+const signOut = () =>{
+    return {
+        type:LOG_OUT
+    }
+}
 
-export {FETCH_USERS_REQUEST,FETCH_USERS_SUCCESS,FETCH_USERS_FAILURE,fetchUsersRequest,fetchUsersSuccess,fetchUsersFailure,loginUser,createNewUser}
+export {FETCH_USERS_REQUEST,FETCH_USERS_SUCCESS,FETCH_USERS_FAILURE,fetchUsersRequest,fetchUsersSuccess,fetchUsersFailure,loginUser,createNewUser,signOut,LOG_OUT}

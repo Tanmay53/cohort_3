@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -12,6 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import {loginUser} from "../redux/Action"
+import {Redirect} from "react-router-dom"
 
 function Copyright() {
   return (
@@ -51,14 +52,28 @@ function SignIn(props) {
   const classes = useStyles();
   const [email,setemail]=useState('')
   const [password,setpassword]= useState('')
+  const [user,setUser] = useState('')
+
+  useEffect(
+    ()=>{
+      var user = JSON.parse(localStorage.getItem("user"))
+      if(user){
+        setUser(user)
+      }
+    },[]
+  )
 
   const logMeIn = (e)=>{
     e.preventDefault()
     const url ='http://127.0.0.1:5000/auth/login'
     const payload ={"email":email,"password":password}
     props.loginUser(url,{...payload})
+    setemail("")
+    setpassword('')
   }
-
+  if(props.token != "" || user != ""){
+    props.history.push('/user')
+ }
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -72,6 +87,7 @@ function SignIn(props) {
             margin="normal"
             required
             fullWidth
+            value = {email}
             id="email"
             label="Email Address"
             name="email"
@@ -80,9 +96,11 @@ function SignIn(props) {
             autoFocus
           />
           <TextField
+           
             variant="outlined"
             margin="normal"
             required
+            value = {password}
             fullWidth
             onChange = {(e)=>setpassword(e.target.value)}
             name="password"
@@ -124,10 +142,14 @@ function SignIn(props) {
       </Box>
     </Container>
   );
+  // }
+  // else{
+    // return (<Redirect to ="/user"/>)
+  // }
 }
 
 const mapStateToProps = (state) => ({
-  
+  token:state.token,
 })
 
 const mapDispatchToProps = dispatch =>({
