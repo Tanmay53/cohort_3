@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from db_helper import connect, insert, select_one, select_all, delete_helper
+from db_helper import connect, insert, select_one, select_all, delete_helper, edit_helper
 import jwt
 
 
@@ -12,7 +12,7 @@ def create():
     heading     = request.json['heading']
     body        = request.json['body']
     token       = request.json['token']
-    user_id     = 0
+    user_id     = request.json['user_id']
 
     try:
         decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
@@ -52,20 +52,19 @@ def get_blog_by_id(blog_id):
     result = select_one(query, [blog_id])
     return jsonify(result)
 
+@post.route('/blogs/user/<int:user_id>')
+def get_blog_by_user_id(user_id):
+    query = 'SELECT * FROM `blog` WHERE `user_id` = %s'
+    result = select_all(query, [user_id])
+    return jsonify(result)
+
+
 
 @post.route('/comments', methods=['POST'])
 def post_comment():
     blog_id = request.json['blog_id']
     comment = request.json['comment']
-    token = request.json['token']
-    user_id = 0
-
-    try:
-        decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
-        user_id = decoded['user_id']
-    except Exception:
-        return jsonify({'result':'failure', 'user': 'invalid'})
-
+    user_id = request.json['user_id']
 
     query = '''INSERT INTO `comment` (blog_id, user_id, commented_on, comment)
                VALUES (%s, %s, CURDATE(), %s)
@@ -84,12 +83,30 @@ def get_comments_by_blog_id(blog_id):
 
 
 
+@post.route('/delete/<int:blog_id>')
+def delete_blog(blog_id):
+    query_arr = []
+    # first we have to delete associated comments
+    query_arr.append(['DELETE FROM `comment` WHERE `blog_id` = %s', [blog_id]])
+    
+    # later delete the blog
+    query_arr.append(['DELETE FROM `blog` WHERE `blog_id` = %s', [blog_id]])
+    result = delete_helper(query_arr)
+    return jsonify(result)
+    
 
-@post.route('/delete')
-def delete():
-    pass
+@post.route('/edit/<int:blog_id>', methods=['POST'])
+def edit(blog_id):
+    heading    = request.json['heading']
+    body = request.json['body']
 
-@post.route('/edit')
-def edit():
-    pass
+    query = '''UPDATE `blog` SET 
+               `heading` = %s,
+               `body`    = %s
+                WHERE `blog_id` = %s
+            '''
+    result = edit_helper(query, [heading, body, blog_id])
+    return jsonify(result)
+
+    
 

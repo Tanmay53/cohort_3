@@ -54,12 +54,27 @@ def select_all(query, arguments):
         return result
 
 
-def delete_helper(query, arguments):
+def delete_helper(query_arr):
+    try:
+        conn = connect()
+        with conn.cursor() as cursor:
+            for query in query_arr:
+                cursor.execute(query[0], query[1])
+            result = {'result': 'success'}
+            conn.commit()
+    except Exception:
+        result = {'result': 'failure'}
+    finally:
+        conn.close()
+        return result
+
+def edit_helper(query, arguments):
     try:
         conn = connect()
         with conn.cursor() as cursor:
             cursor.execute(query, arguments)
-            result = {'result': 'success'}
+            conn.commit()
+            result = {'result': 'success'}            
     except Exception:
         result = {'result': 'failure'}
     finally:

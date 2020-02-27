@@ -49,7 +49,8 @@ def login():
     result = select_one(query, arguments)
     if result['result'] == 'success':
         token = jwt.encode(result['data'], 'secret', algorithm='HS256')
-        return jsonify({'result':'success', 'token': token})
+        data = {'token': token, 'user_id': result['data']['user_id']}
+        return jsonify({'result':'success', 'data': data})
     else:
         return jsonify({'result':'failure'})
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 class ViewBlog extends React.Component {
     constructor(props) {
@@ -50,21 +51,27 @@ class ViewBlog extends React.Component {
 
     handlePostComment = () => {
         // post this comment
-        const blog_id = this.props.match.params['id']
+        const blog_id = Number(this.props.match.params['id'])
         const url = "http://localhost:5000/post/comments"
 
         const data = {
             "blog_id": blog_id,
             "comment": this.state.comment,
-            "token": localStorage.getItem('token')
+            "user_id": this.props.user_id
         }
+
+        console.log('data before axios call ', data)
 
         axios.post(url, data)
         .then(res => {
+            console.log(res)
             this.setState({
                 comments: [...this.state.comments, {'comment': this.state.comment}],
                 comment: ''
             }) 
+        })
+        .catch(err => {
+            console.log(err)
         })
 
 
@@ -164,4 +171,10 @@ class ViewBlog extends React.Component {
 
 }
 
-export default ViewBlog
+const mapStateToProps = (state) => {
+    return {
+        user_id: state.user_id || 20
+    }
+}
+
+export default connect(mapStateToProps, null)(ViewBlog)

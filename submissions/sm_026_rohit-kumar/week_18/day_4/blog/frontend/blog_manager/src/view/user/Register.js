@@ -1,5 +1,8 @@
 import React from 'react'
 import axios from 'axios'
+import {connect} from 'react-redux'
+import {user_logout} from '../../redux/Action'
+
 
 class Register extends React.Component {
     constructor(props) {
@@ -11,6 +14,12 @@ class Register extends React.Component {
             password: ''
         }
     }
+
+    componentWillMount = () => {
+        // logout any user before proceding, if in case
+        this.props.user_logout()
+    }
+
 
     handleSignup = () => {
         const url = 'http://localhost:5000/user/register'
@@ -74,4 +83,11 @@ class Register extends React.Component {
     }
     
 }
-export default Register
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        user_logout: () => dispatch(user_logout())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Register)

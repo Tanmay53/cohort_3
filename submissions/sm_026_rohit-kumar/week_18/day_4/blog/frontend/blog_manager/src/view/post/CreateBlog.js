@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import {connect} from 'react-redux'
 
 
 class CreateBlog extends React.Component {
@@ -24,13 +25,13 @@ class CreateBlog extends React.Component {
     
 
     handleClick = () => {
-
         const url = "http://localhost:5000/post/create"
         const data = {
                     "category_id": this.state.category_id,
                     "heading": this.state.heading,
                     "body": this.state.body,
-                    "token": localStorage.getItem('token')
+                    "token": this.props.token,
+                    "user_id": this.props.user_id
                 }
         axios.post(url, data)
         .then(res => {
@@ -46,10 +47,16 @@ class CreateBlog extends React.Component {
         })
         .catch(err => {
             alert(err)
-        })
+        }) 
     }
 
     componentWillMount = () => {
+        // if user is not logged in redirect
+        
+        if (this.props.loginStatus === 'Login') {
+            this.props.history.push('/user/login')
+        }
+
         // from backend get all available categories
         axios.get('http://localhost:5000/post/category')
         .then(res => {
@@ -63,7 +70,7 @@ class CreateBlog extends React.Component {
 
         })
 
-        axios.post('http://localhost:5000/post/blogs', {"n":"10"})
+        axios.post('http://localhost:5000/post/blogs', {"n":"7"})
         .then(res => {
             this.setState({
                 related_posts: res['data']['data']
@@ -72,6 +79,8 @@ class CreateBlog extends React.Component {
         .catch(err => {
             console.log(err)
         })
+
+        
     }
 
     render() {
@@ -126,4 +135,11 @@ class CreateBlog extends React.Component {
 
 }
 
-export default CreateBlog
+const mapStateToProps = (state) => {
+    return {
+        loginStatus: state.status,
+        token: state.token,
+        user_id: state.user_id
+    }   
+}
+export default connect(mapStateToProps, null)(CreateBlog)

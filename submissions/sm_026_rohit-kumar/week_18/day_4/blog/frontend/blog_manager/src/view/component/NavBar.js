@@ -1,20 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {user_logout, user_login} from '../../redux/Action'
+
 
 
 class NavBar extends React.Component {
-    constructor(props) {
-        super(props)
-            this.state = {
-                
-            }
-    }
 
     handleClick = () => {
-        
+        // console.log(this.props.loginStatus)
+        if (this.props.loginStatus === 'Logout') {
+            this.props.user_logout()
+        }
     }
 
     render() {
+        // console.log('login status : ', this.props.loginStatus)
         return (
                 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                     <a class="navbar-brand" href="#"><b>Blogger</b></a>
@@ -28,6 +29,9 @@ class NavBar extends React.Component {
                             </li>  
                             <li class="nav-item active">
                                 <Link class="nav-link" to='/blog/create' > Create Blog <span class="sr-only">(current)</span></Link>
+                            </li>
+                            <li class="nav-item active">
+                                <Link class="nav-link" to='/blog/myblog' > My Blogs <span class="sr-only">(current)</span></Link>
                             </li>   
                                         
                         </ul>
@@ -36,7 +40,7 @@ class NavBar extends React.Component {
                                 <Link class="nav-link" to='/user/register' > Register <span class="sr-only">(current)</span></Link>
                             </li> 
                             <li class="nav-item active ml-auto">
-                                <Link onClick={this.handleClick()} class="nav-link"> {this.props.loginStatus} <span class="sr-only">(current)</span></Link>
+                                <Link to='/user/login' onClick={this.handleClick} class="nav-link"> {this.props.loginStatus} <span class="sr-only">(current)</span></Link>
                             </li>                 
                         </ul>
                     </div>
@@ -45,4 +49,16 @@ class NavBar extends React.Component {
     }
 }
 
-export default NavBar
+const mapStateToProps = (state) => {
+    return {
+        loginStatus: state.status
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        user_logout: () => dispatch(user_logout())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar)

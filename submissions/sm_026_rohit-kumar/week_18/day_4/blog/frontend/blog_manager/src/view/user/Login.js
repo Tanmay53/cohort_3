@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import {connect} from 'react-redux'
+import {user_login, user_logout} from '../../redux/Action'
 
 
 class Login extends React.Component {
@@ -7,8 +9,7 @@ class Login extends React.Component {
         super(props)
         this.state = {
             username: '',
-            password: '',
-            token: ''
+            password: ''
         }
     }
 
@@ -22,7 +23,10 @@ class Login extends React.Component {
         const url = 'http://localhost:5000/user/login'
         axios.post(url, this.state)
         .then(res => {
-            localStorage.setItem('token', res['data']['token'])
+            // console.log(res['data']['data'])
+            this.props.user_login(res['data']['data'])
+
+            // console.log(this.props)
             this.props.history.push('/blog/create')
         })
         .catch(res => {
@@ -57,7 +61,14 @@ class Login extends React.Component {
                 </div>
             </div>
         )
-    }
-    
+    }    
 }
-export default Login
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        user_login: (data) => dispatch(user_login(data)),
+        user_logout: () => dispatch(user_logout()),
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Login)

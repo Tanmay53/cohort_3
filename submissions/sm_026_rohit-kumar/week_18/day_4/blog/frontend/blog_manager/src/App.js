@@ -4,31 +4,10 @@ import Router from '../src/route/Router'
 import NavBar from './view/component/NavBar'
 
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      loginStatus: 'Login'
-    }
-  }
-
-  componentWillMount = () => {
-    if (localStorage.getItem('token') !== null) {
-      localStorage.removeItem('token')
-    }
-  }
-
-  handleLoginStatus = (status) => {
-    this.setState({
-      loginStatus: status
-    })
-  }
-
-  render() {
+function App(){
     return (
       <BrowserRouter>
-      <NavBar loginStatus={this.state.loginStatus} loginStatusCallback={this.handleLoginStatus} />
-
+        <NavBar />
         <div className='container mt-3'>
           <div className='row'>
             <div className='col-10 offset-1'>
@@ -38,7 +17,6 @@ class App extends React.Component {
         </div>
       </BrowserRouter>
     )
-  }
 }
 
 export default App;
