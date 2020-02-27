@@ -1,45 +1,39 @@
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchBlogData } from "../../redux/blog/blog_action";
-import { authReset } from "../../redux/auth/auth_action";
-import React, { Component } from "react";
-import Card from "./Card";
-import { Link } from "react-router-dom";
 
-export class Home extends Component {
+export class Edit extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      blog_title: "",
-      content: "",
-      category: "1"
+      blog_id: this.props.match.params["id"],
+      blog_title: this.props.data.data.find(
+        ele => ele["id"] === Number(this.props.match.params["id"])
+      )["title"],
+      content: this.props.data.data.find(
+        ele => ele["id"] === Number(this.props.match.params["id"])
+      )["content"],
+      category: this.props.data.data.find(
+        ele => ele["id"] === Number(this.props.match.params["id"])
+      )["category_id"]
     };
-
-    this.loadBlogs();
   }
-  loadBlogs = () => {
-    const config = {
-      method: "GET",
-      url: "http://localhost:5000/show_blogs"
-    };
-    const result = this.props.fetchBlogData(config);
-    console.log(result);
-  };
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
   };
 
-  componentDidMount() {
-    console.log("home page ");
-  }
-
   handleSubmit = async e => {
     e.preventDefault();
     console.log(this.state);
     const config = {
-      method: "POST",
-      url: "http://localhost:5000/new_blog",
+      method: "PUT",
+      url: "http://localhost:5000/update_blog",
+      headers: {
+        Authorization:
+          "Bearer " + JSON.parse(localStorage.getItem("user"))["token"]
+      },
       data: { ...this.state, user_id: this.props.user_id }
     };
     const result = await this.props.fetchBlogData(config);
@@ -49,26 +43,15 @@ export class Home extends Component {
       content: "",
       category: "1"
     });
-    this.loadBlogs();
+    this.props.history.push("/");
   };
   render() {
-    if (!this.props.data.data) return null;
-    let ownData = this.props.data.data.filter(
-      ele => ele["user_id"] === this.props.user_id
-    );
-    console.log(ownData);
-    let otherData = this.props.data.data.filter(
-      ele => ele["user_id"] !== this.props.user_id
-    );
-    console.log(otherData);
     return (
       <div>
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h3 className="bg-primary text-white text-center">
-                Create new Blog
-              </h3>
+              <h3 className="bg-primary text-white text-center">Edit Blog</h3>
             </div>
           </div>
           <div className="row">
@@ -82,6 +65,7 @@ export class Home extends Component {
                   name="blog_title"
                   placeholder="Enter blog title"
                   onChange={this.handleChange}
+                  value={this.state.blog_title}
                   className="form-control"
                 />
                 <input
@@ -89,6 +73,7 @@ export class Home extends Component {
                   name="content"
                   placeholder="write blog"
                   onChange={this.handleChange}
+                  value={this.state.content}
                   className="form-control mt-2"
                 />
                 <hr />
@@ -103,42 +88,12 @@ export class Home extends Component {
                 <label htmlFor="category"> General</label>
                 <br />
                 <button type="submit" className="btn btn-primary text-center">
-                  Post blog
+                  Update blog
                 </button>
               </form>
             </div>
           </div>
-          <div className="card-deck">
-            {ownData.map(ele => (
-              <Link to={`/blog/${ele["id"]}`} key={ele["id"]}>
-                <Card
-                  body={ele["content"]}
-                  title={ele["title"]}
-                  isOwner={true}
-                  author={ele["name"]}
-                  edit={`/edit/${ele["id"]}`}
-                  delete={`/delete/${ele["id"]}`}
-                />
-              </Link>
-            ))}
-            {otherData.map(ele => (
-              <Link to={`/blog/${ele["id"]}`} key={ele["id"]}>
-                <Card
-                  body={ele["content"]}
-                  title={ele["title"]}
-                  isOwner={false}
-                  author={ele["name"]}
-                />
-              </Link>
-            ))}
-          </div>
         </div>
-        <button
-          className="btn btn-primary"
-          onClick={() => this.props.authReset()}
-        >
-          Logout
-        </button>
       </div>
     );
   }
@@ -151,6 +106,5 @@ const mapStateToProps = state => {
     user_id: state.auth_reducer.data.user_id
   };
 };
-const mapDispatchToProps = { fetchBlogData, authReset };
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+const mapDispatchToProps = { fetchBlogData };
+export default connect(mapStateToProps, mapDispatchToProps)(Edit);
