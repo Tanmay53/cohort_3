@@ -43,7 +43,7 @@ export class Signup extends Component {
     if (this.props.data.error === false) {
       alert(this.props.data.message);
       this.props.authReset();
-      return <Redirect to="/auth/login" />;
+      return <Redirect to="/login" />;
     } else if (this.props.data.error) {
       alert(this.props.data.message);
       this.props.authReset();
