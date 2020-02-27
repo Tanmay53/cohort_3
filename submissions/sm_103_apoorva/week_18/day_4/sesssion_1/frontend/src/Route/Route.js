@@ -5,7 +5,9 @@ import SignIn from '../components/SignIn'
 import Details from '../components/Details'
 import Blog from '../components/Blog'
 import Write from '../components/Write'
+import MyBlog from '../components/MyBlog'
 import {signout} from '../Redux/Action'
+import Update from '../components/Update'
 import { connect } from "react-redux"
 
 
@@ -28,6 +30,9 @@ function Routes(props){
                             <li className="nav-item active ml-3 ">
                                 <Link to="/writeblog" >Write Blog</Link>
                             </li>
+                            <li className="nav-item active ml-3 ">
+                                <Link to="/myblog" >My Blog</Link>
+                            </li>
                         </ul>
                         <div className="ml-auto text-white">Hello {props.user}!</div>
                         {props.isloggedIn ? (
@@ -47,6 +52,8 @@ function Routes(props){
                     <Route path="/details" exact component = {Details} />
                     <Route path="/signin" exact component = {SignIn} />
                     <Route path="/signup" exact component = {SignUp} />
+                    <Route path="/myblog" exact component = {MyBlog} />
+                    <Route path="/myblog/:id" component = {(props) => <Update {...props} />} />
                 </Switch>
             </div>
         )

@@ -1,9 +1,9 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import axios from 'axios'
 import swal from 'sweetalert'
+import {Link} from 'react-router-dom'
 
-class Write extends React.Component{
+class Update extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -19,29 +19,52 @@ class Write extends React.Component{
         })
     }
 
-    publish = (e) =>{
+    componentDidMount = () =>{
+        let id = this.props.match.params.id
+        // console.log(id)
+        axios.post('http://127.0.0.1:5000/getblogonid',{
+            "blog_id" : id
+        }).then
+        (res =>{
+            this.setState({
+                blog_title:res.data.title,
+                blog_category:res.data.category_id,
+                blog:res.data.blog_body
+            })
+        }).catch(error => console.log(error))
+
+    }
+
+    update = (e) =>{
         e.preventDefault()
         let blog_title = this.state.blog_title
         let blog_category = this.state.blog_category
         let blog = this.state.blog
-        let username = localStorage.getItem('user')
+        let id = this.props.match.params.id
         // console.log({
         //     "blog_title" : blog_title,
         //     "blog_category": blog_category,
         //     "blog": blog,
         //     "username": username
         // })
-        axios.post('http://127.0.0.1:5000/writeBlogs',{
-            "title" : blog_title,
-            "category_id": blog_category,
-            "blog_body": blog,
-            "username": username
-        }).then
-        (res =>{
-            if(res.data.message === "Blog Created"){
-                swal(res.data.message,"welcome","success")
-            }
-        }).catch(error => console.log(error))
+        let local = localStorage.getItem("token")
+
+            if(JSON.parse(local) != null){
+                const token = {
+                    headers : {Authorization : "Bearer "+JSON.parse(local)}
+                }
+            axios.put('http://127.0.0.1:5000/updateBlog',{
+                "title" : blog_title,
+                "category_id": blog_category,
+                "blog_body": blog,
+                "blog_id": id
+            },token).then
+            (res =>{
+                if(res.data.message === "Update Done"){
+                    swal(res.data.message,"welcome","success")
+                }
+            }).catch(error => console.log(error))
+        }
 
         this.setState({
             blog_category : "",
@@ -52,9 +75,8 @@ class Write extends React.Component{
 
     render(){
         return (
-            this.props.isloggedIn ? 
-            (
             <div className="mt-5">
+                <Link to="/myblog"><button className="btn btn-lg btn-secondary ml-4">Go Back</button></Link>
                 <div className=" m-5  card">
                     <div className="input-group mb-3 m-5 w-25">
                         <div className="input-group-prepend">
@@ -84,27 +106,19 @@ class Write extends React.Component{
                             <input className="form-control" placeholder="Enter Title for Blog" name="blog_title" value={this.state.blog_title} onChange={this.handleChange}></input>
                         </div>
                     </div>
-                    <h3 className="text-center">Write Your Blog Below</h3>
+                    <h3 className="text-center">Update Your Blog body Below</h3>
                     <div className="card mx-5 mt-3">
                         <textarea rows="10" name="blog" value={this.state.blog} onChange={this.handleChange}>
 
                         </textarea>
                     </div>
                     <br></br>
-                    <button className="btn btn-success m-3" onClick={this.publish}>Publish</button>
+                    <button className="btn btn-success m-3" onClick={this.update}>Update</button>
                 </div>
                 
             </div>
-            ):
-            (
-                <div className="text-center">Sign In First</div>
-            )
         )
     }
     
 }
-
-const mapStateToProps = state => ({
-    isloggedIn : state.isloggedIn
-}) 
-export default connect(mapStateToProps,null) (Write)
+export default Update
