@@ -22,7 +22,7 @@ function PrivateRoute({ children, isAuthenticated, ...rest }) {
 
 const mapStateToProps = state => {
   return {
-    isAuthenticated: state.isLoggedin
+    isAuthenticated: state.auth_reducer.isLoggedin
   };
 };
 
