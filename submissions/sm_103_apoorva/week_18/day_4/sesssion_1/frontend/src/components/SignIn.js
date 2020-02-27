@@ -24,16 +24,12 @@ class SignIn extends React.Component {
     e.preventDefault()
     let email = this.state.email
     let password = this.state.password
-    console.log({
-        "email" : email,
-        "password" : password
-    })
     axios.post('http://127.0.0.1:5000/auth/signin',{
             "email" : email,
             "password" : password
         }).then
         (res =>{
-            console.log(res)
+            // console.log(res)
             if(res.data.message === "Login Successful"){
                 localStorage.setItem("token",JSON.stringify(res.data.token))
                 localStorage.setItem("isLoggedIn",true)

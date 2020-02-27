@@ -165,12 +165,14 @@ def list_blogs():
 
 # get blog by id
 @app.route("/blog/<int:id>", methods=["GET"])
-def get_blog_by_id():
+def get_blog_by_id(id):
+    print(id)
     try:
         conn = mysql.connection.cursor()
-        conn.execute("""SELECT `blogs`.*, `users`.`username`, `categories`.`category_name`, (SELECT COUNT(`comments`.`_id`) FROM `comments` WHERE `comments`.`blog_id` = `blogs`.`_id`) AS `comment_count` FROM `blogs` LEFT JOIN `users` ON `users`.`_id` = `blogs`.`user_id` LEFT JOIN `categories` ON `categories`.`_id` = `blogs`.`category_id`""")
-        rows = conn.fetchall()
-        return jsonify({"error": False, "message": "Successfully fetched all blogs!", "result": rows}), 200
+        conn.execute(
+            """SELECT `blogs`.*, `users`.`username` FROM `blogs` LEFT JOIN `users` ON `users`.`_id` = `blogs`.`user_id` WHERE `blogs`.`_id` =  %s""", (id,))
+        row = conn.fetchone()
+        return jsonify({"error": False, "message": "Successfully fetched the blog!", "result": row}), 200
     except Exception as e:
         print(e)
         return jsonify({"error": True, "message": str(e)}), 400

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchCommentData } from "../../redux/comment/comment_action";
+import { Link } from "react-router-dom";
 
 export class Blog extends Component {
   constructor(props) {
@@ -15,7 +16,21 @@ export class Blog extends Component {
     };
   }
 
-  handleSubmit = e => {
+  componentDidMount() {
+    this.loadComments();
+  }
+  loadComments = () => {
+    const config = {
+      method: "POST",
+      url: "http://localhost:5000/show_comments",
+      data: {
+        blog_id: this.state.blog_id
+      }
+    };
+    const result = this.props.fetchCommentData(config);
+    console.log(result);
+  };
+  handleSubmit = async e => {
     e.preventDefault();
     const config = {
       method: "POST",
@@ -26,11 +41,12 @@ export class Blog extends Component {
         user_id: this.state.user_id
       }
     };
-    const result = this.props.fetchCommentData(config);
+    const result = await this.props.fetchCommentData(config);
     console.log(result);
     this.setState({
       content: ""
     });
+    this.loadComments();
   };
   render() {
     // const id = Number(this.props.match.params["id"]);
@@ -57,6 +73,22 @@ export class Blog extends Component {
           <div className="row bg-light border">
             <div className="col">{this.state.data["content"]}</div>
           </div>
+          {this.state.user_id === this.state.data["user_id"] ? (
+            <div className="row">
+              <div className="col-6">
+                <Link to={`/edit/${this.state.blog_id}`}>
+                  <button className="btn btn-success">Edit</button>
+                </Link>
+              </div>
+              <div className="col-6">
+                <Link to={`/delete/${this.state.blog_id}`}>
+                  <button className="btn btn-success">Delete</button>
+                </Link>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
           <div className="row mt-2">
             <div className="col">
               <hr />
@@ -75,7 +107,27 @@ export class Blog extends Component {
               </form>
             </div>
           </div>
+          {this.props.comments.data &&
+            this.props.comments.data.map(ele => (
+              <div className="row text-left border" key={ele["id"]}>
+                <div className="col-12 bg-light border border-secondary">
+                  {ele["content"]}
+                </div>
+                <div className="row">
+                  <div className="col-4">By:{ele["name"]}</div>
+                  <div className="col-4">
+                    <small>commented on: {ele["created_on"]}</small>
+                  </div>
+                  <div className="col-4">
+                    <small>updated on: {ele["updated_on"]}</small>
+                  </div>
+                </div>
+              </div>
+            ))}
         </div>
+        <Link to="/">
+          <button className="btn btn-primary">Home</button>
+        </Link>
       </div>
     );
   }

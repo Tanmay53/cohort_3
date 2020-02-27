@@ -5,7 +5,9 @@ import {
   ADD_BLOG_REQUEST,
   ADD_BLOG_SUCCESS,
   ADD_BLOG_FAILURE,
-  BLOG_REQUEST
+  BLOG_REQUEST,
+  BLOG_SUCCESS,
+  BLOG_FAILURE
 } from "../actionType";
 import Axios from "axios";
 
@@ -30,14 +32,15 @@ export const fetchAllBlog = () => {
       setTimeout(() => {
         dispatch({
           type: BLOG_LIST_SUCCESS,
-          payload: res.data.result
+          payload: res.data
         });
       }, 2000);
     } catch (err) {
       console.log(err);
+      let error = err.message ? err.message : err;
       dispatch({
         type: BLOG_LIST_FAILURE,
-        payload: err
+        payload: error
       });
     }
   };
@@ -51,8 +54,22 @@ export const getBlogById = id => {
     try {
       const res = await Axios.get("/blog/" + id, config);
       console.log(res);
+      if (res.data.error) {
+        throw res.data.message;
+      }
+      setTimeout(() => {
+        dispatch({
+          type: BLOG_SUCCESS,
+          payload: res.data
+        });
+      }, 2000);
     } catch (err) {
       console.log(err);
+      let error = err.message ? err.message : err;
+      dispatch({
+        type: BLOG_FAILURE,
+        payload: error
+      });
     }
   };
 };
@@ -70,7 +87,7 @@ export const addBlog = data => {
           type: ADD_BLOG_SUCCESS,
           payload: { error: false, response: res, message: "Success!" }
         });
-      });
+      }, 2000);
     } catch (err) {
       console.log(err);
       dispatch({

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { addBlog } from "../../redux/actions/blogAction";
-import { fetchAllcategory } from "../../redux/actions/categoryAction";
+import { addBlog, getBlogById } from "../../redux/actions/blogAction";
 import {
   Container,
   Row,
@@ -12,6 +11,7 @@ import {
   Form,
   Button
 } from "react-bootstrap";
+import Loader from "../Common/Loader";
 
 const Blog = props => {
   const [state, setstate] = useState({
@@ -20,10 +20,6 @@ const Blog = props => {
     blog: "",
     image: ""
   });
-
-  useEffect(() => {
-    props.getAllCategory();
-  }, []);
 
   const handleChange = e => {
     setstate({
@@ -44,24 +40,34 @@ const Blog = props => {
     props.addNewBlog(data);
   };
 
-  const { categoryList } = props;
-  return (
+  useEffect(() => {
+    const {
+      match: { params }
+    } = props;
+    props.getBlog(params.id);
+  }, []);
+
+  const { isLoading, blogContent } = props;
+
+  return isLoading ? (
+    <Loader />
+  ) : (
     <Container className="section-padding">
       <Row>
         <Col lg={9}>
-          <h3 className="h1 fw-500 text-secondary">Post Title</h3>
-          <p className="lead">by Start Bootstrap</p>
+          <h3 className="h1 fw-500 text-secondary">{blogContent.blog_title}</h3>
+          <p className="lead">by {blogContent.username}</p>
           <hr />
-          <p>Posted on January 1, 2019 at 12:00 PM</p>
+          <p>Posted on {blogContent.published_on}</p>
           <hr />
           <Image
             className="img-fluid rounded"
-            src="http://placehold.it/900x300"
+            src={blogContent.image}
             alt="blog-image"
           />
           <hr />
 
-          <p className="lead"></p>
+          <p className="lead">{blogContent.blog}</p>
 
           <hr />
 
@@ -111,10 +117,13 @@ const Blog = props => {
 };
 
 const mapStateToProps = state => ({
-  categoryList: state.categoryReducer.categories
+  isLoading: state.blogReducer.isLoading,
+  error: state.blogReducer.error,
+  response: state.blogReducer.response,
+  blogContent: state.blogReducer.blog
 });
 const mapDispatchToProps = dispatch => ({
-  getAllCategory: () => dispatch(fetchAllcategory()),
+  getBlog: id => dispatch(getBlogById(id)),
   addNewBlog: data => dispatch(addBlog(data))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Blog);
