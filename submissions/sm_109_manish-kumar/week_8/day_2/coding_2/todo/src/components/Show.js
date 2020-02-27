@@ -43,8 +43,7 @@ class Print extends React.Component{
                 <button onClick = {this.addNew}>Add ToDo</button>
                 
                 <h3>done</h3>
-                {/* {this.state.done.map(item => <p>{item}</p>)} */}
-                console.log(this.state.done)
+                
             </div>
         )
     }
