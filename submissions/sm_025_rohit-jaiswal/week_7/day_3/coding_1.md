@@ -93,7 +93,7 @@ arr = arr.reduce((a,b)=>a>b?a+100:b)
 Answer
 
 ```
-
+300
 ```
 9. What is the value of `x` and `y` ?
 ```javascript
