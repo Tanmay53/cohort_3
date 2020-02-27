@@ -12,7 +12,7 @@ const initialStore = {
     msg:''
 }
 
-const reducer = (state = initialStore,action)=>{
+const commonReducer = (state = initialStore,action)=>{
     switch (action.type){
         case FETCH_USERS_REQUEST:
             return {
@@ -86,4 +86,9 @@ const reducer = (state = initialStore,action)=>{
     }
 }
 
-export {reducer}
+export {commonReducer}
+
+
+
+
+

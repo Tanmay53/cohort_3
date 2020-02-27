@@ -54,7 +54,7 @@ class Nav extends Component {
 }
 const mapStateToProps = (state) => ({
     ...state,
-    token: state.token
+    token: state.commonReducer.token
 })
 
 const mapDispatchToProps = dispatch => ({
