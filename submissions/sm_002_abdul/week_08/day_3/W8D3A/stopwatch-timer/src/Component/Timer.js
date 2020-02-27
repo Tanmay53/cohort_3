@@ -16,6 +16,7 @@ class Timer extends React.Component{
           <div className='card-body'>
             <div className='input-group'> 
               <input
+                min={0}
                 type='number'
                 className='form-control'
                 onChange={this.props.handleTimerInput}

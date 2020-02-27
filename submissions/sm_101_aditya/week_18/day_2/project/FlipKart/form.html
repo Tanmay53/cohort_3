@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Admin form -->
+    <h1 class="text-center text-danger">For Admin to add Items in deals of the day</h1>
+    <div id="formHide">
+        <h1 class="text-center">Product Detals</h1>
+        <div class="container-fluid">
+            <form class="border border-info m-5 p-5">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="imgaddress">Image Address :</label>
+                        <input type="text" class="form-control" id="proImage" name="proImage"
+                            placeholder="Image Address" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="fullName">Product Name :</label>
+                        <input type="text" class="form-control" id="proName" name="proName"
+                            placeholder="Product Name" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="price">Product Price :</label>
+                        <input type="number" placeholder="Price" class="form-control" id="proPrice" name="proPrice" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="brand">Brand Name :</label>
+                        <input type="text" placeholder="Brand Name" class="form-control" id="proBrand"
+                            name="proBrand" />
+                    </div>
+                </div>
+                <div>
+                    <button type="button" id="adminBtn" onclick="clicked()" class="btn btn-lg btn-primary"> Submit
+                        Data</button>
+                        <a href="./flipkart.html">go to flipkart</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="./form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
