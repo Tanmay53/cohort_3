@@ -26,23 +26,18 @@ class Postshows extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    {this.state.data.map((ele) => <div className="col-4">
-                        <div className="col-12"> <h1>{ele.title}</h1>
-                            <p>by...{ele.name}</p>
+                    {this.state.data.map((ele) => <div className="col-4 p-3">
+                        <div className="col-12"> <h2>{ele.title}</h2>
+                            <p>by...<p className="text-danger">{ele.name}</p></p>
                         </div>
                         <div className="col-12 text-right"><p>{ele.date}</p></div>
-                        <div className="col-12"><p>{ele.content}</p></div>
+                        <div className="col-12" style={{ "height": "100px", "overflow": "hidden" }}><p>{ele.content}</p></div>
                         <div><Link to={`/post/${ele.id}`}><button className="btn btn-primary">Readmore</button></Link></div>
                     </div>)}
                 </div>
             </div>
         )
-        //         }
-        // else {
-        //     return(
-        //         <Redirect to ="/login"/>
-        //     )
-        // }
+
     }
 }
 export default Postshows
