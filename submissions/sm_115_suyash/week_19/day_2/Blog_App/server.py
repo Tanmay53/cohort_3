@@ -71,11 +71,11 @@ def user_login():
         password = password + user_data["salt"]
         password = md5_hash(password)
         if user_data["password"] == password:
-            return {
+            return json.dumps({
                 "message": "User Login Successfully",
                 "error": False,
-                "data": user_data,
-            }
+                "data": user_data
+            })
     else:
         return {"message": "User does't exist", "error": True}
 
@@ -169,10 +169,10 @@ def get_comment():
     comments_data = []
     for row in result:
         comments_data.append(row)
-    print(comments_data, "<<<<<===========-------------------------")
     return json.dumps(comments_data)
 
 
+# ----------------------------- Show My Blog Route ---------------------------------
 @app.route("/show/myblog", methods=["POST"])
 def show_myblog():
     user_id = request.json["user_id"]
@@ -186,6 +186,7 @@ def show_myblog():
             {"created_at": str(row["created_at"]),}
         )
         blog_data.append(row)
+    
     return json.dumps(blog_data)
 
 

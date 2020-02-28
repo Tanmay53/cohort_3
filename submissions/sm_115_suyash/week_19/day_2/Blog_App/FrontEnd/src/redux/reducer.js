@@ -1,9 +1,17 @@
-import { AXIOS_LODING, SIGN_UP_SUCCESS, LOGIN_SUCCESS, LOGOUT } from "./action";
+import {
+  AXIOS_LODING,
+  SIGN_UP_SUCCESS,
+  LOGIN_SUCCESS,
+  LOGOUT
+} from "./loginAction";
+import { FETCT_DATA_ALL_BLOG_SUCCESS } from "./action";
 
 const initialState = {
   loginMsg: "",
   signUpMsg: "",
   isAuth: false,
+  authData: {},
+  allBlogData: [],
   signupAuth: false,
   loading: false
 };
@@ -17,7 +25,7 @@ const reducer = (state = initialState, action) => {
       };
     case SIGN_UP_SUCCESS:
       console.log(state.loading);
-      if (action.payload == "signup successfully") {
+      if (action.payload.error == false) {
         return {
           ...state,
           loading: false,
@@ -28,16 +36,18 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           loading: false,
-          signUpMsg: action.payload
+          signUpMsg: action.payload.message
         };
       }
     case LOGIN_SUCCESS:
-      if (action.payload == "Login successfully") {
+      console.log(state.loading);
+      if (action.payload.error == false) {
         return {
           ...state,
           loading: false,
           isAuth: true,
-          loginMsg: action.payload
+          authData: action.payload.data,
+          loginMsg: action.payload.message
         };
       } else {
         return {
@@ -50,7 +60,14 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         isAuth: false,
-        signupAuth:false,
+        signupAuth: false
+      };
+    case FETCT_DATA_ALL_BLOG_SUCCESS:
+      console.log(action.payload, "<----All Blog data");
+      return {
+        ...state,
+        loading: false,
+        allBlogData: action.payload
       };
     default:
       return state;
