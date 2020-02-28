@@ -205,7 +205,7 @@ def deleteMyBlog():
             """DELETE FROM comment WHERE blog_id = %s""",(blog_id,)
         )
         cursor.execute(
-            """DELETE FROM blog WHERE blog_id = %s""",(blog_id,)
+            """DELETE FROM blog WHERE blog_id = %s AND user_id=%s""",(blog_id,val,)
         )
         mysql.connection.commit()
         return jsonify({"message":"Blog Deleted Successfully"})
