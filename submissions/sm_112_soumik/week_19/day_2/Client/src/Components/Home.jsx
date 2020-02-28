@@ -36,7 +36,7 @@ function Home() {
     return <h2>Loading...</h2>;
   } else {
     return (
-      <div className="position-absolute text-center w-100">
+      <div className="text-center m-auto">
         <h2>User Feed</h2>
         <div className="row">
           {blogs.map(ele => {

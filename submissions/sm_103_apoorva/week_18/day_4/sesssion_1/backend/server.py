@@ -199,13 +199,22 @@ def deleteMyBlog():
     decode_data = jwt.decode(token_encoded, 'secure', algorithms=['HS256'])
     val = str(decode_data['user_id'])
     # print(blog_id,val)
-    cursor = mysql.connection.cursor()
-    cursor.execute(
-        """DELETE FROM blog WHERE blog_id = %s""",(blog_id,)
-    )
-    mysql.connection.commit()
-    cursor.close()
-    return jsonify({"message":"Blog Deleted Successfully"})
+    try:
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """DELETE FROM comment WHERE blog_id = %s""",(blog_id,)
+        )
+        cursor.execute(
+            """DELETE FROM blog WHERE blog_id = %s AND user_id=%s""",(blog_id,val,)
+        )
+        mysql.connection.commit()
+        return jsonify({"message":"Blog Deleted Successfully"})
+    except Exception as e:
+        print(str(e))
+        return jsonify({"error":"check"})
+    finally:
+        cursor.close()
+    
 
 
 @app.route('/getblogonid',methods = ['POST'])

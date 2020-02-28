@@ -57,7 +57,7 @@ export default function SideNavPage(props) {
           <Link className="btn btn-secondary" to="/user/Edit">Upload profile Pic</Link>
           </ListItem>
         <ListItem>
-          <button className="btn btn-secondary" onClick={()=>alert("hello")}>Your Blogs</button>
+          <Link to="/user/myblog" className="btn btn-secondary">My Blogs</Link>
           </ListItem>
           <ListItem>
           <button className="btn btn-secondary" onClick={()=>alert("hello")}>Your Favourite</button>

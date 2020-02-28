@@ -1,7 +1,9 @@
 import React from 'react'
 import { Redirect } from 'react-router'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { login } from "../Actions/actions"
 
 class Login extends React.Component {
     constructor(props) {
@@ -12,7 +14,7 @@ class Login extends React.Component {
             isAuth: true,
             userid: "",
             token: "",
-            username:""
+            username: ""
         }
     }
     handleChange = (e) => {
@@ -33,71 +35,48 @@ class Login extends React.Component {
                         isAuth: false
                     })
 
-                    this.props.isAuth(true,this.state.email)
+                    this.props.dispatch(login(this.state.email))
                     this.props.history.push("/")
                 }
             })
-            .catch((res)=>{
+            .catch((res) => {
+                alert("invalid username or password")
                 console.log("error")
             })
-        // let token = localStorage.getItem('token')
-        // axios({
-        //     method: "GET",
-        //     url: `http://localhost:5000/singleuser`,
-        //     headers: { 'Authorization': `Bearer ${token}` }
-        // })
-        //     .then((res) => {
-        //         console.log(res, "userrrrrrrrrrr")
-        //         localStorage.setItem("id", res.data[0]["id"])
-        //         this.setState({
-        //             userid: res.data[0]["id"],
-        //             username:res.data[0]["name"]
-        //         })
-        //         // this.props.username(this.state.username)
-        //     })
-        // this.setState({
-        //     email: "",
-        //     password: "",
-        //     userid: "",
-        //     token: ""
-        // })
     }
     render() {
-        console.log(this.state.isAuth,"login")
+        console.log(this.props.value, "login")
         // if (!this.state.isAuth) {
-            return (
-                <div>
-                    <div className="container">
-                        <div className="offset-3"><h3>Login</h3></div>
-                        <div className="col-6 offset-3">
-                            <div className="col-12 m-2">
-                                <label >Email </label>
-                            </div>
-                            <div className="col-12 m-2">
-                                <input className="col-12" name="email" value={this.state.email} onChange={this.handleChange} />
-                            </div>
-                            <div className="col-12 m-2">
-                                <label >password </label>
-                            </div>
-                            <div className="col-12 m-2">
-                                <input className="col-12" name="password" type="password" value={this.state.password} onChange={this.handleChange} />
-                            </div>
-                            <div className="col-12 m-2 text-center">
-                                <button onClick={this.userdata}>Login</button>
-                            </div>
+        return (
+            <div>
+                <div className="container">
+                    <div className="offset-3"><h3>Login</h3></div>
+                    <div className="col-6 offset-3">
+                        <div className="col-12 m-2">
+                            <label >Email </label>
                         </div>
-                        <div className="text-center">
-                            <div>Not a Member? please <Link to="/signup">Signup here</Link></div>
+                        <div className="col-12 m-2">
+                            <input className="col-12" name="email" value={this.state.email} onChange={this.handleChange} />
+                        </div>
+                        <div className="col-12 m-2">
+                            <label >password </label>
+                        </div>
+                        <div className="col-12 m-2">
+                            <input className="col-12" name="password" type="password" value={this.state.password} onChange={this.handleChange} />
+                        </div>
+                        <div className="col-12 m-2 text-center">
+                            <button onClick={this.userdata}>Login</button>
                         </div>
                     </div>
+                    <div className="text-center">
+                        <div>Not a Member? please <Link to="/signup">Signup here</Link></div>
+                    </div>
                 </div>
-            )
-        // }
-        // else {
-        //     return (
-        //         <Redirect to="/" />
-        //     )
-        // }
+            </div>
+        )
     }
 }
-export default Login
+const mapStateToProps = (state) => ({
+    value: state.loginreducer
+})
+export default connect(mapStateToProps)(Login)

@@ -1,0 +1,25 @@
+#cardsArr {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#cardsArr > div {
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    width: max-content;
+    background-color: rgb(122, 156, 149);
+}
+
+#filterButtonsDiv {
+    background-color: indianred;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+#filterButtonsDiv>button {
+    /* padding: 3px; */
+    margin: 15px;
+    background-color: lawngreen;
+}

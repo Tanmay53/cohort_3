@@ -51,8 +51,6 @@ class CreateUser extends Component {
     }
 }
 const mapStateToProps = (state) => ({
-    data: state.data,
-    total: state.totalUsers
 })
 
 const mapDispatchToProps = dispatch=>({

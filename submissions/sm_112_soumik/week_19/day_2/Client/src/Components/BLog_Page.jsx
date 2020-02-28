@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Collapse } from "antd";
+import { Comment, Icon, Tooltip, Avatar, Collapse } from "antd";
 
 function BLog_Page(props) {
   const { Panel } = Collapse;
 
-  function callback(key) {
-    console.log("called");
-  }
+  function callback(key) {}
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState({});
   const [comment, setComments] = useState([]);
@@ -15,8 +13,8 @@ function BLog_Page(props) {
   useEffect(() => {
     setLoading(true);
     setUser(props.location.state.data);
-    let b_id = props.match.params.id;
-    console.log("b_id is", b_id);
+    let b_id = parseInt(props.match.params.id);
+
     axios
       .post("http://localhost:5000/comments", {
         b_id
@@ -30,23 +28,24 @@ function BLog_Page(props) {
     let data = {
       comment: newComment,
       user_id: user.user_id,
-      blog_id: b_id,
+      blog_id: parseInt(b_id),
       catagory_id: user.catagory_id
     };
-    setLoading(true);
     console.log(data);
+    setLoading(true);
     axios
       .post("http://localhost:5000/new_comment", data)
       .then(res => setComments(res.data));
 
     setLoading(false);
   };
+  console.log(comment);
 
   if (loading) {
     return <h2>Loading...</h2>;
   } else {
     return (
-      <div className="position-absolute text-center w-100 p-4">
+      <div className="position-absolute text-center  p-4">
         <div className="card m-auto col-md-6 rounded p-4">
           <h2 className="text-light bg-dark p-4 rounded">{user.title}</h2>
           <p className="text-light bg-dark p-4 rounded ">{user.content}</p>
@@ -66,9 +65,21 @@ function BLog_Page(props) {
                 </button>
               </div>
               {comment.map(ele => (
-                <div className="m-auto col-md-6">
-                  <p>{ele.comment}</p>
-                </div>
+                <Comment
+                  author={<a>User</a>}
+                  avatar={
+                    <Avatar
+                      src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+                      alt="Han Solo"
+                    />
+                  }
+                  content={<p>{ele.comment}</p>}
+                  datetime={
+                    <Tooltip title={ele.created_at}>
+                      <p>Posted few minutes ago...</p>
+                    </Tooltip>
+                  }
+                />
               ))}
             </Panel>
           </Collapse>

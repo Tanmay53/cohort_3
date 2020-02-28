@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
-import { addBlog, getBlogById } from "../../redux/actions/blogAction";
+import { getBlogById } from "../../redux/actions/blogAction";
+import {
+  getCommentByBlog,
+  addComment
+} from "../../redux/actions/commentAction";
 import {
   Container,
   Row,
@@ -14,30 +18,11 @@ import {
 import Loader from "../Common/Loader";
 
 const Blog = props => {
-  const [state, setstate] = useState({
-    category_id: "",
-    title: "",
-    blog: "",
-    image: ""
-  });
-
-  const handleChange = e => {
-    setstate({
-      ...state,
-      [e.target.name]: e.target.value
-    });
-  };
-
+  const userComment = useRef(null);
   const handleSubmit = e => {
     e.preventDefault();
-    let data = {
-      category_id: state.category_id,
-      title: state.title,
-      blog: state.blog,
-      image: state.image,
-      user_id: 1
-    };
-    props.addNewBlog(data);
+    let data = userComment.current.value();
+    props.addNewComment(data);
   };
 
   useEffect(() => {
@@ -45,9 +30,10 @@ const Blog = props => {
       match: { params }
     } = props;
     props.getBlog(params.id);
+    props.getComment(params.id);
   }, []);
 
-  const { isLoading, blogContent } = props;
+  const { isLoading, blogContent, comments } = props;
 
   return isLoading ? (
     <Loader />
@@ -82,6 +68,7 @@ const Blog = props => {
                     size="lg"
                     rows="4"
                     placeholder="Add your comment here !!!"
+                    ref={userComment}
                   />
                 </Form.Group>
                 <Button
@@ -95,21 +82,19 @@ const Blog = props => {
               </Form>
             </Card.Body>
           </Card>
-
-          <Media>
-            <Image
-              className="d-flex mr-3 rounded-circle"
-              src="http://placehold.it/50x50"
-              alt="avatar"
-            />
-            <Media.Body>
-              <h5 className="mt-0">Commenter Name</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-              scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-              vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-              nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            </Media.Body>
-          </Media>
+          {comments.map(comment => (
+            <Media key={comment._id} className="my-2">
+              <Image
+                className="d-flex mr-3 rounded-circle"
+                src="http://placehold.it/50x50"
+                alt="avatar"
+              />
+              <Media.Body>
+                <h5 className="my-0">{comment.username}</h5>
+                {comment.comment}
+              </Media.Body>
+            </Media>
+          ))}
         </Col>
       </Row>
     </Container>
@@ -120,10 +105,12 @@ const mapStateToProps = state => ({
   isLoading: state.blogReducer.isLoading,
   error: state.blogReducer.error,
   response: state.blogReducer.response,
-  blogContent: state.blogReducer.blog
+  blogContent: state.blogReducer.blog,
+  comments: state.commentReducer.blogComments
 });
 const mapDispatchToProps = dispatch => ({
   getBlog: id => dispatch(getBlogById(id)),
-  addNewBlog: data => dispatch(addBlog(data))
+  getComment: id => dispatch(getCommentByBlog(id)),
+  addNewComment: data => dispatch(addComment(data))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Blog);
