@@ -36,7 +36,10 @@ def get_all_category():
 @post.route('/blogs', methods=['GET', 'POST'])
 def get_all_blogs():
     if request.method == 'GET':
-        query = 'SELECT * FROM `blog`'
+        # query = 'SELECT * FROM `blog`'
+        query = '''SELECT blog.`blog_id`, blog.`heading`, blog.`body`, user.`name` FROM `blog` 
+                    LEFT JOIN `user` ON blog.`user_id` = user.`user_id`
+                '''
         result = select_all(query, [])
         return jsonify(result)
     elif request.method == 'POST':

@@ -138,7 +138,7 @@ else{
 
 
 const mapStateToProps = (state) => ({
-  token:state.token,
+  token:state.commonReducer.token,
 })
 
 const mapDispatchToProps = dispatch =>({

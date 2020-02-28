@@ -1,11 +1,10 @@
 import {
-  BLOG_LIST_REQUEST,
-  BLOG_LIST_SUCCESS,
-  BLOG_LIST_FAILURE,
-  ADD_BLOG_REQUEST,
-  ADD_BLOG_SUCCESS,
-  ADD_BLOG_FAILURE,
-  BLOG_REQUEST
+  FETCH_COMMENT_REQUEST,
+  FETCH_COMMENT_SUCCESS,
+  FETCH_COMMENT_FAILURE,
+  ADD_COMMENT_REQUEST,
+  ADD_COMMENT_SUCCESS,
+  ADD_COMMENT_FAILURE
 } from "../actionType";
 import Axios from "axios";
 
@@ -16,66 +15,49 @@ const config = {
   }
 };
 
-export const fetchAllBlog = () => {
+export const getCommentByBlog = id => {
   return async dispatch => {
     dispatch({
-      type: BLOG_LIST_REQUEST
+      type: FETCH_COMMENT_REQUEST
     });
     try {
-      const res = await Axios.get("/blog", config);
-      console.log(res);
+      const res = await Axios.get("/blog/comment/" + id, config);
       if (res.data.error) {
         throw res.data.message;
       }
-      setTimeout(() => {
-        dispatch({
-          type: BLOG_LIST_SUCCESS,
-          payload: res.data.result
-        });
-      }, 2000);
-    } catch (err) {
-      console.log(err);
       dispatch({
-        type: BLOG_LIST_FAILURE,
-        payload: err
+        type: FETCH_COMMENT_SUCCESS,
+        payload: res.data
+      });
+    } catch (err) {
+      let error = err.message ? err.message : err;
+      dispatch({
+        type: FETCH_COMMENT_FAILURE,
+        payload: error
       });
     }
   };
 };
 
-export const getBlogById = id => {
+export const addComment = data => {
   return async dispatch => {
     dispatch({
-      type: BLOG_REQUEST
+      type: ADD_COMMENT_REQUEST
     });
     try {
-      const res = await Axios.get("/blog/" + id, config);
-      console.log(res);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-};
-
-export const addBlog = data => {
-  return async dispatch => {
-    dispatch({
-      type: ADD_BLOG_REQUEST
-    });
-    try {
-      const res = await Axios.post("/blog/create", { ...data }, config);
-      console.log(res);
-      setTimeout(() => {
-        dispatch({
-          type: ADD_BLOG_SUCCESS,
-          payload: { error: false, response: res, message: "Success!" }
-        });
+      const res = await Axios.post("/comment/add", { ...data }, config);
+      if (res.data.error) {
+        throw res.data.message;
+      }
+      dispatch({
+        type: ADD_COMMENT_SUCCESS,
+        payload: res.data
       });
     } catch (err) {
-      console.log(err);
+      let error = err.message ? err.message : err;
       dispatch({
-        type: ADD_BLOG_FAILURE,
-        paylaod: { error: true, message: err.message }
+        type: ADD_COMMENT_FAILURE,
+        paylaod: error
       });
     }
   };

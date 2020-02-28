@@ -12,10 +12,10 @@ import { connect } from "react-redux"
 
 
 function Routes(props){
-
     useEffect(() => {
         let username = localStorage.getItem('user')
-        if(localStorage.getItem('isLoggedIn') != null){
+        console.log(username)
+        if(localStorage.getItem('user') != null){
             props.login({"isloggedIn":true,"user":username})
         }
       });
@@ -31,7 +31,7 @@ function Routes(props){
         return (
             <div>
                 <nav className="navbar navbar-expand-lg bg-dark" >
-                    <h3 className="navbar-brand text-white" ><Link to="/blogs">Blogger's Paradise</Link></h3>
+                    <h3 className="navbar-brand text-white" ><Link to="/">Blogger's Paradise</Link></h3>
                     <div className=" navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav float-left">
                             <li className="nav-item active ml-3 ">
@@ -42,10 +42,10 @@ function Routes(props){
                             </li>
                         </ul>
                         <div className="ml-auto text-white">Hello {props.user}!</div>
-                        {localStorage.getItem('isLoggedIn') != null ? (
+                        {props.isloggedIn ? (
                             <div className="ml-auto">
                                 <button className = "btn btn-info m-2" onClick={handleclick}>Sign off</button>
-                            </div>
+                            </div> 
                             ):(
                                 <div className="ml-auto">
                                     <Link to="/signin" className = "btn btn-info">Sign In</Link>
@@ -54,7 +54,7 @@ function Routes(props){
                     </div>
                 </nav>
                 <Switch>
-                    <Route path="/blogs" exact component = {Blog} />
+                    <Route path="/" exact component = {Blog} />
                     <Route path="/writeblog" exact component = {Write} />
                     <Route path="/details" exact component = {Details} />
                     <Route path="/signin" exact component = {SignIn} />
