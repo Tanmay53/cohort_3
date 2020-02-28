@@ -11,6 +11,7 @@ componentDidMount(){
 }
 
     render() {
+        console.log(this.props)
         if(this.props.token){
             const token = this.props.token
             const url = "http://127.0.0.1:5000"
@@ -28,7 +29,7 @@ componentDidMount(){
 }
 
 const mapStateToProps = (state) => ({
-    token :state.token
+    token :state.commonReducer.token
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -69,7 +69,7 @@ const createNewUser = (url,payload) =>{
         return axios
         .post(url,payload)
         .then(res=>{
-            alert(res.data.email+" ! "+res.data.message)
+            alert(res.data.message)
             return dispatch(fetchUsersSuccess(res.data))
         })
         .catch(res=>{
@@ -135,7 +135,7 @@ const uploadImage = (url,payload,file) =>{
             }
             )
         .then(res=>{
-            console.log(res)
+            alert(res.data.msg)
             return dispatch(imageUplaodSuccess(res.data))
         })
         .catch(res=>{

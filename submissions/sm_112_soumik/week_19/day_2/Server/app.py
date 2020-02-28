@@ -95,7 +95,7 @@ def check_auth(email, password):
         if hex_pass == user_pass:
             token = jwt.encode(
                 {"id": items["id"], "email": items["email"]}, 'secret', algorithm="HS256")
-            return {"status": "login succesfull", "token": str(token)}
+            return {"status": "login succesfull", "token": str(token), "u_id": items["id"]}
         else:
             return {"status": "Incorrect Password"}
 
@@ -138,7 +138,7 @@ def getCatagory():
 def get_user_comments(u_id):
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """SELECT * FROM comments WHERE blog_id = %s  """, (u_id)
+        """SELECT * FROM comments WHERE blog_id = %s  """, (u_id,)
     )
     result = cursor.fetchall()
     print("result is ====...............", result)
@@ -231,8 +231,45 @@ def all_blogs():
 
 @app.route("/comments", methods=["POST"])
 def all_comments():
-    b_id = request.json["b_id"]
+    b_id = int(request.json["b_id"])
     items = get_user_comments(b_id)
+    return json.dumps(items, default=str)
+
+
+@app.route("/user_blogs", methods=["POST"])
+def user_blogs():
+    u_id = request.json["user_id"]
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """SELECT * FROM blog where user_id = %s """, (u_id)
+    )
+    result = cursor.fetchall()
+    cursor.close()
+    items = []
+    for i in result:
+        items.append(i)
+    return json.dumps(items, default=str)
+
+
+@app.route("/edit_post", methods=["POST"])
+def edit_blogs():
+    user_id = request.json["user_id"]
+    title = request.json["title"]
+    content = request.json["content"]
+    u_id = request.json["id"]
+    c_id = request.json["catagory_id"]
+
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """UPDATE blog set title =%s , content =%s where user_id = %s and id=%s and catagory_id=%s """, (
+            title, content, user_id, u_id, c_id)
+    )
+    mysql.connection.commit()
+    result = cursor.fetchall()
+    cursor.close()
+    items = []
+    for i in result:
+        items.append(i)
     return json.dumps(items, default=str)
 
 
@@ -242,7 +279,5 @@ def all_comments():
 #     location = "static/img/" + f.filename
 #     f.save(location)
 #     return {"path": location}
-
-
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { fetchBlogData } from "../../redux/blog/blog_action";
+import { authReset } from "../../redux/auth/auth_action";
 import React, { Component } from "react";
 import Card from "./Card";
 import { Link } from "react-router-dom";
@@ -10,8 +11,7 @@ export class Home extends Component {
     this.state = {
       blog_title: "",
       content: "",
-      category: "1",
-      user_id: JSON.parse(localStorage.getItem("user"))["user_id"]
+      category: "1"
     };
 
     this.loadBlogs();
@@ -40,20 +40,27 @@ export class Home extends Component {
     const config = {
       method: "POST",
       url: "http://localhost:5000/new_blog",
-      data: { ...this.state }
+      data: { ...this.state, user_id: this.props.user_id }
     };
     const result = await this.props.fetchBlogData(config);
     console.log(result);
     this.setState({
       blog_title: "",
       content: "",
-      category: "1",
-      user_id: JSON.parse(localStorage.getItem("user"))["user_id"]
+      category: "1"
     });
     this.loadBlogs();
   };
   render() {
-    console.log(this.props.data.data);
+    if (!this.props.data.data) return null;
+    let ownData = this.props.data.data.filter(
+      ele => ele["user_id"] === this.props.user_id
+    );
+    console.log(ownData);
+    let otherData = this.props.data.data.filter(
+      ele => ele["user_id"] !== this.props.user_id
+    );
+    console.log(otherData);
     return (
       <div>
         <div className="container">
@@ -102,18 +109,34 @@ export class Home extends Component {
             </div>
           </div>
           <div className="card-deck">
-            {this.props.data.data &&
-              this.props.data.data.map(ele => (
-                <Link to={`/blog/${ele["id"]}`} key={ele["id"]}>
-                  <Card
-                    img="https://via.placeholder.com/50"
-                    body={ele["content"]}
-                  />
-                </Link>
-              ))}
+            {ownData.map(ele => (
+              <Link to={`/blog/${ele["id"]}`} key={ele["id"]}>
+                <Card
+                  body={ele["content"]}
+                  title={ele["title"]}
+                  isOwner={true}
+                  author={ele["name"]}
+                  edit={`/edit/${ele["id"]}`}
+                  delete={`/delete/${ele["id"]}`}
+                />
+              </Link>
+            ))}
+            {otherData.map(ele => (
+              <Link to={`/blog/${ele["id"]}`} key={ele["id"]}>
+                <Card
+                  body={ele["content"]}
+                  title={ele["title"]}
+                  isOwner={false}
+                  author={ele["name"]}
+                />
+              </Link>
+            ))}
           </div>
         </div>
-        <button className="btn btn-primary" onClick={() => this.props.reset()}>
+        <button
+          className="btn btn-primary"
+          onClick={() => this.props.authReset()}
+        >
           Logout
         </button>
       </div>
@@ -124,9 +147,10 @@ export class Home extends Component {
 const mapStateToProps = state => {
   return {
     data: state.blog_reducer.data,
-    status: state.blog_reducer.status
+    status: state.blog_reducer.status,
+    user_id: state.auth_reducer.data.user_id
   };
 };
-const mapDispatchToProps = { fetchBlogData };
+const mapDispatchToProps = { fetchBlogData, authReset };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -14,11 +14,12 @@ class Dashboard extends React.Component {
     componentWillMount = () => {
         axios.get('http://localhost:5000/post/blogs')
         .then(res => {
+            console.log(res)
             if(res.status == 200) {
                 this.setState({
                     blogs: res['data']['data']
                 })
-                // console.log(res)
+                
             }
         })
         .catch(err => {

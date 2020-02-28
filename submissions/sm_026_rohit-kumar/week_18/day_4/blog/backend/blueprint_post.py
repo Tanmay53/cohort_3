@@ -36,7 +36,10 @@ def get_all_category():
 @post.route('/blogs', methods=['GET', 'POST'])
 def get_all_blogs():
     if request.method == 'GET':
-        query = 'SELECT * FROM `blog`'
+        # query = 'SELECT * FROM `blog`'
+        query = '''SELECT blog.`blog_id`, blog.`heading`, blog.`body`, user.`name` FROM `blog` 
+                    LEFT JOIN `user` ON blog.`user_id` = user.`user_id`
+                '''
         result = select_all(query, [])
         return jsonify(result)
     elif request.method == 'POST':
@@ -83,30 +86,52 @@ def get_comments_by_blog_id(blog_id):
 
 
 
-@post.route('/delete/<int:blog_id>')
+@post.route('/delete/<int:blog_id>', methods=['DELETE'])
 def delete_blog(blog_id):
-    query_arr = []
-    # first we have to delete associated comments
-    query_arr.append(['DELETE FROM `comment` WHERE `blog_id` = %s', [blog_id]])
-    
-    # later delete the blog
-    query_arr.append(['DELETE FROM `blog` WHERE `blog_id` = %s', [blog_id]])
-    result = delete_helper(query_arr)
-    return jsonify(result)
+    try:
+        token = request.json['token']
+        user_id = request.json['user_id']
+
+        # decode the token
+        decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
+        if int(decoded['user_id']) != int(user_id):
+            return jsonify({'result':'failure', 'error': 'authentication failed' })
+        
+        query_arr = []
+        # first we have to delete associated comments
+        query_arr.append(['DELETE FROM `comment` WHERE `blog_id` = %s', [blog_id]])
+        # later delete the blog
+        query_arr.append(['DELETE FROM `blog` WHERE `blog_id` = %s', [blog_id]])
+        
+        result = delete_helper(query_arr)
+        return jsonify(result)
+    except Exception:
+        return jsonify({'result':'failure', 'error': 'some error occured' })
+
     
 
-@post.route('/edit/<int:blog_id>', methods=['POST'])
+@post.route('/edit/<int:blog_id>', methods=['PUT'])
 def edit(blog_id):
-    heading    = request.json['heading']
-    body = request.json['body']
+    try:
+        heading = request.json['heading']
+        body    = request.json['body']
+        token   = request.json['token']
+        user_id = request.json['user_id']
 
-    query = '''UPDATE `blog` SET 
-               `heading` = %s,
-               `body`    = %s
-                WHERE `blog_id` = %s
-            '''
-    result = edit_helper(query, [heading, body, blog_id])
-    return jsonify(result)
+        # decode the token
+        decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
+        if int(decoded['user_id']) != int(user_id):
+            return jsonify({'result':'failure', 'error': 'authentication failed' })
+
+        query = '''UPDATE `blog` SET 
+                `heading` = %s,
+                `body`    = %s
+                    WHERE `blog_id` = %s
+                '''
+        result = edit_helper(query, [heading, body, blog_id])
+        return jsonify(result)
+    except Exception as ex:
+            return jsonify({'result':'failure', 'error': ex })
 
     
 
