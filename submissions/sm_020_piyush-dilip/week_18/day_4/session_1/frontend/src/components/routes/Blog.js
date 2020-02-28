@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Redirect } from 'react-router-dom'
 
 export class Blog extends Component {
     constructor(props) {
@@ -20,36 +19,36 @@ export class Blog extends Component {
 
     componentDidMount() {
         if(this.props.loggedIn){
-        let id = this.props.match.params.id
-        let token = localStorage.getItem("token")
-        console.log(id)
+            let id = this.props.match.params.id
+            let token = localStorage.getItem("token")
+            console.log(id)
 
-        axios.get(`http://127.0.0.1:5000/blog/read/${id}`)
-        .then(res => {
-        this.setState({
-            blogs: res.data.blog
-        })
-            console.log(res.data.blog)
-        })
-
-        axios.get(`http://127.0.0.1:5000/blog/comment/read/${id}`)
-        .then(res => {
+            axios.get(`http://127.0.0.1:5000/blog/read/${id}`)
+            .then(res => {
             this.setState({
-                comments: res.data.comments
+                blogs: res.data.blog
             })
-        })
+                console.log(res.data.blog)
+            })
 
-        axios({
-            method: 'get',
-            baseURL: 'http://127.0.0.1:5000/user/details',
-            headers : { "Authorization" : "Bearer " + JSON.parse(token) }
-        })
-        .then(res => {
-            console.log(res.data.user[0]['username'])
-            this.setState({
-                username : res.data.user[0]['username']
+            axios.get(`http://127.0.0.1:5000/blog/comment/read/${id}`)
+            .then(res => {
+                this.setState({
+                    comments: res.data.comments
+                })
             })
-        } )
+
+            axios({
+                method: 'get',
+                baseURL: 'http://127.0.0.1:5000/user/details',
+                headers : { "Authorization" : "Bearer " + JSON.parse(token) }
+            })
+            .then(res => {
+                console.log(res.data.user[0]['username'])
+                this.setState({
+                    username : res.data.user[0]['username']
+                })
+            } )
     }
     else {
         alert('Log in to see full blog')
@@ -74,19 +73,22 @@ export class Blog extends Component {
             let newComment = {
                 comment : this.state.comment,
                 blogId : this.props.match.params.id,
-                Authorization: "Bearer " + JSON.parse(token)
+
             }
 
-            axios.post(`http://127.0.0.1:5000/user/blog/comment/create`, newComment)
+            axios({
+                method : 'post',
+                baseURL : `http://127.0.0.1:5000/user/blog/comment/create` ,
+                data : newComment,
+                headers : { "Authorization": "Bearer " + JSON.parse(token)}
+
+            })
             .then(res => console.log(res.data.message))
             .then(res => this.getNewComments() )
             this.setState({
                 comment : "",
                 flag : false
             })
-        }
-        else {
-            alert("For adding a comment you need to login first")
         }
     }
 
@@ -108,10 +110,17 @@ export class Blog extends Component {
     }
 
     updateComment = (id) => {
+        let token = localStorage.getItem("token")
         let data = {
             comment : this.state.editComment
         }
-        axios.put(`http://127.0.0.1:5000/user/blog/comment/update/${id}`, data)
+        axios({
+            method : 'put',
+            baseURL : `http://127.0.0.1:5000/user/blog/comment/update/${id}` ,
+            data : data,
+            headers : { "Authorization": "Bearer " + JSON.parse(token)}
+
+        })
             .then(res => console.log(res))
             .then(res => this.getNewComments())
             .then(res => this.setState({ editFlag : false}))
@@ -119,7 +128,13 @@ export class Blog extends Component {
     }
 
     deleteComment = (id) => {
-        axios.delete(`http://127.0.0.1:5000/user/blog/comment/delete/${id}`)
+        let token = localStorage.getItem("token")
+        axios({
+            method : 'delete',
+            baseURL : `http://127.0.0.1:5000/user/blog/comment/delete/${id}`,
+            headers : { "Authorization": "Bearer " + JSON.parse(token)}
+
+        })
             .then(res => console.log(res))
             .then(res => this.getNewComments())
             .catch(err => console.log(err))
