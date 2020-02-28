@@ -9,7 +9,8 @@ class Blog extends React.Component{
             blog : [],
             comment : [],
             openComments : false,
-            addComment : ""
+            addComment : "",
+            blog_id : 0
         }
     }
     componentDidMount= () => {
@@ -39,20 +40,21 @@ class Blog extends React.Component{
         })
         .then (res =>{
             swal(res.data.message,"welcome","success")
+            this.showComments(id)
         }).catch(error => console.log(error))
-
+        
     }
 
     showComments = (id) =>{
-    //   alert(id)
         this.setState({
-        openComments: true
+            openComments: true,
+            blog_id : id
         })
         axios.post('http://127.0.0.1:5000/comments',{
             "blog_id" : id
         })
         .then (res =>{
-            // console.log(res.data)
+            console.log(res.data)
             this.setState({
                 comment : res.data
             })
@@ -67,7 +69,7 @@ class Blog extends React.Component{
                         <div className="card m-5">
                             <h5 className="card-title mt-3 ml-3">{ele.blog.title}</h5>
                             <div className="card-body">
-                                <p>Published On : {ele.blog.publish_date}</p>
+                                <p>Last Updated On : {ele.blog.update_date}</p>
                                 <div className="d-flex">
                                     
                                     <span className="badge badge-secondary ml-3 mb-3">{ele.category}</span>
@@ -86,7 +88,7 @@ class Blog extends React.Component{
                             <div className="ml-3 mb-1">
                                 <button className="btn btn-secondary" onClick={() =>  this.showComments(ele.blog.blog_id)}>Show Comments</button>
                             </div>
-                            {this.state.openComments ? (
+                            {this.state.openComments && (this.state.blog_id == ele.blog.blog_id) ? (
                                 <div className="card mx-3 mt-1">
                                     {this.state.comment.map(item =>{
                                         return(
