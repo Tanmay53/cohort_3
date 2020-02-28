@@ -26,7 +26,7 @@ class Post extends Component {
         else {
             axios({
                 method: "GET",
-                url: `http://localhost:5000/singlepost/${this.props.match.params.id}`,
+                url: `http://localhost:5000/post/singlepost/${this.props.match.params.id}`,
                 headers: { 'Authorization': `Bearer ${token}` }
             })
                 .then((res) => {
@@ -47,7 +47,7 @@ class Post extends Component {
 
             axios({
                 method: "GET",
-                url: `http://localhost:5000/comments/${this.props.match.params.id}`,
+                url: `http://localhost:5000/comment/comments/${this.props.match.params.id}`,
                 headers: { 'Authorization': `Bearer ${token}` }
             })
                 .then((res) => {
@@ -68,7 +68,7 @@ class Post extends Component {
 
         axios({
             method: "POST",
-            url: `http://localhost:5000/addcomment/${this.props.match.params.id}`,
+            url: `http://localhost:5000/comment/addcomment/${this.props.match.params.id}`,
             data: {
                 category_id: this.state.data.category_id,
                 content: this.state.commenttext,
@@ -78,7 +78,7 @@ class Post extends Component {
             .then((res) => {
                 axios({
                     method: "GET",
-                    url: `http://localhost:5000/comments/${this.props.match.params.id}`,
+                    url: `http://localhost:5000/comment/comments/${this.props.match.params.id}`,
                     headers: { 'Authorization': `Bearer ${token}` }
                 })
                     .then((res) => {
@@ -99,13 +99,13 @@ class Post extends Component {
         let token = localStorage.getItem('token')
         axios({
             method: "GET",
-            url: `http://localhost:5000/deletecomment/${id}`,
+            url: `http://localhost:5000/comment/deletecomment/${id}`,
             headers: { 'Authorization': `Bearer ${token}` }
         })
             .then((res) => {
                 axios({
                     method: "GET",
-                    url: `http://localhost:5000/comments/${this.props.match.params.id}`,
+                    url: `http://localhost:5000/comment/comments/${this.props.match.params.id}`,
                     headers: { 'Authorization': `Bearer ${token}` }
                 })
                     .then((res) => {
@@ -123,7 +123,7 @@ class Post extends Component {
         let token = localStorage.getItem('token')
         axios({
             method: "GET",
-            url: `http://localhost:5000/deletepost/${this.props.match.params.id}`,
+            url: `http://localhost:5000/post/deletepost/${this.props.match.params.id}`,
             headers: { 'Authorization': `Bearer ${token}` }
         })
             .then((res) => {

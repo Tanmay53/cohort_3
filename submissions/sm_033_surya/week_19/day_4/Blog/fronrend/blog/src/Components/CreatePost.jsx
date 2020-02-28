@@ -35,7 +35,7 @@ class CreatePost extends Component {
         }
         axios({
             method: "POST",
-            url: "http://localhost:5000/createpost",
+            url: "http://localhost:5000/post/createpost",
             data: temp,
             headers: { 'Authorization': `Bearer ${token}` }
         })
