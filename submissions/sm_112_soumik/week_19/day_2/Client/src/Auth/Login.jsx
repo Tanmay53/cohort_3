@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { fetchLogin } from "../Redux/auth_action";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Loading from "../Components/Loading";
 
 function Login(props) {
@@ -26,9 +26,11 @@ function Login(props) {
   };
   if (loading) {
     return <Loading />;
+  } else if (props.login) {
+    return <Redirect to="/" />;
   }
   return (
-    <div className="text-center position-absolute w-100">
+    <div className="text-center">
       <h2 className="mb-4">Login Page</h2>
       <div className="col-md-5 border border-danger p-4 m-auto">
         <label>Email</label>
@@ -62,7 +64,7 @@ function Login(props) {
 }
 
 const mapStateToProps = state => ({
-  login: state.login
+  login: state.auth
 });
 const mapDispatchToProps = dispatch => ({
   fetchUser: item => dispatch(fetchLogin(item))

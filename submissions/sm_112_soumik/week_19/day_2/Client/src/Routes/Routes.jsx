@@ -33,7 +33,7 @@ function Routes(props) {
     return setToggle(false);
   };
   return (
-    <div className="text-center position-absolute w-100 ">
+    <div className="text-center position-absolute ">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <Link to="/" className="navbar-brand" href="#">

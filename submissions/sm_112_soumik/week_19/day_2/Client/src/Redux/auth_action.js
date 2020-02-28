@@ -1,12 +1,17 @@
-import { LOGIN_SUCCESS, REGISTER_SUCCESS, LOGGED_OUT } from "./actionType";
+import {
+  LOGIN_SUCCESS,
+  REGISTER_SUCCESS,
+  LOGGED_OUT,
+  LOGGED_IN
+} from "./actionType";
 import axios from "axios";
 import swal from "sweetalert";
 
 export const userLogin = item => {
-  console.log(item);
   if (item.token !== undefined) {
     localStorage.setItem("token", JSON.stringify(item.token));
     localStorage.setItem("isLoggedIn", JSON.stringify(true));
+    localStorage.setItem("user_id", JSON.stringify(item.u_id));
   }
   swal(item.status);
   return {
@@ -50,5 +55,10 @@ export const fetchRegister = ({ email, pass, name }) => {
 export const logout = () => {
   return {
     type: LOGGED_OUT
+  };
+};
+export const loggedIn = () => {
+  return {
+    type: LOGGED_IN
   };
 };
