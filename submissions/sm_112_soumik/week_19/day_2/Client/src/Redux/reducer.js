@@ -1,7 +1,12 @@
-import { LOGIN_SUCCESS, REGISTER_SUCCESS, LOGGED_OUT } from "./actionType";
+import {
+  LOGIN_SUCCESS,
+  REGISTER_SUCCESS,
+  LOGGED_OUT,
+  LOGGED_IN
+} from "./actionType";
 
 const initialState = {
-  auth: true,
+  auth: false,
   login: "",
   register: ""
 };
@@ -28,6 +33,13 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         auth: false,
+        token: ""
+      };
+    }
+    case LOGGED_IN: {
+      return {
+        ...state,
+        auth: true,
         token: ""
       };
     }
