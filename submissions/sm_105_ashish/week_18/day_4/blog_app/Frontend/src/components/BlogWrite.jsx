@@ -55,6 +55,9 @@ const useStyles = makeStyles({
     }
 
     props.addBlog(url,payload,token)
+    setCatId('')
+    setContent('')
+    setTitle('')
   }
 
 
@@ -83,11 +86,11 @@ const useStyles = makeStyles({
                 <button onClick={()=>handleSubmit()} className="btn btn-secondary col-2">Add</button>
                 </div>
 
-               <input className="form-control my-4" onChange={(e)=>{setTitle(e.target.value)}} placeholder="add title for your blog"/>
+               <input className="form-control my-4" onChange={(e)=>{setTitle(e.target.value)}} value={title} placeholder="add title for your blog"/>
                 <Typography className={classes.title} color="textSecondary">
                 Content
                 </Typography>
-                <textarea type="text" className="form-control" onChange={(e)=>setContent(e.target.value)} style={{height:"200px"}}/>
+                <textarea type="text" className="form-control" onChange={(e)=>setContent(e.target.value)} value={content} style={{height:"200px"}}/>
             </CardContent>
             <CardActions className="justify-content-center">
                 <Button size="small" className="btn btn-success" onClick={()=>postData()} >Post</Button>

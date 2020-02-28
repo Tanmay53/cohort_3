@@ -36,7 +36,7 @@ class EditUser extends Component {
 const mapStateToProps = (state) => ({
     ...state,
     user:state.commonReducer.user,
-    token:state.comonReducer.token
+    token:state.commonReducer.token
 })
 
 const mapDispatchToProps = dispatch=>({

@@ -4,9 +4,9 @@ import {connect} from "react-redux"
 import {signOut,checkIsLoggedIn,getUser} from '../redux/Action'
 import {getBlog} from "../redux/BlogAction"
 import SideNavPage from './Sidenav'
-import Blogcard from "./Blogcard"
+import Userblogcard from "./Userblogcard"
 
- class Userdetail extends Component {
+ class Myblog extends Component {
    async componentDidMount(){
        this.props.checkIsLoggedIn()
         const token = this.props.token
@@ -14,10 +14,17 @@ import Blogcard from "./Blogcard"
         this.props.getUser(url,token)
         let blogurl = "http://127.0.0.1:5000/auth/blogs"
         this.props.getBlog(blogurl)
+        console.log(this.props.blogs,this.props.user)
+
      }
+
+
     render() {
         if(this.props.token){
+            const myBlogs = this.props.blogs.filter(ele=>ele.user_id==this.props.user.id)
         return (
+            <>
+            <h1>admin blog page</h1>
             <div className="my-2 mx-auto justify-content-center">
                 <h1 className="btn-grey m-auto text-center">Tech and code Blog page</h1>
             <div className="row">
@@ -26,12 +33,13 @@ import Blogcard from "./Blogcard"
                 </div>
                 <div className="col-11 my-4">
                     <div className="row">
-                        {this.props.blogs.map(ele=>(<div className="col-sm-12 col-md-6 col-lg-6 my-4" style={{height:"80%"}}><Blogcard data={ele}/></div>))}
+                        {myBlogs.map(ele=>(<div className="col-sm-12 col-md-6 col-lg-6 my-4" style={{height:"80%"}}><Userblogcard data={ele}/></div>))}
                         
                     </div>
                 </div>
             </div>
             </div>
+            </>
         )}
         else{
             return (<Redirect to="/auth/login"/>)
@@ -52,5 +60,5 @@ const mapDispatchToProps = dispatch => ({
     getBlog:(url)=>dispatch(getBlog(url))
 })
 
-export default connect (mapStateToProps,mapDispatchToProps)(Userdetail)
+export default connect (mapStateToProps,mapDispatchToProps)(Myblog)
 

@@ -119,13 +119,18 @@ def blogs():
     elif request.method == "GET":
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """SELECT * FROM blogs"""
+            """select blogs.id as id ,title ,imgurl,created_on,category.category
+             as category,users.name as user_name,users.id as user_id, content from blogs
+              join category on category.id = blogs.category_id join users on users.id=blogs.user_id;"""
         )
         results = cursor.fetchall()
         blogs = []
         for item in results:
             blogs.append(item)
         return {"blogs":blogs}
+
+
+# Adding comments and getting all the commnets... 
 
 @app.route("/blogs/comments", methods=["POST","GET"])
 def get_all_comments():
@@ -134,12 +139,12 @@ def get_all_comments():
         token_encoded = auth_header.split(' ')[1]
         decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
         myid = decode_data["id"]
-        blog_id = requset.json["blog_id"]
+        blog_id = request.json["blog_id"]
         comment = request.json["comment"]
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """INSERT INTO blogs (user_id,category_id,title,content,imgurl) 
-            VALUES (%s,%s,%s,%s,%s)""", (myid,category_id,title,content,"")
+            """INSERT INTO comments (blog_id,user_id,comment) 
+            VALUES (%s,%s,%s)""", (blog_id,myid,comment)
             )
         mysql.connection.commit()
         cursor.close()
@@ -147,13 +152,13 @@ def get_all_comments():
     elif request.method == "GET":
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """SELECT * FROM blogs"""
+            """select users.name , comment,blog_id from comments join users on users.id = comments.user_id;"""
         )
         results = cursor.fetchall()
-        blogs = []
+        comments = []
         for item in results:
-            blogs.append(item)
-        return {"blogs":blogs}
+            comments.append(item)
+        return {"comments":comments}
     
 
 #  authentication checking method used in login route

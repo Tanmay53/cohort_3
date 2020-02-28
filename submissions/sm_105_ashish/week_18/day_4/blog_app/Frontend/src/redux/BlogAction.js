@@ -49,7 +49,7 @@ const addBlog = (url,payload,token) =>{
         }
             )
         .then(res=>{
-            console.log(res)
+            alert(res.data.message)
             return dispatch(fetchBlogSuccess(res.data))
         })
         .catch(res=>{

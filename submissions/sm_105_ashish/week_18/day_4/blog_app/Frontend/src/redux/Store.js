@@ -3,9 +3,10 @@ import thunk from 'redux-thunk'
 import {commonReducer} from './Reducer'
 import {categoryReducer} from "./Categoryreducer"
 import {blogReducer} from "./BlogReducer"
+import {commentReducer} from "./commentReducer"
 
 
-const rootReducer = combineReducers({commonReducer:commonReducer,categoryReducer:categoryReducer,blogReducer:blogReducer})
+const rootReducer = combineReducers({commonReducer:commonReducer,categoryReducer:categoryReducer,blogReducer:blogReducer,commentReducer:commentReducer})
 
 
 const store = createStore(rootReducer,

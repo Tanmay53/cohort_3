@@ -90,8 +90,8 @@ const useStyles = makeStyles({
         <Button size="small" color="primary"  onClick ={()=>addComment()} >
           submit
         </Button>
-        <Button size="small" color="primary">
-          Read content
+        <Button size="small" className="btn btn-danger">
+          delete blog
         </Button>
       </CardActions>
     </Card>
