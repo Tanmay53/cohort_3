@@ -27,7 +27,7 @@ class Nav extends Component {
                             </li>):''}
                             
                         </ul>
-                        {(this.props.token != "") ? (<ul class="navbar-nav ml-auto nav-flex-icons">
+                        {(this.props.token) ? (<ul class="navbar-nav ml-auto nav-flex-icons">
                             <li class="nav-item avatar  my-auto">
                                 <Link class="nav-link p-0" to="/user">
                                     <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0 my-auto mx-4"
@@ -54,7 +54,7 @@ class Nav extends Component {
 }
 const mapStateToProps = (state) => ({
     ...state,
-    token: state.token
+    token: state.commonReducer.token
 })
 
 const mapDispatchToProps = dispatch => ({
