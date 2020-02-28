@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { userAuth } from "./redux/actions/authAction";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
@@ -17,11 +15,6 @@ import NotFound from "./component/Error/NotFound";
 import "./style.css";
 
 const App = props => {
-  useEffect(() => {
-    const { authToken, userAuthentication } = props;
-    userAuthentication(authToken);
-  }, []);
-
   return (
     <>
       <Container fluid className="bg">
@@ -50,10 +43,4 @@ const App = props => {
   );
 };
 
-const mapStateToProps = state => ({
-  authToken: state.authReducer.token
-});
-const mapDispatchToProps = dispatch => ({
-  userAuthentication: token => dispatch(userAuth(token))
-});
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

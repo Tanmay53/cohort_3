@@ -11,6 +11,7 @@ import {
 } from "../actionType";
 import Axios from "axios";
 
+let ls = JSON.parse(localStorage.getItem("loggedIn"));
 const config = {
   baseURL: "http://localhost:5000",
   headers: {
@@ -18,6 +19,7 @@ const config = {
   }
 };
 
+// user signup
 export const signUp = data => {
   return async dispatch => {
     dispatch({
@@ -43,7 +45,7 @@ export const signUp = data => {
     }
   };
 };
-
+// user login
 export const login = data => {
   return async dispatch => {
     dispatch({
@@ -69,20 +71,27 @@ export const login = data => {
     }
   };
 };
-
+// authentication
 export const userAuth = data => {
   return async dispatch => {
     dispatch({
       type: AUTH_REQUEST
     });
     try {
-      const res = await Axios.post("/auth/user", { ...data }, config);
+      config.headers.Authorization = `Bearer ${data}`;
+      const res = await Axios.get("/auth/user", config);
+      console.log(res);
       if (res.data.error) {
         throw res.data.message;
       }
       localStorage.setItem(
         "loggedIn",
-        JSON.stringify({ token: res.data.token, isLoggedIn: true })
+        JSON.stringify({
+          token: data,
+          email: res.data.email,
+          uid: res.data.uid,
+          isLoggedIn: true
+        })
       );
       dispatch({
         type: AUTH_SUCCESS,

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { login } from "../../redux/actions/authAction";
+import { login, userAuth } from "../../redux/actions/authAction";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Loader from "../Common/Loader";
 import swal from "sweetalert";
@@ -29,31 +29,31 @@ const Login = props => {
   };
 
   useEffect(() => {
-    const { error, response, history } = props;
-    if (response) {
+    const { error, response, authToken } = props;
+
+    if (authToken) {
       if (error) {
         swal({
           title: "Failure",
           text: response,
           icon: "warning",
-          timer: 2000,
+          timer: 1000,
           button: false
-        }).then(() => {
-          setState({ ...state });
         });
       } else {
         swal({
           title: "Success",
           text: response,
-          icon: "info",
-          timer: 2000,
+          icon: "success",
+          timer: 1000,
           button: false
         }).then(() => {
-          history.push("/");
+          props.userAuthentication(authToken);
+          props.history.push("/");
         });
       }
     }
-  }, [props.error, props.response]);
+  }, [props.authToken, props.error]);
 
   return props.isLoading ? (
     <Loader />
@@ -106,11 +106,14 @@ const Login = props => {
 };
 
 const mapStateToProps = state => ({
+  isLoggedIn: state.authReducer.isLoggedIn,
   isLoading: state.authReducer.isLoading,
   error: state.authReducer.error,
-  response: state.authReducer.response
+  response: state.authReducer.response,
+  authToken: state.authReducer.token
 });
 const mapDispatchToProps = dispatch => ({
-  userLogin: data => dispatch(login(data))
+  userLogin: data => dispatch(login(data)),
+  userAuthentication: data => dispatch(userAuth(data))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

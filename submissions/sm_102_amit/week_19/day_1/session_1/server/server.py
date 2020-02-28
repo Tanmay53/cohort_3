@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from flask import request, make_response, jsonify
 from flask_mysqldb import MySQL
 
@@ -9,6 +10,7 @@ import hashlib
 import datetime
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
@@ -53,9 +55,9 @@ def check_email(email_id):
     try:
         conn = mysql.connection.cursor()
         conn.execute(
-            """SELECT *, COUNT(_id) AS `count` FROM `users` WHERE `email` = %s""", (email_id,))
+            """SELECT * FROM `users` WHERE `email` = %s""", (email_id,))
         row = conn.fetchone()
-        return True if row['count'] == 0 else False
+        return True if row != None else False
     except Exception as e:
         print(str(e))
         return False
@@ -149,13 +151,15 @@ def user_login():
     else:
         return jsonify({"error": True, "message": email + " not found ..."}), 200
 
-
+# authenticate user
 @app.route("/auth/user", methods=["GET"])
 def get_user():
     token = request.headers.get('Authorization')
+    print(token)
     try:
         token = token.split(' ')[1]
         decode_data = jwt.decode(token, 'nS/Z9k', algorithm=['HS256'])
+        print(decode_data)
         email = decode_data['email']
         uid = decode_data['uid']
         if check_email(email):
@@ -237,7 +241,7 @@ def create_blog():
 
 # comments
 # add comment
-@app.route("/blog/create", methods=["POST"])
+@app.route("/blog/comment", methods=["POST"])
 def add_comment():
     comment = request.json["comment"]
     blog_id = request.json["blog_id"]
