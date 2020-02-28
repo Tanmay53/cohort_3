@@ -42,7 +42,9 @@ class Blog extends React.Component{
             swal(res.data.message,"welcome","success")
             this.showComments(id)
         }).catch(error => console.log(error))
-        
+        this.setState({
+            addComment : ""
+        })
     }
 
     showComments = (id) =>{
@@ -79,12 +81,7 @@ class Blog extends React.Component{
                                     <p className="card-text m-4">{ele.blog.blog_body}</p>
                                 </div>
                             </div>
-                            <div className="m-3  row">
-                                <div className="col-md-4">
-                                    <input className="form-control" placeholder="Comment here" name="addComment" value={this.state.addComment} onChange={this.handleChange}></input>
-                                </div>
-                                <button className="btn btn-sm btn-primary" onClick={() =>  this.addComment(ele.blog.blog_id)}>Comment</button>
-                            </div>
+                            
                             <div className="ml-3 mb-1">
                                 <button className="btn btn-secondary" onClick={() =>  this.showComments(ele.blog.blog_id)}>Show Comments</button>
                             </div>
@@ -99,6 +96,12 @@ class Blog extends React.Component{
                                             </div>
                                         )       
                                     })}
+                                    <div className="m-3  row">
+                                    <div className="col-md-4">
+                                        <input className="form-control" placeholder="Comment here" name="addComment" value={this.state.addComment} onChange={this.handleChange}></input>
+                                    </div>
+                                    <button className="btn btn-sm btn-primary" onClick={() =>  this.addComment(ele.blog.blog_id)}>Comment</button>
+                            </div>
                                 </div>
                             ):(
                                 <div></div>
