@@ -15,6 +15,7 @@ let initialState = {
   error: false,
   response: null,
   blogsList: [],
+  userBlogs: [],
   blog: null
 };
 
@@ -54,10 +55,10 @@ export const blogReducer = (state = initialState, action) => {
     case BLOG_SUCCESS: {
       return {
         ...state,
-        blog: action.payload.result,
         isLoading: false,
         error: false,
-        response: action.payload.message
+        response: action.payload.message,
+        blog: action.payload.result
       };
     }
     case BLOG_FAILURE: {
