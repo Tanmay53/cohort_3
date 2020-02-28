@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-// import {user_login, user_logout} from '../redux/Action'
-// import {connect} from 'react-redux'
+import {user_login} from '../redux/Action'
+import {connect} from 'react-redux'
 
 class Login extends React.Component {
     constructor(props) {
@@ -19,20 +19,17 @@ class Login extends React.Component {
     }
 
     handleClick = () => {
-        /*
+        
         const url = 'http://localhost:5000/user/login'
         axios.post(url, this.state)
         .then(res => {
-            // console.log(res['data']['data'])
+            console.log(res['data']['data'])
             this.props.user_login(res['data']['data'])
-
-            // console.log(this.props)
-            this.props.history.push('/blog/create')
+            this.props.history.push('/')
         })
         .catch(res => {
             console.log(res)
         })
-        */
     }
 
     render() {
@@ -67,14 +64,13 @@ class Login extends React.Component {
 
 }
 
-/*  
+
 const mapDispatchToProps = (dispatch) => {
     return {
-        user_login: (data) => dispatch(user_login(data)),
-        user_logout: () => dispatch(user_logout()),
+        user_login: (data) => dispatch(user_login(data))
     }
 }
 
 export default connect(null, mapDispatchToProps)(Login) 
- */
-export default Login
+
+// export default Login

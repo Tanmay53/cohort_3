@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-// import {connect} from 'react-redux'
+import {connect} from 'react-redux'
 
 
 class Register extends React.Component {
@@ -14,27 +14,19 @@ class Register extends React.Component {
         }
     }
 
-    componentWillMount = () => {
-        /*
-        // logout any user before proceding, if in case
-        this.props.user_logout()
-        */
-    }
-
 
     handleSignup = () => {
-        /*
         const url = 'http://localhost:5000/user/register'
         axios.post(url, this.state)
         .then(res => {
             if (res['data']['result'] === 'success') {
-                this.props.history.push('/blog/dashboard')
+                this.props.history.push('/login')
+                // console.log('success')
             } 
         })
         .catch(res => {
             console.log(res)
         })
-        */
     }
 
     handleChange = (event) => {

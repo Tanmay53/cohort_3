@@ -1,4 +1,5 @@
 import React from 'react'
+import TaskList from '../components/TaskList'
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -10,7 +11,9 @@ class Dashboard extends React.Component {
 
     render() {
         return (
-            <h1>Home Page</h1>
+            <>
+                <TaskList />
+            </>
         )
     }
 }
