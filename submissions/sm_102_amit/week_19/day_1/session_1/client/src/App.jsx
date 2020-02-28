@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { userAuth } from "./redux/actions/authAction";
 import { Switch, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
@@ -10,17 +12,15 @@ import Blog from "./component/Blog/Blog";
 
 import SignUp from "./component/Auth/SignUp";
 import Login from "./component/Auth/Login";
-
+import PrivateRoute from "./component/Auth/PrivateRoute";
 import NotFound from "./component/Error/NotFound";
 import "./style.css";
-const App = () => {
-  // const [state, setState] = useState({
-  //   user: [],
-  //   isAuth: true,
-  //   token: ""
-  // });
 
-  // let ls = window.localStorage;
+const App = props => {
+  useEffect(() => {
+    const { authToken, userAuthentication } = props;
+    userAuthentication(authToken);
+  }, []);
 
   return (
     <>
@@ -33,19 +33,15 @@ const App = () => {
         <Route path="/" exact={true}>
           <Home />
         </Route>
-        <Route path="/blog/create">
-          <AddBlog />
-        </Route>
-        <Route
+        <PrivateRoute path="/blog/create" component={AddBlog}></PrivateRoute>
+        <PrivateRoute
           path="/blog/view/:category/:user/:id"
-          render={props => <Blog {...props} />}
-        />
+          component={Blog}
+        ></PrivateRoute>
         <Route path="/auth/signup">
           <SignUp />
         </Route>
-        <Route path="/auth/login">
-          <Login />
-        </Route>
+        <Route path="/auth/login" render={props => <Login {...props} />} />
         <Route path="*">
           <NotFound />
         </Route>
@@ -54,4 +50,10 @@ const App = () => {
   );
 };
 
-export default App;
+const mapStateToProps = state => ({
+  authToken: state.authReducer.token
+});
+const mapDispatchToProps = dispatch => ({
+  userAuthentication: token => dispatch(userAuth(token))
+});
+export default connect(mapStateToProps, mapDispatchToProps)(App);

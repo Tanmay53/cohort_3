@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { login } from "../../redux/actions/authAction";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import Axios from "axios";
+import Loader from "../Common/Loader";
 import swal from "sweetalert";
 import Style from "./Auth.module.css";
-import { useEffect } from "react";
 
 const Login = props => {
   const [state, setState] = useState({
@@ -30,7 +29,7 @@ const Login = props => {
   };
 
   useEffect(() => {
-    const { error, response } = props;
+    const { error, response, history } = props;
     if (response) {
       if (error) {
         swal({
@@ -45,16 +44,20 @@ const Login = props => {
       } else {
         swal({
           title: "Success",
-          text: response.message,
+          text: response,
           icon: "info",
           timer: 2000,
           button: false
+        }).then(() => {
+          history.push("/");
         });
       }
     }
   }, [props.error, props.response]);
 
-  return (
+  return props.isLoading ? (
+    <Loader />
+  ) : (
     <Container className="section-padding">
       <Row>
         <Col

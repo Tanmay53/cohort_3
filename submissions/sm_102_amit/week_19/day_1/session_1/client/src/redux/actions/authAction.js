@@ -4,7 +4,10 @@ import {
   SIGNUP_SUCCESS,
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
-  LOGIN_FAILURE
+  LOGIN_FAILURE,
+  AUTH_REQUEST,
+  AUTH_SUCCESS,
+  AUTH_FAILURE
 } from "../actionType";
 import Axios from "axios";
 
@@ -22,7 +25,6 @@ export const signUp = data => {
     });
     try {
       const res = await Axios.post("/auth/signup", { ...data }, config);
-      console.log(res);
       if (res.data.error) {
         throw res.data.message;
       }
@@ -31,10 +33,9 @@ export const signUp = data => {
           type: SIGNUP_SUCCESS,
           payload: res.data
         });
-      }, 2500);
+      }, 1000);
     } catch (err) {
-      let error = "";
-      err.message ? (error = err.message) : (error = err);
+      let error = err.message ? err.message : err;
       dispatch({
         type: SIGNUP_FAILURE,
         payload: error
@@ -50,7 +51,6 @@ export const login = data => {
     });
     try {
       const res = await Axios.post("/auth/login", { ...data }, config);
-      console.log(res);
       if (res.data.error) {
         throw res.data.message;
       }
@@ -59,13 +59,39 @@ export const login = data => {
           type: LOGIN_SUCCESS,
           payload: res.data
         });
-      }, 2500);
+      }, 1000);
     } catch (err) {
-      console.log(err);
-      let error = "";
-      err.message ? (error = err.message) : (error = err);
+      let error = err.message ? err.message : err;
       dispatch({
         type: LOGIN_FAILURE,
+        payload: error
+      });
+    }
+  };
+};
+
+export const userAuth = data => {
+  return async dispatch => {
+    dispatch({
+      type: AUTH_REQUEST
+    });
+    try {
+      const res = await Axios.post("/auth/user", { ...data }, config);
+      if (res.data.error) {
+        throw res.data.message;
+      }
+      localStorage.setItem(
+        "loggedIn",
+        JSON.stringify({ token: res.data.token, isLoggedIn: true })
+      );
+      dispatch({
+        type: AUTH_SUCCESS,
+        payload: res.data
+      });
+    } catch (err) {
+      let error = err.message ? err.message : err;
+      dispatch({
+        type: AUTH_FAILURE,
         payload: error
       });
     }
