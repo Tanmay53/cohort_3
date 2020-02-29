@@ -34,6 +34,23 @@ def getId():
         print(Id)
         return jsonify(Id)
 
+@app.route('/getName')
+def name():
+    token = request.headers.get("Authorization")
+    ans = loggedPerson(token)
+    if(ans):
+        cursor=mysql.connection.cursor()
+        cursor.execute(
+            """SELECT name from user where id=%s""",(ans["id"],)
+        )
+        result=cursor.fetchall()
+        cursor.connection.commit()
+        cursor.close()
+        return jsonify(result)
+    else:
+        return({"message":"Invalid User"})    
+
+
 
 # function to make blogs
 @app.route('/makeBlog/<int:user_id>/<int:category_id>', methods=['POST'])
@@ -60,12 +77,64 @@ def makeBlog(user_id, category_id):
         return({"message": "Created Successfully"})
 
 
+# update Blog
+@app.route('/toBeUpdated/<int:idx>/<int:user_id>/<int:category_id>')
+def toBeUpdated(idx, user_id, category_id):
+    token = request.headers.get("Authorization")
+    ans = loggedPerson(token)
+    print(idx, user_id, category_id)
+    print(ans, "blog update")
+    if(int(ans["id"]) == int(user_id)):
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """SELECT * FROM blogs where id=%s and user_id=%s and category_id=%s""", (
+                idx, ans["id"], category_id)
+        )
+        results = cursor.fetchall()
+        cursor.connection.commit()
+        cursor.close()
+        if(results):
+            items = []
+            for item in results:
+                items.append(item)
+            return{"items": items}
+        else:
+            return{"message": "No Data Available"}
+    else:
+        print("false")
+        return({"message": "Invalid"})
+
+
+# function to update blog
+@app.route('/updatedBlog/<int:blog_id>/<int:user_id>/<int:category_id>', methods=['POST'])
+def updateBlog(blog_id, user_id, category_id):
+    if request.method == 'POST':
+        token = request.headers.get("Authorization")
+        ans = loggedPerson(token)
+        print(ans, "upadte Blog")
+        if (int(ans["id"])==int(user_id)):
+            title = request.json["title"]
+            blog = request.json["blog"]
+            print("id matched")
+            cursor = mysql.connection.cursor()
+            cursor.execute(
+                """UPDATE blogs set title=%s ,blog=%s where id=%s""", (
+                    title, blog, blog_id)
+            )
+            cursor.connection.commit()
+            cursor.close()
+            print("executed")
+            return({"message": "Updated"})
+        else:
+            return ({"message": "Incorrect Request"})
+
+
 # function to get the user details
 @app.route('/userDetails')
 def userDetails():
     token = request.headers.get("Authorization")
     ans = loggedPerson(token)
-    print(ans, "c")
+    print(ans, "user details")
     if (ans):
         cursor = mysql.connection.cursor()
         cursor.execute(
@@ -192,29 +261,51 @@ def userComments(idx, user_id, category_id):
 @app.route('/addComments/<int:idx>/<int:user_id>/<int:category_id>', methods=['POST'])
 def addComments(idx, user_id, category_id):
     if request.method == 'POST':
-        comment = request.json["comment"]
-        print(comment)
-        print(idx, user_id, category_id)
-        cursor = mysql.connection.cursor()
+        token = request.headers.get("Authorization")
+        ans = loggedPerson(token)
+        print(ans, "comment")
+        if (ans):
+            comment = request.json["comment"]
+            print(comment)
+            print(idx, user_id, category_id)
+            cursor = mysql.connection.cursor()
+            cursor.execute(
+                """ SELECT NAME FROM user where id=%s""", (ans["id"],)
+            )
+            name = cursor.fetchall()
+            # print(type(name))
+            print(name[0]["NAME"])
+            cursor.execute(
+                """INSERT INTO comment(id,blog_id,user_id,category_id,comment_name,comment_person)values(NULL,%s,%s,%s,%s,%s) """, (
+                    idx, ans["id"], category_id, comment, name[0]["NAME"])
+            )
+            results = cursor.fetchall()
+            print(results)
+            cursor.connection.commit()
+            cursor.close()
+            items = []
+            for item in results:
+                items.append(item)
+            return({"message": "done"})
+
+
+# function to see a specific blogs all the comments
+@app.route('/Allcomments/<int:id>/<int:user_id>/<int:category_id>')
+def Allcomments(id,user_id,category_id):
+        token = request.headers.get("Authorization")
+        ans = loggedPerson(token)
+        print(ans, "All-comment")
+        cursor=mysql.connection.cursor()
         cursor.execute(
-            """ SELECT NAME FROM user where id=%s""", (user_id,)
+            """SELECT * FROM comment where blog_id=%s  and category_id=%s""",(id,category_id)
         )
-        name = cursor.fetchall()
-        # print(type(name))
-        print(name[0]["NAME"])
-        cursor.execute(
-            """INSERT INTO comment(id,blog_id,user_id,category_id,comment_name,comment_person)values(NULL,%s,%s,%s,%s,%s) """, (
-                idx, user_id, category_id, comment, name[0]["NAME"])
-        )
-        results = cursor.fetchall()
-        print(results)
+        results=cursor.fetchall()
         cursor.connection.commit()
         cursor.close()
         items = []
         for item in results:
             items.append(item)
-        return({"message": "done"})
-
+        return{"items": items}
 
 @app.route('/home')
 def read():
@@ -257,7 +348,6 @@ def DeleteBlog(i, idx, user_id, category_id):
         return({"message": "Invalid"})
 
 
-
 # function to delete the comment
 @app.route('/deleteBlog/<int:idx>/<int:category_id>')
 def deleteTheBlog(idx, category_id):
@@ -273,9 +363,10 @@ def deleteTheBlog(idx, category_id):
         )
         cursor.connection.commit()
         cursor.close()
-        cursor=mysql.connection.cursor()
+        cursor = mysql.connection.cursor()
         cursor.execute(
-            """DELETE FROM blogs where id=%s and user_id=%s and category_id=%s""",(idx,ans["id"],category_id)
+            """DELETE FROM blogs where id=%s and user_id=%s and category_id=%s""", (
+                idx, ans["id"], category_id)
         )
         results = cursor.fetchall()
         print(results)
@@ -288,10 +379,6 @@ def deleteTheBlog(idx, category_id):
     else:
         print("false")
         return({"message": "Invalid"})
-
-
-
-
 
 
 # function to update the comment
