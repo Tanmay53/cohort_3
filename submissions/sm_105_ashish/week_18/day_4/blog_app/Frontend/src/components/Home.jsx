@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {checkIsLoggedIn,getUser} from "../redux/Action"
 import {connect} from 'react-redux'
-import { Redirect } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
 
 class Home extends Component {
 
@@ -11,8 +11,7 @@ componentDidMount(){
 }
 
     render() {
-        console.log(this.props)
-        if(this.props.token){
+        if(this.props.isLoggedIn){
             const token = this.props.token
             const url = "http://127.0.0.1:5000"
             this.props.getUser(url,token)   

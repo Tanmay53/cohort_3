@@ -1,4 +1,4 @@
-import React,{Component,useEffect,useState} from 'react';
+import React,{useEffect,useState} from 'react';
 import { makeStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 
  const BlogWrite =  (props) => {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
+  // const bull = <span className={classes.bullet}>•</span>;
   const [category,setCategory] = useState("")
 
   const [category_id, setCatId] = useState('')
@@ -59,7 +59,6 @@ const useStyles = makeStyles({
     setContent('')
     setTitle('')
   }
-
 
 
   useEffect(()=>{
