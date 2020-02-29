@@ -9,6 +9,7 @@ class Post extends Component {
             data: {},
             comments: [],
             commenttext: "",
+            username:"",
             isAuth: true,
             sameuser: false,
             userid: ""
@@ -25,14 +26,15 @@ class Post extends Component {
         else {
             axios({
                 method: "GET",
-                url: `http://localhost:5000/singlepost/${this.props.match.params.id}`,
+                url: `http://localhost:5000/post/singlepost/${this.props.match.params.id}`,
                 headers: { 'Authorization': `Bearer ${token}` }
             })
                 .then((res) => {
                     console.log(res)
                     this.setState({
                         data: res.data.data[0],
-                        userid: res.data.userid
+                        userid: res.data.userid,
+                        username:res.data.user_name
                     })
                     if (res.data.data[0]["user_id"] == res.data.userid) {
                         this.setState({
@@ -45,7 +47,7 @@ class Post extends Component {
 
             axios({
                 method: "GET",
-                url: `http://localhost:5000/comments/${this.props.match.params.id}`,
+                url: `http://localhost:5000/comment/comments/${this.props.match.params.id}`,
                 headers: { 'Authorization': `Bearer ${token}` }
             })
                 .then((res) => {
@@ -66,7 +68,7 @@ class Post extends Component {
 
         axios({
             method: "POST",
-            url: `http://localhost:5000/addcomment/${this.props.match.params.id}`,
+            url: `http://localhost:5000/comment/addcomment/${this.props.match.params.id}`,
             data: {
                 category_id: this.state.data.category_id,
                 content: this.state.commenttext,
@@ -76,7 +78,7 @@ class Post extends Component {
             .then((res) => {
                 axios({
                     method: "GET",
-                    url: `http://localhost:5000/comments/${this.props.match.params.id}`,
+                    url: `http://localhost:5000/comment/comments/${this.props.match.params.id}`,
                     headers: { 'Authorization': `Bearer ${token}` }
                 })
                     .then((res) => {
@@ -97,13 +99,13 @@ class Post extends Component {
         let token = localStorage.getItem('token')
         axios({
             method: "GET",
-            url: `http://localhost:5000/deletecomment/${id}`,
+            url: `http://localhost:5000/comment/deletecomment/${id}`,
             headers: { 'Authorization': `Bearer ${token}` }
         })
             .then((res) => {
                 axios({
                     method: "GET",
-                    url: `http://localhost:5000/comments/${this.props.match.params.id}`,
+                    url: `http://localhost:5000/comment/comments/${this.props.match.params.id}`,
                     headers: { 'Authorization': `Bearer ${token}` }
                 })
                     .then((res) => {
@@ -121,7 +123,7 @@ class Post extends Component {
         let token = localStorage.getItem('token')
         axios({
             method: "GET",
-            url: `http://localhost:5000/deletepost/${this.props.match.params.id}`,
+            url: `http://localhost:5000/post/deletepost/${this.props.match.params.id}`,
             headers: { 'Authorization': `Bearer ${token}` }
         })
             .then((res) => {
@@ -137,12 +139,18 @@ class Post extends Component {
         if (this.state.isAuth) {
             return (
                 <div className="container text-center">
-                    <div className="col-12"> <h1>{this.state.data.title}</h1></div>
-                    <div className="col-12"><h4>{this.state.data.content}</h4></div>
+                    <div className="col-12"><div className="col-12"> <h1>{this.state.data.title}</h1></div> <div className="col-12 text-right"><h3>by --{this.state.username}</h3></div></div>
+                    <div className="col-12 border"><h4>{this.state.data.content}</h4></div>
+                    {this.state.sameuser && <div className="text-right">
+                        <Link to={`/editpost/${this.props.match.params.id}`}  ><button className="btn btn-outline-success m-3">EDIT</button></Link>
+                        <button className="btn btn-outline-danger m-3" onClick={() => this.deletepost()}>Delete</button>
+                    </div>}
                     <div className="col-12 m-3 text-left">
-                        <div>Comments:</div>
-                        <div className="row border">
+                        <div><h4>Comments:</h4></div>
+                        <div className="row">
                             {this.state.comments.map((ele) => <div className="col-12">
+                                <div className="row">
+                                    <div className="col-8">
                                 <div className="row">
                                     <div className="col-6">
                                         <p>{ele.content}</p>
@@ -151,18 +159,18 @@ class Post extends Component {
                                         <p>~~~{ele.name}</p>
                                     </div>
                                 </div>
+                                </div>
+                                <div className ="col-4">
                                 <div>
-                                    {(this.state.userid == ele.user_id) && <div><Link to={`/editcomment/${ele.id}`}><button>Edit</button></Link><button onClick={() => this.deletecomment(ele.id)}>Delete</button></div>}
+                                    {(this.state.userid == ele.user_id) && <div><Link to={`/editcomment/${ele.id}`}><button className="btn btn-light">Edit</button></Link><button className="btn btn-danger" onClick={() => this.deletecomment(ele.id)}>Delete</button></div>}
+                                </div>
+                                </div>
                                 </div>
                             </div>)}
                             <div className="col-6"><input className="form-control col-12" placeholder="please enter comment" type="text" value={this.state.commenttext} onChange={this.handleChange} /></div>
                             <div className="col-6"> <button className="btn btn-success" onClick={this.commentit}>add</button></div>
                         </div>
                     </div>
-                    {this.state.sameuser && <div>
-                        <Link to={`/editpost/${this.props.match.params.id}`}  ><button>EDIT</button></Link>
-                        <button onClick={() => this.deletepost()}>Delete</button>
-                    </div>}
                 </div>
             )
         }

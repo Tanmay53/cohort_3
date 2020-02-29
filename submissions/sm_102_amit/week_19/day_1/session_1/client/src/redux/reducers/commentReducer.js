@@ -1,58 +1,67 @@
 import {
-  BLOG_LIST_REQUEST,
-  BLOG_LIST_SUCCESS,
-  BLOG_LIST_FAILURE,
-  ADD_BLOG_REQUEST,
-  ADD_BLOG_SUCCESS,
-  ADD_BLOG_FAILURE
+  FETCH_COMMENT_REQUEST,
+  FETCH_COMMENT_SUCCESS,
+  FETCH_COMMENT_FAILURE,
+  ADD_COMMENT_REQUEST,
+  ADD_COMMENT_SUCCESS,
+  ADD_COMMENT_FAILURE
 } from "../actionType";
 
 let initialState = {
   isLoading: false,
   error: false,
   response: null,
-  data: []
+  userComments: [],
+  blogComments: []
 };
 
-export const blogReducer = (state = initialState, action) => {
+export const commentReducer = (state = initialState, action) => {
   switch (action.type) {
-    case BLOG_LIST_REQUEST: {
+    case FETCH_COMMENT_REQUEST: {
       return {
         ...state,
         isLoading: true
       };
     }
-    case BLOG_LIST_SUCCESS: {
+    // fetch blog comments
+    case FETCH_COMMENT_SUCCESS: {
       return {
         ...state,
         isLoading: false,
         error: false,
-        data: [...action.payload]
+        response: action.payload.message,
+        blogComments: [...action.payload.result]
       };
     }
-    case BLOG_LIST_FAILURE: {
+    case FETCH_COMMENT_FAILURE: {
       return {
         ...state,
         isLoading: false,
-        error: true
+        error: true,
+        response: action.payload.message
       };
     }
-    case ADD_BLOG_REQUEST: {
+    // add comment to blogs
+    case ADD_COMMENT_REQUEST: {
       return {
         ...state,
         isLoading: true
       };
     }
-    case ADD_BLOG_SUCCESS: {
+    case ADD_COMMENT_SUCCESS: {
       return {
         ...state,
-        isLoading: false
+        isLoading: false,
+        error: false,
+        response: action.payload.message
       };
     }
-    case ADD_BLOG_FAILURE: {
+    case ADD_COMMENT_FAILURE: {
       return {
         ...state,
-        isLoading: false
+        isLoading: false,
+        error: true,
+        response: action.payload.message
       };
     }
     default:
