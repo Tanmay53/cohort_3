@@ -5,7 +5,7 @@ const FETCH_REGISTER_REQUEST = 'FETCH_REGISTER_REQUEST'
 const FETCH_REGISTER_SUCCESS = 'FETCH_REGISTER_SUCCESS'
 const FETCH_REGISTER_FAILURE = 'FETCH_REGISTER_FAILURE'
 const LOGOUT = "LOGOUT"
-const FETCH_BLOGS = "FETCH_BLOGS"
+
 
 // action creators
 const fetchPostRequest = query => {
@@ -26,7 +26,7 @@ const fetchPostSuccess = data => {
 const fetchPostFailure = error => {
     console.log("fetch post failure action called")
     return {
-        type: fetchPostFailure,
+        type: FETCH_REGISTER_FAILURE,
         error: error
     }
 }
@@ -65,11 +65,47 @@ const logout = () => {
     }
 }
 
+const FETCH_BLOGS_REQUEST = "FETCH_BLOGS_REQUEST"
+const FETCH_BLOGS_SUCCESS = "FETCH_BLOGS_SUCCESS"
+const FETCH_BLOGS_FAILURE = "FETCH_BLOGS_FAILURE"
+
+const fetchBlogsRequest = query => {
+    return {
+        type: FETCH_BLOGS_REQUEST,
+        query: query || ""
+    }
+}
+
+const fetchBlogsSuccess = data => {
+    return {
+        type: FETCH_BLOGS_SUCCESS,
+        data: data
+    }
+}
+
+const fetchBlogsFailure = error => {
+    return {
+        type: FETCH_BLOGS_FAILURE,
+        error: error
+    }
+}
+
 const getBlogs = (payload) => {
-    return
+    return dispatch => {
+        dispatch(fetchBlogsRequest)
+
+        return axios
+            .get(payload)
+            .then(res => {
+                alert(res.data)
+                return dispatch(fetchBlogsSuccess(res.data))
+            })
+            .catch(err => dispatch(fetchBlogsFailure(err)))
+    }
 }
 
 export {
+    
     logout,
     registerUser,
     checkUser,
@@ -79,6 +115,13 @@ export {
     FETCH_REGISTER_FAILURE,
     FETCH_REGISTER_SUCCESS,
     FETCH_REGISTER_REQUEST,
-    LOGOUT
+    LOGOUT,
+    FETCH_BLOGS_REQUEST,
+    FETCH_BLOGS_SUCCESS,
+    FETCH_BLOGS_FAILURE,
+    fetchBlogsRequest,
+    fetchBlogsSuccess,
+    fetchBlogsFailure,
+    getBlogs
 }
 

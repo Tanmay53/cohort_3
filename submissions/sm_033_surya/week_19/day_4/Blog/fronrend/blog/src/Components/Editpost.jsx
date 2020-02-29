@@ -15,7 +15,7 @@ export default class Editpost extends Component {
         let token = localStorage.getItem('token')
         axios({
             method: "GET",
-            url: `http://localhost:5000/singlepost/${this.props.match.params.id}`,
+            url: `http://localhost:5000/post/singlepost/${this.props.match.params.id}`,
             headers: { 'Authorization': `Bearer ${token}` }
         })
             .then((res) => {
@@ -41,7 +41,7 @@ export default class Editpost extends Component {
         }
         axios({
             method: "POST",
-            url: `http://localhost:5000/singlepost/${this.props.match.params.id}`,
+            url: `http://localhost:5000/post/singlepost/${this.props.match.params.id}`,
             data: temp,
             headers: { 'Authorization': `Bearer ${token}` }
         })
