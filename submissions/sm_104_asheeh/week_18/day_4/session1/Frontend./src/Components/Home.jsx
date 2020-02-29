@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {getBlogs} from '../Redux/Action'
+import Card from './Card'
 
 class Home extends Component {
     constructor(props) {
@@ -16,18 +18,38 @@ class Home extends Component {
     }
 
 
-    
     render() {
+        console.log(this.props.blogs.blogs)
         return (
-            <div className = "text-center">
-                <h1>Blogs</h1>
-            </div>
+            this.props.blogs.blogs ?
+            (
+                <div className = "text-center my-4">
+                    <h1 className = "">Blogs</h1>
+                    <div className="container my-4">
+                        <div className="row m-3">
+                            {
+                                this.props.blogs.blogs.map(ele => {
+                                    return <Card blog = {ele} key = {ele.id} />
+                                })
+                            }
+                        </div>
+                    </div>
+                    
+                </div>
+            ) : 
+            (
+                <h1>Data is yet to come</h1>
+            )
         )
+        
+    
+        
     }
 }
 
 const mapStateToProps = (state) => ({
-    
+    blogs: state.blogs,
+    state: state
 })
 
 const mapDispatchToProps = (dispatch) => ({
