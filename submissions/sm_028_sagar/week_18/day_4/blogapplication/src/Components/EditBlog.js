@@ -3,11 +3,12 @@ import Axios from 'axios'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-class WriteBlog extends Component {
+class EditBlog extends Component {
     constructor(props){
         super(props)
         this.state = {
-            category_data :[],
+            category_data:[],
+            id:'',
             title:'',
             url:'',
             desc:'',
@@ -24,42 +25,60 @@ class WriteBlog extends Component {
 
     handleSubmit = e =>{
         e.preventDefault()
-        let newBlog = {
-            name:this.state.title,
-            url:this.state.url,
-            description:this.state.desc,
+    }
+
+    handleBlogEdit = () =>{
+        let token = JSON.parse(localStorage.getItem('userDetail'))['token']
+        let updatedBlog = {
+            blog_id : this.state.id,
+            name : this.state.title,
+            url : this.state.url,
+            description : this.state.desc,
             category_name:this.state.category
         }
 
-        // console.log(newBlog)
-        //send create blog request
-        let token = JSON.parse(localStorage.getItem('userDetail'))['token']
-        //request to get all categories
-        Axios.post('http://127.0.0.1:5000/blog/create',newBlog,{
+
+        Axios.put(`http://127.0.0.1:5000/blog/update`,updatedBlog,{
             headers:{
-                Authorization:`Bearer ${token}`
+                Authorization:`Bearer ${token}` 
             }
-        })
-            .then(res => this.setState({
-                helpText:res.data.message
-            }))
-            .catch(err => console.log(err))
+        }).then(res =>this.setState({
+            helpText:res.data.message
+        }))
+
     }
 
-
-
     componentDidMount(){
+        let blog_id = this.props.match.params.id
+        console.log(blog_id)
         let token = JSON.parse(localStorage.getItem('userDetail'))['token']
-        //request to get all categories
-        Axios.get('http://127.0.0.1:5000/blog/categories',{
+        //prepopulate specific blog data
+        Axios.get(`http://127.0.0.1:5000/blog/specificblog/${blog_id}`,{
             headers:{
-                Authorization:`Bearer ${token}`
+                Authorization:`Bearer ${token}` 
             }
         })
-            .then(res => this.setState({
-                category_data : res.data.categories
-            }))
-            .catch(err => console.log(err))
+        // .then(res => console.log(res.data.blog))
+        .then(res => this.setState({
+            id:blog_id,
+            title:res.data.blog[0].name,
+            url:res.data.blog[0].url,
+            desc:res.data.blog[0].description,
+            category:res.data.blog[0].category_name
+        }))
+        .then(res =>
+                //request to get all categories
+                Axios.get('http://127.0.0.1:5000/blog/categories',{
+                    headers:{
+                        Authorization:`Bearer ${token}`
+                    }
+                })
+                // .then(res => console.log(res.data.categories))
+                .then(res => this.setState({
+                    category_data : res.data.categories
+                }))
+            )
+        .catch(err => console.log(err))
     }
 
     render() {
@@ -78,7 +97,7 @@ class WriteBlog extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="category">Category</label>
-                        <select className="form-control" onChange={this.handleChange} id="category">
+                        <select className="form-control" value={this.state.category} onChange={this.handleChange} id="category">
                         {this.state.category_data.map(category => 
                                 <option key={category.id} value={category.category_name}>{category.category_name}</option>
                             )}
@@ -88,16 +107,17 @@ class WriteBlog extends Component {
                         <label htmlFor="description">Blog Content:</label>
                         <textarea className="form-control" value={this.state.desc} onChange={this.handleChange} id="desc" rows="5"></textarea>
                     </div>
-                    <button className='btn btn-outline-primary'>Post</button>
+                    <button className='btn btn-outline-primary' onClick={() => this.handleBlogEdit()}>Edit</button>
                 </form>
                 <div className='my-2 w-50 mx-auto'>{this.state.helpText && <h5 className='text-success'>{this.state.helpText}</h5>}</div>
             </div>
         )
        }else{
-           return <Redirect to='/' />
+            return <Redirect to='/' />
        }
     }
 }
+
 
 
 const mapStateToProps = state =>{
@@ -106,4 +126,4 @@ const mapStateToProps = state =>{
     }
 }
 
-export default connect(mapStateToProps)(WriteBlog)
+export default connect(mapStateToProps)(EditBlog)
