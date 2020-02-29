@@ -15,7 +15,8 @@ export class Routes extends Component {
 
         this.state = {
             username: '',
-            flag: false
+            flag: false,
+            notFound : false
         }
     }
 
@@ -43,7 +44,14 @@ export class Routes extends Component {
         })
     }
 
+    notFound = () => {
+        this.setState({
+            notFound : true
+        })
+    }
+
     render() {
+        if(!this.state.notFound){
         return (
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -62,7 +70,7 @@ export class Routes extends Component {
                                     ?
                                     <>
                                         <li className="nav-item">
-                                            <Link to='/details' className="nav-link"><button className="btn btn-primary  text-white m-1"><img src="https://img.icons8.com/material-sharp/24/000000/user.png" className="mr-1" />{this.state.username}</button></Link>
+                                            <Link to='/details' className="nav-link"><button className="btn btn-primary  text-white m-1"><img src="https://img.icons8.com/material-sharp/24/000000/user.png" className="mr-1" alt="userLogo" />{this.state.username}</button></Link>
                                         </li>
                                         <li className="nav-item">
                                             <div className="nav-link mt-1"><button className=" btn btn-danger text-white" onClick={this.logout} >Logout</button></div>
@@ -86,11 +94,15 @@ export class Routes extends Component {
                     <Route path='/login' exact render={(props) => <Login  {...props} login={this.login} />} />
                     <Route path='/details' render={(props) => <Details {...props} loggedIn={this.state.flag}  />} />
                     <Route path='/blog/:id' exact render={(props) => <Blog {...props} loggedIn={this.state.flag}  />} />
-                    <Route component={NotFound} />
+                    <Route render={() => <NotFound flag={this.notFound} />} />
                 </Switch>
                 {/* <a href="https://icons8.com/icon/84020/user">User icon by Icons8</a> */}
             </div>
         )
+    }
+    else {
+        return  <Route render={() => <NotFound flag={this.notFound} />} />
+    }
     }
 }
 

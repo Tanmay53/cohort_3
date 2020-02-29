@@ -37,18 +37,27 @@ def getId():
 
 # function to make blogs
 @app.route('/makeBlog/<int:user_id>/<int:category_id>', methods=['POST'])
-def makeBlog(user_id,category_id):
+def makeBlog(user_id, category_id):
+    token = request.headers.get("Authorization")
+    ans = loggedPerson(token)
+    print(ans["id"])
     if request.method == 'POST':
         title = request.json["title"]
         blog = request.json["blog"]
         date = request.json["date"]
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """INSERT INTO blog(id,category_id,user_id,blog,date,title) values(NULL,%s,2,%s,%s,%s)""", (category_id,  blog, date, title)
+            """ SELECT NAME FROM user where id=%s""", (user_id,)
+        )
+        name = cursor.fetchall()
+        cursor.execute(
+            """INSERT INTO blogs(id,category_id,user_id,blog,date,title,name) values(NULL,%s,%s,%s,%s,%s,%s)""", (
+                category_id, user_id, blog, date, title, name[0]["NAME"])
         )
         cursor.connection.commit()
+        print("executed")
         cursor.close()
-        return({"message":"Created Successfully"})
+        return({"message": "Created Successfully"})
 
 
 # function to get the user details
@@ -60,7 +69,7 @@ def userDetails():
     if (ans):
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """SELECT * FROM user where id=%s  """, (1,)
+            """SELECT * FROM user where id=%s  """, (ans["id"],)
         )
         results = cursor.fetchall()
         cursor.connection.commit()
@@ -86,12 +95,14 @@ def userBlogs():
     if (ans):
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """SELECT * FROM blog where user_id=%s  """, (1,)
+            """SELECT * FROM blogs where user_id=%s  """, (ans["id"],)
         )
         results = cursor.fetchall()
+        # print(results)
         cursor.connection.commit()
         cursor.close()
         if(results):
+            print(results)
             items = []
             for item in results:
                 items.append(item)
@@ -112,7 +123,7 @@ def allBlogs():
     if (ans):
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """SELECT * FROM blog  """
+            """SELECT * FROM blogs  """
         )
         results = cursor.fetchall()
         print(results)
@@ -128,16 +139,16 @@ def allBlogs():
 
 
 # function to get the blog comments
-@app.route('/blogComments/<int:idx>/<int:user_id>/<int:category_id>')
-def blogComments(idx, user_id, category_id):
+@app.route('/blogComments/<int:idx>/<int:category_id>')
+def blogComments(idx, category_id):
     token = request.headers.get("Authorization")
     ans = loggedPerson(token)
     print(ans, "BlogComments")
     if (ans):
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """SELECT * FROM comment where blog_id=%s and  user_id=%s and category_id=%s""", (
-                idx, user_id, category_id)
+            """SELECT * FROM comment where blog_id=%s and category_id=%s""", (
+                idx, category_id)
         )
         results = cursor.fetchall()
         print(results)
@@ -161,7 +172,7 @@ def userComments(idx, user_id, category_id):
     if (ans):
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """SELECT * FROM blog where  id=%s and user_id=%s and category_id=%s """, (
+            """SELECT * FROM blogs where  id=%s and user_id=%s and category_id=%s """, (
                 idx, user_id, category_id)
         )
         results = cursor.fetchall()
@@ -186,8 +197,14 @@ def addComments(idx, user_id, category_id):
         print(idx, user_id, category_id)
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """INSERT INTO comment(id,blog_id,user_id,category_id,comment_name,comment_person)values(NULL,%s,%s,%s,%s,"DEFAULT") """, (
-                idx, user_id, category_id, comment)
+            """ SELECT NAME FROM user where id=%s""", (user_id,)
+        )
+        name = cursor.fetchall()
+        # print(type(name))
+        print(name[0]["NAME"])
+        cursor.execute(
+            """INSERT INTO comment(id,blog_id,user_id,category_id,comment_name,comment_person)values(NULL,%s,%s,%s,%s,%s) """, (
+                idx, user_id, category_id, comment, name[0]["NAME"])
         )
         results = cursor.fetchall()
         print(results)
@@ -206,6 +223,7 @@ def read():
         """SELECT * FROM category """
     )
     results = cursor.fetchall()
+    cursor.connection.commit()
     cursor.close()
     items = []
     for item in results:
@@ -219,7 +237,8 @@ def DeleteBlog(i, idx, user_id, category_id):
     token = request.headers.get("Authorization")
     ans = loggedPerson(token)
     print(ans, "DeleteBlog")
-    if (ans):
+    # made changes in if condition
+    if (int(ans["id"]) == user_id):
         cursor = mysql.connection.cursor()
         cursor.execute(
             """DELETE FROM comment where id=%s and blog_id=%s and  user_id=%s and category_id=%s""", (
@@ -238,14 +257,52 @@ def DeleteBlog(i, idx, user_id, category_id):
         return({"message": "Invalid"})
 
 
+
+# function to delete the comment
+@app.route('/deleteBlog/<int:idx>/<int:category_id>')
+def deleteTheBlog(idx, category_id):
+    token = request.headers.get("Authorization")
+    ans = loggedPerson(token)
+    print(ans, "DeleteBlog")
+    # made changes in if condition
+    if (int(ans["id"])):
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """DELETE FROM comment where blog_id=%s""", (
+                idx,)
+        )
+        cursor.connection.commit()
+        cursor.close()
+        cursor=mysql.connection.cursor()
+        cursor.execute(
+            """DELETE FROM blogs where id=%s and user_id=%s and category_id=%s""",(idx,ans["id"],category_id)
+        )
+        results = cursor.fetchall()
+        print(results)
+        cursor.connection.commit()
+        cursor.close()
+        items = []
+        for item in results:
+            items.append(item)
+        return{"items": items}
+    else:
+        print("false")
+        return({"message": "Invalid"})
+
+
+
+
+
+
 # function to update the comment
 @app.route('/updateComment/<int:i>/<int:idx>/<int:user_id>/<int:category_id>', methods=['POST'])
 def updateComment(i, idx, user_id, category_id):
     if request.method == 'POST':
-        # token=request.headers.get("Authorization")
-        # ans=loggedPerson(token)
-        # print(ans,"Update Comment")
-        if (True):
+        token = request.headers.get("Authorization")
+        ans = loggedPerson(token)
+        print(ans, "Update Comment")
+        print(ans["id"], user_id)
+        if (int(ans["id"]) == int(user_id)):
             cursor = mysql.connection.cursor()
             value = request.json["changed"]
             cursor.execute(
@@ -253,16 +310,15 @@ def updateComment(i, idx, user_id, category_id):
                     value, i, idx, user_id, category_id)
             )
             results = cursor.fetchall()
-            print(results)
+            print(results, "came in")
             cursor.connection.commit()
             cursor.close()
             items = []
             for item in results:
                 items.append(item)
-            return{"items": items}
+            return{"message": "SUCCESSFULLY UPDATED"}
         else:
-            print("false")
-            return({"message": "Invalid"})
+            return({"message": "NOT AUTHORIZED TO UPDATE"})
 
 
 # function to create a blog

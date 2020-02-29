@@ -69,6 +69,7 @@ def upload_file():
        upload_img(myid,imgurl)
        return {"path": location,"msg":"image uploaded successfully"}
 
+# categories server
 
 @app.route("/auth/categories", methods = ["POST","GET"])
 def categories():
@@ -88,11 +89,102 @@ def categories():
             """SELECT * FROM category"""
         )
         results = cursor.fetchall()
-        return results[0]
+        categories = []
+        for item in results:
+            categories.append(item)
+        return {"categories":categories}
+ 
+        
+#  blogs sending and adding server.
+
+@app.route("/auth/blogs", methods = ["POST","GET"])
+def blogs():
+    if request.method == "POST":
+        auth_header = request.headers.get('Authorization')
+        token_encoded = auth_header.split(' ')[1]
+        decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+        myid = decode_data["id"]
+        category_id = request.json["category_id"]
+        title = request.json["title"]
+        content = request.json["content"]
+        imgurl = request.json["imgurl"]
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """INSERT INTO blogs (user_id,category_id,title,content,imgurl) 
+            VALUES (%s,%s,%s,%s,%s)""", (myid,category_id,title,content,"")
+            )
+        mysql.connection.commit()
+        cursor.close()
+        return {"message":"Blog added successfully"}
+    elif request.method == "GET":
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """select blogs.id as id ,title ,imgurl,created_on,category.category
+             as category,users.name as user_name,users.id as user_id, content from blogs
+              join category on category.id = blogs.category_id join users on users.id=blogs.user_id;"""
+        )
+        results = cursor.fetchall()
+        blogs = []
+        for item in results:
+            blogs.append(item)
+        return {"blogs":blogs}
+
+
+# Adding comments and getting all the commnets... 
+
+@app.route("/blogs/comments/<int:blog_id>", methods=["POST","GET"])
+def get_all_comments(blog_id):
+    if request.method == "POST":
+        auth_header = request.headers.get('Authorization')
+        token_encoded = auth_header.split(' ')[1]
+        decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+        myid = decode_data["id"]
+        # blog_id = request.json["blog_id"]
+        comment = request.json["comment"]
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """INSERT INTO comments (blog_id,user_id,comment) 
+            VALUES (%s,%s,%s)""", (blog_id,myid,comment)
+            )
+        mysql.connection.commit()
+        cursor.close()
+        return {"message":"comment added"}
+    elif request.method == "GET":
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """select users.name , comment,blog_id from comments
+             join users on users.id = comments.user_id WHERE blog_id = %s;""",(blog_id,)
+        )
+        results = cursor.fetchall()
+        comments = []
+        for item in results:
+            comments.append(item)
+        return {"comments":comments}
+    
+# deleting the blogs of particular user
+@app.route('/blogs/delete/<int:blog_id>', methods=["POST"])
+def delete_blog(blog_id):
+    auth_header = request.headers.get('Authorization')
+    token_encoded = auth_header.split(' ')[1]
+    decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+    myid = decode_data["id"]
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """DELETE from comments where blog_id = %s""",(blog_id,)
+    )
+    # mysql.connection.commit()
+    cursor.execute(
+        """DELETE FROM blogs WHERE id = %s AND user_id = %s""",(blog_id,myid)
+    )
+    mysql.connection.commit()
+
+    return {"message":"blog deleted successfully"}
 
 
 
 
+
+#  authentication checking method used in login route
 
 def check_auth(email,password):
     cursor = mysql.connection.cursor()
@@ -114,7 +206,9 @@ def check_auth(email,password):
             return ({"message":"Incorrect email/password","error":True})
     else:
         return ({"message":"user Not found","error":True})
-        
+
+# image uploading method used in profile pic uploader route...  
+
 def upload_img(myid,location):
     cursor = mysql.connection.cursor()
     cursor.execute (
