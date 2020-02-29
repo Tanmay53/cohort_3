@@ -75,11 +75,11 @@ class BlogComments extends React.Component {
             change: comment_name
         })
     }
-    Cancel = () => {
-        this.setState({
-            update: 0
-        })
-    }
+    // Cancel = () => {
+    //     this.setState({
+    //         update: 0
+    //     })
+    // }
     handleChange = (e) => {
         this.setState({
             change: e.target.value
@@ -130,19 +130,6 @@ class BlogComments extends React.Component {
                         </div>
                     </div>
                     <div>
-                        {/* {this.state.update == 1 ?
-                            <div class="d-flex justify-content-center mt-4 ">
-                                <div style={{ "width": "50%" }}>
-                                    <textarea type="text" onChange={this.handleChange} value={this.state.change} placeholder={this.state.change} />
-                                    <div class="d-flex justify-content-center mt-4 ">
-                                        <button onClick={() => this.Update()} class="btn btn-warning ">UPADTE</button>
-                                        <button onClick={() => this.Cancel()} class="btn btn-secondary ml-2">CANCEL</button>
-                                    </div>
-                                </div>
-                            </div> :
-                            <div>
-                                <h3 class="text-center">No Comments to be Updated</h3>
-                            </div>} */}
                         {this.state.comments.map((item, index) => (
                             <div class="d-flex justify-content-center mt-4" style={{ "minWidth": "400px" }} key={index}>
                                 <div key={index} style={{ "border": "1px solid black", "width": "75%" }}>

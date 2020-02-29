@@ -192,7 +192,7 @@ def allBlogs():
     if (ans):
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """SELECT * FROM blogs  """
+            """SELECT * FROM blogs  where user_id !=%s""",(ans["id"],)
         )
         results = cursor.fetchall()
         print(results)
@@ -290,8 +290,8 @@ def addComments(idx, user_id, category_id):
 
 
 # function to see a specific blogs all the comments
-@app.route('/Allcomments/<int:id>/<int:user_id>/<int:category_id>')
-def Allcomments(id,user_id,category_id):
+@app.route('/Allcomments/<int:id>/<int:category_id>')
+def Allcomments(id,category_id):
         token = request.headers.get("Authorization")
         ans = loggedPerson(token)
         print(ans, "All-comment")
@@ -392,9 +392,10 @@ def updateComment(i, idx, user_id, category_id):
         if (int(ans["id"]) == int(user_id)):
             cursor = mysql.connection.cursor()
             value = request.json["changed"]
+            print(value)
             cursor.execute(
                 """UPDATE comment  set comment_name =%s where id=%s and blog_id=%s and  user_id=%s and category_id=%s""", (
-                    value, i, idx, user_id, category_id)
+                    value, i, idx, ans["id"], category_id)
             )
             results = cursor.fetchall()
             print(results, "came in")
