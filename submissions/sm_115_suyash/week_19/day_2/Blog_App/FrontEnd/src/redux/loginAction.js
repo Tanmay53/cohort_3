@@ -15,7 +15,7 @@ export const axiosLoading = () => ({
 export const signUpSuccess = payload => ({
   type: SIGN_UP_SUCCESS,
   payload
-});
+}); 
  
 export const loginSuccess = payload => ({
   type: LOGIN_SUCCESS,

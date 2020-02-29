@@ -4,7 +4,13 @@ import {
   LOGIN_SUCCESS,
   LOGOUT
 } from "./loginAction";
-import { FETCT_DATA_ALL_BLOG_SUCCESS } from "./action";
+import {
+  FETCT_DATA_ALL_BLOG_SUCCESS,
+  FETCT_DATA_MY_BLOG_SUCCESS,
+  SHOW_COMMENTS_SUCCESS,
+  CREATE_NEW_BLOG_SUCCESS,
+  CREATE_NEW_COMMENT_SUCCESS
+} from "./action";
 
 const initialState = {
   loginMsg: "",
@@ -12,8 +18,11 @@ const initialState = {
   isAuth: false,
   authData: {},
   allBlogData: [],
+  myBlogData: [],
+  allComments: [],
   signupAuth: false,
-  loading: false
+  loading: false,
+  blogSuccess:""
 };
 
 const reducer = (state = initialState, action) => {
@@ -30,7 +39,7 @@ const reducer = (state = initialState, action) => {
           ...state,
           loading: false,
           signupAuth: true,
-          signUpMsg: action.payload
+          signUpMsg: action.payload.message
         };
       } else {
         return {
@@ -64,11 +73,41 @@ const reducer = (state = initialState, action) => {
       };
     case FETCT_DATA_ALL_BLOG_SUCCESS:
       console.log(action.payload, "<----All Blog data");
+      if (action.payload.error === false) {
+        return {
+          ...state,
+          loading: false,
+          allBlogData: action.payload.data
+        };
+      }
+    case FETCT_DATA_MY_BLOG_SUCCESS:
+      if (action.payload.error === false) {
+        return {
+          ...state,
+          loading: false,
+          myBlogData: action.payload.data
+        };
+      }
+    case SHOW_COMMENTS_SUCCESS:
+      console.log(action.payload);
+
       return {
         ...state,
         loading: false,
-        allBlogData: action.payload
+        allComments: action.payload
       };
+    case CREATE_NEW_BLOG_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        blogSuccess:action.payload.message
+      };
+    case CREATE_NEW_COMMENT_SUCCESS:
+      return {
+        ...state,
+        loading: false
+      };
+
     default:
       return state;
   }

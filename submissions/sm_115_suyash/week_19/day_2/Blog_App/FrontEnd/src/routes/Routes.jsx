@@ -1,11 +1,12 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import Login from "../components/auth/Login";
 import Home from "../components/common/Home";
 import SignUp from "../components/auth/Signup";
 import AllBlogs from "../components/common/AllBlogs";
 import MyBlogs from "../components/common/MyBlogs";
 import CreateNewBlog from "../components/common/CreateNewBlog";
+import NotFound from "../components/auth/NotFound";
 
 const Routes = () => {
   return (
@@ -32,12 +33,15 @@ const Routes = () => {
           </li>
         </ul>
       </div>
-      <Route exact path="/" component={Home} />
-      <Route path="/all/blogs" component={AllBlogs} />
-      <Route path="/my/blogs" component={MyBlogs} />
-      <Route path="/new/blog" component={CreateNewBlog} />
-      <Route path="/login" component={Login} />
-      <Route path="/signup" component={SignUp} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/all/blogs" component={AllBlogs} />
+        <Route path="/my/blogs" component={MyBlogs} />
+        <Route path="/new/blog" component={CreateNewBlog} />
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/*" component={NotFound} />
+      </Switch>
     </div>
   );
 };

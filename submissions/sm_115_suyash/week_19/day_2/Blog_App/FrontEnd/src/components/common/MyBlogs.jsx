@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchDataMyBlog } from "../../redux/action";
+import BlogCard from "./extra/BlogCard";
 
 class MyBlogs extends Component {
   constructor(props) {
@@ -17,17 +18,27 @@ class MyBlogs extends Component {
         user_id: this.props.authData.id
       },
       () => {
-        this.props.fetchDataMyBlog(this.state );
+        this.props.fetchDataMyBlog(this.state);
       }
     );
   }
   render() {
-    return <div>My Blogs</div>;
+    console.log(this.props.myBlogData)
+    return (
+      <div>
+        {this.props.myBlogData.map((ele,i) => {
+          return (
+            <BlogCard key={ele.id} title={ele.title} body={ele.body} created_at={ele.created_at} id={ele.id} user_id={ele.user_id} i={i} />
+          );
+        })}
+      </div>
+    );
   }
 }
 
 const mapStateToProps = state => ({
-  authData: state.authData
+  authData: state.authData,
+  myBlogData: state.myBlogData
 });
 
 const mapDispatchToProps = {
