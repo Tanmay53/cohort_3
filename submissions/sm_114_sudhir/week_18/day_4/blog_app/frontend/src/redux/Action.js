@@ -104,16 +104,44 @@ const getUser = (url,payload) =>{
     }
 }
 
+const GET_BLOGS_SUCCESS = "GET_BLOGS_SUCCESS"
+const GET_BLOGS_REQUEST = "GET_BLOGS_REQUEST"
+const GET_BLOGS_FAILURE = "GET_BLOGS_FAILURE"
+
+const getBlogsRequest = (query) => {
+    return {
+        type: GET_BLOGS_REQUEST,
+        query: query
+    }
+}
+
+const getBlogsSuccess = (data) => {
+    return {
+        type: GET_BLOGS_SUCCESS,
+        data
+    }
+}
+
+const getBlogsFailure = (error) => {
+    return {
+        type: GET_BLOGS_FAILURE,
+        error: error
+    }
+}
+
+
 const getBlogs = (url) => {
     return dispatch => {
-        dispatch(fetchUsersRequest)
+        dispatch(getBlogsRequest)
         return axios
                 .get(url)
                 .then(res => {
-                    console.log(res.data)
+                    // console.log(res.data.Blogs)
+                    return dispatch(getBlogsSuccess(res.data))
                 })
                 .catch(err => {
-                    console.log(err)
+                    // console.log(err)
+                    return dispatch(getBlogsFailure(err))
                 })
     }
 }
@@ -131,4 +159,10 @@ export {FETCH_USERS_REQUEST,
         getUser,GET_USERS_SUCCESS,
         GetUsersSuccess,
         getBlogs,
+        getBlogsFailure,
+        getBlogsRequest,
+        getBlogsSuccess,
+        GET_BLOGS_FAILURE,
+        GET_BLOGS_REQUEST,
+        GET_BLOGS_SUCCESS,
         GetUsersFailure,GET_USERS_FAILURE}
