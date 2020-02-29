@@ -15,8 +15,8 @@ export const axiosLoading = () => ({
 export const signUpSuccess = payload => ({
   type: SIGN_UP_SUCCESS,
   payload
-});
-
+}); 
+ 
 export const loginSuccess = payload => ({
   type: LOGIN_SUCCESS,
   payload
@@ -25,7 +25,7 @@ export const loginSuccess = payload => ({
 export const signUpForm = payload => dispatch => {
   dispatch(axiosLoading());
   axios({
-    url: "http://localhost:5000/auth/signup",
+    url: "http://localhost:5000/signup",
     data: payload,
     headers: {
       "Content-Type": "application/json"
@@ -33,6 +33,7 @@ export const signUpForm = payload => dispatch => {
     method: "POST"
   })
     .then(res => {
+      console.log(res);
       dispatch(signUpSuccess(res.data));
     })
     .catch(err => {
@@ -43,7 +44,7 @@ export const signUpForm = payload => dispatch => {
 export const loginForm = payload => dispatch => {
   dispatch(axiosLoading());
   axios({
-    url: "http://localhost:5000/auth/login",
+    url: "http://localhost:5000/login",
     data: payload,
     headers: {
       "Content-Type": "application/json"
@@ -51,6 +52,7 @@ export const loginForm = payload => dispatch => {
     method: "POST"
   })
     .then(res => {
+      console.log(res);
       dispatch(loginSuccess(res.data));
     })
     .catch(err => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { loginForm, logout } from "../../redux/action";
+import { loginForm, logout } from "../../redux/loginAction";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
@@ -37,6 +37,7 @@ const Login = ({ logout, loginForm, message, isAuth }) => {
   if (isAuth) {
     swal("Login Successful", "Welcome to my website", "success");
   }
+  console.log(isAuth);
   return (
     <div className="container">
       {isAuth ? (
@@ -51,21 +52,21 @@ const Login = ({ logout, loginForm, message, isAuth }) => {
       ) : (
         <div className="col-md-5 col-sm-10 text-center bg-muted border mx-auto mt-5 pt-3 pb-4 shadow-lg">
           <h3 className="pt-4 text-primary">Sign In</h3>
-          <div className="my-3">
+          <div className="my-3 col-md-8 offset-md-2">
             <input
               type="email"
               value={email.email}
-              className="w-50 py-1 rounded mt-3  pl-3"
+              className=" py-1 rounded mt-3  pl-3"
               name="email"
               onChange={handleChange}
               placeholder="Enter Your Email"
             />
           </div>
-          <div className="my-3">
+          <div className="my-3  col-md-8 offset-md-2">
             <input
               value={email.password}
               type="password"
-              className="w-50 py-1 rounded my-2 pl-3"
+              className="py-1 rounded my-2 pl-3"
               name="password"
               onChange={handleChange}
               placeholder="Enter Your Password"
