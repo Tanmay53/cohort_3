@@ -6,7 +6,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import {Link} from "react-router-dom";
-
+import {connect} from "react-redux"
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SideNavPage(props) {
+ function SideNavPage(props) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     top: false,
@@ -57,7 +57,7 @@ export default function SideNavPage(props) {
           <Link className="btn btn-secondary" to="/user/Edit">Upload profile Pic</Link>
           </ListItem>
         <ListItem>
-          <button className="btn btn-secondary" onClick={()=>alert("hello")}>Your Blogs</button>
+          <Link to="/user/myblog" className="btn btn-secondary">My Blogs</Link>
           </ListItem>
           <ListItem>
           <button className="btn btn-secondary" onClick={()=>alert("hello")}>Your Favourite</button>
@@ -78,4 +78,15 @@ export default function SideNavPage(props) {
     </div>
   );
 }
+
+const mapStateToProps = (state) => ({
+  user:state.commonReducer.user
+})
+
+const mapDispatchToProps = dispatch=> ({
+  
+})
+
+
+export default connect (mapStateToProps,mapDispatchToProps)(SideNavPage)
 

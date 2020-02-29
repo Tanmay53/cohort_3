@@ -31,12 +31,11 @@ function Home() {
       .then(res => setAllComments(res.data));
     setLoading(false);
   };
-  console.log(blogs);
   if (loading == true) {
     return <h2>Loading...</h2>;
   } else {
     return (
-      <div className="position-absolute text-center w-100">
+      <div className="text-center m-auto">
         <h2>User Feed</h2>
         <div className="row">
           {blogs.map(ele => {
