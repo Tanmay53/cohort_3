@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from "axios"
-import { Link,Connector } from "react-router-dom"
+import { Link, Connector, Redirect } from "react-router-dom"
 
 class Comment extends React.Component {
     constructor(props) {
@@ -10,17 +10,18 @@ class Comment extends React.Component {
             user_id: 0,
             category_id: 0,
             blogs: [],
-            comment: ""
+            comment: "",
         }
+        console.log(props)
     }
-    componentDidMount = () => {
+    componentDidMount = async () => {
         var token = localStorage.getItem("token")
         this.setState({
             id: this.props.match.params.id,
             user_id: this.props.match.params.user_id,
             category_id: this.props.match.params.category_id,
         })
-        axios({
+        await axios({
             method: 'get',
             url: `http://127.0.0.1:5000/userComments/${this.props.match.params.id}/${this.props.match.params.user_id}/${this.props.match.params.category_id}`,
             headers: { 'Authorization': `Bearer ${token}` }
@@ -34,41 +35,51 @@ class Comment extends React.Component {
             comment: e.target.value
         })
     }
-    handleClick = (id, user_id, category_id) => {
+    handleClick = async (id, user_id, category_id) => {
         this.setState({
-            comment:""
+            comment: ""
         })
-        axios.post(`http://127.0.0.1:5000/addComments/${id}/${user_id}/${category_id}`,{"comment": this.state.comment})
-        .then(res=>console.log(res))
+        await axios({
+            method: 'post',
+            url: `http://127.0.0.1:5000/addComments/${id}/${user_id}/${category_id}`,
+            data: {
+                "comment": this.state.comment
+            }
+        })
+            // .then(res => this.props.history.goBack("/home"))
+        // .then(res => console.log(res))
     }
     render() {
         console.log(this.state)
-        return (
-            <React.Fragment>
-                <div class="card">
-                    <div class="card-header">
+        if (localStorage.getItem("token")) {
+            return (
+                <React.Fragment>
+                    <button onClick={this.props.history.goBack} class="btn btn-dark text-white m-4">Back</button>
+                    <div class="d-flex justify-content-center container  shadow p-3 mb-5 bg-white rounded" style={{"width":"50%"}}>
+                        <div class="row">
+                            <div class="card mt-2">
+                                <div class="card-header">
+                                    {this.state.blogs.title}
+                                </div>
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p class="overflow-auto">{this.state.blogs.blog}</p>
+                                        <footer class="blockquote-footer">Posted on<cite title="Source Title">{this.state.blogs.date}</cite></footer>
+                                        <textarea rows="3"  width="100%" onChange={this.handleChange}></textarea><br></br>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <blockquote class="blockquote mb-0">
-                            <p>{this.state.blogs.blog}</p>
-                            <footer class="blockquote-footer">Posted on<cite title="Source Title">{this.state.blogs.date}</cite></footer>
-                        </blockquote>
+                    <div class="d-flex justify-content-center mt-3">
+                        <button onClick={() => this.handleClick(this.state.id, this.state.user_id, this.state.category_id)} class="btn btn-warning">ADD COMMENT</button>
                     </div>
-                </div>
-                <div>
-                    <textarea rows="5" cols="50" onChange={this.handleChange}></textarea>
-                    <button onClick={() => this.handleClick(this.state.id, this.state.user_id, this.state.category_id)}>ADD COMMENT</button>
-                </div>
-            </React.Fragment>
-        )
+                </React.Fragment>
+            )
+        }
+        else {
+            return (<Redirect to="/home"></Redirect>)
+        }
     }
 }
-const mapStateToProps = (state) => ({
-    
-})
-
-const mapDispatchToProps = {
-    
-}
-
 export default Comment

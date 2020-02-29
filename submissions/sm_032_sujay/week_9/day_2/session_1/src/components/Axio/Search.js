@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "./Search.module.css"
 import Table from "./Table"
+import axios from 'axios'
 
 
 
@@ -26,8 +27,7 @@ export default class Search extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventdefault()
-
+        e.preventDefault()
         const obj = {
             searchData: this.state.searchData,
             progLang: this.state.progLang,
@@ -36,7 +36,18 @@ export default class Search extends Component {
         this.setState({
             userData: [...this.state.userData, obj]
         })
-        console.log(this.stateuserData)
+
+
+        axios.get(`https://api.github.com/search/users?q=${this.state.searchData}`)
+            .then(response => {
+                //console.log("response is",response)
+                this.setState({ data: response.data.items })
+                // console.log(this.state.data)/
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
         this.setState({
             type: "",
             searchData: "",
@@ -44,8 +55,10 @@ export default class Search extends Component {
         })
 
     }
+
     render() {
         console.log("State", this.state)
+
         return (
             <div>
                 <div className="container">
@@ -61,17 +74,18 @@ export default class Search extends Component {
 
                             <i className="fas fa-search"></i>
 
-                            {this.state.type === "users" ? <input className="form-control " name="search" onChange={this.handleChange} value={this.state.name} type="search" placeholder="Search by Username " aria-label="Search" />
-                                : <input className="form-control mr-sm-2" name="progLang" onChange={this.handleChange} value={this.state.name} type="search" placeholder="Search Repo by Programming Language" aria-label="Search" />}
+                            {this.state.type === "users" ? <input className="form-control " name="searchData" onChange={this.handleChange} value={this.state.searchData} type="search" placeholder="Search by Username " aria-label="Search" />
+                                : <input className="form-control mr-sm-2" name="progLang" onChange={this.handleChange} value={this.state.progLang} type="search" placeholder="Search Repo by Programming Language" aria-label="Search" />}
                             <button className="btn btn-outline-success my-2 " onClick={this.handleSubmit} type="submit">Search</button>
+
 
                         </form>
 
                     </div>
                 </div>
-                <Table displayData={this.userData} />
+                <Table displayData={this.state.data} />
 
-            </div >
+            </div>
         )
     }
 }

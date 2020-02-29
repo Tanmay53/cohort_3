@@ -1,5 +1,6 @@
 const init_user_state = {
     status: 'Login',
+    
     user_id: '',
     token: ''
 }
@@ -11,6 +12,7 @@ const loginReducer = (state = init_user_state, action) => {
                 ...state,
                  status: action.payload.loginStatus,
                  user_id: action.payload.data.user_id,
+                 name: action.payload.data.name,
                  token: action.payload.data.token
                 }
         case 'USER_LOGOUT':
