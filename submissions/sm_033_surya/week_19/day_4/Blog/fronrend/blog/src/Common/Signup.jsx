@@ -21,7 +21,7 @@ class Signup extends React.Component {
             email: this.state.email,
             password: this.state.password
         }
-        axios.post('http://localhost:5000/register', temp)
+        axios.post('http://localhost:5000/auth/register', temp)
             .then((res) => {
                 console.log(res);
             })

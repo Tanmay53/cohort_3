@@ -71,11 +71,11 @@ def user_login():
         password = password + user_data["salt"]
         password = md5_hash(password)
         if user_data["password"] == password:
-            return {
+            return json.dumps({
                 "message": "User Login Successfully",
                 "error": False,
-                "data": user_data,
-            }
+                "data": user_data
+            })
     else:
         return {"message": "User does't exist", "error": True}
 
@@ -120,9 +120,11 @@ def create_blog(category_id, user_id, title, body):
 @app.route("/create/blog", methods=["POST"])
 def blog_input():
     category_id = request.json["category_id"]
+    category_id = int(category_id)
     user_id = request.json["user_id"]
     title = request.json["title"]
     body = request.json["body"]
+    print(category_id,user_id,title,body,"<<<<======================>>>>>>>")
     return create_blog(category_id, user_id, title, body)
 
 
@@ -139,19 +141,22 @@ def get_blogs():
             {"created_at": str(row["created_at"]),}
         )
         blogs.append(row)
-    return json.dumps(blogs)
+    return json.dumps({
+        "error":False,
+        "data":blogs
+    })
 
 
 # ----------------------------- Create Comment Route ---------------------------------
 @app.route("/create/comment", methods=["POST"])
 def create_comment():
     comment = request.json["comments"]
-    user_id = request.json["user_id"]
+    user_fname = request.json["user_fname"]
     blog_id = request.json["blog_id"]
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """ INSERT INTO comments (comment,user_id,blog_id) VALUES (%s,%s,%s) """,
-        (comment, user_id, blog_id),
+        """ INSERT INTO comments (comment,user_fname,blog_id) VALUES (%s,%s,%s) """,
+        (comment, user_fname, blog_id),
     )
     cursor.connection.commit()
     cursor.close()
@@ -169,10 +174,10 @@ def get_comment():
     comments_data = []
     for row in result:
         comments_data.append(row)
-    print(comments_data, "<<<<<===========-------------------------")
     return json.dumps(comments_data)
 
 
+# ----------------------------- Show My Blog Route ---------------------------------
 @app.route("/show/myblog", methods=["POST"])
 def show_myblog():
     user_id = request.json["user_id"]
@@ -186,7 +191,11 @@ def show_myblog():
             {"created_at": str(row["created_at"]),}
         )
         blog_data.append(row)
-    return json.dumps(blog_data)
+    
+    return json.dumps({
+        "error":False,
+        "data":blog_data
+    })
 
 
 @app.route("/delete/this/myblog", methods=["POST"])
@@ -194,6 +203,9 @@ def delete_myblog():
     user_id = request.json["user_id"]
     blog_id = request.json["blog_id"]
     cursor = mysql.connection.cursor()
+    cursor.execute(
+        """ DELETE FROM comments WHERE user_id = %s AND blog_id = %s """,(user_id, blog_id)
+    )
     cursor.execute(
         """ DELETE FROM blogs WHERE user_id = %s AND id = %s """, (user_id, blog_id)
     )
@@ -206,6 +218,9 @@ def delete_myblog():
 def delete_all_myblog():
     user_id = request.json["user_id"]
     cursor = mysql.connection.cursor()
+    cursor.execute(
+        """ DELETE FROM comments WHERE user_id = %s """,(user_id,)
+    )
     cursor.execute(""" DELETE FROM blogs WHERE user_id = %s """, (user_id,))
     result = cursor.connection.commit()
     cursor.close()

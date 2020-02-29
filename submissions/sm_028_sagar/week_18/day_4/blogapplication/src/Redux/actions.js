@@ -29,3 +29,12 @@ export const saveUser = user =>{
         user
     }
 }
+
+export const LoginStatus = 'LoginStatus'
+
+export const loginStatus = inp =>{
+    return{
+        type:LoginStatus,
+        inp 
+    }
+}

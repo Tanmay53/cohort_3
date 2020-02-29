@@ -43,7 +43,6 @@ function NewBlog(props) {
       .post("http://127.0.0.1:5000/new_post", obj)
       .then(res => console.log(res));
   };
-
   return (
     <div>
       {props.login ? (

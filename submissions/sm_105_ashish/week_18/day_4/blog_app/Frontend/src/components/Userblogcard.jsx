@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {connect} from "react-redux"
 import {addComment, getComment} from "../redux/commentAction"
+import {deleteBlog} from "../redux/BlogDeleteAction"
+import {getBlog} from "../redux/BlogAction"
 
 const useStyles = makeStyles({
   root: {
@@ -19,25 +21,33 @@ const useStyles = makeStyles({
  function ImgMediaCard(props) {
   const classes = useStyles();
   const [comment,setComment] = useState('')
-  const addComment = () =>{
-     const url = "http://127.0.0.1:5000/blogs/comments"
-     const token = props.token
-     const payload = {
-       "blog_id":props.data.id,
-       "comment":comment
-    }
-    props.addComment(url,payload,token)
+  const addComment = async () =>{
+    const url = "http://127.0.0.1:5000/blogs/comments/"+props.data.id
+    const token = props.token
+    const payload = {
+      "comment":comment
+     }
+   await props.addComment(url,payload,token)
+   getComments()
+   setComment('')
   }
-   useEffect(()=> {
-    const url = "http://127.0.0.1:5000/blogs/comments"
-    props.getComment(url)
-  },[])
+  const deleteMyBlog = async () =>{
+    const url = "http://127.0.0.1:5000/blogs/delete/"+props.data.id
+    let token = props.token
+    await props.deleteBlog(url , token)
+    await props.getBlog("http://127.0.0.1:5000/auth/blogs")
 
-  console.log(props.comments)
-  if(props.comments){
-  var blogComments = props.comments.filter(ele=>ele.blog_id == props.data.id)
+    console.log(props)
+
+   props.updateMyBlogs()
   }
-  console.log(blogComments)
+
+  const getComments = ()=>{
+    const url = "http://127.0.0.1:5000/blogs/comments/"+props.data.id  
+    props.getComment(url)
+  }
+  var blogComments = props.comments.filter(ele=>ele.blog_id === props.data.id)
+
   return (
     <Card className={classes.root}  key={props.data.id}>
       <CardActionArea>
@@ -46,7 +56,7 @@ const useStyles = makeStyles({
           alt="loading"
           height="140"
           // image={props.data.imgurl}
-          image="https://source.unsplash.com/user/erondu"
+          image="nothing"
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -90,7 +100,10 @@ const useStyles = makeStyles({
         <Button size="small" color="primary"  onClick ={()=>addComment()} >
           submit
         </Button>
-        <Button size="small" className="btn btn-danger">
+        <Button size="small" color="primary" onClick={()=>getComments()}>
+          Read all Comments
+        </Button>
+        <Button size="small" className="btn btn-danger" onClick={deleteMyBlog}>
           delete blog
         </Button>
       </CardActions>
@@ -101,12 +114,16 @@ const useStyles = makeStyles({
 const mapStateToProps = (state) => ({
   ...state,
   token:state.commonReducer.token,
-  comments:state.commentReducer.comments
+  comments:state.commentReducer.comments,
+  blogs:state.blogReducer.blogs,
+  user:state.commonReducer.user
 })
 
 const mapDispatchToProps = dispatch => ({
   getComment:(url)=>dispatch(getComment(url)),
-  addComment:(url,payload,token)=>dispatch(addComment(url,payload,token))
+  addComment:(url,payload,token)=>dispatch(addComment(url,payload,token)),
+  deleteBlog : (url,token) =>dispatch(deleteBlog(url ,token)),
+  getBlog:(url)=>dispatch(getBlog(url))
 })
 
 

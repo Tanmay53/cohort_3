@@ -83,7 +83,7 @@ def specificBlog(blog_id):
             #update blog
             cursor = mysql.connection.cursor()
             cursor.execute(
-                """SELECT blog.id,blog.name,url,category_id,description,user_id,categories.category_name,users.name as user_name FROM blog JOIN categories ON categories.id = blog.id JOIN users ON blog.user_id = users.id WHERE blog.id = %s;""",(blog_id,)
+                """SELECT blog.id,blog.name,url,category_id,description,user_id,categories.category_name,users.name as user_name FROM blog JOIN categories ON categories.id = blog.category_id JOIN users ON blog.user_id = users.id WHERE blog.id = %s;""",(blog_id,)
                 )
             blog = cursor.fetchall()
             cursor.close()
@@ -108,8 +108,9 @@ def updateBlog():
             url = request.json['url']
             description = request.json['description']
             category_name = request.json['category_name']
-
-            cat_id = get_id_category(category_name)
+            
+            cat_id = get_id_category(category_name) 
+            print(blog_id,name,category_name,url,cat_id,blog_id,user_id)
 
             #update blog
             cursor = mysql.connection.cursor()
@@ -118,7 +119,7 @@ def updateBlog():
                 )
             mysql.connection.commit()
             cursor.close()
-            return {"message": "blog updated"}
+            return {"message": "Blog updated"}
     else:
         return {"message":"User is not registered in record"}
 
@@ -142,17 +143,7 @@ def deleteBlog(blog_id):
             mysql.connection.commit()
             cursor.close()
 
-            #find remaining blog
-            cursor = mysql.connection.cursor()
-            cursor.execute(
-                """SELECT blog.id,blog.name,url,category_id,description,user_id,categories.category_name,users.name as user_name FROM blog JOIN categories ON categories.id = blog.id JOIN users ON blog.user_id = users.id WHERE user_id = %s;""",(user_id,)
-                )
-            cursor.fetchall()
-            cursor.close()
-            items = []
-            for item in items:
-                items.append(item)
-            return {"blogs": items}
+            return {"message": "Blog Deleted"}
     else:
         return {"message":"User is not registered in record"}
     
@@ -163,7 +154,7 @@ def deleteBlog(blog_id):
 def check():
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """SELECT blog.id,blog.name,url,category_id,description,user_id,categories.category_name,users.name as user_name FROM blog JOIN categories ON categories.id = blog.id JOIN users ON blog.user_id = users.id;"""
+        """SELECT blog.id,blog.name,url,category_id,description,user_id,categories.category_name,users.name as user_name FROM blog JOIN categories ON categories.id = blog.category_id JOIN users ON blog.user_id = users.id;"""
     )
     result = cursor.fetchall()
     cursor.close()
@@ -183,20 +174,20 @@ def specificUserBlogs():
     if isUserValid(user_id):
             cursor = mysql.connection.cursor()
             cursor.execute(
-                """SELECT blog.id,blog.name,url,category_id,description,user_id,categories.category_name,users.name as user_name FROM blog JOIN categories ON categories.id = blog.id JOIN users ON blog.user_id = users.id WHERE user_id = %s;""",(user_id,)
+                """SELECT blog.id,blog.name,url,category_id,description,user_id,categories.category_name,users.name as user_name FROM blog JOIN categories ON categories.id = blog.category_id JOIN users ON blog.user_id = users.id WHERE user_id = %s;""",(user_id,)
                 )
             result = cursor.fetchall()
             cursor.close()
             items = []
             for item in result:
                 items.append(item)
-            print(items)
             return {"blogs":items}
     else:
         return {"message":"User is not registered in record"}
 
 
 #==========================================================================
+#fetch all categories
 @blog.route('/categories')
 def readCategories():
      #taking user validation
@@ -225,6 +216,7 @@ def readCategories():
 @blog.route('/<blog_id>',methods = ['POST'])
 def createComment(blog_id):
     comment = request.json['comment']
+    print(comment)
     blog_id = int(blog_id)
     
     #taking user validation
@@ -232,6 +224,7 @@ def createComment(blog_id):
     user_id = Decode(auth_header)
     user_id = int(user_id['id'])
 
+    print('comment',comment,blog_id,user_id)
     if isUserValid(user_id):
             cursor = mysql.connection.cursor()
             cursor.execute(
@@ -239,15 +232,46 @@ def createComment(blog_id):
                 )
             mysql.connection.commit()
             cursor.close()
-            return {"message": "comment created"}
+            return {"message": "comment posted"}
     else:
         return {"message":"User is not registered in record"}
+
+
+
+
+#Show specific blog comment
+@blog.route('/<blog_id>')
+def showSpecificComments(blog_id):
+    blog_id = int(blog_id)
+    print('specific comment',blog_id)
+    #taking user validation
+    auth_header = request.headers.get('Authorization')
+    user_id = Decode(auth_header)
+    user_id = int(user_id['id'])
+
+    if isUserValid(user_id):
+            cursor = mysql.connection.cursor()
+            cursor.execute(
+                """SELECT comments.id,comment,blog.name,users.name as username, users.email as email FROM comments JOIN blog ON comments.blog_id = blog.id JOIN users ON comments.user_id = users.id WHERE comments.blog_id = %s""",(blog_id,)
+                )
+            result = cursor.fetchall()
+            cursor.close()
+            items = []
+            for item in result:
+                items.append(item)
+            return {"message": "Comments fetched","comments":items}
+    else:
+        return {"message":"User is not registered in record"}
+
+
+
 
 
 #Edit comment
 @blog.route('/<blog_id>',methods = ['PUT'])
 def editComment(blog_id):
     comment = request.json['comment']
+    comment_id = request.json['comment_id']
     blog_id = int(blog_id)
     
     #taking user validation
@@ -258,7 +282,7 @@ def editComment(blog_id):
     if isUserValid(user_id):
             cursor = mysql.connection.cursor()
             cursor.execute(
-                """UPDATE comments SET comment = %s WHERE blog_id = %s && user_id = %s""",(comment,blog_id,user_id)
+                """UPDATE comments SET comment = %s WHERE id = %s && blog_id = %s && user_id = %s""",(comment,comment_id,blog_id,user_id)
                 )
             mysql.connection.commit()
             cursor.close()
@@ -271,6 +295,7 @@ def editComment(blog_id):
 #delete comment
 @blog.route('/<blog_id>/<comment_id>',methods = ['DELETE'])
 def deleteComment(blog_id,comment_id):
+    print('delete request received')
     blog_id = int(blog_id)
     comment_id = int(comment_id)
     

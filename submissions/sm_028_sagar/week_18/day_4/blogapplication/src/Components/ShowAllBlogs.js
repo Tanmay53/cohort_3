@@ -24,11 +24,10 @@ export default class ShowAllBlogs extends Component {
     }
 
     handleBlogNavigate = blog_id =>{
-        this.props.history.push(`/blog/${blog_id}?blog_id=${blog_id}`)
+        this.props.history.push(`/blog/${blog_id}`)
     }
 
     render(){
-        console.log(this.state.blog_data)
         return (
            <div className='d-flex flex-column'>
                { this.state.blog_data.map(blog =>
