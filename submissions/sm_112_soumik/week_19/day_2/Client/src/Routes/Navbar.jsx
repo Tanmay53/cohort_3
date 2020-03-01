@@ -6,31 +6,26 @@ import Register from "../Auth/Register";
 import { connect } from "react-redux";
 import NewBlog from "../Components/NewBlog";
 import UserProfile from "../Components/UserProfile";
-import { logout } from "../Redux/auth_action";
+import { UserOutlined } from "@ant-design/icons";
 import { loggedIn } from "../Redux/auth_action";
-import { Menu, Icon, Layout, Avatar } from "antd";
-import "antd/dist/antd.css";
+import { Menu, Layout, Avatar, Icon } from "antd";
 import { Link } from "react-router-dom";
 import BLog_Page from "../Components/BLog_Page";
 import EditUserBlogs from "../Components/EditUserBlogs";
+import { log_out } from "../Redux/auth_action";
+import "antd/dist/antd.css";
 
 function Navbar(props) {
   const [collapsed, setCollapsed] = useState(false);
   const { SubMenu } = Menu;
   const [toggle, setToggle] = useState(false);
-  const handleClick = e => {
-    console.log("click ", e);
-    this.setState({
-      current: e.key
-    });
-  };
 
   useEffect(() => {
     let status = localStorage.getItem("isLoggedIn");
     status = JSON.parse(status);
     console.log(status);
     if (status == true) {
-      props.logged();
+      props.action_login();
       setToggle(true);
     }
   }, [props.login]);
@@ -44,22 +39,22 @@ function Navbar(props) {
     localStorage.removeItem("user_id");
     localStorage.removeItem("token");
     localStorage.removeItem("isLoggedIn");
-    props.logout();
-    return setToggle(false);
+    props.action_logout();
+    setToggle(false);
   };
 
   return (
     <Layout style={{ height: "100vh" }}>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider trigger={null} color="white" collapsible collapsed={collapsed}>
         {toggle ? (
           <Avatar
+            icon="user"
             style={{ backgroundColor: "#87d068" }}
             className="ml-4 mt-3"
             src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-            icon="user"
           />
         ) : (
-          <Avatar className="ml-4 mt-3" icon="user" />
+          <Avatar className="ml-4 mt-3" />
         )}
         <div className="logo" />
         <Menu
@@ -131,26 +126,31 @@ function Navbar(props) {
               </Menu.Item>
             </SubMenu>
           )}
-          <SubMenu
-            key="sub4"
-            title={
-              <span>
-                <Icon type="setting" />
-                <span>Profile Settings</span>
-              </span>
-            }
-          >
-            <Menu.Item key="11">
-              <Link to="/profile">Edit Profile</Link>
-            </Menu.Item>
-            <Menu.Item key="10">
-              <Link to="/edit_profile">Edit Your Blogs</Link>
-            </Menu.Item>
-          </SubMenu>
+          {toggle ? (
+            <SubMenu
+              key="sub4"
+              title={
+                <span>
+                  <Icon type="setting" />
+                  <span>Profile Settings</span>
+                </span>
+              }
+            >
+              <Menu.Item key="11">
+                <Link to="/profile">Edit Profile</Link>
+              </Menu.Item>
+              <Menu.Item key="10">
+                <Link to="/edit_profile">Edit Your Blogs</Link>
+              </Menu.Item>
+            </SubMenu>
+          ) : (
+            <span></span>
+          )}
         </Menu>
       </Sider>
       <Layout>
-        <Header style={{ background: "#fff", padding: 0 }}>
+        <Header style={{ background: "#A9BED2", padding: 10 }}>
+          <div className="logo" />
           <Icon
             className="trigger"
             type={collapsed ? "menu-unfold" : "menu-fold"}
@@ -203,8 +203,8 @@ const mapStateToProps = state => ({
   login: state.auth
 });
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout),
-  logged: () => dispatch(loggedIn)
+  action_logout: () => dispatch(log_out()),
+  action_login: () => dispatch(loggedIn())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
