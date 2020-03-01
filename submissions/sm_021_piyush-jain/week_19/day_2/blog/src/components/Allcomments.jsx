@@ -1,20 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
 import axios from "axios"
-import { Link, Connector, Redirect } from "react-router-dom"
-class BlogComments extends React.Component {
+import {Link,Redirect} from "react-router-dom"
+class Allcomments extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            id: 0,
-            user_id: 0,
-            user:0,
-            category_id: 0,
-            blogs: [],
             comments: [],
             update: 0,
             change: "",
-            comment_id: 0,
+            blogs:[],
+            user: 0,
+            id:0,
+            user_id:0,
+            category_id:0
         }
+        console.log(props)
     }
     componentDidMount = async () => {
         var token = localStorage.getItem("token")
@@ -47,6 +47,7 @@ class BlogComments extends React.Component {
             }))
 
     }
+
     handleDelete = async (i, idx, user_id, category_id) => {
         console.log(idx, user_id, category_id)
         var token = localStorage.getItem("token")
@@ -67,32 +68,19 @@ class BlogComments extends React.Component {
                 comments: res.data.items
             }))
     }
-    // start from here
-    handleUpdate = (i, idx, user_id, category_id, comment_name) => {
-        this.setState({
-            update: 1,
-            comment_id: i,
-            change: comment_name
-        })
-    }
-    // Cancel = () => {
-    //     this.setState({
-    //         update: 0
-    //     })
-    // }
     handleChange = (e) => {
         this.setState({
             change: e.target.value
         })
     }
-    Update = async (id) => {
+    Update = async (id,blog_id,user_id,category_id) => {
         var token = localStorage.getItem("token")
         this.setState({
             comment_id:id
         })
         await axios({
             method: 'post',
-            url: `http://127.0.0.1:5000/updateComment/${this.state.comment_id}/${this.state.id}/${this.state.user_id}/${this.state.category_id}`,
+            url: `http://127.0.0.1:5000/updateComment/${id}/${this.state.id}/${user_id}/${category_id}`,
             headers: { 'Authorization': `Bearer ${token}` },
             data: {
                 "changed": this.state.change
@@ -110,6 +98,14 @@ class BlogComments extends React.Component {
             update: 0,
             comment_id:0
         })
+    }
+    handleUpdate = (i, comment_name) => {
+        this.setState({
+            update: 1,
+            comment_id: i,
+            change: comment_name
+        })
+        console.log(this.state)
     }
     render() {
         console.log(this.state)
@@ -133,14 +129,13 @@ class BlogComments extends React.Component {
                         {this.state.comments.map((item, index) => (
                             <div class="d-flex justify-content-center mt-4" style={{ "minWidth": "400px" }} key={index}>
                                 <div key={index} style={{ "border": "1px solid black", "width": "75%" }}>
-                                    {/* <div class="lead"><span class="lead text-success "><span class="lead mr-3">COMMENT_BY</span></span>{item.COMMENT_PERSON}</div> */}
                                     {this.state.update == 0,this.state.comment_id!=item.id ?
                                         <div>
                                             <div style={{ "width": "100%" }} class="mt-2 clearfix">
                                                 <div class="float-left"><p class="text-info lead overflow-auto float-left">{item.comment_name}</p></div>
                                                {this.state.user==item.user_id?<div class="float-right ">
                                                     <button class="btn btn-danger" onClick={() => this.handleDelete(item.id, item.blog_id, item.user_id, item.category_id)}><i class='fas fa-trash' style={{ "font-size": "12px" }}></i></button>
-                                                    <button class="btn btn-warning ml-2" onClick={() => this.handleUpdate(item.id, item.blog_id, item.user_id, item.category_id, item.comment_name)}><i class='far fa-edit' style={{ "font-size": "12px" }}></i></button>
+                                                    <button class="btn btn-warning ml-2" onClick={() => this.handleUpdate(item.id, item.comment_name)}><i class='far fa-edit' style={{ "font-size": "12px" }}></i></button>
                                                 </div>:<div></div>}
                                             </div>
                                             <div>
@@ -151,7 +146,7 @@ class BlogComments extends React.Component {
                                         <div style={{ "display": "flex" }}>
                                             <div class="float-left" style={{ "flexGrow": "2" }}><textarea rows="1" style={{ "border": "none" }} autoFocus type="text" onChange={this.handleChange} value={this.state.change} placeholder={this.state.change} ></textarea></div>
                                             <div class="float-right ">
-                                                <button onClick={() => this.Update(item.id)} class="btn btn-warning ">UPADTE</button>
+                                                <button onClick={() => this.Update(item.id,item.blog_id,item.user_id,item.category_id)} class="btn btn-warning ">UPADTE</button>
                                                 <button class="btn btn-danger" onClick={() => this.handleDelete(item.id, item.blog_id, item.user_id, item.category_id)}><i class='fas fa-trash' style={{ "font-size": "15px" }}></i></button>
                                             </div>
                                         </div>}
@@ -167,4 +162,4 @@ class BlogComments extends React.Component {
         }
     }
 }
-export default BlogComments
+export default Allcomments

@@ -1,7 +1,3 @@
-# A github user search engine made using React. Used Axios to make API calls
-
-
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
