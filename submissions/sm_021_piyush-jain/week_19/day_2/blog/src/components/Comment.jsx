@@ -39,23 +39,23 @@ class Comment extends React.Component {
         this.setState({
             comment: ""
         })
+        var token = localStorage.getItem("token")
         await axios({
             method: 'post',
             url: `http://127.0.0.1:5000/addComments/${id}/${user_id}/${category_id}`,
+            headers: { 'Authorization': `Bearer ${token}` },
             data: {
                 "comment": this.state.comment
             }
         })
-            // .then(res => this.props.history.goBack("/home"))
-        // .then(res => console.log(res))
+            .then(this.props.history.goBack)
     }
     render() {
         console.log(this.state)
         if (localStorage.getItem("token")) {
             return (
                 <React.Fragment>
-                    <button onClick={this.props.history.goBack} class="btn btn-dark text-white m-4">Back</button>
-                    <div class="d-flex justify-content-center container  shadow p-3 mb-5 bg-white rounded" style={{"width":"50%"}}>
+                    <div class="d-flex justify-content-center container mt-5  shadow p-3 mb-5 bg-white rounded" style={{"width":"50%"}}>
                         <div class="row">
                             <div class="card mt-2">
                                 <div class="card-header">
@@ -73,6 +73,7 @@ class Comment extends React.Component {
                     </div>
                     <div class="d-flex justify-content-center mt-3">
                         <button onClick={() => this.handleClick(this.state.id, this.state.user_id, this.state.category_id)} class="btn btn-warning">ADD COMMENT</button>
+                    <button onClick={this.props.history.goBack} class="btn btn-dark text-white ml-3"> Go Back</button>
                     </div>
                 </React.Fragment>
             )

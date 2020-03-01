@@ -8,6 +8,7 @@ const initialStore = {
     query:'',
     error:'',
     token:'',
+    isLoggedIn:false,
     user:{},
     msg:''
 }
@@ -20,18 +21,19 @@ const commonReducer = (state = initialStore,action)=>{
                 query:action.query
             }
         case FETCH_USERS_SUCCESS:
+            console.log(action)
             if(!action.data.error){
             return {
                 ...state,
                 error:state.error,
                 token:action.data.token,
+                isLoggedIn:true
             }
          }
          else{
              return {
                  ...state,
                  error:state.error,
-                 token:''
              }
          }
 
@@ -44,6 +46,7 @@ const commonReducer = (state = initialStore,action)=>{
             localStorage.removeItem('user')
             return{
                 ...state,
+                isLoggedIn:false,
                 token:''
             }
         case SET_TOKEN:
@@ -51,7 +54,8 @@ const commonReducer = (state = initialStore,action)=>{
             if(user){
                 return {
                     ...state,
-                    token:user["token"]
+                    token:user["token"],
+                    isLoggedIn:true
                 }
             }
             else{
@@ -63,7 +67,6 @@ const commonReducer = (state = initialStore,action)=>{
                 user:{...action.data}
             }
         case GET_USERS_FAILURE:
-            console.log('user fetching failed')
             return {
                 ...state
             }
@@ -74,7 +77,7 @@ const commonReducer = (state = initialStore,action)=>{
         case UPLOAD_IMAGE_SUCCESS:
             return {
                 ...state,
-                mgs:action.data.path
+                msg:action.data.path
             }
         case UPLOAD_IMAGE_FAILURE:
             return {

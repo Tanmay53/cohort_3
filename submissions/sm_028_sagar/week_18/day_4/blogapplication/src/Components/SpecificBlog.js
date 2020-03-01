@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
+import Comments from './Comments'
+import { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-export default class SpecificBlog extends Component{
+class SpecificBlog extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -27,18 +30,35 @@ export default class SpecificBlog extends Component{
 
 
     render(){
-        return (
-            <div className='container'>
-                <div>
-                    <img src={this.state.blog.url} className='img-fluid' alt='blogimage'></img>
+        // console.log(this.state.blog)
+        if(this.props.isLoggedIn){
+            return (
+                <div key={this.state.blog.id} className='container'>
+                    <div>
+                        <img src={this.state.blog.url} className='img-fluid' alt='blogimage'></img>
+                    </div>
+                    <div className='bg-white shadow-sm border border-secondary p-3'>
+                        <h4>{this.state.blog.name}</h4>
+                        <h5>Category: {this.state.blog.category_name}</h5>
+                        <p>{this.state.blog.description}</p>
+                        <p className='text-right text-secondary'>- created by {this.state.blog.user_name}</p>
+                    </div>
+                    <div>
+                        <Comments id={this.state.blog.id}  />
+                    </div>
                 </div>
-                <div className='bg-white p-3'>
-                    <h4>{this.state.blog.name}</h4>
-                    <h5>Category:{this.state.blog.category_name}</h5>
-                    <p>{this.state.blog.description}</p>
-                    <p className='text-right text-secondary'>- created by {this.state.blog.user_name}</p>
-                </div>
-            </div>
-        )
+            )
+        }else{
+            return <Redirect to='/' />
+        }
     }
 }
+
+
+const mapStateToProps = state =>{
+    return {
+        isLoggedIn:state.isLoggedIn
+    }
+}
+
+export default connect(mapStateToProps)(SpecificBlog)

@@ -5,7 +5,7 @@ import { logout } from '../Redux/actions'
 
 function Navbar(props) {
     return (
-        <nav className="navbar navbar-expand-lg border mb-1 shadow-sm navbar-light" style={{backgroundColor:'#404142'}}>
+        <nav className="navbar navbar-expand-lg border shadow-sm navbar-light" style={{backgroundColor:'#404142'}}>
             <Link className="navbar-brand text-white" to="/dashboard">BlogPost</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

@@ -1,4 +1,4 @@
-import { Login, Logout, SaveUser } from "./actions"
+import { Login, Logout, SaveUser, LoginStatus } from "./actions"
 
 
 const initialState = {
@@ -8,12 +8,16 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) =>{
-            console.log(state.isLoggedIn)
             switch(action.type){
                 case SaveUser:
                     return {
                         ...state,
                         currentUserDetails:action.user
+                    }
+                case LoginStatus:
+                    return {
+                        ...state,
+                        isLoggedIn:action.inp
                     }
                 case Login:
                     console.log('coming in reducer',action.user)

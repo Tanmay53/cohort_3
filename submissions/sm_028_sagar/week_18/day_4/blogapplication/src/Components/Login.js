@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
+import { connect } from 'react-redux'
+import {login} from '../Redux/actions'
 
-export default class Login extends Component {
+class Login extends Component {
     constructor(props){
         super(props)
         this.state = {
             email:'',
             password:'',
-            helpText:'helptext',
+            helpText:'',
             token:'',
             isLoggedIn : false
         }
@@ -41,22 +43,35 @@ export default class Login extends Component {
                     loggedIn:true
                 })) : localStorage.setItem('userDetail',JSON.stringify({
                     'token':'',
-                    loggedIn:false
+                    loggedIn:false  
                 }))
                 )
+                .then(res =>
+                        axios.get('http://127.0.0.1:5000/auth/getuserdata',{
+                            headers:{
+                                Authorization:`Bearer ${this.state.token}` 
+                            }
+                        })
+                        .then(res => this.props.login(res.data.detail[0]))
+                        .catch(err => console.log(err))
+                    )
+                
             .catch(err => console.log(err))
     }
 
 
     render(){
-        console.log('token',this.state.token)
-        if(this.state.isLoggedIn){
+        if(this.props.isLoggedIn){
             return <Redirect to='/dashboard' />
         }else{
             return (
+
+                <div className="card">
+                <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" className="card-img" alt="backgroundImage" />
+                <div className="card-img-overlay">
                 <div className='container my-5'>
-                    <h1 className='text-center'>Blog Application</h1>
-                    <form className='border shadow-sm w-50 p-3  my-5 mx-auto rounded' onSubmit={this.handleSubmit}>
+                    <h1 className='text-center text-dark'>Blog Application</h1>
+                    <form className='border bg-light shadow-sm w-50 p-3  my-5 mx-auto rounded' onSubmit={this.handleSubmit}>
                         <h5 className='text-center'>Login Page:</h5>
                         <div className="form-group">
                             <label htmlFor="email">Email address</label>
@@ -74,9 +89,30 @@ export default class Login extends Component {
                         <div className='my-3'>First Time User ?<Link to='/register'> Register Here</Link></div>
                     </form>
                 </div>
+                </div>
+                </div>
+
+
+
+             
             )
         }
     }
 }
+
+const mapStateToProps = state =>{
+    return {
+        detail:state.currentUserDetails,
+        isLoggedIn:state.isLoggedIn
+    }
+}
+
+const mapDispatchToProps = dispatch =>{
+    return{
+        login:(user) => dispatch(login(user)),
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Login)
 
 
