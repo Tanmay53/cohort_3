@@ -57,8 +57,8 @@ export class CreateBlog extends Component {
                 className="form-control mb-2"
               />
               <label htmlFor="blog">Blog</label>
-              <input
-                type="textarea"
+              <textarea
+                // type="textarea"
                 name="blog"
                 value={this.state.blog}
                 onChange={this.handleChange}
