@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -53,15 +53,15 @@ function SignIn(props) {
   const [email,setemail]=useState('')
   const [password,setpassword]= useState('')
 
-  const logMeIn = (e)=>{
+  const logMeIn = async (e)=>{
     e.preventDefault()
     const url ='http://127.0.0.1:5000/auth/login'
     const payload ={"email":email,"password":password}
-    props.loginUser(url,{...payload})
-    setemail("")
-    setpassword('')
+    await props.loginUser(url,{...payload})
+      setemail("")
+      setpassword('')
   }
-  if(props.token == ""){
+  if(!props.isLoggedIn){
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -129,16 +129,16 @@ function SignIn(props) {
         <Copyright />
       </Box>
     </Container>
-  )
-}
-else{
-  return (<Redirect to ="/user" />)
-}
+  )}
+  else{
+    return (<Redirect to="/user"/>)
+  }
 };
 
 
 const mapStateToProps = (state) => ({
-  token:state.token,
+  token:state.commonReducer.token,
+  isLoggedIn:state.commonReducer.isLoggedIn
 })
 
 const mapDispatchToProps = dispatch =>({

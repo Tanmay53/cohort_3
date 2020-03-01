@@ -14,7 +14,7 @@ export default class Editcomment extends Component {
         let token = localStorage.getItem('token')
         axios({
             method: "GET",
-            url: `http://localhost:5000/singlecomment/${this.props.match.params.id}`,
+            url: `http://localhost:5000/comment/singlecomment/${this.props.match.params.id}`,
             headers: { 'Authorization': `Bearer ${token}` }
         })
             .then((res) => {
@@ -34,7 +34,7 @@ export default class Editcomment extends Component {
         let token = localStorage.getItem('token')
         axios({
             method: "POST",
-            url: `http://localhost:5000/singlecomment/${this.props.match.params.id}`,
+            url: `http://localhost:5000/comment/singlecomment/${this.props.match.params.id}`,
             data: {
                 content: this.state.commenttext
             },
