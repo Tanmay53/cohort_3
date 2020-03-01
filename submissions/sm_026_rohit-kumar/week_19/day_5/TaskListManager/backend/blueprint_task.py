@@ -46,10 +46,51 @@ def update_name():
 def update_desc():
     try:
         desc = request.json['desc']
-        tasklists_id = request.json['tasklists_id']
+        tasklists_id = request.json['tasklist_id']
 
-        query = '''UPDATE `tasklists` SET `desc` = %s WHERE `tasklists_id` = %s'''
+        query = '''UPDATE `tasklists` SET `desc` = %s WHERE `tasklist_id` = %s'''
         result = edit_helper(query, [desc, tasklists_id])
         return jsonify(result)
     except Exception:
             return jsonify({'result':'failure' })
+
+
+@task.route('/create/task', methods=['POST'])
+def create_task():
+    try:
+        name = request.json['name']
+        uuid = request.json['uuid']
+        tasklists_id = request.json['tasklist_id']
+
+        query = '''INSERT INTO `task` (`tasklist_id`, `name`, `uuid`) VALUES (%s, %s, %s)'''
+        result = insert(query, [tasklists_id, name, uuid])
+        return jsonify(result)
+    except Exception:
+            return jsonify({'result':'failure' })   
+
+@task.route('/delete/task', methods=['DELETE'])
+def delete_task():
+    try:
+        uuid    = request.json['uuid']
+
+        query = '''DELETE FROM `task` WHERE `uuid` = %s'''
+        result = delete_helper(query, [uuid])
+
+        return jsonify(result)
+    except Exception:
+            return jsonify({'result':'failure' })                        
+
+@task.route('/select/tasklist')
+def select_tasklist():
+    try:
+        user_id = request.json['user_id']
+        query = '''select tl.tasklist_id, tl.uuid as tl_uuid, tl.name as tl_name, tl.desc, 
+                   t.task_id, t.uuid as t_uuid, t.name as t_name from tasklists tl 
+                   left join task t on  tl.tasklist_id = t.tasklist_id where tl.user_id = %s;'''
+        arguments = [user_id]
+        result = select_all(query, arguments) 
+        return jsonify(result)
+    except Exception:
+            return jsonify({'result':'failure' })   
+
+

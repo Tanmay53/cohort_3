@@ -71,14 +71,13 @@ def select_all(query, arguments):
         return result
 
 
-def delete_helper(query_arr):
+def delete_helper(query, arguments):
     try:
         conn = connect()
         with conn.cursor() as cursor:
-            for query in query_arr:
-                cursor.execute(query[0], query[1])
-            result = {'result': 'success'}
+            cursor.execute(query, arguments)
             conn.commit()
+            result = {'result': 'success'}
     except Exception:
         result = {'result': 'failure'}
     finally:

@@ -3,13 +3,14 @@ import TaskList from '../components/TaskList'
 import uuid from 'react-uuid'
 import axios from 'axios'
 import {connect} from 'react-redux'
+import {add_tasklist} from '../redux/Action'
+import { Redirect } from 'react-router-dom'
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
 
-            tasklists: []
         }
     }
 
@@ -18,16 +19,15 @@ class Dashboard extends React.Component {
         const data = {  'user_id': this.props.user_id || 4,
                         'uuid': uuid(),
                         'name': 'Title for your tasklist goes here.',
-                        'desc': 'Mention the purpose you want to achieve through this task list. Mention the objective of the list creation.'
+                        'desc': 'Mention the purpose you want to achieve through this task list. Mention the objective of the list creation.',
+                        'tasks':[]
                     }
         axios.post(url, data)
                 .then(res => {
                     console.log(res)
                     const last_id = Number(res['data']['data']['last_id'])
                     data['tasklist_id'] = last_id
-                    this.setState({
-                        tasklists: [...this.state.tasklists, data]
-                    })
+                    this.props.add_tasklist(data)
                 })
                 .catch(err => {
                     console.log(err)
@@ -37,16 +37,21 @@ class Dashboard extends React.Component {
 
     handleClick = () => {
         this.createNewTaskList()
-
-        /* this.setState({
-            tasklists: [...this.state.tasklists, 
-                
-            ]
-        }) */
-        console.log(this.state)
     }
 
+    componentDidMount = () => {
+        // load all tasklist for user from the database
+        
+    }
+
+
+
     render() {
+        // if user is not logged in redirect to login page
+        if(this.props.isLoggedIn === false) {
+            return <Redirect to="/login" />
+        }
+
         return (
             <>
                 <div className='row'>
@@ -67,10 +72,10 @@ class Dashboard extends React.Component {
                 </div>
                 <div className='row mt-3'>
                     <div className='col-md-12'>
-                        {this.state.tasklists.length == 0 &&
+                        {this.props.tasklists.length == 0 &&
                             <h5>No Tasklist Available.</h5>
                         }
-                        {this.state.tasklists.map((item) => {
+                        {this.props.tasklists.map((item) => {
                             return <TaskList tasklist={item} />
                         })}
                         
@@ -84,8 +89,16 @@ class Dashboard extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        user_id: state.user_id
+        isLoggedIn: state.login.isLoggedIn,
+        user_id: state.login.data.user_id,
+        tasklists: state.tasklist.tasklists
     }
 }
 
-export default connect(mapStateToProps, null)(Dashboard)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        add_tasklist: (data) => dispatch(add_tasklist(data))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
