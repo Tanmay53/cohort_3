@@ -24,7 +24,7 @@ export class Nav extends Component {
                     <div className="col-6">
                         <div className="row d-flex justify-content-end">
                             <div className="col-4">
-                                {this.props.value.login && <button className="btn btn-primary">{this.props.value.user}</button>}
+                                {this.props.value.login && <Link to="/userprofile"><button className="btn btn-primary">{this.props.value.user}</button></Link>}
                             </div>
                             {this.props.value.login && <div className="col-4">
                                 <button className="btn btn-primary" onClick={this.handleClick}>Logout</button>
@@ -34,7 +34,6 @@ export class Nav extends Component {
                             </div>}
                             <div className="col-4">
                                 <Link to="/signup">Register</Link>
-                                <Link to="/createlist">asdf</Link>
 
                             </div>
                             {!this.props.value.login && <Redirect to="/" />}

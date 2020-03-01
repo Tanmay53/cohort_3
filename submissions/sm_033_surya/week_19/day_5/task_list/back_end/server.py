@@ -13,15 +13,14 @@ app.config['MYSQL_PASSWORD'] = '$uryA11472'
 app.config['MYSQL_DB'] = 'tasklist_db'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
-@app.route("/")
-def check():
-    return "Helloooooooo"
 
 
 from Blueprint_auth import auth
 from Blueprint_Tlist import tlist
 from Blueprint_task import task
+from Blueprint_profile import profile
 app.register_blueprint(auth, url_prefix="/auth")
 app.register_blueprint(tlist,url_prefix="/tlist")
 app.register_blueprint(task,url_prefix="/task")
+app.register_blueprint(profile,url_prefix="/profile")
 

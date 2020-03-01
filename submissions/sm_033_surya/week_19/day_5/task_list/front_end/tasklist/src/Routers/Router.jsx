@@ -8,6 +8,7 @@ import Nav from '../components/Nav'
 import Tasklists from '../components/Tasklists'
 import Tasks from '../components/Tasks'
 import { CreateTasklist } from '../components/CreateTasklist'
+import Userprofile from '../components/Userprofie'
 
 export class Router extends Component {
     render() {
@@ -22,6 +23,8 @@ export class Router extends Component {
                 <Route path="/signup" exact render={(props)=><Signup {...props} />}/>
                 <Route path="/createlist" exact render={(props) =><CreateTasklist {...props} />} />
                 <Route path="/tlist/:id" exact render={(props)=><Tasks {...props} />}/>
+                <Route path="/userprofile" exact render={(props)=><Userprofile {...props} />}/>
+
                 </Switch>
             </div>
         )
