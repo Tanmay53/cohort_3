@@ -1,6 +1,10 @@
 import React from 'react'
 import TaskRow from '../components/TaskRow'
+import TaskRowEditable from '../components/TaskRowEditable'
 import axios from 'axios'
+import {update_desc, update_name} from '../redux/Action'
+import {connect} from 'react-redux'
+import uuid from 'react-uuid'
 
 
 class TaskList extends React.Component {
@@ -18,22 +22,33 @@ class TaskList extends React.Component {
         this.setState({
             [event.target.name]: event.target.value
         })
+        console.log(this.state)
     }
 
     updateName = () => {
         const url = 'http://localhost:5000/task/update/name'
-        axios.put(url, {'name': this.state.name, 'tasklist_id': this.props.tasklist.tasklist_id})
+        const data = {'name': this.state.name, 'tasklist_id': this.props.tasklist.tasklist_id}
+        axios.put(url, data)
         .then(res => {
-            console.log(res)
+            if(res['data']['result'] === 'success') {
+                this.props.update_name(data)
+            }
         })
     }
 
     updateDesc = () => {
-        const url = ''
+        const url = 'http://localhost:5000/task/update/desc'
+        const data = {'desc': this.state.desc, 'tasklist_id': this.props.tasklist.tasklist_id}
+        axios.put(url, data)
+        .then(res => {
+            if(res['data']['result'] === 'success') {
+                this.props.update_desc(data)
+            }
+        })
     }
 
-
     handleTitleClick = (val) => {
+            
         if (val === 'edit') {
             this.setState({
                 editTitleDisplay: false
@@ -64,12 +79,13 @@ class TaskList extends React.Component {
     }
 
     render() {
+        console.log('latst props : ', this.props)
         return (
             <div className="mt-2">
                 <div className='d-flex justify-content-between bg-primary text-white p-2'>
                     <h3>TaskList #{this.props.tasklist.tasklist_id}</h3>
                     <button onClick={this.handleDelete} className='btn btn-danger mt-1 ml-1'>
-                        <i class="fa fa-close" style={{"font-size":"20px"}} aria-hitdden="true"></i>
+                        <i class="fa fa-close" style={{"font-size":"20px"}} aria-hidden="true"></i>
                     </button>
                 </div>
             <div className='card mt-1'>
@@ -130,21 +146,12 @@ class TaskList extends React.Component {
                             </tr>
                         </thead>
                         <tbody>
-                            <TaskRow />
-                            <TaskRow />
+                            {this.props.tasklist.tasks.map((task, index) => {
+                                return <TaskRow key={uuid()} index={index + 1} task={task} tasklist_id={this.props.tasklist.tasklist_id} />
+                            })}
                         </tbody>
                         <tfoot>
-                            <tr>
-                                <td>1. </td>
-                                <td>
-                                    <textarea className='form-control' placeholder="Add New Task Here." row='2'></textarea>
-                                </td>
-                                <td className='text-right'>
-                                    <button className='btn btn-sm btn-primary'>
-                                        <i class="fa fa-plus" style={{"font-size":"15px"}} aria-hidden="true"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                           <TaskRowEditable key={uuid()} index={this.props.tasklist.tasks.length + 1} tasklist_id={this.props.tasklist.tasklist_id} />
                         </tfoot>
                     </table>
                 </div>
@@ -154,4 +161,11 @@ class TaskList extends React.Component {
     }
 }
 
-export default TaskList
+const mapDispatchToProps = (dispatch) => {
+    return {
+        update_name: (data) => dispatch(update_name(data)),
+        update_desc: (data) => dispatch(update_desc(data))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(TaskList)

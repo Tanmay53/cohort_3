@@ -45,9 +45,9 @@ function NavBar(props) {
 
 const mapStateToProps = (state) => {
     return {
-        isLoggedIn: state.isLoggedIn,
-        menuLabel: state.menuLabel,
-        showRegisterButton: state.showRegisterButton
+        isLoggedIn: state.login.isLoggedIn,
+        menuLabel: state.login.menuLabel,
+        showRegisterButton: state.login.showRegisterButton
     }
 }
 
