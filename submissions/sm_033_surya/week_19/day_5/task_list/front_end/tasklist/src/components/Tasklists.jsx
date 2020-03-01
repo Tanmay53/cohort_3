@@ -68,7 +68,7 @@ export class Tasklists extends Component {
         })
     }
     render() {
-        console.log(this.props.value.token)
+        console.log(this.state.tlists)
         return (
             <div className="container">
                 <div className="col-12">
@@ -80,7 +80,7 @@ export class Tasklists extends Component {
                             <button className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Create New Tasklist</button>
                         </div>
                     </div>
-                    {this.state.tlists.map((ele) => <div><Link to={`/tlist/${ele.tasklist_id}`}>{ele.title}</Link>{ele.count}</div>)}
+                    {this.state.tlists.map((ele) => <div><Link to={`/tlist/${ele.tasklist_id}`}>{ele.tasklist_title}</Link>{ele.count}</div>)}
                 </div>
 
 

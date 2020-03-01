@@ -35,7 +35,7 @@ def gettlist():
         print(decode_data['id'])
         cursor= mysql.connection.cursor()
         cursor.execute(
-            """select * from(select users.id,username,tasklist.id as tasklist_id,title,count(tasks.id)as count  from users join tasklist on tasklist.user_id = users.id join tasks on tasks.tasklist_id = tasklist.id group by tasklist_id)as newtable where id = %s """,(decode_data['id'],)
+            """select * from (select tasklist.user_id as user_id,tasklist.id as tasklist_id,tasklist.title as tasklist_title,count(tasks.id) as count  from tasklist left join tasks on tasks.tasklist_id = tasklist.id group by tasklist.id)as newtable where user_id = %s""",(decode_data['id'],)
         )
         results = cursor.fetchall()
         cursor.close()
