@@ -23,7 +23,7 @@ class Login extends React.Component {
         })
     }
     userdata = () => {
-        axios.post('http://localhost:5000/login', { "email": this.state.email, "password": this.state.password })
+        axios.post('http://localhost:5000/auth/login', { "email": this.state.email, "password": this.state.password })
             .then((res) => {
                 console.log(res)
                 this.setState({

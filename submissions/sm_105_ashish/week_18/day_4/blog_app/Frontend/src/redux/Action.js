@@ -9,6 +9,16 @@ const GET_USERS_FAILURE = "GET_USERS_FAILURE"
 const UPLOAD_IMAGE_REQUEST = "UPLOAD_IMAGE_REQUEST"
 const UPLOAD_IMAGE_SUCCESS = "UPLOAD_IMAGE_SUCCESS"
 const UPLOAD_IMAGE_FAILURE = "UPLOAD_IMAGE_FAILURE"
+const USER_REGISTERED = "USER_REGISTERED"
+
+
+
+const userRegistered = (data) =>{
+    return {
+        type:USER_REGISTERED,
+        data:data
+    }
+}
 
 
 const fetchUsersRequest = (query) =>{
@@ -44,17 +54,22 @@ const fetchUsersFailure = (error) =>{
 }
 
 const loginUser = (url,payload) =>{
+
     return dispatch =>{
         dispatch(fetchUsersRequest)
         return axios
         .post(url,payload)
         .then(res=>{
             alert(res.data.user.message)
-            if(!res.data.error){
+            // console.log(res.data.user.error)
+            if(!res.data.user.error){
                 let data = {"isLoggedIn":true,"token":res.data.user.token}
                 localStorage.setItem("user",JSON.stringify(data))
+                return dispatch(fetchUsersSuccess(res.data))
             }
-            return dispatch(fetchUsersSuccess(res.data))
+            else{
+                return dispatch(fetchUsersSuccess(res.data.user))
+            }
 
         })
         .catch(res=>{
@@ -70,7 +85,7 @@ const createNewUser = (url,payload) =>{
         .post(url,payload)
         .then(res=>{
             alert(res.data.message)
-            return dispatch(fetchUsersSuccess(res.data))
+            return dispatch(userRegistered(res.data))
         })
         .catch(res=>{
             return dispatch(fetchUsersFailure(res.data))
@@ -98,7 +113,7 @@ const getUser = (url,payload) =>{
             }
             )
         .then(res=>{
-            console.log(res)
+            // console.log(res)
             return dispatch(GetUsersSuccess(res.data))
         })
         .catch(res=>{

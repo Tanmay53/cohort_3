@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -19,25 +19,23 @@ const useStyles = makeStyles({
  function ImgMediaCard(props) {
   const classes = useStyles();
   const [comment,setComment] = useState('')
-  const addComment = () =>{
-     const url = "http://127.0.0.1:5000/blogs/comments"
+  const addComment = async () =>{
+     const url = "http://127.0.0.1:5000/blogs/comments/"+props.data.id
      const token = props.token
      const payload = {
-       "blog_id":props.data.id,
        "comment":comment
     }
-    props.addComment(url,payload,token)
+    await props.addComment(url,payload,token)
+    getComments()
+    setComment('')
   }
-   useEffect(()=> {
-    const url = "http://127.0.0.1:5000/blogs/comments"
-    props.getComment(url)
-  },[])
 
-  console.log(props.comments)
-  if(props.comments){
-  var blogComments = props.comments.filter(ele=>ele.blog_id == props.data.id)
+  const getComments = () =>{
+    const url = "http://127.0.0.1:5000/blogs/comments/"+props.data.id
+    props.getComment(url)
   }
-  console.log(blogComments)
+  var blogComments = props.comments.filter(ele=>ele.blog_id === props.data.id)
+
   return (
     <Card className={classes.root}  key={props.data.id}>
       <CardActionArea>
@@ -45,9 +43,9 @@ const useStyles = makeStyles({
           component="img"
           alt="loading"
           height="140"
-          // image={props.data.imgurl}
-          image="https://source.unsplash.com/user/erondu"
-          title="Contemplative Reptile"
+          // image=""
+          image="nothing"
+          title="profile"
         />
         <CardContent>
           <Typography gutterBottom >
@@ -84,14 +82,14 @@ const useStyles = makeStyles({
         )
       })}
       <CardActions>
-        <textarea placeholder="add your comments" onChange={(e)=>setComment(e.target.value)} />
+        <textarea placeholder="add your comments" value={comment} onChange={(e)=>setComment(e.target.value)} />
       </CardActions>
       <CardActions>
         <Button size="small" color="primary"  onClick ={()=>addComment()} >
           submit
         </Button>
-        <Button size="small" color="primary">
-          Read content
+        <Button size="small" color="primary" onClick={()=>getComments()}>
+          Read all Comments
         </Button>
       </CardActions>
     </Card>
