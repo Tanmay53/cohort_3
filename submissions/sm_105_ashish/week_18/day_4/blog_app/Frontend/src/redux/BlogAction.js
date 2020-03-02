@@ -25,13 +25,13 @@ const fetchBlogFailure = (error) =>{
     }
 
 const getBlog = (url) =>{
-    console.log(url)
+    // console.log(url)
         return dispatch =>{
             dispatch(fetchBlogRequest)
             return axios
             .get(url)
             .then(res=>{
-                console.log(res)
+                // console.log(res)
                 return dispatch(fetchBlogSuccess(res.data))
             })
             .catch(res=>{

@@ -132,14 +132,14 @@ def blogs():
 
 # Adding comments and getting all the commnets... 
 
-@app.route("/blogs/comments", methods=["POST","GET"])
-def get_all_comments():
+@app.route("/blogs/comments/<int:blog_id>", methods=["POST","GET"])
+def get_all_comments(blog_id):
     if request.method == "POST":
         auth_header = request.headers.get('Authorization')
         token_encoded = auth_header.split(' ')[1]
         decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
         myid = decode_data["id"]
-        blog_id = request.json["blog_id"]
+        # blog_id = request.json["blog_id"]
         comment = request.json["comment"]
         cursor = mysql.connection.cursor()
         cursor.execute(
@@ -148,11 +148,12 @@ def get_all_comments():
             )
         mysql.connection.commit()
         cursor.close()
-        return {"message":"Blog added successfully"}
+        return {"message":"comment added"}
     elif request.method == "GET":
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """select users.name , comment,blog_id from comments join users on users.id = comments.user_id;"""
+            """select users.name , comment,blog_id from comments
+             join users on users.id = comments.user_id WHERE blog_id = %s;""",(blog_id,)
         )
         results = cursor.fetchall()
         comments = []
@@ -160,6 +161,28 @@ def get_all_comments():
             comments.append(item)
         return {"comments":comments}
     
+# deleting the blogs of particular user
+@app.route('/blogs/delete/<int:blog_id>', methods=["POST"])
+def delete_blog(blog_id):
+    auth_header = request.headers.get('Authorization')
+    token_encoded = auth_header.split(' ')[1]
+    decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+    myid = decode_data["id"]
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """DELETE from comments where blog_id = %s""",(blog_id,)
+    )
+    # mysql.connection.commit()
+    cursor.execute(
+        """DELETE FROM blogs WHERE id = %s AND user_id = %s""",(blog_id,myid)
+    )
+    mysql.connection.commit()
+
+    return {"message":"blog deleted successfully"}
+
+
+
+
 
 #  authentication checking method used in login route
 

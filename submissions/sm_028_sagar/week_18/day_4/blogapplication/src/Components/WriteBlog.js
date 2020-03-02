@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
-export default class WriteBlog extends Component {
+class WriteBlog extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -9,7 +11,8 @@ export default class WriteBlog extends Component {
             title:'',
             url:'',
             desc:'',
-            category:''
+            category:'Action',
+            helpText:''
         }
     }
 
@@ -37,7 +40,9 @@ export default class WriteBlog extends Component {
                 Authorization:`Bearer ${token}`
             }
         })
-            .then(res => console.log(res.data.message))
+            .then(res => this.setState({
+                helpText:res.data.message
+            }))
             .catch(err => console.log(err))
     }
 
@@ -58,8 +63,9 @@ export default class WriteBlog extends Component {
     }
 
     render() {
+       if(this.props.isLoggedIn){
         return (
-            <div className='container w-75 border bg-white shadow-sm'>
+            <div className='container w-75 p-5 rounded border bg-white shadow-sm'>
                 <h4 className='my-3 w-50 mx-auto'>Write An Amazing Blog !!!</h4>
                 <form className='my-1 w-50 mx-auto' onSubmit={this.handleSubmit}>
                     <div className="form-group">
@@ -80,11 +86,24 @@ export default class WriteBlog extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="description">Blog Content:</label>
-                        <textarea className="form-control" value={this.state.desc} onChange={this.handleChange} id="desc" rows="3"></textarea>
+                        <textarea className="form-control" value={this.state.desc} onChange={this.handleChange} id="desc" rows="5"></textarea>
                     </div>
                     <button className='btn btn-outline-primary'>Post</button>
                 </form>
+                <div className='my-2 w-50 mx-auto'>{this.state.helpText && <h5 className='text-success'>{this.state.helpText}</h5>}</div>
             </div>
         )
+       }else{
+           return <Redirect to='/' />
+       }
     }
 }
+
+
+const mapStateToProps = state =>{
+    return {
+        isLoggedIn:state.isLoggedIn
+    }
+}
+
+export default connect(mapStateToProps)(WriteBlog)
