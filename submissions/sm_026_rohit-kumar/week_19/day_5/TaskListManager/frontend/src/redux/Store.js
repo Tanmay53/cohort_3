@@ -1,7 +1,12 @@
-import { loginReducer } from "./Reducer"
-import {createStore} from 'redux'
+import { loginReducer, tasklistReducer } from "./Reducer"
+import {createStore, combineReducers} from 'redux'
 
-const store = createStore(loginReducer)
+const reducer = combineReducers ({
+    login: loginReducer,
+    tasklist: tasklistReducer
+})
+
+const store = createStore(reducer)
 store.subscribe(() => {
     console.log('redux state : ', store.getState())
 })
