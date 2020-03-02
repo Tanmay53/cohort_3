@@ -8,7 +8,7 @@ class User extends React.Component {
         super(props)
         this.state = {
             user: [],
-            blogs: []
+            blogs: [0]
         }
         console.log(props)
     }
@@ -43,7 +43,16 @@ class User extends React.Component {
             url: `http://127.0.0.1:5000/deleteBlog/${id}/${category_id}`,
             headers: { 'Authorization': `Bearer ${token}` }
         })
-            .then(res => console.log(res))
+
+                await axios({
+                    method: 'get',
+                    url: "http://127.0.0.1:5000/userBlogs",
+                    headers: { 'Authorization': `Bearer ${token}` }
+                })
+                    .then(res => this.setState({
+                        blogs: res.data.items
+                    }))
+
     }
     render() {
         console.log(this.state)
@@ -70,11 +79,11 @@ class User extends React.Component {
                     </div>
                     <h4 class="text-center text-warning">ALL YOUR BLOGS</h4>
                     <div class="overflow-scroll">
-                        <div class="container-fluid">
+                        <div class="container">
                             <div class="row">
-                                {this.state.blogs.length!=0?this.state.blogs.map((blog, index) =>
-                                    <div class="card mt-4 col-lg-4 col-md-6 col-sm-12 mx-md-2" key={index}>
-                                        <div class="card-header">
+                                {this.state.blogs?this.state.blogs.map((blog, index) =>
+                                    <div class="card mt-4 col-lg-3 col-md-6 col-sm-12 mx-md-4" key={index}>
+                                        <div class="card-header overflow-auto">
                                             <h5 class="float-left">{blog.title}</h5><h5 class="float-right">{blog.name}</h5>
                                         </div>
                                         <div class="card-body">
@@ -84,12 +93,12 @@ class User extends React.Component {
                                             </blockquote>
                                         </div>
                                         <div class="card-footer text-muted">
-                                            <button class="btn btn-primary"><Link to={`/blogComment/${blog.id}/${blog.user_id}/${blog.category_id}`} style={{ "textDecoration": "none", "color": "white" }}>SHOW COMMENT's</Link></button>
-                                            <button class="btn btn-warning" onClick={() => this.handleEdit()}>EDIT</button>
+                                            <button class="btn btn-primary"><Link to={`/blogComment/${blog.id}/${blog.user_id}/${blog.category_id}`} style={{ "textDecoration": "none", "color": "white" }}>COMMENTS</Link></button>
+                                            <button class="btn btn-warning"><Link to={`/update/${blog.id}/${blog.user_id}/${blog.category_id}`}>EDIT</Link></button>
                                             <button class="btn btn-danger" onClick={() => this.handleDelete(blog.id, blog.category_id)}>DELETE</button>
                                         </div>
                                     </div>
-                                ):<div>No data</div>}
+                                ):<h1>No Blogs as such</h1>}
                             </div>
                         </div>
                     </div>
