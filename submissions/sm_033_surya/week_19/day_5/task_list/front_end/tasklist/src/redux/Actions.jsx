@@ -1,5 +1,6 @@
 const LOGIN = "LOGIN"
 const LOGOUT = "LOGOUT"
+const IMAGEUP = "IMAGEUP"
 
 const login =(data)=>{
     return{
@@ -12,5 +13,10 @@ const logout =()=>{
         type:LOGOUT
     }
 }
-
-export {login,logout}
+const imageupload = (data) =>{
+    return{
+        type:IMAGEUP,
+        payload:data
+    }
+}
+export {login,logout,imageupload}
