@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { CreateTasklist } from './CreateTasklist'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
