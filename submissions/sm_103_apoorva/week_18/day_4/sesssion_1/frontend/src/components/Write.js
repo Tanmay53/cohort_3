@@ -25,12 +25,12 @@ class Write extends React.Component{
         let blog_category = this.state.blog_category
         let blog = this.state.blog
         let username = localStorage.getItem('user')
-        console.log({
-            "blog_title" : blog_title,
-            "blog_category": blog_category,
-            "blog": blog,
-            "username": username
-        })
+        // console.log({
+        //     "blog_title" : blog_title,
+        //     "blog_category": blog_category,
+        //     "blog": blog,
+        //     "username": username
+        // })
         axios.post('http://127.0.0.1:5000/writeBlogs',{
             "title" : blog_title,
             "category_id": blog_category,
@@ -52,7 +52,8 @@ class Write extends React.Component{
 
     render(){
         return (
-            // this.props.isloggedIn ? (
+            this.props.isloggedIn ? 
+            (
             <div className="mt-5">
                 <div className=" m-5  card">
                     <div className="input-group mb-3 m-5 w-25">
@@ -66,6 +67,14 @@ class Write extends React.Component{
                             <option value="3">Science and Technology</option>
                             <option value="4">Economics</option>
                         </select>
+                    </div>
+                    <div className="input-group mb-2 mx-5 ">
+                        <div className="input-group-prepend ">
+                            <label className="input-group-text" for="inputGroupSelect01">Upload Images</label>
+                        </div>
+                        <div className="ml-2 ">
+                            <input className="form-contol" name="image" type="file" />
+                        </div>
                     </div>
                     <div className="ml-5 row">
                         <div className="col-md-2">
@@ -86,10 +95,10 @@ class Write extends React.Component{
                 </div>
                 
             </div>
-            // ):
-            // (
-            //     <div className="text-center">Sign In First</div>
-            // )
+            ):
+            (
+                <div className="text-center">Sign In First</div>
+            )
         )
     }
     
@@ -98,4 +107,4 @@ class Write extends React.Component{
 const mapStateToProps = state => ({
     isloggedIn : state.isloggedIn
 }) 
-export default connect(null,mapStateToProps) (Write)
+export default connect(mapStateToProps,null) (Write)

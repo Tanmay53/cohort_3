@@ -43,51 +43,43 @@ function NewBlog(props) {
       .post("http://127.0.0.1:5000/new_post", obj)
       .then(res => console.log(res));
   };
-
   return (
     <div>
       {props.login ? (
-        <div className="position-absolute w-100 p-3">
-          <h2>Add A New Post</h2>
-          <div className="container">
-            <div className="col-md-5 m-auto border border-dark rounded">
-              <input
-                className="form-control my-3"
-                placeholder="Add Title"
-                onChange={e =>
-                  setDetails({ ...details, title: e.target.value })
-                }
-              />
-              <textarea
-                className="form-control my-3"
-                placeholder="Enter Feed Here..."
-                type="text"
-                cols="20"
-                rows="10"
-                onChange={e =>
-                  setDetails({ ...details, content: e.target.value })
-                }
-              />
-              <label>Select Category</label>
-              <select
-                className="form-control mb-3"
-                onChange={e =>
-                  setDetails({ ...details, catagory: e.target.value })
-                }
-              >
-                {catagory.map(ele => (
-                  <option key={ele.id} value={ele.id}>
-                    {ele.catagories}
-                  </option>
-                ))}
-              </select>
-              <button
-                className="btn btn-outline-dark mb-4"
-                onClick={clickHandle}
-              >
-                Add Post
-              </button>
-            </div>
+        <div className="p-3">
+          <h2 className="text-center">Add A New Post</h2>
+          <div className="col-md-5 m-auto border border-dark rounded">
+            <input
+              className="form-control my-3"
+              placeholder="Add Title"
+              onChange={e => setDetails({ ...details, title: e.target.value })}
+            />
+            <textarea
+              className="form-control my-3"
+              placeholder="Enter Feed Here..."
+              type="text"
+              cols="10"
+              rows="5"
+              onChange={e =>
+                setDetails({ ...details, content: e.target.value })
+              }
+            />
+            <label>Select Category</label>
+            <select
+              className="form-control mb-3"
+              onChange={e =>
+                setDetails({ ...details, catagory: e.target.value })
+              }
+            >
+              {catagory.map(ele => (
+                <option key={ele.id} value={ele.id}>
+                  {ele.catagories}
+                </option>
+              ))}
+            </select>
+            <button className="btn btn-outline-dark mb-4" onClick={clickHandle}>
+              Add Post
+            </button>
           </div>
         </div>
       ) : (
