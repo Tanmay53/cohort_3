@@ -2,7 +2,7 @@ import React from 'react'
 import TaskRow from '../components/TaskRow'
 import TaskRowEditable from '../components/TaskRowEditable'
 import axios from 'axios'
-import {update_desc, update_name} from '../redux/Action'
+import {update_desc, update_name, delete_tasklist} from '../redux/Action'
 import {connect} from 'react-redux'
 import uuid from 'react-uuid'
 
@@ -17,6 +17,25 @@ class TaskList extends React.Component {
             editDescDisplay: true,
         }
     }
+
+    handleDelete = (tasklist_id) => {
+        // console.log(tasklist_id)
+        axios.delete('http://localhost:5000/task/delete/tasklist', {
+            data: {
+                'tasklist_id': tasklist_id
+            }
+        }).then(res => {
+            console.log(res)
+            if (res['data']['result'] == 'success') {
+                this.props.delete_tasklist(tasklist_id)
+            }
+        })
+
+
+        
+    }
+
+
 
     handleChange = (event) => {
         this.setState({
@@ -84,7 +103,7 @@ class TaskList extends React.Component {
             <div className="mt-2">
                 <div className='d-flex justify-content-between bg-primary text-white p-2'>
                     <h3>TaskList #{this.props.tasklist.tasklist_id}</h3>
-                    <button onClick={this.handleDelete} className='btn btn-danger mt-1 ml-1'>
+                    <button onClick={() => this.handleDelete(this.props.tasklist.tasklist_id)} className='btn btn-danger mt-1 ml-1'>
                         <i class="fa fa-close" style={{"font-size":"20px"}} aria-hidden="true"></i>
                     </button>
                 </div>
@@ -164,7 +183,8 @@ class TaskList extends React.Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         update_name: (data) => dispatch(update_name(data)),
-        update_desc: (data) => dispatch(update_desc(data))
+        update_desc: (data) => dispatch(update_desc(data)),
+        delete_tasklist: (data) => dispatch(delete_tasklist(data))
     }
 }
 

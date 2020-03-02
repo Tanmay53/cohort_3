@@ -80,13 +80,15 @@ def delete_task():
     except Exception:
             return jsonify({'result':'failure' })                        
 
-@task.route('/select/tasklist')
+@task.route('/select/tasklist', methods=['POST'])
 def select_tasklist():
     try:
         user_id = request.json['user_id']
         query = '''select tl.tasklist_id, tl.uuid as tl_uuid, tl.name as tl_name, tl.desc, 
-                   t.task_id, t.uuid as t_uuid, t.name as t_name from tasklists tl 
-                   left join task t on  tl.tasklist_id = t.tasklist_id where tl.user_id = %s;'''
+                   group_concat(t.name separator ';;;') as t_name, group_concat(t.uuid separator ';;;') as uuid from tasklists 
+                   tl left join task t on  tl.tasklist_id = t.tasklist_id 
+                   where tl.user_id = %s group by tl.tasklist_id;'''
+        
         arguments = [user_id]
         result = select_all(query, arguments) 
         return jsonify(result)
@@ -94,3 +96,31 @@ def select_tasklist():
             return jsonify({'result':'failure' })   
 
 
+@task.route('/delete/tasklist', methods=['DELETE'])
+def delete_tasklist():
+    try:
+        tasklist_id    = request.json['tasklist_id']
+        """ 
+        decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
+        user_id = decoded['user_id']
+        """        
+        delete_helper('''DELETE FROM `task` WHERE `tasklist_id` = %s''', [tasklist_id])
+        result = delete_helper('''DELETE FROM `tasklists` WHERE `tasklist_id` = %s''', [tasklist_id])
+        return jsonify(result)  
+        # return jsonify({'result':'success' })  
+    except Exception:
+        return jsonify({'result': 'failure'})
+
+@task.route('/summary', methods=['POST'])
+def summary():
+    try:
+        user_id = request.json['user_id']
+        query = '''select tl.tasklist_id, tl.name, count(t.task_id) as count     from tasklists tl 
+                   left join task t on tl.tasklist_id = t.tasklist_id 
+                   where tl.user_id = %s group by tl.tasklist_id, tl.name
+                '''
+        arguments = [user_id]
+        result = select_all(query, arguments)
+        return jsonify(result)
+    except Exception:
+        return jsonify({'result': 'failure'})

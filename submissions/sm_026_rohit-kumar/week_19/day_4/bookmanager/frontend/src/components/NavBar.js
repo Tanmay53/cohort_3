@@ -13,14 +13,17 @@ const handleClick = (props) => {
 function NavBar(props) {
     return (
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="navbar-brand" href="#"><b>Task Manager</b></a>
+                <a class="navbar-brand" href="#"><b>Book Manager</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <Link class="nav-link" to='/summary' > Summary <span class="sr-only">(current)</span></Link>
+                            <Link class="nav-link" to='/blog/dashboard' >New List <span class="sr-only">(current)</span></Link>
+                        </li>  
+                        <li class="nav-item active">
+                            <Link class="nav-link" to='/blog/create' > Summery <span class="sr-only">(current)</span></Link>
                         </li>                    
                     </ul>
                     <ul class="navbar-nav">
@@ -42,9 +45,9 @@ function NavBar(props) {
 
 const mapStateToProps = (state) => {
     return {
-        isLoggedIn: state.login.isLoggedIn,
-        menuLabel: state.login.menuLabel,
-        showRegisterButton: state.login.showRegisterButton
+        isLoggedIn: state.isLoggedIn,
+        menuLabel: state.menuLabel,
+        showRegisterButton: state.showRegisterButton
     }
 }
 

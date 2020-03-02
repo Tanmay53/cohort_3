@@ -39,9 +39,42 @@ class Dashboard extends React.Component {
         this.createNewTaskList()
     }
 
+    processAndLoad(arr) {
+        for(let i = 0; i < arr.length; i++) {
+            let new_data = {  
+                            'user_id': this.props.user_id,
+                            'tasklist_id':arr[i]['tasklist_id'],
+                            'uuid': arr[i]['tl_uuid'],
+                            'name': arr[i]['tl_name'],
+                            'desc': arr[i]['desc'],
+                            'tasks':[]
+                    }
+                    if (arr[i]['t_name'] != null) {
+                        let task_names = arr[i]['t_name'].split(';;;')
+                        let task_uuid  = arr[i]['uuid'].split(';;;')
+                        for(let j = 0; j < task_names.length; j++) {
+                            new_data['tasks'].push({'name': task_names[j], 'uuid': task_uuid[j]})
+                        }
+                    }
+                    this.props.add_tasklist(new_data)
+        }
+        
+    }
+
     componentDidMount = () => {
         // load all tasklist for user from the database
-        
+        const url = 'http://localhost:5000/task/select/tasklist'
+        const data = {
+            "user_id": this.props.user_id
+        }
+
+        axios.post(url, data)
+        .then(res => {
+            console.log(res['data']['data'])
+            if(res['data']['result'] === 'success')
+                this.processAndLoad(res['data']['data'])
+        })
+        .catch(err => console.log(err))
     }
 
 
@@ -59,7 +92,7 @@ class Dashboard extends React.Component {
                         <input type='text' className='form-control'></input>                        
                     </div>
                     <div className='col-md-1'>
-                        <button className='btn btn-primary'>
+                        <button onClick={prompt('Enter value')} className='btn btn-primary'>
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -76,7 +109,7 @@ class Dashboard extends React.Component {
                             <h5>No Tasklist Available.</h5>
                         }
                         {this.props.tasklists.map((item) => {
-                            return <TaskList tasklist={item} />
+                            return <TaskList key={uuid()} tasklist={item} />
                         })}
                         
                     </div>
