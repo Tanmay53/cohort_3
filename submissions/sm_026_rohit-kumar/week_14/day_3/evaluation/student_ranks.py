@@ -35,7 +35,7 @@ def student_rank(scores):
 
 #--
 lst = student_rank(scores)
-selectionSort(lst)
 
+selectionSort(lst)
 # print the last element as topper
 print(lst[-1][0])
