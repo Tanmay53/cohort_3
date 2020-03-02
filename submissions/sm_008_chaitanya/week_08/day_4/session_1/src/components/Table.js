@@ -46,9 +46,9 @@ class Table extends React.Component{
                             </tr>
                         </thead>
                         <tbody>
-                        {this.props.tabdata.map(element=> <Tabpart key={element.name} name={element.name} age={element.age}
+                        {this.props.tabdata.map(element=> <Tabpart key={element.id} name={element.name} age={element.age}
                             address={element.address} department={element.department} salary={element.salary} 
-                            delete={()=>this.props.performDelete(element.name)}
+                            delete={()=>this.props.performDelete(element.id)}
                             edit={()=>{this.props.performEdit(element.name)}}
                             />)}
                         </tbody>

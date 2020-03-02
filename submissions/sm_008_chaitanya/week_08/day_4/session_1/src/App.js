@@ -1,6 +1,5 @@
 import React from 'react'
 import Form from './components/Form'
-// import Table from './components/Table'
 
 class App extends React.Component{
     constructor(props){
@@ -12,12 +11,21 @@ class App extends React.Component{
     }
     
     formSubmit=(userdetails)=>{
+        let empdata=JSON.parse(localStorage.getItem('data')) 
+        if(empdata!=null && empdata.length>0){
+            let id=empdata[empdata.length-1].id+1
+            userdetails.id=id
+        }
+        else{
+            let id=1
+            userdetails.id=id
+        }
         this.setState({empdetails:[...this.state.empdetails,userdetails]})
         localStorage.setItem('data',JSON.stringify([...this.state.empdetails,userdetails]))
     }
 
     componentDidMount(){
-        var empdata=JSON.parse(localStorage.getItem('data')) 
+        let empdata=JSON.parse(localStorage.getItem('data')) 
         if(empdata==null){
             return null
         }
@@ -44,11 +52,20 @@ class App extends React.Component{
         )
     }
 
-    handeldel=(name)=>{
-        this.setState({filtereddata:this.state.filtereddata.filter(element=>element.name!==name)})
+    handeldel=(id)=>{
+        this.setState({filtereddata:this.state.filtereddata.filter(element=>element.id!==id)})
+        let deldata=this.state.filtereddata.filter(element=>element.id!==id)
+        localStorage.setItem('data',JSON.stringify([...deldata]))
+    }
+
+    handlelocalUpdate=(moddata)=>{
+        this.setState({filtereddata:this.state.filtereddata.filter(element=>element.id!==moddata.id)})
+        let deldata=this.state.filtereddata.filter(element=>element.id!==moddata.id)
+        localStorage.setItem('data',JSON.stringify([...deldata,moddata])) 
     }
 
     render(){
+        // console.log(this.state.filtereddata)
         return(
             <div>
                 <Form parentFunc={this.formSubmit}
@@ -57,12 +74,8 @@ class App extends React.Component{
                       sortChange={this.sortChange}
                       filterChange={this.filterChange}
                       handeldel={this.handeldel}
+                      updateFunc={this.handlelocalUpdate}
                       />
-                {/* <Table tabdata={this.state.filtereddata}
-                        performSort={this.sortChange}
-                        performFilter={this.filterChange}
-                        performDelete={this.handeldel}
-                        performEdit={this.handleEdit}/> */}
             </div>
         )
     }

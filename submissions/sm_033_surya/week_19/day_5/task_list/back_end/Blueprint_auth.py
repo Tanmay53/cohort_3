@@ -42,7 +42,7 @@ def login():
     password_hash = hasing(new_password)
     if password_hash == user["password_hash"]:
         encode_Data = jwt.encode({"id":user["id"]},'users',algorithm= 'HS256')
-        return json.dumps({"token":str(encode_Data)})
+        return json.dumps({"token":str(encode_Data),"profileimg":user["image"]})
     else:
         return json.dumps({"message":"inavlid input"})
 

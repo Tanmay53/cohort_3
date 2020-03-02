@@ -18,6 +18,7 @@ export class Signup extends Component {
         })
     }
     handleClick = () => {
+        if (this.state.username != "" && this.state.password != "" && this.state.email){
         axios({
             method:"POST",
             url:"http://localhost:5000/auth/signup",
@@ -30,43 +31,50 @@ export class Signup extends Component {
         })
         .then((res)=>{
             alert("user suceessfully registered")
+            this.props.history.push("/login")
         })
         .catch ((res)=>{
             console.log("error")
         })
+    }
+    else {
+        alert ("Please enter required information")
+    }
 
     }
     render() {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
+            <div className="container ">
+                <div className="col-lg-6 col-xl-6 col-md-12 col-sm-12 offset-xl-3 offset-lg-3 offset-md-0 offset-sm-0">
+                <div className="row text-center">
+                    <div className="col-12 text-left">
                         <label>Username</label>
                     </div>
                     <div className="col-12">
-                        <input name="username" value={this.state.username} type="text" onChange={this.handleChange} />
+                        <input className="col-12 form-control" name="username" value={this.state.username} type="text" required onChange={this.handleChange} />
                     </div>
-                    <div className="col-12">
+                    <div className="col-12 text-left">
                         <label>Email</label>
                     </div>
                     <div className="col-12">
-                        <input name="email" value={this.state.email} type="text" onChange={this.handleChange} />
+                        <input name="email" className="col-12 form-control" value={this.state.email} type="text" required onChange={this.handleChange} />
                     </div>
-                    <div className="col-12">
+                    <div className="col-12 text-left">
                         <label>Password</label>
                     </div>
                     <div className="col-12">
-                        <input type="text" name="password" value={this.state.password} onChange={this.handleChange} />
+                        <input type="password" className="col-12 form-control" name="password" value={this.state.password} required onChange={this.handleChange} />
                     </div>
-                    <div className="col-12">
+                    <div className="col-12 text-left">
                         <label>Mobile</label>
                     </div>
                     <div className="col-12">
-                        <input type="text" name="mobile" value={this.state.mobile} onChange={this.handleChange} />
+                        <input type="text" className="col-12 form-control" name="mobile" value={this.state.mobile} required onChange={this.handleChange} />
                     </div>
                     <div className="col-12">
-                        <button onClick={this.handleClick}>Signup</button>
+                        <button className="btn btn-warning m-3  " onClick={this.handleClick}>Signup</button>
                     </div>
+                </div>
                 </div>
             </div>
         )

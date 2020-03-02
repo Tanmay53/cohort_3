@@ -29,21 +29,24 @@ export class Login extends Component {
             .then((res) => {
                 let temp = {
                     token: res.data.token,
-                    username: this.state.username
+                    username: this.state.username,
+                    image: res.data.profileimg
                 }
                 this.props.login(temp)
-                this.props.history.push("/tlists")
                 console.log(res)
+                this.props.history.push("/tlists")
+            })
+            .catch((res) => {
+                alert("inavlid username or passwords")
             })
 
     }
     render() {
-        console.log(this.props.value)
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-3"></div>
-                    <div className="col-6">
+                    <div className="col-lg-3 col-xl-3 col-sm-0 col-md-0"></div>
+                    <div className="col-lg-6 col-xl-6 col-sm-12 col-md-12">
                         <div className="col-12">
                             <label>Username</label>
                         </div>
@@ -60,7 +63,6 @@ export class Login extends Component {
                             <button className="btn btn-primary" onClick={this.handleClick}>Login</button>
                         </div>
                     </div>
-                    <div className="col-3"></div>
                 </div>
             </div>
         )

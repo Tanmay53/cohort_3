@@ -1,5 +1,6 @@
 import React from 'react'
 import Table from './Table'
+
 class Form extends React.Component{
    constructor(props){
         super(props)
@@ -8,7 +9,8 @@ class Form extends React.Component{
             age:'',
             address:'',
             department:'',
-            salary:''
+            salary:'',
+            isedit:false
         }
     }
 
@@ -29,7 +31,6 @@ class Form extends React.Component{
          address:'',
          department:'',
          salary:'',
-         isedit:false
       })
    }
 
@@ -41,18 +42,22 @@ class Form extends React.Component{
          address:editdata1[0].address,
          department:editdata1[0].department,
          salary:editdata1[0].salary,
+         isedit:!this.state.isedit,
+         id:editdata1[0].id
       })
-      console.log(editdata1)
+      // console.log(editdata1)
    }
 
-   handleUpdate=()=>{
-      // this.setState({
-         // var editdata1=this.props.filtereddata.filter(element=>element.name===name)
-      // })
-      // this.props.parentFunc(this.state)
+   handleUpdate=(e)=>{
+      e.preventDefault()
+      // console.log(this.state);
+      this.props.updateFunc(this.state)
+      this.reset()
    }
 
     render(){
+       let editing=(this.state.isedit)?"Update":"Submit"
+       let submitFunction=(this.state.isedit)?(this.handleUpdate):(this.handleSubmit)
         return(
             <React.Fragment>
             <div className="container my-3">
@@ -60,7 +65,7 @@ class Form extends React.Component{
                <hr/>
                <div className="row">
                   <div className="col-10 offset-1 col-md-8 col-lg-6 offset-lg-3 border border-primary py-2">
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={submitFunction}>
 
                            <div className="form-group h4">
                               <label>Name</label>
@@ -94,8 +99,7 @@ class Form extends React.Component{
                            </div>
 
                            <div className="text-center">
-                              <input type="submit" value="Submit" className="btn btn-primary mr-2"/>
-                              <input type="submit" value="Update" onClick={this.handleUpdate} className="btn btn-success"/>
+                              <button className="btn btn-primary">{editing}</button>
                            </div>
 
                         </form>
