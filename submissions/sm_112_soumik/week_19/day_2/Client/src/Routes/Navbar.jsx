@@ -3,56 +3,59 @@ import { Switch, Route, __RouterContext } from "react-router-dom";
 import Home from "../Components/Home";
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
-import { useTransition, animated } from "react-spring";
 import { connect } from "react-redux";
 import NewBlog from "../Components/NewBlog";
 import UserProfile from "../Components/UserProfile";
-import { logout } from "../Redux/auth_action";
-import { Menu, Icon, Layout } from "antd";
-import "antd/dist/antd.css";
+import { UserOutlined } from "@ant-design/icons";
+import { loggedIn } from "../Redux/auth_action";
+import { Menu, Layout, Avatar, Icon } from "antd";
 import { Link } from "react-router-dom";
 import BLog_Page from "../Components/BLog_Page";
+import EditUserBlogs from "../Components/EditUserBlogs";
+import { log_out } from "../Redux/auth_action";
+import "antd/dist/antd.css";
 
 function Navbar(props) {
   const [collapsed, setCollapsed] = useState(false);
   const { SubMenu } = Menu;
-  const { location } = useContext(__RouterContext);
   const [toggle, setToggle] = useState(false);
-  const handleClick = e => {
-    console.log("click ", e);
-    this.setState({
-      current: e.key
-    });
-  };
 
   useEffect(() => {
     let status = localStorage.getItem("isLoggedIn");
     status = JSON.parse(status);
+    console.log(status);
     if (status == true) {
+      props.action_login();
       setToggle(true);
     }
   }, [props.login]);
 
-  const transtions = useTransition(location, location => location.pathname, {
-    from: { opacity: 0, transform: "translate(100%,0)" },
-    enter: { opacity: 1, transform: "translate(0%,0)" },
-    leave: { opacity: 0, transform: "translate(100%,0)" }
-  });
-  const clickHandlerLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("isLoggedIn");
-    props.logout();
-    return setToggle(false);
-  };
   const { Header, Sider, Content } = Layout;
 
   const toggler = () => {
     setCollapsed(!collapsed);
   };
+  const logoutHandler = () => {
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("token");
+    localStorage.removeItem("isLoggedIn");
+    props.action_logout();
+    setToggle(false);
+  };
 
   return (
     <Layout style={{ height: "100vh" }}>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider trigger={null} color="white" collapsible collapsed={collapsed}>
+        {toggle ? (
+          <Avatar
+            icon="user"
+            style={{ backgroundColor: "#87d068" }}
+            className="ml-4 mt-3"
+            src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+          />
+        ) : (
+          <Avatar className="ml-4 mt-3" />
+        )}
         <div className="logo" />
         <Menu
           className="nav_style"
@@ -89,42 +92,65 @@ function Navbar(props) {
               <Link to="/newpost">Add A New Blog</Link>
             </Menu.Item>
           </SubMenu>
-          <SubMenu
-            key="sub3"
-            title={
-              <span>
-                <Icon type="appstore" />
-                <span>Auth</span>
-              </span>
-            }
-          >
-            <Menu.Item key="7">
-              <Link to="/login">Login</Link>
-            </Menu.Item>
-            <Menu.Item key="9">
-              <Link to="/signup">Sign Up</Link>
-            </Menu.Item>
-          </SubMenu>
-          <SubMenu
-            key="sub4"
-            title={
-              <span>
-                <Icon type="setting" />
-                <span>Profile Settings</span>
-              </span>
-            }
-          >
-            <Menu.Item key="11">
-              <Link to="/profile">Edit Profile</Link>
-            </Menu.Item>
-            <Menu.Item key="10">
-              <Link to="/profile">Edit Your Blogs</Link>
-            </Menu.Item>
-          </SubMenu>
+          {toggle ? (
+            <SubMenu
+              key="sub3"
+              title={
+                <span>
+                  <Icon type="appstore" />
+                  <span>Auth</span>
+                </span>
+              }
+            >
+              <Menu.Item key="7">
+                <p onClick={logoutHandler} className="text-danger">
+                  Logout
+                </p>
+              </Menu.Item>
+            </SubMenu>
+          ) : (
+            <SubMenu
+              key="sub3"
+              title={
+                <span>
+                  <Icon type="appstore" />
+                  <span>Auth</span>
+                </span>
+              }
+            >
+              <Menu.Item key="7">
+                <Link to="/login">Login</Link>
+              </Menu.Item>
+              <Menu.Item key="9">
+                <Link to="/signup">Sign Up</Link>
+              </Menu.Item>
+            </SubMenu>
+          )}
+          {toggle ? (
+            <SubMenu
+              key="sub4"
+              title={
+                <span>
+                  <Icon type="setting" />
+                  <span>Profile Settings</span>
+                </span>
+              }
+            >
+              <Menu.Item key="11">
+                <Link to="/profile">Edit Profile</Link>
+              </Menu.Item>
+              <Menu.Item key="10">
+                <Link to="/edit_profile">Edit Your Blogs</Link>
+              </Menu.Item>
+            </SubMenu>
+          ) : (
+            <span></span>
+          )}
         </Menu>
       </Sider>
       <Layout>
-        <Header style={{ background: "#fff", padding: 0 }}>
+        <Header style={{ background: "#A9BED2", padding: 10 }}>
+          <div className="logo" />
           <Icon
             className="trigger"
             type={collapsed ? "menu-unfold" : "menu-fold"}
@@ -134,46 +160,39 @@ function Navbar(props) {
         <Content
           style={{
             margin: "24px 16px",
-            padding: 24,
+            padding: 0,
 
-            minHeight: 280
+            minHeight: 180
           }}
         >
-          {transtions.map(({ item, props, key }) => (
-            <animated.div {...props} key={key} style={props}>
-              <Switch>
-                <Route
-                  exact
-                  path="/"
-                  component={props => <Home {...props} />}
-                />
-                <Route
-                  exact
-                  path="/login"
-                  component={props => <Login {...props} />}
-                />
-                <Route
-                  exact
-                  path="/signup"
-                  component={props => <Register {...props} />}
-                />
-                <Route
-                  exact
-                  path="/newpost"
-                  component={props => <NewBlog {...props} />}
-                />
-                <Route
-                  exact
-                  path="/profile"
-                  component={props => <UserProfile {...props} />}
-                />
-                <Route
-                  path="/users/:id"
-                  component={props => <BLog_Page {...props} />}
-                />
-              </Switch>
-            </animated.div>
-          ))}
+          <Switch>
+            <Route exact path="/" component={props => <Home {...props} />} />
+            <Route
+              exact
+              path="/login"
+              component={props => <Login {...props} />}
+            />
+            <Route
+              exact
+              path="/signup"
+              component={props => <Register {...props} />}
+            />
+            <Route
+              exact
+              path="/newpost"
+              component={props => <NewBlog {...props} />}
+            />
+            <Route
+              exact
+              path="/profile"
+              component={props => <UserProfile {...props} />}
+            />
+            <Route
+              path="/users/:id"
+              component={props => <BLog_Page {...props} />}
+            />
+            <Route path="/edit_profile" component={() => <EditUserBlogs />} />
+          </Switch>
         </Content>
       </Layout>
     </Layout>
@@ -184,7 +203,8 @@ const mapStateToProps = state => ({
   login: state.auth
 });
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout)
+  action_logout: () => dispatch(log_out()),
+  action_login: () => dispatch(loggedIn())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

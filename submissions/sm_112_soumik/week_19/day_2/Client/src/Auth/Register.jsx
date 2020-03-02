@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { fetchRegister } from "../Redux/auth_action";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Loading from "../Components/Loading";
 
-function Register({ fetchRegister }) {
+function Register({ fetchRegister, login }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -25,10 +25,12 @@ function Register({ fetchRegister }) {
 
   if (loading) {
     return <Loading />;
+  } else if (login) {
+    return <Redirect to="/" />;
   }
 
   return (
-    <div className="position-absolute w-100">
+    <div className="">
       <div className="text-center">
         <h2 className="mb-4">Registration Page</h2>
         <div className="col-md-5 border border-danger p-4 m-auto">
@@ -70,5 +72,8 @@ function Register({ fetchRegister }) {
 const mapDispatchToProps = dispatch => ({
   fetchRegister: item => dispatch(fetchRegister(item))
 });
+const mapStateToProps = state => ({
+  login: state.auth
+});
 
-export default connect(null, mapDispatchToProps)(Register);
+export default connect(mapStateToProps, mapDispatchToProps)(Register);
