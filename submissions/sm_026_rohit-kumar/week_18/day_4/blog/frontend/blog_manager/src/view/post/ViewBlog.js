@@ -66,7 +66,8 @@ class ViewBlog extends React.Component {
         .then(res => {
             console.log(res)
             this.setState({
-                comments: [...this.state.comments, {'comment': this.state.comment}],
+                comments: [...this.state.comments, {'comment': this.state.comment, 
+                             'name': this.props.name || 'anonymous'}],
                 comment: ''
             }) 
         })
@@ -135,8 +136,9 @@ class ViewBlog extends React.Component {
 
                             {this.state.comments.map((item) => {
                                 return <div className='col-12 mt-1'>
-                                            <div className='border p-2 mx-2'>
-                                                {item.comment}
+                                            <div className='border p-2 mx-2 d-flex justify-content-between'>
+                                                <span>{item.comment}</span>
+                                                <span className='text-primary'>@{item.name}</span> 
                                             </div>
                                         </div>
                             })}

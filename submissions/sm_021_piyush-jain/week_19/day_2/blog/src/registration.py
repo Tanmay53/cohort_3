@@ -52,8 +52,7 @@ def check(email):
 @auth.route('/signup', methods=['POST'])
 def registration():
     if request.method == "POST":
-        reg = os.path.isfile(
-            "/home/piyush/coding/week_19/day_2/blog/src/registration.csv")
+        reg = os.path.isfile("/home/piyush/coding/week_19/day_2/blog/src/registration.csv")
         with open("/home/piyush/coding/week_19/day_2/blog/src/registration.csv", "a") as csvfile:
             fieldnames = ["id", "name", "email", "number", "salt", "password"]
             salt = generate_salt()
@@ -70,12 +69,14 @@ def registration():
 # user login function
 @auth.route('/login/<email>/<password>')
 def login(email, password):
-    print("entry")
+    print("entry",email,password)
     idx=0
     with open("/home/piyush/coding/week_19/day_2/blog/src/registration.csv", "r") as csvfile:
         reader = csv.DictReader(csvfile, delimiter=" ", quotechar=" ")
         status = 0
+        print(status)
         for row in reader:
+            print(row)
             if(row["email"] == email):
                 print("email done")
                 verify = md5_hash(password, row["salt"])
@@ -87,4 +88,5 @@ def login(email, password):
                     encoded_data=jwt.encode({"id":idx},"masai",algorithm="HS256")
                     print(encoded_data)
                     status = 1
-        return {"token":str(encoded_data)}
+                    return {"token":str(encoded_data)}
+        return({"message":"unsuccessful"})        
