@@ -2,8 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Navbar({ token }) {
+    
     const handleClick = () => {
         localStorage.removeItem('token')
+        localStorage.removeItem('username')
     }
     return (
         <div>
@@ -18,9 +20,14 @@ export default function Navbar({ token }) {
                         {
                             token
                                 ?
+                                <>
+                                <li className="nav-item">
+                                    <div className="nav-link"><button className="btn btn-primary text-white btn-sm" >Welcome, {localStorage.getItem('username')}</button></div>
+                                </li>
                                 <li className="nav-item">
                                     <Link to='/' className="nav-link text-decoration-none" ><button className="btn btn-danger btn-sm" onClick={handleClick}>Sign Out</button></Link>
                                 </li>
+                                </>
                                 :
                                 <>
                                 <li className="nav-item">
@@ -37,3 +44,5 @@ export default function Navbar({ token }) {
         </div>
     )
 }
+
+
