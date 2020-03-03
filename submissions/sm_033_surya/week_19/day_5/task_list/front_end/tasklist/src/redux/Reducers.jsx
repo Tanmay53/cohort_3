@@ -1,10 +1,12 @@
 const LOGIN = "LOGIN"
 const LOGOUT = "LOGOUT"
+const IMAGEUP = "IMAGEUP"
 
 const initialstate = {
     login:false,
     user:"",
-    token:""
+    token:"",
+    image:""
 }
 
 
@@ -15,7 +17,8 @@ const loginreducer=(state=initialstate,action)=>{
                 ...state,
                 login:true,
                 user:action.payload.username,
-                token:action.payload.token
+                token:action.payload.token,
+                image:action.payload.image || "profile.png"
             }
         }
         case LOGOUT:{
@@ -23,7 +26,14 @@ const loginreducer=(state=initialstate,action)=>{
                 ...state,
                 login:false,
                 user:"",
-                token:""
+                token:"",
+                image:""
+            }
+        }
+        case IMAGEUP:{
+            return{
+                ...state,
+                image:action.payload
             }
         }
         default :{
