@@ -9,6 +9,8 @@ export default class Mobile extends React.Component{
                     <li>Blackberry</li>
                     <li>iPhone</li>
                     <li>Windows Phone</li>
+                    <li>Symbian Phone</li>
+
                 </ul>
                 <h1>Mobile Manyfacturers</h1>
                 <ul>
