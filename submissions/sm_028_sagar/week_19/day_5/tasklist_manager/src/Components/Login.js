@@ -26,14 +26,14 @@ export default class Login extends Component {
         })
     }
 
-    handleSubmit = e =>{
+    handleSubmit = async e =>{
         e.preventDefault()
         let user = {
             username: this.state.username,
             password:this.state.password
         }
 
-        Axios.post('http://127.0.0.1:5000/auth/login',user)
+        await Axios.post('http://127.0.0.1:5000/auth/login',user)
         .then(res =>this.setState({
             helpText:res.data.message,
             token:res.data.token,
