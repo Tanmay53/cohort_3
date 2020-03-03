@@ -22,4 +22,12 @@ insert into closure_table (ancestor_id, descendant_id, path_length) SELECT ances
 select * from closure_table join folders on folders.id = descendant_id where ancestor_id = 1 and path_length > 0;
 
 select * from closure_table left join folders on folders.id = closure_table.ancestor_id Where descendant_id = 5 and path_length > 0;
+
+select folders.id, folders.folder_name, closure_table.path_length as depth, closure_table.descendant_id as descendant from folders left join closure_table on folders.id = closure_table.ancestor_id ;
+
+select * from (select count(descendant_id) as count, descendant_id from closure_table group by descendant_id) as sub_table join folders on folders.id = sub_table.descendant_id where sub_table.count = 1;
+
+select * from folders join closure_table on folders.id = closure_table.descendant_id where ancestor_id = 1 and path_length = 1;
+
+select * from folders join closure_table on folders.id = closure_table.descendant_id where closure_table.ancestor_id = (select folders.id from folders join closure_table on folders.id = closure_table.ancestor_id where descendant_id = 7 and path_length = 2) and closure_table.path_length = 1;
 ````
