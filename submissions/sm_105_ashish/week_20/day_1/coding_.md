@@ -28,7 +28,7 @@ INSERT INTO folder_list(folder_name) VALUES ("sm_105");
 ````
 
 ````sql
-SELECT * FROM closure_table JOIN folder_list ON folder_list.id = ancestor WHERE descendent = 9 AND length > 0;
+SELECT * FROM closure_table JOIN folder_list ON folder_list.id = ancestor WHERE descendent = 1 AND length > 0;
 ````
 
 ````sql

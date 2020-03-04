@@ -41,14 +41,15 @@ def createTasklist():
         mysql.connection.commit()
         cursor.close()
 
+        #fetch all tasklists
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """SELECT id,listname,category FROM tasklist WHERE listname = %s""",(listname,)
-        )       
-        result = cursor.fetchone()
+            """SELECT tasklist.id,listname,category,COUNT(task.id) as taskcount FROM tasklist LEFT JOIN task ON task.tasklist_id = tasklist.id WHERE tasklist.user_id = %s GROUP BY(tasklist.id);""",(user_id,)
+        )
+        tasklists = cursor.fetchall()
         cursor.close()
 
-        return {"message":"tasklist created","tasklist":result}
+        return {"message":"tasklist created","tasklist":tasklists}
     else:
         return {"message":"User is not registered in record"}
 
@@ -110,7 +111,16 @@ def deleteSpecificList(tasklist_id):
         mysql.connection.commit()
         cursor.close()
 
-        return {"message":"List Removed"}
+        #fetch records of list
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """SELECT tasklist.id,listname,category,COUNT(task.id) as taskcount FROM tasklist LEFT JOIN task ON task.tasklist_id = tasklist.id WHERE tasklist.user_id = %s GROUP BY(tasklist.id);""",(user_id,)
+        )
+        tasklists = cursor.fetchall()
+        cursor.close()
+    
+
+        return {"message":"List Removed","tasklists":tasklists}
     else:
         return {"message":"User is not registered in record"}
 
@@ -211,7 +221,7 @@ def addTask(tasklist_id):
 
 
 #updating specific task
-@task.route('/<tasklist_id>/<task_id>')
+@task.route('/<tasklist_id>/<task_id>',methods=['PUT'])
 def updateTask(tasklist_id,task_id):
     tasklist_id = int(tasklist_id)
     task_id = int(task_id)
@@ -256,7 +266,6 @@ def deleteTask(tasklist_id,task_id):
     user_id = Decode(auth_header)
     user_id = int(user_id['id'])
     if isUserValid(user_id):
-        taskname = request.json['taskname']
         #deleting task in specified list
         cursor = mysql.connection.cursor()
         cursor.execute(
@@ -276,7 +285,16 @@ def deleteTask(tasklist_id,task_id):
         for task in result:
             tasks.append(task)
 
-        return {"message":"Task Deleted","tasks":tasks}
+
+        #fetching all tasklist records for this user:
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """SELECT tasklist.id,listname,category,COUNT(task.id) as taskcount FROM tasklist LEFT JOIN task ON task.tasklist_id = tasklist.id WHERE tasklist.user_id = %s GROUP BY(tasklist.id);""",(user_id,)
+        )
+        tasklists = cursor.fetchall()
+        cursor.close()
+
+        return {"message":"Task Deleted","tasks":tasks,"tasklist":tasklists}
     else:
         return {"message":"User is not registered in record"}
     
