@@ -19,16 +19,17 @@ export class Details extends Component {
     let token = localStorage.getItem("token");
 
     axios({
-      method: "get",
-      headers: { Authorization: "Bearer " + JSON.parse(token) },
-      baseURL: `http://127.0.0.1:5000/user/blog/read`
-    }).then(res => {
-      console.log(res);
-      this.setState({
-        blogs: [...res.data.blogs]
+        method: "get",
+        headers: { Authorization: "Bearer " + JSON.parse(token) },
+        baseURL: `http://127.0.0.1:5000/user/blog/read`
+    })
+    .then(res => {
+        console.log(res);
+        this.setState({
+          blogs: [...res.data.blogs]
+        });
       });
-    });
-  }
+    }
 
   handleDelete = id => {
     let token = localStorage.getItem("token");
@@ -37,11 +38,11 @@ export class Details extends Component {
       baseURL: `http://127.0.0.1:5000/user/blog/delete/${id}`,
       headers: { Authorization: "Bearer " + JSON.parse(token) }
     })
-      .then(res => {
-        console.log(res.data.message);
-        this.componentDidMount();
-      })
-      .catch(err => console.log(err));
+    .then(res => {
+      console.log(res.data.message);
+      this.componentDidMount();
+    })
+    .catch(err => console.log(err));
   };
 
   handleEdit = id => {
@@ -87,8 +88,11 @@ export class Details extends Component {
       return (
         <div className="container p-5 mx-auto">
           <h1>My blogs</h1>
-
-          {this.state.blogs &&
+          {
+            this.state.blogs.length > 0  ? null : <div className="my-2 text-primary">You don't have any blog, create your first blog now !</div>
+          }
+          {
+            this.state.blogs &&
             this.state.blogs.map(blog => (
               <div key={blog.id} className="my-2">
                 <Link to={`/blog/${blog.id}`} className="text-decoration-none">
@@ -136,6 +140,7 @@ export class Details extends Component {
                         <button
                           type="button"
                           className="btn btn-primary"
+                          data-dismiss="modal"
                           onClick={() => this.handleDelete(blog.id)}
                         >
                           Delete
@@ -222,6 +227,7 @@ export class Details extends Component {
                         <button
                           type="button"
                           className="btn btn-primary"
+                          data-dismiss="modal"
                           onClick={() => this.handleUpdate(blog.id)}
                         >
                           Update

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <table>
+            <tr>
+                <td><input type="text" id='txtFirst' placeholder="first number" ></td>
+            </tr>
+            <tr>
+                <td><input type="text" id='txtSecond'placeholder="second number" ></td>
+            </tr>
+            <tr>
+                <td><button id="add" onclick="addition()">Add</button></td>
+            </tr>
+        </table>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+        <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script type="text/babel">
+            function addition() {
+                const first = Number(document.getElementById('txtFirst').value)
+                const sec = Number(document.getElementById('txtSecond').value)
+
+                const root = document.getElementById('root')
+                const elem = (
+                    <h2>
+                        Sum is : {first + sec}
+                    </h2>
+                )
+                ReactDOM.render(elem, root)
+            }
+        </script>
+    </body>
+</html>

@@ -48,15 +48,14 @@ class Home extends React.Component {
     }
     handleClick = async () => {
         this.setState({
-            id: this.state.id + 1
+            id: this.state.id + 1,
+            reg:0
         })
         await axios.get(`http://127.0.0.1:5000/auth/check/${this.state.email}`)
-            // .then(res=>console.log(res))
             .then(res => this.setState({
                 status: Number(res.data)
             }))
         if (this.state.status == 0) {
-            console.log("value")
             axios.post("http://127.0.0.1:5000/auth/signup", { "id": this.state.id, "name": this.state.name, "number": this.state.number, "email": this.state.email, "password": this.state.password })
                 .then(res => console.log(res))
                 .then(res => this.setState({
@@ -67,7 +66,7 @@ class Home extends React.Component {
     render() {
         console.log(this.state)
         if (localStorage.getItem("token")) {
-            return (<Redirect to="/blog"></Redirect>)
+            return (<Redirect to="/blog" />)
         }
         else {
             return (
