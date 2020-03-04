@@ -21,11 +21,10 @@ class Blog extends React.Component {
                 blogs: res.data.items
             }))
     }
-    Logout=()=>{
+    Logout = () => {
         localStorage.clear()
         console.log(this.props)
-        // this.props.histoy.goBack("/home")
-      }
+    }
     render() {
         console.log(this.state.blogs)
         if (localStorage.getItem("token")) {
@@ -33,26 +32,27 @@ class Blog extends React.Component {
                 <React.Fragment>
                     <div class="container-fluid">
                         <div class="row">
-                    {this.state.blogs.map((blog, index) =>
-                    <div class="shadow p-3 mb-5 mt-2 mx-lg-5 bg-white rounded col-lg-3 col-md-6 col-sm-12" key={index}>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="float-left " style={{"font-size":"24px"}}>{blog.title}</h4><span class="float-right">{blog.name}</span>
-                            </div>
-                            <div class="card-body">
-                                <blockquote class="blockquote mb-0">
-                                    <p>{blog.blog}</p>
-                                    <footer class="blockquote-footer">Posted on<cite title="Source Title">{blog.date}</cite></footer>
-                                </blockquote>
-                            </div>
-                            <div class="card-footer text-muted">
-                                <button class="btn btn-primary"><Link to={`/comment/${blog.id}/${blog.user_id}/${blog.category_id}`} style={{ "textDecoration": "none", "color": "white" }}>COMMENT</Link></button>
-                            </div>
-                        </div>
-                        </div>
+                            {this.state.blogs.map((blog, index) =>
+                                <div class="shadow p-3 mb-5 mt-2 mx-lg-5 bg-white rounded col-lg-3 col-md-6 col-sm-12" key={index}>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="float-left " style={{ "font-size": "24px" }}>{blog.title}</h4><span class="float-right">{blog.name}</span>
+                                        </div>
+                                        <div class="card-body">
+                                            <blockquote class="blockquote mb-0">
+                                                <p>{blog.blog}</p>
+                                                <footer class="blockquote-footer">Posted on<cite title="Source Title">{blog.date}</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                        <div class="card-footer text-muted clearfix">
+                                            <button class="btn btn-primary float-left"><Link to={`/comment/${blog.id}/${blog.user_id}/${blog.category_id}`} style={{ "textDecoration": "none", "color": "white" }}>COMMENT</Link></button>
+                                            <button class="btn btn-warning float-right"><Link to={`/Allcomments/${blog.id}/${blog.user_id}/${blog.category_id}`} style={{ "textDecoration": "none", "color": "white" }}>SHOW-ALL</Link></button>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    )}
-                    </div>
+                            )}
+                        </div>
                     </div>
                 </React.Fragment>
             )
