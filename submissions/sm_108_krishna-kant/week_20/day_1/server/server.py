@@ -25,6 +25,7 @@ def home():
     finally:
         conn.close()
 
+
 @app.route('/folder' , methods=['POST'])
 def folders():
     current_id = str(request.json['current_id'])
@@ -81,5 +82,16 @@ def create():
     finally:
         conn.close()
 
+@app.route("/all")
+def all():
+    try:
+        conn = mysql.connection.cursor()
+        conn.execute(""" SELECT * FROM ftp """)
+        rows = conn.fetchall()
+        return jsonify({"data":rows}),200
+    except Exception as e:
+        print(str(e))
+    finally:
+        conn.close()
 
 app.run(debug=True)
