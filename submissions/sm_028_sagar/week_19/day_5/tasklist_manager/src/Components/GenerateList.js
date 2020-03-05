@@ -7,7 +7,8 @@ export default class GenerateList extends Component {
         this.state = {
             title : '',
             category : '',
-            helpText:''
+            helpText:'',
+            tasklist:[]
         }
     }
 
@@ -31,8 +32,10 @@ export default class GenerateList extends Component {
                 }
             })
             .then(res => this.setState({
-                helpText:res.data.message
+                helpText:res.data.message,
+                tasklist:res.data.tasklist
             }))
+            .then(res => this.props.listcreated(this.state.tasklist))
             .catch(err => console.log(err))
     }
 
@@ -54,6 +57,7 @@ export default class GenerateList extends Component {
                         </div>
                         <div className="form-group col-md-12">
                             <button type="submit" className="btn btn-outline-danger my-2" onClick={() => this.handleCreateList()}>Stick Your List</button>
+                            {this.state.helpText && <div>{this.state.helpText}</div>}
                         </div>
                     </div>  
                 </div>  
