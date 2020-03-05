@@ -26,7 +26,7 @@ def register():
         cursor.close()
         return { "message" : "User added"}
 
-@user.route('/login')
+@user.route('/login', methods=['POST'])
 def login():
     email = request.json['email']
     password = request.json['password']

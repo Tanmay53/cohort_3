@@ -18,8 +18,8 @@ def multiHashing(password, salt):
     return string
 
 def decodeToken(token):
-    decode = jwt.decode(token, 'charlie', algorithms=['HS256'])
-    id = decode['id']
+    decodeT = jwt.decode(token, 'charlie', algorithms=['HS256'])
+    id = decodeT['id']
     return id
 
 def getUser(id):

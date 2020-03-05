@@ -42,7 +42,7 @@ class Create extends React.Component {
                 "date": this.state.date
             }
         })
-            .then(res => console.log(res))
+            .then(this.props.history.goBack)
     }
     handleChange = (e) => {
         this.setState({
