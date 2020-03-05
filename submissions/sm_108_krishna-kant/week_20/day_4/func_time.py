@@ -20,4 +20,4 @@ def factorial(n):
             fact = fact * every
         return fact
 
-factorial(5)
+factorial(50000)
