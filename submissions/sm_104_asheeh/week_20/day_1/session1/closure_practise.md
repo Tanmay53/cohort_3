@@ -12,7 +12,7 @@ INSERT INTO closure_table (ancestor_id, descendant_id, path_length) VALUE (1, 1,
 
 INSERT INTO folders (folder_name) VALUE ("sm_104");
 
-insert into closure_table (ancestor_id, descendant_id, path_length) SELECT ancestor_id, 8, path_length + 1 FROM closure_table WHERE descendant_id = 7 UNION ALL SELECT 8, 8, 0;
+INSERT INTO closure_table (ancestor_id, descendant_id, path_length) SELECT ancestor_id, 8, path_length + 1 FROM closure_table WHERE descendant_id = 7 UNION ALL SELECT 8, 8, 0;
 
 
 ````
@@ -30,4 +30,6 @@ select * from (select count(descendant_id) as count, descendant_id from closure_
 select * from folders join closure_table on folders.id = closure_table.descendant_id where ancestor_id = 1 and path_length = 1;
 
 select * from folders join closure_table on folders.id = closure_table.descendant_id where closure_table.ancestor_id = (select folders.id from folders join closure_table on folders.id = closure_table.ancestor_id where descendant_id = 7 and path_length = 2) and closure_table.path_length = 1;
+
+SELECT * FROM folders JOIN closure_table ON folders.id = closure_table.ancestor_id WHERE descendant_id = 6 AND path_length = 1;
 ````
