@@ -1,0 +1,23 @@
+.footer-logo{
+  height: 20px;
+}
+
+.footer{
+  margin-top:2% ;
+  margin-bottom: 2%;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li > h6{
+  color: #5C5C5C;
+  font-weight: bold;
+}
+
+.terms{
+  font-size: 0.7rem;
+}
