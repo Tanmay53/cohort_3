@@ -20,11 +20,17 @@ function NavBar(props) {
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <Link class="nav-link" to='/blog/dashboard' >New List <span class="sr-only">(current)</span></Link>
+                            <Link class="nav-link" to='/' >Home<span class="sr-only">(current)</span></Link>
                         </li>  
                         <li class="nav-item active">
-                            <Link class="nav-link" to='/blog/create' > Summery <span class="sr-only">(current)</span></Link>
-                        </li>                    
+                            <Link class="nav-link" to='/author' >Author<span class="sr-only">(current)</span></Link>
+                        </li>  
+                        <li class="nav-item active">
+                            <Link class="nav-link" to='/publisher' >Publisher<span class="sr-only">(current)</span></Link>
+                        </li>  
+                        <li class="nav-item active">
+                            <Link class="nav-link" to='/category' >Category<span class="sr-only">(current)</span></Link>
+                        </li>  
                     </ul>
                     <ul class="navbar-nav">
                         {props.showRegisterButton &&  
