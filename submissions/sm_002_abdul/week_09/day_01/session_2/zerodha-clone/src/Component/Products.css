@@ -1,0 +1,58 @@
+.heading-product{
+  padding: 8%;
+}
+
+.technology-color{
+  color: #464242;
+  font-size: 2.8rem;
+}
+
+.investment-color{
+  color: #ACABAB;
+  font-size: 2.8rem;
+}
+
+.kite{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.playstore{
+  height: 48px;
+}
+
+.console{
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.coin{
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.api-kite{
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.varsity{
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.zerodha-universe{
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+
+.client-logos{
+  height: 75%;
+  width: 75%;
+  padding: 5%;
+}
+
+.sign-up-button{
+  padding-top:3%;
+  padding-bottom:5%;
+}

@@ -40,17 +40,47 @@ def find_child(id):
 
 @app.route('/parent/<int:id>')
 def parent(id):
+    c1 = mysql.connection.cursor()
+    c1.execute(
+        """select * from folders join Closure_Table on folders.id = Closure_Table.descendant where ancestor = (select folders.id from Closure_Table join folders on folders.id = ancestor where descendant = %s and length = 2) and length = 1""", (str(id))
+    )
+    res1 = c1.fetchall()
+    if len(res1) > 0:
+        c1.close()
+        return {"parent": res1}
+    else:
+        c1.execute(
+            """SELECT * FROM folders join Closure_Table on folders.id = ancestor where descendant = %s and length = 1""", (str(id))
+        )
+        res2 = c1.fetchall()
+        return {"parent": res2}
+    c1.close()
+
+@app.route('/create_folder', methods=['POST'])
+def create_folder():
+    body = request.json
+    folder_name = body['folder_name']
+    parent_id = body['parent_id']
+
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """SELECT * FROM Closure_Table JOIN folders ON (folders.id = ancestor)
-        WHERE descendant = %s and length = 2""", (str(id))
+        """INSERT INTO folders (folder_name) 
+        VALUES (%s)""", (folder_name,)
     )
-    results = cursor.fetchall()
+    cursor.execute(
+        """SELECT id FROM folders WHERE folder_name = (%s)""", (folder_name,)
+    )
+    res = cursor.fetchall()
+    folder_id = res[0]['id']
+    cursor.execute(
+        """INSERT INTO Closure_Table (ancestor, descendant, length)  
+        SELECT ancestor, %s, (length+1) FROM Closure_Table WHERE descendant = %s 
+        UNION ALL SELECT %s, %s, 0""", (folder_id, parent_id, folder_id, folder_id)
+    )
+    mysql.connection.commit()
     cursor.close()
-    parents = []
-    for i in results:
-        parents.append(i)
-    return {"parents": parents}
+    return {"message": "Folder Created"}
+
 
 # @app.route('/create', methods=['GET', 'POST'])
 # def create():
