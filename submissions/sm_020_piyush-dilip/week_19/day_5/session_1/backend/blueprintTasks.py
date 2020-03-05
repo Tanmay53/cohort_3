@@ -23,7 +23,7 @@ def createTask():
 
     return { 'message' : "Task added"}
 
-@task.route('/read')
+@task.route('/read', methods=['POST'])
 def readTasks():
     listId = request.json['listId']
     cursor = mysql.connection.cursor()
@@ -71,7 +71,7 @@ def readTask(id):
 
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """ SELECT task FROM task WHERE id = %s """, (id,)
+        """ SELECT task FROM tasks WHERE id = %s """, (id,)
     )
     result = cursor.fetchone()
     cursor.close()
