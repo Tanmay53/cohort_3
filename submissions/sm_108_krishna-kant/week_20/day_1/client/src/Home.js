@@ -10,6 +10,7 @@ export default function Home() {
     currentDir: "",
     levels: [],
     backLevels: [],
+    mainData: [],
     isAdded: false
   });
 
@@ -18,13 +19,27 @@ export default function Home() {
   }, []);
 
   const fetchRoot = async () => {
-    let response = await axios.get("http://localhost:5000");
+    let response = await axios.get("http://localhost:5000/");
+    let all = await axios.get("http://localhost:5000/all");
+    console.log(all);
 
     setFile({
       ...file,
       levels: response.data.data,
-      currentPath: response.data.data[0].path
+      currentPath: response.data.data[0].path,
+      mainData: all.data.data || []
     });
+  };
+
+  const showBreadCrumps = () => {
+    console.log("Bread Crumps");
+    let currentPath = file.currentPath;
+    if (currentPath == null) {
+      console.log("Root");
+    } else {
+      currentPath.replace("/", "");
+      console.log(currentPath + "s");
+    }
   };
 
   const changeFolder = (data, id) => {
