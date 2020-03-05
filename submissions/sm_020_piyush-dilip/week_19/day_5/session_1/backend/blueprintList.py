@@ -12,15 +12,28 @@ def createList():
     user = getUser(token)
     userId = user['id']
     listname = request.json['listname']
+    taskArr = request.json['taskArr']
 
     cursor = mysql.connection.cursor()
     cursor.execute(
         """ INSERT INTO list (listname, userId) VALUES (%s, %s) """, (listname, userId)
     )
+
+    cursor.execute( """ SELECT id, listname FROM list WHERE listname = %s """, ( listname, ) )
+
+    result = cursor.fetchone() 
+    mysql.connection.commit()
+    
+
+    for task in taskArr :
+        cursor.execute(
+            """ INSERT INTO tasks ( task, listId, userId ) VALUES (%s,  %s, %s) """, (task, result['id'], userId)
+        )
+    
     mysql.connection.commit()
     cursor.close()
 
-    return { "message" : "List added"}
+    return { "message" : "List and tasks created"}
 
 
 @list.route('/read')
@@ -34,7 +47,7 @@ def read():
     cursor = mysql.connection.cursor()
 
     cursor.execute(
-        """ SELECT listname FROM list WHERE userId = %s """, (userId,)
+        """ SELECT list.id AS listId, listname,  COUNT(tasks.id) AS task FROM list JOIN tasks ON list.id = tasks.listId WHERE list.userId = %s GROUP BY list.id """, (userId,)
     )
 
     result = cursor.fetchall()

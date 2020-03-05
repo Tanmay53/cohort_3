@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>leader board</title>
+        <style type='text/css'>
+
+            #wrapper{
+                width: 60%;
+                margin-left:auto;
+                margin-right: auto;
+            }
+
+           #min, #max {
+               display: inline-block;
+               margin-right: 100px;
+               text-align: center;
+           }
+           .box{
+               height: 80px;
+               width: 120px;
+               border: 2px solid black;
+               text-align: center;
+               font-size: 25px;
+               padding-top:20px;
+           }
+           .red {
+               background: red;
+           }
+           .green {
+               background: green;
+           }
+           .orange {
+               background: orange;
+           }
+           .purple {
+               background: purple;
+           }
+           .cyan {
+                background: cyan;
+           }
+           #min_max h1 {
+               display: inline;
+           }
+           #dialer {
+                margin-left:50px;  
+               
+           }
+           #dialer h2{
+                display: inline-block;   
+                margin-left: 70px;
+           }
+           #buttons {
+               display: grid;
+               grid-template-columns: repeat(3, 80px);
+               grid-template-rows: 100px repeat(5, 80px);
+               grid-gap: 10px;
+
+           }
+
+           #buttons > div {
+               border: 2px solid black;
+           }
+           #score {
+               grid-column: span 3;
+               
+           }
+           #enter {
+                grid-row-start: 6;
+                grid-column: span 3;
+
+           }
+           #zero {
+               grid-column-start: 2;
+           }
+           #buttons > div {
+               text-align: center;
+               font-size: 25px;
+               padding-top:20px;
+           }
+           #enter{
+               color: white;
+               background: black;
+           }
+        </style>
+
+        <script type='text/javascript'>
+            function number(num) {
+                div_score = document.getElementById('score')
+                div_score.innerHTML = div_score.innerHTML + num
+            }
+
+            function enterButton() {
+                min_num = document.getElementById('min_num')
+                max_num = document.getElementById('max_num')
+                div_score = document.getElementById('score')
+
+                score = parseInt(div_score.innerHTML)
+                min = parseInt(min_num.innerHTML)
+                max = parseInt(max_num.innerHTML)
+
+                if(score > max) {
+                    max_num.textContent = score
+                }
+                else if(score < min) {
+                    min_num.textContent = score
+                }
+                
+                div_score.innerHTML = '0'
+            }
+        </script>
+    </head>
+</html>
+<body>
+    <div id="wrapper">
+        <div id="min_max">
+            <div id="min">
+                <div id="min_num" class='box red'>43</div>
+                <h2>MIN</h2>
+            </div>
+            <div id="max">
+                <div id="max_num" class="box green">2019</div>
+                <h2>MAX</h2>
+            </div>
+        </div>
+        <div id="dialer">
+            <h2>SCORE</h2>
+            <div id="buttons">
+                <div id="score" class='cyan'>0</div>
+
+                <div class="green" onclick="number('1')" >1</div> 
+                <div class="orange" onclick="number('2')">2</div> 
+                <div class="green" onclick="number('3')">3</div>
+                <div class="orange" onclick="number('4')">4</div> 
+                <div class="orange"  onclick="number('5')">5</div> 
+                <div class="orange" onclick="number('6')">6</div>
+                <div class="green" onclick="number('7')">7</div> 
+                <div class="orange" onclick="number('8')">8</div> 
+                <div class="green" onclick="number('9')">9</div>
+                <div id="zero" class="purple" onclick="number('0')">0</div>
+                <div id="enter" onclick="enterButton()">ENTER</div>
+            </div>
+        </div>
+    </div>
+</body>

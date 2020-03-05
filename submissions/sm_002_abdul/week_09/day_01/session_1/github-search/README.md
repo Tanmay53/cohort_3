@@ -1,4 +1,4 @@
-#A github user search engine made using React. Used Axios to make API calls
+# A github user search engine made using React. Used Axios to make API calls
 
 
 

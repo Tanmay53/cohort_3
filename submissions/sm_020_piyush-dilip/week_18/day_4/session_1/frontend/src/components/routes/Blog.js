@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
 
 export class Blog extends Component {
     constructor(props) {
@@ -20,8 +21,6 @@ export class Blog extends Component {
     componentDidMount() {
         if(this.props.loggedIn){
             let id = this.props.match.params.id
-            let token = localStorage.getItem("token")
-            console.log(id)
 
             axios.get(`http://127.0.0.1:5000/blog/read/${id}`)
             .then(res => {
@@ -37,21 +36,9 @@ export class Blog extends Component {
                     comments: res.data.comments
                 })
             })
-
-            axios({
-                method: 'get',
-                baseURL: 'http://127.0.0.1:5000/user/details',
-                headers : { "Authorization" : "Bearer " + JSON.parse(token) }
+            this.setState({
+                username : this.props.username
             })
-            .then(res => {
-                console.log(res.data.user[0]['username'])
-                this.setState({
-                    username : res.data.user[0]['username']
-                })
-            } )
-    }
-    else {
-        alert('Log in to see full blog')
     }
     }
 
@@ -141,6 +128,7 @@ export class Blog extends Component {
     }
     
     render() {
+        if(this.props.loggedIn){
         return (
             <div className="container p-5">
                 {
@@ -197,6 +185,10 @@ export class Blog extends Component {
                 }
             </div>
         )
+    }
+    else {
+        return <Redirect to='/login' />
+    }
     }
 }
 
