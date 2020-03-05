@@ -28,6 +28,9 @@ export class Tasks extends Component {
                     tasklist: res.data[0]
                 })
             })
+            .catch((res) => {
+                console.log("error")
+            })
         axios({
             method: "GET",
             url: `http://localhost:5000/task/gettasks/${this.props.match.params.id}`,
@@ -40,6 +43,9 @@ export class Tasks extends Component {
                 this.setState({
                     tasks: res.data
                 })
+            })
+            .catch((res) => {
+                console.log("error")
             })
     }
 
@@ -78,6 +84,12 @@ export class Tasks extends Component {
                             tasks: res.data
                         })
                     })
+                    .catch((res) => {
+                        console.log("error")
+                    })
+            })
+            .catch((res) => {
+                console.log("error")
             })
         this.setState({
             content: "",
@@ -117,6 +129,9 @@ export class Tasks extends Component {
                     taskid: res.data[0].id
                 })
             })
+            .catch((res) => {
+                console.log("error")
+            })
     }
 
     deletetask = (id) => {
@@ -145,6 +160,10 @@ export class Tasks extends Component {
                         this.setState({
                             tasks: res.data
                         })
+
+                    })
+                    .catch((res) => {
+                        console.log("error")
                     })
             })
     }
@@ -174,7 +193,13 @@ export class Tasks extends Component {
                             tasks: res.data
                         })
                     })
+                    .catch((res) => {
+                        console.log("error")
+                    })
 
+            })
+            .catch((res) => {
+                console.log("error")
             })
         this.setState({
             content: "",
@@ -199,6 +224,9 @@ export class Tasks extends Component {
                 this.setState({
                     content: res.data[0].title
                 })
+            })
+            .catch((res) => {
+                console.log("error")
             })
 
     }
@@ -228,6 +256,12 @@ export class Tasks extends Component {
                             tasklist: res.data[0]
                         })
                     })
+                    .catch((res) => {
+                        console.log("error")
+                    })
+            })
+            .catch((res) => {
+                console.log("error")
             })
         this.setState({
             istitleEdit: false,
@@ -247,22 +281,31 @@ export class Tasks extends Component {
                 .then((res) => {
                     this.props.history.push("/tlists")
                 })
+                .catch((res) => {
+                    console.log("error")
+                })
     }
     render() {
-        console.log(this.state.content)
+        // console.log(this.state.content)
         return (
-            <div>            <div className="container">
-                <div className="col-12">
-
-                    <h1>Title:{this.state.tasklist.title}</h1>
-                    <button className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onClick={this.edittitlemodal} >Edit</button>
-                    <button className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onClick={() => this.addmodal()}>Add</button>
-                    <button onClick={this.deletetasklist}>Delete</button>
-                    {/* <div className="row"> */}
-                    {this.state.tasks.map((ele) => <div className="row"><div className="col-6">{ele.content}</div><div className="col-3"><button data-toggle="modal" data-target="#exampleModal" onClick={() => this.edittask(ele.id)}>edit</button></div><div><button onClick={() => this.deletetask(ele.id)}>delete</button></div></div>)}
-                    {/* </div> */}
+            <div>
+                <div className="container">
+                    <div className="col-12">
+                        <div className="row border">
+                            <div className="col-lg-8 col-xl-8 col-sm-12 col-md-12">
+                                <h1>Title:{this.state.tasklist.title}</h1>
+                            </div>
+                            <div className="col-lg-3 col-xl-3 col-sm-12 col-md-12">
+                                <button className="btn btn-outline-primary m-2" data-toggle="modal" data-target="#exampleModal" onClick={this.edittitlemodal} >Edit</button>
+                                <button className="btn btn-outline-success m-2" data-toggle="modal" data-target="#exampleModal" onClick={() => this.addmodal()}>Add</button>
+                                <button className="btn btn-outline-danger m-2" onClick={this.deletetasklist}>Delete</button>
+                            </div>
+                        </div>
+                        {/* <div className="row"> */}
+                        {this.state.tasks.map((ele) => <div className="row border m-2 p-2"><div className="col-lg-8 col-xl-8 col-sm-12 col-md-12">{ele.content}</div><div className="col-lg-2 col-xl-2 col-sm-6 col-md-6"><button className="btn btn-info" data-toggle="modal" data-target="#exampleModal" onClick={() => this.edittask(ele.id)}>edit</button></div><div className="col-lg-2 col-xl-2 col-sm-6 col-md-6"><button className="btn btn-danger" onClick={() => this.deletetask(ele.id)}>delete</button></div></div>)}
+                        {/* </div> */}
+                    </div>
                 </div>
-            </div>
 
 
 
@@ -271,7 +314,10 @@ export class Tasks extends Component {
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">Add task</h5>
+                                {this.state.isadd && <h5 className="modal-title" id="exampleModalLabel">Add task</h5>}
+                                {this.state.istaskEdit && <h5 className="modal-title" id="exampleModalLabel">Edit task</h5>}
+                                {this.state.istitleEdit && <h5 className="modal-title" id="exampleModalLabel">Edit Tasklist Title</h5>}
+
                             </div>
                             <div className="modal-body">
                                 <div className="row">

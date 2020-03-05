@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { CreateTasklist } from './CreateTasklist'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
@@ -26,6 +25,9 @@ export class Tasklists extends Component {
                 this.setState({
                     tlists: res.data
                 })
+            })
+            .catch((res)=>{
+                console.log("error")
             })
 
     }
@@ -60,6 +62,9 @@ export class Tasklists extends Component {
                             tlists: res.data
                         })
                     })
+                    .catch((res)=>{
+                        console.log("error")
+                    })
             })
     }
     handleChage = (e) => {
@@ -68,19 +73,24 @@ export class Tasklists extends Component {
         })
     }
     render() {
-        console.log(this.state.tlists)
         return (
             <div className="container">
                 <div className="col-12">
                     <div className="row">
                         <div className="col-8">
-                            <h1>Welcome back {this.props.value.user}</h1>
+                            <h4>Welcome back {this.props.value.user}............</h4>
                         </div>
                         <div className="col-4">
-                            <button className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Create New Tasklist</button>
+                            <button className="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Create New Tasklist</button>
                         </div>
                     </div>
-                    {this.state.tlists.map((ele) => <div><Link to={`/tlist/${ele.tasklist_id}`}>{ele.tasklist_title}</Link>{ele.count}</div>)}
+                    <div className="row">
+                        <div className="col-3"></div>
+                        <div className="col-6">
+                            {this.state.tlists.map((ele) => <div className="row border p-3 m-2"><div className="col-8"><Link to={`/tlist/${ele.tasklist_id}`}>{ele.tasklist_title}</Link></div><div className="col-4 text-right">{ele.count}</div></div>)}
+                        </div>
+                        <div className="col-3"></div>
+                    </div>
                 </div>
 
 
