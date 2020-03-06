@@ -10,6 +10,5 @@ def count_letters(lst):
     for key, value in dict.items():
         print(key, '-', value)
 
-
 count_letters(["Masai", "School"])
 

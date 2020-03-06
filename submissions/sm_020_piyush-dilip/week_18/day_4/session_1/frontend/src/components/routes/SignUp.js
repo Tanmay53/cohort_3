@@ -10,7 +10,7 @@ export class SignUp extends Component {
       username: "",
       email: "",
       password: "",
-      flag: false
+      message : ''
     };
   }
 
@@ -40,7 +40,7 @@ export class SignUp extends Component {
         .then(res => {
           alert(res.data.message);
           this.setState({
-            flag: true,
+            message : res.data.message + "you can login now",
             username: "",
             password: "",
             email: ""
@@ -53,13 +53,6 @@ export class SignUp extends Component {
   render() {
     return (
       <div className="mx-auto p-5 w-50 mt-1 bg-light">
-        {this.state.flag ? (
-          <Link to="/login" className="text-decoration-none text-dark">
-            <button className="btn btn-block my-2 btn-info">
-              Go to login page
-            </button>
-          </Link>
-        ) : (
           <form>
             <label>username</label>
             <input
@@ -95,7 +88,7 @@ export class SignUp extends Component {
               Sign Up
             </button>
           </form>
-        )}
+        <div className="text-info">{this.state.message}</div>
       </div>
     );
   }

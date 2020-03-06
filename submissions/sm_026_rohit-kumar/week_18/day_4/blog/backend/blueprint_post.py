@@ -80,7 +80,10 @@ def post_comment():
 
 @post.route('/comments/<int:blog_id>')
 def get_comments_by_blog_id(blog_id):
-    query = 'SELECT `comment` FROM `comment` WHERE `blog_id` = %s'
+    # query = 'SELECT `comment` FROM `comment` WHERE `blog_id` = %s'
+    query = """SELECT comment.comment, user.name FROM comment 
+               LEFT JOIN user ON comment.user_id = user.user_id WHERE comment.`blog_id` = %s
+            """
     result = select_all(query, [blog_id])
     return jsonify(result)
 
