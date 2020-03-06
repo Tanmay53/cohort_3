@@ -41,10 +41,23 @@ SELECT * FROM Closure_Table JOIN folders ON (folders.id = ancestor) WHERE descen
 INSERT INTO folders (folder_name)
 VALUES ("SM_114");
 ```
+##### Top level folders
+```sql
+-- find count
+SELECT COUNT(descendant) AS des_count, descendant FROM Closure_Table GROUP BY descendant
 
+-- find top level folder
+ SELECT * FROM (SELECT COUNT(descendant) AS des_count, descendant FROM Closure_Table GROUP BY descendant) AS des_count_table JOIN folders ON folders.id = des_count_table.descendant WHERE des_count = 1;
+```
 
 #### Insert into closure table 
 ```sql
 INSERT INTO Closure_Table (ancestor, descendant, length)  SELECT ancestor, 8, (length+1) FROM Closure_Table WHERE descendant = 7 UNION ALL SELECT 8, 8, 0;
+```
+
+#### Find child under the parent
+```mysql
+SELECT * FROM Closure_Table JOIN folders ON 
+(folders.id = descendant) WHERE ancestor = %s and length = 1""", (str(id))
 ```
 
