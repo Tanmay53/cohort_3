@@ -5,7 +5,8 @@ import Amenities from './Amenities'
 import Bodysecond from './Bodysecond'
 import Bodythird from './Bodythird'
 import Partners from './Partners'
-import styles from './styles.css'
+import './styles.css'
+
 class Home extends React.Component{
     constructor(props){
         super(props)
