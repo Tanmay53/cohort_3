@@ -52,8 +52,7 @@ def check(email):
 @auth.route('/signup', methods=['POST'])
 def registration():
     if request.method == "POST":
-        reg = os.path.isfile(
-            "/home/piyush/coding/week_19/day_2/blog/src/registration.csv")
+        reg = os.path.isfile("/home/piyush/coding/week_19/day_2/blog/src/registration.csv")
         with open("/home/piyush/coding/week_19/day_2/blog/src/registration.csv", "a") as csvfile:
             fieldnames = ["id", "name", "email", "number", "salt", "password"]
             salt = generate_salt()
@@ -90,5 +89,4 @@ def login(email, password):
                     print(encoded_data)
                     status = 1
                     return {"token":str(encoded_data)}
-            else:
-                return({"message":"unsuccessful"})        
+        return({"message":"unsuccessful"})        

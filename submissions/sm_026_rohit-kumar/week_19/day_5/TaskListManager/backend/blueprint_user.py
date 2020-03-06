@@ -44,7 +44,7 @@ def login():
     password = request.json['password']
 
     # get the token back
-    query = "SELECT user_id, name FROM `user` WHERE `username` = %s AND `password` = %s"
+    query = "SELECT user_id, name FROM `users` WHERE `username` = %s AND `password` = %s"
     arguments = [username, md5_hash(password)]
     result = select_one(query, arguments)
     if result['result'] == 'success':

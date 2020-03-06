@@ -93,7 +93,7 @@ export class Routes extends Component {
                     <Route path='/signup' exact component={SignUp} />
                     <Route path='/login' exact render={(props) => <Login  {...props} login={this.login} />} />
                     <Route path='/details' render={(props) => <Details {...props} loggedIn={this.state.flag}  />} />
-                    <Route path='/blog/:id' exact render={(props) => <Blog {...props} loggedIn={this.state.flag}  />} />
+                    <Route path='/blog/:id' exact render={(props) => <Blog {...props} loggedIn={this.state.flag} username={this.state.username}  />} />
                     <Route render={() => <NotFound flag={this.notFound} />} />
                 </Switch>
                 {/* <a href="https://icons8.com/icon/84020/user">User icon by Icons8</a> */}

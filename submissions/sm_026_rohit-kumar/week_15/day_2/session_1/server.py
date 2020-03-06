@@ -1,7 +1,9 @@
 from flask import Flask, request
 import csv, json, os
 
+
 app = Flask(__name__)
+
 
 
 def get_data_from_csvfile(filter='ALL'):
@@ -123,4 +125,5 @@ def purchased():
         records[item_no - 1]['purchased'] = 1
         write_all_records_to_csv(records)
         return json.dumps(records)
+        
 
