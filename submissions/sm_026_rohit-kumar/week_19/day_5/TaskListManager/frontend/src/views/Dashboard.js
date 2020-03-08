@@ -3,20 +3,20 @@ import TaskList from '../components/TaskList'
 import uuid from 'react-uuid'
 import axios from 'axios'
 import {connect} from 'react-redux'
-import {add_tasklist} from '../redux/Action'
+import {add_tasklist, clear_tasklist} from '../redux/Action'
 import { Redirect } from 'react-router-dom'
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            search: ''
         }
     }
 
     createNewTaskList = () => {
         const url = 'http://localhost:5000/task/create'
-        const data = {  'user_id': this.props.user_id || 4,
+        const data = {  'user_id': this.props.user_id,
                         'uuid': uuid(),
                         'name': 'Title for your tasklist goes here.',
                         'desc': 'Mention the purpose you want to achieve through this task list. Mention the objective of the list creation.',
@@ -35,8 +35,38 @@ class Dashboard extends React.Component {
 
     }
 
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
     handleClick = () => {
         this.createNewTaskList()
+    }
+
+    handleSearch = () => {
+        // clear existing tasks in list
+        this.props.clear_tasklist()
+
+        // load all tasklist for user from the database
+        const url = 'http://localhost:5000/task/search/tasklist'
+        const data = {
+            "user_id": this.props.user_id,
+            "search" : this.state.search
+        }
+
+        console.log(url, data)
+        axios.post(url, data)
+        .then(res => {
+            console.log(res)
+            if(res['data']['result'] === 'success' && res['data']['data'].length > 0) {
+                this.processAndLoad(res['data']['data'])
+            }
+                
+            
+        })
+        .catch(err => console.log(err))
     }
 
     processAndLoad(arr) {
@@ -62,17 +92,23 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount = () => {
+        // clear existing tasks in list
+        this.props.clear_tasklist()
+
         // load all tasklist for user from the database
         const url = 'http://localhost:5000/task/select/tasklist'
         const data = {
             "user_id": this.props.user_id
         }
 
+        console.log(url, data)
         axios.post(url, data)
         .then(res => {
-            console.log(res['data']['data'])
-            if(res['data']['result'] === 'success')
+            if(res['data']['result'] === 'success' && res['data']['data'].length > 0) {
                 this.processAndLoad(res['data']['data'])
+            }
+                
+            
         })
         .catch(err => console.log(err))
     }
@@ -89,10 +125,11 @@ class Dashboard extends React.Component {
             <>
                 <div className='row'>
                     <div className='col-md-8'>
-                        <input type='text' className='form-control'></input>                        
+                        <input name='search' onChange={this.handleChange} value={this.state.search} type='text' className='form-control'></input>                        
                     </div>
                     <div className='col-md-1'>
-                        <button onClick={prompt('Enter value')} className='btn btn-primary'>
+                        {/* onClick={prompt('Enter value')} */}
+                        <button onClick={this.handleSearch} className='btn btn-primary'>
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -130,7 +167,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        add_tasklist: (data) => dispatch(add_tasklist(data))
+        add_tasklist: (data) => dispatch(add_tasklist(data)),
+        clear_tasklist: (data) => dispatch(clear_tasklist())
     }
 }
 
