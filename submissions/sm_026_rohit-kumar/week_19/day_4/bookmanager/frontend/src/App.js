@@ -12,7 +12,6 @@ function App() {
       <div className='container mt-3'>
         <div className='row'>
           <div className='col-md-10 offset-md-1 col-xs-12'>
-            <ComboBox/>
             <Router />
           </div>
         </div>
