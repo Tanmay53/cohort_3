@@ -47,15 +47,17 @@ def edit(id):
             return ({"message": "getting edited"})
 
 # function to delete an item
-@app.route('/delete/<int:id>')
-def delete(id):
+@app.route('/delete/<int:idx>')
+def delete(idx):
     global users
     users = []
-    delete_address_csv(id)
+    delete_address_csv(idx)
+    print(idx)
     with open("/home/piyush/coding/week_16/day_4/address/src/users.csv", "r")as csvfile:
         reader = csv.DictReader(csvfile, delimiter=" ", quotechar=" ")
         for row in reader:
-            if(int(row["id"]) == int(id)):
+            print("reached")
+            if(int(row["id"]) == int(idx)):
                 continue
             else:
                 users.append(row)
@@ -79,13 +81,14 @@ def write_csv(users):
 
 
 # function to detect the id in address csv
-def delete_address_csv(id):
+def delete_address_csv(idx):
     global address
     address = []
     with open("/home/piyush/coding/week_16/day_4/address/src/address.csv", "r")as csvfile:
         reader = csv.DictReader(csvfile, delimiter=" ", quotechar=" ")
         for row in reader:
-            if(int(row["id"]) == int(id)):
+            print("here")
+            if(int(row["id"]) == int(idx)):
                 continue
             else:
                 address.append(row)

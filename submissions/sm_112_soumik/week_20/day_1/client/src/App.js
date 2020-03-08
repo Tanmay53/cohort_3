@@ -8,7 +8,7 @@ function App() {
   const [path, setPath] = useState("");
   const [name, setName] = useState("");
   const [folders, setFolders] = useState([]);
-  const [stack, setStack] = useState([1]);
+  const [stack, setStack] = useState(["/1"]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,33 +41,33 @@ function App() {
     setLevel(level + "/" + obj.toString());
     setCount(count + 1);
     let temp = stack;
-    temp.push(obj);
+    temp.push("/" + obj.toString());
     setStack(temp);
-    console.log(temp, "push");
   };
   const backHandler = async () => {
     let temp = stack;
+    console.log(temp[temp.length - 1]);
     if (temp.length > 1) {
       temp.pop();
       setStack(temp);
-      await axios
-        .post("http://127.0.0.1:5000/get_folder", {
-          path_level: level + "/" + temp[temp.length - 1].toString()
-        })
-        .then(res => console.log(res.data));
-
-      setCount(count + 1);
+      await setLevel("%" + temp[temp.length - 1]);
+      setCount(count + 10);
     } else {
-      alert("can't g back");
+      alert("ca't go back");
     }
   };
   return (
     <div>
-      <input
-        placeholder="create new folder"
-        onChange={e => setName(e.target.value)}
-      />
-      <button onClick={createFolder}>Create Folder</button>
+      <div className="col-md-4 row">
+        <input
+          placeholder="create new folder"
+          onChange={e => setName(e.target.value)}
+          className="form-control"
+        />
+        <button className="btn btn-danger" onClick={createFolder}>
+          Create Folder
+        </button>
+      </div>
       <hr />
       <i onClick={backHandler} className="fas fa-backward fa-3x">
         Go Back
@@ -78,7 +78,7 @@ function App() {
           <span>loadind...</span>
         ) : (
           folders.map(ele => (
-            <div className="col-md-2 m-auto">
+            <div key={ele.id} className="col-md-2 m-auto">
               <i
                 onClick={() => openFolder(ele.id)}
                 className="fas fa-3x  fa-folder-open"
