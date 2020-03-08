@@ -17,8 +17,8 @@ class App extends React.Component {
       <BrowserRouter>
         <React.Fragment>
           <nav class="navbar navbar-dark bg-dark">
-            <div><button class="btn btn-primary"><Link to="/list" style={{ "color": "white", "textDecoration": "none" }}>SHOW ALL USERS</Link></button></div>
-            <h3 style={{ "color": "white" }}><Link to="/home" style={{ "color": "white", "textDecoration": "none" }}> ADDRESS DIRECTORY</Link></h3>
+            <div><button class="btn btn-primary"><Link to="/list" style={{ "color": "white", "textDecoration": "none" }}>ALL USERS</Link></button></div>
+            <h3 style={{ "color": "white" }}><Link to="/home" style={{ "color": "white", "textDecoration": "none" }} class="	d-none d-sm-block"> ADDRESS DIRECTORY</Link></h3>
             <div><button class="btn btn-primary"><Link to="/create" style={{ "color": "white", "textDecoration": "none" }}>CREATE USER</Link></button>
             <button class="btn btn-danger ml-2"><Link to="/list" style={{ "color": "white" }}>LOGOUT</Link></button></div>
           </nav>

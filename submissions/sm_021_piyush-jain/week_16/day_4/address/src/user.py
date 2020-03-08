@@ -49,13 +49,14 @@ def user_detail(id):
         return jsonify(users)
 
 # function to get a particular user's all address's
-@user.route('/address_detail/<int:id>')
-def address_detail(id):
+@user.route('/address_detail/<int:idx>')
+def address_detail(idx):
     global users
     users = []
     with open("/home/piyush/coding/week_16/day_4/address/src/address.csv", "r")as csvfile:
         reader = csv.DictReader(csvfile, delimiter=" ", quotechar=" ")
         for row in reader:
-            if(int(row["id"]) == int(id)):
+            if(int(row["id"]) == idx):
                 users.append(row)
+        print(users)        
         return jsonify(users)

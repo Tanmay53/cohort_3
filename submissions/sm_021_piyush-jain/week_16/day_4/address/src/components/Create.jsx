@@ -1,12 +1,13 @@
 import axios from "axios"
 import React from 'react'
 import { Link } from "react-router-dom"
+
 class Create extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             "id": 0,
-            "add_id":1,
+            "add_id": 1,
             "name": "",
             "email": "",
             "password": "",
@@ -21,7 +22,7 @@ class Create extends React.Component {
         await axios.get("http://127.0.0.1:5000/count")
             .then(res => {
                 this.setState({
-                    id: Number(res.data)+1
+                    id: Number(res.data) + 1
                 })
             })
     }
@@ -35,22 +36,17 @@ class Create extends React.Component {
             id: Number(this.state.id) + 1
         })
         e.preventDefault()
-         axios.post("http://127.0.0.1:5000/create", { "name": this.state.name, "id": this.state.id, "email": this.state.email, "password": this.state.password, "number": this.state.number })
-            // .then(res => console.log(res))
-            // .catch(err => console.log(err))
-        axios.post("http://127.0.0.1:5000/create_address", { "line_1": this.state.line_1,"add_id":this.state.add_id, "id": this.state.id, "line_2": this.state.line_2, "pincode": this.state.pincode, "city": this.state.city })
-            // .then(res => console.log(res))
-            // .catch(err => console.log(err))
-         axios.post("http://127.0.0.1:5000/count",{"count":this.state.id})
-            // .then(res=>console.log(res))
-            // .catch(err=>console.log(err))  
-            console.log(this.state)  
+        axios.post("http://127.0.0.1:5000/user/create", { "name": this.state.name, "id": this.state.id, "email": this.state.email, "password": this.state.password, "number": this.state.number })
+        axios.post("http://127.0.0.1:5000/add/create_address", { "line_1": this.state.line_1, "add_id": this.state.add_id, "id": this.state.id, "line_2": this.state.line_2, "pincode": this.state.pincode, "city": this.state.city })
+        axios.post("http://127.0.0.1:5000/count", { "count": this.state.id })
+            .then(alert("Created a new user !!"))
+            .then(this.props.history.goBack)
     }
     render() {
         return (
             <React.Fragment>
-                <h3 style={{"textAlign":"center","color":"Tomato"}} class="m-3">Create a new User</h3>
-                <form style={{ "width": "50%", "marginLeft": "25%","marginTop":"3%", "padding": "1%", "border": "1px solid teal", "color": "white", "backgroundColor": "black"}} class="shadow-lg p-3 mb-5 bg-white rounded">
+                <form style={{ "width": "50%", "marginLeft": "25%", "marginTop": "3%", "padding": "1%", "border": "1px solid teal", "color": "white", "backgroundColor": "black" }} class="shadow-lg p-3 mb-5 bg-white rounded">
+                    <h3 style={{ "textAlign": "center", "color": "Tomato" }} class="m-3">Create a new User</h3>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" onChange={this.handleChange} placeholder="Enter name" required />
@@ -83,7 +79,7 @@ class Create extends React.Component {
                         <label for="exampleInputPassword1">Pincode</label>
                         <input type="text" class="form-control" id="exampleInputPassword1" name="pincode" onChange={this.handleChange} placeholder="Pincode" required />
                     </div>
-                    <button class="btn btn-success" style={{ "marginLeft": "37%" }} onClick={this.handleClick}>Submit</button>
+                    <div class="d-flex justify-content-center"><button class="btn btn-success" onClick={this.handleClick}>Create</button></div>
                 </form>
             </React.Fragment>
         )
