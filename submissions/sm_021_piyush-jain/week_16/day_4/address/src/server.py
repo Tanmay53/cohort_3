@@ -16,18 +16,7 @@ app.register_blueprint(user, url_prefix="/user")
 app.register_blueprint(add, url_prefix="/add")
 app.register_blueprint(auth, url_prefix="/auth")
 users = []
-address = []   
-# # function to get a particular user detail
-# @app.route('/detail/<int:id>')
-# def user_detail(id):
-#     global users
-#     users=[]
-#     with open("/home/piyush/coding/week_16/day_4/address/src/users.csv","r")as csvfile:
-#         reader=csv.DictReader(csvfile,delimiter=" ",quotechar=" ")
-#         for row in reader:
-#             if(int(row["id"])==int(id)):
-#                 users.append(row)
-#         return jsonify(users)
+address = []
 
 # function to change the edited user inside the CSV file
 @app.route('/edit/<int:id>', methods=['POST'])
@@ -111,18 +100,6 @@ def write_address_csv(address):
         return ({"message": "edited"})
 
 
-# # function to get a particular user's all address's
-# @app.route('/address_detail/<int:id>')
-# def address_detail(id):
-#     global users
-#     users=[]
-#     with open("/home/piyush/coding/week_16/day_4/address/src/address.csv","r")as csvfile:
-#         reader=csv.DictReader(csvfile,delimiter=" ",quotechar=" ")
-#         for row in reader:
-#             if(int(row["id"])==int(id)):
-#                 users.append(row)
-#         return jsonify(users)
-
 # function to display all the entries in listing page
 @app.route('/list')
 def list():
@@ -133,35 +110,6 @@ def list():
         for row in reader:
             users.append(row)
         return jsonify(users)
-
-
-# # get user info from user id
-# @app.route('/get_user/<int:id>')
-# def get_user(id):
-#     global users
-#     users=[]
-#     with open("/home/piyush/coding/week_16/day_4/address/src/users.csv","r") as csvfile:
-#         reader=csv.DictReader(csvfile,delimiter=" ",quotechar=" ")
-#         for row in reader:
-#             if(int(row["id"])==int(id)):
-#                 users.append(row)
-#         return jsonify(users)
-
-
-# # get user info from user id
-# @app.route('/get_address/<int:id>')
-# def get_address(id):
-#     global users
-#     users=[]
-#     with open("/home/piyush/coding/week_16/day_4/address/src/address.csv","r") as csvfile:
-#         reader=csv.DictReader(csvfile,delimiter=" ",quotechar=" ")
-#         print(id)
-#         for row in reader:
-#             if(int(row["id"])==int(id)):
-#                 print(int(row["id"]),int(id))
-#                 users.append(row)
-#                 print(users)
-#         return jsonify(users)
 
 
 # function to hold the count
@@ -180,50 +128,6 @@ def count():
             writer.writeheader()
             writer.writerow({"count": request.json["count"]})
             return ({"message": "done"})
-
-
-# # function to create users at first
-# @app.route('/create', methods=['POST'])
-# def create():
-#     if request.method == 'POST':
-#         isExists = os.path.isfile("/home/piyush/coding/week_16/day_4/address/src/users.csv")
-#         with open("/home/piyush/coding/week_16/day_4/address/src/users.csv", "a") as csvfile:
-#             fieldnames = ["id", "name", "email", "password", "number"]
-#             writer = csv.DictWriter(csvfile, delimiter=" ", fieldnames=fieldnames)
-#             if not isExists:
-#                 writer.writeheader()
-#             writer.writerow({"id": request.json["id"], "name": request.json["name"], "email": request.json["email"],
-#                              "password": request.json["password"], "number": request.json["number"]})
-#             return json.dumps({"message": "Item Added Successfully"})
-
-
-# # function to post that particular user's address in separate csv at first while creating
-# @app.route('/create_address', methods=['POST'])
-# def create_address():
-#     if request.method == 'POST':
-#         isExists = os.path.isfile("/home/piyush/coding/week_16/day_4/address/src/address.csv")
-#         with open("/home/piyush/coding/week_16/day_4/address/src/address.csv", "a") as csvfile:
-#             fieldnames = ["id","add_id" ,"line_1", "line_2", "pincode", "city"]
-#             writer = csv.DictWriter(csvfile, delimiter=" ", fieldnames=fieldnames)
-#             if not isExists:
-#                 writer.writeheader()
-#             writer.writerow({"id": request.json["id"],"add_id":request.json["add_id"], "line_1": request.json["line_1"],
-#                              "line_2": request.json["line_2"], "pincode": request.json["pincode"], "city": request.json["city"]})
-#             return json.dumps({"message": "address added successfully"})
-
-
-# # function to get a particular address of a particular user
-# @app.route('/get_user_address/<int:id>/<int:add_id>',methods=['GET'])
-# def get_user_address(id,add_id):
-#     get_add=[]
-#     print(id,add_id)
-#     with open("/home/piyush/coding/week_16/day_4/address/src/address.csv", "r") as csvfile:
-#         reader = csv.DictReader(csvfile, delimiter=" ", quotechar=" ")
-#         for row in reader:
-#             if(int(row["id"])==int(id) and int(row["add_id"])==int(add_id)):
-#                 get_add.append(row)
-#         print(get_add)
-#         return jsonify(get_add)
 
 
 # function to add edited address back in csv

@@ -15,6 +15,8 @@ class Detail extends React.Component {
             "number": 0,
         }
     }
+
+    // function to set initial state
     componentDidMount = async () => {
         await axios.get(`http://127.0.0.1:5000/user/detail/${this.props.match.params.id}`)
             .then(res => this.setState({
@@ -29,6 +31,8 @@ class Detail extends React.Component {
                 address: res["data"]
             }))
     }
+
+    // function to delete a user.
     handleDelete = async(item)=>{
     var id=item.id;
     var add_id=item.add_id

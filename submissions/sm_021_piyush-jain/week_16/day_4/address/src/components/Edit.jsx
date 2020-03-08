@@ -12,6 +12,7 @@ class Edit extends React.Component {
             "email": ""
         }
     }
+    // function to set initial inputs
     componentDidMount = async () => {
         await axios.get(`http://127.0.0.1:5000/user/detail/${this.props.match.params.id}`)
             .then(res => this.setState({
@@ -23,17 +24,22 @@ class Edit extends React.Component {
             }))
         console.log(this.state)
     }
+
+    // function to edit a user
     handleClick = () => {
         axios.post(`http://127.0.0.1:5000/edit/${this.props.match.params.id}`, { "id": this.state.id, "name": this.state.name, "number": this.state.number, "password": this.state.password, "email": this.state.email })
-        .then(alert("User detail edited !!"))
-        .then(this.props.history.goBack)
-        
+            .then(alert("User detail edited !!"))
+            .then(this.props.history.goBack)
+
     }
+
+    // function to set input fields
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
     }
+
     render() {
         console.log(this.state)
         return (
@@ -41,8 +47,8 @@ class Edit extends React.Component {
                 <div style={{ "margin": "5% 50% 0% 25%", "width": "50%" }} class="shadow-lg p-3 mb-5 bg-white rounded">
                     <h4 style={{ "textAlign": "center" }}>Edit <span style={{ "color": "red" }}>{this.state.name}'s</span> Details</h4>
                     <div><label>NAME:</label><br></br><input type="text" style={{ "width": "100%" }} name="name" onChange={this.handleChange} placeholder={this.state.name} value={this.state.name}></input></div>
-                    <div><label>EMAIL:</label><br></br><input type="text" style={{ "width": "100%" }} name="email" onChange={this.handleChange} placeholder={this.state.email}  value={this.state.email}></input></div>
-                    <div><label>NUMBER:</label><br></br><input type="text" style={{ "width": "100%" }} name="number" onChange={this.handleChange} placeholder={this.state.number}  value={this.state.number}></input></div>
+                    <div><label>EMAIL:</label><br></br><input type="text" style={{ "width": "100%" }} name="email" onChange={this.handleChange} placeholder={this.state.email} value={this.state.email}></input></div>
+                    <div><label>NUMBER:</label><br></br><input type="text" style={{ "width": "100%" }} name="number" onChange={this.handleChange} placeholder={this.state.number} value={this.state.number}></input></div>
                     <button class="btn btn-warning mt-2" style={{ "marginLeft": "40%" }} onClick={this.handleClick}>Submit</button>
                 </div>
             </React.Fragment>

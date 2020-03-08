@@ -1,17 +1,14 @@
 import React from 'react';
 import './App.css';
 import { Link } from "react-router-dom"
-
 import Routes from "./routes/Routes"
-import { Redirect, BrowserRouter } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-
-    }
   }
+
   render() {
     return (
       <BrowserRouter>
