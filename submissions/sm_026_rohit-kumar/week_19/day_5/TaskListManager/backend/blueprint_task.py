@@ -95,6 +95,24 @@ def select_tasklist():
     except Exception:
             return jsonify({'result':'failure' })   
 
+@task.route('/search/tasklist', methods=['POST'])
+def search_tasklist():
+    try:
+        user_id = request.json['user_id']
+        search  = request.json['search']
+        query = '''select tl.tasklist_id, tl.uuid as tl_uuid, tl.name as tl_name, tl.desc, 
+                   group_concat(t.name separator ';;;') as t_name, group_concat(t.uuid separator ';;;') as uuid from tasklists 
+                   tl left join task t on  tl.tasklist_id = t.tasklist_id 
+                   where tl.user_id = {0} and tl.name like '%{1}%' 
+                   group by tl.tasklist_id;'''.format(user_id, search)
+        
+        # return jsonify({'query': query})
+        result = select_all(query) 
+        return jsonify(result)
+    except Exception:
+            return jsonify({'result':'failure' })   
+
+
 
 @task.route('/delete/tasklist', methods=['DELETE'])
 def delete_tasklist():
