@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
 
 export default class ConfirmationPage extends Component {
     componentDidMount(){
-       this.timeout =  setInterval(() => {
-            this.props.history.push('/')
-        }, 5000);
+    //    this.timeout =  setInterval(() => {
+    //         this.props.history.push('/')
+    //     }, 5000);
+    this.timeOut = setTimeout( () => {
+        this.props.history.push('/')
+    }, 5000)
     }
+
     componentWillUnmount() {
-        clearInterval(this.timeout)
+        clearTimeout(this.timeout)
     }
+    
     render() {
         return (
             <div className="container p-5 text-center">
