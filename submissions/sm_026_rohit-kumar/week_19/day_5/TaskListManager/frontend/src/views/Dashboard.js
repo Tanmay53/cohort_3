@@ -22,7 +22,9 @@ class Dashboard extends React.Component {
                         'desc': 'Mention the purpose you want to achieve through this task list. Mention the objective of the list creation.',
                         'tasks':[]
                     }
-        axios.post(url, data)
+        axios.post(url, data, {
+                            headers: { Authorization: `Bearer ${this.props.token}` },
+                })
                 .then(res => {
                     console.log(res)
                     const last_id = Number(res['data']['data']['last_id'])
@@ -57,7 +59,10 @@ class Dashboard extends React.Component {
         }
 
         console.log(url, data)
-        axios.post(url, data)
+        axios.post(url, {
+                        headers: { Authorization: `Bearer ${this.props.token}` },
+                        data: data
+        })
         .then(res => {
             console.log(res)
             if(res['data']['result'] === 'success' && res['data']['data'].length > 0) {
@@ -161,6 +166,7 @@ const mapStateToProps = (state) => {
     return {
         isLoggedIn: state.login.isLoggedIn,
         user_id: state.login.data.user_id,
+        token: state.login.data.token,
         tasklists: state.tasklist.tasklists
     }
 }
