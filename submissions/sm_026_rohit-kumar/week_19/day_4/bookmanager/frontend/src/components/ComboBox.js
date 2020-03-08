@@ -26,24 +26,35 @@ class ComboBox extends React.Component {
         }
     }
 
-    loadData = (data) => {
+    loadData = () => {
         const new_data = []
-        for(let i = 0; i < data.length; i++) {
-            new_data.push({'id': data[i].id, 'name': data[i].name, 'value': false})
-        }
-
-        console.log(new_data)
-        this.setState({
-            data:   new_data
-        })
-    }
-
-    componentDidMount = () => {
         axios.get(this.props.fetchUrl)
         .then(res => {
-            // console.log(res)
-            this.loadData(res['data']['data'])
+            const data = res['data']['data']
+            for(let i = 0; i < data.length; i++) {
+                new_data.push({'id': data[i].id, 'name': data[i].name, 'value': false})
+            }
+    
+            console.log(new_data)
+            this.setState({
+                data: new_data
+            })
         })
+
+        
+        
+    }
+
+
+    componentWillReceiveProps(nextProps){
+        if(nextProps.viewToggler !== this.props.viewToggler){
+          this.loadData()
+        }
+      }
+
+
+    componentDidMount = () => {
+        this.loadData()
     }
 
 
@@ -55,17 +66,17 @@ class ComboBox extends React.Component {
             data: newdata
         })
 
-        console.log(this.state)
+        // Report back to caller
+        this.props.callbackRetriveData(this.state.data[index]['id'])
     }
 
     render() {
+        console.log('render chala')
         return (
+        
             <div className='row'>
-                <div className='col-12'>
-                    <input type='text' placeholder='Type to search' className='form-control'></input>
-                </div>
-                <div className='col-12'>
-                    <div className='border p-2 d-flex flex-column mt-1' style={{"overflow":"scrall"}}>
+                <div className='col-12 border'  style={{'overflow-y':'scroll'}}>                    
+                    <div className='p-1' style={{"height":"150px"}}>
                         {this.state.data.map((item, index) => {
                             return <ComboBoxItem callbackHandleCheckChanged={this.handleCheckChanged} key={uuid()} value={item} index={index} />
                         })}
