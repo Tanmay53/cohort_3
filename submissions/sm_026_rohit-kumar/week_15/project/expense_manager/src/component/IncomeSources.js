@@ -38,9 +38,9 @@ class IncomeSources extends React.Component{
     render() {
         // console.log('look into props', this.props)
         return (
-            <div className='row border'>
+            <   div className='row border'>
                 <div className='col-12 mb-3'>
-                    <h4 className='mt-3 bg-primary p-3 text-white'>Add Income Sources</h4>
+                    <h4 className='mt-2 bg-primary p-3 text-white'>Add Income Sources</h4>
                     <p className='text-muted'>* add info about your income sources</p>
                 </div>
                 <div className='col-md-6'>
