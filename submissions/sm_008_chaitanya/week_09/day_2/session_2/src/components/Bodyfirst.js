@@ -12,9 +12,9 @@ class Bodyfirst extends React.Component{
                     <div className="col-10 col-md-4 col-lg-4 mt-4">
                         <div className="input-group">
                             <div className="input-group-prepend">
-                                <span className="input-group-text text-muted" id="basic-addon1"><i className="fas fa-map-marker-alt"></i></span>
+                                <span className="input-group-text text-muted bg-light border-right-0" id="basic-addon1"><i className="fas fa-map-marker-alt"></i></span>
                             </div>
-                            <input type="text" className="form-control" aria-describedby="basic-addon1"/>
+                            <input type="text" className="form-control border-left-0" aria-describedby="basic-addon1"/>
                         </div>
                     </div>
                     <div className="col-6 col-md-2 col-lg-2 mt-4 mb-3 text-center">
