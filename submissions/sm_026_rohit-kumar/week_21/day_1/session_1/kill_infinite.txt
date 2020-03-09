@@ -1,0 +1,17 @@
+code for infinite loop:-
+
+while True:
+    print('running')
+
+
+getting PID for infinite loop:-
+
+ps aux | grep 'python3'
+
+root       980  0.0  0.2  52120 17588 ?        Ss   13:49   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root      1137  0.0  0.2 131036 19972 ?        Ssl  13:49   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+rohit    12996 81.6  0.1  26300  8976 pts/1    R+   16:19   0:22 python3 infinite.py
+rohit    13005  0.0  0.0  17612   908 pts/0    S+   16:19   0:00 grep --color=auto python3
+
+
+kill 12996
