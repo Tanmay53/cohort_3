@@ -1,0 +1,14 @@
+step 1) run a python program with infinite loop
+
+step2) search python programs
+mihir@mihir-Vostro-3546:~$ ps aux |grep python3
+root       813  0.0  0.4 177636 16512 ?        Ssl  11:31   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root       944  0.0  0.4 194348 18596 ?        Ssl  11:31   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+mihir     6407 58.2  0.2  36816  9128 pts/1    S+   15:41   1:06 python3 infinite.py
+mihir     6445  0.0  0.0  21532  1028 pts/0    S+   15:43   0:00 grep --color=auto python3
+
+step ) found the program that uses 58.2% CPU with ID 6407. kill it
+
+mihir@mihir-Vostro-3546:~$ kill 6407
+
+

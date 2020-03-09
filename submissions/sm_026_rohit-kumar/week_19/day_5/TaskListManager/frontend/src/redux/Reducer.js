@@ -45,7 +45,11 @@ const tasklistReducer = (state=init_tasklist, action) => {
                         return item
                 })
             }
-
+        case 'CLEAR_TASKLIST':
+            return {
+                ...state,
+                tasklists: []
+            }
         case 'UPDATE_NAME':
             return {
                 ...state,
