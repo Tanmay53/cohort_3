@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Masai Employees Data</h1>
+    <hr>
+    <p><h3>Enter new employee details here</h3></p>
+    <div class="grid1">
+        <div>Name</div>
+        <div><input type="text" id="name"></div>
+        <div>Job Title</div>
+        <div><input type="text" id="title"></div>
+        <div>Salary</div>
+        <div><input type="number" id="salary"></div>
+        <div>Department</div>
+        <div>
+            <select name="department" id="deptSelect1">
+                    <option value="Engineering">Engineering</option>
+                    <option value="Design">Design</option>
+                    <option value="Sales">Sales</option>
+                    <option value="HR">HR</option>
+                    <option value="Marketing">Marketing</option>
+            </select>
+        </div>
+    </div>
+    <button onclick="submit()">Submit</button>
+    <button onclick="reset()">Reset</button>
+    <hr>
+    <p><h3>Fetch employees data by Department wise</h3></p>
+    <select name="empCat" id="cat">
+            <option value="Engineering">Engineering</option>
+            <option value="Design">Design</option>
+            <option value="Sales">Sales</option>
+            <option value="HR">HR</option>
+            <option value="Marketing">Marketing</option>
+    </select>
+    <button onclick="catShow()">Show</button>
+    <div class="grid">
+        <div><h3>S.No</h3></div>
+        <div><h3>Name</h3></div>
+        <div><h3>Job Title</h3></div>
+        <div><h3>Salary Per Month</h3></div>
+        <div id="dept"><h3>Department</h3></div>
+        <div>1</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>2</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>3</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <p>Total salries amount of this Department workers is :</p>
+    <p id="sum">---</p>
+    <p>This Department workers Average salary is :</p>
+    <p id="average">---</p>
+</body>
+</html>
