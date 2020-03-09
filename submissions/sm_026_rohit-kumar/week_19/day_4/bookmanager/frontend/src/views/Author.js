@@ -52,7 +52,7 @@ class Author extends React.Component {
 
     render() {
         return (
-            <>
+            <>  
                 <Manager 
                     data={this.state.author} 
                     store={this.state.data_store}
