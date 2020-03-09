@@ -10,15 +10,18 @@ address = []
 
 
 # get user info from user id
-@add.route('/get_address/<int:id>')
-def get_address(id):
+@add.route('/get_address/<int:idx>')
+def get_address(idx):
     global address
     address = []
+    print(idx)
     with open("/home/piyush/coding/week_16/day_4/address/src/address.csv", "r") as csvfile:
         reader = csv.DictReader(csvfile, delimiter=" ", quotechar=" ")
         for row in reader:
-            if(int(row["id"]) == int(id)):
+            print(int(row["id"]),idx)
+            if(int(row["id"]) == idx):
                 address.append(row)
+        print(address)        
         return jsonify(address)
 
 

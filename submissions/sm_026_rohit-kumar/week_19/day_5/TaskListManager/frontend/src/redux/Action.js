@@ -25,6 +25,12 @@ const delete_tasklist = (tasklist_id) => {
     }
 }
 
+const clear_tasklist = () => {
+    return {
+        type: 'CLEAR_TASKLIST'
+    }
+}
+
 const update_name = (data) => {
     return {
         type: 'UPDATE_NAME',
@@ -55,4 +61,6 @@ const delete_task = (data) => {
 }
 
 
-export {user_login, user_logout, add_tasklist, update_desc, update_name, add_task, delete_task, delete_tasklist}
+export {user_login, user_logout, add_tasklist, update_desc, 
+    update_name, add_task, delete_task, delete_tasklist,
+    clear_tasklist}

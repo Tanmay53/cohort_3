@@ -7,6 +7,7 @@ import Manager from './components/Manager'
 import Author from './views/Author'
 import Publisher from './views/Publisher'
 import Category from './views/Category'
+import Book from './views/Book'
 
 export default function Router(props) {
     return (
@@ -18,6 +19,7 @@ export default function Router(props) {
                 <Route exact path="/category" component={Category}/>
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
+                <Route exact path="/book" component={Book} />
                 <Route render={() => <h4>404 ! Resource Not Found.</h4>} />
             </Switch>
         </div>
