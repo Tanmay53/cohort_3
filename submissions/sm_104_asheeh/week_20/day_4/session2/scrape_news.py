@@ -13,12 +13,13 @@ briefs_toi = soup_toi('div', {'class': 'brief_box'})
 briefs_ndtv = soup_ndtv('strong', {'class': 'topic_strong_title'})
 
 briefs_list = []
+briefs_list.append("\nTimes Of India Briefs \n\n")
 print("Times Of India Briefs")
 for i in range(30):
     print(briefs_toi[i].text)
     briefs_list.append(briefs_toi[i].text)
     print("--------------")
-    
+briefs_list.append("\n\nNDTV Briefs \n\n")    
 print("NDTV Briefs")
 for i in range(25):
     print(briefs_ndtv[i].text)
@@ -27,5 +28,6 @@ for i in range(25):
 
 with open("news.txt", "a") as text_file:
     for ele in briefs_list:
-        text_file.write(ele)
+        text_file.write(ele.encode('utf8'))
         text_file.write("\n")
+    text_file.close()

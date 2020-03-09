@@ -1,0 +1,252 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.2 225532  7920 ?        Ss   11:30   0:08 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    11:30   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        I<   11:30   0:00 [rcu_gp]
+root         4  0.0  0.0      0     0 ?        I<   11:30   0:00 [rcu_par_gp]
+root         9  0.0  0.0      0     0 ?        I<   11:30   0:00 [mm_percpu_wq]
+root        10  0.0  0.0      0     0 ?        S    11:30   0:00 [ksoftirqd/0]
+root        11  0.0  0.0      0     0 ?        I    11:30   0:07 [rcu_sched]
+root        12  0.0  0.0      0     0 ?        S    11:30   0:00 [migration/0]
+root        13  0.0  0.0      0     0 ?        S    11:30   0:00 [idle_inject/0]
+root        14  0.0  0.0      0     0 ?        S    11:30   0:00 [cpuhp/0]
+root        15  0.0  0.0      0     0 ?        S    11:30   0:00 [cpuhp/1]
+root        16  0.0  0.0      0     0 ?        S    11:30   0:00 [idle_inject/1]
+root        17  0.0  0.0      0     0 ?        S    11:30   0:00 [migration/1]
+root        18  0.0  0.0      0     0 ?        S    11:30   0:00 [ksoftirqd/1]
+root        21  0.0  0.0      0     0 ?        S    11:30   0:00 [cpuhp/2]
+root        22  0.0  0.0      0     0 ?        S    11:30   0:00 [idle_inject/2]
+root        23  0.0  0.0      0     0 ?        S    11:30   0:00 [migration/2]
+root        24  0.0  0.0      0     0 ?        S    11:30   0:00 [ksoftirqd/2]
+root        26  0.0  0.0      0     0 ?        I<   11:30   0:00 [kworker/2:0H-kb]
+root        27  0.0  0.0      0     0 ?        S    11:30   0:00 [cpuhp/3]
+root        28  0.0  0.0      0     0 ?        S    11:30   0:00 [idle_inject/3]
+root        29  0.0  0.0      0     0 ?        S    11:30   0:00 [migration/3]
+root        30  0.0  0.0      0     0 ?        S    11:30   0:00 [ksoftirqd/3]
+root        33  0.0  0.0      0     0 ?        S    11:30   0:00 [kdevtmpfs]
+root        34  0.0  0.0      0     0 ?        I<   11:30   0:00 [netns]
+root        35  0.0  0.0      0     0 ?        S    11:30   0:00 [rcu_tasks_kthre]
+root        36  0.0  0.0      0     0 ?        S    11:30   0:00 [kauditd]
+root        37  0.0  0.0      0     0 ?        S    11:30   0:00 [khungtaskd]
+root        38  0.0  0.0      0     0 ?        S    11:30   0:00 [oom_reaper]
+root        39  0.0  0.0      0     0 ?        I<   11:30   0:00 [writeback]
+root        40  0.0  0.0      0     0 ?        S    11:30   0:00 [kcompactd0]
+root        41  0.0  0.0      0     0 ?        SN   11:30   0:00 [ksmd]
+root        42  0.0  0.0      0     0 ?        SN   11:30   0:00 [khugepaged]
+root       135  0.0  0.0      0     0 ?        I<   11:30   0:00 [kintegrityd]
+root       136  0.0  0.0      0     0 ?        I<   11:30   0:00 [kblockd]
+root       137  0.0  0.0      0     0 ?        I<   11:30   0:00 [blkcg_punt_bio]
+root       139  0.0  0.0      0     0 ?        I<   11:30   0:00 [tpm_dev_wq]
+root       140  0.0  0.0      0     0 ?        I<   11:30   0:00 [ata_sff]
+root       142  0.0  0.0      0     0 ?        I<   11:30   0:00 [md]
+root       143  0.0  0.0      0     0 ?        I<   11:30   0:00 [edac-poller]
+root       144  0.0  0.0      0     0 ?        I<   11:30   0:00 [devfreq_wq]
+root       145  0.0  0.0      0     0 ?        S    11:30   0:00 [watchdogd]
+root       150  0.0  0.0      0     0 ?        S    11:30   0:02 [kswapd0]
+root       151  0.0  0.0      0     0 ?        I<   11:30   0:00 [kworker/u9:0-hc]
+root       152  0.0  0.0      0     0 ?        S    11:30   0:00 [ecryptfs-kthrea]
+root       155  0.0  0.0      0     0 ?        I<   11:30   0:00 [kthrotld]
+root       156  0.0  0.0      0     0 ?        I<   11:30   0:00 [acpi_thermal_pm]
+root       158  0.0  0.0      0     0 ?        I<   11:30   0:00 [ipv6_addrconf]
+root       170  0.0  0.0      0     0 ?        I<   11:30   0:00 [kstrp]
+root       189  0.0  0.0      0     0 ?        I<   11:30   0:00 [charger_manager]
+root       241  0.0  0.0      0     0 ?        S    11:30   0:12 [irq/39-DLL0662:]
+root       242  0.0  0.0      0     0 ?        S    11:30   0:00 [scsi_eh_0]
+root       243  0.0  0.0      0     0 ?        I<   11:30   0:00 [scsi_tmf_0]
+root       244  0.0  0.0      0     0 ?        S    11:30   0:00 [scsi_eh_1]
+root       245  0.0  0.0      0     0 ?        I<   11:30   0:00 [scsi_tmf_1]
+root       249  0.0  0.0      0     0 ?        I<   11:30   0:00 [rmi4-poller]
+root       250  0.0  0.0      0     0 ?        S    11:30   0:11 [irq/46-i2c_hid]
+root       251  0.0  0.0      0     0 ?        I<   11:30   0:01 [kworker/3:1H-ev]
+root       252  0.0  0.0      0     0 ?        I<   11:30   0:00 [kworker/1:1H-kb]
+root       277  0.0  0.0      0     0 ?        I<   11:30   0:01 [kworker/0:1H-kb]
+root       280  0.0  0.0      0     0 ?        S    11:30   0:00 [jbd2/sda1-8]
+root       281  0.0  0.0      0     0 ?        I<   11:30   0:00 [ext4-rsv-conver]
+root       326  0.0  0.3  95116 12844 ?        S<s  11:31   0:01 /lib/systemd/systemd-journald
+root       349  0.0  0.1  46896  4364 ?        Ss   11:31   0:00 /lib/systemd/systemd-udevd
+root       353  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop0]
+root       359  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop1]
+root       363  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop2]
+root       366  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop3]
+root       369  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop4]
+root       370  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop5]
+root       372  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop6]
+root       373  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop7]
+root       376  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop8]
+root       377  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop9]
+root       390  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop10]
+root       397  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop11]
+root       400  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop12]
+root       401  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop13]
+root       408  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop14]
+root       411  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop15]
+root       444  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop16]
+root       451  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop17]
+root       455  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop18]
+root       478  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop19]
+root       479  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop20]
+root       493  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop21]
+root       497  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop22]
+root       499  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop23]
+root       500  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop24]
+root       503  0.0  0.0      0     0 ?        S<   11:31   0:00 [loop25]
+root       598  0.0  0.0      0     0 ?        I<   11:31   0:00 [cfg80211]
+root       608  0.0  0.0      0     0 ?        I<   11:31   0:00 [kmemstick]
+systemd+   615  0.0  0.1  71032  5716 ?        Ss   11:31   0:00 /lib/systemd/systemd-resolved
+systemd+   617  0.0  0.0 146112  2840 ?        Ssl  11:31   0:00 /lib/systemd/systemd-timesyncd
+root       629  0.0  0.0      0     0 ?        I<   11:31   0:00 [cryptd]
+root       682  0.0  0.2 503836 10760 ?        Ssl  11:31   0:02 /usr/lib/udisks2/udisksd
+message+   684  0.0  0.1  51636  5404 ?        Rs   11:31   0:03 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+avahi      755  0.0  0.0  47256  3088 ?        Ss   11:31   0:00 avahi-daemon: running [mihir-Vostro-3546.local]
+syslog     756  0.0  0.1 263032  3940 ?        Ssl  11:31   0:00 /usr/sbin/rsyslogd -n
+root       757  0.0  0.1 108108  7724 ?        Ss   11:31   0:00 /usr/sbin/cupsd -l
+root       763  0.0  0.1  70872  5568 ?        Ss   11:31   0:00 /lib/systemd/systemd-logind
+root       807  0.0  0.0   4548   724 ?        Ss   11:31   0:00 /usr/sbin/acpid
+root       813  0.0  0.4 177636 16512 ?        Ssl  11:31   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root       821  0.0  0.0 110480  3456 ?        Ssl  11:31   0:00 /usr/sbin/irqbalance --foreground
+root       823  0.0  0.1 294732  6764 ?        Ssl  11:31   0:00 /usr/lib/accountsservice/accounts-daemon
+root       824  0.0  0.0  38424  3196 ?        Ss   11:31   0:00 /usr/sbin/cron -f
+root       826  0.0  0.3 705556 13568 ?        Ssl  11:31   0:03 /usr/sbin/NetworkManager --no-daemon
+root       827  0.0  0.1  45600  5132 ?        Ss   11:31   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi      828  0.0  0.0  47072   340 ?        S    11:31   0:00 avahi-daemon: chroot helper
+root       829  0.0  0.1 434408  6820 ?        Ssl  11:31   0:00 /usr/sbin/ModemManager --filter-policy=strict
+root       831  0.0  0.2 186992  8860 ?        Ssl  11:31   0:00 /usr/sbin/thermald --no-daemon --dbus-enable
+root       839  0.0  0.3 1378928 15052 ?       Ssl  11:31   0:03 /usr/lib/snapd/snapd
+root       873  0.0  0.2 303452  9336 ?        Ssl  11:31   0:00 /usr/lib/policykit-1/polkitd --no-debug
+root       874  0.0  0.2 303672  9428 ?        Ssl  11:31   0:00 /usr/sbin/cups-browsed
+colord     908  0.0  0.3 324984 13368 ?        Ssl  11:31   0:00 /usr/lib/colord/colord
+root       944  0.0  0.4 194348 18596 ?        Ssl  11:31   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root       982  0.0  0.1 308056  7668 ?        Ssl  11:31   0:00 /usr/sbin/gdm3
+lp        1006  0.0  0.1  86416  5768 ?        S    11:31   0:00 /usr/lib/cups/notifier/dbus dbus://
+mysql     1011  0.0  4.3 1358664 169464 ?      Sl   11:31   0:06 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+root      1022  0.0  0.2 419460  8244 ?        Sl   11:31   0:00 gdm-session-worker [pam/gdm-autologin]
+root      1029  0.0  0.0      0     0 ?        S    11:31   0:00 [jbd2/sdb1-8]
+root      1034  0.0  0.0      0     0 ?        I<   11:31   0:00 [ext4-rsv-conver]
+mihir     1051  0.0  0.1  77156  6896 ?        Ss   11:31   0:00 /lib/systemd/systemd --user
+mihir     1052  0.0  0.0 114140  2700 ?        S    11:31   0:00 (sd-pam)
+mihir     1066  0.0  0.1 435856  7032 ?        SLl  11:31   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+mihir     1070  0.0  0.1 212132  5900 tty1     Ssl+ 11:31   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+mihir     1072  1.4  1.3 522180 52356 tty1     Sl+  11:31   3:58 /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+mihir     1110  0.0  0.1  51136  5152 ?        Ss   11:31   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+mihir     1113  0.0  0.3 641396 13812 tty1     Sl+  11:31   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+mihir     1240  0.0  0.0  11300   316 ?        Ss   11:31   0:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+mihir     1243  0.0  0.1 349300  6196 ?        Ssl  11:31   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+mihir     1248  0.0  0.1  50048  3936 ?        S    11:31   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+mihir     1251  0.0  0.1 220776  6936 ?        Sl   11:31   0:01 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+mihir     1268  1.9  6.9 3752776 274700 tty1   Sl+  11:31   5:08 /usr/bin/gnome-shell
+root      1274  0.0  0.2 322692  8448 ?        Ssl  11:31   0:00 /usr/lib/upower/upowerd
+mihir     1293  0.0  0.1 291968  6860 ?        Ssl  11:31   0:00 /usr/lib/gvfs/gvfsd
+mihir     1298  0.0  0.1 416112  5128 ?        Sl   11:31   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+mihir     1327  1.4  0.2 1958992 11096 ?       S<l  11:31   3:56 /usr/bin/pulseaudio --start --log-target=syslog
+rtkit     1329  0.0  0.0 183504  2968 ?        SNsl 11:31   0:00 /usr/lib/rtkit/rtkit-daemon
+root      1393  0.0  0.1  36564  4048 ?        Ss   11:31   0:00 /usr/lib/bluetooth/bluetoothd
+mihir     1406  0.0  0.2 361804  7928 tty1     Sl   11:31   0:08 ibus-daemon --xim --panel disable
+mihir     1410  0.0  0.1 280756  6560 tty1     Sl   11:31   0:00 /usr/lib/ibus/ibus-dconf
+mihir     1412  0.0  0.5 344068 20724 tty1     Sl   11:31   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+mihir     1414  0.0  0.1 278684  6040 ?        Sl   11:31   0:00 /usr/lib/ibus/ibus-portal
+mihir     1424  0.0  0.1 271560  5336 ?        Ssl  11:31   0:00 /usr/libexec/xdg-permission-store
+mihir     1435  0.0  0.3 689768 14688 ?        Sl   11:31   0:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+mihir     1440  0.0  0.5 1372148 20664 ?       Ssl  11:31   0:00 /usr/lib/evolution/evolution-source-registry
+root      1445  0.0  0.0      0     0 ?        S<   11:31   0:00 [krfcommd]
+mihir     1452  0.0  0.5 779544 20604 ?        Sl   11:31   0:00 /usr/lib/gnome-online-accounts/goa-daemon
+root      1464  0.0  0.1 296872  6628 ?        Ssl  11:31   0:00 /usr/lib/x86_64-linux-gnu/boltd
+mihir     1467  0.0  0.1 303360  6472 ?        Sl   11:31   0:00 /usr/lib/gnome-online-accounts/goa-identity-service
+mihir     1474  0.0  0.2 380304  8772 ?        Ssl  11:31   0:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+mihir     1479  0.0  0.1 378820  7380 ?        Ssl  11:31   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+mihir     1484  0.0  0.1 275868  4752 ?        Ssl  11:31   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+mihir     1488  0.0  0.1 288792  6548 ?        Ssl  11:31   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+mihir     1492  0.0  0.1 274044  5508 ?        Ssl  11:31   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+root      1496  0.0  0.4 448296 17508 ?        Ssl  11:31   0:13 /usr/lib/packagekit/packagekitd
+mihir     1497  0.0  0.6 872124 25156 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+mihir     1500  0.0  0.2 349344  9988 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+mihir     1503  0.0  0.1 423344  5784 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+mihir     1504  0.0  0.1 275732  4804 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+mihir     1510  0.0  0.2 452976  9352 tty1     Sl+  11:31   0:01 /usr/lib/gnome-settings-daemon/gsd-sharing
+mihir     1514  0.0  0.5 494600 22100 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+mihir     1518  0.0  0.5 428524 21476 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+mihir     1520  0.0  0.2 332872  7892 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+mihir     1525  0.0  0.1 377936  6244 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+mihir     1538  0.0  0.1 278160  5800 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+mihir     1539  0.0  0.5 343672 20424 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+mihir     1542  0.0  0.5 807496 23216 tty1     Sl+  11:31   0:01 /usr/lib/gnome-settings-daemon/gsd-color
+mihir     1543  0.0  0.3 469748 13032 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+mihir     1544  0.0  0.1 364580  7100 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+mihir     1545  0.0  0.5 506556 21448 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+mihir     1548  0.0  0.5 1475216 23552 tty1    Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+mihir     1550  0.0  0.1 278168  5728 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+mihir     1579  0.0  0.3 508764 12696 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+mihir     1613  0.0  0.1 271932  6160 tty1     Sl+  11:31   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+mihir     1615  0.0  1.3 1368392 51556 tty1    Sl+  11:31   0:02 nautilus-desktop
+mihir     1632  0.0  0.1 368376  7056 ?        Sl   11:31   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.22 /org/gtk/gvfs/exec_spaw/0
+mihir     1639  0.0  1.4 892152 57388 ?        Ssl  11:31   0:00 /usr/lib/evolution/evolution-calendar-factory
+mihir     1650  0.0  0.1 204884  6500 tty1     Sl   11:31   0:02 /usr/lib/ibus/ibus-engine-simple
+mihir     1667  0.0  1.3 1135880 52800 ?       Sl   11:31   0:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1639x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1639/2
+mihir     1669  0.0  0.1 188112  5408 ?        Sl   11:31   0:00 /usr/lib/dconf/dconf-service
+mihir     1680  0.0  0.4 732696 16944 ?        Ssl  11:31   0:00 /usr/lib/evolution/evolution-addressbook-factory
+mihir     1691  0.0  0.4 1017208 17240 ?       Sl   11:31   0:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx1680x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/1680/2
+whoopsie  1708  0.0  0.2 390572 11552 ?        Ssl  11:31   0:00 /usr/bin/whoopsie -f
+kernoops  1710  0.0  0.0  56940   416 ?        Ss   11:31   0:00 /usr/sbin/kerneloops --test
+kernoops  1712  0.0  0.0  56940   420 ?        Ss   11:31   0:00 /usr/sbin/kerneloops
+mihir     1727  0.0  0.1 204964  6288 ?        Ssl  11:31   0:00 /usr/lib/gvfs/gvfsd-metadata
+mihir     1732  1.2  5.7 1135296 225596 tty1   SLl+ 11:31   3:17 /opt/google/chrome/chrome
+mihir     1738  0.0  0.0  14712   732 tty1     S+   11:31   0:00 cat
+mihir     1739  0.0  0.0  14712   716 tty1     S+   11:31   0:00 cat
+mihir     1742  0.0  0.9 455056 36228 tty1     S+   11:31   0:00 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a,
+mihir     1743  0.0  0.0  27220  3056 tty1     S+   11:31   0:00 /opt/google/chrome/nacl_helper
+mihir     1746  0.0  0.3 455056 15416 tty1     S+   11:31   0:00 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a,
+mihir     1766  2.3  3.8 648684 151944 tty1    Sl+  11:31   6:20 /opt/google/chrome/chrome --type=gpu-process --field-trial-handle=1400602641816238884,7977203943199989275,131072 --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --shared-files
+mihir     1770  0.2  1.9 557032 76440 tty1     SLl+ 11:31   0:34 /opt/google/chrome/chrome --type=utility --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --shared-files
+mihir     1828  0.0  2.2 4769960 86736 tty1    Sl+  11:31   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=4 --no-v8-untrusted-code-mitigations --shared-files
+mihir     1869  0.1  5.5 4890384 220100 tty1   Sl+  11:31   0:24 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files
+mihir     1888  0.0  2.1 4766192 83480 tty1    Sl+  11:31   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=6 --no-v8-untrusted-code-mitigations --shared-files
+mihir     1897  0.0  2.1 4769960 86480 tty1    Sl+  11:31   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=7 --no-v8-untrusted-code-mitigations --shared-files
+mihir     2091  0.9  4.9 9170024 195068 tty1   Sl+  11:31   2:38 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=17 --no-v8-untrusted-code-mitigations --shared-files
+mihir     2151  0.0  3.7 1246468 147540 tty1   SLl+ 11:32   0:06 /usr/bin/gnome-software --gapplication-service
+mihir     2153  0.0  0.6 596988 26568 tty1     Sl+  11:32   0:00 update-notifier
+root      2176  0.0  0.3 570280 14612 ?        Ssl  11:32   0:00 /usr/lib/fwupd/fwupd
+mihir     2269  0.0  0.5 792900 20808 tty1     Sl+  11:33   0:00 /usr/lib/deja-dup/deja-dup-monitor
+root      3231  0.0  0.0      0     0 ?        I<   14:02   0:00 [kworker/u9:1-hc]
+mihir     3526  4.7  3.2 4869320 126376 tty1   Sl+  14:09   5:16 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=70 --no-v8-untrusted-code-mitigations --shared-files
+mihir     4074  0.7  4.2 4878944 168132 tty1   Sl+  14:45   0:31 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=95 --no-v8-untrusted-code-mitigations --shared-files
+mihir     4102  0.0  2.3 4775672 91568 tty1    Sl+  14:45   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=97 --no-v8-untrusted-code-mitigations --shared-files
+root      4121  0.0  0.0      0     0 ?        I    14:45   0:00 [kworker/2:0-mm_]
+mihir     4233  0.0  0.0  24560  3184 tty1     Sl+  14:45   0:00 /usr/bin/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPWU0NmZjYzJmLm1hM1RVOGdUQnpTdUpXSmM5WmN3VUd6ZDlfUXdRMEw4SWd6YzFHNHRpSEpZaV90ZXg4NS05V2ZYdkNRVWxTZHB0Y1FMbk0zamNaMHZFejFEVXpULVhBJTNEJTNEJnRpZD1mOGI0NGY3ZDc4NDFiMGY4NzNiNzI1MThiYjQ1ZDdmZQ%3D%3D&confno=809752472&zc=0&pwd=RUYzZGozdytZdW9MZWI2U1dlQ21OZz09&pk=&mcv=0.92.11227.0929&browser=chrome
+mihir     4238  0.0  0.0   4624   796 tty1     S+   14:45   0:00 sh -c export SSB_HOME=/home/mihir/.zoom; export QSG_INFO=1; export LD_LIBRARY_PATH=/opt/zoom; export BREAKPAD_CLIENT_FD=3; /opt/zoom/zoom "zoommtg://zoom.us/join?action=join&confid=dXNzPWU0NmZjYzJmLm1hM1RVOGdUQnpTdUpXSmM5WmN3VUd6ZDlfUXdRMEw4SWd6YzFHNHRpSEpZaV90ZXg4NS05V2ZYdkNRVWxTZHB0Y1FMbk0zamNaMHZFejFEVXpULVhBJTNEJTNEJnRpZD1mOGI0NGY3ZDc4NDFiMGY4NzNiNzI1MThiYjQ1ZDdmZQ%3D%3D&confno=809752472&zc=0&pwd=RUYzZGozdytZdW9MZWI2U1dlQ21OZz09&pk=&mcv=0.92.11227.0929&browser=chrome "
+mihir     4239 10.7  8.7 5058268 343164 tty1   Sl+  14:45   7:56 /opt/zoom/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPWU0NmZjYzJmLm1hM1RVOGdUQnpTdUpXSmM5WmN3VUd6ZDlfUXdRMEw4SWd6YzFHNHRpSEpZaV90ZXg4NS05V2ZYdkNRVWxTZHB0Y1FMbk0zamNaMHZFejFEVXpULVhBJTNEJTNEJnRpZD1mOGI0NGY3ZDc4NDFiMGY4NzNiNzI1MThiYjQ1ZDdmZQ%3D%3D&confno=809752472&zc=0&pwd=RUYzZGozdytZdW9MZWI2U1dlQ21OZz09&pk=&mcv=0.92.11227.0929&browser=chrome 
+mihir     4378  0.1  3.7 9045960 148444 tty1   Sl+  14:50   0:05 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=100 --no-v8-untrusted-code-mitigations --shared-files
+mihir     4405  0.0  0.6 488224 27128 tty1     Sl+  14:50   0:00 /opt/google/chrome/chrome --type=utility --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --service-sandbox-type=utility --disable-webrtc-apm-in-audio-service --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --shared-files
+root      4571  0.2  0.0      0     0 ?        I    15:00   0:09 [kworker/u8:13-i]
+root      4621  0.0  0.0      0     0 ?        S    15:31   0:00 [irq/52-mei_me]
+mihir     4894  1.5  3.4 4839976 136096 tty1   Sl+  15:31   0:26 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=108 --no-v8-untrusted-code-mitigations --shared-files
+root      4936  0.0  0.0      0     0 ?        S    15:31   0:00 [ath9k-hwrng]
+root      4940  0.0  0.1  25988  4580 ?        S    15:31   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-wlp6s0.pid -lf /var/lib/NetworkManager/dhclient-2a366a6b-0773-4103-ae33-1fc7e73ca8d9-wlp6s0.lease -cf /var/lib/NetworkManager/dhclient-wlp6s0.conf wlp6s0
+mihir     5045  0.7  0.9 800400 37012 ?        Ssl  15:34   0:10 /usr/lib/gnome-terminal/gnome-terminal-server
+root      5361  0.0  0.0      0     0 ?        I<   15:34   0:00 [kworker/3:2H]
+mihir     5416  1.1  1.4 1221484 55704 ?       Sl   15:36   0:16 /usr/bin/nautilus --gapplication-service
+root      5443  0.6  0.0      0     0 ?        I    15:36   0:09 [kworker/u8:0-ev]
+root      5444  0.0  0.0      0     0 ?        I    15:36   0:00 [kworker/3:2-eve]
+root      5484  0.0  0.0      0     0 ?        I    15:37   0:00 [kworker/1:0-eve]
+mihir     5497  0.4  3.1 4831716 124160 tty1   Sl+  15:37   0:06 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=116 --no-v8-untrusted-code-mitigations --shared-files
+mihir     5522  0.1  3.1 4811824 123608 tty1   Sl+  15:37   0:02 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=118 --no-v8-untrusted-code-mitigations --shared-files
+mihir     5533  0.0  2.8 4794812 113584 tty1   Sl+  15:37   0:01 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=119 --no-v8-untrusted-code-mitigations --shared-files
+mihir     5545  0.1  2.5 4787964 101600 tty1   Sl+  15:37   0:01 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=120 --no-v8-untrusted-code-mitigations --shared-files
+mihir     5556  0.0  1.4 4752032 56304 tty1    Sl+  15:37   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=121 --no-v8-untrusted-code-mitigations --shared-files
+root      5657  0.0  0.0      0     0 ?        I<   15:39   0:00 [kworker/1:0H-kb]
+root      5920  0.0  0.0      0     0 ?        I<   15:39   0:00 [kworker/0:2H-ev]
+mihir     5965  0.0  0.1 444128  7444 ?        Sl   15:39   0:00 /usr/lib/gvfs/gvfsd-network --spawner :1.22 /org/gtk/gvfs/exec_spaw/2
+mihir     5985  0.0  0.1 381292  7352 ?        Sl   15:39   0:00 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.22 /org/gtk/gvfs/exec_spaw/5
+root      6043  0.0  0.0      0     0 ?        I    15:40   0:00 [kworker/2:2-eve]
+root      6351  0.0  0.0      0     0 ?        I<   15:40   0:00 [kworker/2:2H-ev]
+root      6434  0.0  0.0      0     0 ?        I    15:42   0:00 [kworker/0:1-rcu]
+root      6487  0.0  0.0      0     0 ?        I    15:45   0:00 [kworker/3:0]
+mihir     6569  0.0  0.2 433540  8824 ?        Ssl  15:48   0:00 /usr/bin/zeitgeist-daemon
+mihir     6575  0.0  0.4 326740 16048 ?        Ssl  15:48   0:00 /usr/lib/zeitgeist/zeitgeist/zeitgeist-fts
+root      6641  0.0  0.0      0     0 ?        I    15:50   0:00 [kworker/1:1-eve]
+mihir     6657  0.0  0.2  32864  8260 pts/1    Ss   15:52   0:00 bash
+root      6848  0.0  0.0      0     0 ?        I    15:52   0:00 [kworker/0:2-rcu]
+root      6874  0.0  0.0      0     0 ?        I    15:53   0:00 [kworker/u8:1-ph]
+root      6927  0.0  0.0      0     0 ?        I    15:55   0:00 [kworker/2:1-eve]
+root      6939  0.0  0.0      0     0 ?        I    15:57   0:00 [kworker/0:0-eve]
+root      6954  0.0  0.0      0     0 ?        D    15:59   0:00 [kworker/u8:2+ev]
+mihir     6960  1.0  2.0 4757660 81580 tty1    Sl+  15:59   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=130 --no-v8-untrusted-code-mitigations --shared-files
+mihir     6972  2.6  2.2 4771532 87824 tty1    Sl+  15:59   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=131 --no-v8-untrusted-code-mitigations --shared-files
+mihir     6985  0.0  0.0  46768  3616 pts/1    R+   15:59   0:00 ps aux

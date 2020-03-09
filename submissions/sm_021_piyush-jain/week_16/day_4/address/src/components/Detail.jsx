@@ -15,6 +15,8 @@ class Detail extends React.Component {
             "number": 0,
         }
     }
+
+    // function to set initial state
     componentDidMount = async () => {
         await axios.get(`http://127.0.0.1:5000/user/detail/${this.props.match.params.id}`)
             .then(res => this.setState({
@@ -29,11 +31,18 @@ class Detail extends React.Component {
                 address: res["data"]
             }))
     }
-    handleDelete = (item)=>{
+
+    // function to delete a user.
+    handleDelete = async(item)=>{
     var id=item.id;
     var add_id=item.add_id
     console.log(id,add_id)
-    axios.get(`http://127.0.0.1:5000/del_user_address/${id}/${add_id}`)
+    await axios.get(`http://127.0.0.1:5000/del_user_address/${id}/${add_id}`)
+    .then(alert("Address deleted"))
+    await axios.get(`http://127.0.0.1:5000/user/address_detail/${this.props.match.params.id}`)
+    .then(res => this.setState({
+        address: res["data"]
+    }))
 }
 render() {
     console.log(this.state)
@@ -53,7 +62,7 @@ render() {
                                     <h5 class="card-title text-info" style={{ "textAlign": "center" }}>ADDRESS</h5>
                                     <p class="card-text " style={{ "justifyContent": "auto" }}>{item.line_1}  {item.line_2}  {item.pincode}  {item.city}</p>
                                     <p class="card-text"><small class="text-muted">Thank you for Trusting us</small></p>
-                                    <div class="card-text"><button class="float-left btn btn-warning" ><Link to={`/modify_address/${item.id}/${item.add_id}`}>Edit Address</Link></button><button class="float-right btn btn-danger" onClick={()=>this.handleDelete(item)}>Delete Address</button></div>
+                                    <div class="card-text clearfix"><button class="float-left btn btn-warning my-3" ><Link to={`/modify_address/${item.id}/${item.add_id}`}>Edit Address</Link></button><button class="float-right btn btn-danger my-3" onClick={()=>this.handleDelete(item)}>Delete Address</button></div>
                                 </div>
                             </div>
                         </div>
