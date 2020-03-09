@@ -9,6 +9,7 @@ import Delete from "../components/Delete"
 import Detail from "../components/Detail"
 import Edit from "../components/Edit"
 import Home from "../components/Home"
+
 class Routes extends React.Component {
     constructor(props) {
         super(props)

@@ -57,12 +57,15 @@ def select_one(query, arguments):
         conn.close()
         return result
 
-def select_all(query, arguments):
+def select_all(query, arguments = None):
     result = None      
     try:
         conn = connect()
         with conn.cursor() as cursor:
-            cursor.execute(query, arguments)
+            if arguments:
+                cursor.execute(query, arguments)
+            else:
+                cursor.execute(query)
             result = {'result': 'success', 'data': cursor.fetchall()}
     except Exception:
         result = {'result': 'failure'}
