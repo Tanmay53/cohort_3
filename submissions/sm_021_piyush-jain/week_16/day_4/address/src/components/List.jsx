@@ -15,6 +15,8 @@ class List extends React.Component {
                 db: res["data"]
             }))
     }
+
+    // function to delete a user
     handleClick = async (item) => {
         console.log(item)
 
@@ -73,12 +75,12 @@ class List extends React.Component {
                         </table>
                     </div> :
                     <div class="container-fluid">
-                     <div class="row">
-                        {/* <div class="card-group"> */}
-                            {this.state.db.map((item,index) =>
+                        <div class="row">
+                            {/* <div class="card-group"> */}
+                            {this.state.db.map((item, index) =>
                                 <div class="col-lg-4 col-md-6 my-sm-5 col-sm-12 my-2">
                                     <div class="card ">
-                                        <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="..." style={{"height":"200px"}}/>
+                                        <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="..." style={{ "height": "200px" }} />
                                         <div class="card-body">
                                             <h5 class="card-title">{item.name}</h5>
                                             <p class="card-text">{item.email}</p>
@@ -86,16 +88,16 @@ class List extends React.Component {
                                             <div class="d-flex justify-content-between">
                                                 <button class="btn btn-primary"><Link to={`/add_address/${item.id}`} style={{ "color": "white", "textDecoration": "none" }}>Add Address</Link></button>
                                                 <button class="btn btn-warning"><Link to={`/edit/${item.id}`} style={{ "color": "white", "textDecoration": "none" }}>Edit user</Link></button></div>
-                                            </div>
-                                            <div class="card-footer d-flex justify-content-between" >
-                                                <button class="btn btn-info"><Link to={`/detail/${item.id}`} style={{ "color": "white", "textDecoration": "none" }}>Detail Info</Link></button>
-                                                <button class="btn btn-danger" style={{ "color": "white", "textDecoration": "none" }} onClick={() => this.handleClick(item.id)}>DELETE</button>
-                                            </div>
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-between" >
+                                            <button class="btn btn-info"><Link to={`/detail/${item.id}`} style={{ "color": "white", "textDecoration": "none" }}>Detail Info</Link></button>
+                                            <button class="btn btn-danger" style={{ "color": "white", "textDecoration": "none" }} onClick={() => this.handleClick(item.id)}>DELETE</button>
+                                        </div>
                                     </div>
                                 </div>
                             )}
-                        {/* </div> */}
-                    </div>
+                            {/* </div> */}
+                        </div>
                     </div>}
             </React.Fragment>
         )

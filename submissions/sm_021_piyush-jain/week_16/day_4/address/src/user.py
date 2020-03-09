@@ -58,5 +58,5 @@ def address_detail(idx):
         for row in reader:
             if(int(row["id"]) == idx):
                 users.append(row)
-        print(users)        
+        print(users)
         return jsonify(users)

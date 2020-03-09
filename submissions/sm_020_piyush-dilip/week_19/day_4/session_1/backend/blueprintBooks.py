@@ -51,35 +51,11 @@ def getBookByAuthor(input):
     cursor = mysql.connection.cursor()
 
     cursor.execute(
-        """ SELECT books.id, bookname, publisher, GROUP_CONCAT( DISTINCT authorname) AS authors, GROUP_CONCAT( DISTINCT category ) AS ctgs FROM books JOIN authors ON books.id = authors.bookid JOIN categories ON books.id = categories.bookId WHERE bookname = %s GROUP BY books.id """, (input,)
+        """ SELECT books.id, bookname, publisher, GROUP_CONCAT( DISTINCT authorname) AS authors, GROUP_CONCAT( DISTINCT category ) AS ctgs FROM books JOIN authors ON books.id = authors.bookid JOIN categories ON books.id = categories.bookId WHERE bookname = %s GROUP BY books.id UNION SELECT books.id, bookname, publisher, GROUP_CONCAT( DISTINCT authorname) AS authors, GROUP_CONCAT( DISTINCT category ) AS ctgs FROM books JOIN authors ON books.id = authors.bookid JOIN categories ON books.id = categories.bookId WHERE authorname = %s GROUP BY books.id UNION  SELECT books.id, bookname, publisher, GROUP_CONCAT( DISTINCT authorname) AS authors, GROUP_CONCAT( DISTINCT category ) AS ctgs FROM books JOIN authors ON books.id = authors.bookid JOIN categories ON books.id = categories.bookId WHERE category = %s GROUP BY books.id UNION SELECT books.id, bookname, publisher, GROUP_CONCAT( DISTINCT authorname) AS authors, GROUP_CONCAT( DISTINCT category ) AS ctgs FROM books JOIN authors ON books.id = authors.bookid JOIN categories ON books.id = categories.bookId WHERE publisher = %s GROUP BY books.id  """, (input,input, input, input)
     )
     res = cursor.fetchall()
+    cursor.close()
     if len(res) > 0 :
-        cursor.close()
-        return { 'books' : getData(res), 'message' : 'success'}
-    
-    cursor.execute(
-        """ SELECT books.id, bookname, publisher, GROUP_CONCAT( DISTINCT authorname) AS authors, GROUP_CONCAT( DISTINCT category ) AS ctgs FROM books JOIN authors ON books.id = authors.bookid JOIN categories ON books.id = categories.bookId WHERE authorname = %s GROUP BY books.id """, (input,)
-    )
-    res = cursor.fetchall()
-    if len(res) > 0 :
-        cursor.close()
-        return { 'books' : getData(res), 'message' : 'success'}
-
-    cursor.execute(
-        """ SELECT books.id, bookname, publisher, GROUP_CONCAT( DISTINCT authorname) AS authors, GROUP_CONCAT( DISTINCT category ) AS ctgs FROM books JOIN authors ON books.id = authors.bookid JOIN categories ON books.id = categories.bookId WHERE category = %s GROUP BY books.id """, (input,)
-    )
-    res = cursor.fetchall()
-    if len(res) > 0 :
-        cursor.close()
-        return { 'books' : getData(res), 'message' : 'success'}
-    
-    cursor.execute(
-        """ SELECT books.id, bookname, publisher, GROUP_CONCAT( DISTINCT authorname) AS authors, GROUP_CONCAT( DISTINCT category ) AS ctgs FROM books JOIN authors ON books.id = authors.bookid JOIN categories ON books.id = categories.bookId WHERE publisher = %s GROUP BY books.id """, (input,)
-    )
-    res = cursor.fetchall()
-    if len(res) > 0 :
-        cursor.close()
         return { 'books' : getData(res)}
     else :
         return { 'message' : 'Not Found', 'notFound' : 'true'}

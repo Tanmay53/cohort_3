@@ -18,6 +18,8 @@ class Create extends React.Component {
             "city": ""
         }
     }
+
+    // function to set initial inputs
     componentDidMount = async () => {
         await axios.get("http://127.0.0.1:5000/count")
             .then(res => {
@@ -26,11 +28,15 @@ class Create extends React.Component {
                 })
             })
     }
+
+    // function to set input fields
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
     }
+
+    // function to create a new user
     handleClick = (e) => {
         this.setState({
             id: Number(this.state.id) + 1
@@ -42,6 +48,7 @@ class Create extends React.Component {
             .then(alert("Created a new user !!"))
             .then(this.props.history.goBack)
     }
+
     render() {
         return (
             <React.Fragment>
