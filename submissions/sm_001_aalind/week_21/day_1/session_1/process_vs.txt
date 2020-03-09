@@ -1,0 +1,17 @@
+ 4632 tty2     00:13:18 chrome
+ 4643 tty2     00:00:00 chrome
+ 4647 tty2     00:00:01 chrome
+ 4669 tty2     00:19:11 chrome
+ 4671 tty2     00:06:09 chrome
+ 4715 tty2     00:02:07 chrome
+ 4735 tty2     00:00:01 chrome
+ 4753 tty2     00:00:32 chrome
+ 4767 tty2     00:00:00 chrome
+ 4782 tty2     00:00:04 chrome
+12551 tty2     00:00:05 chrome
+12589 tty2     00:02:12 chrome
+15315 tty2     00:00:06 chrome
+15334 tty2     00:00:07 chrome
+16864 tty2     00:00:13 chrome
+17884 tty2     00:00:11 chrome
+19176 tty2     00:00:00 chrome
