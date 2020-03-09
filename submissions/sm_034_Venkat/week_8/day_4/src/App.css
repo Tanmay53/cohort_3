@@ -1,0 +1,67 @@
+body {
+    text-align: center;
+
+}
+
+table {
+    border: 1px solid;
+    width: 90%;
+    margin: auto;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+table tr,th,td {
+    border: 1px solid;
+}
+
+/* #appDiv {
+    border: 1px solid;
+    width: 80%;
+    margin: auto;
+} */
+
+#formSubmitBtn {
+    padding: 3px 10px;
+    display: block;
+    border: 1px solid;
+    margin: auto;
+    background-color: rgb(163, 117, 117);
+    color: honeydew;
+}
+
+#optionsDiv {
+    /* width: 50%; */
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 10px 0;
+}
+
+#optionsDiv select{
+    padding: 5px 20px;
+    font-family: monospace;
+    font-size: large;
+}
+
+input {
+    padding: 2px;
+    margin: 0 5px;
+}
+
+form {
+    border: 1px solid;
+    width: 80%;
+    margin: auto;
+    background-color: aquamarine;
+}
+
+form label{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    border: 1px solid;
+    display: inline-flex;
+    padding: 5px;
+    margin: 1%;
+    /* justify-content: space-around; */
+}

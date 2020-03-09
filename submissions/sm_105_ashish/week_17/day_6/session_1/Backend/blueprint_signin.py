@@ -1,7 +1,10 @@
+from flask import Flask
 from flask import Blueprint
 import json
 import csv
 import hashlib
+import jwt
+app = Flask(__name__, static_url_path='/static')
 from flask import request
 
 signin  = Blueprint("signin",__name__)
@@ -23,6 +26,7 @@ def check_auth(email,password):
             salt = data["salt"]
             password_hash = data["password_hash"]
             found = True
+            user = data
             break
     if found:
         input_password = salt + password
@@ -31,7 +35,7 @@ def check_auth(email,password):
             new_password = md5_hash(input_password)
             input_password =  new_password
         if new_password == password_hash:
-            return ({"message":"login successfull","error":False})
+            return ({"message":"login successfull","error":False,"user":data})
         else:
             return ({"message":"Incorrect email/password","error":True})
     else:
@@ -42,7 +46,9 @@ def login():
     email = request.json["email"]
     password = request.json["password"]
     response = check_auth(email,password)
-    return json.dumps({"message":response["message"],"error":response["error"]})
+    user = response["user"]
+    encode_data = jwt.encode({"id": user["id"]}, 'secret', algorithm='HS256')
+    return json.dumps({"message":response["message"],"token":str(encode_data),"error":False,"user":user["id"]})
 
 def md5_hash(string):
     hash = hashlib.md5()

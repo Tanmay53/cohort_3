@@ -1,8 +1,8 @@
-function test() {
+/* function test() {
     //alert('hello world')
     var elem = document.querySelector('h1') 
     alert(elem.innerHTML)
-}
+} */
 
 
 function changeFirstH1() {
@@ -34,13 +34,3 @@ function changeClass(cls) {
     
 }
 
-function createH1() {
-    alert('working')
-    /* 
-    var new_h1 = document.createElement('h1')
-    h1.innerHTML = 'MASAI'
-
-    // find div with id headings
-    var elem_div = document.getElementsBy('headings')
-    elem_div.appendChild(h1) */
-}

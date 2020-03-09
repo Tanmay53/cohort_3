@@ -1,0 +1,5 @@
+All processes of chrome:
+ps au | grep chrome
+
+All processes of vscode:
+ps aux | grep vscode

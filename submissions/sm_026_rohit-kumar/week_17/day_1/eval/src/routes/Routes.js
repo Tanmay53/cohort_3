@@ -2,20 +2,16 @@ import React from 'react'
 import {Route, Switch, Redirect} from 'react-router-dom'
 import Login from '../components/auth/Login'
 import Dashboard from '../components/Dashboard'
-import {connect} from 'react-redux'
 import Booking from '../components/Booking'
-
 
 
 class Routes extends React.Component {
     constructor (props) {
         super(props) 
         this.state = {
-
         }
     }
-    render() {
-        
+    render() {        
         return (
             <div>
                 <Switch>
