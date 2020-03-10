@@ -1,0 +1,10 @@
+  PID TT       USER     STAT COMMAND  TMOUT F WCHAN
+    1 ?        root     Ss   systemd      - 4 -
+    2 ?        root     S    kthreadd     - 1 -
+    4 ?        root     I<   kworker/     - 1 -
+    6 ?        root     I<   mm_percp     - 1 -
+    7 ?        root     S    ksoftirq     - 1 -
+    8 ?        root     I    rcu_sche     - 1 -
+    9 ?        root     I    rcu_bh       - 1 -
+   10 ?        root     S    migratio     - 1 -
+   11 ?        root     S    watchdog     - 5 -
