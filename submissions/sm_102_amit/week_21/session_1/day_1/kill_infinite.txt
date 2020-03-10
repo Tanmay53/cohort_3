@@ -1,0 +1,20 @@
+1. Python code with infinite loop
+```
+i = 1
+while i > 0:
+    print(i)
+    i += 1
+```
+2. List all python process
+akamit21@amit-Vostro-3580:~/repos/cohort_3/submissions/sm_102_amit/week_21/session_1/day_1$ ps aux | grep python3 | sort -nk 2
+root      1222  0.0  0.1 170532 17232 ?        Ssl  09:12   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root      1325  0.0  0.1 187248 20100 ?        Ssl  09:12   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+summerp+  1327  0.0  0.5 697376 67840 ?        Ssl  09:12   0:02 /usr/bin/python3 /usr/bin/summerpalaced
+akamit21 28932  0.2  0.3 150492 39440 tty2     Sl+  16:35   0:01 /usr/bin/python3 completion.py
+akamit21 28942  0.0  0.1  61564 24268 tty2     S+   16:35   0:00 /usr/bin/python3 lib/python/jedi/inference/compiled/subprocess/__main__.py lib/python 3.6.9
+akamit21 29392  6.3  0.0  29712  9348 pts/0    T    16:39   0:19 /usr/bin/python3 /home/akamit21/repos/cohort_3/submissions/sm_102_amit/week_21/session_1/day_1/text.py
+akamit21 29585 99.6  0.0  29712  9336 pts/0    R+   16:44   0:22 /usr/bin/python3 /home/akamit21/repos/cohort_3/submissions/sm_102_amit/week_21/session_1/day_1/text.py
+akamit21 29599  0.0  0.0  14428  1092 pts/2    S+   16:44   0:00 grep --color=auto python3
+
+3. Kill the process with PID 29585 as it is taking max(%CPU)
+akamit21@amit-Vostro-3580:~/repos/cohort_3/submissions/sm_102_amit/week_21/session_1/day_1$ kill 29585

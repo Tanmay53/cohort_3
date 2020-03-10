@@ -1,11 +1,11 @@
 from blueprint_user import user
-from blueprint_post import post
+from blueprint_book import book
 from flask import Flask, request
 import json
 
 app = Flask(__name__)
 app.register_blueprint(user, url_prefix='/user')
-app.register_blueprint(post, url_prefix='/post')
+app.register_blueprint(book, url_prefix='/book')
 
 
 # write routes here

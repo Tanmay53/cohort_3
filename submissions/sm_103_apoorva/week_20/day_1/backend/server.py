@@ -20,18 +20,23 @@ def below_folder():
     )
     results = cursor.fetchall()
     cursor.close()
-    return jsonify(results)
+    return jsonify({"folders":results,"value":val})
 
 @app.route('/showabove', methods = ['POST'])
 def above_folder():
     val = request.json['descendent']
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """SELECT f.* FROM folders f join treePaths t on (f.id = t.ancestor) WHERE t.descendent = %s AND depth = %s""",(val,1,)
+        """SELECT id FROM folders f join treePaths t on (f.id = t.ancestor) WHERE t.descendent = %s AND depth = %s""",(val,1,)
     )
-    results = cursor.fetchone()
+    result = cursor.fetchone()['id']
+    print(result)
+    cursor.execute(
+        """SELECT f.* FROM folders f join treePaths t on (f.id = t.descendent) WHERE t.ancestor = %s AND depth = %s""",(result,1,)
+    )
+    siblings = cursor.fetchall()
     cursor.close()
-    return jsonify(results)
+    return jsonify({"folders":siblings,"value":result})
 
 def get_last_id():
     cursor = mysql.connection.cursor()

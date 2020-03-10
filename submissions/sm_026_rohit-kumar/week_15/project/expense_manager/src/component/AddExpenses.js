@@ -32,12 +32,12 @@ class AddExpenses extends React.Component {
 
     render() {
         return (
-            <div className='row border mt-3'>
+            <div className='row border mt-4'>
             <div className='col-12 mb-3 mt-3'>
                 {this.state.showAlert && <div class="alert alert-danger" role="alert">
                     Your expenses are crossing your income, please check !
                 </div>}
-                <h4 className='mt-3 bg-primary p-3 text-white'>Add All Expenses</h4>
+                <h4 className='bg-primary p-3 text-white'>Add All Expenses</h4>
                 <p className='text-muted'>* add info about your spend</p>
             </div>
             <div className='col-12'>
@@ -55,7 +55,7 @@ class AddExpenses extends React.Component {
                 <button className='btn btn-primary btn-sm mr-1' onClick={this.handleRemove}>Remove</button>                
             </div>
             <div className='col-md-4 col-xs-12 mt-2'>
-                <Link to='/expensesheet' className='btn btn-primary btn-sm'>Expense Sheet</Link>
+                <Link to='/expensesheet' className='btn btn-primary btn-sm'>Generate Expense Sheet</Link>
             </div>
             <div className='col-md-4 col-xs-12 mt-2'>
                 <b>Money Left: {this.props.netIncome - this.props.total}/-</b>

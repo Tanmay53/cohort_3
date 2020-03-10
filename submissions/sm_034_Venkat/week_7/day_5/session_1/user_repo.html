@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>User Repos</title>
+    <style>
+        #showDiv {
+            margin: 20px 0 0 15px;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>These are Repos of this User</h3>
+        <button id="backBtn">Back to Users</button>
+    </div>
+    <div id="ownerInfoDiv"></div>
+    <div id="reposInfoDiv"></div>
+
+    <script>
+        let userUrl = JSON.parse(localStorage.getItem("repos"))
+        request = $.ajax({
+            url: userUrl
+        })
+        request.done(function (data) {
+            alert('User repos are here.!')
+            // // let output = JSON.parse(data) //no need we are directly getting an object
+            console.log(data)
+            showAllReposInfo(data)
+            // dataArr = data.items
+            // console.log(data.items.length)
+        })
+        request.fail(function (data) {
+            alert("user don't have repos..!")
+            // // let output = JSON.parse(data) //no need we are directly getting an object
+            console.log(data)
+        })
+
+        showAllReposInfo= (data) => {
+            let ownerInfo= `<div style="margin:10px; ">
+                    <img src="${data[0].owner.avatar_url}" alt="Owner.jpg" height="110px"/>
+                    <h3>Owner : ${data[0].owner.login}</h3>
+                    <b style="color:blue">Total number of repos are : ${data.length}</b>
+                </div>`
+            $("#ownerInfoDiv").append(ownerInfo)
+
+            createReposInfo(data)
+        }
+
+        createReposInfo=(array) => {
+            array.map(each => {
+                let repo1= `<div style="margin:10px;">
+                        <h4 style="color:tomato">Repositority Name is : ${each.full_name}</h4>
+                        <p>Privacy Status : ${each.private}</p>
+                        <p>This repo url is : ${each.url}</p>
+                        <p>Created At : ${each.created_at}</p>
+                        <p>For cloning Use this : ${each.clone_url}</p>
+                        <p>Number of Visitors are : ${each.watchers_count}</p>
+                        <p>Open issues count is : ${each.open_issues_count}</p>
+                    </div>`
+                    $("#reposInfoDiv").append(repo1)
+            })
+        }
+
+        $("#backBtn").click( () => {
+            window.location.href= "gitUsersApi.html"
+        })
+    </script>
+</body>
+
+</html>

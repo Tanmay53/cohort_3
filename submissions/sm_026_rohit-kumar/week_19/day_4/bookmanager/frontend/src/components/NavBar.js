@@ -20,13 +20,22 @@ function NavBar(props) {
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <Link class="nav-link" to='/blog/dashboard' >New List <span class="sr-only">(current)</span></Link>
+                            <Link class="nav-link" to='/' >Home<span class="sr-only">(current)</span></Link>
                         </li>  
                         <li class="nav-item active">
-                            <Link class="nav-link" to='/blog/create' > Summery <span class="sr-only">(current)</span></Link>
-                        </li>                    
+                            <Link class="nav-link" to='/book' >Book<span class="sr-only">(current)</span></Link>
+                        </li>  
+                        <li class="nav-item active">
+                            <Link class="nav-link" to='/author' >Author<span class="sr-only">(current)</span></Link>
+                        </li>  
+                        <li class="nav-item active">
+                            <Link class="nav-link" to='/publisher' >Publisher<span class="sr-only">(current)</span></Link>
+                        </li>  
+                        <li class="nav-item active">
+                            <Link class="nav-link" to='/category' >Category<span class="sr-only">(current)</span></Link>
+                        </li>  
                     </ul>
-                    <ul class="navbar-nav">
+                    {/* <ul class="navbar-nav">
                         {props.showRegisterButton &&  
                             <li class="nav-item active ml-auto">
                                 <Link class="nav-link" to='/register' > Register <span class="sr-only">(current)</span></Link>
@@ -36,7 +45,7 @@ function NavBar(props) {
                         <li class="nav-item active ml-auto">
                             <Link to='/login' onClick={() => handleClick(props)} class="nav-link"> {props.menuLabel} <span class="sr-only">(current)</span></Link>
                         </li>                 
-                    </ul>
+                    </ul> */}
                 </div>
             </nav>
         )
