@@ -23,10 +23,7 @@ class ManageBlog extends React.Component {
         const url = 'http://localhost:5000/post/delete/' + blog_id
 
         axios.delete(url, {
-            data: {
-                'token': this.props.token,
-                'user_id': this.props.user_id
-            }
+            headers: {'Authorization' : `Bearer ${this.props.token}`,}
         })
         .then(res => {
             // console.log(res)
@@ -43,11 +40,12 @@ class ManageBlog extends React.Component {
         const data = {
             'heading': this.state.heading,
             'body': this.state.body,
-            'token': this.props.token,
             'user_id': this.props.user_id
         }
 
-        axios.put(url, data)
+        axios.put(url, data, {
+            headers: {Authorization : `Bearer ${this.props.token}`}
+        })
         .then(res => {
             this.props.history.push('/blog/myblog')
         })
