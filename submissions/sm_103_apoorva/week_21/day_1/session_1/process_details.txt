@@ -1,0 +1,74 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+apoorva   1323  0.0  0.0 212132  6032 tty2     Ssl+ 13:59   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SH
+apoorva   1325  4.6  1.2 663572 97056 tty2     Sl+  13:59   6:15 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1
+apoorva   1335  0.0  0.2 651640 16248 tty2     Sl+  13:59   0:00 /usr/lib/gnome-session/gnome-session-binary --session
+apoorva   1472  5.2  3.7 3978360 304972 tty2   Sl+  13:59   7:02 /usr/bin/gnome-shell
+apoorva   1502  0.0  0.1 451448 10040 tty2     Sl   13:59   0:06 ibus-daemon --xim --panel disable
+apoorva   1510  0.0  0.1 296796  8476 tty2     Sl   13:59   0:00 /usr/lib/ibus/ibus-dconf
+apoorva   1512  0.0  0.2 355676 21932 tty2     Sl   13:59   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+apoorva   1582  0.0  0.3 807968 24572 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+apoorva   1583  0.0  0.1 349320 10040 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notification
+apoorva   1586  0.0  0.0 423340  5936 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+apoorva   1589  0.0  0.0 275732  4828 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+apoorva   1592  0.0  0.1 471460 12352 tty2     Sl+  13:59   0:01 /usr/lib/gnome-settings-daemon/gsd-sharing
+apoorva   1596  0.0  0.1 466452 10116 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+apoorva   1602  0.0  0.1 343104  9900 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+apoorva   1606  0.0  0.2 504192 22952 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+apoorva   1610  0.0  0.2 513932 22340 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+apoorva   1617  0.0  0.2 355292 21412 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+apoorva   1618  0.0  0.1 296648  8344 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+apoorva   1619  0.0  0.1 476592 15400 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+apoorva   1621  0.0  0.3 677808 24588 tty2     Sl+  13:59   0:01 /usr/lib/gnome-settings-daemon/gsd-color
+apoorva   1623  0.0  0.2 516184 22576 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+apoorva   1624  0.0  0.1 375076  9312 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+apoorva   1625  0.0  0.1 296652  8352 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+apoorva   1632  0.0  0.2 1089316 24032 tty2    Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+apoorva   1670  0.0  0.1 508764 12764 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+apoorva   1693  0.0  0.6 778620 48540 tty2     Sl+  13:59   0:01 nautilus-desktop
+apoorva   1709  0.0  0.0 271932  6360 tty2     Sl+  13:59   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+apoorva   1716  0.0  0.1 220928  8228 tty2     Sl   13:59   0:01 /usr/lib/ibus/ibus-engine-simple
+apoorva   1880  0.4  1.8 875116 150768 tty2    Sl+  14:00   0:35 /usr/lib/slack/slack
+apoorva   1884  0.0  0.4 377632 38984 tty2     S+   14:00   0:00 /usr/lib/slack/slack --type=zygote
+apoorva   1886  0.0  0.1 377632  8728 tty2     S+   14:00   0:00 /usr/lib/slack/slack --type=zygote
+apoorva   1914  0.1  0.9 519840 75332 tty2     Sl+  14:00   0:15 /usr/lib/slack/slack --type=gpu-process --field-trial
+apoorva   1923  0.0  0.7 466556 60536 tty2     Sl+  14:00   0:02 /usr/lib/slack/slack --type=utility --field-trial-han
+apoorva   1942  1.7  3.4 24162456 278912 tty2  Sl+  14:00   2:18 /usr/lib/slack/slack --type=renderer --autoplay-polic
+apoorva   1977  1.9  3.2 1040980 265160 tty2   SLl+ 14:00   2:39 /opt/google/chrome/chrome
+apoorva   1983  0.0  0.0  14712   844 tty2     S+   14:00   0:00 cat
+apoorva   1984  0.0  0.0  14712   844 tty2     S+   14:00   0:00 cat
+apoorva   1987  0.0  0.7 455056 60268 tty2     S+   14:00   0:00 /opt/google/chrome/chrome --type=zygote --enable-cras
+apoorva   1988  0.0  0.0  27220  4104 tty2     S+   14:00   0:00 /opt/google/chrome/nacl_helper
+apoorva   1991  0.0  0.1 455056 15016 tty2     S+   14:00   0:00 /opt/google/chrome/chrome --type=zygote --enable-cras
+apoorva   2010  5.9  1.6 603816 128972 tty2    Sl+  14:00   8:00 /opt/google/chrome/chrome --type=gpu-process --field-
+apoorva   2017  0.4  1.2 569756 97688 tty2     SLl+ 14:00   0:34 /opt/google/chrome/chrome --type=utility --field-tria
+apoorva   2102  0.0  1.3 4808020 108888 tty2   Sl+  14:00   0:00 /opt/google/chrome/chrome --type=renderer --disable-w
+apoorva   2123  0.0  1.3 4801872 107444 tty2   Sl+  14:00   0:00 /opt/google/chrome/chrome --type=renderer --disable-w
+apoorva   2130  0.0  1.8 4857872 150880 tty2   Sl+  14:00   0:06 /opt/google/chrome/chrome --type=renderer --disable-w
+apoorva   2181  0.0  0.3 649168 30412 tty2     Sl+  14:00   0:00 update-notifier
+apoorva   2184  0.0  1.8 1378128 148592 tty2   SLl+ 14:00   0:04 /usr/bin/gnome-software --gapplication-service
+apoorva   2466  0.0  0.4 793028 33136 tty2     Sl+  14:01   0:00 /usr/lib/deja-dup/deja-dup-monitor
+apoorva   3139  0.0  0.1  32868  8284 pts/0    Ss+  14:21   0:00 bash
+apoorva   3900  0.0  0.0  24560  3308 tty2     Sl+  14:46   0:00 /usr/bin/zoom zoommtg://zoom.us/join?action=join&conf
+apoorva   3906  0.0  0.0   4624   852 tty2     S+   14:46   0:00 sh -c export SSB_HOME=/home/apoorva/.zoom; export QSG
+apoorva   3907 13.8  4.4 4914688 360368 tty2   Sl+  14:46  12:16 /opt/zoom/zoom zoommtg://zoom.us/join?action=join&con
+apoorva   4345  0.2  1.9 4862220 153028 tty2   Sl+  15:00   0:11 /opt/google/chrome/chrome --type=renderer --disable-w
+apoorva   4821  0.2  1.8 4845268 151412 tty2   Sl+  15:17   0:08 /opt/google/chrome/chrome --type=renderer --disable-w
+apoorva   4877  0.7  1.8 4846464 147564 tty2   Sl+  15:18   0:24 /opt/google/chrome/chrome --type=renderer --disable-w
+apoorva   6428  0.9  1.6 1184668 132524 tty2   Sl+  15:28   0:26 /usr/share/code/code --no-sandbox --unity-launch
+apoorva   6432  0.0  0.4 373576 38556 tty2     S+   15:28   0:00 /usr/share/code/code --type=zygote --no-sandbox
+apoorva   6455  2.3  1.0 523456 86484 tty2     Sl+  15:28   1:04 /usr/share/code/code --type=gpu-process --field-trial
+apoorva   6472  8.1  3.0 1169248 246208 tty2   RLl+ 15:28   3:44 /usr/share/code/code --type=renderer --disable-color-
+apoorva   6694  0.6  3.0 868348 247448 tty2    Sl+  15:28   0:18 /usr/share/code/code --inspect-port=0 /usr/share/code
+apoorva   6701  0.0  0.1  32872  8288 pts/2    Ss   15:28   0:00 /bin/bash
+apoorva   6703  1.7  1.5 714868 126236 tty2    Sl+  15:28   0:48 /usr/share/code/code /usr/share/code/resources/app/ou
+apoorva   6903  0.0  1.3 764264 108376 tty2    Sl+  15:28   0:02 /usr/share/code/code --type=renderer --disable-color-
+apoorva   6930  0.0  0.8 581932 64976 tty2     Sl+  15:28   0:00 /usr/share/code/code /usr/share/code/resources/app/ou
+apoorva   6984  0.0  0.0   4624   848 tty2     S+   15:28   0:00 /bin/sh -c "/home/apoorva/.vscode/extensions/ms-vsliv
+apoorva   6985  0.1  0.9 3302488 79892 tty2    Sl+  15:28   0:03 /home/apoorva/.vscode/extensions/ms-vsliveshare.vsliv
+apoorva   7290  0.4  1.6 4831740 134692 tty2   Sl+  15:32   0:12 /opt/google/chrome/chrome --type=renderer --disable-w
+apoorva   9058  0.1  0.4 161700 39616 tty2     Sl+  16:06   0:00 /usr/bin/python3 completion.py
+apoorva   9064  0.0  0.3  73260 24704 tty2     S+   16:06   0:00 /usr/bin/python3 lib/python/jedi/inference/compiled/s
+apoorva   9080  0.0  0.1  32872  8400 pts/1    Ss+  16:07   0:00 /bin/bash
+apoorva   9446  9.1  1.9 4851408 158648 tty2   Sl+  16:12   0:14 /opt/google/chrome/chrome --type=renderer --disable-w
+apoorva   9480  0.0  0.9 4775748 74576 tty2    Sl+  16:12   0:00 /opt/google/chrome/chrome --type=renderer --disable-w
+apoorva   9573  0.0  0.0  46768  3492 pts/2    R+   16:14   0:00 ps -u
