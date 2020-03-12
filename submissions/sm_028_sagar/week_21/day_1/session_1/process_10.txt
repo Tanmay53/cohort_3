@@ -1,0 +1,1 @@
+ps -au | sort -nk 2 | head -n 10

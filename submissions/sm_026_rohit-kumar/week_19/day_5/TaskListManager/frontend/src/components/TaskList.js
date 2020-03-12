@@ -19,20 +19,18 @@ class TaskList extends React.Component {
     }
 
     handleDelete = (tasklist_id) => {
-        // console.log(tasklist_id)
         axios.delete('http://localhost:5000/task/delete/tasklist', {
+            headers: { Authorization: `Bearer ${this.props.token}` },
             data: {
-                'tasklist_id': tasklist_id
+                'tasklist_id': tasklist_id,                
             }
-        }).then(res => {
+        })  
+        .then(res => {
             console.log(res)
             if (res['data']['result'] == 'success') {
                 this.props.delete_tasklist(tasklist_id)
             }
-        })
-
-
-        
+        })        
     }
 
 
@@ -47,7 +45,10 @@ class TaskList extends React.Component {
     updateName = () => {
         const url = 'http://localhost:5000/task/update/name'
         const data = {'name': this.state.name, 'tasklist_id': this.props.tasklist.tasklist_id}
-        axios.put(url, data)
+        axios.put(url, {
+            headers: { Authorization: `Bearer ${this.props.token}` },
+            data: data
+        })
         .then(res => {
             if(res['data']['result'] === 'success') {
                 this.props.update_name(data)
@@ -58,7 +59,10 @@ class TaskList extends React.Component {
     updateDesc = () => {
         const url = 'http://localhost:5000/task/update/desc'
         const data = {'desc': this.state.desc, 'tasklist_id': this.props.tasklist.tasklist_id}
-        axios.put(url, data)
+        axios.put(url, {
+            headers: { Authorization: `Bearer ${this.props.token}` },
+            data: data
+        })
         .then(res => {
             if(res['data']['result'] === 'success') {
                 this.props.update_desc(data)
@@ -180,6 +184,13 @@ class TaskList extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        user_id: state.login.data.user_id,
+        token: state.login.data.token
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         update_name: (data) => dispatch(update_name(data)),
@@ -188,4 +199,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(TaskList)
+export default connect(mapStateToProps, mapDispatchToProps)(TaskList)
