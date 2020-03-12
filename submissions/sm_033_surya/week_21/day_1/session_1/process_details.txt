@@ -1,0 +1,311 @@
+surya_k@surya-Inspiron-7580:~$ ps aux
+
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.1  0.1 225680  7948 ?        Ss   08:32   0:35 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    08:32   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        I<   08:32   0:00 [rcu_gp]
+root         4  0.0  0.0      0     0 ?        I<   08:32   0:00 [rcu_par_gp]
+root         9  0.0  0.0      0     0 ?        I<   08:32   0:00 [mm_percpu_wq]
+root        10  0.0  0.0      0     0 ?        S    08:32   0:01 [ksoftirqd/0]
+root        11  0.1  0.0      0     0 ?        I    08:32   0:35 [rcu_sched]
+root        12  0.0  0.0      0     0 ?        S    08:32   0:00 [migration/0]
+root        13  0.0  0.0      0     0 ?        S    08:32   0:00 [idle_inject/0]
+root        14  0.0  0.0      0     0 ?        S    08:32   0:00 [cpuhp/0]
+root        15  0.0  0.0      0     0 ?        S    08:32   0:00 [cpuhp/1]
+root        16  0.0  0.0      0     0 ?        S    08:32   0:00 [idle_inject/1]
+root        17  0.0  0.0      0     0 ?        S    08:32   0:00 [migration/1]
+root        18  0.0  0.0      0     0 ?        S    08:32   0:00 [ksoftirqd/1]
+root        21  0.0  0.0      0     0 ?        S    08:32   0:00 [cpuhp/2]
+root        22  0.0  0.0      0     0 ?        S    08:32   0:00 [idle_inject/2]
+root        23  0.0  0.0      0     0 ?        S    08:32   0:00 [migration/2]
+root        24  0.0  0.0      0     0 ?        S    08:32   0:00 [ksoftirqd/2]
+root        27  0.0  0.0      0     0 ?        S    08:32   0:00 [cpuhp/3]
+root        28  0.0  0.0      0     0 ?        S    08:32   0:00 [idle_inject/3]
+root        29  0.0  0.0      0     0 ?        S    08:32   0:00 [migration/3]
+root        30  0.0  0.0      0     0 ?        S    08:32   0:02 [ksoftirqd/3]
+root        33  0.0  0.0      0     0 ?        S    08:32   0:00 [cpuhp/4]
+root        34  0.0  0.0      0     0 ?        S    08:32   0:00 [idle_inject/4]
+root        35  0.0  0.0      0     0 ?        S    08:32   0:00 [migration/4]
+root        36  0.0  0.0      0     0 ?        S    08:32   0:00 [ksoftirqd/4]
+root        39  0.0  0.0      0     0 ?        S    08:32   0:00 [cpuhp/5]
+root        40  0.0  0.0      0     0 ?        S    08:32   0:00 [idle_inject/5]
+root        41  0.0  0.0      0     0 ?        S    08:32   0:00 [migration/5]
+root        42  0.0  0.0      0     0 ?        S    08:32   0:00 [ksoftirqd/5]
+root        45  0.0  0.0      0     0 ?        S    08:32   0:00 [cpuhp/6]
+root        46  0.0  0.0      0     0 ?        S    08:32   0:00 [idle_inject/6]
+root        47  0.0  0.0      0     0 ?        S    08:32   0:00 [migration/6]
+root        48  0.0  0.0      0     0 ?        S    08:32   0:00 [ksoftirqd/6]
+root        50  0.0  0.0      0     0 ?        I<   08:32   0:00 [kworker/6:0H-kb]
+root        51  0.0  0.0      0     0 ?        S    08:32   0:00 [cpuhp/7]
+root        52  0.0  0.0      0     0 ?        S    08:32   0:00 [idle_inject/7]
+root        53  0.0  0.0      0     0 ?        S    08:32   0:00 [migration/7]
+root        54  0.0  0.0      0     0 ?        S    08:32   0:00 [ksoftirqd/7]
+root        56  0.0  0.0      0     0 ?        I<   08:32   0:02 [kworker/7:0H-kb]
+root        57  0.0  0.0      0     0 ?        S    08:32   0:00 [kdevtmpfs]
+root        58  0.0  0.0      0     0 ?        I<   08:32   0:00 [netns]
+root        59  0.0  0.0      0     0 ?        S    08:32   0:00 [rcu_tasks_kthre]
+root        60  0.0  0.0      0     0 ?        S    08:32   0:00 [kauditd]
+root        62  0.0  0.0      0     0 ?        S    08:32   0:00 [khungtaskd]
+root        63  0.0  0.0      0     0 ?        S    08:32   0:00 [oom_reaper]
+root        64  0.0  0.0      0     0 ?        I<   08:32   0:00 [writeback]
+root        65  0.0  0.0      0     0 ?        S    08:32   0:00 [kcompactd0]
+root        66  0.0  0.0      0     0 ?        SN   08:32   0:00 [ksmd]
+root        67  0.0  0.0      0     0 ?        SN   08:32   0:00 [khugepaged]
+root       161  0.0  0.0      0     0 ?        I<   08:32   0:00 [kintegrityd]
+root       162  0.0  0.0      0     0 ?        I<   08:32   0:00 [kblockd]
+root       163  0.0  0.0      0     0 ?        I<   08:32   0:00 [blkcg_punt_bio]
+root       164  0.0  0.0      0     0 ?        I<   08:32   0:00 [tpm_dev_wq]
+root       165  0.0  0.0      0     0 ?        I<   08:32   0:00 [ata_sff]
+root       166  0.0  0.0      0     0 ?        I<   08:32   0:00 [md]
+root       167  0.0  0.0      0     0 ?        I<   08:32   0:00 [edac-poller]
+root       168  0.0  0.0      0     0 ?        I<   08:32   0:00 [devfreq_wq]
+root       170  0.0  0.0      0     0 ?        S    08:32   0:00 [watchdogd]
+root       174  0.0  0.0      0     0 ?        S    08:32   0:07 [kswapd0]
+root       175  0.0  0.0      0     0 ?        I<   08:32   0:01 [kworker/u17:0-r]
+root       176  0.0  0.0      0     0 ?        S    08:32   0:00 [ecryptfs-kthrea]
+root       179  0.0  0.0      0     0 ?        I<   08:32   0:00 [kthrotld]
+root       180  0.0  0.0      0     0 ?        S    08:32   0:00 [irq/122-aerdrv]
+root       181  0.0  0.0      0     0 ?        S    08:32   0:00 [irq/122-pcie-dp]
+root       182  0.0  0.0      0     0 ?        S    08:32   0:00 [irq/123-aerdrv]
+root       183  0.0  0.0      0     0 ?        S    08:32   0:00 [irq/123-pcie-dp]
+root       184  0.0  0.0      0     0 ?        S    08:32   0:00 [irq/124-aerdrv]
+root       185  0.0  0.0      0     0 ?        S    08:32   0:00 [irq/124-pcie-dp]
+root       186  0.0  0.0      0     0 ?        I<   08:32   0:00 [acpi_thermal_pm]
+root       191  0.0  0.0      0     0 ?        I<   08:32   0:00 [ipv6_addrconf]
+root       202  0.0  0.0      0     0 ?        I<   08:32   0:00 [kstrp]
+root       221  0.0  0.0      0     0 ?        I<   08:32   0:00 [charger_manager]
+root       281  0.0  0.0      0     0 ?        S    08:32   0:00 [scsi_eh_0]
+root       282  0.0  0.0      0     0 ?        I<   08:32   0:00 [scsi_tmf_0]
+root       284  0.0  0.0      0     0 ?        I<   08:32   0:02 [kworker/6:1H-kb]
+root       313  0.0  0.0      0     0 ?        I<   08:32   0:01 [kworker/5:1H-kb]
+root       316  0.0  0.0      0     0 ?        I<   08:32   0:02 [kworker/0:1H-kb]
+root       317  0.0  0.0      0     0 ?        S    08:32   0:03 [jbd2/sda5-8]
+root       318  0.0  0.0      0     0 ?        I<   08:32   0:00 [ext4-rsv-conver]
+root       351  0.0  0.0      0     0 ?        I<   08:32   0:01 [kworker/2:1H-ev]
+root       362  0.0  0.2 111632 20776 ?        S<s  08:32   0:01 /lib/systemd/systemd-journald
+root       412  0.0  0.0  48764  6612 ?        Ss   08:32   0:02 /lib/systemd/systemd-udevd
+root       420  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop0]
+root       421  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop1]
+root       423  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop2]
+root       425  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop3]
+root       427  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop4]
+root       429  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop5]
+root       431  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop6]
+root       433  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop7]
+root       435  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop8]
+root       437  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop9]
+root       439  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop10]
+root       441  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop11]
+root       443  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop12]
+root       445  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop13]
+root       447  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop14]
+root       449  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop15]
+root       451  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop16]
+root       453  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop17]
+root       456  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop18]
+root       458  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop19]
+root       460  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop20]
+root       461  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop21]
+root       463  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop22]
+root       465  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop23]
+root       467  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop24]
+root       493  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop25]
+root       495  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop26]
+root       497  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop27]
+root       499  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop28]
+root       501  0.0  0.0      0     0 ?        S<   08:33   0:00 [loop29]
+root       510  0.0  0.0      0     0 ?        I<   08:33   0:00 [cfg80211]
+root       527  0.0  0.0      0     0 ?        S    08:33   0:17 [irq/128-iwlwifi]
+root       528  0.0  0.0      0     0 ?        S    08:33   0:14 [irq/129-iwlwifi]
+root       529  0.0  0.0      0     0 ?        S    08:33   0:09 [irq/130-iwlwifi]
+root       530  0.0  0.0      0     0 ?        S    08:33   0:11 [irq/131-iwlwifi]
+root       531  0.0  0.0      0     0 ?        S    08:33   0:08 [irq/132-iwlwifi]
+root       532  0.0  0.0      0     0 ?        S    08:33   0:10 [irq/133-iwlwifi]
+root       533  0.0  0.0      0     0 ?        S    08:33   0:10 [irq/134-iwlwifi]
+root       534  0.0  0.0      0     0 ?        S    08:33   0:17 [irq/135-iwlwifi]
+root       535  0.0  0.0      0     0 ?        S    08:33   0:20 [irq/136-iwlwifi]
+root       536  0.0  0.0      0     0 ?        S    08:33   0:00 [irq/137-iwlwifi]
+root       543  0.1  0.0      0     0 ?        S    08:33   0:51 [irq/51-DELL08A6]
+root       567  0.0  0.0      0     0 ?        I<   08:33   0:01 [kworker/u17:2-r]
+root       573  0.0  0.0      0     0 ?        I<   08:33   0:00 [cryptd]
+systemd+   933  0.0  0.0  70768  4772 ?        Ss   08:33   0:01 /lib/systemd/systemd-resolved
+systemd+   934  0.0  0.0 146112  2204 ?        Ssl  08:33   0:00 /lib/systemd/systemd-timesyncd
+root       981  0.0  0.0 294744  6932 ?        Ssl  08:33   0:00 /usr/lib/accountsservice/accounts-daemon
+root       983  0.0  0.1 186992  8084 ?        Ssl  08:33   0:03 /usr/sbin/thermald --no-daemon --dbus-enable
+root       985  0.0  0.1 504016 11048 ?        Ssl  08:33   0:03 /usr/lib/udisks2/udisksd
+syslog     986  0.0  0.0 263032  4028 ?        Ssl  08:33   0:00 /usr/sbin/rsyslogd -n
+root      1010  0.0  0.0 434396  6604 ?        Ssl  08:33   0:00 /usr/sbin/ModemManager --filter-policy=strict
+message+  1013  0.0  0.0  51688  5584 ?        Ss   08:33   0:07 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root      1051  0.0  0.1 566552 14532 ?        Ssl  08:33   0:08 /usr/sbin/NetworkManager --no-daemon
+root      1052  0.0  0.0  45600  4072 ?        Ss   08:33   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root      1053  0.0  0.0 110492  3480 ?        Ssl  08:33   0:03 /usr/sbin/irqbalance --foreground
+root      1057  0.0  0.2 177636 16444 ?        Ssl  08:33   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root      1058  0.0  0.0  36540  3520 ?        Ss   08:33   0:00 /usr/lib/bluetooth/bluetoothd
+root      1059  0.0  0.0  70752  4724 ?        Ss   08:33   0:02 /lib/systemd/systemd-logind
+root      1062  0.0  0.0  38424  3184 ?        Ss   08:33   0:00 /usr/sbin/cron -f
+avahi     1065  0.6  0.0  48388  4608 ?        Ss   08:33   2:47 avahi-daemon: running [surya-Inspiron-7580.local]
+root      1069  0.0  0.0   4548   736 ?        Ss   08:33   0:03 /usr/sbin/acpid
+root      1070  0.0  0.1 1897132 14548 ?       Ssl  08:33   0:05 /usr/lib/snapd/snapd
+root      1078  0.0  0.1 303576  9632 ?        Ssl  08:33   0:01 /usr/lib/policykit-1/polkitd --no-debug
+avahi     1083  0.0  0.0  47072   340 ?        S    08:33   0:00 avahi-daemon: chroot helper
+colord    1108  0.0  0.1 324992 12744 ?        Ssl  08:33   0:00 /usr/lib/colord/colord
+root      1119  0.0  0.2 194348 17768 ?        Ssl  08:33   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root      1132  0.0  0.0 308184  7368 ?        Ssl  08:33   0:00 /usr/sbin/gdm3
+mysql     1194  0.1  2.1 1426476 168476 ?      Sl   08:33   0:27 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+whoopsie  1290  0.0  0.1 464308 12140 ?        Ssl  08:34   0:00 /usr/bin/whoopsie -f
+kernoops  1296  0.0  0.0  56940   420 ?        Ss   08:34   0:01 /usr/sbin/kerneloops --test
+kernoops  1298  0.0  0.0  56940   420 ?        Ss   08:34   0:01 /usr/sbin/kerneloops
+root      1372  0.0  0.1 322940  8796 ?        Ssl  08:34   0:05 /usr/lib/upower/upowerd
+rtkit     1417  0.0  0.0 183504  2956 ?        SNsl 08:34   0:00 /usr/lib/rtkit/rtkit-daemon
+root      1460  0.0  0.0 296872  6452 ?        Ssl  08:34   0:00 /usr/lib/x86_64-linux-gnu/boltd
+root      1461  0.0  0.4 447704 33248 ?        Ssl  08:34   0:03 /usr/lib/packagekit/packagekitd
+root      1585  0.0  0.1 415468  8880 ?        Sl   08:36   0:00 gdm-session-worker [pam/gdm-password]
+surya_k   1589  0.0  0.0  77284  7028 ?        Ss   08:36   0:01 /lib/systemd/systemd --user
+surya_k   1590  0.0  0.0 261752  2852 ?        S    08:36   0:00 (sd-pam)
+surya_k   1603  0.0  0.0 288484  6684 ?        Sl   08:36   0:01 /usr/bin/gnome-keyring-daemon --daemonize --login
+surya_k   1607  0.0  0.0 212132  5940 tty2     Ssl+ 08:36   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+surya_k   1609  3.4  1.7 592556 134652 tty2    Sl+  08:36  14:55 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+surya_k   1615  0.0  0.0  51324  5200 ?        Ss   08:36   0:05 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+surya_k   1623  0.0  0.1 567816 13744 tty2     Sl+  08:36   0:01 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+surya_k   1700  0.0  0.0  11300   320 ?        Ss   08:36   0:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+surya_k   1703  0.0  0.0 349316  5980 ?        Ssl  08:36   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+surya_k   1708  0.0  0.0  50048  3996 ?        S    08:36   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+surya_k   1710  0.0  0.0 220788  6408 ?        Sl   08:36   0:11 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+surya_k   1728  4.0  5.1 4426348 406844 tty2   Sl+  08:36  17:22 /usr/bin/gnome-shell
+surya_k   1735  0.0  0.0 292072  6756 ?        Ssl  08:36   0:00 /usr/lib/gvfs/gvfsd
+surya_k   1740  0.0  0.0 416112  5028 ?        Sl   08:36   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+surya_k   1751  4.1  0.1 2548804 10588 ?       S<l  08:36  18:03 /usr/bin/pulseaudio --start --log-target=syslog
+root      1768  0.0  0.0      0     0 ?        S<   08:36   0:00 [krfcommd]
+surya_k   1770  0.1  0.1 362808  9268 tty2     Sl   08:36   0:40 ibus-daemon --xim --panel disable
+surya_k   1772  0.0  0.0 271560  5460 ?        Ssl  08:36   0:00 /usr/libexec/xdg-permission-store
+surya_k   1775  0.0  0.0 280760  6468 tty2     Sl   08:36   0:00 /usr/lib/ibus/ibus-dconf
+surya_k   1780  0.0  0.2 343900 18068 tty2     Sl   08:36   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+surya_k   1782  0.0  0.0 278688  5844 ?        Sl   08:36   0:00 /usr/lib/ibus/ibus-portal
+surya_k   1793  0.0  0.1 689784 13848 ?        Sl   08:36   0:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+surya_k   1801  0.0  0.1 306576  8144 ?        Ssl  08:36   0:01 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+surya_k   1805  0.0  0.0 274044  5628 ?        Ssl  08:36   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+surya_k   1809  0.0  0.2 779556 17164 ?        Sl   08:36   0:00 /usr/lib/gnome-online-accounts/goa-daemon
+surya_k   1813  0.0  0.2 1306624 18724 ?       Ssl  08:36   0:00 /usr/lib/evolution/evolution-source-registry
+surya_k   1826  0.0  0.0 303360  6272 ?        Sl   08:36   0:00 /usr/lib/gnome-online-accounts/goa-identity-service
+surya_k   1831  0.0  0.0 288788  6420 ?        Ssl  08:36   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+surya_k   1835  0.0  0.0 275868  5956 ?        Ssl  08:36   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+surya_k   1839  0.0  0.0 378820  7372 ?        Ssl  08:36   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+surya_k   1844  0.0  0.2 798216 21500 tty2     Sl+  08:36   0:01 /usr/lib/gnome-settings-daemon/gsd-power
+surya_k   1846  0.0  0.1 349340 10080 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+surya_k   1847  0.0  0.0 423344  5704 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+surya_k   1848  0.0  0.0 275732  4592 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+surya_k   1849  0.0  0.1 453116  8944 tty2     Sl+  08:36   0:03 /usr/lib/gnome-settings-daemon/gsd-sharing
+surya_k   1853  0.0  0.0 332876  7360 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+surya_k   1858  0.0  0.2 494512 19052 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+surya_k   1871  0.0  0.0 451680  6916 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+surya_k   1872  0.0  0.2 428376 18612 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+surya_k   1876  0.0  0.0 278172  5748 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+surya_k   1877  0.0  0.2 343520 17036 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+surya_k   1878  0.0  0.2 741748 19552 tty2     Sl+  08:36   0:04 /usr/lib/gnome-settings-daemon/gsd-color
+surya_k   1881  0.0  0.2 474944 19344 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+surya_k   1882  0.0  0.0 364596  6856 tty2     Sl+  08:36   0:02 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+surya_k   1883  0.0  0.2 506420 18280 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+surya_k   1889  0.0  0.2 1343884 20916 tty2    Sl+  08:36   0:01 /usr/lib/gnome-settings-daemon/gsd-media-keys
+surya_k   1893  0.0  0.0 278176  5752 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+surya_k   1946  0.0  0.1 508764 12552 tty2     Sl+  08:36   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+surya_k   1948  0.0  0.2 617864 22560 tty2     SNl+ 08:36   0:07 /usr/lib/tracker/tracker-miner-fs
+surya_k   1971  0.0  0.6 1235620 54188 tty2    Sl+  08:36   0:02 nautilus-desktop
+surya_k   1973  0.0  0.2 663024 20448 ?        Ssl  08:36   0:03 /usr/lib/tracker/tracker-store
+surya_k   1974  0.0  0.2 735252 15876 tty2     SNl+ 08:36   0:00 /usr/lib/tracker/tracker-miner-apps
+surya_k   1975  0.0  0.0 271932  6168 tty2     Sl+  08:36   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+surya_k   1978  0.0  0.2 1545600 21744 tty2    SNl+ 08:36   0:00 /usr/lib/tracker/tracker-extract
+surya_k   1994  0.0  0.7 892164 55136 ?        Ssl  08:36   0:00 /usr/lib/evolution/evolution-calendar-factory
+surya_k   2003  0.0  0.0 368372  7000 ?        Sl   08:36   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.22 /org/gtk/gvfs/exec_spaw/0
+surya_k   2020  0.0  0.0 205020  6328 tty2     Sl   08:36   0:12 /usr/lib/ibus/ibus-engine-simple
+surya_k   2093  0.0  0.6 1135892 50452 ?       Sl   08:36   0:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendar
+surya_k   2105  0.0  0.0 188168  5608 ?        Sl   08:36   0:00 /usr/lib/dconf/dconf-service
+surya_k   2113  0.0  0.1 732708 14956 ?        Ssl  08:36   0:00 /usr/lib/evolution/evolution-addressbook-factory
+surya_k   2133  0.0  0.1 869748 14808 ?        Sl   08:36   0:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Addre
+surya_k   2158  0.0  0.0 204636  5880 ?        Ssl  08:36   0:00 /usr/lib/gvfs/gvfsd-metadata
+surya_k   2236  0.3  1.8 942124 144916 tty2    Sl+  08:37   1:36 /snap/slack/21/usr/lib/slack/slack --no-sandbox --executed-from=/home/surya_k --pid=2209
+surya_k   2239  0.0  0.5 386932 41912 tty2     S+   08:37   0:00 /snap/slack/21/usr/lib/slack/slack --type=zygote --no-sandbox
+surya_k   2270  0.0  0.3 646256 26868 tty2     Sl+  08:37   0:01 update-notifier
+surya_k   2290  0.0  1.9 1250684 149444 tty2   SLl+ 08:37   0:05 /usr/bin/gnome-software --gapplication-service
+surya_k   2295  0.0  0.7 476796 61800 tty2     Sl+  08:37   0:07 /snap/slack/21/usr/lib/slack/slack --type=utility --field-trial-handle=5806082327960379251,17235076475725204757,131072 --disable-features=Sp
+surya_k   2304  0.1  1.0 482196 80080 tty2     Sl+  08:37   0:35 /snap/slack/21/usr/lib/slack/slack --type=gpu-process --field-trial-handle=5806082327960379251,17235076475725204757,131072 --disable-feature
+surya_k   2329  1.5  3.9 24261548 309880 tty2  Sl+  08:37   6:33 /snap/slack/21/usr/lib/slack/slack --type=renderer --no-sandbox --autoplay-policy=no-user-gesture-required --force-color-prof l-handle=58060
+surya_k   2352  0.0  0.0  24560  3184 tty2     Sl+  08:37   0:00 /usr/bin/zoom
+surya_k   2357  0.0  0.0   4624   852 tty2     S+   08:37   0:00 sh -c export SSB_HOME=/home/surya_k/.zoom; export QSG_INFO=1; export LD_LIBRARY_PATH=/opt/zoom; export BREAKPAD_CLIENT_FD=3; /opt/zoom/zoom 
+surya_k   2358  8.4  4.9 4929756 388564 tty2   Sl+  08:37  36:15 /opt/zoom/zoom
+surya_k   2498  0.0  0.0  19988  3272 tty2     S+   08:38   0:00 /bin/bash /usr/bin/brave-browser-stable
+surya_k   2504  0.0  0.0  14712   796 tty2     S+   08:38   0:00 cat
+surya_k   2505  0.0  0.0  14712   796 tty2     S+   08:38   0:00 cat
+surya_k   2506  3.6  4.2 1516556 335728 tty2   SLl+ 08:38  15:43 /opt/brave.com/brave/brave
+surya_k   2516  0.0  0.6 468624 50960 tty2     S+   08:38   0:00 /opt/brave.com/brave/brave --type=zygote
+surya_k   2517  0.0  0.2 792916 17604 tty2     Sl+  08:38   0:00 /usr/lib/deja-dup/deja-dup-monitor
+surya_k   2526  0.0  0.1 468624 14440 tty2     S+   08:38   0:00 /opt/brave.com/brave/brave --type=zygote
+surya_k   2559  7.4  2.0 673268 159364 tty2    Sl+  08:38  31:54 /opt/brave.com/brave/brave --type=gpu-process --field-trial-handle=16327156643172112383,12467578433090564844,131072 --enable-features=Passwo
+surya_k   2567  0.8  1.2 614988 98432 tty2     SLl+ 08:38   3:34 /opt/brave.com/brave/brave --type=utility --field-trial-handle=16327156643172112383,12467578433090564844,131072 --enable-features=PasswordIm
+surya_k   2583  0.0  0.7 511012 56020 tty2     Sl+  08:39   0:01 /opt/brave.com/brave/brave --type=utility --field-trial-handle=16327156643172112383,12467578433090564844,131072 --enable-features=PasswordIm
+surya_k   2588  0.0  0.3 509988 29172 tty2     Sl+  08:39   0:00 /opt/brave.com/brave/brave --type=utility --field-trial-handle=16327156643172112383,12467578433090564844,131072 --enable-features=PasswordIm
+surya_k   2619  0.2  1.5 4870580 119512 tty2   Sl+  08:39   0:56 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+surya_k   2648  0.0  1.0 4807808 81284 tty2    Sl+  08:39   0:00 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+surya_k   2700  0.0  1.0 4826944 85364 tty2    Sl+  08:39   0:00 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+surya_k   2704  0.2  1.7 4898884 135208 tty2   Sl+  08:39   1:00 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+surya_k   3596  6.0  1.9 4971700 153336 tty2   Sl+  08:53  25:01 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+surya_k   4044  0.0  0.1 359640  8596 ?        Sl   09:07   0:00 /usr/lib/gvfs/gvfsd-http --spawner :1.22 /org/gtk/gvfs/exec_spaw/1
+root      4385  0.0  0.1 115212 15504 ?        Ss   09:08   0:02 /usr/sbin/cupsd -l
+root      4386  0.0  0.1 306528 11668 ?        Ssl  09:08   0:01 /usr/sbin/cups-browsed
+surya_k   4625  6.1  2.4 9235444 194124 tty2   Sl+  09:15  24:08 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+surya_k   5103  0.0  0.0 370668  7776 ?        Sl   09:35   0:02 /usr/lib/gvfs/gvfsd-network --spawner :1.22 /org/gtk/gvfs/exec_spaw/3
+surya_k   5131  0.0  0.0 381424  7404 ?        Sl   09:35   0:01 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.22 /org/gtk/gvfs/exec_spaw/6
+lp        6187  0.0  0.0  86416  5804 ?        S    10:24   0:00 /usr/lib/cups/notifier/dbus dbus://
+root      6488  0.0  0.0      0     0 ?        I<   10:33   0:01 [kworker/4:2H-kb]
+root      9985  0.0  0.0      0     0 ?        S    13:26   0:00 [irq/127-mei_me]
+root     10061  0.0  0.0  25988  3280 ?        S    13:26   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-wlp3s0.pid -lf /var/lib/NetworkManager/dhclient-433e1d6a-1
+surya_k  10183  0.1  1.8 4871784 142452 tty2   Sl+  13:32   0:08 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+surya_k  10302  0.0  0.5 852672 41236 ?        Sl   13:37   0:01 /usr/bin/nautilus --gapplication-service
+root     10814  0.3  0.0      0     0 ?        I    13:38   0:23 [kworker/u16:1-e]
+root     11237  0.0  0.0      0     0 ?        I<   13:38   0:01 [kworker/5:2H-ev]
+root     11481  0.0  0.0      0     0 ?        I<   13:41   0:01 [kworker/1:0H-kb]
+root     11504  0.0  0.0      0     0 ?        I<   13:41   0:01 [kworker/3:2H-kb]
+root     14302  0.2  0.0      0     0 ?        I    14:17   0:14 [kworker/u16:0-e]
+root     14727  0.0  0.0      0     0 ?        I<   14:37   0:00 [kworker/0:2H-ev]
+root     15036  0.0  0.0      0     0 ?        I<   14:48   0:00 [kworker/7:1H-kb]
+root     15038  0.0  0.0      0     0 ?        I<   14:48   0:00 [kworker/3:0H-ev]
+root     15111  0.0  0.0      0     0 ?        I    14:53   0:02 [kworker/6:1-rcu]
+surya_k  15246  0.0  0.0 495396  5904 ?        Ssl  15:00   0:00 /usr/libexec/xdg-document-portal
+root     15606  0.0  0.0      0     0 ?        I    15:02   0:00 [kworker/2:1-eve]
+surya_k  15721  0.8  1.9 4925288 154108 tty2   Sl+  15:03   0:21 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+root     15832  0.0  0.0      0     0 ?        I    15:05   0:00 [kworker/5:1-mm_]
+root     16124  0.0  0.0      0     0 ?        I    15:10   0:00 [kworker/7:2-eve]
+root     16280  0.0  0.0      0     0 ?        I    15:15   0:00 [kworker/5:0]
+root     16404  0.0  0.0      0     0 ?        I    15:20   0:00 [kworker/3:1-eve]
+root     16412  0.0  0.0      0     0 ?        I    15:21   0:00 [kworker/2:2-eve]
+root     16420  0.0  0.0      0     0 ?        I    15:21   0:00 [kworker/1:2-eve]
+root     16873  0.0  0.0      0     0 ?        I    15:27   0:00 [kworker/4:1-eve]
+root     16906  0.0  0.0      0     0 ?        I<   15:27   0:00 [kworker/2:0H-kb]
+root     16919  0.0  0.0      0     0 ?        I<   15:27   0:00 [kworker/4:0H-kb]
+root     16928  0.0  0.0      0     0 ?        I    15:27   0:00 [kworker/3:2-mm_]
+root     17246  0.0  0.0      0     0 ?        I<   15:27   0:00 [kworker/1:1H-ev]
+root     17323  0.0  0.0      0     0 ?        I    15:29   0:00 [kworker/0:1-mm_]
+surya_k  17385  0.2  1.4 4851896 114888 tty2   Sl+  15:31   0:02 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+surya_k  17412  1.4  1.7 4878160 140588 tty2   Sl+  15:31   0:15 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+surya_k  17444  1.0  0.4 802468 37236 ?        Rsl  15:31   0:10 /usr/lib/gnome-terminal/gnome-terminal-server
+surya_k  17454  0.0  0.1  32900  8272 pts/0    Ss   15:31   0:00 bash
+surya_k  17680  2.0  1.7 1234376 138844 tty2   Sl+  15:32   0:19 /usr/share/code/code --no-sandbox --unity-launch
+surya_k  17684  0.0  0.4 373576 38748 tty2     S+   15:32   0:00 /usr/share/code/code --type=zygote --no-sandbox
+surya_k  17706  4.5  1.0 519728 81660 tty2     Sl+  15:32   0:43 /usr/share/code/code --type=gpu-process --field-trial-handle=6782543175736747830,10566817420045560189,131072 --disable-features=LayoutNG,Spa
+surya_k  18122 10.2  2.8 1154260 220372 tty2   SLl+ 15:33   1:35 /usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=6782543175736747830,105668174200455
+surya_k  18148  0.6  1.8 745980 147224 tty2    Sl+  15:33   0:06 /usr/share/code/code --inspect-port=0 /usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost
+surya_k  18160  0.0  0.8 582656 64120 tty2     Sl+  15:33   0:00 /usr/share/code/code /usr/share/code/resources/app/out/bootstrap-fork --type=watcherService
+surya_k  18181  0.0  0.8 581676 64304 tty2     Sl+  15:33   0:00 /usr/share/code/code /usr/share/code/resources/app/out/bootstrap-fork --type=searchService
+surya_k  18223  0.0  0.6 4817468 54732 tty2    Sl+  15:33   0:00 /opt/brave.com/brave/brave --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16327156643172112383,12467578433090564
+root     18293  0.0  0.0      0     0 ?        I    15:35   0:00 [kworker/4:0-mm_]
+root     18362  0.6  0.0      0     0 ?        I    15:38   0:04 [kworker/u16:2-e]
+root     18370  0.0  0.0      0     0 ?        I    15:38   0:00 [kworker/6:2-eve]
+surya_k  18412  0.1  0.5 161816 39832 tty2     Sl+  15:39   0:01 /usr/bin/python3 completion.py
+surya_k  18415  0.0  0.3  73272 24452 tty2     S+   15:39   0:00 /usr/bin/python3 lib/python/jedi/inference/compiled/subprocess/__main__.py lib/python 3.6.9
+surya_k  18433  0.0  0.1  32908  8364 pts/1    Ss+  15:40   0:00 /bin/bash
+root     18635  0.0  0.0      0     0 ?        I    15:41   0:00 [kworker/0:0-eve]
+root     18636  0.0  0.0      0     0 ?        I    15:41   0:00 [kworker/7:1-eve]
+surya_k  18659  0.0  0.6 593776 49244 tty2     Sl+  15:41   0:00 /snap/slack/21/usr/lib/slack/slack --type=utility --field-trial-handle=5806082327960379251,17235076475725204757,131072 --disable-features=Sp
+root     18703  0.0  0.0      0     0 ?        I    15:43   0:00 [kworker/1:0-eve]
+root     18713  0.0  0.0      0     0 ?        I    15:44   0:00 [kworker/6:0-eve]
+root     18792  0.0  0.0      0     0 ?        I    15:48   0:00 [kworker/2:0-eve]
+surya_k  18797  0.0  0.0  46768  3676 pts/0    R+   15:48   0:00 ps aux

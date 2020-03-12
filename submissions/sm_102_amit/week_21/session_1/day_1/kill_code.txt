@@ -1,0 +1,5 @@
+ 2014  ps aux | grep vscode > process_vs.txt
+ 2015  kill 26530
+ 2016  kill 26794
+ 2017  history | head -n 5 > kill_code.txt
+ 2018  history | tail -n 5 > kill_code.txt
