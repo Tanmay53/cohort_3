@@ -1,0 +1,414 @@
+  PID TT       STAT
+    1 ?        Ss
+    2 ?        S
+    4 ?        I<
+    6 ?        I<
+    7 ?        S
+    8 ?        I
+    9 ?        I
+   10 ?        S
+   11 ?        S
+   12 ?        S
+   13 ?        S
+   14 ?        S
+   15 ?        S
+   16 ?        S
+   18 ?        I<
+   19 ?        S
+   20 ?        S
+   21 ?        S
+   22 ?        S
+   24 ?        I<
+   25 ?        S
+   26 ?        S
+   27 ?        S
+   28 ?        S
+   30 ?        I<
+   31 ?        S
+   32 ?        S
+   33 ?        S
+   34 ?        S
+   36 ?        I<
+   37 ?        S
+   38 ?        S
+   39 ?        S
+   40 ?        S
+   42 ?        I<
+   43 ?        S
+   44 ?        S
+   45 ?        S
+   46 ?        S
+   48 ?        I<
+   49 ?        S
+   50 ?        S
+   51 ?        S
+   52 ?        S
+   54 ?        I<
+   55 ?        S
+   56 ?        I<
+   57 ?        S
+   58 ?        S
+   62 ?        S
+   63 ?        S
+   64 ?        I<
+   65 ?        S
+   66 ?        SN
+   67 ?        SN
+   68 ?        I<
+   69 ?        I<
+   70 ?        I<
+   74 ?        I<
+   75 ?        I<
+   76 ?        I<
+   77 ?        I<
+   79 ?        I<
+   84 ?        S
+   85 ?        I<
+   86 ?        S
+  128 ?        I<
+  129 ?        I<
+  131 ?        I<
+  135 ?        I<
+  144 ?        I<
+  161 ?        I<
+  211 ?        S
+  212 ?        I<
+  213 ?        S
+  214 ?        I<
+  215 ?        S
+  216 ?        S
+  217 ?        S
+  218 ?        S
+  238 ?        I<
+  352 ?        I<
+  398 ?        S
+  399 ?        I<
+  432 ?        I<
+  433 ?        I<
+  445 ?        S<s
+  452 ?        I<
+  456 ?        I<
+  457 ?        I<
+  466 ?        I<
+  479 ?        I<
+  498 ?        Ss
+  503 ?        S<
+  505 ?        S<
+  508 ?        S<
+  509 ?        S<
+  511 ?        S<
+  524 ?        S<
+  525 ?        S<
+  526 ?        S<
+  527 ?        S<
+  528 ?        S<
+  529 ?        S<
+  530 ?        S<
+  531 ?        S<
+  532 ?        S<
+  533 ?        S<
+  534 ?        S<
+  535 ?        S<
+  538 ?        S<
+  555 ?        S<
+  557 ?        S<
+  559 ?        S<
+  560 ?        S<
+  561 ?        S<
+  562 ?        S<
+  563 ?        S<
+  564 ?        S<
+  565 ?        S<
+  566 ?        S<
+  567 ?        S<
+  568 ?        S<
+  569 ?        S<
+  570 ?        S<
+  571 ?        S<
+  572 ?        S<
+  573 ?        S<
+  574 ?        S<
+  575 ?        S<
+  654 ?        S
+  682 ?        I<
+  792 ?        I<
+  809 ?        I<
+  810 ?        I<
+ 1178 ?        Ss
+ 1179 ?        Ssl
+ 1182 ?        Ssl
+ 1183 ?        Ssl
+ 1190 ?        Ssl
+ 1195 ?        Ss
+ 1199 ?        Ss
+ 1222 ?        Ssl
+ 1223 ?        Ssl
+ 1225 ?        Ss
+ 1226 ?        Ss
+ 1229 ?        Ss
+ 1232 ?        Ssl
+ 1234 ?        Ssl
+ 1235 ?        Ssl
+ 1237 ?        Ss
+ 1238 ?        Ss
+ 1243 ?        Ssl
+ 1274 ?        Ssl
+ 1297 ?        S
+ 1325 ?        Ssl
+ 1327 ?        Ssl
+ 1338 ?        Ssl
+ 1382 ?        Sl
+ 1398 ?        Sl
+ 1439 ?        Ss
+ 1440 ?        S
+ 1467 ?        Ss
+ 1505 tty1     Ssl+
+ 1507 ?        Ss
+ 1509 tty1     Sl+
+ 1543 tty1     Sl+
+ 1566 ?        Ssl
+ 1568 ?        Ss
+ 1580 ?        Ss
+ 1760 ?        Ssl
+ 1778 tty1     Sl+
+ 1792 ?        Ssl
+ 1797 ?        S
+ 1799 ?        Sl
+ 1803 ?        Ssl
+ 1804 ?        SNsl
+ 1831 tty1     Sl
+ 1834 tty1     Sl
+ 1836 tty1     Sl
+ 1839 ?        Sl
+ 1848 ?        Ssl
+ 1859 ?        Ssl
+ 1860 ?        Ssl
+ 1861 tty1     Sl+
+ 1863 tty1     Sl+
+ 1864 tty1     Sl+
+ 1865 tty1     Sl+
+ 1868 tty1     Sl+
+ 1869 tty1     Sl+
+ 1870 tty1     Sl+
+ 1871 tty1     Sl+
+ 1874 tty1     Sl+
+ 1876 tty1     Sl+
+ 1879 tty1     Sl+
+ 1880 tty1     Sl+
+ 1883 tty1     Sl+
+ 1884 tty1     Sl+
+ 1889 tty1     Sl+
+ 1891 tty1     Sl+
+ 1897 tty1     Sl+
+ 1916 tty1     Sl
+ 1956 ?        Ssl
+ 1985 ?        Sl
+ 1988 ?        Ss
+ 1989 ?        S
+ 2002 ?        SLl
+ 2006 tty2     Ssl+
+ 2008 tty2     Sl+
+ 2017 ?        Ss
+ 2020 tty2     Sl+
+ 2116 ?        Ss
+ 2119 ?        Ssl
+ 2124 ?        S
+ 2126 ?        Sl
+ 2144 tty2     Sl+
+ 2151 ?        Ssl
+ 2156 ?        Sl
+ 2167 ?        S<l
+ 2171 ?        S<
+ 2186 tty2     Sl
+ 2189 ?        Ssl
+ 2193 tty2     Sl
+ 2196 tty2     Sl
+ 2198 ?        Sl
+ 2209 ?        Sl
+ 2216 ?        Ssl
+ 2220 ?        Ssl
+ 2225 ?        Ssl
+ 2229 ?        Sl
+ 2233 ?        Ssl
+ 2246 ?        Sl
+ 2251 ?        Ssl
+ 2255 ?        Ssl
+ 2259 tty2     Sl+
+ 2261 tty2     Sl+
+ 2262 tty2     Sl+
+ 2263 tty2     Sl+
+ 2264 tty2     Sl+
+ 2268 tty2     Sl+
+ 2272 tty2     Sl+
+ 2274 tty2     Sl+
+ 2286 tty2     Sl+
+ 2292 tty2     Sl+
+ 2294 tty2     Sl+
+ 2295 tty2     Sl+
+ 2301 tty2     Sl+
+ 2307 tty2     Sl+
+ 2310 tty2     Sl+
+ 2312 tty2     Sl+
+ 2316 tty2     Sl+
+ 2343 tty2     Sl+
+ 2358 tty2     Sl+
+ 2364 tty2     Sl+
+ 2389 ?        Ssl
+ 2392 tty2     Sl
+ 2401 ?        Sl
+ 2424 ?        Sl
+ 2434 ?        Sl
+ 2445 ?        Ssl
+ 2460 ?        Sl
+ 2539 ?        Ssl
+ 2682 tty2     Sl+
+ 2698 ?        Ss
+ 2775 tty2     S+
+ 2803 tty2     SLl+
+ 2826 tty2     Sl+
+ 2829 tty2     Sl+
+ 2853 tty2     S+
+ 2862 tty2     S+
+ 2888 tty2     Sl+
+ 2893 tty2     SLl+
+ 2973 tty2     Sl+
+ 2988 tty2     Sl+
+ 3001 tty2     Sl+
+ 3008 tty2     SLl+
+ 3011 tty2     Sl+
+ 3145 tty2     Sl+
+ 3209 tty2     Sl+
+ 3278 tty2     Sl+
+ 3488 tty2     Sl+
+ 3536 tty2     Sl+
+ 3628 ?        Sl
+ 3640 tty2     S+
+ 3641 tty2     S+
+ 3967 tty2     Sl+
+ 3973 tty2     S+
+ 3974 tty2     Sl+
+ 5360 tty2     Sl+
+ 8097 tty2     Sl+
+ 8596 tty2     Sl+
+ 8864 tty2     Sl+
+ 8877 tty2     Sl+
+ 9541 tty2     Sl+
+ 9591 tty2     Sl+
+10785 tty2     Sl+
+10826 tty2     Sl+
+10841 tty2     Sl+
+10902 tty2     Sl+
+10915 tty2     Sl+
+10929 tty2     Sl+
+10942 tty2     Sl+
+10956 tty2     Sl+
+10985 tty2     Sl+
+11773 ?        S
+12045 ?        S
+13440 ?        Sl
+13462 ?        Sl
+14608 ?        S
+14609 ?        S
+14610 ?        S
+14611 ?        S
+14612 ?        S
+14624 ?        Ss
+14625 ?        Ssl
+15169 tty2     Sl+
+15242 tty2     Sl+
+15325 tty2     Sl+
+15402 ?        I
+15499 tty2     S+
+15500 tty2     S+
+16718 ?        Ssl
+17161 tty2     Sl+
+17166 tty2     S+
+17193 tty2     Sl+
+17983 tty2     Sl+
+17989 tty2     S+
+17990 tty2     Sl+
+20067 ?        Sl
+21251 tty2     Sl+
+21288 tty2     Sl+
+21547 ?        S
+21824 ?        I
+22116 tty2     Sl+
+22729 tty2     S+
+22730 tty2     S+
+23206 tty2     S+
+23207 tty2     S+
+23725 tty2     SLl+
+23730 tty2     S+
+23731 tty2     S+
+23735 tty2     S+
+23736 tty2     S+
+23739 tty2     S+
+23762 tty2     Sl+
+23765 tty2     SLl+
+23776 tty2     S+
+23941 tty2     Sl+
+23946 tty2     Sl+
+25157 ?        Sl
+25378 pts/2    Ss
+26222 tty2     Sl+
+26513 ?        I
+26514 ?        I
+26739 ?        I
+27094 tty2     SLl+
+27122 tty2     Sl+
+27137 tty2     Sl+
+27159 tty2     Sl+
+27283 tty2     Sl+
+27557 ?        I
+27559 ?        I
+27595 tty2     Sl+
+27611 tty2     Sl+
+27634 tty2     Sl+
+27647 tty2     Sl+
+27673 tty2     Sl+
+27687 tty2     Sl+
+27699 tty2     Sl+
+27742 tty2     Sl+
+27809 ?        I
+27810 tty2     Sl+
+27823 tty2     Sl+
+27836 tty2     Sl+
+27852 tty2     Sl+
+27853 tty2     Sl+
+27876 tty2     Sl+
+27898 tty2     Sl+
+27909 tty2     Sl+
+27918 tty2     Sl+
+27924 tty2     Sl+
+27987 tty2     Sl+
+28104 tty2     Sl+
+28189 tty2     Sl+
+28256 ?        I
+28305 tty2     Sl+
+28322 tty2     Sl+
+28355 tty2     Sl+
+28425 tty2     Sl+
+28932 tty2     Sl+
+28942 tty2     S+
+29114 pts/0    Ss+
+29392 pts/0    T
+29399 ?        I
+29612 ?        I
+29857 tty2     S+
+29900 ?        I
+30501 ?        I
+30502 ?        I
+30503 ?        I
+30524 ?        I
+30560 ?        I
+30594 ?        I
+30768 ?        I
+30801 ?        I
+31112 ?        I
+31113 ?        I
+31114 ?        I
+31156 ?        I
+31160 ?        I
+31192 tty2     Sl+
+31230 ?        I
+31256 pts/2    R+

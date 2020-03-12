@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>gitUsersApi</title>
+    <style>
+        #searchBoxDiv * {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body class="m-2">
+    <div id="searchBoxDiv" class="m-2 p-2 border d-flex flex-wrap justify-content-around">
+        <!-- <div class="col-10 col-md-6"> -->
+        <div>
+            <label for="search">Search for User :</label>
+            <input type="text" id="searchInput" placeholder=" Enter input here">
+        </div>
+        <!-- <button id="searchBtn" class="col-2">Search</button>
+        <button id="showTableBtn" class="col-2">ShowTable</button> -->
+        <div><button id="searchBtn">Search</button></div>
+        <div><button id="showTableBtn">ShowTable</button></div>
+    </div>
+    <div id="tableDiv">
+        <table class="table text-justify">
+            <thead>
+                <tr>
+                    <!-- <th scope="col-11 col-md-5 col-lg-3">#No.</th>
+                    <th scope="col-11 col-md-5 col-lg-3">Profie Picture</th>
+                    <th scope="col-11 col-md-5 col-lg-3">Name</th>
+                    <th scope="col-11 col-md-5 col-lg-3">id</th>
+                    <th scope="col-11 col-md-5 col-lg-3">Repos</th> -->
+                    <th scope="col">#No.</th>
+                    <th scope="col">Profie Picture"</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">id</th>
+                    <th scope="col">Repos</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        $("#tableDiv").hide()
+        var dataArr //array of info of 30 members
+        $("#searchBtn").click(() => {
+            inputVal = $("#searchInput").val()
+            request = $.ajax({
+                url: "https://api.github.com/search/users?q=" + inputVal
+            })
+            request.done(function (data) {
+                if(data.items.length == 0) console.log("No users are existed on this name..!")
+                else {
+                    alert('Users are here.!')
+                    // // let output = JSON.parse(data) //no need we are directly getting an object
+                    console.log(data)
+                    dataArr= data.items
+                    console.log(data.items.length)
+                }
+            })
+            request.fail(function (data) {
+                alert('No user existed on that name.!')
+                // // let output = JSON.parse(data) //no need we are directly getting an object
+                console.log(data)
+            })
+        })
+        $("#showTableBtn").click(() => {
+            $("#tableDiv").show()
+            createTableRows(dataArr)
+        })
+
+        createTableRows = (array) => {
+            console.log(array[0])
+            for (i = 0; i <= array.length; i++) {
+                let row = `<tr>
+                    <th scope="row">${i+1}</th>
+                    <td><img src="${array[i].avatar_url}" alt="imgAlt.jpg" height="130px"/></td>
+                    <td>${array[i].login}</td>
+                    <td>${array[i].id}</td>
+                    <td><button onclick=showRepos("${array[i].repos_url}")>Show Repos</button></td>
+                </tr>`
+                $("#tableBody").append(row)
+            }
+            // array.forEach( (obj) => {
+            //     let row = <tr>
+            //         <th scope="row">1</th> //u can not get i value in forEach so i used for loop
+            //         <td><img src="${}" /></td>
+            //         <td>Otto</td>
+            //         <td>@mdo</td>
+            //         <td>@mdo</td>
+            //     </tr>
+            // })
+        }
+        showRepos= (url) => {
+            console.log(url)
+            localStorage.setItem("repos",JSON.stringify(url))
+            window.location.href= "user_repo.html"
+        }
+    </script>
+</body>
+
+</html>
