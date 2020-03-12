@@ -1,0 +1,8 @@
+x = 1
+while x > 0:
+    x += 1
+
+command to check runnning process in python 3
+ps aux | grep python3
+kill pid
+in which filename containing infinite loop exists. 

@@ -1,0 +1,32 @@
+Preemption :- In OS,it stands for interupting any process when the processing time increases the scheduled cpu time for a perticular task. So that it can be resumes later.
+
+SJN:- It stands for shortest job next.That is, everytime the process with shortest execution time is executed first.
+
+Preemptive SJN :
+
+In Preemptive SJN when next process comes in between of execution time of 1st process, 1st process is preemted and next process with shortest remaining time comes.
+
+For eg.
+
+
+Process | Arrival time | Execution time 
+P0 | 0 | 6
+P1 | 2 | 1
+p2 | 3 | 3
+
+In the above processes :
+1. P0 will get executed as it starts at 0.it runs for 2unit then P1 comes and P0 is preempted ,P1 runs for 1 unit then again P0 runs for 1Unit and get preempted. Then p2 comes and run for 3unit then again P1 comes and complete its remaining process
+
+
+Non-Preemptive SJN:
+
+In this Preemption doesn't happen .Proccesses completes it work then then next process with shortest time commes.
+
+for eg,
+
+Process | Arrival time | Execution time 
+P0 | 0 | 6
+P1 | 2 | 4
+p2 | 1 | 3
+
+In the above processes, P0 is executed 1st then p2 then p1
