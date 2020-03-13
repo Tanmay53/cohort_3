@@ -1,0 +1,12 @@
+surya_k@surya-Inspiron-7580:~$ ps aux | head -n 10
+
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.1  0.1 225680  7948 ?        Ss   08:32   0:35 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    08:32   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        I<   08:32   0:00 [rcu_gp]
+root         4  0.0  0.0      0     0 ?        I<   08:32   0:00 [rcu_par_gp]
+root         9  0.0  0.0      0     0 ?        I<   08:32   0:00 [mm_percpu_wq]
+root        10  0.0  0.0      0     0 ?        S    08:32   0:01 [ksoftirqd/0]
+root        11  0.1  0.0      0     0 ?        I    08:32   0:35 [rcu_sched]
+root        12  0.0  0.0      0     0 ?        S    08:32   0:00 [migration/0]
+root        13  0.0  0.0      0     0 ?        S    08:32   0:00 [idle_inject/0]
