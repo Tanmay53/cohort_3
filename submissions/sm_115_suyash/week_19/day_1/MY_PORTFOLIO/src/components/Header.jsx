@@ -2,8 +2,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div >
-      <div className="d-flex flex-column justify-content-center align-items-center" >
+    <div>
+      <div className="d-flex flex-column justify-content-center align-items-center">
         <div className="rounded-circle wrap-img mt-5 mb-4 shadow">
           <img
             src="myImg3.jpg"
@@ -77,9 +77,10 @@ const Header = () => {
         </div>
       </div>
       <div className="text-center mt-4">
-        <a href="#" className="btn cv-btn mb-5 dosis" >DWONLOAD CV</a>
+        <a href="#" className="btn cv-btn mb-5 dosis">
+          Resume
+        </a>
       </div>
-      
     </div>
   );
 };

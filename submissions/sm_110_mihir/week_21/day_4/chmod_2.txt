@@ -1,0 +1,4 @@
+// first make the scripts folder readable
+chmod 777 .
+
+chmod a-x curl.html
