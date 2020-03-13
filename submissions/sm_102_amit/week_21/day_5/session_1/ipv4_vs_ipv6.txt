@@ -1,0 +1,7 @@
+IPv4                                                IPv6
+Uses 32 bits (4 bytes) adsress                      It uses 128 bits (16 bytes)
+Address represented	in decimal format               Represented in hexadecimal format
+Arranged in four groups                             Arranged in eight groups and each is
+                                                    represented as four hexadecimal digit
+It can generate 4.29×109 address space              Address space of IPv6 is quite large it 
+                                                    can produce 3.4×1038 address space
