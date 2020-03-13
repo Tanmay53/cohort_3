@@ -1,0 +1,5 @@
+simplex mode: one way communication. eg. cpu sends signal to screen, movie playing in cinema hall, monologue speech of a politician.
+
+half duplex: 2 way allowed but only one way at a time. Example walki talkie.
+
+full duplex: 2 way communication at the same time. example telephone, video conferencing.

@@ -1,0 +1,4 @@
+30 17 * * * curl -o ~/repos/cohort_3/submissions/sm_110_mihir/week_21/day_4/scripts/curl.html https://github.com/masai-school/full-stack-dev-1910/blob$
+
+
+chmod a-rw scripts/
