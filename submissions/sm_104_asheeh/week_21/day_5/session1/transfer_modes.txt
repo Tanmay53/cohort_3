@@ -1,0 +1,4 @@
+Real life scenarios of each transfer modes:
+1. Simplex- Camera
+2. Half-Duplex- Wlkie Talkie
+3. Full Duplex- Telephone

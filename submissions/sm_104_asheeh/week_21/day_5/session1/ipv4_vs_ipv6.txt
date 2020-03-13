@@ -1,0 +1,13 @@
+Difference between IPv4 and IPv6:
+
+IPv4                                    IPv6
+
+1. It is of 32-bit format.             1. It is of 128-bit format.
+2. It can serve at most 2^32 devices.   2. It can serve at most 2^128 devices.
+3. It is widely used protocol at        3. It is emerging and right now only used by professionals.
+   present.                     
+4. It will reach to its maximum limit   4. It has a future scope.
+    in near future(approx 10 to 15 
+    years)
+
+5. Range: 0.0.0.0 to 255.255.255.255   5. Range: 0.0.0.0.0.0.0.0 to FFFF.FFFF.FFFF.FFFF.FFFF.FFFF.FFFF.FFFF
