@@ -1,9 +1,10 @@
 import React from 'react'
 class Todolist extends React.Component{
     render(){
+        let disp=(this.props.label==="Todo's")?"text-primary font-weight-bold":"text-success font-weight-bold"
         return(
             <div className="text-center border border-primary mx-5">
-                <h4 className="text-primary font-weight-bold"><u>{this.props.label}</u></h4>
+                <h4 className={disp}><u>{this.props.label}</u></h4>
                 {this.props.data.map((element)=>
                     <div className="row my-2" key={element.id}>
                         <div className="col-1 offset-1 offset-md-4 col-md-2 col-lg-1 offset-lg-4 mt-4">
