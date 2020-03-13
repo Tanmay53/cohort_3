@@ -1,0 +1,7 @@
+Octal digit       rwx format
+
+644                 rw-r--r--
+602                 rw-----w-
+777                 rwxrwxrwx
+501                 r-x-----x
+444                 r--r--r--
