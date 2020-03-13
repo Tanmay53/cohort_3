@@ -1,55 +1,59 @@
-import React, { Component } from 'react'
+import React from 'react'
+import uuid from 'react-uuid'
 import Add from './components/Add'
-import Todo from './components/Todo'
-import CompletedTodo from './components/CompletedTodo'
-import styles from './components/Styles.css'
+import Todolist from './components/Todolist'
 
-export class App extends Component {
+class App extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            todo:[],
-            showCompleted:false
+            tododata:[],
+            isdata:false,
+            showcompleted:false
         }
     }
-    handleAdd=(itemName)=>{
-        var item={
-            name:itemName,
-            isDone:false
+
+    formSubmit=(name)=>{
+        let item={
+            task:name,
+            isdone:false,
+            id:uuid()
         }
-        this.setState({todo:[...this.state.todo,item]})
-    }
-
-    toggleDone=(name)=>{
-        this.setState({todo:this.state.todo.map((item,i)=>item.name===name?{...item,isDone:!item.isDone}:item)})
-    }
-
-    handleDel=(name)=>{
         this.setState({
-            todo:this.state.todo.filter((item,i)=>item.name!==name)
+            tododata:[...this.state.tododata,item],
+            isdata:true
         })
     }
-    
-    render() {
-        return (
-            <div className="boxsize">
-                <h3 className="text-white bg-primary text-center border">TODO App</h3>
-                <Add add={this.handleAdd}/>
-                <Todo data={this.state.todo}
-                      toggleDone={this.toggleDone}
-                      label="TODO LIST"
-                      del={this.handleDel}/>
 
-                <button onClick={()=>this.setState({showCompleted:!this.state.showCompleted})} className="btn ml-5 text-light bg-primary px-5">SHOW COMPLETED TODOS</button>
+    performDone=(id)=>{
+        this.setState({
+            tododata:this.state.tododata.map(element=>element.id===id?{...element,isdone:!element.isdone}:element)
+        })
+    }
 
-                {this.state.showCompleted && <Todo data={this.state.todo.filter(a=>a.isDone)}
-                      toggleDone={this.toggleDone}
-                      label="COMPLETED"
-                      del={this.handleDel}/>}
+    performDel=(id)=>{
+        this.setState({
+            tododata:this.state.tododata.filter(element=>element.id!==id)
+        })
+    }
+
+    render(){
+        return(
+            <div className="container border border-primary my-5">
+                <h1 className="text-center mt-3 font-weight-bold text-danger"><u>TODO APP</u></h1>
+                <Add addfunc={this.formSubmit}/>
+                {this.state.isdata && <Todolist data={this.state.tododata}
+                                                handleDone={this.performDone}
+                                                handleDel={this.performDel}
+                                                label="Todo's"/>}
+            <button onClick={()=>this.setState({showcompleted:!this.state.showcompleted})} className="btn btn-primary mt-4 mb-2 offset-3 offset-lg-5">Show Completed Todo's</button>
+                
+            {this.state.showcompleted && <Todolist data={this.state.tododata.filter(element=>element.isdone)}
+                                                    handleDone={this.performDone}
+                                                    handleDel={this.performDel}
+                                                    label="Completed Todo's"/>}
             </div>
         )
     }
-
 }
-
 export default App
