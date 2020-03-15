@@ -8,31 +8,24 @@ app.config['MYSQL_DB'] = 'fileBrowser'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
-def getData(data):
-    items = []
-    for i in data:
-        items.append(i)
-    return items
-
-
 
 @app.route('/')
 def home():
     path = '/'
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """ SELECT id, folderName FROM folders WHERE path LIKE %s """, (path,)
+        """ SELECT id, folderName, path FROM folders WHERE path LIKE %s """, (path,)
     )
     res = cursor.fetchall()
     cursor.close()
-    return { 'folders' : getData(res)}
+    return { 'folders' : res }
 
-@app.route('/read', methods=['GET'])
+@app.route('/read', methods=['POST'])
 def folder():
     path = request.json['path']
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """ SELECT id, folderName FROM folders WHERE path LIKE %s """, (path,)
+        """ SELECT id, folderName,path FROM folders WHERE path LIKE %s """, (path,)
     )
     res = cursor.fetchall()
     cursor.close()
@@ -49,3 +42,16 @@ def createFolder():
     mysql.connection.commit()
     cursor.close()
     return { 'message' : 'Folder created '}
+
+@app.route('/update', methods=['PUT'])
+def moveFolder():
+    id = request.json['id']
+    moveToFolder = request.json['moveToFolder']
+    path = request.json['path']
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """ UPDATE folders SET path = %s WHERE id = %s """, (path, id)
+    )
+    mysql.connection.commit()
+    cursor.close()
+    return { 'message' : 'Folder moved to the given location' }
