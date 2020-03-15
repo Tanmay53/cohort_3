@@ -46,7 +46,7 @@ class App extends React.Component{
                                                 handleDone={this.performDone}
                                                 handleDel={this.performDel}
                                                 label="Todo's"/>}
-            <button onClick={()=>this.setState({showcompleted:!this.state.showcompleted})} className="btn btn-primary mt-4 mb-2 offset-3 offset-lg-5">Show Completed Todo's</button>
+            {this.state.isdata && <button onClick={()=>this.setState({showcompleted:!this.state.showcompleted})} className="btn btn-primary mt-4 mb-2 offset-3 offset-lg-5">Show Completed Todo's</button>}
                 
             {this.state.showcompleted && <Todolist data={this.state.tododata.filter(element=>element.isdone)}
                                                     handleDone={this.performDone}
