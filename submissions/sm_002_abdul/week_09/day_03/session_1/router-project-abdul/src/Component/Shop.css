@@ -1,0 +1,9 @@
+.products-cont{
+  margin-top: 8%;
+}
+
+@media only screen and (max-width: 600px){
+  .products-cont{
+    margin-top: 25%;
+  }
+}

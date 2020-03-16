@@ -1,0 +1,30 @@
+.support-portal{
+  padding-top: 5%;
+  background: linear-gradient(rgb(20, 77, 139),rgb(73, 146, 225));
+  color: azure;
+}
+
+.search-section{
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.sm-support-portal{
+  padding-top: 18%;
+  background: linear-gradient(rgb(20, 77, 139),rgb(73, 146, 225));
+  color: azure;
+  padding-bottom:18%
+}
+
+.support-options{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.dark-color-text{
+  color:#464242;
+}
+
+.support-endtext{
+  font-size: 0.9rem;
+}

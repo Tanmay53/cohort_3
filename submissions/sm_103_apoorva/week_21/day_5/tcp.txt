@@ -1,0 +1,23 @@
+TCP -  Transmission Control Protocol
+It has 4 layers.It is more secure than OSI model.
+
+1.Network Access Layer:-
+    This layer is combination of Data Link layer and physical layer of OSI model.
+    In this data  bits  converted to electronic signal and data packet is encapsulated
+    or decapsulated after encoding or decoding.
+
+2. Internet layer:-
+    It is similar to Network layer of OSI model.It defines the protocol which is used for 
+    transfer of data. Internet protocol is the main protocol here.
+
+3. Transport Laye:-
+    It is similar to Transport layer of OSI. It is responsible for jitter free delivery of data.
+    Protocols used by this layer are:-
+        1. TCP
+        2. UDP
+
+4. Application Layer:-
+    This layer is combination of Application,Session,Presentation layer of OSI model. It deals with
+    user and responsible for end-to-end communication.
+    Few Protocols used here are:-
+        HTTPS,SSH,DHCP,SMTP,DNS
