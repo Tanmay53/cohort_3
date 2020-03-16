@@ -18,4 +18,8 @@ const addCard = () => {
   new_card.innerHTML = card;
   parent.append(new_card);
 };
-const deleted = () => alert("deleted");
+const deleted = () => {
+  event.target.parentElement.parentElement.parentElement.removeChild(
+    event.target.parentElement.parentElement
+  );
+};
