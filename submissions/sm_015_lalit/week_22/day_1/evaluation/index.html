@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/99fe4fabc9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 22 Eval</title>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="titleImage">
+            <img id="tImage" src="banner.jpg"
+                alt="image">
+            <img id="date" src="date.png" alt="">
+        </div>
+        <div id="postCards">
+            <h3>Recent Post
+                <hr>
+            </h3>
+
+            <div id="card1" class="card">
+                <img class="cardImage" src="https://placeimg.com/140/140/people" alt="cardImage">
+                <div class="cardText">
+                    <p class="cardHeading">From life was you..1</p>
+                    <p class="cardDate">January 12, 2019</p>
+                </div>
+            </div>
+            <div id="card2" class="card">
+                <img class="cardImage" src="https://placeimg.com/140/140/people" alt="cardImage">
+                <div class="cardText">
+                    <p class="cardHeading">From life was you..2</p>
+                    <p class="cardDate">January 12, 2019</p>
+                </div>
+            </div>
+            <div id="card3" class="card">
+                <img class="cardImage" src="https://placeimg.com/140/140/people" alt="cardImage">
+                <div class="cardText">
+                    <p class="cardHeading">From life was you..3</p>
+                    <p class="cardDate">January 12, 2019</p>
+                </div>
+            </div>
+            <div id="card4" class="card">
+                <img class="cardImage" src="https://placeimg.com/140/140/people" alt="cardImage">
+                <div class="cardText">
+                    <p class="cardHeading">From life was you..4</p>
+                    <p class="cardDate">January 12, 2019</p>
+                </div>
+            </div>
+        </div>
+        <div id="article">
+            <h2 class="articleHeading">Google inks pact for new 35-storey office</h2>
+            <p class="articleText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nostrum minus vero
+                corporis nam, neque voluptatum perspiciatis possimus laboriosam, tenetur ipsum qui blanditiis nemo eaque
+                veritatis eius quidem libero labore?</p>
+            <p class="articleFooter">
+                <i class="fas fa-user-alt "></i>
+                <span>Travel, Lifestyle</span>
+                <span class="divider">|</span>
+                <i class="fas fa-comments"></i>
+                <span>03 Comments</span>
+            </p>
+        </div>
+
+    </div>
+    <div class="cardGen">
+        <p>Generate Card</p>
+
+        <p id="wrap">
+            <input id="inputUrl" type="text" placeholder="Insert URL here"></br>
+            <input id="inputTitle" type="text" placeholder="Insert Title here"></br>
+            <input id="inputDate" type="text" placeholder="Insert Date here"></br>
+            <button id="create" onclick="cardGen()">Create</button>
+        </p>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+center>div>h3{
+    color: green;
+}
+
+/* cards */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 40px;
+}
+.cards img{
+    width: 100%;
+    height: 180px;
+    
+}
+#muted{
+    font-size: small;
+    color: grey;
+    margin-bottom: 40px;
+}
+.cardsText{
+    font-size: 20px;
+}
+.cardButton{
+    height: 30px;
+    background-color: red;
+    color: white;
+}
+
+
+.footer1{
+    margin-top: 60px;
+    width: 100%;
+    background: white;
+    height: 80px;
+}
+.footer2{
+ 
+    background-color: teal;
+    height: 70px;
+    width: 80%;
+    margin-left: 10%;
+    /* padding: 15%; */
+}
+#fContent1{
+    float: left;
+    font-size: 20px;
+    padding-left: 15px;
+}
+#fContent2{
+    float: right;
+    margin-top: 20px;
+    padding-right: 15px;
+}
+#fContent2 input{
+    height: 30px;
+}
+#fContent2 button{
+    height: 30px;
+    background: greenyellow;
+}
+
+/* form */
+.form-div{
+    width: 80%;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+  }
+  .form-class{
+    display: flex;
+    width: 70%;
+    border: 1px solid black;
+    margin: 6% auto;
+    padding: 5%;
+    justify-content: space-around;
+    background: wheat;
+  }
+  .input{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 40px;
+    width: 300px;
+  }
+  .formButton{
+      background-color: tomato;
+  }
+
+
+/* @media query */
+
+@media(max-width: 700px){
+    .cards{
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer1{
+        margin-top: 60px;
+        width: 100%;
+        background: white;
+        height: 80px;
+    }
+    .footer2{
+     
+        background-color: teal;
+        height: 150px;
+        width: 80%;
+        margin-left: 10%;
+        /* padding: 15%; */
+    }
+    #fContent1{
+        float: left;
+        font-size: auto;
+        padding-left: 15px;
+    }
+    #fContent2{
+        float: left;
+        padding-left: 15px;
+        margin-top: 20px;
+        padding-right: 15px;
+    }
+    #fContent2 input{
+        height: 30px;
+    }
+    #fContent2 button{
+        height: 30px;
+        background: greenyellow;
+    }
+
+    /* form */
+
+    .form-div{
+        width: 80%;
+        height: 200px;
+        border: 1px solid black;
+        margin: auto;
+      }
+      .form-class{
+        /* display: flex; */
+        width: 70%;
+        border: 1px solid black;
+        margin: 6% auto;
+        padding: 5%;
+        /* justify-content: space-around; */
+        background: rgb(27, 128, 86);
+      }
+      .input{
+        /* border: 2px solid black; */
+        border-radius: 5px;
+        height: 40px;
+        padding: 10px;
+        width: 100px;
+      }
+      .formButton{
+          background-color: tomato;
+          float: left;
+          height: 40px;
+          margin-top: 10px;
+      }
+    
+    
+}
+
+/* responsive for 500px */
+
+@media(max-width: 500px){
+    .cards{
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer1{
+        margin-top: 60px;
+        width: 100%;
+        background: white;
+        height: 80px;
+    }
+    .footer2{
+     
+        background-color: teal;
+        height: 150px;
+        width: 80%;
+        margin-left: 10%;
+        /* padding: 15%; */
+    }
+    #fContent1{
+        float: left;
+        font-size: auto;
+        padding-left: 15px;
+    }
+    #fContent2{
+        float: left;
+        padding-left: 15px;
+        margin-top: 20px;
+        padding-right: 15px;
+    }
+    #fContent2 input{
+        height: 30px;
+    }
+    #fContent2 button{
+        height: 30px;
+        background: greenyellow;
+    }
+    
+}

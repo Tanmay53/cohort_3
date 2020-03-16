@@ -1,0 +1,160 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.textCenter {
+    text-align: center;
+}
+
+.fontSize_50 {
+    font-size: 50px;
+}
+
+/* Font Roboto */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto auto ;
+    grid-gap: 30px;
+}
+
+.grid div {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@media (max-width: 1280px) {
+    .grid {
+        display: grid;
+        grid-template-rows: auto auto ;
+        grid-template-columns: auto auto;
+        grid-gap: 30px;
+       
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template-rows: auto auto auto ;
+        grid-template-columns: auto ;
+        grid-gap: 30px;
+    }
+}
+
+#footer {
+    margin-top: 180px;
+    background-color:  #080a97;
+    padding: 50px;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+    /* border: 1px solid black; */
+}
+
+.colorWhite {
+    color: white;
+}
+
+.colorRed {
+    color: red;
+}
+
+.colorGray {
+    color: rgb(146, 137, 137);
+}
+
+input {
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+    font-size: 18px;
+    margin: 10px;
+    background-color: #292cac;
+    color: white;
+}
+
+button {
+    padding: 10px 50px 10px 50px;
+    background-color: rgb(243, 112, 177);
+    border-radius: 5px;
+    border: mediumblue;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+select {
+    width: 500px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px;
+    color: white;
+    background-color: #292cac;
+}
+
+
+@media (max-width: 1280px) {
+    .footerGrid {
+        display: grid;
+        grid-template-rows:  auto ;
+        grid-template-columns: auto;
+        grid-gap: 30px;
+    }
+    input {
+        width: 480px;
+    }
+    
+    button {
+        width: 500px;
+        padding: 15px;
+        background-color: rgb(243, 112, 177);
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footerGrid {
+        display: grid;
+        grid-template-rows: auto ;
+        grid-template-columns: auto ;
+        grid-gap: 30px;
+    }
+    .footerGrid div {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    input {
+        width: 200px;
+    }
+
+    select {
+        width: 225px;
+    }
+
+    button {
+        width: 220px;
+    }
+    .footerGrid input, select, button {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}

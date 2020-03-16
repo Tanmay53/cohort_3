@@ -1,0 +1,377 @@
+
+
+
+
+@media  (min-width:100px) and (max-width:400px)
+{
+    .card{
+        display:grid;
+        row-gap:30px;
+        column-gap:50px;
+        grid-template-columns: 250px  ;
+        grid-template-rows: 450px 450px 450px 450px;
+        padding-left:60px;
+    }
+    
+    .prodCard{
+        border-style:groove;
+        border-width: 0.5px;
+    }
+    
+    .header{
+        margin-left:60px;
+        margin-top:20px;
+        font-size:25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    img{
+        width:240px;
+        height:170px;
+        margin-left:5px;
+    
+    }
+    
+    .cardTitle {
+        color:blue;
+        font-weight: bold;
+    }
+    
+    .cardBody {
+        color:grey
+    }
+    
+    .cardFooter{
+        display:flex
+    }
+    .cardFooter p{
+        flex-direction: row;
+        padding:10px;
+        border-style:groove;
+        background-color:lightgray;
+        margin:2px;
+    }
+
+    .sponsors img{
+        
+        width:150px;
+        height:100px;
+        margin:20px;
+        margin-left:50px;
+
+    }
+
+    .userData{
+        display:flex;
+        flex-direction:column;
+        margin-left:500px;
+        padding:20px;
+        font-size:20px;
+    }
+
+    .userData label{
+        margin:10px
+    }
+    #cost{
+        margin-left:10px;
+    }
+
+    #addBtn{
+        width:80px;
+        height:30px;
+        margin-left:130px;
+        background-color:blue;
+    
+       
+    }
+    .cardTitle p{
+        color:blue;
+        font-weight: bold;
+        padding:10px;
+    }
+    
+    .cardBody p{
+        color:grey
+    }
+}
+
+
+@media(min-width: 401px) and (max-width:780px)
+{
+    .card{
+        display:grid;
+        row-gap:30px;
+        column-gap:50px;
+        grid-template-columns: 250px 250px ;
+        grid-template-rows: 450px 450px;
+        padding-left:60px;
+    }
+    
+    .prodCard{
+        border-style:groove;
+        border-width: 0.5px;
+    }
+    .header{
+        margin-left:60px;
+        margin-top:20px;
+        font-size:25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    img{
+        width:240px;
+        height:170px;
+        margin-left:5px;
+        
+    }
+    
+    .cardTitle {
+        color:blue;
+        font-weight: bold;
+    }
+    
+    .cardBody {
+        color:grey
+    }
+    
+    .cardFooter{
+        display:flex
+    }
+    .cardFooter p{
+        flex-direction: row;
+        padding:10px;
+        border-style:groove;
+        background-color:lightgray;
+        margin:2px;
+    }
+
+    .sponsors img{
+        width:150px;
+        height:100px;
+        margin:20px;
+        margin-left:50px;
+    }
+
+    .userData{
+        display:flex;
+        flex-direction:column;
+        margin-left:500px;
+        padding:20px;
+        font-size:20px;
+    }
+
+    .userData label{
+        margin:10px
+    }
+    #cost{
+        margin-left:10px;
+    }
+
+    #addBtn{
+        width:80px;
+        height:30px;
+        margin-left:130px;
+        background-color:blue;
+    
+       
+    }
+    .cardTitle p{
+        color:blue;
+        font-weight: bold;
+        padding:10px;
+    }
+    
+    .cardBody{
+        color:grey
+    }
+}
+
+/* 
+@media(min-width:781px) and (max-width:1300px)
+{
+    .card{
+        display:grid;
+        row-gap:30px;
+        column-gap:50px;
+        grid-template-columns: 250px 250px ;
+        grid-template-rows: 450px 450px;
+        padding-left:60px;
+    }
+    
+    .prodCard{
+        border-style:groove;
+        border-width: 0.5px;
+    }
+    
+    .header{
+        margin-left:60px;
+        margin-top:20px;
+        font-size:25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    img{
+        width:240px;
+        height:170px;
+        margin-left:5px;
+    }
+    
+    .cardTitle {
+        color:blue;
+        font-weight: bold;
+    }
+    
+    .cardBody {
+        color:grey
+    }
+    
+    .cardFooter{
+        display:flex
+    }
+    .cardFooter p{
+        flex-direction: row;
+        padding:10px;
+        border-style:groove;
+        background-color:lightgray;
+        margin:2px;
+    }
+
+    .sponsors{
+        display:flex
+    }
+
+    .userData{
+        display:flex;
+        flex-direction:column;
+        margin-left:500px;
+        padding:20px;
+        font-size:20px;
+    }
+
+    .userData label{
+        margin:10px
+    }
+    #cost{
+        margin-left:10px;
+    }
+
+    #addBtn{
+        width:80px;
+        height:30px;
+        margin-left:130px;
+        background-color:blue;
+    
+       
+    }
+    .cardTitle p{
+        color:blue;
+        font-weight: bold;
+        padding:10px;
+    }
+    
+    .cardBody p{
+        
+        color:grey
+    }
+}
+ */
+
+
+
+
+@media(min-width:781px) and (max-width:1300px)
+{
+    .card{
+        display:grid;
+        row-gap:30px;
+        column-gap:50px;
+        grid-template-columns: 250px 250px 250px 250px ;
+        grid-template-rows: 450px;
+        padding-left:60px;
+    }
+    
+    .prodCard{
+        border-style:groove;
+        border-width: 0.5px;
+    }
+    
+    .header{
+        margin-left:60px;
+        margin-top:20px;
+        font-size:25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    img{
+        width:240px;
+        height:170px;
+        margin-left:5px;
+    
+    }
+    
+    .cardTitle {
+        color:blue;
+        font-weight: bold;
+    }
+    
+    .cardBody {
+        color:grey
+    }
+    
+    .cardFooter{
+        display:flex
+    }
+    .cardFooter p{
+        flex-direction: row;
+        padding:10px;
+        border-style:groove;
+        background-color:lightgray;
+        margin:2px;
+    }
+
+    .sponsors img{
+        
+        width:150px;
+        height:100px;
+        margin:20px;
+        margin-left:50px;
+
+    }
+
+    .userData{
+        display:flex;
+        flex-direction:column;
+        margin-left:500px;
+        padding:20px;
+        font-size:20px;
+    }
+
+    .userData label{
+        margin:10px
+    }
+    #cost{
+        margin-left:10px;
+    }
+
+    #addBtn{
+        width:80px;
+        height:30px;
+        margin-left:130px;
+        background-color:blue;
+    
+       
+    }
+    .cardTitle p{
+        color:blue;
+        font-weight: bold;
+        padding:10px;
+    }
+    
+    .cardBody p{
+        
+        color:grey
+    }
+   
+
+    
+} 
