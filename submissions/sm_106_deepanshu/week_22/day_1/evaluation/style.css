@@ -86,7 +86,7 @@ aside > h5 {
 .card {
   padding: 0.5rem;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
 }
 .card figure img {
   height: 80px;
@@ -114,7 +114,6 @@ aside > h5 {
 
 .card button {
   height: 2rem;
-
   line-height: 1rem;
   text-align: center;
 }
@@ -168,6 +167,13 @@ img {
     font-size: 1.4rem;
     margin: 0.7rem 0rem;
   }
+  .card {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2 1fr);
+  }
+  .card figure img {
+    width: 100%;
+  }
   .card-box {
     margin-top: 1rem;
   }
@@ -181,7 +187,7 @@ img {
     padding: 0.1rem 0rem;
   }
   .card > .details {
-    padding: 0rem 1rem;
+    padding: 0rem 0.1rem;
   }
 }
 
