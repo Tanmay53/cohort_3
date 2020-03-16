@@ -1,0 +1,10 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+apoorva   1323  0.0  0.0 212132  6032 tty2     Ssl+ 13:59   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+apoorva   1325  4.7  1.2 663788 97536 tty2     Sl+  13:59   6:33 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+apoorva   1335  0.0  0.2 651640 16248 tty2     Sl+  13:59   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+apoorva   1472  5.3  3.7 3978312 305032 tty2   Sl+  13:59   7:21 /usr/bin/gnome-shell
+apoorva   1502  0.0  0.1 451448 10040 tty2     Sl   13:59   0:07 ibus-daemon --xim --panel disable
+apoorva   1510  0.0  0.1 296796  8476 tty2     Sl   13:59   0:00 /usr/lib/ibus/ibus-dconf
+apoorva   1512  0.0  0.2 355676 21932 tty2     Sl   13:59   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+apoorva   1582  0.0  0.3 807968 24572 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+apoorva   1583  0.0  0.1 349320 10040 tty2     Sl+  13:59   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications

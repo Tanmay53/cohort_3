@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+input:focus {
+  background-color: aquamarine;
+}
+
+button:hover {
+  background-color: rgb(53, 238, 53);
+}
+
+select:hover {
+  background-color: aquamarine;
+}

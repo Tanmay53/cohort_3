@@ -6,8 +6,11 @@ export class Home extends Component {
     render() {
         return (
             <div className="container">
-                <div className="col-12 text-center">
-                    <Link to="/login"><button className="btn btn-primary">Login</button></Link>
+                <div className="col-12 m-5 p-5 text-center">
+                    <h1>Task Manager</h1>
+                    <div><img src ="/images/bgimage.png"/></div>
+                    {!this.props.value.login && <Link to="/login"><button className="btn btn-primary">Login</button></Link>}
+                    {this.props.value.login && <Link to="/tlists"><button className="btn btn-primary">MyTasks</button></Link>}
                 </div>
             </div>
         )
@@ -15,7 +18,7 @@ export class Home extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    
+value:state.loginreducer
 })
 
 const mapDispatchToProps = {

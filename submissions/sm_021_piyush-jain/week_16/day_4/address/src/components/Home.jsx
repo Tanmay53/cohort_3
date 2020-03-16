@@ -16,12 +16,16 @@ class Home extends React.Component {
 
         }
     }
+
+    // function to get initial count of existing user
     componentDidMount = () => {
         axios.get("http://127.0.0.1:5000/auth/count")
             .then(res => this.setState({
                 id: Number(res.data) + 1
             }))
     }
+
+    // function to change state inputs
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -37,30 +41,30 @@ class Home extends React.Component {
             reg: 0
         })
     }
-    handleLog=(e)=>{
+    handleLog = (e) => {
         this.setState({
-            [e.target.name]:e.target.value
+            [e.target.name]: e.target.value
         })
     }
-    handleCheck=()=>{
+    handleCheck = () => {
         axios.get(`http://127.0.0.1:5000/auth/login/${this.state.email}/${this.state.password}`)
-        .then(res=>console.log(res))
+            .then(res => console.log(res))
     }
-    handleClick = async() => {
+    handleClick = async () => {
         this.setState({
             id: this.state.id + 1
         })
         await axios.get(`http://127.0.0.1:5000/auth/check/${this.state.email}`)
-        // .then(res=>console.log(res))
+            // .then(res=>console.log(res))
             .then(res => this.setState({
                 status: Number(res.data)
             }))
-        if (this.state.status==0) {
+        if (this.state.status == 0) {
             console.log("value")
             axios.post("http://127.0.0.1:5000/auth/signup", { "id": this.state.id, "name": this.state.name, "number": this.state.number, "email": this.state.email, "password": this.state.password })
                 .then(res => console.log(res))
-                .then(res=>this.setState({
-                    status:1
+                .then(res => this.setState({
+                    status: 1
                 }))
         }
     }

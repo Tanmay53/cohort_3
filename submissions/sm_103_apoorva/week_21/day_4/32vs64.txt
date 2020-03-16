@@ -1,0 +1,6 @@
+parameters   |   32bit              | 64bit
+addressable space | It has 4gb addressable space | It has 16 gb addressable space
+App support | It support only 32bit programs | It supports 32 as well as 64 bit programs or apps
+OS support | It supports only 32bit os| It supports both 32 and 63 bit os
+Multi Tasking | It is not good for Multi-Tasking | Good for Multi-Tasking
+OS availabe | windows xp,7,linux | windows 10,MacOs etc

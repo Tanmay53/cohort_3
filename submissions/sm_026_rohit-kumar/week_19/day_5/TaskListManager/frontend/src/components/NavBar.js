@@ -1,12 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {user_logout} from '../redux/Action'
+import {user_logout, clear_tasklist} from '../redux/Action'
 
 const handleClick = (props) => {
     // console.log(this.props.loginStatus)
     if (props.isLoggedIn) {
         props.user_logout()
+        props.clear_tasklist()
     }
 } 
 
@@ -19,11 +20,11 @@ function NavBar(props) {
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav">
+                    <li class="nav-item active">
+                            <Link class="nav-link" to='/' > Home <span class="sr-only">(current)</span></Link>
+                        </li> 
                         <li class="nav-item active">
-                            <Link class="nav-link" to='/blog/dashboard' >New List <span class="sr-only">(current)</span></Link>
-                        </li>  
-                        <li class="nav-item active">
-                            <Link class="nav-link" to='/blog/create' > Summery <span class="sr-only">(current)</span></Link>
+                            <Link class="nav-link" to='/summary' > Summary <span class="sr-only">(current)</span></Link>
                         </li>                    
                     </ul>
                     <ul class="navbar-nav">
@@ -53,7 +54,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        user_logout: () => dispatch(user_logout())
+        user_logout: () => dispatch(user_logout()),
+        clear_tasklist: () => dispatch(clear_tasklist())
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar)

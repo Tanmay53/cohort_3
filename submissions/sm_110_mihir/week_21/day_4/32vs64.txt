@@ -1,0 +1,7 @@
+Differences between 32 bit processor and 64 bit processor :-
+
+1. 32bit processor needs 32 bit OS wheres 64 bit processor can run either on 32 bit OS or 64 bit OS.
+2. 32 bit processor has max RAM capacity of 3.2 GB, where as 64 bit process has 17 Billion GB RAM capacity.
+3. 32 bit processor works on legacy PC whereas 64 bit works on latest cutting edge PC.
+4. 32 bit processor not iedal for multi tasking, 64 bit does good job of multi tasking.
+5. 64 bit apps won't work on 32 bit processor where as on 64 bit processor , both 32 bit and 64 bit apps will work.

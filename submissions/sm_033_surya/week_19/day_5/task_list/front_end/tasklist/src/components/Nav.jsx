@@ -9,33 +9,38 @@ export class Nav extends Component {
     }
     render() {
         return (
-            <div className="container-fluid p-4">
+            <div className="container-fluid p-4 mb-5 bg-primary">
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-lg-6 col-xl-6 col-sm-3 col-md-3">
                         <div className="row">
                             <div className="col-4">
-                                <Link to="/">Home</Link>
+                                <Link to="/"><button className="btn btn-primary">Home</button></Link>
                             </div>
-                            {this.props.value.login && <div className="col-4">
-                                <Link to="/tlists">My Tasklists</Link>
-                            </div>}
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-lg-3 col-xl-3 col-sm-0 col-md-0"></div>
+                    <div className="col-lg-3 col-xl-3 col-sm-6 col-md-6">
                         <div className="row d-flex justify-content-end">
                             <div className="col-4">
-                                {this.props.value.login && <Link to="/userprofile"><button className="btn btn-primary">{this.props.value.user}</button></Link>}
+                                {this.props.value.login && <Link className="text-white" to="/userprofile"><div className="row"><div className="col-4 bg-white rounded-circle d-flex justify-content-center"><img className="img-fluid" src={`http://localhost:5000/static/${this.props.value.image}`} /></div> <div className="col-6"><h3>{this.props.value.user}</h3></div></div></Link>}
                             </div>
+                            {this.props.value.login && <div className="col-4">
+                                <Link className="text-white" to="/tlists"><button className="btn btn-primary">My Tasklists</button></Link>
+                            </div>}
                             {this.props.value.login && <div className="col-4">
                                 <button className="btn btn-primary" onClick={this.handleClick}>Logout</button>
                             </div>}
                             {!this.props.value.login && <div className="col-4">
-                                <Link to="/login">Login</Link>
-                            </div>}
-                            <div className="col-4">
-                                <Link to="/signup">Register</Link>
 
-                            </div>
+                                <Link className="text-white" to="/login"><button className="btn btn-primary">Login</button></Link>
+
+                            </div>}
+                            {!this.props.value.login && <div className="col-4">
+
+                                <Link className="text-white" to="/signup"><button className="btn btn-primary">Register</button></Link>
+
+
+                            </div>}
                             {!this.props.value.login && <Redirect to="/" />}
                         </div>
                     </div>

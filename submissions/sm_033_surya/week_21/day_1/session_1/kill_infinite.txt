@@ -1,0 +1,10 @@
+surya_k@surya-Inspiron-7580:~$ ps aux | grep python
+
+root      1057  0.0  0.2 177636 16444 ?        Ssl  08:33   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root      1119  0.0  0.2 194348 17768 ?        Ssl  08:33   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+surya_k  18412  1.1  0.5 161816 39832 tty2     Sl+  15:39   0:00 /usr/bin/python3 completion.py
+surya_k  18415  0.1  0.3  73272 24452 tty2     S+   15:39   0:00 /usr/bin/python3 lib/python/jedi/inference/compiled/subprocess/__main__.py lib/python 3.6.9
+surya_k  18626 92.4  0.0  32604  6516 pts/1    R+   15:40   0:09 python loopfile.py
+surya_k  18632  0.0  0.0  21532  1040 pts/0    S+   15:40   0:00 grep --color=auto python
+
+surya_k@surya-Inspiron-7580:~$ kill 18626

@@ -37,6 +37,19 @@ const tasklistReducer = (state=init_tasklist, action) => {
                 ...state,
                 tasklists: [...state.tasklists, action.payload]
             }
+        case 'DELETE_TASKLIST':
+            return {
+                ...state,
+                tasklists: state.tasklists.filter((item) => {
+                    if(item.tasklist_id !== action.payload)
+                        return item
+                })
+            }
+        case 'CLEAR_TASKLIST':
+            return {
+                ...state,
+                tasklists: []
+            }
         case 'UPDATE_NAME':
             return {
                 ...state,

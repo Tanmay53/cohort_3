@@ -1,0 +1,8 @@
+root       851  0.0  0.2 177640 17264 ?        Ssl  13:59   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root       941  0.0  0.2 194348 19968 ?        Ssl  13:59   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+apoorva   9058  1.1  0.4 161700 39616 tty2     Sl+  16:06   0:00 /usr/bin/python3 completion.py
+apoorva   9064  0.2  0.3  73260 24704 tty2     S+   16:06   0:00 /usr/bin/python3 lib/python/jedi/inference/compiled/subprocess/__main__.py lib/python 3.6.9
+apoorva   9276 81.3  0.0  32616  6544 pts/1    S+   16:07   0:12 python infinite.py
+apoorva   9280  0.0  0.0  21532  1004 pts/2    S+   16:07   0:00 grep --color=auto python
+
+kill 9276
