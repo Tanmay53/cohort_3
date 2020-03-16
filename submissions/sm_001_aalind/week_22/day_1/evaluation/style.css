@@ -9,7 +9,6 @@
   grid-template-columns: auto;
   justify-content: center;
   gap: 50px;
-  /* background-color: red; */
 }
 .card {
   display: flex;
@@ -68,8 +67,9 @@
   text-align: center;
 }
 #footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
   margin-top: 20px;
   box-shadow: 2px 2px 2px 2px lightgrey;
 }
@@ -110,6 +110,13 @@ textarea {
 @media only screen and (min-width: 650px) {
   #products-display {
     grid-template-columns: auto auto;
+  }
+  #footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    box-shadow: 2px 2px 2px 2px lightgrey;
   }
   #footer-form > form {
     display: grid;
