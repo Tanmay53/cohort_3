@@ -1,0 +1,15 @@
+.card-img {
+height:100px;
+width:100px;
+}
+.card {
+    height:250px;
+    width:550px;
+    margin:30px;
+}
+
+.d-flex {
+    border:1px orangered;
+    padding:2px;
+}
+
