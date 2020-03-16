@@ -13,6 +13,13 @@ function load() {
 } 
 
 
+function currentSelection(title, heading, image) {
+    // console.log(title, heading, image)
+    document.getElementById("main-heading").innerHTML = heading
+    document.getElementById("image").setAttribute("src", image)
+}
+
+
 
 function sideCard(titleText, heading, image) {
     // alert('works')
@@ -26,8 +33,12 @@ function sideCard(titleText, heading, image) {
     title.innerText = titleText.toUpperCase()   
     title.classList.add("card-small-heading")
 
+    var link = document.createElement('a')
     var header = document.createElement("h3")
     header.innerHTML = heading
+    link.appendChild(header)
+    link.setAttribute("href", "#")
+    link.addEventListener("click" , function() { currentSelection(titleText, heading, image)})
 
     var footer = document.createElement("div")
     span1 = document.createElement("span")
@@ -43,7 +54,7 @@ function sideCard(titleText, heading, image) {
 
     
     divCard.appendChild(title)
-    divCard.appendChild(header)
+    divCard.appendChild(link)
     divCard.appendChild(footer)
 
     container.appendChild(divCard)  
