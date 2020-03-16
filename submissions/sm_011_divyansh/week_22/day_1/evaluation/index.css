@@ -1,0 +1,143 @@
+.bottomgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+}
+
+#box1 {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 20px;
+}
+
+#box2 {
+    background-color: rgb(243, 243, 54);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 20px;
+}
+
+#box3 {
+    background-color: rgb(9, 9, 80);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 20px;
+}
+
+.header {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px;
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.header p {
+    color: grey;
+    font-family: serif;
+    font-size: 23px;
+}
+
+.footer p {
+    font-family: serif;
+    font-size: 20px;
+}
+
+
+.flexcard {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flexcard>div {
+    height: 80px;
+    width: 100%;
+}
+
+.card-img {
+    border-radius: 55px;
+}
+
+.box-img {
+    border-radius: 35px;
+}
+
+
+
+.footer {
+    
+    bottom: 0;
+    width: 88%;
+    position: fixed;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    border: 1px solid snow;
+}
+
+#box3-headline {
+    color: white;
+}
+
+#box1-para {
+    color: darkgrey;
+}
+
+#box3-para {
+    color: white;
+}
+
+.footer button {
+    border-radius: 30%;
+    font-size: 20px;
+    background-color: blueviolet;
+    color: white;
+    box-shadow: 2px 2px 3px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    font-size: 23px;
+}
+@media only screen and (max-width: 968px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,300px);
+        grid-gap: 10px;
+        margin-top: 20px;
+    }
+    .footer {
+        margin-top: 60px;
+       position: relative;
+       
+    }
+    .bottomgrid {
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: repeat(3,250px);
+    }
+  }
+@media only screen and (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,300px);
+        grid-gap: 10px;
+        margin-top: 20px;
+    }
+    .footer {
+        margin-top: 60px;
+       position: relative;
+       
+    }
+    .bottomgrid {
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: repeat(3,250px);
+    }
+  }
