@@ -13,7 +13,6 @@ class Input1 extends React.Component{
          this.setState({
                   list:nlist
          })
-         console.log(this.state.list)
     }
      handleChange = (e) =>{
          this.setState({
