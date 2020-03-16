@@ -167,13 +167,7 @@ img {
     font-size: 1.4rem;
     margin: 0.7rem 0rem;
   }
-  .card {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(2 1fr);
-  }
-  .card figure img {
-    width: 100%;
-  }
+
   .card-box {
     margin-top: 1rem;
   }
