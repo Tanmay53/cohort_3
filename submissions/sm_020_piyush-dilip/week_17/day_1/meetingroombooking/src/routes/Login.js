@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Redirect, Link } from 'react-router-dom'
-import { checkLogin } from '../redux/action'
+import { setLoginStatus } from '../redux/action'
 
 export class Login extends Component {
     constructor(props) {
@@ -21,18 +21,19 @@ export class Login extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        let data = {
-            username : this.state.username,
-            password : this.state.password
-        }
-        this.props.checkLogin(data)
+        // let data = {
+        //     username : this.state.username,
+        //     password : this.state.password
+        // }
+        // this.props.history.push('/home')
+        this.props.setLoginStatus()
     }
 
     render() {
         return (
             <div className="container p-5 w-25">
                 {
-                    this.props.isLoggedIn ? 
+                    this.props.loginStatus ? 
                     <Redirect to ='/' ></Redirect>
                     :
                     null
@@ -51,11 +52,11 @@ export class Login extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    isLoggedIn : state.isLoggedIn
+    loginStatus : state.loginStatus
 })
 
 const mapDispatchToProps = dispatch => ({
-    checkLogin : (payload) => dispatch(checkLogin(payload))
+    setLoginStatus : (payload) => dispatch(setLoginStatus(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)

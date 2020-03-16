@@ -1,0 +1,6 @@
+octal-value  user group other
+644   rw r r
+602   rw no-permission w
+777   rwx rwx rwx
+501   rx  no-permission x
+444   rw rw rw

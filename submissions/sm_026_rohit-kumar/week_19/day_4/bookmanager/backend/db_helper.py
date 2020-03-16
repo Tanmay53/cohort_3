@@ -26,6 +26,21 @@ def insert(query, arguments):
     finally:
         conn.close()
 
+def insert_then_select_id(query, arguments):
+    try:
+        conn = connect()
+        with conn.cursor() as cursor:
+            cursor.execute(query, arguments)        
+            conn.commit()
+            cursor.execute('SELECT LAST_INSERT_ID() as `ID`')
+            return {'result': cursor.fetchone()}
+    except Exception as ex:
+        print('Error: ', ex)
+        raise
+    finally:
+        conn.close()
+
+
 def select_one(query, arguments):    
     try:
         conn = connect()
@@ -39,11 +54,14 @@ def select_one(query, arguments):
         conn.close()
 
 
-def select_all(query, arguments): 
+def select_all(query, arguments=None): 
     try:
         conn = connect()
         with conn.cursor() as cursor:
-            cursor.execute(query, arguments)
+            if arguments:
+                cursor.execute(query, arguments)
+            else:
+                cursor.execute(query)
             return {'result': 'success', 'data': cursor.fetchall()}
     except Exception as ex:
         print('Error: ', ex)

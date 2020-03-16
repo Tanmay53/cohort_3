@@ -1,0 +1,7 @@
+1.IPv4 has address size 32-bit number, where as IPv6 is 128-bit number.
+
+2. IPv4 addresses limit is 2^32. By year 2023 this limit will be reacherd, so we have Ipv6 to accomodate , which has limit of addresses 2^128
+
+3. IPv4 format is 255.255.255.255 . That is 4 group, each containing upto three digits in range 0-255.
+   IPv6 fortmat is 0000:AB3F:EF60:12ED:F200:ABCD:0234:3FFE  . That is 8 groups each has 16bit hexadecimal number.
+   

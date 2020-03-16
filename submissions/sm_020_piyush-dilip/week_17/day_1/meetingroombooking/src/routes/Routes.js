@@ -7,6 +7,7 @@ import BookingPage from './BookingPage'
 import ConfirmationPage from './ConfirmationPage'
 import Orders from './Orders'
 import Register from './Register'
+import CancelBooking  from './CancelBooking'
 
 export default class Routes extends Component {
     render() {
@@ -19,6 +20,7 @@ export default class Routes extends Component {
                     <Route path='/confirmationPage' exact component = { ConfirmationPage } /> 
                     <Route path='/orders' exact component = { Orders } />
                     <Route path='/register' component = { Register} />
+                    <Route path='/cancelBooking/:id' component = { CancelBooking } />
                     <Route component = { NotFound } />
                 </Switch>
             </div>

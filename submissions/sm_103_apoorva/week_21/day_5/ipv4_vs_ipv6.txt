@@ -1,0 +1,6 @@
+Parameters | ipv4 | ipv6
+address type | Numeric | Alpha Numeric
+address length | 32 bit | 128bit
+address section length | 3 bit | 16 bit
+class | have 5 different class | no class
+use| general purpose , defence in class D | tech companies

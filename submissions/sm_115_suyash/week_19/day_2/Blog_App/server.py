@@ -227,6 +227,16 @@ def delete_all_myblog():
     return {"message": "All blog deleted", "error": False}
 
 
+@app.route("/update/blog")
+def update_blog():
+    user_id = request.json["user_id"]
+    blog_id = request.json["blog_id"]
+    
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """  """
+    )
+
 if __name__ == "__main__":
     app.run(debug=True)
 
@@ -236,3 +246,8 @@ if __name__ == "__main__":
 # 	"age":45,
 # 	"email":"manish121@gmail.com",
 # 	"password":"12345"
+# import base64
+
+# def generate_salt():
+#     salt = os.urandom(16)
+#     return str(base64.b64encode(salt), "utf-8")

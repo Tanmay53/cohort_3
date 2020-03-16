@@ -1,0 +1,5 @@
+www.masai-execode.now.sh
+ec2-3-9-28-56.eu-west-2.compute.amazonaws.com
+Port Number	State	Service Name	Service Product	Service Version	Service Extra Info	Actions
+80	        open	http	        now			
+443	        open	https	        now			

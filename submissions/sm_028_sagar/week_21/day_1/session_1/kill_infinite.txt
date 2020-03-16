@@ -1,0 +1,12 @@
+1. Create File 'test.py' and open in terminal as nano test.py
+2. write code which goes into infinite loop.
+    num = 1
+    while num:
+        print(num)
+
+3. In seprate terminal type below command.
+    'ps aux | grep python'
+4. Above command shows all processes active on python.
+5. For program with infinite loop, It will consume max cpu, so
+    'ps aux | grep python | sort -nk 3 | tail -n 3'
+6. kill process with pid(process id): 'kill pid'
