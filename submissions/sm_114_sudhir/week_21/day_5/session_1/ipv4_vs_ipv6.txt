@@ -1,0 +1,11 @@
+Ipv4:-
+1.It is 32bit
+2.It is most widely used version of Internet.
+3.(For Ex.- 123.123.123.123)
+4.Each three digit section included from0-255.
+
+Ipv6:-
+1.It is 128 bit alphanumeric string
+2.It preffered by professional users like network engineers, tech companies.
+3.EE80:CD00:0000:0CDE:1257:0000:211E:729C
+4.It is devided into 8 with each 16 bit.

@@ -1,0 +1,5 @@
+Steps of end to end working of TCP/IP model:
+1. Network Access / Link Layer
+2. Internet Layer
+3. Host-to-Host / Transport Layer
+4. Process / Application Layer 
