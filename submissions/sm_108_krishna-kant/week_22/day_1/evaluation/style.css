@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.1;
+  letter-spacing: 1px;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 1rem;
+}
+
+/* Testinomials Header */
+
+.testinomials {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15px 1fr 15px;
+}
+
+.testinomials .slider-button {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #e3af2e;
+  font-size: 1.9rem;
+}
+
+.testinomials .slider-content {
+  padding: 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slider-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.slider-content p {
+  max-width: 90%;
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.slider-content > div.rating {
+  margin: 1rem 0rem;
+}
+
+.slider-content > div > i {
+  color: #e3af2e;
+  font-size: 1.1rem;
+}
+
+span.bold {
+  font-weight: 700;
+}
+
+/* Blog Section */
+
+.blog {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.blog > h1 {
+  font-size: 2rem;
+}
+
+#blogs {
+  display: grid;
+  margin-top: 2rem;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.article {
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.article:hover {
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+}
+.article .image-header {
+  height: 180px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.article .image-header .delete {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.article .image-header .delete button#delete-btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.article:hover .image-header .delete {
+  opacity: 1;
+}
+
+.article > div > img {
+  width: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.article > div > img:hover {
+  transform: scale(1.2);
+}
+
+.article > div:nth-child(2) {
+  padding: 1rem;
+}
+
+.article > div > div.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article > div > div.head > span {
+  font-size: 0.7rem;
+}
+
+.article > div > div.head > span:nth-child(1) {
+  background: #e3af2e;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 3px;
+}
+
+.article > div > div.head > span > span.author {
+  color: #e3af2e;
+  font-weight: 700;
+}
+
+.article > div > div.body {
+  padding: 2rem 0;
+}
+
+.article > div > div.body p {
+  font-size: 0.9rem;
+}
+
+.article > div > div.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article > div > div.footer span {
+  color: #333;
+  font-size: 0.7rem;
+}
+
+.form {
+  padding: 4rem 0;
+}
+.userform {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.userform h3 {
+  font-size: 1.5rem;
+}
+
+.userform input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+}
+.userform small {
+  margin-top: 0.5rem;
+  color: #333;
+  font-size: 0.8rem;
+}
+
+.userform button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: 2px solid #000;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .testinomials .slider-content {
+    padding: 1rem 1rem;
+  }
+  .slider-content p {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  #blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #blogs .article:nth-child(1) {
+    order: 2;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  #blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #blogs .article:nth-child(1) {
+    order: 3;
+  }
+}
