@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666666;
+}
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  background-color: #f8f8f8;
+  padding: 35px 15px;
+}
+.header > div {
+  height: 80px;
+}
+.btn {
+  width: 80%;
+  background: #9ecc0a;
+  padding: 15px 10px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 4px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.left-box {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: inherit;
+  border: 3px solid #e6e6e6;
+  border-radius: 50%;
+  margin-right: 20px;
+  text-align: center;
+}
+.right-box {
+  height: inherit;
+  padding: 8px 0;
+}
+/* heading */
+#content {
+  text-align: center;
+  padding: 80px;
+}
+#content > h1 {
+  font-weight: 700;
+  color: #000000;
+}
+#content > h5 {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #b8e134;
+}
+/* card */
+.card-body,
+#newCard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 15px;
+}
+.card {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.card .ico {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 50%;
+  background-color: #75d4d4;
+  color: #000000;
+}
+.card .ico .fa {
+  margin-top: 32%;
+}
+.card h3 {
+  color: #000000;
+  padding: 10px 0 15px;
+}
+/* form */
+.form {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+#addBtn {
+  width: 50%;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 15px;
+  }
+  .header .btn-div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+  }
+  .card-body,
+  #newCard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .header {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px 15px;
+  }
+  .header .btn-div {
+    text-align: center;
+  }
+  .card-body,
+  #newCard {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

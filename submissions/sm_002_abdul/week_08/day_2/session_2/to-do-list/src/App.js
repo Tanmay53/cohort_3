@@ -82,7 +82,6 @@ class App extends React.Component {
               del={this.handleDel}/>
           </div>
         }
-
       </div>
     );
   }
