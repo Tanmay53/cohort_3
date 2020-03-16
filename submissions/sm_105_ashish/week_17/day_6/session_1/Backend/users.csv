@@ -1,0 +1,4 @@
+id,name,email,salt,password_hash
+1,Ashish,au.ashish1@gmail.com,5e6U+Mu28KHNUS9nwStHHw==,9e201904176224517fbd3f149d796314
+2,sudhir,sudhir@gmail.com,h+OxLKRb1lXhrxSefnO+Zw==,bacb3c60ad549eb0f56269ed6c81908c
+3,soumik,soumik@gmail.com,t8hDFugG4t2g55tPtLWhyQ==,e3fbe101a1bd19cfdf0bd89fcc1161cc

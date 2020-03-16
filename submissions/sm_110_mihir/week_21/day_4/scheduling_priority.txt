@@ -1,0 +1,16 @@
+Non preemtive priority scheduling:- The jobs are excuted based on priority. Job with higher priority get executed first.
+Next job will start only after current job has finished, as its non preemtive.
+
+Process |   Arrival time|   Execution time  |   priority|   Service time
+P0          0               5                   1           10              - P0 executed second
+P1          0               10                  2           0               - P1 has highest priority . Executed first
+p2          1               3                   1           15              - P2 executed last
+
+
+Preemtive priority scheduling:- The jobs are excuted based on priority. Job with higher priority get executed first.
+Next job will start on arrival even if current job has not finished, as its preemtive.
+
+Process |   Arrival time|   Execution time  |   priority|   Service time
+P0          0               5                   1           0, 12           - P0 starts first
+P1          2               10                  2           2               - P1 has highest priority . Executed on arrival
+p2         10               3                   1           15              - P2 executed last

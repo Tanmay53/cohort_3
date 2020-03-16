@@ -1,0 +1,80 @@
+#header {
+  padding: 10px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #684e49;
+}
+#products-display {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 15px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #888888;
+  width: 260px;
+  height: 420px;
+}
+.card-img {
+  background-color: red;
+}
+.card-img > img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+.card-header,
+.card-body,
+.card-lower {
+  padding-left: 15px;
+  color: grey;
+}
+.card-header {
+  color: #2d9bd8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.card-lower > .tax {
+  color: black;
+  margin-top: 5px;
+}
+.card-footer {
+  display: flex;
+  background-color: #eeeeee;
+  border-top: 1px solid #888888;
+  line-height: 40px;
+}
+.card-footer > div:first-child {
+  border-right: 1px solid #888888;
+  width: 80%;
+  text-align: center;
+}
+.card-footer > div:nth-child(2) {
+  border-right: 1px solid #888888;
+  width: 20%;
+  text-align: center;
+}
+.card-footer > div:last-child {
+  width: 20%;
+  text-align: center;
+}
+#footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px 2px lightgrey;
+}
+.footer-img {
+  height: 100px;
+  width: 100px;
+  margin: 0px 20px;
+  background-color: blue;
+}
+.footer-img > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
