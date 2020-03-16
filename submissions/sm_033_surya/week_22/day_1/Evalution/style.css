@@ -1,0 +1,244 @@
+.topcarddiv {
+    display: flex;
+    flex-direction: row;
+}
+h1,h3 {
+    margin: 0;
+    padding: 0;
+}
+.card {
+    justify-content: center;
+}
+.topcarddiv > div {
+    margin: 20px;
+    height: 350px;
+    border :1px solid black;
+    flex-grow: 1;
+}
+
+
+.topcarddiv > div h1,p {
+    margin: 0;
+    padding: 0;
+}
+
+#maintitle {
+    margin: 10px;
+}
+
+.cardtext {
+    padding: 10px;
+}
+
+.Addbuttondiv {
+    float: right;
+    margin-right: 20px;
+}
+.narrowcards {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+}
+
+.narrowcards > div {
+    height: 200px;
+    padding:20px;
+    border: 1px solid black;
+}
+.remove {
+    display: none;
+}
+
+.forminputdiv {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.forminputdiv > div {
+    margin: 20px;
+}
+.formdiv > div {
+    flex-grow: 1;
+}
+.formdiv > div:nth-of-type(2) button{
+    color: blue;
+    padding: 5px;
+    margin: 30px;
+    background-color: chartreuse;
+    border-radius:30px;
+}
+.formdiv {
+    display: flex;
+    flex-direction: row;
+}
+.subtitle {
+    margin: 20px;
+}
+.hidden  {
+    visibility: hidden;
+}
+.showcontrolbtn {
+    float: right;
+}
+
+.narrowcards button {
+    float: right;
+    margin-top: 5px;
+    color: white;
+    background-color: red;
+    padding: 5px;
+}
+
+
+/* smallScreen devices */
+
+@media only screen and (max-width:400px){
+.topcarddiv{
+   flex-direction: column;
+                }          
+                .topcarddiv > div {
+                    height: 250px;
+                    border :1px solid black;
+                    font-size: 10px;
+                }
+.topcarddiv img {
+    width: 330px;
+    }
+
+    .narrowcards {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 350px;
+        grid-template-rows: auto auto auto;
+        grid-gap: 20px;
+    }
+    .forminputdiv {
+        /* border: 2px solid red; */
+        display: row;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .formdiv {
+        display: flex;
+        flex-direction: column;
+    }
+    .narrowcards > div {
+    height: 80px;
+    padding:20px;
+    border: 1px solid black;
+}
+}
+
+
+@media only screen and (min-width:450px){
+    .topcarddiv{
+    flex-direction: column;
+                }          
+                .topcarddiv > div {
+                    height: 300px;
+                    /* border :1px solid green; */
+                    font-size: 15px;
+                }
+    .topcarddiv img {
+    width: 380px;
+    }
+    .forminputdiv {
+        /* border: 2px solid red; */
+        display: row;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .formdiv {
+        display: flex;
+        flex-direction: column;
+    }
+    .narrowcards {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 350px 350px;
+        grid-template-rows: auto auto auto;
+        grid-gap: 20px;
+    }
+}
+
+
+/* for tables screens */
+
+@media only screen and (min-width:600px){
+    .topcarddiv{
+    flex-direction: column;
+                }          
+                .topcarddiv > div {
+                    width: 400px;
+                    height: 280px;
+                    font-size: 10px;
+                }
+    .topcarddiv img {
+    width: 400px;
+    }
+    .forminputdiv {
+        border: 2px solid red;
+        display: row;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .formdiv {
+        display: flex;
+        flex-direction: column;
+    }
+    .narrowcards {
+        display: grid;
+        grid-template-columns: 250px 250px;
+        grid-template-rows: auto auto auto;
+        grid-gap: 20px;
+    }
+    .narrowcards > div {
+        height: 80px;
+        padding:20px;
+        border: 1px solid black;
+    }
+    .narrowcards > div {
+        padding:20px;
+        border: 1px solid black;
+    }
+}
+
+/* for desktop screens */
+@media only screen and (min-width:726px){
+    .topcarddiv{
+    flex-direction: row;
+                }          
+                .topcarddiv > div {
+                    height: 350px;
+                    /* border :1px solid yellow; */
+                    font-size: 15px;
+                }
+    .topcarddiv img {
+    width: auto;
+    }
+    .forminputdiv {
+        border: 2px solid red;
+        display: row;
+        flex-direction: row;
+        margin: 20px;
+    }
+    .formdiv {
+        display: flex;
+        flex-direction: row;
+    }
+    .narrowcards {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 450px 450px 450px;
+        grid-template-rows: auto auto auto;
+        grid-gap: 30px;
+    }
+    .narrowcards > div {
+        /* height: 80px; */
+        padding:20px;
+        border: 1px solid black;
+    }
+}
