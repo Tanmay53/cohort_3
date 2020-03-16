@@ -1,0 +1,192 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+#parent {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  grid-template-areas:
+    "titleImage titleImage postCards"
+    "article article postCards";
+}
+#titleImage {
+  grid-area: titleImage;
+  height: 60vh;
+  /* border:4px solid black; */
+  position: relative;
+}
+#postCards {
+  grid-area: postCards;
+  /* border:4px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#card1 {
+  order: 1;
+}
+
+#card2 {
+  order: 2;
+}
+
+#card3 {
+  order: 3;
+}
+
+#card4 {
+  order: 4;
+}
+div > img {
+  width: 100%;
+  height: 100%;
+}
+
+#article {
+  grid-area: article;
+  margin-top: 20px;
+  /* width:130vh; */
+  /* border:4px solid black; */
+}
+.card {
+  display: flex;
+  justify-content: flex-start;
+  /* border:4px solid black;  */
+  width: 320px;
+  height: 80px;
+}
+
+.card,
+h3 {
+  margin: 10px;
+}
+
+.cardImage {
+  width: 80px;
+}
+.cardText {
+  margin-left: 20px;
+}
+.cardDate {
+  color: gray;
+}
+#date {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: -60px;
+  right: -50px;
+}
+h2 + p {
+  color: grey;
+}
+i ~ span {
+  padding: 3px;
+}
+i {
+  padding: 5px;
+}
+.articleFooter {
+  color: grey;
+}
+.divider {
+  color: black;
+}
+.cardGen {
+  width: 80%;
+  margin: 0 auto;
+  /* border: 5px solid black; */
+  /* width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center; */
+}
+p > input {
+  width: 50%;
+}
+.cardGen > p {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 40px;
+}
+.cardGen button {
+  width: 20%;
+  margin: 0 auto;
+  margin: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: black;
+  color: whitesmoke;
+  background-color: #3b82f4;
+}
+.cardGen button:hover {
+  background-color: #598b19;
+  cursor: pointer;
+}
+.wrap {
+  text-align: center;
+}
+
+@media only screen and (max-width: 968px) {
+  #parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    grid-template-areas:
+      "article"
+      "titleImage "
+      "postCards";
+  }
+  #card1 {
+    order: 4;
+  }
+
+  #card2 {
+    order: 3;
+  }
+
+  #card3 {
+    order: 2;
+  }
+
+  #card4 {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    grid-template-areas:
+      "titleImage "
+      "article"
+      "postCards";
+  }
+  .cardGen button {
+    width: 40%;
+  }
+  #titleImage {
+    height: 40vh;
+  }
+  #card1 {
+    order: 3;
+  }
+
+  #card2 {
+    order: 1;
+  }
+
+  #card3 {
+    order: 2;
+  }
+
+  #card4 {
+    order: 4;
+  }
+}
