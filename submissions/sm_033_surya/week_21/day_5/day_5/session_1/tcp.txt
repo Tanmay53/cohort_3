@@ -1,0 +1,12 @@
+TCP/IP  Transmission Control Protocol/Internetprotocol:
+IT having Fout layers:
+
+1.Network Access Layer:
+    it encoded the  data  into bits and then converted into electrical impulses.
+2.Internet Layer:
+    it defines the protocols which are responsible for logical transmission of data over the network.
+3.Host-TO-Host Layer:
+    it is responsible for data transfer one to another,error free delevery of data.
+4.Process Layer:
+    it is responsible for node to node communication and control the user-interface.
+

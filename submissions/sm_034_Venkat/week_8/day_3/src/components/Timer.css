@@ -1,0 +1,38 @@
+#timerDiv {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+input {
+    height: 25px;
+    text-align: center;
+    font-size: 22px;
+    width: 70%;
+    margin: 0 2%;
+    margin-left: 15%;
+}
+#inputsDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#inputsDiv> div{
+    width: 190px;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+}
+#setTimeBtn {
+    background: rgb(0, 113, 128);
+    margin-top: 2%;
+    padding: 1% 3%;
+    font-style: oblique;
+    color: honeydew;
+}
+button {
+    padding: 1% 4%;
+    margin: 1% 4%;
+    font-size: larger;
+    font-family: monospace;
+    border: 1px solid sandybrown;
+}

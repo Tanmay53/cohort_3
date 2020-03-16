@@ -1,0 +1,19 @@
+#appDiv {
+  margin: 5% 20% 0% 15%;
+  border: 1px solid;
+  padding:3%;
+  text-align: center;
+}
+#btnsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-bottom: 1px solid;
+}
+#btnsDiv button {
+  font-size: larger;
+  font-family: monospace;
+  padding: 5px 20px;
+  border: 1px solid;
+  margin: 5px;
+}

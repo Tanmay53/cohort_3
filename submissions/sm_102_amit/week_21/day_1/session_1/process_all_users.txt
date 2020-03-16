@@ -1,0 +1,415 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0 225944  9692 ?        Ss   09:11   0:24 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    09:11   0:00 [kthreadd]
+root         4  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        I<   09:11   0:00 [mm_percpu_wq]
+root         7  0.0  0.0      0     0 ?        S    09:11   0:00 [ksoftirqd/0]
+root         8  0.1  0.0      0     0 ?        I    09:11   0:51 [rcu_sched]
+root         9  0.0  0.0      0     0 ?        I    09:11   0:00 [rcu_bh]
+root        10  0.0  0.0      0     0 ?        S    09:11   0:00 [migration/0]
+root        11  0.0  0.0      0     0 ?        S    09:11   0:00 [watchdog/0]
+root        12  0.0  0.0      0     0 ?        S    09:11   0:00 [cpuhp/0]
+root        13  0.0  0.0      0     0 ?        S    09:11   0:00 [cpuhp/1]
+root        14  0.0  0.0      0     0 ?        S    09:11   0:00 [watchdog/1]
+root        15  0.0  0.0      0     0 ?        S    09:11   0:00 [migration/1]
+root        16  0.0  0.0      0     0 ?        S    09:11   0:00 [ksoftirqd/1]
+root        18  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/1:0H]
+root        19  0.0  0.0      0     0 ?        S    09:11   0:00 [cpuhp/2]
+root        20  0.0  0.0      0     0 ?        S    09:11   0:00 [watchdog/2]
+root        21  0.0  0.0      0     0 ?        S    09:11   0:00 [migration/2]
+root        22  0.0  0.0      0     0 ?        S    09:11   0:00 [ksoftirqd/2]
+root        24  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/2:0H]
+root        25  0.0  0.0      0     0 ?        S    09:11   0:00 [cpuhp/3]
+root        26  0.0  0.0      0     0 ?        S    09:11   0:00 [watchdog/3]
+root        27  0.0  0.0      0     0 ?        S    09:11   0:00 [migration/3]
+root        28  0.0  0.0      0     0 ?        S    09:11   0:00 [ksoftirqd/3]
+root        30  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/3:0H]
+root        31  0.0  0.0      0     0 ?        S    09:11   0:00 [cpuhp/4]
+root        32  0.0  0.0      0     0 ?        S    09:11   0:00 [watchdog/4]
+root        33  0.0  0.0      0     0 ?        S    09:11   0:00 [migration/4]
+root        34  0.0  0.0      0     0 ?        S    09:11   0:00 [ksoftirqd/4]
+root        36  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/4:0H]
+root        37  0.0  0.0      0     0 ?        S    09:11   0:00 [cpuhp/5]
+root        38  0.0  0.0      0     0 ?        S    09:11   0:00 [watchdog/5]
+root        39  0.0  0.0      0     0 ?        S    09:11   0:00 [migration/5]
+root        40  0.0  0.0      0     0 ?        S    09:11   0:02 [ksoftirqd/5]
+root        42  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/5:0H]
+root        43  0.0  0.0      0     0 ?        S    09:11   0:00 [cpuhp/6]
+root        44  0.0  0.0      0     0 ?        S    09:11   0:00 [watchdog/6]
+root        45  0.0  0.0      0     0 ?        S    09:11   0:00 [migration/6]
+root        46  0.0  0.0      0     0 ?        S    09:11   0:02 [ksoftirqd/6]
+root        48  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/6:0H]
+root        49  0.0  0.0      0     0 ?        S    09:11   0:00 [cpuhp/7]
+root        50  0.0  0.0      0     0 ?        S    09:11   0:00 [watchdog/7]
+root        51  0.0  0.0      0     0 ?        S    09:11   0:00 [migration/7]
+root        52  0.0  0.0      0     0 ?        S    09:11   0:00 [ksoftirqd/7]
+root        54  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/7:0H]
+root        55  0.0  0.0      0     0 ?        S    09:11   0:00 [kdevtmpfs]
+root        56  0.0  0.0      0     0 ?        I<   09:11   0:00 [netns]
+root        57  0.0  0.0      0     0 ?        S    09:11   0:00 [rcu_tasks_kthre]
+root        58  0.0  0.0      0     0 ?        S    09:11   0:00 [kauditd]
+root        62  0.0  0.0      0     0 ?        S    09:11   0:00 [khungtaskd]
+root        63  0.0  0.0      0     0 ?        S    09:11   0:00 [oom_reaper]
+root        64  0.0  0.0      0     0 ?        I<   09:11   0:00 [writeback]
+root        65  0.0  0.0      0     0 ?        S    09:11   0:00 [kcompactd0]
+root        66  0.0  0.0      0     0 ?        SN   09:11   0:00 [ksmd]
+root        67  0.0  0.0      0     0 ?        SN   09:11   0:00 [khugepaged]
+root        68  0.0  0.0      0     0 ?        I<   09:11   0:00 [crypto]
+root        69  0.0  0.0      0     0 ?        I<   09:11   0:00 [kintegrityd]
+root        70  0.0  0.0      0     0 ?        I<   09:11   0:00 [kblockd]
+root        74  0.0  0.0      0     0 ?        I<   09:11   0:00 [ata_sff]
+root        75  0.0  0.0      0     0 ?        I<   09:11   0:00 [md]
+root        76  0.0  0.0      0     0 ?        I<   09:11   0:00 [edac-poller]
+root        77  0.0  0.0      0     0 ?        I<   09:11   0:00 [devfreq_wq]
+root        79  0.0  0.0      0     0 ?        I<   09:11   0:00 [watchdogd]
+root        84  0.0  0.0      0     0 ?        S    09:11   0:00 [kswapd0]
+root        85  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/u17:0]
+root        86  0.0  0.0      0     0 ?        S    09:11   0:00 [ecryptfs-kthrea]
+root       128  0.0  0.0      0     0 ?        I<   09:11   0:00 [kthrotld]
+root       129  0.0  0.0      0     0 ?        I<   09:11   0:00 [acpi_thermal_pm]
+root       131  0.0  0.0      0     0 ?        I<   09:11   0:00 [nvme-wq]
+root       135  0.0  0.0      0     0 ?        I<   09:11   0:00 [ipv6_addrconf]
+root       144  0.0  0.0      0     0 ?        I<   09:11   0:00 [kstrp]
+root       161  0.0  0.0      0     0 ?        I<   09:11   0:00 [charger_manager]
+root       211  0.0  0.0      0     0 ?        S    09:11   0:00 [scsi_eh_0]
+root       212  0.0  0.0      0     0 ?        I<   09:11   0:00 [scsi_tmf_0]
+root       213  0.0  0.0      0     0 ?        S    09:11   0:00 [scsi_eh_1]
+root       214  0.0  0.0      0     0 ?        I<   09:11   0:00 [scsi_tmf_1]
+root       215  0.0  0.0      0     0 ?        S    09:11   0:20 [i915/signal:0]
+root       216  0.0  0.0      0     0 ?        S    09:11   0:00 [i915/signal:1]
+root       217  0.0  0.0      0     0 ?        S    09:11   0:00 [i915/signal:2]
+root       218  0.0  0.0      0     0 ?        S    09:11   0:00 [i915/signal:4]
+root       238  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/2:1H]
+root       352  0.0  0.0      0     0 ?        I<   09:11   0:00 [raid5wq]
+root       398  0.0  0.0      0     0 ?        S    09:11   0:02 [jbd2/sda3-8]
+root       399  0.0  0.0      0     0 ?        I<   09:11   0:00 [ext4-rsv-conver]
+root       432  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/7:1H]
+root       433  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/6:1H]
+root       445  0.0  0.3 193700 48068 ?        S<s  09:11   0:01 /lib/systemd/systemd-journald
+root       452  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/1:1H]
+root       456  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/5:1H]
+root       457  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/3:1H]
+root       466  0.0  0.0      0     0 ?        I<   09:11   0:02 [kworker/4:1H]
+root       479  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/0:1H]
+root       498  0.0  0.0  47356  5684 ?        Ss   09:11   0:00 /lib/systemd/systemd-udevd
+root       503  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop0]
+root       505  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop1]
+root       508  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop2]
+root       509  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop3]
+root       511  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop4]
+root       524  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop5]
+root       525  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop6]
+root       526  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop7]
+root       527  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop8]
+root       528  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop9]
+root       529  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop10]
+root       530  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop11]
+root       531  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop12]
+root       532  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop13]
+root       533  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop14]
+root       534  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop15]
+root       535  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop16]
+root       538  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop17]
+root       555  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop18]
+root       557  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop19]
+root       559  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop20]
+root       560  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop21]
+root       561  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop22]
+root       562  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop23]
+root       563  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop24]
+root       564  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop25]
+root       565  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop26]
+root       566  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop27]
+root       567  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop28]
+root       568  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop29]
+root       569  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop30]
+root       570  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop31]
+root       571  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop32]
+root       572  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop33]
+root       573  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop34]
+root       574  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop35]
+root       575  0.0  0.0      0     0 ?        S<   09:11   0:00 [loop36]
+root       654  0.0  0.0      0     0 ?        S    09:11   0:00 [irq/51-DELL08CB]
+root       682  0.0  0.0      0     0 ?        I<   09:11   0:00 [cfg80211]
+root       792  0.0  0.0      0     0 ?        I<   09:11   0:00 [kworker/u17:1]
+root       809  0.0  0.0      0     0 ?        I<   09:11   0:00 [ath10k_wq]
+root       810  0.0  0.0      0     0 ?        I<   09:11   0:00 [ath10k_aux_wq]
+systemd+  1178  0.0  0.0  71268  6600 ?        Ss   09:12   0:05 /lib/systemd/systemd-resolved
+systemd+  1179  0.0  0.0 146116  3476 ?        Ssl  09:12   0:00 /lib/systemd/systemd-timesyncd
+root      1182  0.0  0.1 504276 12564 ?        Ssl  09:12   0:05 /usr/lib/udisks2/udisksd
+root      1183  0.0  0.0 287632  6812 ?        Ssl  09:12   0:00 /usr/lib/accountsservice/accounts-daemon
+syslog    1190  0.0  0.0 263036  4540 ?        Ssl  09:12   0:00 /usr/sbin/rsyslogd -n
+root      1195  0.0  0.0  36516  4360 ?        Ss   09:12   0:00 /usr/lib/bluetooth/bluetoothd
+root      1199  0.0  0.0  70744  6292 ?        Ss   09:12   0:00 /lib/systemd/systemd-logind
+root      1222  0.0  0.1 170532 17232 ?        Ssl  09:12   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root      1223  0.0  0.0 179888  9548 ?        Ssl  09:12   0:02 /usr/sbin/thermald --no-daemon --dbus-enable
+root      1225  0.0  0.0   4552   784 ?        Ss   09:12   0:00 /usr/sbin/acpid
+message+  1226  0.0  0.0  51744  6332 ?        Ss   09:12   0:06 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root      1229  0.0  0.0  45604  8176 ?        Ss   09:12   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root      1232  0.0  0.1 559240 17620 ?        Ssl  09:12   0:06 /usr/sbin/NetworkManager --no-daemon
+root      1234  0.0  0.0 434328  9812 ?        Ssl  09:12   0:00 /usr/sbin/ModemManager --filter-policy=strict
+root      1235  0.0  0.0 110488  3468 ?        Ssl  09:12   0:03 /usr/sbin/irqbalance --foreground
+root      1237  0.0  0.0  31320  3152 ?        Ss   09:12   0:00 /usr/sbin/cron -f
+avahi     1238  0.0  0.0  47260  3252 ?        Ss   09:12   0:00 avahi-daemon: running [amit-Vostro-3580.local]
+root      1243  0.0  0.2 1971924 25152 ?       Ssl  09:12   0:05 /usr/lib/snapd/snapd
+root      1274  0.0  0.0 296424  9788 ?        Ssl  09:12   0:01 /usr/lib/policykit-1/polkitd --no-debug
+avahi     1297  0.0  0.0  47076   336 ?        S    09:12   0:00 avahi-daemon: chroot helper
+root      1325  0.0  0.1 187248 20100 ?        Ssl  09:12   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+summerp+  1327  0.0  0.5 697376 67840 ?        Ssl  09:12   0:02 /usr/bin/python3 /usr/bin/summerpalaced
+root      1338  0.0  0.0 300952  7812 ?        Ssl  09:12   0:00 /usr/sbin/gdm3
+root      1382  0.0  0.0 254448  8196 ?        Sl   09:12   0:00 gdm-session-worker [pam/gdm-launch-environment]
+mysql     1398  0.0  1.4 1424656 180900 ?      Sl   09:12   0:19 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+gdm       1439  0.0  0.0  77168  8292 ?        Ss   09:12   0:00 /lib/systemd/systemd --user
+gdm       1440  0.0  0.0 114552  3188 ?        S    09:12   0:00 (sd-pam)
+root      1467  0.0  0.2 489928 27564 ?        Ss   09:12   0:01 /usr/sbin/apache2 -k start
+gdm       1505  0.0  0.0 190692  5424 tty1     Ssl+ 09:12   0:00 /usr/lib/gdm3/gdm-wayland-session gnome-session --autostart /usr/share/gdm/greeter/autostart
+gdm       1507  0.0  0.0  50264  4576 ?        Ss   09:12   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+gdm       1509  0.0  0.1 551864 13800 tty1     Sl+  09:12   0:00 /usr/lib/gnome-session/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm       1543  0.1  1.2 3809352 156868 tty1   Sl+  09:12   0:35 /usr/bin/gnome-shell
+whoopsie  1566  0.0  0.1 464308 12644 ?        Ssl  09:12   0:00 /usr/bin/whoopsie -f
+kernoops  1568  0.0  0.0  56944   420 ?        Ss   09:12   0:00 /usr/sbin/kerneloops --test
+kernoops  1580  0.0  0.0  56944   420 ?        Ss   09:12   0:00 /usr/sbin/kerneloops
+root      1760  0.0  0.0 315696  9304 ?        Ssl  09:12   0:03 /usr/lib/upower/upowerd
+gdm       1778  0.0  0.4 923332 49920 tty1     Sl+  09:12   0:00 /usr/bin/Xwayland :1024 -rootless -terminate -accessx -core -listen 4 -listen 5 -displayfd 6
+gdm       1792  0.0  0.0 349272  6396 ?        Ssl  09:12   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+gdm       1797  0.0  0.0  49928  3764 ?        S    09:12   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+gdm       1799  0.0  0.0 220768  7132 ?        Sl   09:12   0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+gdm       1803  0.0  0.0 1408588 11484 ?       Ssl  09:12   0:00 /usr/bin/pulseaudio --daemonize=no
+rtkit     1804  0.0  0.0 183508  2916 ?        SNsl 09:12   0:00 /usr/lib/rtkit/rtkit-daemon
+gdm       1831  0.0  0.0 354256  7748 tty1     Sl   09:12   0:00 ibus-daemon --xim --panel disable
+gdm       1834  0.0  0.0 273508  5880 tty1     Sl   09:12   0:00 /usr/lib/ibus/ibus-dconf
+gdm       1836  0.0  0.2 482104 29296 tty1     Sl   09:12   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+gdm       1839  0.0  0.0 271452  6080 ?        Sl   09:12   0:00 /usr/lib/ibus/ibus-portal
+gdm       1848  0.0  0.0 264456  4932 ?        Ssl  09:12   0:00 /usr/libexec/xdg-permission-store
+root      1859  0.0  0.0 289768  6840 ?        Ssl  09:12   0:00 /usr/lib/x86_64-linux-gnu/boltd
+root      1860  0.0  0.3 441188 39848 ?        Ssl  09:12   0:14 /usr/lib/packagekit/packagekitd
+gdm       1861  0.0  0.2 632676 30432 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+gdm       1863  0.0  0.0 271048  5788 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+gdm       1864  0.0  0.2 481736 28420 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+gdm       1865  0.0  0.2 806176 30940 tty1     Sl+  09:12   0:03 /usr/lib/gnome-settings-daemon/gsd-color
+gdm       1868  0.0  0.1 386608 13656 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+gdm       1869  0.0  0.0 276632  5660 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+gdm       1870  0.0  0.2 636108 29320 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+gdm       1871  0.0  0.2 1209412 31252 tty1    Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+gdm       1874  0.0  0.0 194892  4520 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+gdm       1876  0.0  0.2 928020 31024 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+gdm       1879  0.0  0.0 259908  8708 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+gdm       1880  0.0  0.0 194912  4556 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+gdm       1883  0.0  0.0 268628  4772 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+gdm       1884  0.0  0.0 298136  8384 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+gdm       1889  0.0  0.0 370824  7844 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+gdm       1891  0.0  0.0 325752  7936 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+gdm       1897  0.0  0.2 566876 29680 tty1     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+gdm       1916  0.0  0.0 197784  6196 tty1     Sl   09:12   0:00 /usr/lib/ibus/ibus-engine-simple
+colord    1956  0.0  0.1 317900 14044 ?        Ssl  09:12   0:00 /usr/lib/colord/colord
+root      1985  0.0  0.0 408236  8952 ?        Sl   09:12   0:00 gdm-session-worker [pam/gdm-password]
+akamit21  1988  0.0  0.0  77244  8372 ?        Ss   09:12   0:00 /lib/systemd/systemd --user
+akamit21  1989  0.0  0.0 262016  3228 ?        S    09:12   0:00 (sd-pam)
+akamit21  2002  0.0  0.0 355232  8292 ?        SLl  09:12   0:01 /usr/bin/gnome-keyring-daemon --daemonize --login
+akamit21  2006  0.0  0.0 205028  5960 tty2     Ssl+ 09:12   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+akamit21  2008  3.2  0.8 572492 105480 tty2    Sl+  09:12  15:00 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1001/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+akamit21  2017  0.0  0.0  51272  5628 ?        Ss   09:12   0:02 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+akamit21  2020  0.0  0.1 560616 14552 tty2     Sl+  09:12   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+akamit21  2116  0.0  0.0  11304   320 ?        Ss   09:12   0:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+akamit21  2119  0.0  0.0 349308  6184 ?        Ssl  09:12   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+akamit21  2124  0.0  0.0  50052  4292 ?        S    09:12   0:01 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+akamit21  2126  0.0  0.0 220792  6832 ?        Sl   09:12   0:07 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+akamit21  2144  4.3  3.1 4330984 382924 tty2   Sl+  09:12  20:07 /usr/bin/gnome-shell
+akamit21  2151  0.0  0.0 284864  6868 ?        Ssl  09:12   0:00 /usr/lib/gvfs/gvfsd
+akamit21  2156  0.0  0.0 416116  5356 ?        Sl   09:12   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1001/gvfs -f -o big_writes
+akamit21  2167  3.1  0.1 1951812 13028 ?       S<l  09:12  14:44 /usr/bin/pulseaudio --start --log-target=syslog
+root      2171  0.0  0.0      0     0 ?        S<   09:12   0:00 [krfcommd]
+akamit21  2186  0.0  0.0 354756  8092 tty2     Sl   09:12   0:18 ibus-daemon --xim --panel disable
+akamit21  2189  0.0  0.0 264456  5472 ?        Ssl  09:12   0:00 /usr/libexec/xdg-permission-store
+akamit21  2193  0.0  0.0 273648  6544 tty2     Sl   09:12   0:00 /usr/lib/ibus/ibus-dconf
+akamit21  2196  0.0  0.1 336820 20712 tty2     Sl   09:12   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+akamit21  2198  0.0  0.0 271584  5956 ?        Sl   09:12   0:00 /usr/lib/ibus/ibus-portal
+akamit21  2209  0.0  0.1 689640 21008 ?        Sl   09:12   0:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+akamit21  2216  0.0  0.0 299460  8912 ?        Ssl  09:12   0:02 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+akamit21  2220  0.0  0.0 371716  7836 ?        Ssl  09:12   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+akamit21  2225  0.0  0.0 266940  5888 ?        Ssl  09:12   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+akamit21  2229  0.0  0.2 772440 31844 ?        Sl   09:12   0:00 /usr/lib/gnome-online-accounts/goa-daemon
+akamit21  2233  0.0  0.2 1299528 26148 ?       Ssl  09:12   0:00 /usr/lib/evolution/evolution-source-registry
+akamit21  2246  0.0  0.0 296256  7456 ?        Sl   09:12   0:00 /usr/lib/gnome-online-accounts/goa-identity-service
+akamit21  2251  0.0  0.0 281552  6644 ?        Ssl  09:12   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+akamit21  2255  0.0  0.0 268764  4904 ?        Ssl  09:12   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+akamit21  2259  0.0  0.2 791156 24432 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+akamit21  2261  0.0  0.0 342220 10116 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+akamit21  2262  0.0  0.0 416240  5864 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+akamit21  2263  0.0  0.0 268628  5100 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+akamit21  2264  0.0  0.0 445872  9708 tty2     Sl+  09:12   0:02 /usr/lib/gnome-settings-daemon/gsd-sharing
+akamit21  2268  0.0  0.0 370832  7956 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+akamit21  2272  0.0  0.0 325760  7972 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+akamit21  2274  0.0  0.1 487400 21920 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+akamit21  2286  0.0  0.1 495020 20928 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+akamit21  2292  0.0  0.1 336436 20096 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+akamit21  2294  0.0  0.0 271056  5852 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+akamit21  2295  0.0  0.1 462644 13616 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+akamit21  2301  0.0  0.1 660920 23048 tty2     Sl+  09:12   0:03 /usr/lib/gnome-settings-daemon/gsd-color
+akamit21  2307  0.0  0.1 499312 21120 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+akamit21  2310  0.0  0.0 357620  7300 tty2     Sl+  09:12   0:01 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+akamit21  2312  0.0  0.0 271060  5832 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+akamit21  2316  0.0  0.1 859400 23692 tty2     Sl+  09:12   0:01 /usr/lib/gnome-settings-daemon/gsd-media-keys
+akamit21  2343  0.0  0.1 501660 12720 tty2     Sl+  09:12   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+akamit21  2358  0.0  0.0 271936  6756 tty2     Sl+  09:12   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+akamit21  2364  0.0  0.4 1359844 56052 tty2    Sl+  09:12   0:03 nautilus-desktop
+akamit21  2389  0.0  0.5 885048 67188 ?        Ssl  09:12   0:00 /usr/lib/evolution/evolution-calendar-factory
+akamit21  2392  0.0  0.0 197780  6604 tty2     Sl   09:12   0:04 /usr/lib/ibus/ibus-engine-simple
+akamit21  2401  0.0  0.0 361156  7492 ?        Sl   09:12   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.22 /org/gtk/gvfs/exec_spaw/0
+akamit21  2424  0.0  0.5 1128776 62260 ?       Sl   09:12   0:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx2389x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/2389/2
+akamit21  2434  0.0  0.0 188040  5376 ?        Sl   09:12   0:00 /usr/lib/dconf/dconf-service
+akamit21  2445  0.0  0.2 725592 24392 ?        Ssl  09:12   0:00 /usr/lib/evolution/evolution-addressbook-factory
+akamit21  2460  0.0  0.2 936364 26416 ?        Sl   09:12   0:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx2445x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/2445/2
+akamit21  2539  0.0  0.0 198088  6452 ?        Ssl  09:12   0:00 /usr/lib/gvfs/gvfsd-metadata
+akamit21  2682  0.3  1.2 924812 156732 tty2    Sl+  09:13   1:45 /snap/slack/21/usr/lib/slack/slack --no-sandbox --executed-from=/home/akamit21 --pid=2620
+root      2698  0.0  0.0 122696  5236 ?        Ss   09:13   0:00 sendmail: MTA: accepting connections
+akamit21  2775  0.0  0.3 379828 41928 tty2     S+   09:13   0:00 /snap/slack/21/usr/lib/slack/slack --type=zygote --no-sandbox
+akamit21  2803  2.7  3.1 3728484 378804 tty2   SLl+ 09:13  12:51 /usr/lib/chromium-browser/chromium-browser --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --enable-pinch
+akamit21  2826  0.1  0.7 458392 85620 tty2     Sl+  09:13   0:32 /snap/slack/21/usr/lib/slack/slack --type=gpu-process --field-trial-handle=12389205528661862229,15551297536144389058,131072 --disable-features=SpareRendererForSitePerProcess --no-sandbox --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --use-gl=swiftshader-webgl --service-request-channel-token=1356258520081185577
+akamit21  2829  0.0  0.5 471868 66716 tty2     Sl+  09:13   0:15 /snap/slack/21/usr/lib/slack/slack --type=utility --field-trial-handle=12389205528661862229,15551297536144389058,131072 --disable-features=SpareRendererForSitePerProcess --lang=en-GB --service-sandbox-type=network --no-sandbox --standard-schemes=slack-resources,slack-sounds,slack-webapp-dev --secure-schemes=slack-resources,slack-sounds,slack-webapp-dev --bypasscsp-schemes=slack-resources,slack-sounds,slack-webapp-dev --cors-schemes=slack-resources,slack-sounds,slack-webapp-dev --fetch-schemes=slack-resources,slack-sounds,slack-webapp-dev --service-worker-schemes=slack-resources,slack-sounds,slack-webapp-dev --service-request-channel-token=4245860900922076942 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+akamit21  2853  0.0  0.4 457040 58560 tty2     S+   09:13   0:00 /usr/lib/chromium-browser/chromium-browser --type=zygote --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113
+akamit21  2862  0.0  0.1 457040 14124 tty2     S+   09:13   0:00 /usr/lib/chromium-browser/chromium-browser --type=zygote --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113
+akamit21  2888  3.3  1.5 1197304 188956 tty2   Sl+  09:13  15:25 /usr/lib/chromium-browser/chromium-browser --type=gpu-process --field-trial-handle=46000147826411754,14489491812700692671,131072 --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --shared-files
+akamit21  2893  0.4  1.0 1714272 126528 tty2   SLl+ 09:13   1:55 /usr/lib/chromium-browser/chromium-browser --type=utility --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --shared-files=v8_snapshot_data:100
+akamit21  2973  0.0  0.5 5646156 70580 tty2    Sl+  09:13   0:00 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --extension-process --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  2988  0.3  1.2 5836416 151476 tty2   Sl+  09:13   1:48 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --extension-process --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  3001  0.0  0.6 5649580 77004 tty2    Sl+  09:13   0:00 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --extension-process --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=7 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  3008  0.0  1.4 1271060 174224 tty2   SLl+ 09:13   0:08 /usr/bin/gnome-software --gapplication-service
+akamit21  3011  0.0  0.2 639664 31924 tty2     Sl+  09:13   0:01 update-notifier
+akamit21  3145  1.7  1.1 5862944 143360 tty2   Sl+  09:14   8:00 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=15 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  3209  1.1  2.3 24165424 283224 tty2  Sl+  09:14   5:23 /snap/slack/21/usr/lib/slack/slack --type=renderer --no-sandbox --autoplay-policy=no-user-gesture-required --force-color-profile=srgb --field-trial-handle=12389205528661862229,15551297536144389058,131072 --disable-features=SpareRendererForSitePerProcess -- ng --lang=en-GB --standard-schemes=slack-resources,slack-sounds,slack-webapp-dev --secure-schemes=slack-resources,slack-sounds,slack-webapp-dev --bypasscsp-schemes=slack-resources,slack-sounds,slack-webapp-dev --cors-schemes=slack-resources,slack-sounds,slack-webapp-dev --fetch-schemes=slack-resources,slack-sounds,slack-webapp-dev --service-worker-schemes=slack-resources,slack-sounds,slack-webapp-dev --app-path=/snap/slack/21/usr/lib/slack/resources/app.asar --no-sandbox --no-zygote --preload=/snap/slack/21/usr/lib/slack/resources/app.asar/dist/main-preload-entry-point.bundle.js --background-color=#FFFFFF --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=15399830959299140887 --renderer-client-id=7 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101 --enable-node-leakage-in-renderers {"preloadEnvironment":{"resourcePath":"/snap/slack/21/usr/lib/slack/resources/app.asar","appVersion":"4.3.2","linux":{"os":"Ubuntu 18.04.4 LTS","name":"18.04","release":"bionic","codename":"","desktopEnvironment":"Unity"},"sessionId":"YzIzOTk0OGMtMWJjMy01YWRjLWE1OWYtMTYxMGMyYjlmMDNiXzE1ODM3MjU0MTMyMjc=","uuid":"c239948c-1bc3-5adc-a59f-1610c2b9f03b","releaseChannel":"prod","teamId":"app","windowType":"main"},"crashReporterOpts":{"productName":"Slack","companyName":"Slack Technologies","uploadToServer":true,"submitURL":"https://slack.com/apps/breakpad?instanceUid=c239948c-1bc3-5adc-a59f-1610c2b9f03b","extra":{"instanceUid":"c239948c-1bc3-5adc-a59f-1610c2b9f03b","sessionId":"YzIzOTk0OGMtMWJjMy01YWRjLWE1OWYtMTYxMGMyYjlmMDNiXzE1ODM3MjU0MTMyMjc="}},"perfTimer":{"mainPid":2682,"BOOT":[142,212065937],"numTeamsAtLaunch":2,"SHELL":[144,900329079],"APP_READY":[144,986577548],"APP_CREATED":[146,274531062],"MAIN_WINDOW_CREATING":[146,759876642]},"identifier":"slack_preload_metadata_arguments"}
+akamit21  3278  0.0  0.2 785796 32560 tty2     Sl+  09:14   0:00 /usr/lib/deja-dup/deja-dup-monitor
+akamit21  3488  0.1  0.7 5811860 87468 tty2    Sl+  09:19   0:49 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=23 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  3536  0.0  0.8 5814228 101160 tty2   Sl+  09:20   0:10 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=24 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  3628  0.0  0.0 352536 10400 ?        Sl   09:22   0:00 /usr/lib/gvfs/gvfsd-http --spawner :1.22 /org/gtk/gvfs/exec_spaw/1
+akamit21  3640  0.0  0.0   7608   740 tty2     S+   09:22   0:00 cat
+akamit21  3641  0.0  0.0   7608   744 tty2     S+   09:22   0:00 cat
+akamit21  3967  0.0  0.0  24564  3276 tty2     Sl+  09:22   0:00 /usr/bin/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPTA4MzcyZTQxLk03cDA3WE9ySlVXLUY5M0pKRzdUWUZFMVg1aXdzQ2dTbzdwYXpoM1B1QmU5N1Rranp3M1NhOWx0b0tXb0g2Q3Nsd2ozZXlLQkZudzhjQnNNeFBYY3dBJTNEJTNEJnRpZD0yYzYyMWZjOWM0NTQ0MmE2YTNiODhkOWFlN2NjOTM1Zg%3D%3D&confno=3765444091&zc=0&pk=&mcv=0.92.11227.0929&browser=chrome
+akamit21  3973  0.0  0.0   4628   808 tty2     S+   09:22   0:00 sh -c export SSB_HOME=/home/akamit21/.zoom; export QSG_INFO=1; export LD_LIBRARY_PATH=/opt/zoom; export BREAKPAD_CLIENT_FD=3; /opt/zoom/zoom "zoommtg://zoom.us/join?action=join&confid=dXNzPTA4MzcyZTQxLk03cDA3WE9ySlVXLUY5M0pKRzdUWUZFMVg1aXdzQ2dTbzdwYXpoM1B1QmU5N1Rranp3M1NhOWx0b0tXb0g2Q3Nsd2ozZXlLQkZudzhjQnNNeFBYY3dBJTNEJTNEJnRpZD0yYzYyMWZjOWM0NTQ0MmE2YTNiODhkOWFlN2NjOTM1Zg%3D%3D&confno=3765444091&zc=0&pk=&mcv=0.92.11227.0929&browser=chrome "
+akamit21  3974 42.0  2.9 4616076 361732 tty2   Sl+  09:22 191:07 /opt/zoom/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPTA4MzcyZTQxLk03cDA3WE9ySlVXLUY5M0pKRzdUWUZFMVg1aXdzQ2dTbzdwYXpoM1B1QmU5N1Rranp3M1NhOWx0b0tXb0g2Q3Nsd2ozZXlLQkZudzhjQnNNeFBYY3dBJTNEJTNEJnRpZD0yYzYyMWZjOWM0NTQ0MmE2YTNiODhkOWFlN2NjOTM1Zg%3D%3D&confno=3765444091&zc=0&pk=&mcv=0.92.11227.0929&browser=chrome 
+akamit21  5360  1.7  1.4 5907232 180896 tty2   Sl+  10:20   6:47 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=31 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  8097  0.2  1.1 5856944 143024 tty2   Sl+  11:06   0:59 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=127 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  8596  0.0  0.8 5818248 107152 tty2   Sl+  11:16   0:11 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=143 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  8864  0.2  0.8 5815312 101960 tty2   Sl+  11:19   0:49 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=155 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  8877  0.0  0.7 5818768 96092 tty2    Sl+  11:19   0:09 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=156 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  9541  2.2  1.2 5895768 153588 tty2   Sl+  11:31   7:22 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=174 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21  9591  0.4  1.0 5844832 123012 tty2   Sl+  11:31   1:34 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=177 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 10785  0.7  1.3 5871820 162824 tty2   Sl+  11:50   2:11 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=210 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 10826  0.4  1.5 5873296 193652 tty2   Sl+  11:51   1:17 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=211 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 10841  0.1  0.8 5813776 103160 tty2   Sl+  11:51   0:20 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=212 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 10902  0.0  0.7 5802928 93568 tty2    Sl+  11:51   0:03 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=216 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 10915  0.0  0.6 5794124 84112 tty2    Sl+  11:51   0:02 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=217 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 10929  0.0  0.6 5794360 82736 tty2    Sl+  11:51   0:02 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=218 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 10942  0.1  0.8 5818324 99920 tty2    Sl+  11:51   0:22 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=219 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 10956  0.0  0.7 5809828 93452 tty2    Sl+  11:51   0:09 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=220 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 10985  0.0  0.6 5794204 84268 tty2    Sl+  11:51   0:02 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=222 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+root     11773  0.0  0.0      0     0 ?        S    13:15   0:00 [irq/128-mei_me]
+root     12045  0.0  0.0  25992  6348 ?        S    13:16   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-wlp2s0.pid -lf /var/lib/NetworkManager/dhclient-5aebacc7-eb37-47c8-8fb5-c7bf358bb6ec-wlp2s0.lease -cf /var/lib/NetworkManager/dhclient-wlp2s0.conf wlp2s0
+akamit21 13440  0.0  0.0 363292  7800 ?        Sl   13:45   0:00 /usr/lib/gvfs/gvfsd-network --spawner :1.22 /org/gtk/gvfs/exec_spaw/3
+akamit21 13462  0.0  0.0 374188  7440 ?        Sl   13:45   0:00 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.22 /org/gtk/gvfs/exec_spaw/6
+www-data 14608  0.0  0.1 492256 15172 ?        S    14:08   0:00 /usr/sbin/apache2 -k start
+www-data 14609  0.0  0.1 492256 15172 ?        S    14:08   0:00 /usr/sbin/apache2 -k start
+www-data 14610  0.0  0.1 492256 15172 ?        S    14:08   0:00 /usr/sbin/apache2 -k start
+www-data 14611  0.0  0.1 492256 15172 ?        S    14:08   0:00 /usr/sbin/apache2 -k start
+www-data 14612  0.0  0.1 492256 15172 ?        S    14:08   0:00 /usr/sbin/apache2 -k start
+root     14624  0.0  0.0 100588  8076 ?        Ss   14:08   0:00 /usr/sbin/cupsd -l
+root     14625  0.0  0.0 303532 11016 ?        Ssl  14:08   0:00 /usr/sbin/cups-browsed
+akamit21 15169  2.1  2.4 5884072 292308 tty2   Sl+  14:12   3:28 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=275 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 15242  0.5  0.8 5836876 101960 tty2   Sl+  14:13   0:57 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=277 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 15325  0.0  0.8 5807628 100196 tty2   Sl+  14:14   0:03 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=279 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+root     15402  0.0  0.0      0     0 ?        I    14:14   0:01 [kworker/4:2]
+akamit21 15499  0.0  0.0   7608   768 tty2     S+   14:15   0:00 cat
+akamit21 15500  0.0  0.0   7608   824 tty2     S+   14:15   0:00 cat
+akamit21 16718  0.0  0.3 719324 37852 ?        Ssl  14:28   0:08 /usr/lib/gnome-terminal/gnome-terminal-server
+akamit21 17161  0.3  1.1 1226460 141752 tty2   Sl+  14:35   0:31 /usr/share/code/code --no-sandbox --unity-launch
+akamit21 17166  0.0  0.3 366472 38792 tty2     S+   14:35   0:00 /usr/share/code/code --type=zygote --no-sandbox
+akamit21 17193  0.7  0.7 513592 90100 tty2     Sl+  14:35   1:06 /usr/share/code/code --type=gpu-process --field-trial-handle=4118819249020609012,6330152418761826035,131072 --disable-features=LayoutNG,SpareRendererForSitePerProcess --disable-color-correct-rendering --no-sandbox --gpu-preferences=IAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --service-request-channel-token=9227456335933624959
+akamit21 17983  0.0  0.0  24564  1960 tty2     Sl+  14:46   0:00 /usr/bin/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPTMxOTIxMjc4Lm5TZnVJSThDWG40YXlDeThJcnM4bHZoTEhpSkFIQUQwN09ub2tkdFh6dnJna1RmTFkyNzJVUnVfNkcwLVhBRlU4emRyMTYxUV9femtHakxUbjg3YTNBJTNEJTNEJnRpZD03NjVlZTdjNzAwNWY0MzFmYTY5Y2E4ZTQzMzIwNjY5Mg%3D%3D&confno=809752472&zc=0&pwd=RUYzZGozdytZdW9MZWI2U1dlQ21OZz09&pk=&mcv=0.92.11227.0929&browser=chrome
+akamit21 17989  0.0  0.0   4628   816 tty2     S+   14:46   0:00 sh -c export SSB_HOME=/home/akamit21/.zoom; export QSG_INFO=1; export LD_LIBRARY_PATH=/opt/zoom; export BREAKPAD_CLIENT_FD=3; /opt/zoom/zoom "zoommtg://zoom.us/join?action=join&confid=dXNzPTMxOTIxMjc4Lm5TZnVJSThDWG40YXlDeThJcnM4bHZoTEhpSkFIQUQwN09ub2tkdFh6dnJna1RmTFkyNzJVUnVfNkcwLVhBRlU4emRyMTYxUV9femtHakxUbjg3YTNBJTNEJTNEJnRpZD03NjVlZTdjNzAwNWY0MzFmYTY5Y2E4ZTQzMzIwNjY5Mg%3D%3D&confno=809752472&zc=0&pwd=RUYzZGozdytZdW9MZWI2U1dlQ21OZz09&pk=&mcv=0.92.11227.0929&browser=chrome "
+akamit21 17990  4.7  3.0 4898384 374412 tty2   Sl+  14:46   6:12 /opt/zoom/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPTMxOTIxMjc4Lm5TZnVJSThDWG40YXlDeThJcnM4bHZoTEhpSkFIQUQwN09ub2tkdFh6dnJna1RmTFkyNzJVUnVfNkcwLVhBRlU4emRyMTYxUV9femtHakxUbjg3YTNBJTNEJTNEJnRpZD03NjVlZTdjNzAwNWY0MzFmYTY5Y2E4ZTQzMzIwNjY5Mg%3D%3D&confno=809752472&zc=0&pwd=RUYzZGozdytZdW9MZWI2U1dlQ21OZz09&pk=&mcv=0.92.11227.0929&browser=chrome 
+root     20067  0.0  0.0 258316  7740 ?        Sl   15:16   0:00 gdm-session-worker [pam/gdm-password]
+akamit21 21251  0.1  1.0 5837624 123168 tty2   Sl+  15:31   0:09 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=420 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 21288  0.1  0.9 5827268 119560 tty2   Sl+  15:31   0:06 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=424 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+root     21547  0.0  0.0  25992  6304 ?        S    15:33   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-enp1s0.pid -lf /var/lib/NetworkManager/dhclient-8515561e-f855-3cd6-9c8b-0dcdf5170140-enp1s0.lease -cf /var/lib/NetworkManager/dhclient-enp1s0.conf enp1s0
+root     21824  0.0  0.0      0     0 ?        I    15:38   0:00 [kworker/3:0]
+akamit21 22116  0.0  1.0 5825956 130824 tty2   Sl+  15:47   0:03 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --extension-process --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=433 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+akamit21 22729  0.0  0.0   7608   744 tty2     S+   15:54   0:00 cat
+akamit21 22730  0.0  0.0   7608   824 tty2     S+   15:54   0:00 cat
+akamit21 23206  0.0  0.0   7608   748 tty2     S+   15:55   0:00 cat
+akamit21 23207  0.0  0.0   7608   840 tty2     S+   15:55   0:00 cat
+akamit21 23725  1.6  2.0 906844 249424 tty2    SLl+ 15:56   1:00 /opt/google/chrome/chrome --disable-webrtc-apm-in-audio-service
+akamit21 23730  0.0  0.0   7608   740 tty2     S+   15:56   0:00 cat
+akamit21 23731  0.0  0.0   7608   884 tty2     S+   15:56   0:00 cat
+akamit21 23735  0.0  0.4 447952 60760 tty2     S+   15:56   0:00 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272,
+akamit21 23736  0.0  0.0  27224  4072 tty2     S+   15:56   0:00 /opt/google/chrome/nacl_helper
+akamit21 23739  0.0  0.1 447952 15104 tty2     S+   15:56   0:00 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272,
+akamit21 23762  1.8  1.2 576436 151900 tty2    Sl+  15:56   1:06 /opt/google/chrome/chrome --type=gpu-process --field-trial-handle=9308018915825251289,596198204389236839,131072 --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --use-gl=swiftshader-webgl --shared-files
+akamit21 23765  0.4  0.7 547200 95152 tty2     SLl+ 15:56   0:17 /opt/google/chrome/chrome --type=utility --field-trial-handle=9308018915825251289,596198204389236839,131072 --lang=en-GB --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --shared-files
+akamit21 23776  0.0  0.1 412836 14212 tty2     S+   15:56   0:00 /opt/google/chrome/chrome --type=broker
+akamit21 23941  0.1  0.8 4815700 99716 tty2    Sl+  15:56   0:04 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=7 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 23946  0.0  0.8 4815604 97632 tty2    Sl+  15:56   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=6 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 25157  0.0  0.4 845224 50628 ?        Sl   16:10   0:02 /usr/bin/nautilus --gapplication-service
+akamit21 25378  0.0  0.0  22748  5120 pts/2    Ss   16:11   0:00 bash
+akamit21 26222  0.0  0.4 5779188 52892 tty2    Sl+  16:19   0:00 /usr/lib/chromium-browser/chromium-browser --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=46000147826411754,14489491812700692671,131072 --lang=en-GB --disable-oor-cors --enable-auto-reload --ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so --ppapi-flash-version=30.0.0.113 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=461 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100
+root     26513  0.7  0.0      0     0 ?        I    16:24   0:15 [kworker/u16:4]
+root     26514  0.5  0.0      0     0 ?        I    16:24   0:10 [kworker/u16:5]
+root     26739  0.0  0.0      0     0 ?        I    16:26   0:00 [kworker/0:0]
+root     27092  0.0  0.0      0     0 ?        I    16:29   0:00 [kworker/6:1]
+akamit21 27094 11.6  2.1 1217780 257920 tty2   SLl+ 16:29   3:16 /usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=4118819249020609012,6330152418761826035,131072 --disable-features=LayoutNG,SpareRendererForSitePerProcess --lang=en-GB --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/usr/share/code/resources/app --node-integration --webview-tag --no-sandbox --no-zygote --background-color=#1e1e1e --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=7223435460072219286 --renderer-client-id=9 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+akamit21 27122  0.6  1.4 787948 174776 tty2    Sl+  16:29   0:11 /usr/share/code/code --inspect-port=0 /usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost
+akamit21 27137  0.0  0.5 582404 64588 tty2     Rl+  16:29   0:00 /usr/share/code/code /usr/share/code/resources/app/out/bootstrap-fork --type=watcherService
+akamit21 27159  0.0  0.5 582448 64108 tty2     Sl+  16:29   0:00 /usr/share/code/code /usr/share/code/resources/app/out/bootstrap-fork --type=searchService
+akamit21 27283  0.2  1.1 4851348 137140 tty2   Sl+  16:29   0:03 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=51 --no-v8-untrusted-code-mitigations --shared-files
+root     27557  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/7:1]
+root     27559  0.0  0.0      0     0 ?        I    16:32   0:00 [kworker/1:0]
+akamit21 27595  0.7  1.4 4918884 171100 tty2   Sl+  16:33   0:10 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=61 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27611  0.4  0.8 4812204 107836 tty2   Sl+  16:33   0:07 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=62 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27634  0.0  0.6 4790468 82020 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=63 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27647  0.0  0.8 9024980 101780 tty2   Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=64 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27673  0.0  0.6 4790468 80820 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=66 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27687  0.0  0.6 4790468 80324 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=68 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27699  0.0  0.6 4790468 78828 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=70 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27742  0.0  0.6 4790468 80264 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=73 --no-v8-untrusted-code-mitigations --shared-files
+root     27809  0.0  0.0      0     0 ?        I    16:33   0:00 [kworker/2:2]
+akamit21 27810  4.0  1.1 4859640 140332 tty2   Sl+  16:33   0:58 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=76 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27823  0.2  0.9 4818436 119168 tty2   Sl+  16:33   0:04 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=77 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27836  0.0  0.7 4795588 92244 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=78 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27852  0.0  0.6 4790468 82984 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=79 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27853  0.0  0.6 4792516 84348 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=80 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27876  0.0  0.6 4792516 83460 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=82 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27898  0.0  0.6 4790468 80144 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=83 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27909  0.0  0.6 4790468 82924 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=84 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27918  0.0  0.7 4798660 90792 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=85 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27924  0.0  0.7 4792516 86924 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=86 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 27987  0.0  0.7 4793540 86144 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=91 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 28104  1.9  0.9 4894692 111868 tty2   Sl+  16:33   0:28 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=98 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 28189  0.0  0.6 4790468 80236 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=104 --no-v8-untrusted-code-mitigations --shared-files
+root     28256  0.0  0.0      0     0 ?        I    16:33   0:00 [kworker/5:0]
+akamit21 28305  6.8  1.3 9095468 160312 tty2   Sl+  16:33   1:37 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=108 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 28322  0.0  0.7 4793540 85480 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=109 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 28355  0.0  0.7 4791492 85892 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=111 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 28425  1.2  1.0 4873884 126992 tty2   Sl+  16:33   0:17 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=118 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 28465  0.0  0.4 4776332 54844 tty2    Sl+  16:33   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=9308018915825251289,596198204389236839,131072 --disable-gpu-compositing --lang=en-GB --enable-crash-reporter=0fcc3a11-cba8-4da4-8fc3-895467765272, --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=119 --no-v8-untrusted-code-mitigations --shared-files
+akamit21 28932  0.1  0.3 224224 39448 tty2     Sl+  16:35   0:01 /usr/bin/python3 completion.py
+akamit21 28942  0.0  0.1  61564 24268 tty2     S+   16:35   0:00 /usr/bin/python3 lib/python/jedi/inference/compiled/subprocess/__main__.py lib/python 3.6.9
+akamit21 29114  0.0  0.0  22776  5228 pts/0    Ss+  16:36   0:00 /bin/bash
+akamit21 29392  1.8  0.0  29712  9348 pts/0    T    16:39   0:19 /usr/bin/python3 /home/akamit21/repos/cohort_3/submissions/sm_102_amit/week_21/session_1/day_1/text.py
+root     29399  1.3  0.0      0     0 ?        I    16:39   0:13 [kworker/u16:0]
+root     29612  0.0  0.0      0     0 ?        I    16:45   0:00 [kworker/2:0]
+akamit21 29857  0.0  0.1  57132 19948 tty2     S+   16:47   0:00 /usr/bin/python3 lib/python/jedi/inference/compiled/subprocess/__main__.py lib/python 3.6.9
+root     29900  0.0  0.0      0     0 ?        I    16:48   0:00 [kworker/6:0]
+root     29901  0.0  0.0      0     0 ?        I    16:49   0:00 [kworker/0:1]
+root     29902  0.0  0.0      0     0 ?        I    16:49   0:00 [kworker/1:1]
+root     30373  0.0  0.0      0     0 ?        I    16:50   0:00 [kworker/7:0]
+root     30377  0.0  0.0      0     0 ?        I    16:51   0:00 [kworker/4:1]
+root     30388  0.0  0.0      0     0 ?        I    16:51   0:00 [kworker/5:1]
+root     30391  0.0  0.0      0     0 ?        I    16:51   0:00 [kworker/3:1]
+root     30501  0.0  0.0      0     0 ?        I    16:54   0:00 [kworker/6:2]
+root     30502  0.0  0.0      0     0 ?        I    16:55   0:00 [kworker/0:2]
+root     30503  0.0  0.0      0     0 ?        I    16:55   0:00 [kworker/1:2]
+root     30524  0.0  0.0      0     0 ?        I    16:55   0:00 [kworker/7:2]
+root     30560  0.0  0.0      0     0 ?        I    16:56   0:00 [kworker/4:0]
+root     30594  0.0  0.0      0     0 ?        I    16:56   0:00 [kworker/u16:1]
+root     30768  0.0  0.0      0     0 ?        I    16:56   0:00 [kworker/3:2]
+root     30801  0.0  0.0      0     0 ?        I    16:56   0:00 [kworker/5:2]
+akamit21 30912  0.0  0.0  39664  3664 pts/2    R+   16:57   0:00 ps aux

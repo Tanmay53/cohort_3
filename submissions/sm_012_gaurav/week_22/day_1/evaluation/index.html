@@ -1,0 +1,38 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>
+            Football
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="cardsDiv">
+            <div class="flexCol" id='nextMatch'>
+            </div>
+            <div class="flexCol" id='recentResults'>
+            </div>
+        </div>
+        <form class="form flexCol">
+            <label for="team1">Enter Team 1 Name</label>
+            <input type="text" id="team1" required />
+            <label for="team2">Enter Team 2 Name</label>
+            <input type="text" id="team2" required />
+            <div class="flexRow dateType">
+                <div class="flexCol dateDiv">
+                    <label for="date">Select Date</label>
+                    <input type="date" id="date" required />
+                </div>
+                <select id="type" required>
+                    <option value="">Select Match Type</option>
+                    <option value="upcoming">Upcoming Match</option>
+                    <option value="recent">Recent Match</option>
+                </select>
+            </div>
+            <div class="flexRow justifyCenter">
+                <button type="submit" id="submitBtn">Submit</button>
+            </div>
+        </form>
+        <script src='script.js'></script>
+    </body>
+</html>

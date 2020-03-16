@@ -1,0 +1,297 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.1 225596  9228 ?        Ss   Mar08   1:10 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    Mar08   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        I<   Mar08   0:00 [rcu_gp]
+root         4  0.0  0.0      0     0 ?        I<   Mar08   0:00 [rcu_par_gp]
+root         9  0.0  0.0      0     0 ?        I<   Mar08   0:00 [mm_percpu_wq]
+root        10  0.0  0.0      0     0 ?        S    Mar08   0:01 [ksoftirqd/0]
+root        11  0.0  0.0      0     0 ?        I    Mar08   1:32 [rcu_sched]
+root        12  0.0  0.0      0     0 ?        S    Mar08   0:00 [migration/0]
+root        13  0.0  0.0      0     0 ?        S    Mar08   0:00 [idle_inject/0]
+root        14  0.0  0.0      0     0 ?        S    Mar08   0:00 [cpuhp/0]
+root        15  0.0  0.0      0     0 ?        S    Mar08   0:00 [cpuhp/1]
+root        16  0.0  0.0      0     0 ?        S    Mar08   0:00 [idle_inject/1]
+root        17  0.0  0.0      0     0 ?        S    Mar08   0:00 [migration/1]
+root        18  0.0  0.0      0     0 ?        S    Mar08   0:01 [ksoftirqd/1]
+root        21  0.0  0.0      0     0 ?        S    Mar08   0:00 [cpuhp/2]
+root        22  0.0  0.0      0     0 ?        S    Mar08   0:00 [idle_inject/2]
+root        23  0.0  0.0      0     0 ?        S    Mar08   0:00 [migration/2]
+root        24  0.0  0.0      0     0 ?        S    Mar08   0:01 [ksoftirqd/2]
+root        27  0.0  0.0      0     0 ?        S    Mar08   0:00 [cpuhp/3]
+root        28  0.0  0.0      0     0 ?        S    Mar08   0:00 [idle_inject/3]
+root        29  0.0  0.0      0     0 ?        S    Mar08   0:00 [migration/3]
+root        30  0.0  0.0      0     0 ?        S    Mar08   0:01 [ksoftirqd/3]
+root        33  0.0  0.0      0     0 ?        S    Mar08   0:00 [kdevtmpfs]
+root        34  0.0  0.0      0     0 ?        I<   Mar08   0:00 [netns]
+root        35  0.0  0.0      0     0 ?        S    Mar08   0:00 [rcu_tasks_kthre]
+root        36  0.0  0.0      0     0 ?        S    Mar08   0:00 [kauditd]
+root        39  0.0  0.0      0     0 ?        S    Mar08   0:00 [khungtaskd]
+root        40  0.0  0.0      0     0 ?        S    Mar08   0:00 [oom_reaper]
+root        41  0.0  0.0      0     0 ?        I<   Mar08   0:00 [writeback]
+root        42  0.0  0.0      0     0 ?        S    Mar08   0:00 [kcompactd0]
+root        43  0.0  0.0      0     0 ?        SN   Mar08   0:00 [ksmd]
+root        44  0.0  0.0      0     0 ?        SN   Mar08   0:00 [khugepaged]
+root       137  0.0  0.0      0     0 ?        I<   Mar08   0:00 [kintegrityd]
+root       138  0.0  0.0      0     0 ?        I<   Mar08   0:00 [kblockd]
+root       139  0.0  0.0      0     0 ?        I<   Mar08   0:00 [blkcg_punt_bio]
+root       140  0.0  0.0      0     0 ?        I<   Mar08   0:00 [tpm_dev_wq]
+root       141  0.0  0.0      0     0 ?        I<   Mar08   0:00 [ata_sff]
+root       142  0.0  0.0      0     0 ?        I<   Mar08   0:00 [md]
+root       143  0.0  0.0      0     0 ?        I<   Mar08   0:00 [edac-poller]
+root       144  0.0  0.0      0     0 ?        I<   Mar08   0:00 [devfreq_wq]
+root       145  0.0  0.0      0     0 ?        S    Mar08   0:00 [watchdogd]
+root       148  0.0  0.0      0     0 ?        S    Mar08   0:02 [kswapd0]
+root       149  0.0  0.0      0     0 ?        I<   Mar08   0:06 [kworker/u9:0-rb]
+root       150  0.0  0.0      0     0 ?        S    Mar08   0:00 [ecryptfs-kthrea]
+root       153  0.0  0.0      0     0 ?        I<   Mar08   0:00 [kthrotld]
+root       154  0.0  0.0      0     0 ?        S    Mar08   0:00 [irq/122-aerdrv]
+root       155  0.0  0.0      0     0 ?        S    Mar08   0:00 [irq/123-aerdrv]
+root       156  0.0  0.0      0     0 ?        S    Mar08   0:00 [irq/123-pciehp]
+root       157  0.0  0.0      0     0 ?        S    Mar08   0:00 [irq/124-aerdrv]
+root       158  0.0  0.0      0     0 ?        S    Mar08   0:00 [irq/125-aerdrv]
+root       159  0.0  0.0      0     0 ?        I<   Mar08   0:00 [acpi_thermal_pm]
+root       163  0.0  0.0      0     0 ?        I<   Mar08   0:00 [ipv6_addrconf]
+root       174  0.0  0.0      0     0 ?        I<   Mar08   0:00 [kstrp]
+root       193  0.0  0.0      0     0 ?        I<   Mar08   0:00 [charger_manager]
+root       256  0.0  0.0      0     0 ?        S    Mar08   0:00 [scsi_eh_0]
+root       257  0.0  0.0      0     0 ?        I<   Mar08   0:00 [scsi_tmf_0]
+root       258  0.0  0.0      0     0 ?        S    Mar08   0:00 [scsi_eh_1]
+root       259  0.0  0.0      0     0 ?        I<   Mar08   0:00 [scsi_tmf_1]
+root       260  0.0  0.0      0     0 ?        S    Mar08   0:00 [scsi_eh_2]
+root       261  0.0  0.0      0     0 ?        I<   Mar08   0:00 [scsi_tmf_2]
+root       268  0.0  0.0      0     0 ?        I<   Mar08   0:04 [kworker/1:1H-kb]
+root       298  0.0  0.0      0     0 ?        I<   Mar08   0:08 [kworker/2:1H-ev]
+root       299  0.0  0.0      0     0 ?        I<   Mar08   0:03 [kworker/3:1H-kb]
+root       301  0.0  0.0      0     0 ?        S    Mar08   0:05 [jbd2/sda2-8]
+root       302  0.0  0.0      0     0 ?        I<   Mar08   0:00 [ext4-rsv-conver]
+root       345  0.0  0.5 132404 40228 ?        S<s  Mar08   0:08 /lib/systemd/systemd-journald
+root       369  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop0]
+root       373  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop1]
+root       375  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop2]
+root       379  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop3]
+root       382  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop4]
+root       385  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop5]
+root       391  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop6]
+root       393  0.0  0.0  47944  6100 ?        Ss   Mar08   0:02 /lib/systemd/systemd-udevd
+root       394  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop7]
+root       395  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop8]
+root       396  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop9]
+root       397  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop10]
+root       398  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop11]
+root       399  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop12]
+root       400  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop13]
+root       401  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop14]
+root       402  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop15]
+root       403  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop16]
+root       404  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop17]
+root       405  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop18]
+root       406  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop19]
+root       407  0.0  0.0      0     0 ?        S<   Mar08   0:00 [loop20]
+root       463  0.0  0.0      0     0 ?        I<   Mar08   0:00 [kmemstick]
+root       471  0.0  0.0      0     0 ?        I<   Mar08   0:00 [cfg80211]
+root       472  0.0  0.0      0     0 ?        I<   Mar08   0:00 [cryptd]
+root       528  0.1  0.0      0     0 ?        S    Mar08   3:17 [irq/134-iwlwifi]
+root       529  0.0  0.0      0     0 ?        I<   Mar08   0:00 [nvkm-disp]
+root       558  0.0  0.0      0     0 ?        I<   Mar08   0:00 [ttm_swap]
+systemd+   827  0.0  0.0 146112  3268 ?        Ssl  Mar08   0:00 /lib/systemd/systemd-timesyncd
+systemd+   829  0.0  0.0  71140  6728 ?        Ss   Mar08   0:14 /lib/systemd/systemd-resolved
+root       833  0.0  0.0  70736  6212 ?        Ss   Mar08   0:02 /lib/systemd/systemd-logind
+root       835  0.0  0.0   4548   828 ?        Ss   Mar08   0:03 /usr/sbin/acpid
+root       838  0.0  0.0  38424  3172 ?        Ss   Mar08   0:00 /usr/sbin/cron -f
+root       839  0.0  0.1 434376  9808 ?        Ssl  Mar08   0:00 /usr/sbin/ModemManager --filter-policy=strict
+root       840  0.0  0.1 518192 13660 ?        Ssl  Mar08   0:09 /usr/lib/udisks2/udisksd
+root       841  0.0  0.0 110480  3476 ?        Ssl  Mar08   0:06 /usr/sbin/irqbalance --foreground
+syslog     845  0.0  0.0 269328  5156 ?        Ssl  Mar08   0:02 /usr/sbin/rsyslogd -n
+avahi      847  0.1  0.0  48376  4740 ?        Ss   Mar08   2:54 avahi-daemon: running [ubuntu-pc.local]
+root       849  0.0  0.2 177636 17196 ?        Ssl  Mar08   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+message+   851  0.0  0.0  51860  6464 ?        Ss   Mar08   0:36 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root       873  0.0  0.1 308560  8704 ?        Ssl  Mar08   0:02 /usr/lib/accountsservice/accounts-daemon
+root       874  0.0  0.1  45728  8588 ?        Ss   Mar08   0:02 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root       875  0.0  0.2 919016 19948 ?        Ssl  Mar08   0:31 /usr/sbin/NetworkManager --no-daemon
+root       877  0.0  0.1 186992  9296 ?        Ssl  Mar08   0:08 /usr/sbin/thermald --no-daemon --dbus-enable
+avahi      880  0.0  0.0  47072   340 ?        S    Mar08   0:00 avahi-daemon: chroot helper
+root       883  0.0  0.0  36480  4536 ?        Ss   Mar08   0:00 /usr/lib/bluetooth/bluetoothd
+root       884  0.0  0.3 1454772 28136 ?       Ssl  Mar08   0:13 /usr/lib/snapd/snapd
+root       908  0.0  0.1 321816 12024 ?        Ssl  Mar08   0:03 /usr/lib/policykit-1/polkitd --no-debug
+colord     923  0.0  0.1 339584 15832 ?        Ssl  Mar08   0:02 /usr/lib/colord/colord
+root       939  0.0  0.2 194348 19952 ?        Ssl  Mar08   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+mysql     1006  0.0  2.3 1623492 190640 ?      Sl   Mar08   0:57 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+whoopsie  1138  0.0  0.3 556048 28120 ?        Ssl  Mar08   0:00 /usr/bin/whoopsie -f
+kernoops  1140  0.0  0.0  56940   420 ?        Ss   Mar08   0:04 /usr/sbin/kerneloops --test
+kernoops  1142  0.0  0.0  56940   424 ?        Ss   Mar08   0:04 /usr/sbin/kerneloops
+root      2262  0.0  0.0      0     0 ?        I<   Mar08   0:03 [kworker/1:0H-ev]
+root      2264  0.0  0.0 308184  8032 ?        Ssl  Mar08   0:00 /usr/sbin/gdm3
+root      2269  0.0  0.1 261552  8116 ?        Sl   Mar08   0:00 gdm-session-worker [pam/gdm-launch-environment]
+gdm       2278  0.0  0.1  77024  8068 ?        Ss   Mar08   0:00 /lib/systemd/systemd --user
+gdm       2279  0.0  0.0 261668  2828 ?        S    Mar08   0:00 (sd-pam)
+gdm       2290  0.0  0.0 197796  5512 tty1     Ssl+ Mar08   0:00 /usr/lib/gdm3/gdm-wayland-session gnome-session --autostart /usr/share/gdm/greeter/autostart
+gdm       2292  0.0  0.0  50352  4676 ?        Ss   Mar08   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+gdm       2294  0.0  0.1 567020 15252 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-session/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm       2300  0.1  1.9 3586700 156412 tty1   Sl+  Mar08   2:48 /usr/bin/gnome-shell
+root      2307  0.0  0.1 323020  9484 ?        Ssl  Mar08   0:06 /usr/lib/upower/upowerd
+gdm       2323  0.0  0.6 628984 50200 tty1     Sl+  Mar08   0:00 /usr/bin/Xwayland :1024 -rootless -terminate -accessx -core -listen 4 -listen 5 -displayfd 6
+gdm       2331  0.0  0.1 365716  8452 ?        Ssl  Mar08   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+gdm       2336  0.0  0.0  49924  3796 ?        S    Mar08   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+gdm       2338  0.0  0.0 220764  5764 ?        Sl   Mar08   0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+gdm       2342  0.0  0.1 1677808 11596 ?       Ssl  Mar08   0:00 /usr/bin/pulseaudio --daemonize=no
+rtkit     2343  0.0  0.0 183504  3004 ?        SNsl Mar08   0:00 /usr/lib/rtkit/rtkit-daemon
+gdm       2357  0.0  0.1 375292  9592 tty1     Sl   Mar08   0:00 ibus-daemon --xim --panel disable
+gdm       2358  0.0  0.0 271560  5064 ?        Ssl  Mar08   0:00 /usr/libexec/xdg-permission-store
+gdm       2364  0.0  0.0 294488  8008 tty1     Sl   Mar08   0:00 /usr/lib/ibus/ibus-dconf
+gdm       2367  0.0  0.3 491328 29752 tty1     Sl   Mar08   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+gdm       2372  0.0  0.0 292432  7988 ?        Sl   Mar08   0:00 /usr/lib/ibus/ibus-portal
+gdm       2377  0.0  0.3 639776 30724 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+root      2381  0.0  0.5 531120 41688 ?        Ssl  Mar08   0:20 /usr/lib/packagekit/packagekitd
+root      2382  0.0  0.1 315204  8996 ?        Ssl  Mar08   0:00 /usr/lib/x86_64-linux-gnu/boltd
+gdm       2384  0.0  0.0 218632  7732 tty1     Sl   Mar08   0:00 /usr/lib/ibus/ibus-engine-simple
+gdm       2385  0.0  0.1 294476  8168 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+gdm       2394  0.0  0.3 490948 29260 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+gdm       2397  0.0  0.4 952676 33036 tty1     Sl+  Mar08   0:11 /usr/lib/gnome-settings-daemon/gsd-color
+gdm       2398  0.0  0.1 393712 13764 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+gdm       2399  0.0  0.0 283736  5488 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+gdm       2400  0.0  0.3 643272 30096 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+gdm       2402  0.0  0.3 1488816 31740 tty1    Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-media-keys
+gdm       2405  0.0  0.0 201996  4696 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+gdm       2408  0.0  0.4 935128 33208 tty1     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-power
+gdm       2411  0.0  0.1 267012  8700 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+gdm       2412  0.0  0.0 202016  4716 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+gdm       2415  0.0  0.0 275732  5096 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+gdm       2417  0.0  0.1 321432 10452 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+gdm       2422  0.0  0.1 390548  9812 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+gdm       2425  0.0  0.1 340928  9812 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+gdm       2428  0.0  0.3 576112 30952 tty1     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+root      2500  0.0  0.1 415472  9320 ?        Sl   Mar08   0:00 gdm-session-worker [pam/gdm-password]
+aalinds   2503  0.0  0.1  77196  8252 ?        Ss   Mar08   0:01 /lib/systemd/systemd --user
+aalinds   2504  0.0  0.0 261668  2832 ?        S    Mar08   0:00 (sd-pam)
+aalinds   2517  0.0  0.1 288576  8320 ?        SLl  Mar08   0:03 /usr/bin/gnome-keyring-daemon --daemonize --login
+aalinds   2521  0.0  0.0 212132  5884 tty2     Ssl+ Mar08   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+aalinds   2523  3.7  1.2 744580 99308 tty2     Rl+  Mar08  63:40 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+aalinds   2530  0.0  0.0  51816  6200 ?        Ss   Mar08   0:13 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+aalinds   2533  0.0  0.2 578036 16328 tty2     Sl+  Mar08   0:06 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+aalinds   2629  0.0  0.0  11300   320 ?        Ss   Mar08   0:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+aalinds   2632  0.0  0.0 292048  7016 ?        Ssl  Mar08   0:00 /usr/lib/gvfs/gvfsd
+aalinds   2637  0.0  0.1 432020  8092 ?        Sl   Mar08   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+aalinds   2641  0.0  0.1 367916  8764 ?        Ssl  Mar08   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+aalinds   2652  0.0  0.0  50052  4284 ?        S    Mar08   0:02 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+aalinds   2654  0.0  0.0 220788  6868 ?        Sl   Mar08   0:23 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+aalinds   2670  3.6  4.3 3986752 346732 tty2   Sl+  Mar08  62:21 /usr/bin/gnome-shell
+aalinds   2680  1.9  0.1 2227236 13264 ?       S<l  Mar08  32:32 /usr/bin/pulseaudio --start --log-target=syslog
+root      2693  0.0  0.0      0     0 ?        S<   Mar08   0:00 [krfcommd]
+aalinds   2696  0.0  0.1 377880 10280 tty2     Sl   Mar08   0:54 ibus-daemon --xim --panel disable
+aalinds   2700  0.0  0.1 296792  8620 tty2     Sl   Mar08   0:00 /usr/lib/ibus/ibus-dconf
+aalinds   2702  0.0  0.2 356228 22516 tty2     Sl   Mar08   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+aalinds   2704  0.0  0.1 294728  8836 ?        Sl   Mar08   0:01 /usr/lib/ibus/ibus-portal
+aalinds   2709  0.0  0.0 271560  5108 ?        Ssl  Mar08   0:00 /usr/libexec/xdg-permission-store
+aalinds   2719  0.0  0.2 696572 22420 ?        Sl   Mar08   0:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+aalinds   2730  0.0  0.4 1319852 35964 ?       Ssl  Mar08   0:01 /usr/lib/evolution/evolution-source-registry
+aalinds   2731  0.0  0.1 320188 10976 ?        Ssl  Mar08   0:03 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+aalinds   2738  0.0  0.1 292528  8664 ?        Ssl  Mar08   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+aalinds   2742  0.0  0.7 810780 61928 ?        SLl  Mar08   0:22 /usr/lib/gnome-online-accounts/goa-daemon
+aalinds   2745  0.0  0.0 188036  5204 ?        Sl   Mar08   0:00 /usr/lib/dconf/dconf-service
+aalinds   2748  0.0  0.0 204692  6096 ?        Ssl  Mar08   0:00 /usr/lib/gvfs/gvfsd-metadata
+aalinds   2760  0.0  0.1 319532 10076 ?        Sl   Mar08   0:00 /usr/lib/gnome-online-accounts/goa-identity-service
+aalinds   2765  0.0  0.0 275868  4776 ?        Ssl  Mar08   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+aalinds   2769  0.0  0.0 288788  6572 ?        Ssl  Mar08   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+aalinds   2774  0.0  0.0 378820  7708 ?        Ssl  Mar08   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+aalinds   2780  0.0  0.3 808440 27768 tty2     Sl+  Mar08   0:04 /usr/lib/gnome-settings-daemon/gsd-power
+aalinds   2782  0.0  0.1 349340 10384 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+aalinds   2783  0.0  0.0 423344  5916 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-rfkill
+aalinds   2785  0.0  0.0 275732  5064 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+aalinds   2789  0.0  0.1 471460 12056 tty2     Sl+  Mar08   0:15 /usr/lib/gnome-settings-daemon/gsd-sharing
+aalinds   2793  0.0  0.1 392716  9932 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-smartcard
+aalinds   2795  0.0  0.1 343096  9984 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-sound
+aalinds   2801  0.0  0.2 504668 23468 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-xsettings
+aalinds   2814  0.0  0.3 514420 24164 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-wacom
+aalinds   2815  0.0  0.1 296644  8328 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+aalinds   2816  0.0  0.2 355840 21536 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-clipboard
+aalinds   2817  0.0  0.3 678284 26044 tty2     Sl+  Mar08   0:18 /usr/lib/gnome-settings-daemon/gsd-color
+aalinds   2820  0.0  0.1 476588 15300 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-datetime
+aalinds   2821  0.0  0.1 375184  9352 tty2     Sl+  Mar08   0:05 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+aalinds   2822  0.0  0.2 516756 23056 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-keyboard
+aalinds   2827  0.0  0.3 1214852 26132 tty2    Sl+  Mar08   0:05 /usr/lib/gnome-settings-daemon/gsd-media-keys
+aalinds   2829  0.0  0.1 296652  8528 tty2     Sl+  Mar08   0:01 /usr/lib/gnome-settings-daemon/gsd-mouse
+aalinds   2863  0.0  0.1 508764 12704 tty2     Sl+  Mar08   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+aalinds   2889  0.0  0.6 901664 51348 tty2     Sl+  Mar08   0:04 nautilus-desktop
+aalinds   2900  0.0  0.0 271932  6456 tty2     Sl+  Mar08   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+aalinds   2905  0.0  0.8 894332 67596 ?        Ssl  Mar08   0:01 /usr/lib/evolution/evolution-calendar-factory
+aalinds   2908  0.0  0.1 220928  8448 tty2     Sl   Mar08   0:14 /usr/lib/ibus/ibus-engine-simple
+aalinds   2920  0.0  0.1 410332 11868 ?        Sl   Mar08   0:46 /usr/lib/gvfs/gvfsd-trash --spawner :1.7 /org/gtk/gvfs/exec_spaw/0
+aalinds   2940  0.0  0.9 1920396 74488 ?       Sl   Mar08   0:03 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx2905x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/2905/2
+aalinds   2955  0.0  0.3 734856 24880 ?        Ssl  Mar08   0:00 /usr/lib/evolution/evolution-addressbook-factory
+aalinds   2978  0.0  0.3 950256 27468 ?        Sl   Mar08   0:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx2955x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/2955/2
+aalinds   3288  0.0  0.3 607112 28492 tty2     Sl+  Mar08   0:02 update-notifier
+aalinds   3291  0.0  2.3 1345484 186184 tty2   SLl+ Mar08   0:11 /usr/bin/gnome-software --gapplication-service
+root      3316  0.0  0.0      0     0 ?        I<   Mar08   0:00 [kworker/u9:2-rb]
+aalinds   3468  0.0  0.4 793028 33340 tty2     Sl+  Mar08   0:00 /usr/lib/deja-dup/deja-dup-monitor
+aalinds   4632  3.1  4.1 1343620 337568 tty2   SLl+ 08:58  13:22 /opt/google/chrome/chrome
+aalinds   4639  0.0  0.0  14712   824 tty2     S+   08:58   0:00 cat
+aalinds   4640  0.0  0.0  14712   740 tty2     S+   08:58   0:00 cat
+aalinds   4643  0.0  0.7 455056 60472 tty2     S+   08:58   0:00 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500,
+aalinds   4644  0.0  0.0  27220  4168 tty2     S+   08:58   0:00 /opt/google/chrome/nacl_helper
+aalinds   4647  0.0  0.1 455056 15508 tty2     S+   08:58   0:01 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500,
+aalinds   4669  4.5  1.8 632352 144936 tty2    Sl+  08:58  19:12 /opt/google/chrome/chrome --type=gpu-process --field-trial-handle=16678120837858172256,1783208263627977333,131072 --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --shared-files
+aalinds   4671  1.4  1.3 592104 106320 tty2    SLl+ 08:58   6:11 /opt/google/chrome/chrome --type=utility --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --shared-files
+aalinds   4715  0.5  1.4 4804064 117200 tty2   Sl+  08:58   2:08 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=4 --no-v8-untrusted-code-mitigations --shared-files
+aalinds   4735  0.0  1.1 4784328 91092 tty2    Sl+  08:58   0:01 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files
+aalinds   4753  0.1  1.9 4833024 157548 tty2   Sl+  08:58   0:32 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=6 --no-v8-untrusted-code-mitigations --shared-files
+aalinds   4767  0.0  1.0 4769984 85964 tty2    Sl+  08:58   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=7 --no-v8-untrusted-code-mitigations --shared-files
+aalinds   4782  0.0  1.2 4787396 103868 tty2   Sl+  08:58   0:04 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=8 --no-v8-untrusted-code-mitigations --shared-files
+gdm       5077  0.0  0.0 187772  5020 ?        Sl   Mar08   0:00 /usr/lib/dconf/dconf-service
+aalinds   5173  0.0  0.1 359636 10336 ?        Sl   08:59   0:00 /usr/lib/gvfs/gvfsd-http --spawner :1.7 /org/gtk/gvfs/exec_spaw/7
+aalinds   5374  0.0  0.0  24564  3420 tty2     Sl+  08:59   0:00 /usr/bin/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPTk3OTA2ZTBlLmRhMHZSbV9oaE1lU0x3WkVQSEN5X25zQjl6WFZFUnIwaXhJYUZXTWJ0TmxVX1RpOFhlcUd0eTVGbldQSjJfbDlzcFNFdC1jZ3hfU0dFQ2VIZlNTUzZ3JTNEJTNEJnRpZD0yZDNlODA5YWM4MGQ0ZjM1YjA2YjRmMmE2ZWQyMWM2MA%3D%3D&confno=260695969&zc=0&pwd=dmhqdmRFUnZSL2dTcEMvclRhc2Z2QT09&pk=&mcv=0.92.11227.0929&browser=chrome
+aalinds   5380  0.0  0.0   4624   820 tty2     S+   08:59   0:00 sh -c export SSB_HOME=/home/aalinds/.zoom; export QSG_INFO=1; export LD_LIBRARY_PATH=/opt/zoom; export BREAKPAD_CLIENT_FD=3; /opt/zoom/zoom "zoommtg://zoom.us/join?action=join&confid=dXNzPTk3OTA2ZTBlLmRhMHZSbV9oaE1lU0x3WkVQSEN5X25zQjl6WFZFUnIwaXhJYUZXTWJ0TmxVX1RpOFhlcUd0eTVGbldQSjJfbDlzcFNFdC1jZ3hfU0dFQ2VIZlNTUzZ3JTNEJTNEJnRpZD0yZDNlODA5YWM4MGQ0ZjM1YjA2YjRmMmE2ZWQyMWM2MA%3D%3D&confno=260695969&zc=0&pwd=dmhqdmRFUnZSL2dTcEMvclRhc2Z2QT09&pk=&mcv=0.92.11227.0929&browser=chrome"
+aalinds   5381 17.9  5.1 5333440 412720 tty2   SLl+ 08:59  75:59 /opt/zoom/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPTk3OTA2ZTBlLmRhMHZSbV9oaE1lU0x3WkVQSEN5X25zQjl6WFZFUnIwaXhJYUZXTWJ0TmxVX1RpOFhlcUd0eTVGbldQSjJfbDlzcFNFdC1jZ3hfU0dFQ2VIZlNTUzZ3JTNEJTNEJnRpZD0yZDNlODA5YWM4MGQ0ZjM1YjA2YjRmMmE2ZWQyMWM2MA%3D%3D&confno=260695969&zc=0&pwd=dmhqdmRFUnZSL2dTcEMvclRhc2Z2QT09&pk=&mcv=0.92.11227.0929&browser=chrome
+aalinds   5624  0.2  1.8 906928 148380 tty2    Sl+  Mar08   3:31 /usr/lib/slack/slack
+aalinds   5629  0.0  0.4 377632 39064 tty2     S+   Mar08   0:00 /usr/lib/slack/slack --type=zygote
+aalinds   5631  0.0  0.1 377632  8748 tty2     S+   Mar08   0:00 /usr/lib/slack/slack --type=zygote
+aalinds   5658  0.0  1.0 518852 80428 tty2     Sl+  Mar08   0:30 /usr/lib/slack/slack --type=gpu-process --field-trial-handle=6277797951072879858,13414584609301532452,131072 --disable-features=SpareRendererForSitePerProcess --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --service-request-channel-token=14984327463100408718
+aalinds   5669  0.0  0.8 483964 67316 tty2     Sl+  Mar08   0:14 /usr/lib/slack/slack --type=utility --field-trial-handle=6277797951072879858,13414584609301532452,131072 --disable-features=SpareRendererForSitePerProcess --lang=en-GB --service-sandbox-type=network --standard-schemes=slack-resources,slack-sounds,slack-webapp-dev --secure-schemes=slack-resources,slack-sounds,slack-webapp-dev --bypasscsp-schemes=slack-resources,slack-sounds,slack-webapp-dev --cors-schemes=slack-resources,slack-sounds,slack-webapp-dev --fetch-schemes=slack-resources,slack-sounds,slack-webapp-dev --service-worker-schemes=slack-resources,slack-sounds,slack-webapp-dev --service-request-channel-token=4760638962205364756 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+aalinds   5687  0.3  3.7 24180604 303480 tty2  Sl+  Mar08   5:07 /usr/lib/slack/slack --type=renderer --autoplay-policy=no-user-gesture-required --force-color-profile=srgb --field-trial-handle=6277797951072879858,13414584609301532452,131072 --disable-features=SpareRendererForSitePerProcess --lang=en-GB --standard-schemes=slack-resources,slack-sounds,slack-webapp-dev --secure-schemes=slack-resources,slack-sounds,slack-webapp-dev --bypasscsp-schemes=slack-resources,slack-sounds,slack-webapp-dev --cors-schemes=slack-resources,slack-sounds,slack-webapp-dev --fetch-schemes=slack-resources,slack-sounds,slack-webapp-dev --service-worker-schemes=slack-resources,slack-sounds,slack-webapp-dev --app-path=/usr/lib/slack/resources/app.asar --no-sandbox --no-zygote --preload=/usr/lib/slack/resources/app.asar/dist/main-preload-entry-point.bundle.js --background-color=#1A1D21 --num-raster-threads=2 --enable-main-frame-before-activation --service-request-channel-token=13529195865383034236 --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101 --enable-node-leakage-in-renderers {"preloadEnvironment":{"resourcePath":"/usr/lib/slack/resources/app.asar","appVersion":"4.3.2","linux":{"os":"Ubuntu 18.04.4 LTS","name":"18.04","release":"bionic","codename":"","desktopEnvironment":"Unity"},"sessionId":"NWIwODA5ZTEtM2E0MS01MTgyLTgzMGItNjI2MjU5ODNjMWE5XzE1ODM2NDk1Njc2MDg=","uuid":"5b0809e1-3a41-5182-830b-62625983c1a9","releaseChannel":"prod","teamId":"app","windowType":"main"},"crashReporterOpts":{"productName":"Slack","companyName":"Slack Technologies","uploadToServer":true,"submitURL":"https://slack.com/apps/breakpad?instanceUid=5b0809e1-3a41-5182-830b-62625983c1a9","extra":{"instanceUid":"5b0809e1-3a41-5182-830b-62625983c1a9","sessionId":"NWIwODA5ZTEtM2E0MS01MTgyLTgzMGItNjI2MjU5ODNjMWE5XzE1ODM2NDk1Njc2MDg="}},"perfTimer":{"mainPid":5624,"BOOT":[1217,741249505],"numTeamsAtLaunch":1,"SHELL":[1218,953900458],"APP_READY":[1219,42269859],"APP_CREATED":[1219,839297676],"MAIN_WINDOW_CREATING":[1220,72655366]},"identifier":"slack_preload_metadata_arguments"}
+root      6071  0.0  0.1 115244 15936 ?        Ss   09:18   0:02 /usr/sbin/cupsd -l
+root      6072  0.0  0.1 309532 14184 ?        Ssl  09:18   0:02 /usr/sbin/cups-browsed
+lp        6349  0.0  0.0  86416  6080 ?        S    09:18   0:00 /usr/lib/cups/notifier/dbus dbus://
+aalinds  12551  0.0  1.6 4834820 134420 tty2   Sl+  11:58   0:05 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=297 --no-v8-untrusted-code-mitigations --shared-files
+aalinds  12589  0.9  1.9 4903676 156452 tty2   Sl+  11:58   2:12 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=300 --no-v8-untrusted-code-mitigations --shared-files
+aalinds  13161  0.0  0.0 495396  5968 ?        Ssl  Mar08   0:01 /usr/libexec/xdg-document-portal
+aalinds  13345  0.0  0.2 546776 18748 ?        Sl   Mar08   0:00 /usr/bin/snap userd
+uuidd    13588  0.0  0.0  35244  1456 ?        Ss   Mar08   0:00 /usr/sbin/uuidd --socket-activation
+root     13933  0.0  0.0      0     0 ?        S    14:06   0:00 [irq/130-mei_me]
+root     14074  0.0  0.0  25988  6436 ?        S    14:06   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-wlo1.pid -lf /var/lib/NetworkManager/dhclient-b6a2d1c3-87a3-4092-8046-9a7743e14b5c-wlo1.lease -cf /var/lib/NetworkManager/dhclient-wlo1.conf wlo1
+aalinds  15315  0.1  1.6 4829812 133992 tty2   Sl+  14:42   0:06 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=362 --no-v8-untrusted-code-mitigations --shared-files
+aalinds  15334  0.1  1.3 4793384 105404 tty2   Sl+  14:42   0:07 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=363 --no-v8-untrusted-code-mitigations --shared-files
+aalinds  15733  0.0  0.1 384444 10172 ?        Sl   Mar08   0:02 /usr/lib/gvfs/gvfsd-network --spawner :1.7 /org/gtk/gvfs/exec_spaw/1
+aalinds  15746  0.0  0.2 787092 20644 ?        Sl   Mar08   0:01 /usr/lib/gvfs/gvfsd-smb-browse --spawner :1.7 /org/gtk/gvfs/exec_spaw/3
+aalinds  15760  0.0  0.0 381544  7840 ?        Sl   Mar08   0:01 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.7 /org/gtk/gvfs/exec_spaw/5
+aalinds  15776  0.0  0.1 445884 10264 ?        Ssl  14:45   0:00 /usr/bin/zeitgeist-daemon
+aalinds  15784  0.0  0.2 331040 16340 ?        Ssl  14:45   0:00 /usr/lib/zeitgeist/zeitgeist/zeitgeist-fts
+root     16083  0.0  0.0      0     0 ?        I<   Mar08   0:05 [kworker/3:2H-kb]
+root     16198  0.0  0.0      0     0 ?        D    14:52   0:03 [kworker/u8:1+ev]
+root     16389  0.0  0.0      0     0 ?        I    15:03   0:00 [kworker/2:0-mm_]
+root     16608  0.0  0.0      0     0 ?        I    15:06   0:00 [kworker/1:1-eve]
+aalinds  16864  0.4  1.6 4812668 131572 tty2   Sl+  15:10   0:15 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=401 --no-v8-untrusted-code-mitigations --shared-files
+root     17190  0.0  0.0      0     0 ?        I<   15:13   0:00 [kworker/0:0H-kb]
+root     17504  0.1  0.0      0     0 ?        I    15:20   0:03 [kworker/u8:2-ev]
+root     17822  0.0  0.0      0     0 ?        I    15:31   0:00 [kworker/0:2-cgr]
+root     17848  0.0  0.0      0     0 ?        I<   15:31   0:00 [kworker/0:1H-kb]
+aalinds  17884  0.6  0.6 755204 55008 tty2     Sl+  15:32   0:11 /opt/google/chrome/chrome --type=utility --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --service-sandbox-type=audio --disable-webrtc-apm-in-audio-service --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --shared-files
+root     18705  0.0  0.0      0     0 ?        I<   15:44   0:00 [kworker/2:0H-ev]
+root     18711  0.0  0.0      0     0 ?        I    15:44   0:00 [kworker/3:0-eve]
+root     18723  0.0  0.0      0     0 ?        I    15:44   0:00 [kworker/u8:3-i9]
+root     18976  0.0  0.0      0     0 ?        I    15:53   0:00 [kworker/0:0-cgr]
+root     18997  0.0  0.0      0     0 ?        I    15:54   0:00 [kworker/3:2-eve]
+aalinds  19040  0.8  0.7 1616708 56524 ?       Sl   15:55   0:03 /usr/bin/nautilus --gapplication-service
+root     19069  0.0  0.0      0     0 ?        I    15:55   0:00 [kworker/1:3-eve]
+aalinds  19072  1.1  0.4 728536 38524 ?        Ssl  15:56   0:04 /usr/lib/gnome-terminal/gnome-terminal-server
+aalinds  19080  0.1  0.0  29924  5368 pts/0    Ss   15:56   0:00 -bash
+root     19173  0.0  0.0      0     0 ?        I    15:56   0:00 [kworker/2:3]
+aalinds  19176  0.0  0.6 4752056 55448 tty2    Sl+  15:57   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=444 --no-v8-untrusted-code-mitigations --shared-files
+root     19221  0.0  0.0      0     0 ?        I    15:57   0:00 [kworker/u8:0-i9]
+root     19434  0.0  0.0      0     0 ?        I    16:00   0:00 [kworker/3:1-eve]
+aalinds  19565  0.2  0.6 1936828 55800 ?       Sl   16:00   0:00 /usr/bin/gnome-calendar --gapplication-service
+root     19617  0.0  0.0      0     0 ?        I    16:00   0:00 [kworker/0:1-eve]
+aalinds  19669  1.6  0.8 1077220 68188 ?       Ssl  16:00   0:02 /opt/sublime_text/sublime_text
+aalinds  19719  1.3  0.7 526028 56796 ?        Sl   16:00   0:01 /opt/sublime_text/plugin_host 19669 --auto-shell-env
+aalinds  19758  0.0  0.0  29924  5360 pts/1    Ss+  16:00   0:00 -bash
+root     19796  0.0  0.0      0     0 ?        I    16:01   0:00 [kworker/0:3-eve]
+aalinds  19895  2.6  1.0 4770252 85796 tty2    Sl+  16:02   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=16678120837858172256,1783208263627977333,131072 --lang=en-GB --enable-crash-reporter=c41532d8-2129-462b-a220-bb993942b500, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=446 --no-v8-untrusted-code-mitigations --shared-files
+aalinds  19911  0.0  0.0  46768  3540 pts/0    R+   16:03   0:00 ps aux

@@ -1,0 +1,66 @@
+.headings {
+    text-align: center;
+}
+
+.headings > small {
+    color: rgb(125, 241, 15);
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.flex-card {
+    margin-top: 40px;
+    padding: 5px;
+    width: 290px;
+    height: 200px;
+    margin-bottom: 60px;
+}
+
+.flex-card > small {
+    color: rgb(114, 113, 113);
+}
+
+.footer {
+    margin-top: 200px;
+    align-items: center;
+    display: flex;
+    height: 100px;
+    background-color: aquamarine;
+    justify-content: space-between;
+}
+
+.footer > div > h3 {
+    margin-left: 20px;
+}
+
+.email-input{
+    border: none !important;
+    border-radius: 5px;
+    height: 40px;
+    width: 200px;
+}
+
+.email-button {
+    border: none !important;
+    margin-left: -5px;
+    color: white;
+    background-color: rgb(162, 226, 67);
+    border-radius: 5px;
+    height: 42px;
+    margin-right: 10px;
+}
+
+#add-card-button {
+    border: none !important;
+    background-color: rgb(67, 141, 226);
+    border-radius: 5px;
+    height: 42px;
+    color: white;
+}
