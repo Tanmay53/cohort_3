@@ -1,0 +1,4 @@
+There are 3 types of transfering modes to transfer data. These are :-
+1. Simplex:- This is unidirectional flow of data.For eg. data transfer from keyboard to CPU
+2. Half Duplex:- It is bidirectional flow but 1 at a time. for eg. Walkie-Talkie where only one can speaks at a time.
+3. Duplex:- It is bidirectional flow of data where data can be transmitted and recieved simultaneously. For eg. Telephone where you can speak as well as listen at any instant of time.
