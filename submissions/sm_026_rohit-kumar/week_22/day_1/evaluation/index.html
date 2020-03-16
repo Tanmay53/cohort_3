@@ -19,38 +19,55 @@
                     <!-- card comes here -->
                 </div>
             </div>
-            <script type='text/javascript' src='script.js'></script>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </div>
         <div class="form-create">
             <h3>Create Content</h3>
+            <hr/>
             <table>
                 <tr>
                     <td>Title</td>
                     <td>
-                        <input type='text' placeholder="Enter title" />
+                        <input id='title' type='text' placeholder="Enter title" />
                     </td>
                 </tr>
                 <tr>
                     <td>Heading</td>
                     <td>
-                        <input type='text' placeholder="Enter Heading" />
+                        <input id='heading' type='text' placeholder="Enter Heading" />
                     </td>
                 </tr>
                 <tr>
                     <td>Image</td>
                     <td>
-                        <input type='text' placeholder="Enter Image URL" />
+                        <input id="image" type='text' placeholder="Enter Image URL" />
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <button onclick="sideCard()">Create</button>
+                        <button onclick="addContent()">Create</button>
                     </td>
                 </tr>
 
             </table>
         </div>
+        
+        
+        <script type="text/javascript">
+                var data = [
+                    {
+                    'title': 'healthy food',
+                    'heading': 'Man does day divided morning after give.',
+                    'image': 'https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg'
+                    },
+                    {
+                    'title': 'tourism news',
+                    'heading': 'Man does day divided morning after give.',
+                    'image': 'https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg'
+                    }
+                ]
+        </script>
+        <script type='text/javascript' src='script.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </body>
 </html>

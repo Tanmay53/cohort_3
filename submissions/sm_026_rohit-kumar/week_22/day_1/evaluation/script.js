@@ -1,4 +1,20 @@
-function sideCard() {
+
+
+function load() {
+
+    var res = document.querySelectorAll("#card-container > *")
+    for(var i = 0; i < res.length; i++) {
+        res[i].remove()
+    }
+    for(var i = 0; i < data.length; i++) {
+        sideCard(data[i].title, data[i].heading, data[i].image)    
+    }
+
+} 
+
+
+
+function sideCard(titleText, heading, image) {
     // alert('works')
     container = document.getElementById("card-container")
     
@@ -7,11 +23,11 @@ function sideCard() {
     
     // create p tag
     var title = document.createElement("p")
-    title.innerHTML = "HEALTHY FOOD"
+    title.innerText = titleText.toUpperCase()   
     title.classList.add("card-small-heading")
 
     var header = document.createElement("h3")
-    header.innerHTML = "Man does day divided morning after give."
+    header.innerHTML = heading
 
     var footer = document.createElement("div")
     span1 = document.createElement("span")
@@ -33,3 +49,18 @@ function sideCard() {
     container.appendChild(divCard)  
 }
 
+
+function addContent() {
+    // console.log('this one', document.getElementById('title')).innerText
+    data.push(
+        {'title': document.getElementById('title').value,
+        'heading': document.getElementById('heading').value,
+        'image': document.getElementById('image').value
+        })
+
+    load()
+}
+
+
+// load default data
+load()
