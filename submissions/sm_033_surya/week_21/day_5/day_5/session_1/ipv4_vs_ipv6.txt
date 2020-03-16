@@ -1,0 +1,13 @@
+Ipv4:
+1. 32 bit format
+2. It having four groups seperated by '.'
+3. Each group three digits number between 0 to 255
+4. this ip address are having only Numbers .
+5. It having five types of classes (Class A,Class B,Class C,Class D<Class E)
+
+Inpv6:
+1. 128 bit format
+2. It having eight groups seperated by ':'
+3. Each group expressed as four hexadecimal digits
+4. this ip address having hexadecimals.
+

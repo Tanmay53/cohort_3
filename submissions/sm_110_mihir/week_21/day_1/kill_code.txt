@@ -1,0 +1,7 @@
+mihir@mihir-Vostro-3546:~$ ps aux |grep vscode
+mihir     6491  2.4  2.0 587076 81924 tty1     Sl+  15:45   0:00 /usr/share/code/code --max-old-space-size=3072 /usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js --syntaxOnly --useInferredProjectPerProjectRoot --disableAutomaticTypingAcquisition --cancellationPipeName /tmp/vscode-typescript1000/6bb7b2a8e401968906df/tscancellation-d9ae87b44fbf9bf81bc8.tmp* --globalPlugins typescript-vscode-sh-plugin --pluginProbeLocations /usr/share/code/resources/app/extensions/typescript-language-features --locale en --noGetErrOnBackgroundUpdate --validateDefaultNpmLocation
+mihir     6492 18.0  3.5 670692 138828 tty1    Rl+  15:45   0:03 /usr/share/code/code --max-old-space-size=3072 /usr/share/code/resources/app/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /tmp/vscode-typescript1000/6bb7b2a8e401968906df/tscancellation-325cb92db08a4b793193.tmp* --globalPlugins typescript-vscode-sh-plugin --pluginProbeLocations /usr/share/code/resources/app/extensions/typescript-language-features --locale en --noGetErrOnBackgroundUpdate --validateDefaultNpmLocation
+mihir     6537  0.0  0.0  21532  1000 pts/0    S+   15:46   0:00 grep --color=auto vscode
+mihir@mihir-Vostro-3546:~$ kill 6491
+mihir@mihir-Vostro-3546:~$ kill 6492
+

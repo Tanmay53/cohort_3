@@ -1,0 +1,10 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+mihir     1070  0.0  0.1 212132  5900 tty1     Ssl+ 11:31   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+mihir     1072  1.4  1.2 520352 50604 tty1     Sl+  11:31   4:02 /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+mihir     1113  0.0  0.3 641396 13812 tty1     Sl+  11:31   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+mihir     1268  1.9  6.9 3752616 274688 tty1   Sl+  11:31   5:16 /usr/bin/gnome-shell
+mihir     1406  0.0  0.2 361804  7928 tty1     Sl   11:31   0:09 ibus-daemon --xim --panel disable
+mihir     1410  0.0  0.1 280756  6560 tty1     Sl   11:31   0:00 /usr/lib/ibus/ibus-dconf
+mihir     1412  0.0  0.5 344068 20724 tty1     Sl   11:31   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+mihir     1497  0.0  0.6 872124 25156 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+mihir     1500  0.0  0.2 349344  9988 tty1     Sl+  11:31   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications

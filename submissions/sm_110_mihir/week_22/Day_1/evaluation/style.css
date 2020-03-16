@@ -1,0 +1,55 @@
+.grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  border-radius: 10px;
+  padding: 10px;
+  grid-gap: 10px;
+}
+.text-center {
+  text-align: center;
+}
+
+h1.text-center {
+  text-decoration: underline;
+}
+form {
+  margin: 50px;
+  padding: 50px;
+}
+button {
+  padding: 1rem;
+  background-color: wheat;
+  border: transparent;
+  border-radius: 20px;
+}
+.box {
+  width: 300px;
+  background-color: whitesmoke;
+}
+
+.box img {
+  margin: auto;
+}
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+.text-md {
+  font-size: small;
+  font-weight: bold;
+}
+footer {
+  background-color: grey;
+  color: white;
+}
+
+.flex > * {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .flex {
+    flex-direction: column;
+  }
+}

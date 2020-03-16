@@ -30,10 +30,11 @@ class CreateBlog extends React.Component {
                     "category_id": this.state.category_id,
                     "heading": this.state.heading,
                     "body": this.state.body,
-                    "token": this.props.token,
                     "user_id": this.props.user_id
                 }
-        axios.post(url, data)
+        axios.post(url, data, {
+            headers: {'Authorization' : `Bearer ${this.props.token}`}
+        })
         .then(res => {
             
             if (res['data']['result'] == 'success') {
