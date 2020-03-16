@@ -1,0 +1,59 @@
+  PID TTY      STAT   TIME COMMAND
+ 1070 tty1     Ssl+   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ 1072 tty1     Sl+    3:10 /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ 1113 tty1     Sl+    0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ 1268 tty1     Sl+    3:53 /usr/bin/gnome-shell
+ 1406 tty1     Sl     0:03 ibus-daemon --xim --panel disable
+ 1410 tty1     Sl     0:00 /usr/lib/ibus/ibus-dconf
+ 1412 tty1     Sl     0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ 1497 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ 1500 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ 1503 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ 1504 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ 1510 tty1     Sl+    0:01 /usr/lib/gnome-settings-daemon/gsd-sharing
+ 1514 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ 1518 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ 1520 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ 1525 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ 1538 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ 1539 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ 1542 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ 1543 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ 1544 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ 1545 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ 1548 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ 1550 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ 1579 tty1     Sl+    0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ 1613 tty1     Sl+    0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ 1615 tty1     Sl+    0:02 nautilus-desktop
+ 1650 tty1     Sl     0:01 /usr/lib/ibus/ibus-engine-simple
+ 1732 tty1     SLl+   2:59 /opt/google/chrome/chrome
+ 1738 tty1     S+     0:00 cat
+ 1739 tty1     S+     0:00 cat
+ 1742 tty1     S+     0:00 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a,
+ 1743 tty1     S+     0:00 /opt/google/chrome/nacl_helper
+ 1746 tty1     S+     0:00 /opt/google/chrome/chrome --type=zygote --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a,
+ 1766 tty1     Sl+    6:15 /opt/google/chrome/chrome --type=gpu-process --field-trial-handle=1400602641816238884,7977203943199989275,131072 --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --shared-files
+ 1770 tty1     SLl+   0:30 /opt/google/chrome/chrome --type=utility --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --shared-files
+ 1828 tty1     Sl+    0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=4 --no-v8-untrusted-code-mitigations --shared-files
+ 1869 tty1     Sl+    0:23 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files
+ 1888 tty1     Sl+    0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=6 --no-v8-untrusted-code-mitigations --shared-files
+ 1897 tty1     Sl+    0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=7 --no-v8-untrusted-code-mitigations --shared-files
+ 2091 tty1     Sl+    2:37 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=17 --no-v8-untrusted-code-mitigations --shared-files
+ 2151 tty1     SLl+   0:06 /usr/bin/gnome-software --gapplication-service
+ 2153 tty1     Sl+    0:00 update-notifier
+ 2269 tty1     Sl+    0:00 /usr/lib/deja-dup/deja-dup-monitor
+ 3526 tty1     Sl+    5:16 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=70 --no-v8-untrusted-code-mitigations --shared-files
+ 4074 tty1     Sl+    0:26 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=95 --no-v8-untrusted-code-mitigations --shared-files
+ 4102 tty1     Sl+    0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=97 --no-v8-untrusted-code-mitigations --shared-files
+ 4233 tty1     Sl+    0:00 /usr/bin/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPWU0NmZjYzJmLm1hM1RVOGdUQnpTdUpXSmM5WmN3VUd6ZDlfUXdRMEw4SWd6YzFHNHRpSEpZaV90ZXg4NS05V2ZYdkNRVWxTZHB0Y1FMbk0zamNaMHZFejFEVXpULVhBJTNEJTNEJnRpZD1mOGI0NGY3ZDc4NDFiMGY4NzNiNzI1MThiYjQ1ZDdmZQ%3D%3D&confno=809752472&zc=0&pwd=RUYzZGozdytZdW9MZWI2U1dlQ21OZz09&pk=&mcv=0.92.11227.0929&browser=chrome
+ 4238 tty1     S+     0:00 sh -c export SSB_HOME=/home/mihir/.zoom; export QSG_INFO=1; export LD_LIBRARY_PATH=/opt/zoom; export BREAKPAD_CLIENT_FD=3; /opt/zoom/zoom "zoommtg://zoom.us/join?action=join&confid=dXNzPWU0NmZjYzJmLm1hM1RVOGdUQnpTdUpXSmM5WmN3VUd6ZDlfUXdRMEw4SWd6YzFHNHRpSEpZaV90ZXg4NS05V2ZYdkNRVWxTZHB0Y1FMbk0zamNaMHZFejFEVXpULVhBJTNEJTNEJnRpZD1mOGI0NGY3ZDc4NDFiMGY4NzNiNzI1MThiYjQ1ZDdmZQ%3D%3D&confno=809752472&zc=0&pwd=RUYzZGozdytZdW9MZWI2U1dlQ21OZz09&pk=&mcv=0.92.11227.0929&browser=chrome "
+ 4239 tty1     Sl+    6:39 /opt/zoom/zoom zoommtg://zoom.us/join?action=join&confid=dXNzPWU0NmZjYzJmLm1hM1RVOGdUQnpTdUpXSmM5WmN3VUd6ZDlfUXdRMEw4SWd6YzFHNHRpSEpZaV90ZXg4NS05V2ZYdkNRVWxTZHB0Y1FMbk0zamNaMHZFejFEVXpULVhBJTNEJTNEJnRpZD1mOGI0NGY3ZDc4NDFiMGY4NzNiNzI1MThiYjQ1ZDdmZQ%3D%3D&confno=809752472&zc=0&pwd=RUYzZGozdytZdW9MZWI2U1dlQ21OZz09&pk=&mcv=0.92.11227.0929&browser=chrome 
+ 4378 tty1     Sl+    0:03 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=100 --no-v8-untrusted-code-mitigations --shared-files
+ 4405 tty1     Sl+    0:00 /opt/google/chrome/chrome --type=utility --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --service-sandbox-type=utility --disable-webrtc-apm-in-audio-service --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --shared-files
+ 4894 tty1     Sl+    0:22 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=108 --no-v8-untrusted-code-mitigations --shared-files
+ 5005 tty1     Sl+    0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=109 --no-v8-untrusted-code-mitigations --shared-files
+ 5142 pts/0    Ss     0:00 bash
+ 5368 tty1     Sl+    0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=110 --no-v8-untrusted-code-mitigations --shared-files
+ 5380 tty1     Sl+    0:09 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=1400602641816238884,7977203943199989275,131072 --lang=en-GB --enable-crash-reporter=c1da5dee-0586-4bd6-9094-003cb2875b2a, --extension-process --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=111 --no-v8-untrusted-code-mitigations --shared-files
+ 5412 pts/0    R+     0:00 ps a
