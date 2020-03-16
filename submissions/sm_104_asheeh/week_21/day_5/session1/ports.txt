@@ -1,0 +1,83 @@
+Starting Nmap ( https://nmap.org ) at 2020-03-13 12:55 EET
+NSE: Loaded 40 scripts for scanning.
+Initiating Ping Scan at 12:55
+Scanning www.masai-execode.now.sh (35.178.221.151) [4 ports]
+Completed Ping Scan at 12:55, 0.23s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 12:55
+Scanning www.masai-execode.now.sh (35.178.221.151) [100 ports]
+Discovered open port 443/tcp on 35.178.221.151
+Discovered open port 80/tcp on 35.178.221.151
+Completed SYN Stealth Scan at 12:55, 2.86s elapsed (100 total ports)
+Initiating Service scan at 12:55
+Scanning 2 services on www.masai-execode.now.sh (35.178.221.151)
+Completed Service scan at 12:56, 14.01s elapsed (2 services on 1 host)
+NSE: Script scanning 35.178.221.151.
+Initiating NSE at 12:56
+Completed NSE at 12:56, 2.02s elapsed
+Initiating NSE at 12:56
+Completed NSE at 12:56, 0.00s elapsed
+Nmap scan report for www.masai-execode.now.sh (35.178.221.151)
+Host is up (0.0026s latency).
+Other addresses for www.masai-execode.now.sh (not scanned): 3.9.28.56
+Not shown: 98 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      now
+443/tcp open  ssl/https now
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.40%I=7%D=3/13%Time=5E6B66C3%P=x86_64-pc-linux-gnu%r(RTSP
+SF:Request,19,"Bad\x20request\n\nBAD_REQUEST\n")%r(X11Probe,E7,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nDate:\x20Fri,\x2013\x20Mar\x202020\x2010:56
+SF::03\x20GMT\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnecti
+SF:on:\x20close\r\nx-now-trace:\x20lhr1\r\nserver:\x20now\r\nx-now-id:\x20
+SF:lhr1:4mbks-1584096963068-d42580f4e719\r\n\r\nBad\x20request\n\nBAD_REQU
+SF:EST\n")%r(RPCCheck,E7,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20F
+SF:ri,\x2013\x20Mar\x202020\x2010:56:08\x20GMT\r\nContent-Type:\x20text/pl
+SF:ain;\x20charset=utf-8\r\nConnection:\x20close\r\nx-now-trace:\x20lhr1\r
+SF:\nserver:\x20now\r\nx-now-id:\x20lhr1:6nr7r-1584096968083-b13fd2d1d7b6\
+SF:r\n\r\nBad\x20request\n\nBAD_REQUEST\n")%r(DNSVersionBindReq,E7,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\nDate:\x20Fri,\x2013\x20Mar\x202020\x201
+SF:0:56:08\x20GMT\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConn
+SF:ection:\x20close\r\nx-now-trace:\x20lhr1\r\nserver:\x20now\r\nx-now-id:
+SF:\x20lhr1:6nr7r-1584096968089-f3e943bb3cd9\r\n\r\nBad\x20request\n\nBAD_
+SF:REQUEST\n")%r(DNSStatusRequest,E7,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nDate:\x20Fri,\x2013\x20Mar\x202020\x2010:56:08\x20GMT\r\nContent-Type
+SF::\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\nx-now-trac
+SF:e:\x20lhr1\r\nserver:\x20now\r\nx-now-id:\x20lhr1:6nr7r-1584096968095-e
+SF:85864165c9b\r\n\r\nBad\x20request\n\nBAD_REQUEST\n")%r(Help,E7,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nDate:\x20Fri,\x2013\x20Mar\x202020\x2010
+SF::56:08\x20GMT\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConne
+SF:ction:\x20close\r\nx-now-trace:\x20lhr1\r\nserver:\x20now\r\nx-now-id:\
+SF:x20lhr1:4mbks-1584096968101-a01d90fb9878\r\n\r\nBad\x20request\n\nBAD_R
+SF:EQUEST\n")%r(SSLSessionReq,E7,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDa
+SF:te:\x20Fri,\x2013\x20Mar\x202020\x2010:56:08\x20GMT\r\nContent-Type:\x2
+SF:0text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\nx-now-trace:\x
+SF:20lhr1\r\nserver:\x20now\r\nx-now-id:\x20lhr1:4mbks-1584096968108-61bfa
+SF:d18b6f7\r\n\r\nBad\x20request\n\nBAD_REQUEST\n")%r(TLSSessionReq,E7,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Fri,\x2013\x20Mar\x202020\
+SF:x2010:56:08\x20GMT\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:Connection:\x20close\r\nx-now-trace:\x20lhr1\r\nserver:\x20now\r\nx-now
+SF:-id:\x20lhr1:6nr7r-1584096968117-6a4428e1c2d6\r\n\r\nBad\x20request\n\n
+SF:BAD_REQUEST\n");
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.66 seconds
+           Raw packets sent: 205 (8.988KB) | Rcvd: 6 (252B)
+
+                            
+ 35.178.221.151
+www.masai-execode.now.sh
+ec2-35-178-221-151.eu-west-2.compute.amazonaws.com
+Port Number	State	Service Name	Service Product	Service Version	Service Extra Info	Actions
+80	open	http	now			
+443	open	https	now			
+Scan parameters
+Host:	www.masai-execode.now.sh
+Ports:	Top 100 ports
+Ping host:	True
+Detect OS:	False
+Detect svc version:	True
+Traceroute:	False
+Scan information
+Start time:	2020-03-13 12:55:52 UTC+02
+Finish time:	2020-03-13 12:56:13 UTC+02
+Scan duration:	21 sec
+Scan status:	Finished

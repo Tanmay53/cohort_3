@@ -1,0 +1,10 @@
+tcp leyers:-
+
+Application :- it combines top 3 layers of OSI model that are application, presentation and session layer.Serves the apllication process,front end.
+performs data converstion, encryption, compress. Controls session.
+
+Transport - accepts data from application layer and determines how to present to netwrok layer.
+
+Internet layer - breaks data into packets and sends data between network layer of two nodes.
+
+Network access layer- responsible for error free receipt of data, converts bit into electic signal and transmits over cable.

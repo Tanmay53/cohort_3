@@ -1,4 +1,5 @@
 import React from 'react'
+import './TODO.css'
 
 const TODO=(props)=>{
   
@@ -10,17 +11,18 @@ const TODO=(props)=>{
       {props.item.map((elem)=>{
         return <div 
                 key={elem.id} 
-                style={{display:'flex'}}
                 className="shadow my-2 p-2 bg-white rounded">
                   
-                  <div className='d-flex align-items-baseline'>
-                    
+                  <div className='row'>
+                    <div className="col-1">
                       <input
                         type='checkbox'
                         checked={elem.isDone}
                         onChange={()=>props.toggleDone(elem.id)}
                       /> 
-                    <div 
+                    </div>
+                    <div
+                      className="col-7 d-flex flex-row justify-content-start" 
                       style={
                         {
                           color:`${elem.isDone ? 'green' : 'steelblue'}`,
@@ -29,19 +31,14 @@ const TODO=(props)=>{
                       }>
                       <h4 className='mx-2'>{elem.name}</h4>
                     </div>
-
-                    <button 
-                      onClick={()=>props.del(elem.id)}
-                      className='btn btn-primary'>
-                    DELETE</button>
-                      
-                  </div>
-                  
-                    
+                    <div className="col-4 d-flex flex-row justify-content-end">
+                      <button 
+                        onClick={()=>props.del(elem.id)}
+                        className='btn btn-primary'>
+                        DELETE</button>
                     </div>
-                  
-
-
+                  </div>
+        </div>
       })}
     </div>
 
