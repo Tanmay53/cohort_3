@@ -11,7 +11,7 @@ class Bodythird extends React.Component{
                         <button className="btn background text-white">Get a boost</button>
                     </div>
                     <div className="col-10 offset-1 col-md-6 offset-md-0 col-lg-5 offset-lg-1 mb-5">
-                        <div id="carouselExampleControl" className="carousel slide" data-ride="carousel">
+                        <div id="businesscarousel" className="carousel slide" data-ride="carousel">
                             <div className="carousel-inner">
                                  <div className="carousel-item active mt-3">
                                     <img className="d-block w-100 bussimg" src="https://149361960.v2.pressablecdn.com/wp-content/uploads/2019/10/instamojo1.png" alt="instamojo"/>
@@ -21,11 +21,11 @@ class Bodythird extends React.Component{
                                     <img  className="d-block w-100 bussimg" src={elements.url} alt={elements.alt}/>
                                  </div> )}
                             </div>
-                            <a className="carousel-control-prev" href="#carouselExampleControl" role="button" data-slide="prev">
+                            <a className="carousel-control-prev" href="#businesscarousel" role="button" data-slide="prev">
                                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span className="sr-only">Previous</span>
                             </a>
-                            <a className="carousel-control-next" href="#carouselExampleControl" role="button" data-slide="next">
+                            <a className="carousel-control-next" href="#businesscarousel" role="button" data-slide="next">
                                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span className="sr-only">Next</span>
                             </a>
@@ -37,7 +37,7 @@ class Bodythird extends React.Component{
                         <p>With 2500+ companies working out of our spaces, the opportunities for collaboration are endless.</p>
                     </div>
                     <div className="col-10 offset-1 col-md-6 offset-md-0 col-lg-5 offset-lg-1 mb-5">
-                        <div id="carouselExampleControl" className="carousel slide" data-ride="carousel">
+                        <div id="companycarousel" className="carousel slide" data-ride="carousel">
                             <div className="carousel-inner">
                                  <div className="carousel-item active mt-3">
                                     <img className="d-block w-100 bussimg" src="https://149361960.v2.pressablecdn.com/wp-content/uploads/2019/08/member_logos-05.png" alt="zomato"/>
@@ -47,11 +47,11 @@ class Bodythird extends React.Component{
                                     <img  className="d-block w-100 bussimg" src={elements.url} alt={elements.alt}/>
                                  </div> )}
                             </div>
-                            <a className="carousel-control-prev" href="#carouselExampleControl" role="button" data-slide="prev">
+                            <a className="carousel-control-prev" href="#companycarousel" role="button" data-slide="prev">
                                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span className="sr-only">Previous</span>
                             </a>
-                            <a className="carousel-control-next" href="#carouselExampleControl" role="button" data-slide="next">
+                            <a className="carousel-control-next" href="#companycarousel" role="button" data-slide="next">
                                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span className="sr-only">Next</span>
                             </a>

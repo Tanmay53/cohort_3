@@ -1,0 +1,10 @@
+Real Life Scenarios:-
+
+1. Simplex
+Ex.-
+	
+2. Half-Duplex
+Ex.-
+
+3. Full Duplex
+Ex.-
