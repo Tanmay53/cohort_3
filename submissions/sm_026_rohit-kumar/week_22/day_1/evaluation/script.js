@@ -35,7 +35,7 @@ function sideCard(titleText, heading, image) {
     span1.classList.add("span-style")
     span1.classList.add("span-style")
 
-    span1.innerHTML = "<i class='fa fa-calendar'</i>" + "&nbsp;May 10, 2019"
+    span1.innerHTML = "<i class='fa fa-calendar'</i>" + "&nbsp; " + (new Date().toUTCString())
     span2.innerHTML = "<i class='fa fa-sticky-note'</i>" + "&nbsp;1 comment"
 
     footer.appendChild(span1)
