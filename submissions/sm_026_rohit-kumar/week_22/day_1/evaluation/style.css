@@ -1,0 +1,37 @@
+body {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper {
+    display: flex;
+}
+
+.left-box, .right-box {
+    min-width: 45%;
+}
+
+.card {
+    border: 1px solid #e9ebec;
+    padding:10px;
+    margin: 5px;
+}
+
+.card-small-heading {
+    color: #BDE855; 
+    font-size: "12px;"
+}
+
+.small-head {
+    font-size: 12px;
+    text-align: center;
+    color: #C1B6BF;
+}
+
+.heading {
+    text-align: center;
+}
+
+.image {
+    width: 90%;
+}
