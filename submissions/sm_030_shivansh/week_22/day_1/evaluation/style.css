@@ -1,0 +1,118 @@
+body{
+    background-color: azure;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+#news{
+    color: red;
+}
+
+
+   
+ 
+.card {
+    text-align: center;
+     
+}
+
+#services > h6{
+    color: red;
+}
+.create-post{
+    text-align: center;
+    border: 1px solid black;
+}
+.form  {
+ 
+    display: grid;
+     
+    grid-template-columns: repeat(1, 1fr);
+     
+    grid-auto-rows: auto;
+     
+    grid-gap: 1rem;
+
+    margin-bottom: 20px;
+
+
+     
+}
+.button{
+    padding: 15px;
+    background-color: royalblue;
+    border-radius: 15%;
+}
+
+/* responsive layout */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .grid {
+ 
+        display: grid;
+         
+        grid-template-columns: repeat(1, 1fr);
+         
+        grid-auto-rows: auto;
+         
+        grid-gap: 1rem;
+
+        margin-bottom: 20px;
+         
+    }
+
+    #services .card{
+        text-align: center;
+    }
+} 
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+        .grid {
+     
+            display: grid;
+             
+            grid-template-columns: repeat(2, 1fr);
+             
+            grid-auto-rows: auto;
+             
+            grid-gap: 2rem;
+
+            margin-bottom: 30px;
+             
+        }
+        #services .card{
+            text-align: left;
+        }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .grid {
+     
+        display: grid;
+         
+        grid-template-columns: repeat(3, 1fr);
+         
+        grid-auto-rows: auto;
+         
+        grid-gap: 3rem;
+        
+        margin-bottom: 40px;
+
+
+         
+    }
+    #services .card{
+        text-align: left;
+    }
+
+} 
+

@@ -1,0 +1,14 @@
+Simplex transfer_mode:
+Traffic Signals 
+Description:
+only accepts the inputs
+
+Halfduplex transfer_mode:
+Printer
+Description:
+After one page completed the printing then only we get feedback from printer.
+
+Fullduplex transfer_mode:
+Internet
+Description:
+we can trasferdata at a time in biderectional.

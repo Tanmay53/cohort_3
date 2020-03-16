@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Layout</title>
+</head>
+
+<body>
+    <center>
+        <div>
+            <h1><b>Latest news from our blog</b></h1>
+        </div>
+        <div>
+            <h3><b>NEWS & BLOG</b></h3>
+        </div>
+    </center>
+
+    <div class="cards">
+        <div id="card1">
+            <img src="https://image.shutterstock.com/image-photo/business-handshake-260nw-130099715.jpg"
+                alt="hand shake image">
+            <p id="muted">january 30, 2020 admin</p>
+            <p class="cardsText">Even the all-poweful pointer has no control about the blind texts</p>
+            <button class="cardButton" onclick="remove1()">Remove</button>
+        </div>
+        <div id="card2">
+            <img src="https://image.shutterstock.com/image-photo/image-business-partners-discussing-documents-260nw-125338145.jpg"
+                alt="hand shake image">
+            <p id="muted">january 30, 2020 admin</p>
+            <p class="cardsText">Even the all-poweful pointer has no control about the blind texts</p>
+            <button class="cardButton" onclick="remove2()">Remove</button>
+        </div>
+        <div id="card3">
+            <img src="https://image.shutterstock.com/image-photo/business-handshake-260nw-130099715.jpg"
+                alt="hand shake image">
+            <p id="muted">january 30, 2020 admin</p>
+            <p class="cardsText">Even the all-poweful pointer has no control about the blind texts</p>
+            <button class="cardButton" onclick="remove3()">Remove</button>
+        </div>
+    </div>
+
+    <!-- New Items -->
+    <div class="cards">
+        <div id="newCards"></div>
+    </div>
+
+    <!-- Form -->
+    <form class="form-class">
+        <center><h2>Add Cards</h2></center>
+        <input type="text" placeholder="image Address" id="title" class="input"><br>
+        <input type="text" placeholder="card-content" id="content" class="input"><br>
+        <button class="formButton" onclick="add()">Submit</button>
+      </form>
+
+    <!-- footer -->
+    <div class="footer1">
+        <div class="footer2">
+            <div id="fContent1">
+                <p>Subscribe for our weekly tips</p>
+            </div>
+            <div id="fContent2">
+                <input type="text" placeholder="Enter email address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

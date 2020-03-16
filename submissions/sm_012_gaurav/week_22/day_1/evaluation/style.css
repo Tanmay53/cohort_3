@@ -1,0 +1,102 @@
+body {
+    background-color: #424242;
+    color: white;
+}
+
+.flexCol {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.form {
+    margin: 30px auto 10px auto;
+    width: 50%;
+}
+
+.flexRow {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.form input {
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 1em;
+}
+.form label {
+    margin-top: 10px;
+}
+.dateType {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.dateDiv {
+    width: 45%;
+}
+#type {
+    width: 45%;
+    border-radius: 5px;
+    font-size: 1em;
+    height: 40px;
+}
+#date {
+    width: 100%;
+    height: 30px;
+    font-size: 1em;
+}
+#submitBtn {
+    margin-top: 15px;
+    height: 40px;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 0px 25px;
+}
+.justifyCenter {
+    justify-content: center;
+}
+
+.justifyBetween {
+    justify-content: space-evenly;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.cardsDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 15px 5% 15px 5%;
+    grid-row-gap: 20px;
+}
+
+.cardDiv {
+    width: 95%;
+    height: 200px;
+    background-color: black;
+}
+
+.cardDiv * {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media only screen and (max-width: 992px) {
+    .form {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cardsDiv {
+        grid-template-columns: auto;
+        padding: 15px 1% 15px 1%;
+    }
+    .cardDiv {
+        width: 98%;
+    }
+    .form {
+        width: 95%;
+    }
+}
