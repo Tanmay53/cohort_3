@@ -166,7 +166,17 @@
       </div>
     </div>
     <div id="footer-form">
-      <form></form>
+      <form onsubmit="formSubmitHandler(event)">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" required />
+        <label for="content">Content</label>
+        <input type="text" name="content" id="content" required />
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" min="0" required />
+        <label for="tax">Tax</label>
+        <input type="number" name="tax" id="tax" min="0" required />
+        <input type="submit" value="Add Card" />
+      </form>
     </div>
   </body>
 
