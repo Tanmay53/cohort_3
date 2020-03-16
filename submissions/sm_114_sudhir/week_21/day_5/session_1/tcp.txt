@@ -1,0 +1,28 @@
+TCP/IP:
+
+It is concise version of OSI model.It contains four layer, unlike seven layer in the OSI model.
+It stands for Transmission control Protocol/Internet
+
+1. Process/Application layer
+2. Host-t0-Host/Transport layer
+3. Internet layer
+4. Network Access/Link layer
+
+Process Access Layer:-
+	This layer correspondes to the combination of Data link and
+Physical layer. Its looks hardware addressing and the protocol present
+in this layer allows for the physical transmission of data.
+
+Internet Layer:-
+	It is parallel to the OSI network layer. It defines the protocol
+which are responsible for logical transmission of data over the entire 
+network.
+
+Host-to-Host Layer:-
+	Transport layer of OSI model resposible for end-to-end
+communication and error free delivery of data.
+
+Process Layer:-
+	This layer the combination of top three layer OSI model 
+application, presentation, session layer. It is responsible for node-to
+node communication. 

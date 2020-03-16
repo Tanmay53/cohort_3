@@ -17,6 +17,17 @@
         .box-size {
             width: 300px;
         }
+        .image-overlay {
+            background: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        #jumbo {
+            position: relative;
+        }
+        
     </style>
   </head>
   <body>
@@ -27,21 +38,25 @@
             <a class="nav-link" href="#">Become A Professional</a>
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </nav>
-        <div class="jumbotron jumbotron-fluid cus-img">
-            <div class="container ">
-                <h1 class="display-4 text-center">Your Service Expert in Bangalore</h1>
-                <p class="lead text-center">Get instant access to reliable and affordable services</p>
-                <div class="form-inline offset-4 col-6">
-                    <select class='form-control'>
-                            <option value="Delhi">Volvo</option>
-                            <option value="Mumbai">Saab</option>
-                            <option value="Bangalore">Mercedes</option>
-                            <option value="Pune">Audi</option>
-                    </select>
-                    <input type="text" class='form-control' placeholder="Search for a Service">
+
+        <div id="jumbo" class="jumbotron jumbotron-fluid cus-img">
+                <div class="container">
+                    <h1 class="display-4 text-center">Your Service Expert in Bangalore</h1>
+                    <p class="lead text-center">Get instant access to reliable and affordable services</p>
+                    <div class="form-inline offset-4 col-6">
+                        <select class='form-control'>
+                                <option value="Delhi">Volvo</option>
+                                <option value="Mumbai">Saab</option>
+                                <option value="Bangalore">Mercedes</option>
+                                <option value="Pune">Audi</option>
+                        </select>
+                        <input type="text" class='form-control' placeholder="Search for a Service">
+                    </div>
                 </div>
-            </div>
+                <div class="image-overlay"></div>
         </div>
+        </div>
+
         <div class="container">
             <div class="row">
                 <div class="col d-flex">

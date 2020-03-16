@@ -11,8 +11,9 @@ def create():
     category_id = request.json['category_id']
     heading     = request.json['heading']
     body        = request.json['body']
-    token       = request.json['token']
-    user_id     = request.json['user_id']
+    token       = request.headers.get('Authorization').split()[1]
+    
+
 
     try:
         decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
@@ -68,6 +69,15 @@ def post_comment():
     blog_id = request.json['blog_id']
     comment = request.json['comment']
     user_id = request.json['user_id']
+    # token       = request.headers.get('Authorization').split()[1]
+
+    """ 
+    try:
+        decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
+        user_id = decoded['user_id']
+    except Exception:
+        return jsonify({'result':'failure', 'user': 'invalid'}) 
+    """
 
     query = '''INSERT INTO `comment` (blog_id, user_id, commented_on, comment)
                VALUES (%s, %s, CURDATE(), %s)
@@ -80,7 +90,10 @@ def post_comment():
 
 @post.route('/comments/<int:blog_id>')
 def get_comments_by_blog_id(blog_id):
-    query = 'SELECT `comment` FROM `comment` WHERE `blog_id` = %s'
+    # query = 'SELECT `comment` FROM `comment` WHERE `blog_id` = %s'
+    query = """SELECT comment.comment, user.name FROM comment 
+               LEFT JOIN user ON comment.user_id = user.user_id WHERE comment.`blog_id` = %s
+            """
     result = select_all(query, [blog_id])
     return jsonify(result)
 
@@ -89,10 +102,16 @@ def get_comments_by_blog_id(blog_id):
 @post.route('/delete/<int:blog_id>', methods=['DELETE'])
 def delete_blog(blog_id):
     try:
-        token = request.json['token']
         user_id = request.json['user_id']
+        token  = request.headers.get('Authorization').split()[1]
 
         # decode the token
+        try:
+            decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
+            user_id = decoded['user_id']
+        except Exception:
+            return jsonify({'result':'failure', 'user': 'invalid'})
+
         decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
         if int(decoded['user_id']) != int(user_id):
             return jsonify({'result':'failure', 'error': 'authentication failed' })
@@ -115,13 +134,14 @@ def edit(blog_id):
     try:
         heading = request.json['heading']
         body    = request.json['body']
-        token   = request.json['token']
-        user_id = request.json['user_id']
+        token   = request.headers.get('Authorization').split()[1]
 
         # decode the token
-        decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
-        if int(decoded['user_id']) != int(user_id):
-            return jsonify({'result':'failure', 'error': 'authentication failed' })
+        try:
+            decoded = jwt.decode(token, 'secret', algorithms=['HS256'])
+            user_id = decoded['user_id']
+        except Exception:
+            return jsonify({'result':'failure', 'user': 'invalid'})
 
         query = '''UPDATE `blog` SET 
                 `heading` = %s,

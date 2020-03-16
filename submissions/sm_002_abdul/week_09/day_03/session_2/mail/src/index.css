@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.MainPage{
+  width: 100%;
+  height: 100%;
+}
+
+.MainPage-left{
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+
+.MainPage-right{
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+
+.SideBar{
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+}
+
+.EmailSection{
+  width: 100%;
+  height: 100%;
+  background: pink;
+}
+
+.displaySection{
+  height: 33%;
+  width: 33%;
+  margin-inline-start: 33%;
+  border: 5px solid gray;
+  border-radius: 10%;
+}
+
+.topEmptyColumn{
+  height: 100px;
+  margin-bottom: 5%;
+  border-bottom: 1px solid gray;
+}
+
+.SideBarItem{
+  margin: 15px;
+  padding: 10px;
+}

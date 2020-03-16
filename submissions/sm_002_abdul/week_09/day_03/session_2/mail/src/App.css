@@ -1,0 +1,35 @@
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.MainPage{
+  width: 100%;
+  height: 100%;
+}
+
+.MainPage-left{
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+
+.MainPage-right{
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+
+.SideBar{
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+  border: 1px solid gray;
+}
+
+.EmailSection{
+  width: 100%;
+  height: 100%;
+  background: pink;
+}

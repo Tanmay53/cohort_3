@@ -10,10 +10,9 @@ function BlogPost(props) {
             <div className='card m-3'>
                 <div className='card-header'>   
                     <h5><b>{'#' + props.blog.blog_id + ' ' + props.blog.heading}</b></h5>
-                    <span className='text-primary'>@ {props.blog.name}</span>
+                    <span className='text-primary small'>@{props.blog.name}</span>
                 </div>
                 <div className='card-body' style={{"height": "100px"}}>
-                    <p></p>
                     <p className=''>
                         {props.blog.body.slice(0, 60)}
                     </p>

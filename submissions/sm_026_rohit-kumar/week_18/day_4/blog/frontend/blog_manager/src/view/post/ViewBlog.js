@@ -64,14 +64,15 @@ class ViewBlog extends React.Component {
 
         axios.post(url, data)
         .then(res => {
-            console.log(res)
+            console.log('after axios call : ', res)
             this.setState({
-                comments: [...this.state.comments, {'comment': this.state.comment}],
+                comments: [...this.state.comments, {'comment': this.state.comment, 
+                             'name': this.props.name || 'anonymous'}],
                 comment: ''
             }) 
         })
         .catch(err => {
-            console.log(err)
+            console.log('error : ', err)
         })
 
 
@@ -134,9 +135,10 @@ class ViewBlog extends React.Component {
                             </div>
 
                             {this.state.comments.map((item) => {
-                                return <div className='col-12 mt-1'>
-                                            <div className='border p-2 mx-2'>
-                                                {item.comment}
+                                return <div className='col-12 mt-1'>                                            
+                                            <div className='text-muted pl-2'>comment by: @{item.name}</div> 
+                                            <div className='border p-2 mx-2'>                                                
+                                                <span>{item.comment}</span>                                                
                                             </div>
                                         </div>
                             })}
@@ -173,7 +175,9 @@ class ViewBlog extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        user_id: state.user_id || 20
+        user_id: state.user_id || 20,
+        token: state.token,
+        name: state.name
     }
 }
 
