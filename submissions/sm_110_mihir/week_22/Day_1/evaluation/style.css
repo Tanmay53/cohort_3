@@ -13,7 +13,16 @@
 h1.text-center {
   text-decoration: underline;
 }
-
+form {
+  margin: 50px;
+  padding: 50px;
+}
+button {
+  padding: 1rem;
+  background-color: wheat;
+  border: transparent;
+  border-radius: 20px;
+}
 .box {
   width: 300px;
   background-color: whitesmoke;

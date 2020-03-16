@@ -10,6 +10,14 @@
     <h1 class="text-center">
       Popular Causes
     </h1>
+    <button onclick="add()">Add a card</button>
+    <form>
+      <label for="title">card title</label>
+      <input type="text" name="title" id="title" />
+      <label for="content">Content</label>
+      <input type="text" name="content" id="content" />
+      <button onclick="append()">Submit</button>
+    </form>
     <div class="grid">
       <div class="box" id="card-1">
         <img src="https://via.placeholder.com/300" alt="" />
