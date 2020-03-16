@@ -1,4 +1,5 @@
 var parent = document.getElementById("card_");
+// add a new card
 const addCard = () => {
   let title = document.getElementById("title").value;
   let body = document.getElementById("body").value;
@@ -18,6 +19,7 @@ const addCard = () => {
   new_card.innerHTML = card;
   parent.append(new_card);
 };
+// delete card
 const deleted = () => {
   event.target.parentElement.parentElement.parentElement.removeChild(
     event.target.parentElement.parentElement
