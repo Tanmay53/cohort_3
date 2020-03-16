@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>W22D1_template</title>
+</head>
+<body>
+    <header>
+        <div id="navDiv">
+            <img src="./source/fb.png" alt="fb.png" height="40px" >
+            <img src="./source/tinder-logo.jpg" alt="tinder-logo.png" height="40px" >
+            <img src="./source/airbnb.jpg" alt="airbnb.png" height="40px" >
+            <img src="./source/mslogo.jpg" alt="microsoft.png" height="40px" >
+            <img src="./source/hubspot_logo1.jpg" alt="hubspot_logo.png" height="40px" >
+        </div>
+    </header>
+
+    <div id="cardsDiv"></div>
+
+    <div id="formDiv">
+        <h3>You want to diplay new cards then ADD info in this form : </h3>
+        <form>
+            <label for="imageUrl">Image url</label>
+            <input type="url" placeholder=" image url" name="imageUrl" id="inputImageUrl">
+            <br><br>
+            <label for="title">Title</label>
+            <input type="text" placeholder=" Enter header text" name="title" id="inputCardTitle">
+            <br><br>
+            <label for="matter">Description</label>
+            <textarea placeholder=" Enter description here.!" name="matter" id="inputTextArea"></textarea>
+            <br><br>
+            <button type="submit" id="submitBtn" onclick="formSubmit()">Submit</button>
+        </form>
+    </div>
+
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
