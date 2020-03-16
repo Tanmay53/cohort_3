@@ -16,9 +16,11 @@ function sideCard() {
     var footer = document.createElement("div")
     span1 = document.createElement("span")
     span2 = document.createElement("span")
+    span1.classList.add("span-style")
+    span1.classList.add("span-style")
 
-    span1.innerHTML = "May 10, 2019"
-    span2.innerHTML = "1 comment"
+    span1.innerHTML = "<i class='fa fa-calendar'</i>" + "&nbsp;May 10, 2019"
+    span2.innerHTML = "<i class='fa fa-sticky-note'</i>" + "&nbsp;1 comment"
 
     footer.appendChild(span1)
     footer.appendChild(span2)

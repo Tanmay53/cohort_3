@@ -9,17 +9,20 @@ body {
 
 .left-box, .right-box {
     min-width: 45%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .card {
     border: 1px solid #e9ebec;
     padding:10px;
     margin: 5px;
+    border-radius: 8px;
 }
 
 .card-small-heading {
     color: #BDE855; 
-    font-size: "12px;"
+    font-size: 12px;
 }
 
 .small-head {
@@ -33,5 +36,28 @@ body {
 }
 
 .image {
-    width: 90%;
+    width: 100%;
+}
+
+.span-style {
+    margin:5px;
+}
+
+.span-style  > .fa-calendar {
+    border-right: 2px solid black;
+    padding-right: 5px;
+}
+
+
+
+
+table {
+    width: 50%;
+}
+
+input {
+    font-size: 15px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
 }
