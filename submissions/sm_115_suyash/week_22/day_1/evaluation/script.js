@@ -68,6 +68,8 @@ function deleteCard(e) {
       e.target.parentElement.remove();
     } else if (e.target.localName == "h3" || e.target.localName == "p") {
       e.target.parentElement.parentElement.remove();
+    } else if (e.target.localName == "img" || e.target.localName == "p") {
+      e.target.parentElement.parentElement.remove();
     } else if (e.target.localName == "small") {
       e.target.parentElement.parentElement.parentElement.remove();
     }
