@@ -36,7 +36,11 @@
         <div class="form">
             <h1>Add new card </h1>
             <input type="text" class="newBlogImgUrl" placeholder="Image url .."><br>
-            <input type="text" class="newBlogCategory" placeholder="Blog category"><br>
+            <select name="" class='newBlogCategory'>
+                <option value="sports">Sports</option>
+                <option value="business">Business</option>
+                <option value="entrepreneur">Entrepreneur</option>
+            </select> <br>
             <input type="text" class="newBlogUsername" placeholder="Username"><br>
             <input type="text" placeholder="Blog title ...." class="newBlogTitle"><br>
             <button onclick="addCard()" id="submitBtn">Submit</button>

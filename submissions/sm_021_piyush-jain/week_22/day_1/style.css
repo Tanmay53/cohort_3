@@ -1,0 +1,163 @@
+#cards>div {
+    margin-top: 4%;
+}
+#certPadding{
+    padding: 2px;
+    border:1px solid grey;
+}
+#FormStyle {
+    background-color: grey;
+    width: 30%;
+    align-self: center;
+    color: white;
+    margin-left: 35%;
+    margin-top: 5%;
+    padding: 10px;
+    text-align: center;
+}
+
+#FormStyle>input {
+    margin: 0px 0px 0px 0px;
+}
+
+#FormStyle>div {
+    margin: 15px 0px 0px 0px;
+}
+
+input {
+    border: 1px solid white;
+    height: 30px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    margin: 15px 0px 0px 10%;
+    width: 70px;
+    
+}
+
+#Property {
+    align-self: center;
+}
+#PropertyHeading {
+    text-align: center;
+    color: red;
+    margin-top: 3%;
+}
+#colorRed {
+    color: red;
+}
+
+@media(min-width: 1001px) and (max-width: 1380px) {
+    
+    #cards {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-auto-flow: auto;
+        margin: 0% 2% 0% 2%;
+    }
+    
+    .positioning {
+        margin-left: 25%;
+    }
+    
+    #certificates {
+        display: flex;
+        justify-content: space-around;
+        margin: 10% 2% 0% 2%;
+        
+    }
+    
+    #certificates>div:nth-of-type(n) {
+        float: right;
+    }
+}
+
+@media(min-width: 741px) and (max-width: 1000px) {
+    
+    #cards {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-auto-flow: auto;
+        margin: 10% 2% 0% 2%;
+    }
+    
+    .positioning {
+        margin-left: 25%;
+        width: 140px;
+    }
+    
+    
+    #certificates {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-auto-flow: auto;
+        justify-content: space-around;
+        margin: 10% 2% 0% 2%;
+        
+    }
+    
+    #certificates div {
+        flex-direction: row;
+        /* width: 50%; */
+        float: right;
+    }
+    
+    
+    
+    #FormStyle>input {
+        margin: 0px 0px 0px 0px;
+    }
+    
+    #FormStyle>div {
+        margin: 15px 0px 0px 60px;
+    }
+    
+    
+}
+
+
+@media(min-width: 450px) and (max-width: 740px) {
+    
+    #cards {
+        display: grid;
+        grid-template-columns: 40%;
+        grid-auto-flow: auto;
+        margin: 0% 2% 0% 30%;
+    }
+    
+    .positioning {
+        margin-left: 15%;
+        width: 80px;
+    }
+    
+    #certificates {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-flow: auto;
+        margin: 0% 2% 0% 2%;
+        align-content: center;
+        
+    }
+    
+    #certificates div {
+        flex-direction: row;
+        width: 100%;
+        margin-left: 30%;
+    }
+    
+    input {
+        width: 100%;
+    }
+    
+    #FormStyle>input {
+        margin: 0px 0px 0px 0px;
+    }
+    
+    #FormStyle>div {
+        margin: 15px 0px 0px 0px;
+    }
+}
