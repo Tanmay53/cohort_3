@@ -1,7 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 import uuid from 'react-uuid'
-
+import { connect } from 'react-redux'
+import {Redirect} from 'react-router-dom'
+ 
 class Employee extends React.Component {
     constructor(props) {
         super(props)
@@ -48,18 +50,24 @@ class Employee extends React.Component {
         const url = "http://localhost:5000/employee/create"
         axios.post(url, data)
         .then(res => {
+            console.log(res)
             if (res['data']['result'] == 'success') {
                 this.setState({
                     name: '',
                     email: '',
                     salary: ''
-                })
+                }) 
             }
         })
         
     }
 
     render() {
+        // redirect if user not logged in
+        if (! this.props.isLoggedIn) {
+            return <Redirect to="/login"></Redirect>
+        }
+
         return (
             <div>
                 <div className='row mt-2'>
@@ -115,5 +123,14 @@ class Employee extends React.Component {
         )
     }
 }
-export default Employee
+
+const mapStateToProps = (state) => {
+    return {
+        isLoggedIn: state.isLoggedIn,
+        menuLabel: state.menuLabel,
+        showRegisterButton: state.showRegisterButton
+    }
+}
+
+export default connect(mapStateToProps, null)(Employee)
 

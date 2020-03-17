@@ -1,6 +1,7 @@
 import React from 'react'
-import Employee from './Employee'
 import axios from 'axios'
+import {connect} from 'react-redux'
+import {Redirect} from 'react-router-dom'
 
 
 class Dashboard extends React.Component {
@@ -11,11 +12,34 @@ class Dashboard extends React.Component {
             department: 'all',
             sal_order: 'asc',
             employee: [],
-            all_department: []
+            all_department: [],
+            limit_beg: 0,
+            limit_end: 20,
+            buttons: []
         }
     }
 
+    handleProbe = () => {
+       axios.post("http://localhost:5000/employee/probe", {
+            gender: this.state.gender, 
+            department: this.state.department
+        })
+        .then(res => {
+            // console.log('probe : ', res['data']['data'][0]['total_rec'])
+            const total_rec = Number(res['data']['data'][0]['total_rec'])
+            const total_buttons = Math.ceil(total_rec / 20) 
+
+            this.setState({
+                    buttons: [...Array(total_buttons).keys()].map(x => ++x)
+            })
+        })        
+    }
+
     componentWillMount = () => {
+        // probe
+        this.handleProbe()
+
+
         // fetch departments
         const url = "http://localhost:5000/employee/department"
         axios.get(url)
@@ -35,10 +59,12 @@ class Dashboard extends React.Component {
         axios.post("http://localhost:5000/employee/fetch", {
             gender: this.state.gender, 
             department: this.state.department,
-            sal_order: this.state.sal_order
+            sal_order: this.state.sal_order,
+            limit_beg: this.state.limit_beg,
+            limit_end: this.state.limit_end
         })
         .then(res => {
-            console.log(res)
+            console.log('laoddata : ', res)
             this.setState({
                 employee: res['data']['data']
             })
@@ -46,17 +72,28 @@ class Dashboard extends React.Component {
     }
 
 
-    handleChange = (event) => {
-        this.setState({
+    handleChange = async (event) => {
+        await this.setState({
             [event.target.name]: event.target.value
         })
+        await this.handleProbe()
+        this.loadData()
     }
 
-    componentDidUpdate = () => {
+    handlePageClick = async (page) => {
+        await this.setState({
+            limit_beg: (page - 1 ) * 20,
+            limit_end: page * 20 - 1
+        })
         this.loadData()
     }
 
     render() {
+        // redirect if user not logged in
+        if (! this.props.isLoggedIn) {
+            return <Redirect to="/login"></Redirect>
+        }
+
         return (
             <div>
                 <div className='row'>
@@ -83,7 +120,7 @@ class Dashboard extends React.Component {
                         </select>
                     </div>
 
-                    <div className='col-1'>
+                    <div className='col-1 offset-2'>
                         Salary
                     </div>
                     <div className='col-2'>
@@ -94,26 +131,39 @@ class Dashboard extends React.Component {
                     </div>
 
 
-
-
+                    <div className='col-1 mt-4'>
+                        pages
+                    </div>
                     
+                    <div className='col-9 mt-4'>
+                        {this.state.buttons.map(item => {
+                            return <button 
+                                    className='btn btn-primary btn-sm mx-1'
+                                    onClick={() => this.handlePageClick(item)}
+                                    >
+                                        {item}
+                                    </button>
+                        })}
+                    </div>
                     <div className='col-12 mt-3'>
                         <table className='table'>
                             <thead>
                                 <tr>
                                     <th>S.No</th>
+                                    <th>Emp ID.</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Gender</th>
                                     <th>Department</th>
                                     <th>Salary</th>
-                                    <th>Action</th>
+                                        <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {this.state.employee.map((item, index) => {
                                     return <tr>
                                                 <td>{index + 1}</td>
+                                                <td>{item.id}</td>
                                                 <td>{item.emp_name}</td>
                                                 <td>{item.email}</td>
                                                 <td>{item.gender}</td>
@@ -132,4 +182,13 @@ class Dashboard extends React.Component {
     }
 }
 
-export default Dashboard
+const mapStateToProps = (state) => {
+    return {
+        isLoggedIn: state.isLoggedIn,
+        menuLabel: state.menuLabel,
+        showRegisterButton: state.showRegisterButton
+    }
+}
+
+
+export default connect(mapStateToProps, null)(Dashboard)

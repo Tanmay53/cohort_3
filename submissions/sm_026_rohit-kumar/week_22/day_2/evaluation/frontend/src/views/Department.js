@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { connect } from 'react-redux'
+import {Redirect} from 'react-router-dom'
 
 class Department extends React.Component {
     constructor(props) {
@@ -17,9 +19,13 @@ class Department extends React.Component {
         console.log(this.state)
     } 
 
-    
-
     render() {
+        // redirect if user not logged in
+        if (! this.props.isLoggedIn) {
+            return <Redirect to="/login"></Redirect>
+        }
+
+
         return (
             <div>
                 <div className='row mt-2'>
@@ -42,5 +48,14 @@ class Department extends React.Component {
         )
     }
 }
-export default Department
+
+const mapStateToProps = (state) => {
+    return {
+        isLoggedIn: state.isLoggedIn,
+        menuLabel: state.menuLabel,
+        showRegisterButton: state.showRegisterButton
+    }
+}
+
+export default connect(mapStateToProps, null)(Department)
 
