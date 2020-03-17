@@ -51,7 +51,6 @@ function Routes(props){
                     <Route path="/add" exact component = {Add} />
                     <Route path="/signin" exact component = {SignIn} />
                     <Route path="/signup" exact component = {SignUp} />
-                    {/* <Route path="/myblog/:id" component = {(props) => <Update {...props} />} /> */}
                 </Switch>
             </div>
         )
