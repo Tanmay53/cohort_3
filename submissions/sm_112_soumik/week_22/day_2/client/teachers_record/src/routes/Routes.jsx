@@ -1,6 +1,11 @@
 import React from "react";
+import { Link, Redirect, Switch, Route } from "react-router-dom";
+import { connect } from "react-redux";
+import Login from "../Components/Login";
+import Register from "../Components/Register";
 
-function Routes() {
+function Routes(props) {
+  console.log(props.auth);
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -48,8 +53,15 @@ function Routes() {
           </ul>
         </div>
       </nav>
+      <Switch>
+        {/* <Route exact path="/" component={() => <Home />} /> */}
+        <Route exact path="/login" component={() => <Login />} />
+        <Route exact path="/register" component={() => <Register />} />
+      </Switch>
     </div>
   );
 }
-
-export default Routes;
+const mapStateToProps = state => ({
+  auth: state.auth.status
+});
+export default connect(mapStateToProps, null)(Routes);
