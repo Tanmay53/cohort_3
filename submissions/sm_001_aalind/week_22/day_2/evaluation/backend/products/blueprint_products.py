@@ -64,7 +64,7 @@ def product_chg_del(product_id):
         return json.dumps({"error": True, "message": "Wrong User Token!"})
 
     if user["email"] == "admin@gmail.com":
-        if http_method == "PATCH" and user["email"] == "admin@gmail.com":
+        if http_method == "PATCH":
             name = request.json.get("name")
             price = request.json.get("price")
             category_id = request.json.get("category_id")
@@ -72,7 +72,7 @@ def product_chg_del(product_id):
             modification = update_product(product_id, name, price, category_id)
 
             return json.dumps(modification)
-        elif http_method == "DELETE" and user["email"] == "admin@gmail.com":
+        elif http_method == "DELETE":
             deletion = delete_product(product_id)
 
             return json.dumps(deletion)
