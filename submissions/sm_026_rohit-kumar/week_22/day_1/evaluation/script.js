@@ -12,11 +12,11 @@ function load() {
 
 } 
 
-
 function currentSelection(title, heading, image) {
-    // console.log(title, heading, image)
+    console.log(title, heading, image)
     document.getElementById("main-heading").innerHTML = heading
-    document.getElementById("image").setAttribute("src", image)
+    document.getElementById("image1").setAttribute("src", image)
+    console.log(image)
 }
 
 

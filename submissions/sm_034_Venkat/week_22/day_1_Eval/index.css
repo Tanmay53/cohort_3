@@ -1,0 +1,166 @@
+#navDiv {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid gray;
+    padding: 15px 0;
+}
+
+#cardsDiv {
+    /* margin: 30px 5%; */
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 4%;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+#cardsDiv > div {
+    height: auto;
+    /* border: 1px solid; */
+}
+
+form > input,textarea{
+    float: right;
+    
+}
+
+#formDiv {
+    margin-top: 30px;
+}
+#formDiv>h3{
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+#eachCard {
+    height: auto;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+#eachCard h3 {
+    text-transform: capitalize;
+    color: blue;
+}
+
+#eachCard img,h3,p {
+    margin: auto;
+    padding: 10px 0;
+}
+#eachCard p {
+    word-wrap: break-word;
+}
+#removeBtn {
+    padding: 2px;
+    width: 100px;
+    background-color: coral;
+    margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    #navDiv {
+        width: 80%;
+    }
+    
+    #cardsDiv {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 4%;
+    }
+
+    #formDiv {
+        margin-top: 25px;
+    }
+    
+    form {
+        width: 70%;
+        margin: auto;
+    }
+
+    #eachCard img,h3,p {
+        margin: auto;
+        padding: 10px 0;
+    }
+ 
+    #removeBtn {
+        padding: 2px;
+        width: 100px;
+        background-color: coral;
+        margin: auto;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #navDiv {
+        width: 85%;
+        margin: auto;
+    }
+
+    #cardsDiv {
+        /* margin: 30px 5%; */
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 4%;
+        padding: 10px;
+        word-wrap: break-word;
+    }
+
+    #cardsDiv> div {
+        margin: 15px 0;
+    }
+
+    #formDiv {
+        margin-top: 20px;
+    }
+
+    #submitBtn  {
+        margin-top: 30px;
+    }
+
+    form {
+        width: 90%;
+        margin: auto;
+    }
+    
+    #eachCard {
+        height: auto;
+        /* border: 1px solid; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+    }
+    
+    #eachCard h3 {
+        text-transform: capitalize;
+        color: blue;
+    }
+    
+    #eachCard img,h3,p {
+        margin: auto;
+        padding: 10px 0;
+    }
+    #eachCard p {
+        word-wrap: break-word;
+    }
+    #removeBtn {
+        padding: 2px;
+        width: 100px;
+        background-color: coral;
+        margin: auto;
+    }
+}
