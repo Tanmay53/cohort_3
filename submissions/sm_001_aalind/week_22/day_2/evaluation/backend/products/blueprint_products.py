@@ -1,5 +1,6 @@
 import json
 import jwt
+import math
 from flask import Blueprint, request
 from products.products_helpers import (
     get_all_products,
@@ -7,6 +8,7 @@ from products.products_helpers import (
     get_product_by_id,
     update_product,
     delete_product,
+    get_products_by_pg_limit,
 )
 
 products = Blueprint("products", __name__)
@@ -25,8 +27,19 @@ def product():
 
     if http_method == "GET":
         products = get_all_products()
+        curr_pg = request.args.get("page", default=1, type=int)
+        per_pg = request.args.get("per_page", default=10, type=int)
+        total_pages = math.ceil(len(products) / per_pg)
+        prev_pg_end = (curr_pg - 1) * per_pg
 
-        return json.dumps(products)
+        curr_pg_products = get_products_by_pg_limit(prev_pg_end, per_pg)
+
+        return json.dumps(
+            {
+                "error": False,
+                "payload": {"products": curr_pg_products, "total_pages": total_pages},
+            }
+        )
     elif http_method == "POST" and user["email"] == "admin@gmail.com":
         name = request.json.get("name")
         price = request.json.get("price")

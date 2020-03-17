@@ -1,6 +1,20 @@
 from server import mysql
 
 
+def get_products_by_pg_limit(offset, limit):
+    cur = mysql.connection.cursor()
+    cur.execute(
+        """
+        SELECT * FROM `products` LIMIT %s, %s
+    """,
+        (offset, limit),
+    )
+    result = cur.fetchall()
+    cur.close()
+
+    return result
+
+
 def delete_product(id):
     product = get_product_by_id(id)
 
