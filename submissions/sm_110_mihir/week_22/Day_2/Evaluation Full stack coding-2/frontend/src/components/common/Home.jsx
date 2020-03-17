@@ -81,11 +81,17 @@ export class Home extends Component {
                 </select>
               )}
             </div>
-            <div className="col-4">
+
+            <div className="col-2">
               Sort by price:
               <button className="btn btn-primary" onClick={this.handleSort}>
                 <i class="fas fa-sort-down"></i>
               </button>
+            </div>
+            <div className="col-2">
+              <a href="http://localhost:3000/">
+                <button className="btn btn-success ml-1">Logout</button>
+              </a>
             </div>
           </div>
         </div>
