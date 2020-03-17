@@ -173,7 +173,7 @@ def add_teacher():
 def all_tecahers():
     cursor = mysql.connection.cursor()
     cursor.execute("""select teachers.id ,name,subject,created_at,class,section from teachers join class on teachers.class_id = class.id
-    join sections on sections.id = teachers.section_id order by name asc limit 3 """)
+    join sections on sections.id = teachers.section_id order by name asc limit 10 """)
     res = cursor.fetchall()
     data = list()
     for i in res:
@@ -195,6 +195,20 @@ def edit_teacher():
     mysql.connection.commit()
     cursor.close()
     return "teacher added succesfully"
+
+
+@app.route("/filter_table", methods=["POST"])
+def filter_table():
+    f_type = request.json["type"]
+    order = request.json["order"]
+    cursor = mysql.connection.cursor()
+    cursor.execute("""select teachers.id ,name,subject,created_at,class,section from teachers join class on teachers.class_id = class.id
+    join sections on sections.id = teachers.section_id order by %s %s limit 10 """, (f_type, order))
+    res = cursor.fetchall()
+    data = []
+    for i in res:
+        data.append(i)
+    return json.dumps(data, default=str)
 
 
 if __name__ == "__main__":
