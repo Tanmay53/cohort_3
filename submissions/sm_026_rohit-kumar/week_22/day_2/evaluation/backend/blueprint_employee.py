@@ -48,6 +48,31 @@ def get_all_department():
     result = select_all(query, [])
     return jsonify(result)
 
+@employee.route('/department/add', methods=['POST'])
+def get_all_department_add():
+    try:
+        dept_name = request.json['dept_name']
+        dept_uuid = request.json['dept_uuid']
+
+        query = "INSERT INTO `department`(`dept_name`, `dept_uuid`) VALUES (%s, %s)"
+        result = insert(query, [dept_name, dept_uuid])
+        return jsonify(result)
+    except Exception:
+        return jsonify({'result':'failure'})
+
+@employee.route('/department/delete', methods=['DELETE'])
+def get_all_department_delete():
+    try:
+        dept_id = request.json['dept_id']
+
+
+        query = "DELETE FROM `department` WHERE `id` = %s"
+        result = delete(query, [dept_id])
+        return jsonify(result)
+    except Exception as ex:
+        print(ex)
+        return jsonify({'result':'failure'})
+
 
 # probe
 @employee.route('/probe', methods=['POST'])
