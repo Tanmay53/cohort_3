@@ -1,0 +1,13 @@
+.fIcon{
+    font-size: 20px;
+}
+.menu{
+    font-size:25px;
+    cursor: pointer;
+}
+.menu:hover{
+    color:#3A83F7
+}
+.rounded{
+    border-radius: 30px;
+}
