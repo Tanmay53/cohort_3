@@ -3,7 +3,7 @@ window.onload = function () {
     $("#parentRow").hide();
 }
 var parent = document.getElementById("parentRow")
-snum = 0
+snum = 1
 
 function insertData(inputName, inputUrl, inputPrice) {
     var tRow = document.createElement("tr")
@@ -59,40 +59,13 @@ function insertData(inputName, inputUrl, inputPrice) {
     })
 }
 
-function getData() {
+
+document.getElementById("btndiv").addEventListener("click", function () {
     inputName = document.getElementById("inputName").value
     inputUrl = document.getElementById("inputUrl").value
-    inputUrl = inputUrl.split(" ").join("+")
     inputPrice = document.getElementById("inputPrice").value
+    insertData(inputName, inputUrl, inputPrice)
     $("#popuText").hide();
     $("#parentRow").show();
     snum++
-    gotData=""
-    var request = $.ajax({
-        "url": "https://api.unsplash.com/search/photos?page=1&per_page=1&query="+inputUrl,
-        "method": "GET",
-        "headers": {
-            "Authorization": "Client-ID 0f39497cfbeec70c075ae99dff44cb8732f967ee28c21ef05ec4a76808fb5d6b" ,
-
-        }
-    })
-    request.done(function (data) {
-        
-        
-        if (data["results"][0]!==undefined){
-            console.log(data["results"][0]["urls"]["thumb"])
-            inputUrl = data["results"][0]["urls"]["thumb"]
-        }
-        else{console.log("Image not found")}
-        
-        insertData(inputName, inputUrl, inputPrice)
-        
-    })
-    request.fail(function () {
-        console.log
-        console.log("Request Failed")
-    })
-}
-
-
-document.getElementById("btndiv").addEventListener("click",getData)
+})
