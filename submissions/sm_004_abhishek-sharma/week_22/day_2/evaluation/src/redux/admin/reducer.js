@@ -1,4 +1,4 @@
-import{ ADD_EMPLOYEE } from "./actionTypes"
+import{ ADD_EMPLOYEE, DELETE_DATA } from "./actionTypes"
 
 let initialState = {
     empList : []
@@ -11,6 +11,11 @@ const adminReducer = (state = initialState, action) => {
             return{
                 ...state,
                 empList: [...state.empList, action.payload],
+            }
+        case DELETE_DATA:
+            return{
+                ...state,
+                empList: []
             }
         default:
             return state

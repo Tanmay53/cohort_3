@@ -2,8 +2,13 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 import { LogoutAdmin } from "../../redux/auth/actions"
+import { wipe } from "../../redux/admin/actions"
 
 export class NavBar extends Component {
+    handleLogout = () => {
+        this.props.logout()
+        this.props.clear()
+    }
     render() {
         return (
             <div className="container-fluid">
@@ -24,7 +29,7 @@ export class NavBar extends Component {
                     </div>
                     <div className="col-12 pb-2 col-sm-3 col-md-3 col-lg-1">
                             <button type="button" 
-                                    onClick = {this.props.logout}
+                                    onClick = {this.handleLogout}
                                     className="btn btn-danger">
                                 LOGOUT
                             </button>
@@ -35,13 +40,10 @@ export class NavBar extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
-    
-})
-
 const mapDispatchToProps = dispatch => ({
-    logout: (payload) => dispatch(LogoutAdmin(payload))
+    logout: (payload) => dispatch(LogoutAdmin(payload)),
+    clear: () => dispatch(wipe())
   });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar)
+export default connect(null, mapDispatchToProps)(NavBar)
 

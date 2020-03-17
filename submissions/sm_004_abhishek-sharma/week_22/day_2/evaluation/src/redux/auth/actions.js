@@ -32,7 +32,7 @@ export const registerAdmin = state => {
       }
     }
     catch (err) {
-      alert("Login Failed");
+      alert("Registration Failed!");
       console.log(err);
       return dispatch(Register(false));
     }
@@ -72,7 +72,7 @@ export const loginAdmin = state => {
       }
     }
     catch (err) {
-      alert("Login Failed");
+      alert("Unauthorized Access!");
       console.log(err);
       return dispatch(Login(false));
     }
