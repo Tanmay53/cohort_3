@@ -1,0 +1,94 @@
+body {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-box, .right-box {
+    min-width: 45%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.card {
+    border: 1px solid #e9ebec;
+    padding:10px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.card-small-heading {
+    color: #BDE855; 
+    font-size: 12px;
+}
+
+.small-head {
+    font-size: 12px;
+    text-align: center;
+    color: #C1B6BF;
+}
+
+.heading {
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+}
+
+.span-style {
+    margin:5px;
+}
+
+.span-style  > .fa-calendar {
+    border-right: 2px solid black;
+    padding-right: 5px;
+}
+
+
+
+
+table {
+    width: 50%;
+    margin-top: 10px;
+}
+
+input {
+    font-size: 15px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-box, .right-box {
+        min-width: 90%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    table {
+        width:95%;
+        margin-top: 10px;
+    }
+    
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    .foot-heading {
+        text-align: center;
+        font-weight: bolder;
+    }
+
+  }

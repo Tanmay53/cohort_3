@@ -6,8 +6,9 @@
 }
 #products-display {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 15px;
+  grid-template-columns: auto;
+  justify-content: center;
+  gap: 50px;
 }
 .card {
   display: flex;
@@ -17,9 +18,6 @@
   width: 260px;
   height: 420px;
 }
-.card-img {
-  background-color: red;
-}
 .card-img > img {
   max-width: 100%;
   max-height: 100%;
@@ -28,13 +26,20 @@
 .card-header,
 .card-body,
 .card-lower {
-  padding-left: 15px;
+  padding: 0px 5px 0px 15px;
   color: grey;
 }
 .card-header {
   color: #2d9bd8;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+}
+.card-body {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-lower > .tax {
@@ -62,19 +67,82 @@
   text-align: center;
 }
 #footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  margin-top: 20px;
   box-shadow: 2px 2px 2px 2px lightgrey;
 }
 .footer-img {
   height: 100px;
   width: 100px;
   margin: 0px 20px;
-  background-color: blue;
 }
 .footer-img > img {
   width: 100%;
   height: 100%;
   display: block;
+}
+#footer-form {
+  margin-top: 20px;
+  background-color: lightblue;
+}
+#form-header {
+  margin: 20px 0px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+#footer-form > form {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+  justify-content: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  resize: none;
+}
+
+@media only screen and (min-width: 650px) {
+  #products-display {
+    grid-template-columns: auto auto;
+  }
+  #footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    box-shadow: 2px 2px 2px 2px lightgrey;
+  }
+  #footer-form > form {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-content: center;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group:nth-child(4) {
+    grid-column: 1 / span 3;
+  }
+  .form-group:last-child {
+    grid-column: 2 / span 1;
+  }
+}
+@media only screen and (min-width: 850px) {
+  #products-display {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #products-display {
+    grid-template-columns: auto auto auto auto;
+  }
 }

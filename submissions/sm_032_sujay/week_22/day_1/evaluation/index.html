@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>
+            evaluation-day-1
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="https://kit.fontawesome.com/b8d475717b.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <p class="header">Featured</p>
+            <!-- MacBook -->
+        <div class="card">
+            <div class="prodCard">
+                <div id="prodPic">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTYfYulxUbcJvZXYbEWRoRoSLbS6s5IZpOMgyf5CaTk4JeYuCcV" alt="Macintosh"/>
+                </div>
+                <div class="cardTitle">
+                       <p>MacBook</p> 
+                </div>
+                <div class="cardBody">
+                    <p> Intel Core 2 duo powered by an Intel core 2 duo processor with speed 2.3Ghz.</p>
+                    <p> $602.00 
+                    Ex Tax: $500</p>
+                </div>
+                <div class="cardFooter">
+                    <p> <i class="fas fa-cart-plus"></i> ADD TO CART</p>
+                    <p><i class="fas fa-heart"></i></p>
+                    <p><i class="fas fa-trash-alt"></i></p>
+                </div>
+
+            </div>
+
+
+
+            
+<!-- iphone -->
+            <div class="prodCard">
+                <div id="prodPic">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuk3LN7DXvUUpHqEKig04_bYWaN3ef0e8Bv-2myIE__7nZZqyv" alt="iPhone"/>
+                </div>
+
+                <div class="cardTitle">
+                    <p>iPhone</p>
+            </div>
+            <div class="cardBody">
+                 <p>iPhone is a new revolutionary phone that allows to make calls by simply clicking on your contact!</p>
+                 <p>$123.20 <br>
+                Ex Tax: $100</p>
+            </div>
+
+                <div class="cardFooter">
+                    <p> <i class="fas fa-cart-plus"></i> ADD TO CART</p>
+                    <p><i class="fas fa-heart"></i></p>
+                    <p><i class="fas fa-trash-alt"></i></p>
+                </div>
+            </div>
+
+            <div class="prodCard">
+                <div id="prodPic">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQLWyAyfHILcWeQYBXCdlHyDj1Suj0uavt5phqM4jLVP3w2bjZG" alt="Apple Cinema"/>
+                </div>
+
+                <div class="cardTitle">
+                   <p> Apple Cinema "30</p>
+            </div>
+            <div class="cardBody">
+                <p> This 30 inch Apple display delivers a fantasic 2560X1600 display which makes it look 100% real </p>
+                <p> $100 <span >$122</span> <br>
+                Ex Tax: $90</p>
+            </div>
+
+
+                <div class="cardFooter">
+                    <p> <i class="fas fa-cart-plus"></i> ADD TO CART</p>
+                    <p><i class="fas fa-heart"></i></p>
+                    <p><i class="fas fa-trash-alt"></i></p>
+                </div>
+            </div>
+
+            <div class="prodCard">
+                <div id="prodPic">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7puooi8-FsQTvNzM59FMign1UqHwsqIkdFwV9qC6WFIgb0Uel" alt="Say Cheese"/>
+                </div>
+
+
+                <div class="cardTitle">
+                    <p>Canon EOS 5D</p>
+            </div>
+            <div class="cardBody">
+                 <p> This Camera delivers a fantasic 2560X1600 display which makes the photographs look 100% real</p> 
+                <p> $98.00 <span >$122</span> <br>
+                    Ex Tax: $80</p>
+            </div>
+
+                <div class="cardFooter">
+                    <p> <i class="fas fa-cart-plus"></i> ADD TO CART</p>
+                    <p><i class="fas fa-heart"></i></p>
+                    <p><i class="fas fa-trash-alt"></i></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sponsors">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRpqMTis9c3y8gh2LM7b9Dr9raCPhu9LiyBy09zg67fZ0AeAfp9" alt=""/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTc6WZy3q8pYJharkvXG49TTJV7LKJzTKtZz9DZHTcy-3hS8-Yt" alt=""/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXpckzIVWPFEJKGom7FgfI6fUJ7k75bJ_iXb_XKEyKeLCqlsId" alt=""/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ1BT2qZd--RJthFL86HbVyzALh3ueqfCK2YQW0Vj1M613dDef6" alt=""/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAWMueqlTssMvNgN1k0NztDWh-n85dSBl92QjTBq4bDDnQ5LVx" alt=""/>
+
+        </div>
+
+
+        <div class="userData">
+            
+
+            <label>Product Image
+            <input type="text" id="url"></label>
+
+            <label>Product Name
+            <input type="text" id="prodName"></input></label>
+
+            <label> Product Specs
+            <input type="text" id="prodSpecs"></label>
+
+            <label>Product Cost
+            <input type="text" id="cost"></label>
+
+
+            <button id="addBtn" onclick="add()"> ADD </button>
+
+
+        </div>
+
+        <div id="dynamic">
+
+        </div>
+
+
+
+        <script type="text/javascript" src= "script.js"></script>
+    </body>
+</html>

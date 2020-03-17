@@ -32,121 +32,6 @@
           <div>&#8644;</div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="./assets/laptop_img.jpg" alt="laptop-img" />
-        </div>
-        <div class="card-header">MacBook</div>
-        <div class="card-body">
-          Intel Core 2 Duo processor Powered byan Intel Core 2 Duo processor at
-          speeds up to 2.1..
-        </div>
-        <div class="card-lower">
-          <div class="price">$602.00</div>
-          <div class="tax">Ex Tax: $500.00</div>
-        </div>
-        <div class="card-footer">
-          <div><i class="fa fa-shopping-cart"></i>ADD TO CART</div>
-          <div>&hearts;</div>
-          <div>&#8644;</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="./assets/laptop_img.jpg" alt="laptop-img" />
-        </div>
-        <div class="card-header">MacBook</div>
-        <div class="card-body">
-          Intel Core 2 Duo processor Powered byan Intel Core 2 Duo processor at
-          speeds up to 2.1..
-        </div>
-        <div class="card-lower">
-          <div class="price">$602.00</div>
-          <div class="tax">Ex Tax: $500.00</div>
-        </div>
-        <div class="card-footer">
-          <div><i class="fa fa-shopping-cart"></i>ADD TO CART</div>
-          <div>&hearts;</div>
-          <div>&#8644;</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="./assets/laptop_img.jpg" alt="laptop-img" />
-        </div>
-        <div class="card-header">MacBook</div>
-        <div class="card-body">
-          Intel Core 2 Duo processor Powered byan Intel Core 2 Duo processor at
-          speeds up to 2.1..
-        </div>
-        <div class="card-lower">
-          <div class="price">$602.00</div>
-          <div class="tax">Ex Tax: $500.00</div>
-        </div>
-        <div class="card-footer">
-          <div><i class="fa fa-shopping-cart"></i>ADD TO CART</div>
-          <div>&hearts;</div>
-          <div>&#8644;</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-img">
-          <img src="./assets/laptop_img.jpg" alt="laptop-img" />
-        </div>
-        <div class="card-header">MacBook</div>
-        <div class="card-body">
-          Intel Core 2 Duo processor Powered byan Intel Core 2 Duo processor at
-          speeds up to 2.1..
-        </div>
-        <div class="card-lower">
-          <div class="price">$602.00</div>
-          <div class="tax">Ex Tax: $500.00</div>
-        </div>
-        <div class="card-footer">
-          <div><i class="fa fa-shopping-cart"></i>ADD TO CART</div>
-          <div>&hearts;</div>
-          <div>&#8644;</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="./assets/laptop_img.jpg" alt="laptop-img" />
-        </div>
-        <div class="card-header">MacBook</div>
-        <div class="card-body">
-          Intel Core 2 Duo processor Powered byan Intel Core 2 Duo processor at
-          speeds up to 2.1..
-        </div>
-        <div class="card-lower">
-          <div class="price">$602.00</div>
-          <div class="tax">Ex Tax: $500.00</div>
-        </div>
-        <div class="card-footer">
-          <div><i class="fa fa-shopping-cart"></i>ADD TO CART</div>
-          <div>&hearts;</div>
-          <div>&#8644;</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img">
-          <img src="./assets/laptop_img.jpg" alt="laptop-img" />
-        </div>
-        <div class="card-header">MacBook</div>
-        <div class="card-body">
-          Intel Core 2 Duo processor Powered byan Intel Core 2 Duo processor at
-          speeds up to 2.1..
-        </div>
-        <div class="card-lower">
-          <div class="price">$602.00</div>
-          <div class="tax">Ex Tax: $500.00</div>
-        </div>
-        <div class="card-footer">
-          <div><i class="fa fa-shopping-cart"></i>ADD TO CART</div>
-          <div>&hearts;</div>
-          <div>&#8644;</div>
-        </div>
-      </div>
     </div>
     <div id="footer">
       <div class="footer-img">
@@ -166,16 +51,33 @@
       </div>
     </div>
     <div id="footer-form">
+      <div id="form-header">Product Form</div>
       <form onsubmit="formSubmitHandler(event)">
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" required />
-        <label for="content">Content</label>
-        <input type="text" name="content" id="content" required />
-        <label for="price">Price</label>
-        <input type="number" name="price" id="price" min="0" required />
-        <label for="tax">Tax</label>
-        <input type="number" name="tax" id="tax" min="0" required />
-        <input type="submit" value="Add Card" />
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" required />
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" name="price" id="price" min="0" required />
+        </div>
+        <div class="form-group">
+          <label for="tax">Tax</label>
+          <input type="number" name="tax" id="tax" min="0" required />
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea
+            type="text"
+            rows="5"
+            name="content"
+            id="content"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Add Product" id="addBtn" />
+        </div>
       </form>
     </div>
   </body>
