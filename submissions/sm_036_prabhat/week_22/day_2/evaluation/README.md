@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Netlify Link 
 
-Open in browaer [Click here](https://facebook.github.io/create-react-app/docsrunning-tests)
+Open in browaer [Click here](https://stoic-swartz-fda492.netlify.com)
 
 ## Available Scripts
 
