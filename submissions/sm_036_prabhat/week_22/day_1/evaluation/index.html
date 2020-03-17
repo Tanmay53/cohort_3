@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="textCenter fontSize_50">Our Recent News</h1>
+        <div id="cards" class="grid">
+            <div class="grid">
+                <div>
+                    <div>
+                        <img src="http://placehold.jp/380x250.png"> 
+                    </div>
+                    <small class="colorRed">Business planning</small>
+                    <h3>Amazing Places To Visit In Summer</h3>
+                    <p class="colorGray">Nov 30, 2020</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div>
+                    <div>
+                        <img src="http://placehold.jp/380x250.png"> 
+                    </div>                    
+                    <small class="colorRed">Audit</small>
+                    <h3>Amazing Places To Visit In Summer</h3>
+                    <p class="colorGray">Nov 30, 2020</p> 
+                </div>
+            </div>
+            <div class="grid">
+                <div>
+                    <div>
+                        <img src="http://placehold.jp/380x250.png"> 
+                    </div>                    
+                    <small class="colorRed">Business planning</small>
+                    <h3>Amazing Places To Visit In Summer</h3>
+                    <p class="colorGray">Nov 30, 2020</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="container footerGrid">
+            <div class="colorWhite">
+                <h1>Request for Call <br> Back</h1>
+                <div>Lorem ipsum dolor, sit amet <br> consectetur adipisicing elit.<br> Accusantium voluptatem.</div>
+            </div>
+            <div>
+                <form>
+                    <div>
+                        <input id="name" type="text" placeholder="Name">
+                        <input id="number" type="number" placeholder="Phone">
+                    </div>
+                    <div>
+                        <select id="selectItem">
+                            <option value="Services">Services</option>
+                            <option value="Audit">Audit</option>
+                            <option value="Business planning">Business planning</option>
+                        </select>
+                    </div>
+                </form>
+                <button onclick="submitData()" >Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
