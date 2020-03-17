@@ -10,6 +10,10 @@ app.config["MYSQL_DB"] = "grocery_store"
 app.config["MYSQL_CURSORCLASS"] = "DictCursor"
 
 from auth.blueprint_auth import auth
+from products.blueprint_products import products
+from categories.blueprint_categories import categories
 
 app.register_blueprint(auth, url_prefix="/auth")
+app.register_blueprint(products, url_prefix="/products")
+app.register_blueprint(categories, url_prefix="/categories")
 
