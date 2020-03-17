@@ -71,7 +71,7 @@ function emailverifier(inputmail) {
             return
         }
     }
-    console.log(inputmail, ":", result1)
+    // console.log(inputmail, ":", result1)
 }
 
 emailverifier('dipanshugmail.com')
