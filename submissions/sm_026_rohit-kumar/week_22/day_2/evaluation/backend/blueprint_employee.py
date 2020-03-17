@@ -34,46 +34,76 @@ def get_all_department():
     result = select_all(query, [])
     return jsonify(result)
 
-@employee.route('/fetch', methods=['POST'])
-def get_all_records():
-    gender = request.json['gender']
-    department = request.json['department']
-    sal_order      = request.json['sal_order']
 
-    if sal_order == 'asc':
-        temp_qry = 'ORDER BY salary ASC'
-    else:
-        temp_qry  = 'ORDER BY salary DESC'
-    
+# probe
+@employee.route('/probe', methods=['POST'])
+def get_all_probe():
+    gender      = request.json['gender']
+    department  = request.json['department']
+  
+    # common in all case
+    base_query = '''
+                   SELECT COUNT(*) AS `total_rec` FROM employee e LEFT JOIN department d on e.dept_id = d.id  
+                 '''
     if gender == 'all' and department == 'all':
-        query = '''SELECT e.id, e.emp_uuid, e.emp_name, e.email, e.gender, e.salary, 
-                   d.dept_name FROM employee e LEFT JOIN department d on e.dept_id = d.id 
-                ''' + temp_qry
+        query = base_query
         result = select_all(query, [])        
+
     elif gender != 'all' and department == 'all':
-        query = '''SELECT e.id, e.emp_uuid, e.emp_name, e.email, e.gender, e.salary, 
-                   d.dept_name FROM employee e LEFT JOIN department d on e.dept_id = d.id
-                   where e.gender = %s
-                ''' + temp_qry
+        query = base_query + " where e.gender = %s"
         result = select_all(query, [gender])
+
     elif gender == 'all' and department != 'all':
-        query = '''SELECT e.id, e.emp_uuid, e.emp_name, e.email, e.gender, e.salary, 
-                   d.dept_name FROM employee e LEFT JOIN department d on e.dept_id = d.id
-                   where e.dept_id = %s 
-                ''' + temp_qry
+        query = base_query + " where e.dept_id = %s"
         result = select_all(query, [department])
+
     else:
-        query = '''SELECT e.id, e.emp_uuid, e.emp_name, e.email, e.gender, e.salary, 
-                   d.dept_name FROM employee e LEFT JOIN department d on e.dept_id = d.id
-                   where e.dept_id = %s and e.gender = %s
-                ''' + temp_qry
+        query = base_query + " where e.dept_id = %s and e.gender = %s"
         result = select_all(query, [department, gender])
     return jsonify(result)
 
 
 
 
-'''
-SELECT e.id, e.emp_uuid, e.emp_name, e.email, e.gender, e.salary, d.dept_name FROM employee e LEFT JOIN department d on e.dept_id = d.id;
 
-'''
+
+
+
+
+@employee.route('/fetch', methods=['POST'])
+def get_all_records():
+    gender      = request.json['gender']
+    department  = request.json['department']
+    sal_order   = request.json['sal_order']
+    limit_beg   = request.json['limit_beg']
+    limit_end   = request.json['limit_end'] 
+
+    # common in all case
+    base_query = '''
+                   SELECT LPAD(e.id, 4, "0") as id, e.emp_uuid, e.emp_name, e.email, e.gender, e.salary, 
+                   d.dept_name FROM employee e LEFT JOIN department d on e.dept_id = d.id  
+                 '''
+
+    if sal_order == 'asc':
+        temp_qry = 'ORDER BY salary ASC LIMIT {}, {}'.format(limit_beg, limit_end)
+    else:
+        temp_qry  = 'ORDER BY salary DESC LIMIT {}, {}'.format(limit_beg, limit_end)
+    
+
+    if gender == 'all' and department == 'all':
+        query = base_query + temp_qry
+        result = select_all(query, [])        
+
+    elif gender != 'all' and department == 'all':
+        query = base_query + " where e.gender = %s " + temp_qry
+        result = select_all(query, [gender])
+
+    elif gender == 'all' and department != 'all':
+        query = base_query + " where e.dept_id = %s " + temp_qry 
+        result = select_all(query, [department])
+
+    else:
+        query = base_query + " where e.dept_id = %s and e.gender = %s " + temp_qry
+        result = select_all(query, [department, gender])
+    return jsonify(result)
+

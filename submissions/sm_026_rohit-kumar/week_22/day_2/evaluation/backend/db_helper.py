@@ -21,7 +21,8 @@ def insert(query, arguments):
         
         conn.commit()
         result = {'result': 'success'}
-    except Exception:
+    except Exception as ex:
+        print(ex)
         result = {'result': 'failure'}
     finally:
         conn.close()
