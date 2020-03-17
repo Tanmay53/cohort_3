@@ -1,0 +1,216 @@
+
+/* top div */
+#top{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    background: #F8F8FE;
+    padding-bottom: 3%;
+}
+.topcards{
+    height: 90px;
+    flex-basis: 30%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin:2%;
+    border-radius: 15px;
+}
+.topcards img{
+    height: 60%;
+    padding: 25%;
+    border-radius: 50%;
+}
+.topcardstext{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    /* flex-basis: 50%; */
+}
+.topcardstext p{
+    margin-bottom: -5%;
+    color: white;
+}
+.p1{
+    font-size: 20px;
+}
+.topcard1{
+    background:#EFCE00;
+}
+.topcard2{
+    background:#5421DC;
+}
+.topcard3{
+    background:#00C6DE;
+}
+@media (max-width:768px){
+    .topcards img{
+        height: 40%;
+    }
+    .topcardstext p{
+        font-size: 15px;
+    }
+}
+@media (max-width:600px){
+    .topcards{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* mid div */
+#mid {
+    justify-content: center;
+}
+.midtext{
+    margin:auto;
+    margin-top:4% ;
+    margin-bottom:2% ;
+    width: 27%;
+    font-size: 45px;
+    font-family: 'Abril Fatface'
+}
+.midbuttons{
+    margin: 1%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.btn{
+    margin: 1px;
+    padding: 10px 15px;
+    background:#E5DDFC;
+    border-radius: 2px;
+}
+.btn:hover{
+    background: #00DAE9;
+    color: white;
+}
+@media (max-width:768px){
+    .midtext{
+        width: 50%;
+        font-size: 32px;
+    }
+}
+
+/* bottom */
+
+#form{
+    margin: 5%;
+    display: grid;
+    grid-template-areas: "t1 t2 t2"
+                         "m1 m2 m2"
+                         "b1 b2 b2"
+                         "d1 d1 d1"
+}
+.t1{
+    margin: auto;
+    grid-area: t1;
+}
+.m1{
+    margin: auto;
+    grid-area: m1;
+}
+.b1{
+    margin: auto;
+    grid-area: b1;
+}
+#categoryInp{
+    grid-area: t2;
+    padding: 2%;
+}
+#headingInp{
+    grid-area: m2;
+    padding: 1%;
+}
+#contentInp{
+    grid-area: b2;
+    padding: 5%;
+}
+.addAcard{
+    font-size: 25px;
+    margin-left: 5%;
+    font-weight: bold;
+}
+#bottom .addbtn{
+    background: green;
+    grid-area: d1;
+    margin-top: 10%;
+    padding: 2%;  
+    width: 20%;  
+    color: white;
+}
+#bottom .addbtn:hover{
+    background: white;
+    color: green;
+    border: 1px solid green;
+}
+
+/* Cards */
+
+#cards{
+    margin: 5% 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    width: 30%;
+    margin:2%;
+    flex-basis: 28%;
+}
+.card img{
+    width: 100%;
+}
+.btnsrow{
+    display: flex;
+    flex-direction: row;
+}
+.cardbtn{
+    margin:1%;
+    width: 30%;
+    padding: 15px;
+    background:white;
+    color:#00DAE9;
+    border:1px solid #00DAE9;
+    border-radius: 2px;
+}
+.cardbtn2{
+    color:red;
+    border:1px solid red;
+}
+.cardbtn:hover{
+    background: #00DAE9;
+    color: white;
+}
+.cardbtn2:hover{
+    background: red;
+    color: white;
+}
+.category{
+    padding:2% 5%;
+    font-size: 16px;
+}
+.heading{
+    padding: 2% 5%;
+    font-size: 25px;
+    font-family: 'Abril Fatface'
+}
+.content{
+    padding: 5%;
+}
+
+@media (max-width:600px){
+    #cards{
+        margin: 5% 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 98%;
+        margin:2%;
+        flex-basis: 28%;
+    }
+}

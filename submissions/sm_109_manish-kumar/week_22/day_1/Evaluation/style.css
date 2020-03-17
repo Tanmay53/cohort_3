@@ -1,0 +1,136 @@
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+.top{
+  padding-top: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  background-color: seagreen;
+}
+.card{
+  width: 250px;
+  height: 300px;
+  margin: auto;
+  background-color: lightblue;
+}
+.extra{
+  height: 50px;
+  background-color: seagreen;
+}
+.main{
+  width: 100%;
+  background-color: seagreen;
+}
+.certificate{
+  background-color: seagreen;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.name{
+  background-color: seagreen;
+}
+.name h3{
+  color: white;
+  font-size: 28px;
+  background-color: seagreen;
+}
+.btn{
+  margin-top: 20px;
+  background-color: red;
+  border-radius: 5px;
+  margin-left: 30%;
+}
+.form-div{
+  width: 80%;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+}
+.form-class{
+  display: flex;
+  width: 70%;
+  border: 1px solid black;
+  margin: 5% auto;
+  padding: 5%;
+  justify-content: space-around;
+}
+.input{
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 40px;
+  width: 300px;
+}
+#submit{
+  background-color: green;
+  border: 2px solid black;
+  color: pink;
+  border-radius: 2px;
+  width: 6em;
+}
+
+@media all and (max-width: 1024px){
+  .top{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    background-color: seagreen;
+  }
+  .certificate{
+    background-color: seagreen;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding-left: 25%;
+  }
+  .form-class{
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 70%;
+    border: 1px solid black;
+    margin: 5% auto;
+    padding: 5%;
+  }
+}
+@media all and (max-width: 600px) {
+  .top{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    background-color: seagreen;
+  }
+  .card{
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    background-color: lightblue;
+  }
+  .certificate{
+    background-color: seagreen;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding-left: 25%;
+  }
+  .form-class{
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    width: 70%;
+    border: 1px solid black;
+    margin: 5% auto;
+    padding: 5%;
+  }
+  h3{
+    margin-left: 0%;
+  }
+}

@@ -1,0 +1,7 @@
+ip4 - ip4 is 32-bit format and it look like 122.122.122.122 
+      where each section include a number from 0 to 255 and it is only numeric type.
+
+ip6 - ip6 is 128-bit format and 4X times of ip4 and it look like 2001:0db8:85a3:0000:0000:8a2e:0370:7334. 
+      it is  and alpha numberic type. 
+
+

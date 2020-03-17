@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Evalution_1
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="maindiv">
+        <div id="maintitle">
+            <h1>
+                CHALLENGES SOLVED WITH SANITY
+            </h1>
+        </div>
+        <div class="topcarddiv">
+            <div class="card">
+                <div>
+                    <img src="https://via.placeholder.com/450X200" alt="firstcardimage"></img>
+                </div>
+                <div class="cardtext">
+                    <p>Eurostar</p>
+                    <div>
+                        <h2>A better digital experience for millions of travellers</h2>
+                    </div>
+                    <a href="#">Read case study -></a>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="https://via.placeholder.com/450X200" alt="firstcardimage"></img>
+                </div>
+                <div class="cardtext">
+                    <p>ahm</p>
+                    <div>
+                        <h2>Introducing a powerful backend for Australia's second largest health insurer</h2>
+                    </div>
+                    <a href="#">Read case study -></a>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="https://via.placeholder.com/450X200" alt="firstcardimage"></img>
+                </div>
+                <div class="cardtext">
+                    <p>XXL</p>
+                    <div>
+                        <h2>Improving time to marker for the largest Nordic soprts retailer</h2>
+                    </div>
+                    <a href="#">Read case study -></a>
+                </div>
+            </div>
+        </div>
+        <div class="formdiv ">
+            <div class="forminputdiv hidden">
+                <div>
+                    <label>Title</label>
+                    <br>
+                    <input id="titleinput"></input>
+                </div>
+                <div>
+                    <label>Description</label>
+                    <br>
+                    <input id="descinput"></input>
+                </div>
+                <div class="Addbuttondiv">
+                    <button onclick="addcard()">Add</button>
+                </div>
+            </div>
+            <div class="showcontrolbtn">
+                <button onclick="showform()">
+                    Add new card
+                </button>
+            </div>
+        </div>
+
+        <div class="subtitle">
+            <h1>
+                EXPLORE SOLUTIONS
+            </h1>
+        </div>
+
+        <div class="bottomcardholder">
+            <div class="narrowcards">
+                <div class="card1">
+                    <h3>Headless CMS</h3>
+                    <p>Build cutting-edge web experience without restrictions</p>
+                    <button id='1' onclick="deletecard(id)">Delete</button>
+                </div>
+                <div class="card2">
+                    <h3>Landing page builder</h3>
+                    <p>Empower your marketers, unchain your engineers.</p>
+                    <button id='2' onclick="deletecard(id)">Delete</button>
+
+                </div>
+                <div class="card3">
+                    <h3>Audience segmentation</h3>
+                    <p>Personalize content at scale</p>
+                    <button id='3' onclick="deletecard(id)">Delete</button>
+
+                </div>
+                <div class="card4">
+                    <h3>E-commer</h3>
+                    <p>Leverage headless commerce technology to sell anywhere</p>
+                    <button id='4' onclick="deletecard(id)">Delete</button>
+
+                </div>
+                <div class="card5">
+                    <h3>Editorial workflow</h3>
+                    <p>Enchance the editorial experience</p>
+                    <button id='5' onclick="deletecard(id)">Delete</button>
+
+                </div>
+                <div class="card6">
+                    <h3>Multi-dataset architecture</h3>
+                    <p>Fuel your entire ecosystem with one centrailzed hub</p>
+                    <button id='6' onclick="deletecard(id)">Delete</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

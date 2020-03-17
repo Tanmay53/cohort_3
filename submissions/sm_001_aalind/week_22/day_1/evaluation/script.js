@@ -4,7 +4,7 @@ let productsArr = [
     id: 1,
     title: 'MacBook',
     content:
-      'Intel Core 2 Duo processor Powered byan Intel Core 2 Duo processor at speeds up to 2.1..',
+      'Intel Core 2 Duo processor Powered byan Intel Core 2 Duo processor at speeds up to 2.1',
     price: 602.0,
     tax: 500.0
   },
@@ -27,7 +27,7 @@ let productsArr = [
 ];
 
 const createCard = product =>
-  `<div class='card' ondblclick="deleteProduct(${product.id})">
+  `<div class='card' onclick="deleteProduct(${product.id})">
   <div class='card-img'>
     <img src='./assets/laptop_img.jpg' alt='laptop-img' />
   </div>
@@ -56,7 +56,11 @@ const renderPage = productsArr => {
     htmlStrToRender += createCard(product);
   }
 
-  displayDiv.innerHTML = htmlStrToRender;
+  if (htmlStrToRender.length) {
+    displayDiv.innerHTML = htmlStrToRender;
+  } else {
+    displayDiv.innerHTML = '<h2>No Products Available!</h2>';
+  }
 };
 
 const formSubmitHandler = e => {
@@ -81,6 +85,7 @@ const formSubmitHandler = e => {
 
   productsArr.push(product);
   renderPage(productsArr);
+  e.target.reset();
 };
 
 const deleteProduct = productId => {
