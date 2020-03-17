@@ -1,0 +1,124 @@
+ 
+* {
+    box-sizing: border-box;  /* so that padding does not affect the width or anything like that */
+    margin: 10px; 
+    color: white;
+}
+
+body {
+    background-color: white;
+}
+
+body .container {
+    margin: auto;
+}
+
+.container {
+    display: grid;
+    /* height: 80vh; */
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+    background-color: rgb(33, 34, 39);
+}
+
+.container section {
+    background-color: rgb(22, 22, 26);
+}
+
+.nextMatchCards1 {
+    grid-area: 1/1/2/2;
+}
+
+.nextMatchCards2 {
+    grid-area: 2/1/3/2;
+    display: flex;
+}
+
+
+.nextMatchCards3 {
+    grid-area: 3/1/4/2;
+    display: flex;
+}
+
+.nextMatchCards4 {
+    grid-area: 4/1/5/2;
+    display: flex;
+}
+
+
+.recentResultsCards1 {
+    grid-area: 1/2/2/3;
+}
+
+.recentResultsCards2 {
+    grid-area: 2/2/3/3;
+    display: flex;
+}
+
+.recentResultsCards3 {
+    grid-area: 3/2/4/3;
+    display: flex;
+}
+
+.recentResultsCards4 {
+    grid-area: 4/2/5/3;
+    display: flex;
+}
+
+.country-flag {
+    height: 30px;
+    width: 50px;
+}
+
+.column1 {
+    display: flex;
+    margin-top: 50px;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btnCreateCard {
+    color: white;
+    background-color: black;
+    height: 30px;
+    width: 100px;
+}
+
+#btnDeleteCard {
+    color: white;
+    background-color: red;
+    height: 30px;
+    width: 100px;
+}
+
+/* Responsive */
+@media(max-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+
+    *{
+        box-sizing: border-box;  /* so that padding does not affect the width or anything like that */
+        margin: 10px; 
+        color: white;
+        font-size: 10px;
+    }
+    .country-flag {
+        height: 10px;
+        width: 30px;
+    }
+}
