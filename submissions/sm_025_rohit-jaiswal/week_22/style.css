@@ -1,0 +1,125 @@
+.head {
+  text-decoration: underline #80ebc9;
+  text-align: center;
+}
+
+#mainBox {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
+  background: white;
+  margin: auto;
+  padding: 90px 390px;
+  margin-bottom: -50px;
+  margin-top: -40px;
+}
+
+#mainBox #card {
+  background: white;
+  font-size: 30px;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px grey;
+}
+
+#card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 20px 20px 0px 0px; 
+}
+#card small {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#span {
+  padding: 10px 20px 10px 20px;
+}
+#card hr {
+  width: 90%;
+  color: gray;
+}
+#cont h4 {
+  font-weight: bolder;
+  font-size: 25px;
+  padding-left: 15px;
+}
+#cont p {
+  font-weight: bolder;
+  font-size: 20px;
+  padding-left: 15px;
+  color: gray;
+}
+#footBox {
+  display: grid;
+  background: #32b28a;
+  grid-template-columns: auto auto auto auto;
+  padding: auto;
+  border-radius: 20px;
+  margin: auto;
+  color: white;
+  width: 1100px;
+}
+#footBox #insite{
+margin: 50px 50px 50px 70px;
+}
+#insite small{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media only screen and (max-width: 1280px) {
+    #mainBox {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: auto;
+        background: white;
+        margin: auto;
+        padding: 90px 390px;
+        margin-bottom: -50px;
+        margin-top: -40px;
+      }
+      
+      #mainBox #card {
+        background: white;
+        font-size: 30px;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 2px 2px 3px grey;
+      }
+} 
+
+@media only screen and (max-width: 728px) {
+    #mainBox {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: auto;
+        background: white;
+        margin: auto;
+        padding: 90px 390px;
+        margin-bottom: -50px;
+        margin-top: -40px;
+      }
+      
+      #mainBox #card {
+        background: white;
+        font-size: 30px;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 2px 2px 3px grey;
+      }
+} 
+
+
+.button {
+    background-color: teal;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding: auto;
+    margin-left: 150px;
+  }
+
