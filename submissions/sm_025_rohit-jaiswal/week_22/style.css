@@ -17,7 +17,7 @@
 #mainBox #card {
   background: white;
   font-size: 30px;
-  height: 500px;
+  height: 100%;
   border-radius: 20px;
   box-shadow: 2px 2px 3px grey;
 }
@@ -25,7 +25,7 @@
 #card img {
   width: 100%;
   height: 180px;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0px 0px; 
 }
 #card small {
   font-size: 15px;
@@ -69,30 +69,57 @@ margin: 50px 50px 50px 70px;
     font-family: 'Times New Roman', Times, serif;
 }
 
-@media only screen and (min-width: 600px) {
-    
+@media only screen and (max-width: 1280px) {
+    #mainBox {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: auto;
+        background: white;
+        margin: auto;
+        padding: 90px 390px;
+        margin-bottom: -50px;
+        margin-top: -40px;
+      }
+      
+      #mainBox #card {
+        background: white;
+        font-size: 30px;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 2px 2px 3px grey;
+      }
 } 
 
-@media only screen and (min-width: 768px) {
-
+@media only screen and (max-width: 728px) {
+    #mainBox {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: auto;
+        background: white;
+        margin: auto;
+        padding: 90px 390px;
+        margin-bottom: -50px;
+        margin-top: -40px;
+      }
+      
+      #mainBox #card {
+        background: white;
+        font-size: 30px;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 2px 2px 3px grey;
+      }
 } 
 
-@media only screen and (min-width: 992px) {
 
-} 
-
-@media only screen and (min-width: 1200px) {
-
-}
 .button {
     background-color: teal;
     border-radius: 10px;
     color: white;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     cursor: pointer;
     padding: auto;
+    margin-left: 150px;
   }
 

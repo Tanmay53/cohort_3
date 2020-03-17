@@ -1,0 +1,172 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+body {
+    background-color: whitesmoke;
+}
+.center {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+.container {
+    width:80%;
+    padding:1em;
+    align-self: center;
+
+}
+.d-flex {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    column-gap: 1em;
+}
+.d-flex > div {
+    flex-basis: 1;
+    width: 30%;
+    flex-wrap: wrap;
+    padding:1em;   
+}
+.row {
+    display: inline-flex;
+}
+.scholarship {
+    padding:1em;
+    border:1px solid blue;
+    width:80%;
+    border-radius: 10px 10px;
+}
+
+.yellow {
+    background-color: rgb(218, 218, 69)
+}
+.blue {
+    background-color: blue;
+}
+.lightblue {
+    background-color: lightblue;
+}
+img[alt="scholarship"]{
+    width:1.3em;
+    height: 1.3em;
+    justify-self: center;
+    align-self: center;
+    border:2px solid white;
+    border-radius: 50%;
+    padding:1em;
+    background-color: white;
+}
+.scholarship-content {
+    padding:1em;
+    color:white;
+}
+#popular {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding:0.4em;
+    font-size: 40px;
+}
+.d-flex > p {
+    padding:0.6em 1em;
+    font-size: 16px;
+    border-radius: 8px 8px;
+    
+}
+.resize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    padding:1em 3em;
+    width: auto;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding:1em 0.1em;
+    line-height: 2em;
+}
+.card {
+    border:1px solid rgb(173, 166, 166);
+}
+.card button {
+    background-color: white;
+    padding:0.6em 0.4em;
+    transition: 0.3s ease-in;
+    border:1px solid green;
+    font-size:14px;
+    width: 50%;
+    margin-top: 1em;
+    
+}
+.card button:hover {
+    cursor: pointer;
+    background-color: green;
+    color:white;
+}
+.flex p {
+    font-size: 16px;
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1em;
+}
+.grid .card {
+    padding:1em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form > input, form > textarea {
+    margin:1em 0em;
+    padding:0.6em;
+    font-size: 16px;
+}
+form > button {
+    padding:0.4em;
+    background-color: white;
+    border:1px solid green;
+    font-size:16px;
+    transition: 0.3s ease-in;
+}
+form > button:hover {
+    background-color: lightgreen;
+    
+}
+
+@media screen and (max-width: 768px){
+    body {
+        overflow-x: hidden;
+    }
+    .center {
+       justify-content: center;
+       align-items: center;
+    }
+    .container {
+        padding:-1em;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+    .scholarship {
+        width:200%;
+    }
+    .box {
+        text-align: left;
+    }
+} 
