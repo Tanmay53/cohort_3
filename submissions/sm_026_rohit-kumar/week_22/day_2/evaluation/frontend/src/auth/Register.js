@@ -21,7 +21,7 @@ class Register extends React.Component {
         .then(res => {
             if (res['data']['result'] === 'success') {
                 this.props.history.push('/login')
-                // console.log('success')
+                console.log('success', res)
             } 
         })
         .catch(res => {

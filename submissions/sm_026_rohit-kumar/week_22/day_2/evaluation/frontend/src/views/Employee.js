@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from 'axios'
+import uuid from 'react-uuid'
 
 class Employee extends React.Component {
     constructor(props) {
@@ -6,9 +8,10 @@ class Employee extends React.Component {
         this.state = {
             name: '',
             email: '',
-            gender: '',
-            department: '',
-            salary: ''
+            gender: 'male',
+            department: '0',
+            salary: '',
+            all_department: []
         }
     }
 
@@ -18,6 +21,43 @@ class Employee extends React.Component {
         })
         console.log(this.state)
     } 
+
+    componentWillMount = () => {
+        const url = "http://localhost:5000/employee/department"
+        axios.get(url)
+        .then(res => {
+            this.setState({
+                all_department: res['data']['data']
+            })
+            console.log(this.state)
+        })
+    }
+    handleAdd = () => {
+        if (this.state.department == '0') {
+            return
+        }
+        // else proceed
+        const data = {
+            emp_name: this.state.name,
+            email: this.state.email,
+            gender: this.state.gender,
+            dept_id : this.state.department,
+            salary: this.state.salary, 
+            emp_uuid: uuid()
+        }
+        const url = "http://localhost:5000/employee/create"
+        axios.post(url, data)
+        .then(res => {
+            if (res['data']['result'] == 'success') {
+                this.setState({
+                    name: '',
+                    email: '',
+                    salary: ''
+                })
+            }
+        })
+        
+    }
 
     render() {
         return (
@@ -43,7 +83,6 @@ class Employee extends React.Component {
                     <div className='col-2 offset-2'>Gender</div>
                     <div className='col-5'>
                         <select name="gender" onChange={this.handleChange} value={this.state.gender} className='form-control'>
-                            <option value='select'>Select</option>
                             <option value='male'>Male</option>
                             <option value='female'>Female</option>
                         </select>
@@ -53,10 +92,11 @@ class Employee extends React.Component {
                     <div className='col-2 offset-2'>Department</div>
                     <div className='col-5'>
                         <select name="department" onChange={this.handleChange} value={this.state.department} className='form-control'>
-                            <option value='select'>Select</option>
-                            <option value='it'>IT</option>
-                            <option value='hr'>HR</option>
-                            <option value='finance'>Finance</option>
+                            <option value='0'>Select</option>
+                            {this.state.all_department.map((item) => {
+                                return <option value={item.id}>{item.dept_name}</option>
+                            })}
+                            
                         </select>
                     </div>
                 </div>

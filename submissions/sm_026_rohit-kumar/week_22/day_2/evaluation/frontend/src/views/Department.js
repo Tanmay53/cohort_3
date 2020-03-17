@@ -1,10 +1,12 @@
 import React from 'react'
+import axios from 'axios'
 
 class Department extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: ''
+            name: '',
+            all_department: []
         }
     }
 
@@ -14,6 +16,8 @@ class Department extends React.Component {
         })
         console.log(this.state)
     } 
+
+    
 
     render() {
         return (
