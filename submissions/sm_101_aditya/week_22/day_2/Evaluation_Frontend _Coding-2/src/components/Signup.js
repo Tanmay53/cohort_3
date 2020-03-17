@@ -4,29 +4,27 @@ export class Signup extends Component {
     constructor(props){
         super(props)
         this.state ={
-            // user = (name, email, password, username, mobile) => {
-            //     this.name = name;
-            //     this.email = email;
-            //     this.password = password;
-            //     this.username = username;
-            //     this.mobile = mobile;
-            //   }
+            
+                name : "",
+                email : "",
+                password : "",
+                username : "",
+                mobile : ""
+              
         }
     }
     render() {
 
         // functions
+        // handleChange = e => {
+        //     this.setState({
+        //       [e.target.name]: e.target.value
+        //     });
+        //   };
+
         
 //   function signup() {
 //     event.preventDefault();
-//     var name = $("#name").val()
-//     var email = $("#email").val()
-//     var username = $("#username").val()
-//     var password = $("#password").val()
-//     var mobile = $("#mobile").val()
-//     var description = $("#description").val()
-//     var newUser = new user(name, email, password, username, mobile);
-//     var data = JSON.stringify(newUser);
 //     if (
 //       newUser.name !== "" ||
 //       newUser.email !== "" ||
