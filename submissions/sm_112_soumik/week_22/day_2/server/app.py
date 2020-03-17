@@ -94,6 +94,7 @@ def home():
     cursor = mysql.connection.cursor()
     cursor.execute("""select * from users""")
     res = cursor.fetchall()
+    cursor.close()
     return json.dumps(res)
 
 
@@ -197,18 +198,59 @@ def edit_teacher():
     return "teacher added succesfully"
 
 
-@app.route("/filter_table", methods=["POST"])
-def filter_table():
-    f_type = request.json["type"]
-    order = request.json["order"]
+@app.route("/set_order", methods=["POST"])
+def setOrder():
+    o_type = request.json["order"]
     cursor = mysql.connection.cursor()
     cursor.execute("""select teachers.id ,name,subject,created_at,class,section from teachers join class on teachers.class_id = class.id
-    join sections on sections.id = teachers.section_id order by %s %s limit 10 """, (f_type, order))
+    join sections on sections.id = teachers.section_id order by class % s limit 10 """, (o_type,))
     res = cursor.fetchall()
+    cursor.close()
     data = []
     for i in res:
         data.append(i)
     return json.dumps(data, default=str)
+
+
+@app.route("/set_filter", methods=["post"])
+def filter_table():
+    f_type = request.json["type"]
+    cursor = mysql.connection.cursor()
+    cursor.execute("""select teachers.id ,%s from teachers join class on teachers.class_id = class.id
+    join sections on sections.id = teachers.section_id limit 10 """, (f_type,))
+    res = cursor.fetchall()
+    cursor.close()
+    data = []
+    for i in res:
+        data.append(i)
+    return json.dumps(data, default=str)
+
+
+@app.route("/get_class_section")
+def class_section():
+    cursor = mysql.connection.cursor()
+    cursor.execute("""select * from sections """)
+    res1 = cursor.fetchall()
+    cursor.execute("""select * from class""")
+    res = cursor.fetchall()
+    cursor.close()
+    data1 = []
+    data2 = []
+    for i in res1:
+        data1.append(i)
+    for j in res:
+        data2.append(j)
+    return json.dumps({"section": data1, "class": data2})
+
+
+@app.route("/delete_user", methods=["POST"])
+def delete_user():
+    t_id = request.json["t_id"]
+    cursor = mysql.connection.cursor()
+    cursor.execute("""delete from teachers where id = %s """, (t_id,))
+    mysql.connection.commit()
+    cursor.close()
+    return "user deleted"
 
 
 if __name__ == "__main__":

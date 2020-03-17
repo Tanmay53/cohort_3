@@ -3,7 +3,8 @@ import {
   REGISTER_SECCESFULL,
   LOGIN_FAILURE,
   LOGIN_SUCCESSFULL,
-  REGISTER_FAILURE
+  REGISTER_FAILURE,
+  LOGOUT
 } from "./actiontype";
 
 export const authLogin = res => {
@@ -54,5 +55,11 @@ export const fetchRegister = ({ email, password, username }) => {
       })
       .then(res => dispatch(authRegister(res.data)))
       .catch(err => console.log(err));
+  };
+};
+
+export const logout = () => {
+  return {
+    type: LOGOUT
   };
 };

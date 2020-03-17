@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import { Link, Route } from "react-router-dom";
+import { Link, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchLogin } from "../Redux/authAction";
 
@@ -9,6 +9,10 @@ const Login = props => {
   const onFinish = values => {
     props.auth_login(values);
   };
+
+  if (props.auth == true) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <>
@@ -68,11 +72,16 @@ const Login = props => {
           </Form.Item>
         </Form>
       </div>
+      <p className="text-center">{props.login}</p>
     </>
   );
 };
 
+const mapStateToProps = state => ({
+  auth: state.auth.status,
+  login: state.auth.message
+});
 const mapDispatchToProps = dispatch => ({
   auth_login: res => dispatch(fetchLogin(res))
 });
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
