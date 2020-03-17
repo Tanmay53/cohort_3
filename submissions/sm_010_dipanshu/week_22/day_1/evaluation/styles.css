@@ -1,0 +1,150 @@
+body {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 40px;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  padding: 10px;
+}
+
+.navbar-card {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: auto;
+}
+
+.navbar-card div {
+  margin: 5px;
+}
+
+.navbar-card img {
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.navbar-card-text {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-rows: auto auto auto;
+}
+
+.banner {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.banner :nth-child(1) {
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 150px;
+}
+
+.banner :nth-child(2) {
+  font-size: 25px;
+  margin-top: 0px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+
+.services div {
+  padding: 10px;
+}
+
+.services-card {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-gap: 2px;
+  margin-top: auto;
+}
+
+.services-card img {
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+.services-card button {
+  margin-top: 10px;
+  height: 40px;
+}
+
+#serviceCards > div {
+  background-color: brown;
+}
+
+#appointments {
+  height: 50px;
+  width: 300px;
+  padding: 10px;
+  margin: auto;
+  background-color: seagreen;
+  border-radius: 5px;
+}
+
+input {
+  width: 400px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#myForm {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  display: block;
+}
+
+#myForm div {
+  margin-top: 30px;
+}
+
+@media (max-width: 1280px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+}
