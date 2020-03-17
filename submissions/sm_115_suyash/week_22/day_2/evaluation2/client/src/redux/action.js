@@ -8,6 +8,8 @@ export const ADD_NEW_ARTIST_SUCCESS = "ADD_NEW_ARTIST_SUCCESS";
 export const ADD_NEW_ARTIST_FAIL = "ADD_NEW_ARTIST_FAIL";
 export const DELETE_ARTIST_SUCCESS = "DELETE_ARTIST_SUCCESS";
 export const DELETE_ARTIST_FAIL = "DELETE_ARTIST_FAIL";
+export const UPDATE_ARTIST_SUCCESS = "UPDATE_ARTIST_SUCCESS";
+export const UPDATE_ARTIST_FAIL = "UPDATE_ARTIST_FAIL";
 
 export const fetchArtistSuccess = payload => ({
   type: FETCH_ARTIST_SUCCESS,
@@ -105,6 +107,34 @@ export const deleteArtist = payload => dispatch => {
   dispatch(axiosRequest());
   axios({
     url: "http://localhost:5000/delete/album",
+    data: payload,
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: "POST"
+  })
+    .then(res => {
+      console.log(res.data);
+    })
+    .catch(err => {
+      console.log(err.message);
+    });
+};
+
+export const updateSuccess = payload => ({
+  type: UPDATE_ARTIST_SUCCESS,
+  payload
+});
+
+export const updateFail = payload => ({
+  type: UPDATE_ARTIST_FAIL,
+  payload
+});
+
+export const updateAlbum = payload => dispatch => {
+  dispatch(axiosRequest());
+  axios({
+    url: "http://localhost:5000/update/album",
     data: payload,
     headers: {
       "Content-Type": "application/json"
