@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='style.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <div class='small-head'><b>OUR BLOG</b></div>
+            <h1 class="heading">Every Single Update</h1>
+            <div class='wrapper'>
+                <div class='left-box'>
+                    <img id="image1" class="image" src="https://www.hyderabadtourism.travel/images/visiting-places/headers/new-maharaja-water-park-hyderabad-tourism-entry-fee-timings-holidays-reviews-header.jpg"/>
+                    <h1 id="main-heading">
+                        A fun and happy summer for you !
+                    </h1>
+                </div>
+                <div id="card-container" class='right-box'>
+                    <!-- card comes here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="form-create">
+            <h3 id="foot-heading">Create Content</h3>
+            <hr/>
+            <table>
+                <tr>
+                    <td>Title</td>
+                    <td>
+                        <input id='title' type='text' placeholder="Enter title" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Heading</td>
+                    <td>
+                        <input id='heading' type='text' placeholder="Enter Heading" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Image</td>
+                    <td>
+                        <input id="image" type='text' placeholder="Enter Image URL" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="addContent()">Create</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        
+        
+        <script type="text/javascript">
+                var data = [
+                    {
+                    'title': 'healthy food',
+                    'heading': 'A fun and happy summer for you !',
+                    'image': 'https://www.hyderabadtourism.travel/images/visiting-places/headers/new-maharaja-water-park-hyderabad-tourism-entry-fee-timings-holidays-reviews-header.jpg'
+                    },
+                    {
+                    'title': 'tourism news',
+                    'heading': 'Man does day divided morning after give.',
+                    'image': 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Larkmead_School%2C_Abingdon%2C_Oxfordshire.png'
+                    }
+                ]
+        </script>
+        <script type='text/javascript' src='script.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </body>
+</html>
