@@ -196,13 +196,13 @@ export const addNewAlbum = ({albumName, artistName, year}) => {
 }
 
 // adding new artist
-export const addNewArtist = (artistName) => {
+export const addNewArtist = (artist) => {
     return dispatch => {
         return axios({
             method : 'post',
             baseURL : 'http://127.0.0.1:5000/artist/create',
             data : {
-                artistName : artistName 
+                artist : artist
             }
         })
         .then(res => {
@@ -218,7 +218,10 @@ export const deleteAlbum = (id) => {
     return dispatch => {
         return axios({
             method : 'delete',
-            baseURL : `http://127.0.0.1:5000/album/delete/${id}`
+            baseURL : `http://127.0.0.1:5000/album/delete`,
+            data : {
+                id : id
+            }
         })
         .then(res => {
             console.log(res)
