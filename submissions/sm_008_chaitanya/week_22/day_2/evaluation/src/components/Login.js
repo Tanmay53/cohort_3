@@ -22,8 +22,7 @@ class Login extends React.Component{
         .then(res=>{
             if(res){
                 if(res.data.error===false){
-                    // <Redirect to="/form" />
-                    console.log('happy')
+                    alert('You are Successfully Logged in...!')
                 }
             }
         })
