@@ -35,7 +35,8 @@ def select_one(query, arguments):
         with conn.cursor() as cursor:
             cursor.execute(query, arguments)
             result = {'result': 'success', 'data': cursor.fetchone()}
-    except Exception:
+    except Exception as ex:
+        print(ex)
         result = {'result': 'failure'}
     finally:
         conn.close()
@@ -54,6 +55,22 @@ def select_all(query, arguments):
         conn.close()
         return result
 
+
+def delete(query, arguments):
+    result = None      
+    try:
+        conn = connect()
+        with conn.cursor() as cursor:
+            cursor.execute(query, arguments)
+        
+        conn.commit()
+        result = {'result': 'success'}
+    except Exception as ex:
+        print(ex)
+        result = {'result': 'failure'}
+    finally:
+        conn.close()
+        return result
 
 def delete_helper(query_arr):
     try:

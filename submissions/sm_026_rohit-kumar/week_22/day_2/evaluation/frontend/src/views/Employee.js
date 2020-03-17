@@ -48,7 +48,9 @@ class Employee extends React.Component {
             emp_uuid: uuid()
         }
         const url = "http://localhost:5000/employee/create"
-        axios.post(url, data)
+        axios.post(url, data, {
+            headers: {Authorization : `Bearer ${this.props.token}`}
+        })
         .then(res => {
             console.log(res)
             if (res['data']['result'] == 'success') {
@@ -127,6 +129,7 @@ class Employee extends React.Component {
 const mapStateToProps = (state) => {
     return {
         isLoggedIn: state.isLoggedIn,
+        token: state.data.token,
         menuLabel: state.menuLabel,
         showRegisterButton: state.showRegisterButton
     }

@@ -23,7 +23,7 @@ class Login extends React.Component {
         const url = 'http://localhost:5000/user/login'
         axios.post(url, this.state)
         .then(res => {
-            console.log(res['data']['data'])
+            console.log('after login ', res)
             this.props.user_login(res['data']['data'])
             this.props.history.push('/')
         })

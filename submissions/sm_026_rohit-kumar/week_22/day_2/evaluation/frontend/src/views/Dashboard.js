@@ -88,6 +88,18 @@ class Dashboard extends React.Component {
         this.loadData()
     }
 
+    handleDelete = (uuid) => {
+        const url = "http://localhost:5000/employee/delete"
+        axios.delete(url, {
+            headers: {Authorization : `Bearer ${this.props.token}`},
+            data: {emp_uuid: uuid}
+
+        })
+        .then(res => {
+            this.loadData()
+        })
+    }
+
     render() {
         // redirect if user not logged in
         if (! this.props.isLoggedIn) {
@@ -185,6 +197,7 @@ class Dashboard extends React.Component {
 const mapStateToProps = (state) => {
     return {
         isLoggedIn: state.isLoggedIn,
+        token: state.data.token,
         menuLabel: state.menuLabel,
         showRegisterButton: state.showRegisterButton
     }
