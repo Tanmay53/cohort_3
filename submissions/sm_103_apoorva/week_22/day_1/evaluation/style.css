@@ -1,0 +1,110 @@
+
+#main_div{
+    background-color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#main_div > div{
+    background-color: white;
+    margin: 1%;
+    
+}
+
+#footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#expert{
+    grid-area: 1/1/span 1/ span 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+#quality{
+    grid-area: 1/2/span 1/ span 1;
+    background-color: yellow;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+#support{
+    grid-area: 1/3/span 1/ span 1;
+    background-color: #11133C;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+.logo{
+    grid-area: 1/1/span 1/ span 1;
+}
+
+
+.text{
+    grid-area: 1/2/span 1/ span 1;
+}
+.white{
+    color: white;
+}
+.muted{
+    color: #808080;
+}
+
+.logo > img{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+.card{
+    width: 18rem;
+    margin: auto;
+    text-align: center;
+}
+#describe{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    margin: auto;
+}
+
+.btn{
+    background-color: teal;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+.form{
+    display: flex;
+    margin: auto;
+    height: 200px;
+    width: 30%;
+    border: black 2px solid;
+}
+
+input{
+    height: 30px;
+    width: 300px;
+}
+
+.border{
+    margin-left: 20px;
+}
+
+@media(max-width:600px){
+    #describe{
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 40px;
+        flex-direction: column;
+    }
+}
