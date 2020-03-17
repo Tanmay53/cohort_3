@@ -142,7 +142,7 @@ def filter_by_category():
     category_id = (request.json["category_id"])
     cursor = mysql.connection.cursor()
     try:
-        cursor.execute(""" SELECT product_name,price,img,category_name FROM products JOIN categories WHERE categories.id=%s """,(category_id))
+        cursor.execute(""" SELECT product_name,price,img,category_name FROM products JOIN  categories ON categories.id=category_id WHERE categories.id=%s """,(category_id))
         results=cursor.fetchall()
         
     except Exception as e:
@@ -152,20 +152,16 @@ def filter_by_category():
     return jsonify({"error":False,"data":results})
 
 # show sorted data
-@app.route("/show_sorted",methods=['POST'])
+@app.route("/show_sorted")
 def show_sorted():
     cursor = mysql.connection.cursor()
+    
     try:
-        category_id = request.json["category_id"]
-        cursor.execute(""" SELECT product_name,price,img,category_name FROM products JOIN categories WHERE categories.id=%s ORDER BY price""",(category_id))
+        cursor.execute(""" SELECT product_name,price,img,category_name FROM products JOIN categories ON categories.id=category_id WHERE category_id=categories.id ORDER BY price """)
         results=cursor.fetchall()
-    except TypeError:
-        try:
-            cursor.execute(""" SELECT product_name,price,img,category_name FROM products JOIN categories WHERE category_id=categories.id ORDER BY price """)
-            results=cursor.fetchall()
-            
-        except Exception as e:
-            return jsonify({"error":True,"message":str(e)})
+        
+    except Exception as e:
+        return jsonify({"error":True,"message":str(e)})
     finally:
         cursor.close()
     return jsonify({"error":False,"data":results})
@@ -188,3 +184,17 @@ def insert():
     finally:
         cursor.close()
     return jsonify({"error":False,"message":"new product added successfully !!"})
+
+
+# fetch all categories
+@app.route("/categories")
+def categories():
+    try:
+        cursor = mysql.connection.cursor()
+        cursor.execute(""" SELECT * FROM categories""")
+        results=cursor.fetchall()
+    except Exception as e:
+        return jsonify({"error":True,"message":str(e)})
+    finally:
+        cursor.close()
+    return jsonify({"error":False,"data":results})
