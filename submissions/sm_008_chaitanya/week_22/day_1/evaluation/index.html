@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <title>index</title>
+</head>
+
+<body>
+   <div class="parentdiv">
+      <div class="main">
+         <h1>Our Recent News</h1>
+      </div>
+      <div id="display"></div>
+   </div>
+
+   <div class="inputform">
+      <div class="footer-text">
+         <h1>Request for call back</h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolor provident explicabo dicta, quas
+            harum, minima architecto fuga ipsa necessitatibus commodi in.</p>
+      </div>
+      <div class="form">
+         <div>
+            <input type="text" placeholder="Name" id="name">
+         </div>
+         <div>
+            <input type="url" placeholder="Image Url" id="url">
+         </div>
+         <div>
+            <input type="text" placeholder="Description" id="desp">
+            </div>
+         <div>
+            <select id="services">
+               <option value="--">Services</option>
+               <option value="Business Planing">Business Planning</option>
+               <option value="Auditing">Audit</option>
+               <option value="Marketing">Marketing</option>
+               <option value="Hr Consultancy">HR Consultancy</option>
+               <option value="Advertisements">Advertisement</option>
+            </select>
+         </div>
+         <div>
+            <button id="submit" class="submit" onClick="process()">Submit</button>
+         </div>
+         <div>
+            <button id="reset" class="reset" onClick="reset()">Reset</button>
+         </div>
+      </div>
+   </div>
+   <script src="script.js"></script>
+</body>
+
+</html>
