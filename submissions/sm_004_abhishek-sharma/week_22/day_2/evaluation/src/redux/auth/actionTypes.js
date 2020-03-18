@@ -1,0 +1,3 @@
+export const ADMIN_LOGIN = "ADMIN_LOGIN";
+export const ADMIN_REGISTER = "ADMIN_REGISTER";
+export const ADMIN_SIGNOUT = "ADMIN_SIGNOUT";
