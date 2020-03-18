@@ -1,0 +1,12 @@
+.cont{
+    text-align: center;
+    color: cornflowerblue;
+    font-style: inherit;
+    background-color: greenyellow;
+    height: 1900px;
+    box-shadow: rgb(187, 27, 27);
+}
+
+#cont1{
+    width: 400px;   
+}
