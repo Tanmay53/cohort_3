@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div id="collage" class="collage">
+            <div class="collage-gallery">
+                <div><img src="https://via.placeholder.com/160?text=window-image" alt="gallery-images"></img></div>
+                <div>
+                    <h3>Innovative Structure</h3>
+                </div>
+                <div>
+                    <p class="coll-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At velit, odit temporibus quos, saepe officiis vel ipsam quam quia..
+                    </p>
+                    <button id='0' onclick="deleteCard(id)">delete</button>
+                </div>
+            </div>
+            <div class="collage-gallery">
+                <div><img src="https://via.placeholder.com/160?text=sofa-image" alt="gallery-images"></img></div>
+                <div>
+                    <h3>Architectural</h3>
+                </div>
+                <div>
+                    <p class="coll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+                    <button id='1' onclick="deleteCard(id)">delete</button>
+                </div>
+            </div>
+            <div class="collage-gallery">
+                <div><img src="https://via.placeholder.com/160?text=bulb-image" alt="gallery-images"></img></div>
+                <div>
+                    <h3>Interior Design</h3>
+                </div>
+                <div>
+                    <p class="coll-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum labore iste corrupti numquam repellendus est libero..</p>
+                    <button id='2' onclick="deleteCard(id)">delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="detail-image">
+                <img src="https://media.istockphoto.com/photos/home-and-healthy-front-yard-during-late-spring-season-picture-id957895328?k=6&m=957895328&s=612x612&w=0&h=jE3tvHz1gReCYq_8w5WtgjOGxd06S2E0vXHJpZRrfLM=" alt='house-image'>
+            </div>
+            <div class="detail-description">
+                <div class="top-text">Learn To Know</div>
+                <div>
+                    <h1>About Us</h1>
+                </div>
+                <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ut dolorum aut molestias saepe, architecto deserunt modi minima. Facere, voluptas harum rem consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere fuga nemo, voluptatem architecto nobis, sint distinctio ipsa pariatur itaque, suscipit rem beatae sunt</p></div>
+                <div class="checkpoints">
+                    <p><span>✔️</span> We have great garden</p>
+                    <p><span>✔️</span> We Emphasize Exercise</p>
+                    <p><span>✔️</span> Great View And Sport Ground</p>
+                    <p><span>✔️</span> Richable Market and Groceries</p>
+                </div>
+                <div>
+                    <button>Read More About Us</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <form onsubmit="addCard()">
+                <h3>Add Card</h3>
+                <input id='title' type='text' placeholder="title" />
+                <input id="content" type='text' placeholder="Content" />
+                <button>Add</button>
+            </form>
+        </div>
+    <script src="./script.js"></script>
+</body>
+</html>
