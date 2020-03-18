@@ -44,7 +44,7 @@ const createCard = () => {
     div2.appendChild(p2)
     div3.appendChild(h21)
     div3.appendChild(img1)
-    // div3.appendChild(btn)
+    div3.appendChild(btn)
     section.appendChild(div1)
     section.appendChild(div2)
     section.appendChild(div3)
