@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_PASSWORD'] = 'Python@mldl123'
 app.config['MYSQL_DB'] = 'evalsql'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
@@ -84,6 +84,7 @@ def employeeDetails():
         department = request.args.get('department', default = None)
         gender = request.args.get('gender', default = None)
         page = request.args.get('page', default = 1)
+        page = int(page)
         cursor = mysql.connection.cursor()
         userId = decode_token(request.headers['Authorization'].split()[1])['id']
         cursor.execute('''select * from admin where id = %s''', (userId,))
@@ -91,11 +92,11 @@ def employeeDetails():
         if user['id']:
             if sortBy == 'asc':
                 if not department and gender:
-                    cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id where gender = %s order by salary, epmloyee.id limit %s, %s''', (gender, (page-1)*20, 20))
+                    cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id where gender = %s order by salary, employee.id limit %s, %s''', (gender, (page-1)*20, 20))
                 elif not gender and department:
                     cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id where dept_id = %s order by salary, employee.id limit %s, %s''', (department, (page-1)*20, 20))
                 elif gender and department:
-                    cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id where gender = %s and dept_id=%s order by salary, epmloyee.id limit %s, %s''', (gender, department, (page-1)*20, 20))
+                    cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id where gender = %s and dept_id=%s order by salary, employee.id limit %s, %s''', (gender, department, (page-1)*20, 20))
                 else:
                     cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id order by salary, employee.id limit %s, %s''', ((page - 1)*20, 20))
             elif sortBy == 'desc':
@@ -106,7 +107,7 @@ def employeeDetails():
                 elif gender and department:
                     cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id where gender = %s and dept_id=%s order by salary desc, employee.id limit %s, %s''', (gender, department, (page-1)*20, 20))
                 else:
-                    cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id limit %s, %s''', ((page - 1)*20, 20))
+                    cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id order by salary desc, employee.id limit %s, %s''', ((page - 1)*20, 20))
             else:
                 if not department and gender:
                     cursor.execute('''select employee.name as emp_name, gender, salary, departments.name as departmentName from employee join departments on employee.dept_id = departments.id where gender = %s limit %s, %s''', (gender, (page-1)*20, 20))
@@ -135,7 +136,7 @@ def employeeDetails():
         cursor = mysql.connection.cursor()
         cursor.execute('''select * from admin where id = %s''', (userId,))
         result = cursor.fetchone()
-        if result.id:
+        if result["id"]:
             cursor.execute('''insert into employee(name, gender, salary, dept_id) values(%s, %s, %s, %s)''', (name, gender, salary, deptId))
             mysql.connection.commit()
             cursor.close()
@@ -145,3 +146,4 @@ def employeeDetails():
             cursor.close()
             return json.dumps({'message': 'Invalid token', 'error': True})
     
+

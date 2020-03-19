@@ -19,7 +19,6 @@ export class AddArtist extends Component {
     }
 
     handleClick = () => {
-        alert(this.state.artistName)
         this.props.addNewArtist(this.state.artistName)
     }
     
@@ -30,7 +29,7 @@ export class AddArtist extends Component {
             <Navbar />
                 <div className="w-50 mx-auto mt-5">
                     <label htmlFor="artistName">Artist</label>
-                    <input type="text" value={this.state.artistName} id="artistName" onChange={this.state.artistName} className="form-control mb-2" />
+                    <input type="text" value={this.state.artistName} id="artistName" onChange={this.handleChange} className="form-control mb-2" />
                     <button className="btn btn-block btn-warning" onClick={this.handleClick} >Add Artist</button>
                 </div>
             </div>
