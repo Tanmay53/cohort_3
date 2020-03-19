@@ -48,7 +48,6 @@ export class Register extends Component {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" placeholder="Password" onChange={this.handleChange} value={this.state.password} className="form-control mb-2"  />
                     <button className="btn btn-block btn-danger" onClick={this.handleClick} >Sign Up</button>
-                    <small>{this.props.message}</small>
                     <Link to='/login' className="text-decoration-none" >Login</Link>
                 </div>
             </div>

@@ -19,22 +19,13 @@ mysql = MySQL(app)
 @app.route('/')
 def home():
     cursor = mysql.connection.cursor()
-    # source
     cursor.execute(
-        # """SELECT * FROM buses"""
-        """select cities.cities as source, buses.bus, buses.schedule from cities join buses on cities.id = buses.source"""
+        """SELECT buses.id, bus, schedule, t1.cities AS source, t2.cities AS destination FROM buses JOIN cities AS t1 ON t1.id = buses.source JOIN cities AS t2 on t2.id = buses.destination"""
     )
-    result1 = cursor.fetchall()
-    # destination
-    cursor.execute(
-        """select cities.cities as destination from cities join buses on cities.id = buses.destination"""
-    )
-    result2 = cursor.fetchall()
+    results = cursor.fetchall()
     cursor.close()
     buses = []
-    for bus in result1:
-        buses.append(bus)
-    for bus in result2:
+    for bus in results:
         buses.append(bus)
     return {"buses": buses}
 
@@ -126,9 +117,30 @@ def add_bus():
         cursor.close()
         return { "message": "Bus Added Successfully"}
 
-@app.route('/delete', methods=['POST'])
-def delete():
-    return 'Delete'
+@app.route('/delete/<int:id>', methods=['POST'])
+def delete(id):
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """DELETE FROM buses WHERE id = (%s)""", [str(id)]
+    )
+    mysql.connection.commit()
+    cursor.close()
+    return {"id": id, "message": "Deleted Successfully"}
+
+@app.route('/bus/edit/<int:id>', methods=["POST"])
+def edit_bus(id):
+    if request.method == 'POST':
+        body = request.json
+        source = body['source']
+        destination = body['destination']
+        bus = body['bus']
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """UPDATE buses SET source = (%s), destination = (%s), bus = (%s) WHERE id = (%s)""", (source, destination, str(bus), id)
+        )
+        mysql.connection.commit()
+        cursor.close()
+        return { "message": "Bus Added Successfully"}
 
 def hash_cycle(usr_str):
     for i in range(10):
