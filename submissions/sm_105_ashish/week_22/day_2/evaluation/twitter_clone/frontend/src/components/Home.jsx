@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import {checkIsLoggedIn,getUser} from "../redux/Action"
 import {connect} from 'react-redux'
-import SignIn from "./LoginPage"
-import {Copyright,useStyles} from './LoginPage'
 // import { Redirect } from 'react-router-dom'
 
 class Home extends Component {
@@ -22,7 +20,7 @@ componentDidMount(){
         return (
             <div>
                 <div className="text-center m-auto display-1">
-                    <SignIn/>
+                    This is home page
                 </div>
             </div>
         )

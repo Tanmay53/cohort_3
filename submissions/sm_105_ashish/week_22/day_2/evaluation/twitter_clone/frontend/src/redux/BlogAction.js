@@ -1,39 +1,35 @@
 import axios from "axios";
-const FETCH_TWEET_REQUEST = "FETCH_TWEET_REQUEST"
-const FETCH_TWEET_SUCCESS = "FETCH_TWEET_SUCCESS"
-const FETCH_TWEET_FAILED =  "FETCH_TWEET_FAILED"
+const FETCH_BLOG_REQUEST = "FETCH_BLOG_REQUEST"
+const FETCH_BLOG_SUCCESS = "FETCH_BLOG_SUCCESS"
+const FETCH_BLOG_FAILED =  "FETCH_BLOG_FAILED"
 
 
 const fetchBlogRequest = (query) =>{
     return{
-        type:FETCH_TWEET_REQUEST,
+        type:FETCH_BLOG_REQUEST,
         query:query || ''
     }
     }
 const fetchBlogSuccess = (data) =>{
         return{
-            type:FETCH_TWEET_SUCCESS,
+            type:FETCH_BLOG_SUCCESS,
             data:data
         }
     }
     
 const fetchBlogFailure = (error) =>{
         return{
-            type:FETCH_TWEET_FAILED,
+            type:FETCH_BLOG_FAILED,
             error
         }
     }
 
-const getBlog = (url,payload) =>{
+const getBlog = (url) =>{
     // console.log(url)
         return dispatch =>{
             dispatch(fetchBlogRequest)
             return axios
-            .get(url,
-                {
-                    headers:{"Authorization":`bearer ${payload}`,"Content-Type":"application/json"}
-                }
-                )
+            .get(url)
             .then(res=>{
                 // console.log(res)
                 return dispatch(fetchBlogSuccess(res.data))
@@ -65,9 +61,9 @@ const addBlog = (url,payload,token) =>{
 
 
 export  {
-FETCH_TWEET_REQUEST,
-FETCH_TWEET_SUCCESS,
-FETCH_TWEET_FAILED,
+FETCH_BLOG_REQUEST,
+FETCH_BLOG_SUCCESS,
+FETCH_BLOG_FAILED,
 addBlog ,
 getBlog
 }

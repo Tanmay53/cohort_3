@@ -11,7 +11,7 @@ import Userblogcard from "./Userblogcard"
          super(props)
      
          this.state = {
-            tweets:[]
+              myBlogs:[]
          }
      }
      
@@ -20,17 +20,17 @@ import Userblogcard from "./Userblogcard"
         const token = this.props.token
         const url = "http://127.0.0.1:5000"
         this.props.getUser(url,token)
-        let myTweetsUrl = "http://127.0.0.1:5000/auth/mytweets"
-        this.props.getBlog(myTweetsUrl,token)
-        var tweets = this.props.tweets.filter(ele=>ele.user_id===this.props.user.id)
+        let blogurl = "http://127.0.0.1:5000/auth/blogs"
+        this.props.getBlog(blogurl)
+        var myBlogs = this.props.blogs.filter(ele=>ele.user_id===this.props.user.id)
         this.setState({
-            tweets:[...tweets]
+            myBlogs:[...myBlogs]
         })
     }
     updateMyBlogs = () => {
-       var  tweets = this.props.tweets.filter(ele=>ele.user_id===this.props.user.id)
+       var  myBlogs = this.props.blogs.filter(ele=>ele.user_id===this.props.user.id)
        this.setState({
-        tweets:[...tweets]
+           myBlogs:[...myBlogs]
        })
     }
     render() {
@@ -38,13 +38,14 @@ import Userblogcard from "./Userblogcard"
         return (
             <>
             <div className="my-2 mx-auto justify-content-center">
+                <h1 className="btn-grey m-auto text-center">My Blog page</h1>
             <div className="row">
                 <div className="col-1">
                     <SideNavPage user={this.props.user}/>
                 </div>
                 <div className="col-11 my-4">
                     <div className="row">
-                        {this.state.tweets.map(ele=>(<div className="col-sm-10 col-md-10 col-lg-10 my-4 mx-auto" style={{height:"80%"}}><Userblogcard data={ele} updateMyBlogs={this.updateMyBlogs}/></div>))}
+                        {this.state.myBlogs.map(ele=>(<div className="col-sm-12 col-md-6 col-lg-6 my-4" style={{height:"80%"}}><Userblogcard data={ele} updateMyBlogs={this.updateMyBlogs}/></div>))}
                         
                     </div>
                 </div>
@@ -53,7 +54,7 @@ import Userblogcard from "./Userblogcard"
             </>
         )}
         else{
-            return (<Redirect to="/"/>)
+            return (<Redirect to="/auth/login"/>)
         }
     }
 }
@@ -61,14 +62,14 @@ const mapStateToProps = (state) => ({
     ...state,
     token:state.commonReducer.token,
     user:state.commonReducer.user,
-    tweets:state.blogReducer.tweets
+    blogs:state.blogReducer.blogs
 })
 
 const mapDispatchToProps = dispatch => ({
     signOut:()=>dispatch(signOut()),
     checkIsLoggedIn:()=>dispatch(checkIsLoggedIn()),
     getUser:(url,token)=>dispatch(getUser(url,token)),
-    getBlog:(url,payload)=>dispatch(getBlog(url,payload))
+    getBlog:(url)=>dispatch(getBlog(url))
 })
 
 export default connect (mapStateToProps,mapDispatchToProps)(Myblog)

@@ -1,27 +1,25 @@
-import {FETCH_TWEET_REQUEST,
-    FETCH_TWEET_SUCCESS,
-    FETCH_TWEET_FAILED } from "../redux/BlogAction"
+import {FETCH_BLOG_REQUEST,
+    FETCH_BLOG_SUCCESS,
+    FETCH_BLOG_FAILED } from "../redux/BlogAction"
 
 
 const categoryStore = {
-tweets:[]
+blogs:[]
 }
 
 const blogReducer = (state = categoryStore,action) => {
 
     switch (action.type){
-        
-        case FETCH_TWEET_REQUEST:
+        case FETCH_BLOG_REQUEST:
             return {
                 ...state
             }
-        case FETCH_TWEET_SUCCESS:
-            console.log(action.data)
+        case FETCH_BLOG_SUCCESS:
             return{
                 ...state,
-                tweets:[...action.data.tweets]
+                blogs:[...action.data.blogs]
             }
-        case FETCH_TWEET_FAILED:
+        case FETCH_BLOG_FAILED:
             return {
                 ...state
             }

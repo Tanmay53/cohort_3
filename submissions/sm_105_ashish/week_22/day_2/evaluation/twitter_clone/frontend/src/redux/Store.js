@@ -1,11 +1,12 @@
 import {createStore,applyMiddleware,compose,combineReducers} from 'redux'
 import thunk from 'redux-thunk'
 import {commonReducer} from './Reducer'
+import {categoryReducer} from "./Categoryreducer"
 import {blogReducer} from "./BlogReducer"
-import {AllUserReducer} from "./getAllUserReducer"
+import {commentReducer} from "./commentReducer"
 
 
-const rootReducer = combineReducers({commonReducer:commonReducer,blogReducer:blogReducer,AllUserReducer:AllUserReducer})
+const rootReducer = combineReducers({commonReducer:commonReducer,categoryReducer:categoryReducer,blogReducer:blogReducer,commentReducer:commentReducer})
 
 
 const store = createStore(rootReducer,
