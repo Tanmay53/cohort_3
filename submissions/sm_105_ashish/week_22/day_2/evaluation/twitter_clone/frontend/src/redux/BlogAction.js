@@ -1,35 +1,42 @@
 import axios from "axios";
-const FETCH_BLOG_REQUEST = "FETCH_BLOG_REQUEST"
-const FETCH_BLOG_SUCCESS = "FETCH_BLOG_SUCCESS"
-const FETCH_BLOG_FAILED =  "FETCH_BLOG_FAILED"
+const FETCH_TWEET_REQUEST = "FETCH_TWEET_REQUEST"
+const FETCH_TWEET_SUCCESS = "FETCH_TWEET_SUCCESS"
+const FETCH_TWEET_FAILED =  "FETCH_TWEET_FAILED"
 
 
 const fetchBlogRequest = (query) =>{
     return{
-        type:FETCH_BLOG_REQUEST,
+        type:FETCH_TWEET_REQUEST,
         query:query || ''
     }
     }
 const fetchBlogSuccess = (data) =>{
         return{
-            type:FETCH_BLOG_SUCCESS,
+            type:FETCH_TWEET_SUCCESS,
             data:data
         }
     }
     
 const fetchBlogFailure = (error) =>{
         return{
-            type:FETCH_BLOG_FAILED,
+            type:FETCH_TWEET_FAILED,
             error
         }
     }
 
-const getBlog = (url) =>{
+
+
+
+const getBlog = (url,payload) =>{
     // console.log(url)
         return dispatch =>{
             dispatch(fetchBlogRequest)
             return axios
-            .get(url)
+            .get(url,
+                {
+                    headers:{"Authorization":`bearer ${payload}`,"Content-Type":"application/json"}
+                }
+                )
             .then(res=>{
                 // console.log(res)
                 return dispatch(fetchBlogSuccess(res.data))
@@ -39,6 +46,9 @@ const getBlog = (url) =>{
             })
         }
     }
+
+
+
 const addBlog = (url,payload,token) =>{
     console.log(payload,token)
     return dispatch =>{
@@ -61,9 +71,9 @@ const addBlog = (url,payload,token) =>{
 
 
 export  {
-FETCH_BLOG_REQUEST,
-FETCH_BLOG_SUCCESS,
-FETCH_BLOG_FAILED,
+FETCH_TWEET_REQUEST,
+FETCH_TWEET_SUCCESS,
+FETCH_TWEET_FAILED,
 addBlog ,
 getBlog
 }

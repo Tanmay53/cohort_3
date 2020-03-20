@@ -11,7 +11,7 @@ import Userblogcard from "./Userblogcard"
          super(props)
      
          this.state = {
-              myBlogs:[]
+            tweets:[]
          }
      }
      
@@ -20,41 +20,51 @@ import Userblogcard from "./Userblogcard"
         const token = this.props.token
         const url = "http://127.0.0.1:5000"
         this.props.getUser(url,token)
-        let blogurl = "http://127.0.0.1:5000/auth/blogs"
-        this.props.getBlog(blogurl)
-        var myBlogs = this.props.blogs.filter(ele=>ele.user_id===this.props.user.id)
+        let myTweetsUrl = "http://127.0.0.1:5000/auth/tweet?user_id=1"
+        this.props.getBlog(myTweetsUrl,token)
+        var tweets = this.props.tweets.filter(ele=>ele.user_id===this.props.user.id)
         this.setState({
-            myBlogs:[...myBlogs]
+            tweets:[...tweets]
         })
     }
     updateMyBlogs = () => {
-       var  myBlogs = this.props.blogs.filter(ele=>ele.user_id===this.props.user.id)
+       var  tweets = this.props.tweets.filter(ele=>ele.user_id===this.props.user.id)
        this.setState({
-           myBlogs:[...myBlogs]
+        tweets:[...tweets]
        })
     }
     render() {
         if(this.props.token){
+            if(this.props.tweets.length==0){
+                return (
+                <>
+                    <div className="my-2 mx-auto justify-content-center">
+                    <div className="row">
+                        <div className="col-1">
+                            <SideNavPage/>
+                        </div>
+                        <h1 className ="text-center btn-info mx-auto my-4"> You have not tweeted yet.</h1>
+                        </div>
+                    </div>
+                </>)
+            }
+            else{
         return (
-            <>
             <div className="my-2 mx-auto justify-content-center">
-                <h1 className="btn-grey m-auto text-center">My Blog page</h1>
             <div className="row">
                 <div className="col-1">
-                    <SideNavPage user={this.props.user}/>
+                    <SideNavPage/>
                 </div>
                 <div className="col-11 my-4">
                     <div className="row">
-                        {this.state.myBlogs.map(ele=>(<div className="col-sm-12 col-md-6 col-lg-6 my-4" style={{height:"80%"}}><Userblogcard data={ele} updateMyBlogs={this.updateMyBlogs}/></div>))}
-                        
+                        {this.props.tweets.map(ele=>(<div className="col-sm-12 col-md-10 col-lg-10 my-4 mx-auto" style={{height:"10%"}} key={ele.id}><Userblogcard data={ele}/></div>))}
                     </div>
                 </div>
             </div>
             </div>
-            </>
-        )}
+        )}}
         else{
-            return (<Redirect to="/auth/login"/>)
+            return (<Redirect to="/"/>)
         }
     }
 }
@@ -62,14 +72,14 @@ const mapStateToProps = (state) => ({
     ...state,
     token:state.commonReducer.token,
     user:state.commonReducer.user,
-    blogs:state.blogReducer.blogs
+    tweets:state.blogReducer.tweets
 })
 
 const mapDispatchToProps = dispatch => ({
     signOut:()=>dispatch(signOut()),
     checkIsLoggedIn:()=>dispatch(checkIsLoggedIn()),
     getUser:(url,token)=>dispatch(getUser(url,token)),
-    getBlog:(url)=>dispatch(getBlog(url))
+    getBlog:(url,payload)=>dispatch(getBlog(url,payload))
 })
 
 export default connect (mapStateToProps,mapDispatchToProps)(Myblog)

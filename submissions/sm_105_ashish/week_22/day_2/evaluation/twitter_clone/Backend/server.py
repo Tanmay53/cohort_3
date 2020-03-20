@@ -7,11 +7,12 @@ import base64
 import json
 app = Flask(__name__)
 import jwt
+import math
 
 
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'Averma379@'
-app.config['MYSQL_DB'] = 'myblogdb'
+app.config['MYSQL_DB'] = 'twitterdb'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 @app.route('/')
@@ -41,7 +42,7 @@ def register():
         password_hash =  new_password
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """INSERT INTO users (name,email,imageurl,salt,password_hash) 
+        """INSERT INTO users (name,email,imgurl,salt,password_hash) 
         VALUES (%s,%s,%s,%s,%s)""", (name,email,"",salt,new_password)
         )
     mysql.connection.commit()
@@ -69,119 +70,94 @@ def upload_file():
        upload_img(myid,imgurl)
        return {"path": location,"msg":"image uploaded successfully"}
 
-# categories server
-
-@app.route("/auth/categories", methods = ["POST","GET"])
-def categories():
-    if request.method == "POST":
-        category = request.json["category"]
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            """INSERT INTO category (category) 
-            VALUES (%s)""", (category,)
-            )
-        mysql.connection.commit()
-        cursor.close()
-        return {"message":"category added successfully"}
-    elif request.method == "GET":
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            """SELECT * FROM category"""
-        )
-        results = cursor.fetchall()
-        categories = []
-        for item in results:
-            categories.append(item)
-        return {"categories":categories}
- 
-        
-#  blogs sending and adding server.
-
-@app.route("/auth/blogs", methods = ["POST","GET"])
-def blogs():
-    if request.method == "POST":
-        auth_header = request.headers.get('Authorization')
-        token_encoded = auth_header.split(' ')[1]
-        decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
-        myid = decode_data["id"]
-        category_id = request.json["category_id"]
-        title = request.json["title"]
-        content = request.json["content"]
-        imgurl = request.json["imgurl"]
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            """INSERT INTO blogs (user_id,category_id,title,content,imgurl) 
-            VALUES (%s,%s,%s,%s,%s)""", (myid,category_id,title,content,"")
-            )
-        mysql.connection.commit()
-        cursor.close()
-        return {"message":"Blog added successfully"}
-    elif request.method == "GET":
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            """select blogs.id as id ,title ,imgurl,created_on,category.category
-             as category,users.name as user_name,users.id as user_id, content from blogs
-              join category on category.id = blogs.category_id join users on users.id=blogs.user_id;"""
-        )
-        results = cursor.fetchall()
-        blogs = []
-        for item in results:
-            blogs.append(item)
-        return {"blogs":blogs}
-
-
-# Adding comments and getting all the commnets... 
-
-@app.route("/blogs/comments/<int:blog_id>", methods=["POST","GET"])
-def get_all_comments(blog_id):
-    if request.method == "POST":
-        auth_header = request.headers.get('Authorization')
-        token_encoded = auth_header.split(' ')[1]
-        decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
-        myid = decode_data["id"]
-        # blog_id = request.json["blog_id"]
-        comment = request.json["comment"]
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            """INSERT INTO comments (blog_id,user_id,comment) 
-            VALUES (%s,%s,%s)""", (blog_id,myid,comment)
-            )
-        mysql.connection.commit()
-        cursor.close()
-        return {"message":"comment added"}
-    elif request.method == "GET":
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            """select users.name , comment,blog_id from comments
-             join users on users.id = comments.user_id WHERE blog_id = %s;""",(blog_id,)
-        )
-        results = cursor.fetchall()
-        comments = []
-        for item in results:
-            comments.append(item)
-        return {"comments":comments}
-    
-# deleting the blogs of particular user
-@app.route('/blogs/delete/<int:blog_id>', methods=["POST"])
-def delete_blog(blog_id):
+@app.route('/auth/allUsers')
+def get_all_user():
     auth_header = request.headers.get('Authorization')
     token_encoded = auth_header.split(' ')[1]
     decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
     myid = decode_data["id"]
     cursor = mysql.connection.cursor()
-    cursor.execute(
-        """DELETE from comments where blog_id = %s""",(blog_id,)
+    cursor.execute (
+        """SELECT id,name,imgurl FROM users WHERE id != %s""",(myid,)
     )
-    # mysql.connection.commit()
+    results = cursor.fetchall()
+    cursor.close()
+    return {'users':results}
+
+
+        
+#  tweets sending and adding server.
+
+@app.route("/auth/tweet", methods = ["POST","GET"])
+def tweet_handle():
+    if request.method == "POST":
+        auth_header = request.headers.get('Authorization')
+        token_encoded = auth_header.split(' ')[1]
+        decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+        myid = decode_data["id"]
+        content = request.json["content"]
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """INSERT INTO tweets (content,user_id) 
+            VALUES (%s,%s)""", (content,myid)
+            )
+        mysql.connection.commit()
+        cursor.close()
+        return {"message":"Tweet added successfully"}
+    else: 
+        if request.method == "GET":
+            auth_header = request.headers.get('Authorization')
+            token_encoded = auth_header.split(' ')[1]
+            decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+            myid = decode_data["id"]
+            user_id = request.args.get("user_id")
+            if user_id:
+                cursor = mysql.connection.cursor()
+                cursor.execute(
+                    """SELECT tweets.content,tweets.user_id,tweets.created_on,users.name,users.imgurl FROM  tweets  JOIN users ON users.id = tweets.user_id WHERE tweets.user_id = %s""",
+                        (myid,)
+                )
+                result_tweets = cursor.fetchall()
+                cursor.close()
+                return {"tweets":result_tweets}
+            else:
+                auth_header = request.headers.get('Authorization')
+                token_encoded = auth_header.split(' ')[1]
+                decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+                myid = decode_data["id"]
+                page_no = request.args.get("page_no") or 1
+                page_limit = (int(page_no) - 1) * 20
+                cursor = mysql.connection.cursor()
+                cursor.execute(
+                    """SELECT tweets.content,tweets.user_id,tweets.created_on,users.name,users.imgurl FROM  tweets join followers ON followers.user = %s JOIN users ON users.id = tweets.user_id WHERE tweets.user_id = followers.follower OR tweets.user_id = %s ORDER BY tweets.id desc LIMIT %s, 20""",
+                    (myid,myid,page_limit)
+                )
+                result_tweets = cursor.fetchall()
+                cursor.execute(
+                    """SELECT COUNT(tweets.id) as count FROM tweets JOIN followers ON followers.user = %s JOIN users ON users.id = tweets.user_id WHERE tweets.user_id = followers.follower OR tweets.user_id = %s""",
+                    (myid,myid)
+                )
+                result2 = cursor.fetchall()
+                cursor.close()
+                total_tweets = result2[0]["count"]
+                return {"tweets":result_tweets,"total_tweets":total_tweets}
+
+
+@app.route('/auth/follow', methods = ["POST"])
+def add_follower():
+    auth_header = request.headers.get('Authorization')
+    token_encoded = auth_header.split(' ')[1]
+    decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+    myid = decode_data["id"]
+    user_id = request.json["user_id"]
+    cursor = mysql.connection.cursor()
     cursor.execute(
-        """DELETE FROM blogs WHERE id = %s AND user_id = %s""",(blog_id,myid)
-    )
+        """INSERT INTO followers (follower,user) 
+        VALUES (%s,%s)""", (myid,user_id)
+        )
     mysql.connection.commit()
-
-    return {"message":"blog deleted successfully"}
-
-
-
+    cursor.close()
+    return {"message":"Person is added in your following list"}
 
 
 #  authentication checking method used in login route
@@ -212,7 +188,7 @@ def check_auth(email,password):
 def upload_img(myid,location):
     cursor = mysql.connection.cursor()
     cursor.execute (
-        """UPDATE  users SET imageurl = %s WHERE id = %s""", (location,myid)
+        """UPDATE  users SET imgurl = %s WHERE id = %s""", (location,myid)
     )
     mysql.connection.commit()
     results = cursor.fetchall()
