@@ -2,7 +2,7 @@ import React from 'react'
 import axios from "axios"
 import { Link, Redirect } from "react-router-dom"
 import { connect } from 'react-redux'
-import {login,logout} from "../redux/action"
+import { login, logout } from "../redux/action"
 class Registration extends React.Component {
     constructor(props) {
         super(props)
@@ -65,7 +65,7 @@ class Registration extends React.Component {
         })
     }
 
-    handleLogin = async(e) => {
+    handleLogin = async (e) => {
         e.preventDefault()
         console.log("gone")
         await axios({
@@ -76,14 +76,14 @@ class Registration extends React.Component {
                 password: this.state.password
             }
         })
-            .then(res=>{    
+            .then(res => {
                 console.log(res.data.type)
-                this.props.login(res.data.token,res.data.type)
+                this.props.login(res.data.token, res.data.type)
             })
     }
     render() {
-        console.log(this.state,this.props.status)
-        if (this.props.token && this.props.person=="admin") {
+        console.log(this.state, this.props.status)
+        if (this.props.token && this.props.person == "admin") {
             return (
                 <React.Fragment>
                     <div>
@@ -92,14 +92,14 @@ class Registration extends React.Component {
                 </React.Fragment>
             )
         }
-        else if (this.props.token && this.props.person=="user") {
+        else if (this.props.token && this.props.person == "user") {
             return (
                 <React.Fragment>
                     <Redirect to="/user"></Redirect>
                 </React.Fragment>
             )
         }
-            
+
         else {
             return (
                 <React.Fragment>
@@ -137,7 +137,7 @@ class Registration extends React.Component {
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password"value={this.state.password} onChange={this.handleChange} />
+                                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                                     </div>
                                     <button type="submit" class="btn btn-primary" onClick={this.handleLogin}>Login</button>
                                 </form>
@@ -152,13 +152,13 @@ class Registration extends React.Component {
 const mapStateToProps = (state) => ({
     status: state.login,
     token: state.token,
-    person:state.person
+    person: state.person
 
 })
 
 const mapDispatchToProps = dispatch => {
     return ({
-        login:(data,data2)=>dispatch(login(data,data2))
+        login: (data, data2) => dispatch(login(data, data2))
     })
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Registration)

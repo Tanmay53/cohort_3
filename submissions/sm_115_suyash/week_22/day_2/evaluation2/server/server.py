@@ -177,13 +177,14 @@ def show_data():
 def update_album():
     album = request.json["album"]
     year = request.json["year"]
-    id = request.json["id"]
+    id = int(request.json["id"])
+    print(album,year,id)
     try:
         cursor = mysql.connection.cursor()
         cursor.execute(
-            """ UPDATE artist_info SET album = %s, year = %s WHERE artist_id = %s """, (album,year,id)
+            """ UPDATE artist_info SET album = %s, year = %s WHERE id = %s """, (album,year,id)
         )
-        data = cursor.fetchall()
+        cursor.connection.commit()
         return jsonify({"message": "Update Successfully","error":False}),200
     except Exception as e:
         return jsonify({"message": str(e), "error":True}),400
