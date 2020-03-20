@@ -74,8 +74,8 @@ class Home extends React.Component {
         else {
             return (
                 <React.Fragment>
-                    <h3 class="m-5" style={{ "color": "Tomato", "textAlign": "center" }}>Welcome to Blogger</h3>
-                    <h5 style={{ "textAlign": "center" }} class="lead mb-5"><i> Press <button onClick={this.handleReg} class="btn btn-success">Register</button> to Sign-up or press <button onClick={this.handleSign} class="btn btn-warning ">Sign-in</button> to enter the <span class="text-info lead">Blogger</span></i></h5>
+                    <h3 class="mt-3 display-4" style={{ "color": "tomato", "textAlign": "center" }}>Welcome to Blogger</h3>
+                    <h5 style={{ "textAlign": "center","color":"black" }} class="lead mb-5 "><button onClick={this.handleReg} class="btn btn-success">Register</button><button onClick={this.handleSign} class="btn btn-warning mx-2">Sign-in</button><span class="text-info lead"></span></h5>
                     <div style={{ "marginLeft": "26%", "width": "50%" }} class="shadow-lg p-3 mb-5 bg-white rounded">
                         {this.state.reg == 1 ?
                             <div>
@@ -92,8 +92,7 @@ class Home extends React.Component {
                             </div>
                             :
                             <div>
-                                                                <div style={{ "textAlign": "center" }}>SIGN-IN</div>
-
+                                <div style={{ "textAlign": "center" }}>SIGN-IN</div>
                                 <label>Email</label><br></br>
                                 <input type="text" style={{ "width": "100%" }} name="email" onChange={this.handleLog} /><br></br>
                                 <label>Password</label><br></br>

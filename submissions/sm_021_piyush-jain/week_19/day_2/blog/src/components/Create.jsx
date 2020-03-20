@@ -85,8 +85,8 @@ class Create extends React.Component {
                             <h5>Blog:</h5>
                             <textarea type="text" name="blog" onChange={this.handleChange} style={{ "borderColor": "Tomato", "borderRadius": "10px" }} /><br></br>
                             <div class="d-flex justify-content-center">
-                                <button class="btn btn-success mt-3" style={{ "borderRadius": "10px" }} onClick={this.handleClick}>Make a Blog</button>
-                                <button class="btn btn-success mt-3" style={{ "borderRadius": "10px" }} onClick={this.handleClick}>Make a Blog</button>
+                                <button class="btn btn-success mt-3 mx-1" style={{ "borderRadius": "10px" }} onClick={this.handleClick}>Make a Blog</button>
+                                <button class="btn btn-success mt-3 mx-1" style={{ "borderRadius": "10px" }} onClick={this.handleClick}>Make a Blog</button>
                             </div>
                         </div>
                     </div>
