@@ -1,0 +1,45 @@
+﻿								Chat mobile app system design
+
+		High level design:-
+1. Front end - figma UI mockup
+2. Read API - 
+                        a) User Login
+                        b) User Authentication
+                        c) Get new messages from other users
+                        d) Get new messages from groups
+3. Write API - 
+   1.  User registration
+   2. Write new text messages to other user/group
+   3. Upload images, videos and send to other user/group
+   4. Change User details
+4. DB tables-
+   1. Users
+   2. Groups
+   3. Messages
+______________________________________________________________________________________________
+		Low level DB schema :-
+Database - chat
+Tables: -
+1. Users - 
+        Id - primary key
+	A. Name
+	B. email
+	C. hash password
+	D. city
+	E. dob 
+
+2. Groups -
+	1. Id - primary key
+	2. User_id (users.id) foreign key
+	3. Message_id (messages.id)
+
+3. Messages - 
+	1. Id - primary key
+	2. Thread_id - (messages.id) foreign key (for reply messages) can be null,if  it is not a reply in thread.
+	3. Created_by (users.id) foreign key
+	4. Create_on DATETIME
+	5. Updated_on DATETIME
+	6. For_user (users.id) foreign key
+	7. For_group (groups.id) foreign key
+	8. Text
+	9. file
