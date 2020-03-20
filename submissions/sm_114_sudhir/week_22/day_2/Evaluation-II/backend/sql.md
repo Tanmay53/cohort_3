@@ -36,3 +36,8 @@ INSERT INTO buses (source, destination, bus)
 VALUES (1, 2, "TS-2034"),
 (2, 3, "TS-1729"),
 (3, 4, "TS-1024");
+
+
+select buses.id, bus, schedule, t1.cities as source, t2.cities as des from buses join cities as t1 on t1.id = buses.source join cities as t2 on t2.id = buses.destination
+
+SELECT buses.id, bus, schedule, t1.cities AS source, t2.cities AS destination FROM buses JOIN cities AS t1 ON t1.id = buses.source JOIN cities AS t2 on t2.id = buses.destination
