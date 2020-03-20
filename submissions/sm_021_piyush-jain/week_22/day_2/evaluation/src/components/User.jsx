@@ -34,12 +34,12 @@ class User extends React.Component {
             url: "http://127.0.0.1:5000/getPageCount",
             headers: { 'Authorization': `Bearer ${token}` }
         })
-        .then(res => {
-            console.log(res)
-            this.setState({
-                count: res.data
+            .then(res => {
+                console.log(res)
+                this.setState({
+                    count: res.data
+                })
             })
-        })
 
         await axios({
             method: "GET",
@@ -113,28 +113,27 @@ class User extends React.Component {
             })
     }
 
-page=async(data)=>{
-    var token = this.props.token
+    page = async (data) => {
+        var token = this.props.token
 
-    await axios({
-        method: "GET",
-        url: `http://127.0.0.1:5000/pagination/${data}`,
-        headers: { 'Authorization': `Bearer ${token}` }
-    })
-        .then(res => {
-            console.log(res)
-            this.setState({
-                table: res.data
-            })
+        await axios({
+            method: "GET",
+            url: `http://127.0.0.1:5000/pagination/${data}`,
+            headers: { 'Authorization': `Bearer ${token}` }
         })
-}
+            .then(res => {
+                console.log(res)
+                this.setState({
+                    table: res.data
+                })
+            })
+    }
     render() {
 
-        var pages=[]
+        var pages = []
 
-        for(var i=0;i<this.state.count+1;i++)
-        {
-        pages.push(    <li class="page-item list-inline-item border border-danger ml-4" onClick={()=>this.page(i)}>{i+1}</li>)
+        for (var i = 0; i < this.state.count + 1; i++) {
+            pages.push(<li class="page-item list-inline-item border border-danger ml-4" onClick={() => this.page(i)}>{i + 1}</li>)
         }
 
         console.log(this.state)

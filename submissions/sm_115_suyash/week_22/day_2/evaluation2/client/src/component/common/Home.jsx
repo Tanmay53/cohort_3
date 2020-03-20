@@ -43,7 +43,7 @@ class Home extends Component {
                     <td>{ele.year}</td>
                     <td>
                       <Link
-                        to={`/update/${ele.id}?album=${ele.album}&album=${ele.year}`}
+                        to={`/update/${ele.id}?album=${ele.album}&year=${ele.year}`}
                       >
                         Edit
                       </Link>

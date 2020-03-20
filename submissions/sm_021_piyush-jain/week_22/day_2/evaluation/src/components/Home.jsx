@@ -165,37 +165,37 @@ class Home extends React.Component {
 
     render() {
         console.log(this.state)
-        if (this.props.token && this.props.person=="admin") {
+        if (this.props.token && this.props.person == "admin") {
             return (
                 <React.Fragment>
                     <h2 class="text-center text-danger my-5">Welcome Back Admin !!</h2>
                     <div class="d-flex justify-content-center">
-                    <h6 class="text-info mt-2 mx-2"> Wanna add City?</h6>
-                    <input type="text" placeholder="Then type-in here" name="city" onChange={this.addCity}  class="border border-danger mx-2 rounded"/>
-                    <button onClick={this.addingCity} class="btn btn-success">Add</button>
+                        <h6 class="text-info mt-2 mx-2"> Wanna add City?</h6>
+                        <input type="text" placeholder="Then type-in here" name="city" onChange={this.addCity} class="border border-danger mx-2 rounded" />
+                        <button onClick={this.addingCity} class="btn btn-success">Add</button>
                     </div>
 
                     <div class="d-flex justify-content-center my-5 ml-5">
                         <div>
-                            
+
                             <div class="d-flex justify-content-center my-2"><select onChange={this.source}>
-                            <option>Source</option>
-                            {this.state.cities.map((element, index) =>
-                                <option key={index} value={element.name}>{element.name}</option>
-                            )}
-                        </select>
-                        <select onChange={this.destination}>
-                            <option>Destination</option>
-                            {this.state.cities.map((element, index) =>
-                                <option key={index} value={element.name}>{element.name}</option>
-                            )}
-                        </select>
+                                <option>Source</option>
+                                {this.state.cities.map((element, index) =>
+                                    <option key={index} value={element.name}>{element.name}</option>
+                                )}
+                            </select>
+                                <select onChange={this.destination}>
+                                    <option>Destination</option>
+                                    {this.state.cities.map((element, index) =>
+                                        <option key={index} value={element.name}>{element.name}</option>
+                                    )}
+                                </select>
+                            </div>
+                            <div class="d-flex justify-content-center my-2"><input type="text" placeholder="Bus_NO" name="bus_no" onChange={this.handleChange} class="border border-danger rounded" /></div>
+                            <div class="d-flex justify-content-center my-2"><input type="text" placeholder="Time" name="schedule" onChange={this.handleChange} class="border border-danger rounded" /></div>
+                            <div class="d-flex justify-content-center my-2"><button onClick={this.addBus} class="btn btn-success">Add Bus</button></div>
                         </div>
-                        <div class="d-flex justify-content-center my-2"><input type="text" placeholder="Bus_NO" name="bus_no" onChange={this.handleChange}  class="border border-danger rounded"/></div>
-                        <div class="d-flex justify-content-center my-2"><input type="text" placeholder="Time" name="schedule" onChange={this.handleChange}  class="border border-danger rounded"/></div>
-                    <div class="d-flex justify-content-center my-2"><button onClick={this.addBus} class="btn btn-success">Add Bus</button></div>
                     </div>
-                </div>
 
                     <div class="table-responsive">
                         <table class="table">
@@ -218,7 +218,7 @@ class Home extends React.Component {
                                         <td>{item.destination}</td>
                                         <td>{item.bus_no}</td>
                                         <td>{item.schedule}</td>
-                                        <td><button class="btn btn-outline-warning"><Link to={`/edit/${item.id}/${item.bus_id}`} style={{"textDecoration":"none"}} class="text-dark">Edit</Link></button></td>
+                                        <td><button class="btn btn-outline-warning"><Link to={`/edit/${item.id}/${item.bus_id}`} style={{ "textDecoration": "none" }} class="text-dark">Edit</Link></button></td>
                                         <td><button onClick={() => this.handleDelete(item.id, item.bus_id)} class="btn btn-outline-danger text-dark">Delete</button></td>
                                     </tr>
                                 )}
@@ -228,13 +228,13 @@ class Home extends React.Component {
                 </React.Fragment>
             )
         }
-else if (this.props.token && this.props.person=="user") {
-    return (
-        <React.Fragment>
-            <Redirect to="/user"></Redirect>
-        </React.Fragment>
-    )
-}
+        else if (this.props.token && this.props.person == "user") {
+            return (
+                <React.Fragment>
+                    <Redirect to="/user"></Redirect>
+                </React.Fragment>
+            )
+        }
 
 
         // if he is not logged in, redirect him to sign-in/sign-up page
@@ -250,7 +250,7 @@ else if (this.props.token && this.props.person=="user") {
 const mapStateToProps = (state) => ({
     status: state.login,
     token: state.token,
-    person:state.person
+    person: state.person
 })
 
 const mapDispatchToProps = dispatch => {

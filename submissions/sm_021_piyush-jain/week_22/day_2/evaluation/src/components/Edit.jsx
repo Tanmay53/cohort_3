@@ -48,23 +48,23 @@ class Edit extends React.Component {
                 schedule: this.state.schedule
             }
         })
-        .then(alert("Bus Route has been Updated"))
+            .then(alert("Bus Route has been Updated"))
             .then(this.props.history.goBack)
     }
 
 
     render() {
         console.log(this.state)
-        if (this.props.token && this.props.person=="admin") {
+        if (this.props.token && this.props.person == "admin") {
             return (
                 <React.Fragment>
                     <div class="d-flex justify-content-center my-5 ml-5 ">
-                        <div  style={{"width":"40%"}} class="shadow p-3 mb-5 bg-white rounded">
+                        <div style={{ "width": "40%" }} class="shadow p-3 mb-5 bg-white rounded">
                             <h4 class="text-center">Update the bus details</h4>
                             <div class="mt-3">Bus Number</div>
-                            <div><input type="text" name="bus_no" placeholder={this.state.detail.bus_no} onChange={this.handleChange}   class="border border-danger rounded my-2" style={{"width":"100%"}}/></div>
+                            <div><input type="text" name="bus_no" placeholder={this.state.detail.bus_no} onChange={this.handleChange} class="border border-danger rounded my-2" style={{ "width": "100%" }} /></div>
                             <div>Schedule</div>
-                            <div><input type="text" name="schedule" placeholder={this.state.detail.schedule} onChange={this.handleChange}   class="border border-danger rounded my-2" style={{"width":"100%"}}/></div>
+                            <div><input type="text" name="schedule" placeholder={this.state.detail.schedule} onChange={this.handleChange} class="border border-danger rounded my-2" style={{ "width": "100%" }} /></div>
                             <div class="d-flex justify-content-center ml-5"><button onClick={this.handleUpdate} class="btn btn-warning">Update</button></div>
                         </div>
                     </div>
@@ -72,15 +72,15 @@ class Edit extends React.Component {
                 </React.Fragment>
             )
         }
-        else if (this.props.token && this.props.person=="user") {
+        else if (this.props.token && this.props.person == "user") {
             return (
                 <React.Fragment>
                     <Redirect to="/user"></Redirect>
                 </React.Fragment>
             )
         }
-        
-        
+
+
 
 
         // if he is not logged in, redirect him to sign-in/sign-up page
@@ -98,7 +98,7 @@ class Edit extends React.Component {
 const mapStateToProps = (state) => ({
     status: state.login,
     token: state.token,
-    person:state.person
+    person: state.person
 
 })
 

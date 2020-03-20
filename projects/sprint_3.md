@@ -8,7 +8,7 @@
 | sm_108 | Krishna     | Movie Database      | [github](https://github.com/krishna7860/sprint-3)                            |
 | sm_103 | Apoorva     | Currency Coverter   | [github](https://github.com/krsnaapoorv/projects/tree/master/masai-sprint-3) |
 | sm_002 | Abdul       | DOG API	     | [github](https://github.com/abduljabbarpeer/masai-sprint-3)
-| sm_106 | Deepanshu   | Currency Converter  | [github](https://github.com/dipanshuraz/masai-sprint-3)                      |
+| sm_106 | Deepanshu   | Currency Converter  | [github](https://github.com/dipanshuraz/CurrencyConverterJS)                 |
 | sm_115 | Suyash      | Calendar Index      | [github](https://github.com/SuyashMishra-dev/masai-projects)                 |
 | sm_107 | Hasmuddin   | Meal DB             | [github](https://github.com/hasmuddinansari/sprint-3)                        |
 | sm_112 | Soumik      | Open Movie Database | [github](https://github.com/Acharya-soumik/projects/tree/master/sprint-3)    |
@@ -29,10 +29,10 @@
 | sm_104 | Asheesh Pratap| Currency Converter| [github](https://github.com/asheesh900/masai-sprint-3.git)					          |
 | sm_029 | Sakshi Sinha| Cocktail Db         | [github](https://github.com/SakshiSinha/masai-sprint-3)                      |
 | sm_017 | Mukund Chandak | Cocktail Db         | [github](https://github.com/mukundchandak/masai-sprint-3)                 | 
-| sm_106 | Deepanshu   | Movie DB     | [github](https://github.com/dipanshuraz/masai-sprint-3-2)                           |
+| sm_106 | Deepanshu   | Movie DB     | [github](https://github.com/dipanshuraz/MovieDBApp)                                 |
 | sm_004 | Abhishek Sharma | Cocktail Database | [github](https://github.com/Abhi1597/sprint_3)                             |
 |sm_114  | Sudhir      | Cocktail DB  | [github](https://github.com/Sudhirsin/projects/tree/master/masai/week_8/sprint-3)   |
 | sm_029 | Sakshi Sinha | Meal DB            | [github](https://sakshisinha.github.io/masai-Sprint-3/)   
 | sm_114 | Sudhir  | Cocktail DB     | [github](https://github.com/Sudhirsin/projects/tree/master/masaisprint-3)              
-| sm_104 | Asheesh Pratap | Meal DB | [github](https://github.com/asheesh900/masai-sprint-3-project-2)                       |
+| sm_104 | Asheesh Pratap | Meal DB | [github](https://github.com/asheesh900/masai-sprint-3-project-2)                      |
 | sm_035 | Yashwanth Kore | Cocktail DB      | [github](https://github.com/YashwanthKore/masai-sprint-3)                    |

@@ -45,7 +45,6 @@ export class Login extends Component {
                         <small className="text-muted">If not a user, sign up now </small>
                         <br/>
                         <Link to='/register' className="text-decoration-none btn btn-sm btn-warning" >Sign Up</Link>
-                        <p>{this.props.message}</p>
                     </div>
                 </div>
             )
