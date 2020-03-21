@@ -1,0 +1,2 @@
+Open ports are
+80 and 443
