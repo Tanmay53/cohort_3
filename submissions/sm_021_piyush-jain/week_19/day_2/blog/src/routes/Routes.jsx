@@ -10,6 +10,8 @@ import NotFound from "../components/NotFound"
 import Navbar from "../components/Navbar"
 import UpdateBlog from "../components/UpdateBlog"
 import Allcomments from "../components/Allcomments"
+import { connect } from 'react-redux'
+import { login, logout } from "../redux/action"
 import axios from "axios"
 class Routes extends React.Component {
     constructor(props) {
@@ -19,13 +21,13 @@ class Routes extends React.Component {
         }
     }
     Logout = () => {
-        localStorage.clear()
         this.setState({
-            name:""
+            name: ""
         })
+        this.props.logout()
     }
-    componentDidMount = async() => {
-        var token = localStorage.getItem("token")
+    componentDidMount = async () => {
+        var token = this.props.token
         await axios({
             method: 'get',
             url: `http://127.0.0.1:5000/getName`,
@@ -37,15 +39,14 @@ class Routes extends React.Component {
             .catch(err => console.log(err))
     }
     render() {
-        console.log(this.state.name)
         return (
-            <>
-                <nav class="navbar navbar-dark bg-primary">
-                    <div><button class="btn btn-primary lead"><Link to="/user" style={{ "color": "white", "textDecoration": "none" }}><h4>{this.state.name}</h4></Link></button></div>
-                    <h3 style={{ "color": "white" }}><Link to="/home" style={{ "color": "white", "textDecoration": "none" }}><span class=" 	d-none d-sm-block">ULTRA HIGH</span></Link></h3>
-                    <div><button class="btn btn-primary lead"><Link to="/create" style={{ "color": "white", "textDecoration": "none" }}><h4>Write</h4></Link></button>
-                        <button class="btn btn-warning ml-2"><Link to="/blog" style={{ "color": "white" }}>Blog</Link></button>
-                        {localStorage.getItem("token")!=null?<button class="btn btn-danger ml-2" onClick={this.Logout}>Logout</button>:null}
+            <React.Fragment>
+                <nav class="navbar navbar-dark bg-dark">
+                    <div><button class="btn btn-outline-primary lead"><Link to="/user" style={{ "color": "white", "textDecoration": "none" }}>{this.state.name}</Link></button></div>
+                    <h3 style={{ "color": "white" }}><Link to="/home" style={{ "color": "white", "textDecoration": "none" }}><span class=" 	d-none d-sm-block text-center">Blogger</span></Link></h3>
+                    <div><button class="btn btn-outline-primary lead"><Link to="/create" style={{ "color": "white", "textDecoration": "none" }}>Write</Link></button>
+                        <button class="btn btn-outline-warning ml-2"><Link to="/blog" style={{ "color": "white" }}>Blog</Link></button>
+                        {this.props.token ? <button class="btn btn-outline-danger ml-2" onClick={this.Logout}>Logout</button> : null}
                     </div>
                 </nav>
                 <Switch>
@@ -60,8 +61,19 @@ class Routes extends React.Component {
                     <Route path="/Allcomments/:id/:user_id/:category_id" exact render={(props) => <Allcomments {...props} />}></Route>
                     <Route path component={NotFound} />
                 </Switch>
-            </>
+            </React.Fragment>
         )
     }
 }
-export default Routes
+const mapStateToProps = (state) => ({
+    status: state.login,
+    token: state.token
+})
+
+const mapDispatchToProps = dispatch => {
+    return ({
+        logout: () => dispatch(logout())
+    })
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Routes)

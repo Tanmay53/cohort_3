@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Link, Connector, Redirect } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
+import { connect } from 'react-redux'
 class Navbar extends React.Component {
     constructor(props) {
         super(props)
@@ -8,10 +9,10 @@ class Navbar extends React.Component {
         }
         console.log(props)
     }
-    Logout=()=>{
+    Logout = () => {
         localStorage.clear()
         this.props.histoy.push("/home")
-      }
+    }
     render() {
         return (
             <React.Fragment>
