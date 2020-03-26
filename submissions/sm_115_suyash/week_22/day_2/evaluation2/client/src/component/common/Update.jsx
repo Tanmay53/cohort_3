@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { updateAlbum } from "../../redux/action";
 
 class Update extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class Update extends Component {
     let album = query.get("album");
     let year = query.get("year");
     let id = this.props.match.params.id;
+    console.log(album, year, id);
     this.setState({
       album: album,
       year: year,
@@ -29,7 +31,7 @@ class Update extends Component {
   };
 
   submit = () => {
-    this.props.addNewArtist(this.state);
+    this.props.updateAlbum(this.state);
   };
 
   render() {
@@ -55,6 +57,8 @@ class Update extends Component {
 
 const mapStateToProps = state => ({});
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  updateAlbum: payload => updateAlbum(payload)
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Update);

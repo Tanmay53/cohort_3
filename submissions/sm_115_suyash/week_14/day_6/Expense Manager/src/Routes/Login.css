@@ -1,0 +1,46 @@
+@keyframes heading1 {
+  to {
+    transform: translateX(0);
+  }
+}
+.my-text1 {
+  transform: translateX(-1000px);
+  animation: heading1 1s forwards ease-in;
+}
+
+@keyframes heading2 {
+  to {
+    transform: translateY(0);
+  }
+}
+.my-text2 {
+  transform: translateY(1000px);
+  animation: heading2 1s forwards ease-in;
+}
+
+@keyframes heading3 {
+  to {
+    transform: translateX(0);
+  }
+}
+.my-text3 {
+  transform: translateX(1000px);
+  animation: heading3 1s forwards ease-in;
+}
+
+@keyframes button {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.btnAni {
+  transform: translateY(-1000px);
+  animation: button 1s forwards ease-in;
+}
+
+@media (max-width: 540px) {
+  div span {
+    font-size: xx-large !important;
+  }
+}

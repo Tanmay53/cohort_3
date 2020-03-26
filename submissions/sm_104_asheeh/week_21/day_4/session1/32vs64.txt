@@ -1,0 +1,22 @@
+Parameter                       32 bit                                      64 bit                                  
+
+Addressable space           It has 4 GB addressable space.          It has 64 GB addressable space.
+
+Application support         64-bit application and programmes       It can supports 32-bit as well as 64-bit  
+                            will not work.                          programmes and applications.
+
+OS support                  It needs a 32-bit OS to work.           It will work on both 32-bit as well as 64-bit OS.
+
+Support for                 Not suitable for multitasking and       Works best for multitasking and stress testing.
+multitasking                stress testing.     
+
+OS and CPU                  32-bit operating systems and             64-bit OS demands 64-bit CPU, and 64-bit applications                    
+requirement                 applications requires 32-bit CPU.        require 64-bit OS and CPU.
+
+System Available            Support Windows 7, 8, Vista, XP,         Windows XP Professional, Windows Vista, Windows 7, Windows 8,
+                            Linux.                                   Windows 10, Linux, Mac OS X
+
+Memory Limits               32-bit systems limited to 3.2 GB of      It enables you to store up to 17 billion GB of RAM.
+                            RAM 32-bit Windows.It's addresses 
+                            limitation does not allow us to use 
+                            full 4 GB of physical memory space
