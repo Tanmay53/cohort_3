@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios"
-import {Link,Redirect} from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
+import { connect } from 'react-redux'
 class Allcomments extends Component {
     constructor(props) {
         super(props)
@@ -8,21 +9,25 @@ class Allcomments extends Component {
             comments: [],
             update: 0,
             change: "",
-            blogs:[],
+            blogs: [],
             user: 0,
-            id:0,
-            user_id:0,
-            category_id:0
+            id: 0,
+            user_id: 0,
+            category_id: 0
         }
         console.log(props)
     }
+
+    // function to get the initial setup
     componentDidMount = async () => {
-        var token = localStorage.getItem("token")
+        var token = this.props.token
         this.setState({
             id: this.props.match.params.id,
             user_id: this.props.match.params.user_id,
             category_id: this.props.match.params.category_id,
         })
+
+        //get only the user's comments
         await axios({
             method: 'get',
             url: `http://127.0.0.1:5000/userComments/${this.props.match.params.id}/${this.props.match.params.user_id}/${this.props.match.params.category_id}`,
@@ -31,7 +36,7 @@ class Allcomments extends Component {
             .then(res => this.setState({
                 blogs: res.data.items[0]
             }))
-
+        // get all the blog comments
         await axios({
             method: 'get',
             url: `http://127.0.0.1:5000/blogComments/${this.props.match.params.id}/${this.props.match.params.category_id}`,
@@ -41,16 +46,17 @@ class Allcomments extends Component {
                 comments: res.data.items
             }))
 
-            await axios.post(`http://127.0.0.1:5000/getId`, { "token": token })
+        await axios.post(`http://127.0.0.1:5000/getId`, { "token": token })
             .then(res => this.setState({
                 user: Number(res.data)
             }))
 
     }
 
+    // function to perform delete operation
     handleDelete = async (i, idx, user_id, category_id) => {
         console.log(idx, user_id, category_id)
-        var token = localStorage.getItem("token")
+        var token = this.props.token
         await axios({
             method: 'get',
             url: `http://127.0.0.1:5000/DeleteBlog/${i}/${idx}/${user_id}/${category_id}`,
@@ -68,15 +74,19 @@ class Allcomments extends Component {
                 comments: res.data.items
             }))
     }
+
+    // change the input fields
     handleChange = (e) => {
         this.setState({
             change: e.target.value
         })
     }
-    Update = async (id,blog_id,user_id,category_id) => {
-        var token = localStorage.getItem("token")
+
+    // update the blog
+    Update = async (id, blog_id, user_id, category_id) => {
+        var token = this.props.token
         this.setState({
-            comment_id:id
+            comment_id: id
         })
         await axios({
             method: 'post',
@@ -96,9 +106,10 @@ class Allcomments extends Component {
             }))
         this.setState({
             update: 0,
-            comment_id:0
+            comment_id: 0
         })
     }
+
     handleUpdate = (i, comment_name) => {
         this.setState({
             update: 1,
@@ -109,7 +120,7 @@ class Allcomments extends Component {
     }
     render() {
         console.log(this.state)
-        if (localStorage.getItem("token")) {
+        if (this.props.token) {
             return (
                 <React.Fragment>
                     <div class="d-flex justify-content-center mt-4">
@@ -129,24 +140,24 @@ class Allcomments extends Component {
                         {this.state.comments.map((item, index) => (
                             <div class="d-flex justify-content-center mt-4" style={{ "minWidth": "400px" }} key={index}>
                                 <div key={index} style={{ "border": "1px solid black", "width": "75%" }}>
-                                    {this.state.update == 0,this.state.comment_id!=item.id ?
+                                    {this.state.update == 0, this.state.comment_id != item.id ?
                                         <div>
                                             <div style={{ "width": "100%" }} class="mt-2 clearfix">
                                                 <div class="float-left"><p class="text-info lead overflow-auto float-left">{item.comment_name}</p></div>
-                                               {this.state.user==item.user_id?<div class="float-right ">
+                                                {this.state.user == item.user_id ? <div class="float-right ">
                                                     <button class="btn btn-danger" onClick={() => this.handleDelete(item.id, item.blog_id, item.user_id, item.category_id)}><i class='fas fa-trash' style={{ "font-size": "12px" }}></i></button>
                                                     <button class="btn btn-warning ml-2" onClick={() => this.handleUpdate(item.id, item.comment_name)}><i class='far fa-edit' style={{ "font-size": "12px" }}></i></button>
-                                                </div>:<div></div>}
+                                                </div> : <div></div>}
                                             </div>
                                             <div>
-                                                <div class="lead float-right clearfix" style={{ "clear": "float" }}><small class=" text-secondary "><small class="text-secondary mr-1" style={{"fontSize":"20px"}}>~</small>{item.COMMENT_PERSON}</small></div>
+                                                <div class="lead float-right clearfix" style={{ "clear": "float" }}><small class=" text-secondary "><small class="text-secondary mr-1" style={{ "fontSize": "20px" }}>~</small>{item.COMMENT_PERSON}</small></div>
                                             </div>
                                         </div>
                                         :
                                         <div style={{ "display": "flex" }}>
                                             <div class="float-left" style={{ "flexGrow": "2" }}><textarea rows="1" style={{ "border": "none" }} autoFocus type="text" onChange={this.handleChange} value={this.state.change} placeholder={this.state.change} ></textarea></div>
                                             <div class="float-right ">
-                                                <button onClick={() => this.Update(item.id,item.blog_id,item.user_id,item.category_id)} class="btn btn-warning ">UPADTE</button>
+                                                <button onClick={() => this.Update(item.id, item.blog_id, item.user_id, item.category_id)} class="btn btn-warning ">UPADTE</button>
                                                 <button class="btn btn-danger" onClick={() => this.handleDelete(item.id, item.blog_id, item.user_id, item.category_id)}><i class='fas fa-trash' style={{ "font-size": "15px" }}></i></button>
                                             </div>
                                         </div>}
@@ -162,4 +173,13 @@ class Allcomments extends Component {
         }
     }
 }
-export default Allcomments
+const mapStateToProps = (state) => ({
+    status: state.login,
+    token: state.token
+})
+
+const mapDispatchToProps = {
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Allcomments)

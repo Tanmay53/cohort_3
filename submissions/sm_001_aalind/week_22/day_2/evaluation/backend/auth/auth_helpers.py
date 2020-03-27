@@ -15,7 +15,7 @@ def login_user(email, password):
         return {"error": True, "message": "No User Found!"}
 
 
-def register_user(name, email, password):
+def register_user(name, email, user_type, password):
     user_exists = get_user_by_email(email)
 
     if user_exists:
@@ -27,9 +27,9 @@ def register_user(name, email, password):
         cur = mysql.connection.cursor()
         cur.execute(
             """
-            INSERT INTO `users` (name, email, password_hash, salt) VALUES (%s, %s, %s, %s)
+            INSERT INTO `users` (name, email, type, password_hash, salt) VALUES (%s, %s, %s, %s, %s)
         """,
-            (name, email, password, salt),
+            (name, email, user_type, password, salt),
         )
         mysql.connection.commit()
         cur.close()

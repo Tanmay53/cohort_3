@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="inputdata" />
+    <button onclick="handleclick()">Submit</button>
+    <button onclick="add()">+</button>
+    <button onclick="substract()">-</button>
+    <button onclick="division()">/</button>
+    <button onclick="multiply()">X</button>
+    <br>
+    <div id="showresult"></div>
+    <script>
+        let inputdata
+        function handleclick() {
+            inputdata = Number(document.getElementById("inputdata").value)
+            console.log(inputdata)
+        }
+        function add() {
+            counter.add(inputdata)
+            
+        }
+        function substract() {
+            counter.substract(inputdata)
+            
+        }
+        function division() {
+            counter.division(inputdata)
+            
+        }
+        function multiply() {
+            counter.multiply(inputdata)
+            
+        }
+        var counter = (function (inputdata) {
+            var count = 1;
+            console.log(inputdata)
+            function add(inputdata) {
+                count = count + 1
+                console.log(inputdata, count, inputdata + count)
+                document.getElementById("showresult").innerHTML = "Result is:" + (inputdata + count)
+            }
+            function substract(inputdata) {
+                count = count + 1
+                console.log(inputdata, count, inputdata - count)
+                document.getElementById("showresult").innerHTML = "Result is:" + (inputdata - count)
+            }
+            function division(inputdata) {
+                count = count + 1
+                console.log(inputdata, count, inputdata / count)
+                document.getElementById("showresult").innerHTML = "Result is:" + (inputdata / count)
+            }
+            function multiply(inputdata) {
+                count = count + 1
+                console.log(inputdata, count, inputdata * count)
+                document.getElementById("showresult").innerHTML = "Result is:" + (inputdata * count)
+            }
+            return { add, substract, division, multiply }
+        })()
+
+
+    </script>
+</body>
+
+</html>
