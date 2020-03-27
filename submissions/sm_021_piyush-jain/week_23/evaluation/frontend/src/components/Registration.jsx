@@ -68,20 +68,7 @@ class Registration extends React.Component {
 
     handleLogin = async(e) => {
         e.preventDefault()
-        console.log("gone")
-        await axios({
-            method: 'POST',
-            url: "http://127.0.0.1:5000/auth/login",
-            data: {
-                email: this.state.email,
-                password: this.state.password
-            }
-        })
-            .then(res=>{    
-                console.log(res.data.type)
-                this.props.login(res.data.token,res.data.type)
-            })
-        // this.props.signUp(this.state.email,this.state.password)
+        this.props.signUp(this.state.email,this.state.password)
     }
     render() {
         console.log(this.state,this.props.status)
