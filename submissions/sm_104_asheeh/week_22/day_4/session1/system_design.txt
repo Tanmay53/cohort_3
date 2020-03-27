@@ -1,0 +1,24 @@
+System design for a chat application:
+
+High Level Design(HLD):
+    A. Frontend
+        1. Landing Page
+        2. Register
+        3. Register Success
+        4. Log In
+        5. Log In Success
+        6. Contacts Page
+        7. Previous Chats Page
+        8. Individual Chats / Group Chats
+
+    B. Database Design:
+        1. Users
+        2. Chats
+    
+    C. API Docs:
+        1. User Registration
+        2. User Login
+        3. Chat Creation
+        4. Chat Deletion
+        5. Chat Updation
+        6. All Chats

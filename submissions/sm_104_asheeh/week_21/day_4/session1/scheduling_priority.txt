@@ -1,0 +1,44 @@
+Preemptive Scheduling:
+                      Preemptive scheduling is used when a process switches from running
+                       state to ready state or from waiting state to ready state.
+
+Non-preemptive Scheduling:
+                          Non-preemptive Scheduling is used when a process terminates, or
+                           a process switches from running to waiting state. 
+
+Difference between preemptive and non-preemptive scheduling
+
+PARAMETER       PREEMPTIVE SCHEDULING                               NON-PREEMPTIVE SCHEDULING
+Basic	        In this resources(CPU Cycle) are allocated          Once resources(CPU Cycle) are allocated to
+                 to a process for a limited time.                                                   a process, the process holds it till
+                                                                    it completes its burst time or switches to waiting state.
+                 	
+Interrupt	    Process can be interrupted in between.	            Process can not be interrupted untill it terminates itself or its time is up.
+
+Starvation	    If a process having high priority frequently        If a process with long burst time is running CPU,
+                 arrives in the ready queue, low priority           then later coming process with less CPU burst time may starve.
+                  process may starve.                                                   
+                 	
+Overhead	    It has overheads of scheduling the processes.	    It does not have overheads.
+
+Flexibility	    flexible	                                        rigid
+
+Cost	        cost associated	                                    no cost associated
+
+
+
+Example: This is a non-preemptive scheduling algorithm.
+
+Process ID      Arrival Time    Burst Time     Priority
+1               2               3              1
+2               0               4              4
+3               4               2              1
+4               5               4              2
+
+Final Result...
+
+Process ID      Arrival Time    Start Time      Finish Time    
+2               0               0               4  
+1               2               4               7  
+3               4               7               9  
+4               5               9               13  

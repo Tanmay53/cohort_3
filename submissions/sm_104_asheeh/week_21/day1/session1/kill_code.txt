@@ -1,0 +1,3 @@
+kill <pid>
+
+e.g. kill 3275
