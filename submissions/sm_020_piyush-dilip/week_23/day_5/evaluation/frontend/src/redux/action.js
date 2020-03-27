@@ -171,7 +171,10 @@ export const deleteEmployee = (id) => {
             method : 'delete',
             baseURL : `http://127.0.0.1:5000/employee/delete/${id}`
         })
-        .then(res => dispatch(employeeDeleted(res.data)))
+        .then(res => {
+            dispatch(employeeDeleted(res.data))
+            dispatch(dataFetch())
+        })
         .catch(err => console.log(err))
     }
 }
