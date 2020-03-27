@@ -11,7 +11,8 @@ export class Home extends Component {
 
         this.state = {
             filterBy: '',
-            sortBy: ''
+            sortBy: '',
+            id : -1
         }
     }
 
@@ -25,6 +26,12 @@ export class Home extends Component {
             let filter = this.state.filterBy
             this.props.sortBy({ order, filter })
         }
+    }
+
+    deleteConfirmation = (id) => {
+        this.setState({
+            id : id
+        })
     }
 
     componentDidMount() {
@@ -77,7 +84,7 @@ export class Home extends Component {
                                             <td>{emp.department}</td>
                                             <td>{emp.salary}</td>
                                             <td>{emp.gender}</td>
-                                            <td><button className="btn btn-sm btn-danger" onClick={() => this.props.handleDelete(emp.id)} >Delete</button></td>
+                                            <td><button type="button" className="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal" onClick={() => this.deleteConfirmation(emp.id)} >Delete</button></td>
                                             <td><Link to={`/update/${emp.id}`} >Update</Link></td>
                                         </tr>
                                     )}
@@ -85,6 +92,24 @@ export class Home extends Component {
                             </table>
                         </div>
                         <Pagination />
+
+                            {/* modal for delete */}
+                            <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div className="modal-dialog" role="document">
+                                <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title" id="exampleModalLabel">Are you sure you want to delete ?</h5>
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={() => this.props.handleDelete(this.state.id)} >Delete</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
                     </div>
                 </>
             )
