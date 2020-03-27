@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { Typography, Col, Row, Radio, notification } from "antd";
+import { Typography, Col, Row, Radio, notification, Button } from "antd";
 import Table from "./Table";
 import { connect } from "react-redux";
-import { busList, busListCustom } from "../redux/actions/bus";
+import { busList, busListCustom, changePage } from "../redux/actions/bus";
 import { loadLocation } from "../redux/actions/location";
 import { Select } from "antd";
 
 const { Title } = Typography;
 const { Option } = Select;
 
-function BusList({ busList, data, locations, loadLocation, busListCustom }) {
+function BusList({
+  busList,
+  data,
+  locations,
+  loadLocation,
+  busListCustom,
+  prev,
+  next,
+  changePage
+}) {
   useEffect(() => {
     busList();
     loadLocation();
@@ -33,6 +42,14 @@ function BusList({ busList, data, locations, loadLocation, busListCustom }) {
     }
   }
 
+  function handleChangePage(e) {
+    if (e.target.value == "prev") {
+      changePage({ page: prev });
+    } else {
+      changePage({ page: next });
+    }
+  }
+
   return (
     <div style={{ width: "100vw" }}>
       <Title level={3}>Bus Trip Details</Title>
@@ -50,13 +67,26 @@ function BusList({ busList, data, locations, loadLocation, busListCustom }) {
             <Radio value="source">Source</Radio>
             <Radio value="destination">Destination</Radio>
           </Radio.Group>
-          <Select style={{ width: 120 }} onChange={handleChange}>
+          <Select
+            style={{ width: 120 }}
+            onChange={handleChange}
+            placeholder="Choose Location"
+          >
             {locations.map(item => (
               <Option value={item.name} key={item.id}>
                 {item.name}
               </Option>
             ))}
           </Select>
+          <div style={{ margin: "2rem 0" }}>
+            <Title level={4}>Change Page</Title>
+            <Button onClick={handleChangePage} value="prev">
+              Prev
+            </Button>
+            <Button onClick={handleChangePage} value="next">
+              Next
+            </Button>
+          </div>
         </Col>
       </Row>
     </div>
@@ -65,11 +95,14 @@ function BusList({ busList, data, locations, loadLocation, busListCustom }) {
 
 const mapStateToProps = state => ({
   data: state.bus.buses,
-  locations: state.location.locations
+  locations: state.location.locations,
+  prev: state.bus.previous,
+  next: state.bus.next
 });
 
 export default connect(mapStateToProps, {
   busList,
   loadLocation,
-  busListCustom
+  busListCustom,
+  changePage
 })(BusList);
