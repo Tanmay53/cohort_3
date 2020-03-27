@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { addArtist, addAlbum, editAlbum, deleteAlbum } from '../redux/user/action'
+import { addArtist, addAlbum, editAlbum, deleteAlbum, filterByArtist } from '../redux/user/action'
 import { connect } from 'react-redux'
 import uniqid from 'uniqid'
+import Pagination from '../components/Pagination'
 
 export class Home extends Component {
   constructor(props) {
@@ -14,8 +15,10 @@ export class Home extends Component {
       getAlbumYear: '',
       EditAlbumName: '',
       EditAlbumYear: '',
-      EditAlbumUniq: ''
-
+      EditAlbumUniq: '',
+      flag: false,
+      album: [],
+      id: 0
     }
   }
 
@@ -32,13 +35,19 @@ export class Home extends Component {
 
   addAlbumBtn = () => {
     const { addAlbum } = this.props
-    let album = {
-      artistName: this.state.getArtist,
-      albumName: this.state.getAlbum,
-      getAlbumYear: this.state.getAlbumYear,
-      uniqid: uniqid()
-    }
-    addAlbum(album)
+    this.setState({ id: this.state.id + 1 }, () => {
+      console.log(this.state.id)
+      let album = {
+        id: this.state.id,
+        artistName: this.state.getArtist,
+        albumName: this.state.getAlbum,
+        getAlbumYear: this.state.getAlbumYear,
+        uniqid: uniqid(),
+      }
+      addAlbum(album)
+
+    })
+
   }
 
   editAlbum = (elem) => {
@@ -61,8 +70,7 @@ export class Home extends Component {
 
   delete = (id) => {
     const { deleteAlbum } = this.props
-    console.log('delete')
-    console.log(id)
+
     deleteAlbum(id)
   }
 
@@ -75,11 +83,34 @@ export class Home extends Component {
 
     </div>)
   }
+
+  sortBy = () => {
+    const { album } = this.props
+    if (this.state.flag) {
+      album.sort((a, b) => b.getAlbumYear - a.getAlbumYear);
+      this.setState(pre => ({
+        flag: !pre.flag
+      }));
+    } else {
+      album.sort((a, b) => a.getAlbumYear - b.getAlbumYear);
+      this.setState(pre => ({
+        flag: !pre.flag
+      }));
+    }
+  };
+
+  filterBy = e => {
+    const { filterByArtist } = this.props
+    let findArtist = e.target.value;
+    filterByArtist(findArtist)
+  };
   render() {
-    const { artist, album } = this.props
+    const { artist, album, page, perPage } = this.props
     return (
+
       <div className='container'>
-        <div className="form-group">
+        {this.pageList}
+        < div className="form-group">
           <p className="lead font-weight-bold">Add Artist</p>
           <input type="text" placeholder='Add Artist Name' id='artist' name='artistInput' value={this.artistInput} onChange={this.handleInput} className='form-control' />
           <button className='btn btn-primary btn-block' onClick={this.addArtistBtn}>Add Artist</button>
@@ -89,7 +120,7 @@ export class Home extends Component {
           <p className="lead font-weight-bold">Add Album</p>
           <select name="" id="" className='form-control' name='getArtist' onChange={this.handleInput}>
             {artist.map(elem => {
-              console.log(elem)
+
               return <option value={elem}>{elem}</option>
             })}
           </select>
@@ -101,12 +132,17 @@ export class Home extends Component {
 
         <p className="lead font-weight-bold">Filter</p>
         <div className="row">
-          <select name="" id="" className='form-control'>
-            <option value="">Artist</option>
+          <select name="" id="" className='form-control' name='getArtist' onChange={this.filterBy}>
+            {artist.map(elem => {
+              return <option value={elem}>{elem}</option>
+            })}
           </select>
-          <select name="" id="" className='form-control'>
-            <option value="">Year</option>
-          </select>
+          <button
+            onClick={this.sortBy}
+            className="btn btn-outline-dark m-3 btn-block"
+          >
+            Sort By
+              </button>
         </div>
 
         <table class="table">
@@ -121,6 +157,16 @@ export class Home extends Component {
             </tr>
           </thead>
           <tbody>
+            {/* {album && album.filter((a, i) => i >= perPage * (page - 1) && i < perPage * page).map(elem =>
+              <tr key={elem.id}>
+                <th scope="row">{elem.uniqid}</th>
+                <td>{elem.artistName}</td>
+                <td>{elem.albumName}</td>
+                <td>{elem.getAlbumYear}</td>
+                <td><button className='btn btn-success' onClick={() => this.editAlbum(elem)}>edit</button></td>
+                <td><button className='btn btn-danger' onClick={() => this.delete(elem.uniqid)}>delete</button></td>
+              </tr>)} */}
+            <Pagination />
             {album.map((elem, i) => {
               return <tr key={elem.uniqid}>
                 <th scope="row">{i + 1}</th>
@@ -143,14 +189,20 @@ export class Home extends Component {
 
 const mapStateToProps = (state) => ({
   artist: state.userReducer.artist,
-  album: state.userReducer.album
+  album: state.userReducer.album,
+
+  page: state.userReducer.page,
+  perPage: state.userReducer.page,
+  isLoading: state.authReducer.isLoading,
+
 })
 
 const mapDispatchToProps = dispatch => ({
   addArtist: payload => dispatch(addArtist(payload)),
   addAlbum: payload => dispatch(addAlbum(payload)),
   editAlbum: payload => dispatch(editAlbum(payload)),
-  deleteAlbum: payload => dispatch(deleteAlbum(payload))
+  deleteAlbum: payload => dispatch(deleteAlbum(payload)),
+  filterByArtist: payload => dispatch(filterByArtist(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

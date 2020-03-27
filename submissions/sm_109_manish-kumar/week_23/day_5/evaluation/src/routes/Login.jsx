@@ -25,7 +25,7 @@ class Login extends Component {
 
   login = (e) => {
     e.preventDefault()
-    this.props.history.push("/login")
+    this.props.history.push("/register")
   }
   render() {
     return (
