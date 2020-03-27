@@ -41,18 +41,18 @@ class Form extends React.Component{
     //console.log(this.state)
     return (
       <>
-        <div className="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+        <div className="row col-md-4 offset-md-4 col-sm-6 offset-sm-3">
           <input 
             type = "text"
             name = "currentArtist"
             placeholder = "Add Artist"
-            className = "form-control"
+            className = "form-control col-8"
             value = {this.state.currentArtist}
             onChange = {this.handleChange}
             />
 
           <button
-            className="btn btn-secondary" 
+            className="btn btn-secondary col-4" 
             onClick={this.addArtist}>
             Add Artist
           </button>
