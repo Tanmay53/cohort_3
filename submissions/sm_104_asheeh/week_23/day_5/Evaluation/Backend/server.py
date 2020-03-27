@@ -115,7 +115,7 @@ def deleteProduct():
     return {"message": "Entry deleted successfully"}
 
 @app.route('/product/filter')
-def filter_product():
+def filterProduct():
     category = request.args.get('category')
     cursor = mysql.connection.cursor()
     cursor.execute(
