@@ -1,0 +1,28 @@
+Shortest Job First (SJF) is an algorithm in which the process having the smallest execution time is chosen for the next execution.
+
+It is associated with each job as a unit of time to complete.
+It can improve process throughput by making sure that shorter jobs are executed first, hence possibly have a short turnaround time.
+
+Non-Preemptive SJF
+In non-preemptive SJF, preemption doesn't happen, the CPU holds process till it is terminated.
+
+PR = Process
+AT = Arrival Time
+ET = Execution Time
+
+PR | AT	| ET
+P1 | 2  | 6
+P2 | 5  | 2
+P3 | 1  | 8
+P4 | 0  | 3
+P5 | 4  | 4
+
+Process Execution
+P4 => 0 - 3
+P1 => 3 - 9
+P2 => 9 - 11
+P5 => 11 - 15
+P3 => 15 - 23
+
+Preemptive SJF
+In Preemptive SJF, process are put in queue as they come. Process with shortest execution time starts. If a process with shorter execution time arrives, the current process is preempted from execution, and the shorter process is allocated CPU cycle.

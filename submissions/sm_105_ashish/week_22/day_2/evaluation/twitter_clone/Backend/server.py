@@ -104,45 +104,43 @@ def tweet_handle():
         mysql.connection.commit()
         cursor.close()
         return {"message":"Tweet added successfully"}
-    elif request.method == "GET":
-        auth_header = request.headers.get('Authorization')
-        token_encoded = auth_header.split(' ')[1]
-        decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
-        myid = decode_data["id"]
-        page_no = request.args.get("page_no") or 1
-        page_limit = (int(page_no) - 1) * 20
-        cursor = mysql.connection.cursor()
-        cursor.execute(
-            """SELECT tweets.content,tweets.user_id,tweets.created_on,users.name,users.imgurl FROM  tweets join followers ON followers.user = %s JOIN users ON users.id = tweets.user_id WHERE tweets.user_id = followers.follower OR tweets.user_id = %s ORDER BY tweets.id desc LIMIT %s, 20""",
-             (myid,myid,page_limit)
-        )
-        result_tweets = cursor.fetchall()
-        cursor.execute(
-            """SELECT COUNT(tweets.id) as count FROM tweets JOIN followers ON followers.user = %s JOIN users ON users.id = tweets.user_id WHERE tweets.user_id = followers.follower OR tweets.user_id = %s""",
-            (myid,myid)
-        )
-        result2 = cursor.fetchall()
-        cursor.close()
-        total_tweets = result2[0]["count"]
-        return {"tweets":result_tweets,"total_tweets":total_tweets}
-
-@app.route("/auth/mytweets")
-def my_tweets():
-    auth_header = request.headers.get('Authorization')
-    token_encoded = auth_header.split(' ')[1]
-    decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
-    myid = decode_data["id"]
-    cursor = mysql.connection.cursor()
-    cursor.execute(
-        """SELECT tweets.content,tweets.user_id,tweets.created_on,users.name,users.imgurl FROM  tweets  JOIN users ON users.id = tweets.user_id WHERE tweets.user_id = %s""",
-            (myid,)
-    )
-    result_tweets = cursor.fetchall()
-    cursor.close()
-    return {"mytweets":result_tweets}
-    
-
-
+    else: 
+        if request.method == "GET":
+            auth_header = request.headers.get('Authorization')
+            token_encoded = auth_header.split(' ')[1]
+            decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+            myid = decode_data["id"]
+            user_id = request.args.get("user_id")
+            if user_id:
+                cursor = mysql.connection.cursor()
+                cursor.execute(
+                    """SELECT tweets.content,tweets.user_id,tweets.created_on,users.name,users.imgurl FROM  tweets  JOIN users ON users.id = tweets.user_id WHERE tweets.user_id = %s""",
+                        (myid,)
+                )
+                result_tweets = cursor.fetchall()
+                cursor.close()
+                return {"tweets":result_tweets}
+            else:
+                auth_header = request.headers.get('Authorization')
+                token_encoded = auth_header.split(' ')[1]
+                decode_data = jwt.decode(token_encoded, 'secret', algorithms=['HS256'])
+                myid = decode_data["id"]
+                page_no = request.args.get("page_no") or 1
+                page_limit = (int(page_no) - 1) * 20
+                cursor = mysql.connection.cursor()
+                cursor.execute(
+                    """SELECT tweets.content,tweets.user_id,tweets.created_on,users.name,users.imgurl FROM  tweets join followers ON followers.user = %s JOIN users ON users.id = tweets.user_id WHERE tweets.user_id = followers.follower OR tweets.user_id = %s ORDER BY tweets.id desc LIMIT %s, 20""",
+                    (myid,myid,page_limit)
+                )
+                result_tweets = cursor.fetchall()
+                cursor.execute(
+                    """SELECT COUNT(tweets.id) as count FROM tweets JOIN followers ON followers.user = %s JOIN users ON users.id = tweets.user_id WHERE tweets.user_id = followers.follower OR tweets.user_id = %s""",
+                    (myid,myid)
+                )
+                result2 = cursor.fetchall()
+                cursor.close()
+                total_tweets = result2[0]["count"]
+                return {"tweets":result_tweets,"total_tweets":total_tweets}
 
 
 @app.route('/auth/follow', methods = ["POST"])

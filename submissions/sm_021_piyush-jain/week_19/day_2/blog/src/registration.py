@@ -9,7 +9,8 @@ from flask import Flask
 from flask import Blueprint
 from flask import jsonify
 from flask import request
-auth = Blueprint("auth", __name__)
+from server import mysql
+auth = Blueprint("auth", __name__,static_url_path='/static')
 
 
 def generate_salt():
@@ -90,3 +91,20 @@ def login(email, password):
                     status = 1
                     return {"token":str(encoded_data)}
         return({"message":"unsuccessful"})        
+
+# function add a profile
+@auth.route('/userProfile/<int:idx>', methods=['POST'])
+def userProfile(idx):
+    if request.method == 'POST':
+        cursor=mysql.connection.cursor()
+        f = request.files['image']
+        location = "static/" + f.filename
+        print(f.filename)
+        cursor.execute(
+            """UPDATE user set image=%s where id=%s""",(f.filename,idx)
+        )
+        cursor.connection.commit()
+        cursor.close()
+        f.save(location)
+        print(f.filename)
+        return {"path": location}

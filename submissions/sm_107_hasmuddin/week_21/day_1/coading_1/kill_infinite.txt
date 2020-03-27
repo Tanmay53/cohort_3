@@ -1,0 +1,12 @@
+1. run this command on python
+
+while 1:
+  print("run")
+
+
+2. ps -e | grep python
+
+11365 pts/8    00:00:08 python3
+
+
+3. kill 11365

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from "axios"
+import { connect } from 'react-redux'
 class UpdateBlog extends Component {
     constructor(props) {
         super(props)
@@ -13,7 +14,7 @@ class UpdateBlog extends Component {
         }
     }
     componentDidMount = async () => {
-        var token = localStorage.getItem("token")
+        var token = this.props.token
         this.setState({
             id: this.props.match.params.blog_id,
             user_id: this.props.match.params.user_id,
@@ -39,7 +40,7 @@ class UpdateBlog extends Component {
         })
     }
     handleUpdate = async () => {
-        var token = localStorage.getItem("token")
+        var token = this.props.token
         console.log(this.state)
         await axios({
             method: 'POST',
@@ -70,4 +71,13 @@ class UpdateBlog extends Component {
         )
     }
 }
-export default UpdateBlog
+const mapStateToProps = (state) => ({
+    status: state.login,
+    token: state.token
+})
+
+const mapDispatchToProps = {
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UpdateBlog)

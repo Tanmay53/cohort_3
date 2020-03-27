@@ -1,0 +1,22 @@
+IPv4
+
+IPv4 was the first version of IP. It was deployed for production in the ARPANET in 1983.
+
+Features of IPv4
+
+Connectionless Protocol
+Allow creating a simple virtual communication layer over diversified devices
+It requires less memory, and ease of remembering addresses
+Already supported protocol by millions of devices
+Offers video libraries and conferences
+
+
+IPV6
+It is the most recent version of the Internet Protocol. Internet Engineer Taskforce initiated it in early 1994. The design and development of that suite is now called IPv6. 
+
+Features of IPv6
+
+Hierarchical addressing and routing infrastructure
+Stateful and Stateless configuration
+Support for quality of service (QoS)
+An ideal protocol for neighboring node interaction 
