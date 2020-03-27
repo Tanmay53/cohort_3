@@ -1,6 +1,8 @@
 import {
   ADD_ARTIST,
-  ADD_ALBUM
+  ADD_ALBUM,
+  EDIT_ALBUM,
+  DELETE_ALBUM
 } from './action'
 
 const initialState = {
@@ -9,7 +11,7 @@ const initialState = {
 }
 
 const userReducer = (state = initialState, action) => {
-  console.log(state.artist)
+
   switch (action.type) {
     case ADD_ARTIST:
       return {
@@ -17,10 +19,38 @@ const userReducer = (state = initialState, action) => {
         artist: [...state.artist, action.payload]
       }
     case ADD_ALBUM:
-      console.log(action.payload)
       return {
         ...state,
+        album: [...state.album, action.payload]
+      }
+    case EDIT_ALBUM:
+      {
+        let newEdit = action.payload
+        let arr = [...state.album]
+        arr = arr.map(elem => {
+          if (elem.uniqid == newEdit.uniqid) {
+            elem.albumName = newEdit.newAlbumName
+            elem.getAlbumYear = newEdit.newAlbumYear
+          }
+          return elem
+        })
 
+        return {
+          ...state, album: [...arr]
+        }
+      }
+    case DELETE_ALBUM:
+      {
+        let id = action.payload
+        let arr = [...state.album]
+        arr.forEach((elem, i) => {
+          if (elem.uniqid == id) {
+            arr.splice(i, 1)
+          }
+        })
+        return {
+          ...state, album: arr.length > 0 ? [...arr] : []
+        }
       }
     default:
       return state;
