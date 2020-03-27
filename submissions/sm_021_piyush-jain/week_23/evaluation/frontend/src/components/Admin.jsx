@@ -24,6 +24,7 @@ class Admin extends React.Component {
         this.pagination()
     }
 
+    // function calling for pagination
     pagination = async () => {
         const { token } = this.props
         await axios({
@@ -42,6 +43,7 @@ class Admin extends React.Component {
                 })
             })
     }
+    // to get all distinct countries
     getCountries = () => {
         const { token } = this.props
         axios({
@@ -56,13 +58,14 @@ class Admin extends React.Component {
                 })
             })
     }
-
+// set the input values
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         })
     }
 
+    // function to add a new city
     handleStat = () => {
         const { token } = this.props
         axios({
@@ -81,6 +84,8 @@ class Admin extends React.Component {
                 this.pagination()
             })
     }
+
+
     handleClick = () => {
         const { token } = this.props
         axios({
@@ -94,13 +99,15 @@ class Admin extends React.Component {
             .then(res => { this.getCountries() })
     }
 
+
+    // set per page data value
     handlePerPage = async (e) => {
         this.props.perPage(e.target.value)
        setTimeout(()=>this.pagination(),1000)
     }
 
     changeActive = (val) => {
-        this.props.activePage(val)
+        // this.props.activePage(val)
         setTimeout(()=>this.pagination(),1000)
     }
 
@@ -108,7 +115,7 @@ class Admin extends React.Component {
         var array = []
         array.push(<ul class="pagination"></ul>)
         for (var i = 0; i <= this.state.pageNo; i++) {
-            array.push(<li class="page-item" onClick={() => this.changeActive(i + 1)}>{i + 1}</li>)
+            array.push(<li class="page-item" onClick={()=>this.changeActive(i+1 )}>{i + 1}</li>)
         }
         array.push(<ul class="pagination"></ul>)
         console.log(this.state)
@@ -177,7 +184,6 @@ class Admin extends React.Component {
     }
 }
 const mapStateToProps = (state) => ({
-    status: state.login,
     token: state.token,
     personType: state.personType,
     activePage: state.activePage,
@@ -189,7 +195,7 @@ const mapDispatchToProps = dispatch => {
         logout: () => dispatch(logout()),
         page: (payload) => dispatch(page(payload)),
         perPage: (payload) => dispatch(perPage(payload)),
-        // activePage: (payload) => dispatch(activePage(payload)),
+        activePage: (payload) => dispatch(activePage(payload))
     })
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Admin)

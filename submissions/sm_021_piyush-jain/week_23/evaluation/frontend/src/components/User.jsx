@@ -11,6 +11,7 @@ class User extends React.Component {
             pageData: []
         }
     }
+    
 componentDidMount=()=>{
     this.pagination()
 }
@@ -27,7 +28,6 @@ pagination = async () => {
         }
     })
         .then(res => {
-            // this.props.page(res.data.curr_page_items)
             this.setState({
                 pageData:res.data.curr_page_items
             })
@@ -37,6 +37,7 @@ pagination = async () => {
         })
 }
 
+// function to filter data based on populatiom
 handlePopulation=async(e)=>{
     var {token}=this.props
     await axios({
@@ -45,13 +46,13 @@ handlePopulation=async(e)=>{
         headers: { 'Authorization': `Bearer ${token}` },
     })
     .then(res=>{
-        console.log(res)
         this.setState({
             pageData:res.data
         })
     })
 }
 
+// function to filter data based on income
 handleIncome=async(e)=>{
     var {token}=this.props
     await axios({
@@ -128,13 +129,11 @@ handleIncome=async(e)=>{
 }
 }
 const mapStateToProps = (state) => ({
-    status: state.login,
     token: state.token,
     personType:state.personType,
     pageData:state.pageData,
     dataPerPage:state.dataPerPage,
     activePage:state.activePage
-
 })
 
 
