@@ -17,3 +17,10 @@ app.register_blueprint(auth, url_prefix="/auth")
 app.register_blueprint(products, url_prefix="/products")
 app.register_blueprint(categories, url_prefix="/categories")
 
+
+@app.after_request
+def add_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Headers"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, PATCH, DELETE"
+    return response

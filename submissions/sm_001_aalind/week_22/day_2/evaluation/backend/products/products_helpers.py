@@ -1,14 +1,21 @@
 from server import mysql
 
 
-def get_products_by_pg_limit(offset, limit):
+def get_products_by_pg_limit(offset, limit, category_id, order_by):
     cur = mysql.connection.cursor()
-    cur.execute(
-        """
-        SELECT * FROM `products` LIMIT %s, %s
-    """,
-        (offset, limit),
-    )
+    if category_id == 0:
+        query_str = "SELECT products.id as product_id, products.name as product_name, price, categories.id as category_id,\
+            categories.name as category_name FROM `products` JOIN `categories` ON products.category_id=categories.id ORDER BY price {} LIMIT {}, {}".format(
+            order_by, offset, limit
+        )
+        cur.execute(query_str)
+    else:
+        query_str = "SELECT products.id as product_id, products.name as product_name, price, categories.id as category_id,\
+            categories.name as category_name FROM `products` JOIN `categories` ON products.category_id=categories.id WHERE categories.id={} ORDER BY price {} LIMIT {}, {}".format(
+            category_id, order_by, offset, limit
+        )
+        cur.execute(query_str)
+
     result = cur.fetchall()
     cur.close()
 

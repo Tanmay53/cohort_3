@@ -1,0 +1,78 @@
+Chat App
+
+HLD - High Level Design
+1. UI Mockup for all pages (Figma)
+  a - Landing Page / Login Page
+  b - Registration Page
+  c - Home Page / Chat Dasboard
+  d - Profile Page
+  e - Archived Messages
+
+2. API Docs
+  a - User Registration
+  b - User Login
+  c - User Authentication
+  d - Manage Profile
+  e - Write / Read Messages
+  f - Delete Message
+  
+3. DB Tables-
+   1. Users
+   2. Groups
+   3. Messages
+   4. User-Group
+
+
+LLD - Low Level Design
+
+1. Pages
+  a - Login Page
+    Input - Phone/Email
+    Input - Password
+  b - Registration Page
+    Input - Phone/Email
+    Input - Password
+    Input - Fullname
+    Input - DOB
+    Input - Gender
+  c - Home Page / Chat Dasboard
+    Message History
+    Textbox - Phone/Email
+
+2. DB
+  a - Users
+    _id (int, Primary Key, AI)
+    phone/username (varchar, Unique)
+    password (varchar, Encrypted)
+    full_name (varchar)
+    dob (date)
+    gender (enum)
+    photo (text)
+    is_verified (enum)
+    is_active (enum)
+    is_deleted (enum)
+    created_on (datetime, default)
+    updated_on (datetime, default)
+	
+
+  b - Groups
+	  _id (int, Primary Key, AI)
+    group_name (varchar)
+    photo (text)
+    created_by (int, Foreign Key)
+    is_active (enum)
+    is_deleted (enum)
+    created_on (datetime, default)
+    updated_on (datetime, default)
+
+  c - Messages
+    _id (int, Primary Key, AI)
+    message (text)
+    is_group_message (enum)
+    sender_id (int, Foreign Key)
+    receiver_id (int, Foreign Key) (incase of group group_id will be used)
+    attachment (text)
+    created_by (int, Foreign Key)
+    is_deleted (enum)
+    created_on (datetime, default)
+

@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios"
-import { Link, Connector, Redirect } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
+import { connect } from 'react-redux'
 
 class Comment extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class Comment extends React.Component {
         console.log(props)
     }
     componentDidMount = async () => {
-        var token = localStorage.getItem("token")
+        var token = this.props.token
         this.setState({
             id: this.props.match.params.id,
             user_id: this.props.match.params.user_id,
@@ -39,7 +40,7 @@ class Comment extends React.Component {
         this.setState({
             comment: ""
         })
-        var token = localStorage.getItem("token")
+        var token = this.props.token
         await axios({
             method: 'post',
             url: `http://127.0.0.1:5000/addComments/${id}/${user_id}/${category_id}`,
@@ -52,10 +53,10 @@ class Comment extends React.Component {
     }
     render() {
         console.log(this.state)
-        if (localStorage.getItem("token")) {
+        if (this.props.token) {
             return (
                 <React.Fragment>
-                    <div class="d-flex justify-content-center container mt-5  shadow p-3 mb-5 bg-white rounded" style={{"width":"50%"}}>
+                    <div class="d-flex justify-content-center container mt-5  shadow p-3 mb-5 bg-white rounded" style={{ "width": "50%" }}>
                         <div class="row">
                             <div class="card mt-2">
                                 <div class="card-header">
@@ -65,7 +66,7 @@ class Comment extends React.Component {
                                     <blockquote class="blockquote mb-0">
                                         <p class="overflow-auto">{this.state.blogs.blog}</p>
                                         <footer class="blockquote-footer">Posted on<cite title="Source Title">{this.state.blogs.date}</cite></footer>
-                                        <textarea rows="3"  width="100%" onChange={this.handleChange}></textarea><br></br>
+                                        <textarea rows="3" width="100%" onChange={this.handleChange}></textarea><br></br>
                                     </blockquote>
                                 </div>
                             </div>
@@ -73,7 +74,7 @@ class Comment extends React.Component {
                     </div>
                     <div class="d-flex justify-content-center mt-3">
                         <button onClick={() => this.handleClick(this.state.id, this.state.user_id, this.state.category_id)} class="btn btn-warning">ADD COMMENT</button>
-                    <button onClick={this.props.history.goBack} class="btn btn-dark text-white ml-3"> Go Back</button>
+                        <button onClick={this.props.history.goBack} class="btn btn-dark text-white ml-3"> Go Back</button>
                     </div>
                 </React.Fragment>
             )
@@ -83,4 +84,13 @@ class Comment extends React.Component {
         }
     }
 }
-export default Comment
+const mapStateToProps = (state) => ({
+    status: state.login,
+    token: state.token
+})
+
+const mapDispatchToProps = {
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Comment)

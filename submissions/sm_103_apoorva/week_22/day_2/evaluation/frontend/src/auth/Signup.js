@@ -80,7 +80,7 @@ class SignUp extends React.Component{
                     </div>
                     <div className="mx-3">
                         <label className="ml-1 mt-2">Designation</label>
-                        <input className="form-control" onChange={this.handleChange} type="text" value={this.state.designation} name="about" placeholder="Enter your designation" />
+                        <input className="form-control" onChange={this.handleChange} type="text" value={this.state.designation} name="designation" placeholder="Enter your designation" />
                     </div>
                     <button className="btn btn-primary mt-3 ml-3 mb-3" onClick={this.handleClick}>Sign Up</button>
                 </div>
