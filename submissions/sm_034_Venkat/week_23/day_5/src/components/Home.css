@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    text-align: center;
+    font-family: monospace;
+  }
+  
+  #parentFormDiv> h1 {
+    margin: 2%;
+    color: blue;
+  }
+  
+  #tableParentDiv *:hover {
+    background-color: azure;
+    /* color: tomato; */
+  }
+  
+  table {
+    border: 1px solid;
+    width: 90%;
+    margin: auto;
+    font-family: monospace;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  
+  table tr,th,td {
+    border-top: 1px solid;
+    border-right: 1px solid;
+    padding: 1%;
+  }
+  
+  table button{
+    color: rgb(94, 91, 253);
+    padding: 4px 5px;
+  }
+  
+  #formSubmitBtn {
+    padding: 4px 20px;
+    display: block;
+    border: 1px solid;
+    margin: auto;
+    background-color: rgb(163, 117, 117);
+    color: honeydew;
+    font-size: large;
+    margin-top: 3%;
+  }
+  
+  #formSubmitBtn:hover{
+    background-color: green;
+  }
+  
+  #optionsDiv {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 10px 0;
+    text-transform: capitalize;
+  }
+  
+  #optionsDiv select{
+    padding: 5px 20px;
+    font-size: large;
+  }
+  
+  input {
+    padding: 2px;
+    margin: 0 5px;
+  }
+  
+  input:active,input:hover {
+    color:whitesmoke;
+    background-color: rgb(22, 5, 22);
+  }
+  
+  form {
+    border: 1px solid;
+    width: 80%;
+    margin: auto;
+    padding: 3% 0;
+    /* background-color: aquamarine; */
+    margin-bottom: 4%;
+  }
+  
+  form:hover {
+    background-color: rgb(17, 253, 155);
+  }
+  
+  form label{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    border: 1px solid;
+    display: inline-flex;
+    padding: 5px;
+    margin: 1%;
+  }
+  
+  form select{
+    border: 1px solid;
+    display: inline-flex;
+    margin: 1%;
+    font-size: medium;
+  }
+  
+  form select:hover {
+    background-color: rgb(5, 5, 5);
+    color: whitesmoke;
+  }
+  
+  #selectNamesDiv {
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-around;
+    color: grey;
+  }
+  
+  #tableH2 {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid grey;
+  }
+  
+  #tableParentDiv {
+    margin: 4% 0;
+  }
+  
+  #paginationInputDiv *{
+    margin: 1%;
+  }
+  
+  #paginationInputDiv > button {
+    padding: 3px 8px;
+  }
+
+  #paginationInputDiv > input {
+    /* background-color: burlywood; */
+    color: brown;
+  }
+
+  #paginationBtnsDiv {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  #paginationBtnsDiv button {
+      margin: 2%;
+      padding: 5px;
+
+  }

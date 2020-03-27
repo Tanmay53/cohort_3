@@ -43,10 +43,10 @@ function Login({ LoginUser, Auth }) {
                             onChange={(e) => setEmail(e.target.value)} />
                         {error.email && <p className="text-danger">{error.email}</p>}
 
-                        <label htmlFor="email">Password</label>
+                        <label htmlFor="password">Password</label>
                         <input
                             className="form-control"
-                            type="text"
+                            type="password"
                             onChange={(e) => { setPassword(e.target.value) }} />
 
                         {error.password && <p className="text-danger">{error.password}</p>}
