@@ -70,7 +70,7 @@ export const busListCustom = payload => async dispatch => {
 
 export const changePage = payload => async dispatch => {
   let page = payload.page;
-  let limit = payload.limit || 10;
+  let limit = payload.limit || 5;
 
   try {
     let response = await axios.get(

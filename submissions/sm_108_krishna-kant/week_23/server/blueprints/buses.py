@@ -51,7 +51,7 @@ def list_trips():
 
     if limit is None and page is None:
         start = 0
-        end = 10
+        end = 5
     elif page is not None and limit is not None:
         start = (int(page) - 1 ) * int(limit)
         end = int(limit)
@@ -60,8 +60,8 @@ def list_trips():
     elif limit is not None:
         end = int(limit)
     elif page is not None :
-        start = (int(page) - 1 ) * 10
-        end = 10
+        start = (int(page) - 1 ) * 5
+        end = 5
 
     
     
