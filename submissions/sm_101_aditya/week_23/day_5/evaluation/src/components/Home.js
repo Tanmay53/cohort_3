@@ -18,18 +18,22 @@ export class Home extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.genderSorting = this.genderSorting.bind(this)
     }
-    // sorting function 
-    // genderSorting = (e) => {
-    //     e.preventDefault()
-    //     let term = 'Gender';
-    //     let option = e.target.value;
-    //     let sortedList = [...this.state.gender].sort((a, b) => {
-    //     return (option == 'asc_Title' ? (a[term] >= b[term] ? -1 : 1) :
-    //         (a[term] <= b[term] ? -1 : 1))
-    //     });
-    //     this.setState({ sort_term: term });
-    //     this.setState({ movies: sortedList });
-    // }
+    salarySortingAsc = (e) => {
+        e.preventDefault()
+        // alert("sort")
+        let salaryArr = []
+        
+         salaryArr =    this.state.items.sort((a, b) => (a.salary - b.salary))
+         this.setState({items : salaryArr})
+    }
+    salarySortingDsc = (e) => {
+        e.preventDefault()
+        // alert("sort")
+        let salaryArr = []
+        
+         salaryArr =    this.state.items.sort((a, b) => (b.salary - a.salary))
+         this.setState({items : salaryArr})
+    }
     genderSorting (e){
         e.preventDefault()
        let filterdata = []
@@ -143,11 +147,8 @@ export class Home extends Component {
                             <th>Department</th>
                             <th>
                                 <h1>Salary</h1>
-                                <select name="gender" id="gender" onChange={this.genderSorting}>
-                                    <option value="">--Please choose an option--</option>
-                                    <option value="male">Ascending</option>
-                                    <option value="female">Descending</option>
-                                </select>
+                                <button onClick= {this.salarySortingAsc}>Ascending</button>
+                                <button  onClick= {this.salarySortingDsc}>Descending</button>
                             </th>
                             <th>Delete Data</th>
                             {/* <th>Action</th> */}
