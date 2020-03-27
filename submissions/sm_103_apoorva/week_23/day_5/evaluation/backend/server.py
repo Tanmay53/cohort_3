@@ -265,22 +265,22 @@ def detail():
 @app.route('/update', methods = ['POST'])
 def updateTeacher():
     name = request.json['name']
-    email = request.json['email']
     classs = request.json['class']
     gender = request.json['gender']
     section = request.json['section']
     subject = request.json['subject']
     mobile = request.json['mobile']
+    tid = request.json['tid']
     auth_header = request.headers.get('Authorization')
     token_encoded = auth_header.split(' ')[1]
     decode_data = jwt.decode(token_encoded, 'masai', algorithms=['HS256'])
     val = str(decode_data['aid'])
-    # print("aid",val)
+    print("aid",val)
     cursor = mysql.connection.cursor()
     try:
         cursor.execute(
-            """UPDATE teachers SET name = %s, email = %s, cid = %s, sid = %s, gender = %s, subject = %s, mobile = %s, aid = %s""",
-             (name,email,classs,section,gender,subject,mobile,val)
+            """UPDATE teachers SET name = %s, cid = %s, sid = %s, gender = %s, subject = %s, mobile = %s, aid = %s WHERE tid = %s""",
+             (name,classs,section,gender,subject,mobile,val,tid)
             )
         mysql.connection.commit()
         return {"message": "teacher data updated"}
