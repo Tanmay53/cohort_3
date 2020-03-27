@@ -12,7 +12,6 @@ function Register({ SignUpUser, Register, Auth }) {
     const [state, setState] =
         useState({ "username": "", "password": "", "email": "", "name": "" })
     const [error, setError] = useState({})
-    const [msg, setMsg] = useState("")
 
     const handleChange = (event) => {
         let newState = state
@@ -21,7 +20,6 @@ function Register({ SignUpUser, Register, Auth }) {
     }
     const submit = (event) => {
         setError({})
-        setMsg("")
         event.preventDefault()
         const err = SignupValidator({ state: state })
         if (Object.keys(err).length !== 0) {
@@ -54,7 +52,7 @@ function Register({ SignUpUser, Register, Auth }) {
                         <input name="email" className="form-control" type="text" onChange={handleChange} />
                         {error.email && <p className="text-danger">{error.email}</p>}
                         <label htmlFor="password">Password</label>
-                        <input name="password" className="form-control" type="text" onChange={handleChange} />
+                        <input name="password" className="form-control" type="password" onChange={handleChange} />
                         {error.password && <p className="text-danger">{error.password}</p>}
                         <input disabled={Register.loading} type="submit" className="btn btn-success my-2" value="Signup" /> <br />
                         <Link to="/login">Already have an account.</Link>

@@ -4,7 +4,6 @@ import { connect } from "react-redux"
 
 const token = localStorage.getItem("token")
 
-
 const PrivateRoute = ({ component: Component, Auth, ...rest }) => {
     return (
         <Route {...rest} render={(props) => {

@@ -11,7 +11,6 @@ export const RegisterReducer = (state = initialState, action) => {
             return {
                 ...state,
                 "loading": false,
-                "isLoggedIn": true,
                 "error": action.payload.error,
                 "message": action.payload.message
             }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import TeacherTable from './TeacherTable'
 import { connect } from "react-redux"
 import { filter_Teacher, fetch_teachers } from "../../Redux/Teachers/TeacherAction"
@@ -7,7 +7,7 @@ function TeacherRecord({ data, sections, classes, filter_Teacher, fetch_teachers
     // const [data_size] = useState(data.length)
 
     const filter_by_class = (event) => {
-        if (event.target.value == "all") {
+        if (event.target.value === "all") {
             fetch_teachers({ "curr_page": 1 })
         }
         else {
@@ -17,7 +17,7 @@ function TeacherRecord({ data, sections, classes, filter_Teacher, fetch_teachers
     }
 
     const filter_by_section = (event) => {
-        if (event.target.value == "all") {
+        if (event.target.value === "all") {
             fetch_teachers({ "curr_page": 1 })
         }
         else {
@@ -33,13 +33,13 @@ function TeacherRecord({ data, sections, classes, filter_Teacher, fetch_teachers
         else {
 
             var page = localStorage.getItem("page")
-            if (page == null) {
+            if (page === null) {
                 localStorage.setItem("page", 1)
                 page = 1
             }
             if (page >= 1) {
                 var new_page = page
-                if (event.target.id == "next") {
+                if (event.target.id === "next") {
                     fetch_teachers({ "curr_page": Number(new_page) + 1 })
                     localStorage.setItem("page", Number(new_page) + 1)
                 }
@@ -67,8 +67,8 @@ function TeacherRecord({ data, sections, classes, filter_Teacher, fetch_teachers
                         className="custom-select"
                         id="">
                         <option value="all">All</option>
-                        {classes && classes.map(c => {
-                            return <option value={c.id}>{c.class}</option>
+                        {classes && classes.map((c, i) => {
+                            return <option key={i} value={c.id}>{c.class}</option>
                         })}
                     </select>
                 </div>
@@ -80,8 +80,8 @@ function TeacherRecord({ data, sections, classes, filter_Teacher, fetch_teachers
                         className="custom-select"
                         id="">
                         <option value="all">All</option>
-                        {sections && sections.map(c => {
-                            return <option value={c.id}>{c.section}</option>
+                        {sections && sections.map((c, i) => {
+                            return <option key={i} value={c.id}>{c.section}</option>
                         })}
                     </select>
                 </div>
