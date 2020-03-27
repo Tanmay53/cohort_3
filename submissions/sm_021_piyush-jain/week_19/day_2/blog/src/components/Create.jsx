@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios"
-import { Link, Connector, Redirect } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
+import { connect } from 'react-redux'
 class Create extends React.Component {
     constructor(props) {
         super(props)
@@ -14,7 +15,7 @@ class Create extends React.Component {
         }
     }
     componentDidMount = async () => {
-        var token = localStorage.getItem("token")
+        var token = this.props.token
         await axios.get(`http://127.0.0.1:5000/allCategories`)
             .then(res => this.setState({
                 categories: res.data
@@ -31,7 +32,15 @@ class Create extends React.Component {
     }
     handleClick = async () => {
         console.log(this.state)
-        var token = localStorage.getItem("token")
+        var token = this.props.token
+        var date = ""
+        var temp = 0
+        temp = new Date()
+        console.log(temp)
+        date += temp.getFullYear() + "-";
+        date += (temp.getMonth() + 1) + "-";
+        date += temp.getDate()
+        console.log(date)
         await axios({
             method: 'post',
             url: `http://127.0.0.1:5000/makeBlog/${this.state.user_id}/${this.state.cat_id}`,
@@ -39,9 +48,10 @@ class Create extends React.Component {
             data: {
                 "title": this.state.title,
                 "blog": this.state.blog,
-                "date": this.state.date
+                "date": date
             }
         })
+            .then(alert("Thanks for writing a blog"))
             .then(this.props.history.goBack)
     }
     handleChange = (e) => {
@@ -51,47 +61,32 @@ class Create extends React.Component {
     }
     render() {
         console.log(this.state)
-        if (localStorage.getItem("token")) {
+        if (this.props.token) {
             return (
                 <React.Fragment>
-                    <div class="d-flex justify-content-center shadow-lg p-3 mb-5 bg-white rounded">
-                    <div  style={{"marginTop":"10%","border":"2px solid black","width":"50%"}} class="p-3">
-                        <h2 style={{"color":"Tomato"}} class="text-center mb-3">CREATE A BLOG</h2>
-                            {/* <label>Title:</label><br></br>
-                            <textarea type="text" name="title" onChange={this.handleChange} /><br></br>
-                            <label>Date:</label><br></br>
-                            <input type="date" name="date" onChange={this.handleChange} />
-                            <select onChange={this.handleChoose}>
-                                <option value="0">Category</option>
-                                {this.state.categories.map(item =>
-                                    <option value={item.id}>{item.category_name}</option>
-                                )}
-                            </select><br></br>
-                            <label>BLOG:</label><br></br>
-                            <textarea type="text" name="blog" onChange={this.handleChange} /><br></br>
-                            <button class="btn btn-success" onClick={this.handleClick}>Make a Blog</button> */}
-                            <div class="row ml-3">
-                                <div>
-                                    <h5>Date</h5>
-                                    <input type="date" name="date" onChange={this.handleChange}/>
-                                </div>
-                                <div>
-                                    <h5 class="ml-5">Category</h5>
-                                    <select onChange={this.handleChoose} class="ml-5">
+                    <div class="d-flex justify-content-center">
+                        <div style={{ "marginTop": "5%", "width": "50%" }} class="p-3  shadow-lg p-3 mb-5 bg-white rounded">
+                            <h2 style={{ "color": "Tomato", "text-decoration-line": "underline", "text-decoration-style": "double" }} class="text-center mb-3">Pen a Blog</h2>
+                            <div class="row  text-wrap">
+                                <div class="d-flex justify-content-center">
+                                    <div><select onChange={this.handleChoose} class="mb-3 ml-lg-3">
                                         <option value="0">Category</option>
                                         {this.state.categories.map(item =>
                                             <option value={item.id}>{item.category_name}</option>
                                         )}
-                                    </select><br></br>
+                                    </select>
+                                    </div>
                                 </div>
+                                <br></br>
                             </div>
                             <div></div>
                             <h5 >Title:</h5>
-                            <textarea type="text" name="title" onChange={this.handleChange} /><br></br>
-                            <h5>BLOG:</h5>
-                            <textarea type="text" name="blog" onChange={this.handleChange} /><br></br>
+                            <textarea type="text" name="title" onChange={this.handleChange} style={{ "borderColor": "Tomato", "borderRadius": "10px" }} /><br></br>
+                            <h5>Blog:</h5>
+                            <textarea type="text" name="blog" onChange={this.handleChange} style={{ "borderColor": "Tomato", "borderRadius": "10px" }} /><br></br>
                             <div class="d-flex justify-content-center">
-                            <button class="btn btn-success" onClick={this.handleClick}>Make a Blog</button>
+                                <button class="btn btn-success mt-3 mx-1" style={{ "borderRadius": "10px" }} onClick={this.handleClick}>Make a Blog</button>
+                                <button class="btn btn-success mt-3 mx-1" style={{ "borderRadius": "10px" }} onClick={this.handleClick}>Make a Blog</button>
                             </div>
                         </div>
                     </div>
@@ -104,4 +99,9 @@ class Create extends React.Component {
         }
     }
 }
-export default Create
+const mapStateToProps = (state) => ({
+    status: state.login,
+    token: state.token
+})
+
+export default connect(mapStateToProps)(Create)

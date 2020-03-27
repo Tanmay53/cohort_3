@@ -29,10 +29,18 @@ def product():
         products = get_all_products()
         curr_pg = request.args.get("page", default=1, type=int)
         per_pg = request.args.get("per_page", default=10, type=int)
-        total_pages = math.ceil(len(products) / per_pg)
+        category_id = request.args.get("category_id", default=0, type=int)
+        order_by = request.args.get("order_by", default="asc", type=str)
         prev_pg_end = (curr_pg - 1) * per_pg
 
-        curr_pg_products = get_products_by_pg_limit(prev_pg_end, per_pg)
+        curr_pg_products = get_products_by_pg_limit(
+            prev_pg_end, per_pg, category_id, order_by
+        )
+        # print("*****", len(curr_pg_products))
+        if category_id != 0:
+            total_pages = math.ceil(len(curr_pg_products) / per_pg)
+        else:
+            total_pages = math.ceil(len(products) / per_pg)
 
         return json.dumps(
             {
@@ -40,7 +48,7 @@ def product():
                 "payload": {"products": curr_pg_products, "total_pages": total_pages},
             }
         )
-    elif http_method == "POST" and user["email"] == "admin@gmail.com":
+    elif http_method == "POST" and user["type"] == "admin":
         name = request.json.get("name")
         price = request.json.get("price")
         category_id = request.json.get("category_id")
@@ -63,7 +71,7 @@ def product_chg_del(product_id):
     else:
         return json.dumps({"error": True, "message": "Wrong User Token!"})
 
-    if user["email"] == "admin@gmail.com":
+    if user["type"] == "admin":
         if http_method == "PATCH":
             name = request.json.get("name")
             price = request.json.get("price")

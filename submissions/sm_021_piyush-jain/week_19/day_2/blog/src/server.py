@@ -1,14 +1,12 @@
 from flask import Flask
 from flask import request, make_response, jsonify
 from flask_mysqldb import MySQL
-from registration import auth
 import jwt
 app = Flask(__name__)
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'Stupid@55655'
 app.config['MYSQL_DB'] = 'trial'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-app.register_blueprint(auth, url_prefix="/auth")
 mysql = MySQL(app)
 
 
@@ -335,14 +333,14 @@ def DeleteBlog(i, idx, user_id, category_id):
             """DELETE FROM comment where id=%s and blog_id=%s and  user_id=%s and category_id=%s""", (
                 i, idx, user_id, category_id)
         )
-        results = cursor.fetchall()
-        print(results)
+        # results = cursor.fetchall()
+        # print(results)
         cursor.connection.commit()
         cursor.close()
-        items = []
-        for item in results:
-            items.append(item)
-        return{"items": items}
+        # items = []
+        # for item in results:
+        #     items.append(item)
+        return{"message":"Deleted Successfully"}
     else:
         print("false")
         return({"message": "Invalid"})
@@ -361,6 +359,7 @@ def deleteTheBlog(idx, category_id):
             """DELETE FROM comment where blog_id=%s""", (
                 idx,)
         )
+        print("executed")
         cursor.connection.commit()
         cursor.close()
         cursor = mysql.connection.cursor()
@@ -424,3 +423,6 @@ def allCategories():
         items.append(item)
     print(items)
     return jsonify(items)
+
+from registration import auth
+app.register_blueprint(auth, url_prefix="/auth")

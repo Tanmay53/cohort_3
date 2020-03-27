@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import uuid from 'react-uuid'
 import { connect } from 'react-redux'
 import {Redirect} from 'react-router-dom'
 
@@ -8,8 +9,31 @@ class Department extends React.Component {
         super(props)
         this.state = {
             name: '',
-            all_department: []
+            departments: []
         }
+    }
+    handleAdd = () => {
+        const data = {
+            dept_name: this.state.name,
+            dept_uuid: uuid()
+        }
+        axios.post("http://localhost:5000/employee/department/add", data)
+        .then(res => {
+            this.loadData()
+        })
+    }
+
+    loadData = () => {
+        axios.get("http://localhost:5000/employee/department")
+        .then(res => {
+            this.setState({
+                departments: res['data']['data']
+            })            
+        })
+    }
+    
+    componentWillMount = () => {
+        this.loadData()
     }
 
     handleChange = (event) => {
@@ -18,6 +42,21 @@ class Department extends React.Component {
         })
         console.log(this.state)
     } 
+
+    handleDelete = (id) => {
+        console.log(id)
+        const url = "http://localhost:5000/employee/department/delete"
+        axios.delete(url, {
+            headers: {Authorization : `Bearer ${this.props.token}`},
+            data: {dept_id: id}
+
+        })
+        .then(res => {
+            console.log(res)
+            this.loadData()
+        })
+        .catch(err => console.log(err))
+    }
 
     render() {
         // redirect if user not logged in
@@ -43,7 +82,31 @@ class Department extends React.Component {
                     <div className='col-7 offset-2'>
                         <button onClick={this.handleAdd} className='btn btn-primary form-control'>Add Department</button>
                     </div>
-                </div>           
+                </div>        
+                <div className='row'>
+                    <div className='col-6 offset-3'>
+                        <table className='table mt-3'>
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Department</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {this.state.departments.map((item, index) => {
+                                return  <tr>
+                                            <td>{index + 1}</td>
+                                            <td>{item.dept_name}</td>
+                                            <td><a href="#" onClick={() => {this.handleDelete(item.id)}}>delete</a></td>
+                                        </tr>
+                            })}
+                            
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>   
             </div>
         )
     }
@@ -52,6 +115,7 @@ class Department extends React.Component {
 const mapStateToProps = (state) => {
     return {
         isLoggedIn: state.isLoggedIn,
+        token: state.data.token,
         menuLabel: state.menuLabel,
         showRegisterButton: state.showRegisterButton
     }
