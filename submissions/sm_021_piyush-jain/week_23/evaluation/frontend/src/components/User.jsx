@@ -8,12 +8,14 @@ class User extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            pageData: []
+            pageData: [],
+            countries:[]
         }
     }
-    
+
 componentDidMount=()=>{
     this.pagination()
+    this.getCountries()
 }
 
 pagination = async () => {
@@ -37,6 +39,23 @@ pagination = async () => {
         })
 }
 
+
+    // to get all distinct countries
+    getCountries = () => {
+        const { token } = this.props
+        axios({
+            method: "GET",
+            url: "http://127.0.0.1:5000/getCountries",
+            headers: { 'Authorization': `Bearer ${token}` }
+        })
+            .then(res => {
+                console.log(res)
+                this.setState({
+                    countries: res.data
+                })
+            })
+    }
+
 // function to filter data based on populatiom
 handlePopulation=async(e)=>{
     var {token}=this.props
@@ -58,6 +77,23 @@ handleIncome=async(e)=>{
     await axios({
         method: "GET",
         url: `http://127.0.0.1:5000/user/income/${e.target.value}`,
+        headers: { 'Authorization': `Bearer ${token}` },
+    })
+    .then(res=>{
+        console.log(res)
+        this.setState({
+            pageData:res.data
+        })
+    })
+}
+
+
+// function to filter data based on income
+handleCountry=async(e)=>{
+    var {token}=this.props
+    await axios({
+        method: "GET",
+        url: `http://127.0.0.1:5000/user/country/${e.target.value}`,
         headers: { 'Authorization': `Bearer ${token}` },
     })
     .then(res=>{
@@ -96,6 +132,14 @@ handleIncome=async(e)=>{
                         <option value="30000">30000</option>
                         <option value="40000">40000</option>
                     </select>
+
+                    <select  onChange={this.handleCountry}>
+                            <option value="All">ALL</option>
+                            {this.state.countries.map((item, index) =>
+                                <option value={item.name} key={item.id}>{item.name}</option>
+                            )}
+                            )
+                        </select>
                     </div>
                     <div class="table-responsive">
                         <table class="table">
