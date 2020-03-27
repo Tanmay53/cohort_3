@@ -40,6 +40,8 @@ def list_trips():
 
     start = 0
     end = 0
+    prev_page = 1
+    next_page = 2
 
     filterBy = request.args.get('filterBy')
     value = request.args.get("value")
@@ -53,6 +55,8 @@ def list_trips():
     elif page is not None and limit is not None:
         start = (int(page) - 1 ) * int(limit)
         end = int(limit)
+        prev_page = int(page) - 1
+        next_page = int(page) + 1
     elif limit is not None:
         end = int(limit)
     elif page is not None :
@@ -92,7 +96,7 @@ def list_trips():
         for row in rows :
             row["start_time"] = str(row["start_time"])
 
-        return jsonify({"error":False,"data":rows}),200
+        return jsonify({"error":False,"data":rows,"prev" : prev_page, "next": next_page }),200
 
     except Exception as e:
         return jsonify({"error":True, "msg":str(e)}),400
