@@ -14,9 +14,7 @@ const initialState = {
   page: 1,
   perPage: 10,
   length: 0,
-  totalPages: 0,
-
-
+  totalPages: 0
 }
 
 const userReducer = (state = initialState, action) => {

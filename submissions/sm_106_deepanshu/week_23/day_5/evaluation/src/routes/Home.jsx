@@ -17,7 +17,8 @@ export class Home extends Component {
       EditAlbumYear: '',
       EditAlbumUniq: '',
       flag: false,
-      album: []
+      album: [],
+      id: 0
     }
   }
 
@@ -34,13 +35,19 @@ export class Home extends Component {
 
   addAlbumBtn = () => {
     const { addAlbum } = this.props
-    let album = {
-      artistName: this.state.getArtist,
-      albumName: this.state.getAlbum,
-      getAlbumYear: this.state.getAlbumYear,
-      uniqid: uniqid()
-    }
-    addAlbum(album)
+    this.setState({ id: this.state.id + 1 }, () => {
+      console.log(this.state.id)
+      let album = {
+        id: this.state.id,
+        artistName: this.state.getArtist,
+        albumName: this.state.getAlbum,
+        getAlbumYear: this.state.getAlbumYear,
+        uniqid: uniqid(),
+      }
+      addAlbum(album)
+
+    })
+
   }
 
   editAlbum = (elem) => {
@@ -150,17 +157,17 @@ export class Home extends Component {
             </tr>
           </thead>
           <tbody>
-            {album && album.filter((a, i) => i >= perPage * (page - 1) && i < perPage * page).map(elem =>
-              <tr key={elem.uniqid}>
+            {/* {album && album.filter((a, i) => i >= perPage * (page - 1) && i < perPage * page).map(elem =>
+              <tr key={elem.id}>
                 <th scope="row">{elem.uniqid}</th>
                 <td>{elem.artistName}</td>
                 <td>{elem.albumName}</td>
                 <td>{elem.getAlbumYear}</td>
                 <td><button className='btn btn-success' onClick={() => this.editAlbum(elem)}>edit</button></td>
                 <td><button className='btn btn-danger' onClick={() => this.delete(elem.uniqid)}>delete</button></td>
-              </tr>)}
+              </tr>)} */}
             <Pagination />
-            {/* {album.map((elem, i) => {
+            {album.map((elem, i) => {
               return <tr key={elem.uniqid}>
                 <th scope="row">{i + 1}</th>
                 <td>{elem.artistName}</td>
@@ -169,7 +176,7 @@ export class Home extends Component {
                 <td><button className='btn btn-success' onClick={() => this.editAlbum(elem)}>edit</button></td>
                 <td><button className='btn btn-danger' onClick={() => this.delete(elem.uniqid)}>delete</button></td>
               </tr>
-            })} */}
+            })}
           </tbody>
         </table>
         <this.editMode />
