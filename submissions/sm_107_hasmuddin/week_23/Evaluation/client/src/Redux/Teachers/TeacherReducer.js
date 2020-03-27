@@ -21,7 +21,7 @@ export const TeacherReducer = (state = initialState, action) => {
         case ADD_TEACHER:
             return {
                 ...state,
-                message: action.payload.message
+                message: action.payload
             }
         case REQUEST_TEACHERS:
             return {
