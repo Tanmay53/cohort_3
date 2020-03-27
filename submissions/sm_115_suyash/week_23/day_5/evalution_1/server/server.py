@@ -4,7 +4,7 @@ from flask_mysqldb import MySQL
 import hashlib
 import base64
 import json
-import jwt
+import jwt 
 import os
 
 app = Flask(__name__)

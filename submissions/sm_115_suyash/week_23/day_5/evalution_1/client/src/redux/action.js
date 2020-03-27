@@ -101,7 +101,7 @@ export const fetchAllUsers = payload => dispatch => {
       dispatch(fetchAllUsersSuccess(res.data));
     })
     .catch(err => {
-      console.log(res.message);
+      console.log(err.message);
       dispatch(fetchAllUsersFail(err.message));
     });
 };
@@ -134,7 +134,7 @@ export const followNewUser = payload => dispatch => {
       dispatch(followNewUserSuccess(res.data));
     })
     .catch(err => {
-      console.log(res.message);
+      console.log(err.message);
       dispatch(followNewUserFail(err.message));
     });
 };
