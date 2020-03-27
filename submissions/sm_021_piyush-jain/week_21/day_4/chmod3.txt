@@ -1,0 +1,5 @@
+$ chmod 644 chmod3.txt
+$ chmod 602 chmod3.txt
+$ chmod 777 chmod3.txt
+$ chmod 501 chmod3.txt
+$ chmod 444 chmod3.txt

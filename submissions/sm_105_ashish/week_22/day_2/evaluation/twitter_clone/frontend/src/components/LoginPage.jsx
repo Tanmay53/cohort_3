@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -11,10 +11,10 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
-import {loginUser} from "../redux/Action"
+import {loginUser, checkIsLoggedIn} from "../redux/Action"
 import {Redirect} from "react-router-dom"
 
-function Copyright() {
+export function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
@@ -27,7 +27,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles(theme => ({
+export const useStyles = makeStyles(theme => ({
   paper: {
     marginTop: theme.spacing(8),
     display: 'flex',
@@ -52,6 +52,9 @@ function SignIn(props) {
   const classes = useStyles();
   const [email,setemail]=useState('')
   const [password,setpassword]= useState('')
+  useEffect(()=>{
+   props.checkIsLoggedIn()
+  },[])
 
   const logMeIn = async (e)=>{
     e.preventDefault()
@@ -63,11 +66,19 @@ function SignIn(props) {
   }
   if(!props.isLoggedIn){
   return (
-    <Container component="main" maxWidth="xs">
+    <>
+    <div className="container">
+      <div className="row">
+        <div className="col-6" style={{background:"#71C9F8"}}>
+          <img  className="m-auto text-center" style ={{width:"140%",height:"80%",overflow:"hidden"}} src="https://www.logolynx.com/images/logolynx/a2/a2676696dd75aaa2f0d7b53bd0e62980.png" alt="logo"/>
+        </div>
+        <div className="col-6">
+        <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
-          Sign in
+          <b>See whats happenning in the world right now</b><br/>
+                  Sign in
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -118,7 +129,7 @@ function SignIn(props) {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href='/auth/register' variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
@@ -129,6 +140,11 @@ function SignIn(props) {
         <Copyright />
       </Box>
     </Container>
+        </div>
+      </div>
+    </div>
+  
+    </>
   )}
   else{
     return (<Redirect to="/user"/>)
@@ -142,7 +158,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch =>({
-  loginUser:(url,payload)=>dispatch(loginUser(url,payload))
+  loginUser:(url,payload)=>dispatch(loginUser(url,payload)),
+  checkIsLoggedIn:()=>dispatch(checkIsLoggedIn())
 })
 
 export default connect(mapStateToProps,mapDispatchToProps)(SignIn)

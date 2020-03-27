@@ -3,6 +3,7 @@ import axios from 'axios'
 const GET_BUS_REQUEST = "GET_BUS_REQUEST"
 const GET_BUS_SUCCESS = "GET_BUS_SUCCESS"
 const GET_BUS_FAILURE = "GET_BUS_FAILURE"
+const CHANGE_PAGE_NO = 'CHANGE_PAGE_NO'
 
 
 const busRequest = (query) => {
@@ -26,6 +27,13 @@ const busFailure = (error) => {
     }
 }
 
+const changePage = (payload) => {
+    return {
+        type: CHANGE_PAGE_NO,
+        payload: payload
+    }
+}
+
 const getBuses = (url, token) => {
     return dispatch => {
         dispatch(busRequest)
@@ -37,7 +45,7 @@ const getBuses = (url, token) => {
                     }      
                 })
                 .then(res => {
-                    console.log(res.data)
+                    // console.log(res.data)
                     return dispatch(busSuccess(res.data))
                 })
                 .catch(err => {
@@ -107,24 +115,27 @@ const editBus = (url, payload) => {
     }
 }
 
-const filterBus = (url, id) => {
-    return dispatch => {
-        dispatch(busRequest)
-        return axios
-            .post(url, id)
-            .then(res => {
-                console.log(res.data)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
-}
+// const filterBus = (url) => {
+//     return dispatch => {
+//         dispatch(busRequest)
+//         return axios
+//             .get(url)
+//             .then(res => {
+//                 console.log(res.data)
+//                 return dispatch(busSuccess(res.data))
+//             })
+//             .catch(err => {
+//                 console.log(err)
+//                 return dispatch(busFailure(err))
+//             })
+//     }
+// }
 
 export {
     GET_BUS_FAILURE,
     GET_BUS_SUCCESS,
     GET_BUS_REQUEST,
+    CHANGE_PAGE_NO,
     busRequest, 
     busSuccess,
     busFailure,
@@ -133,5 +144,5 @@ export {
     addBus,
     deleteBus,
     editBus,
-    filterBus
+    changePage
 }
