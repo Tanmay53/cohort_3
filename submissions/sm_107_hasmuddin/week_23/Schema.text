@@ -1,0 +1,46 @@
+Tables
+
+1. Classes
+
+create table Classes 
+(id INT(2) NOT NULL AUTO_INCREMENT,
+class INT(2) , PRIMARY KEY(id) );
+
+
+
+2. Sections 
+
+
+create table Sections 
+(id INT(2) NOT NULL AUTO_INCREMENT, 
+section VARCHAR(20) , PRIMARY KEY(id) );
+
+
+3. Teachers
+
+CREATE TABLE Teachers
+(id INT(5) NOT NULL AUTO_INCREMENT, 
+name VARCHAR(255) NOT NULL, class INT(2), 
+section INT(2), subject VARCHAR(50) NOT NULL,
+PRIMARY KEY(id), FOREIGN KEY (class) REFERENCES Classes(id),
+FOREIGN KEY (section) REFERENCES Sections(id));
+
+4. Admins
+
+create table Admins( id int(5) AUTO_INCREMENT,
+ name VARCHAR(255), username VARCHAR(20), 
+email VARCHAR(255), salt VARCHAR(255), 
+password VARCHAR(255), PRIMARY KEY(id) );
+
+
+Join
+
+1. join with classes with Teachers;
+
+select Teachers.id, name, section, subject, Classes.class from Teachers left join Classes on Teachers.class=Classes.id;
+
+2. join with teachers with Sections along with classes;
+
+select teacher.id, name, subject, teacher.class, Sections.section FROM (select Teachers.id, name, section, subject, Classes.class from Teachers left join Classes on Teachers.class=Classes.id) as teacher left join Sections on Sections.id=teacher.section;
+
+

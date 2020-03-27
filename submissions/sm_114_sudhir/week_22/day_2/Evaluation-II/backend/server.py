@@ -18,26 +18,27 @@ mysql = MySQL(app)
 
 @app.route('/')
 def home():
+    # pagination
+    curr_page = request.args.get('page', default = 1, type = int)
+    per_page = request.args.get('per_page', default = 5, type = int)
+    prev_page_end = (curr_page -1) * per_page
     cursor = mysql.connection.cursor()
-    # source
     cursor.execute(
-        # """SELECT * FROM buses"""
-        """select cities.cities as source, buses.bus, buses.schedule from cities join buses on cities.id = buses.source"""
+        """SELECT buses.id, bus, schedule, t1.cities AS source, t2.cities AS destination FROM buses JOIN cities AS t1 ON t1.id = buses.source JOIN cities AS t2 on t2.id = buses.destination LIMIT %s, %s""", (prev_page_end, per_page)
     )
-    result1 = cursor.fetchall()
-    # destination
+    results = cursor.fetchall()
     cursor.execute(
-        """select cities.cities as destination from cities join buses on cities.id = buses.destination"""
+        """SELECT COUNT(buses.id) AS totalData FROM buses JOIN cities AS t1 ON t1.id = buses.source JOIN cities AS t2 on t2.id = buses.destination"""
     )
-    result2 = cursor.fetchall()
+    result_data = cursor.fetchall()
     cursor.close()
     buses = []
-    for bus in result1:
+    for bus in results:
         buses.append(bus)
-    for bus in result2:
-        buses.append(bus)
-    return {"buses": buses}
-
+    total_rows = []
+    for row in result_data:
+        total_rows.append(row)
+    return {"buses": buses, "totalRows": total_rows}
 
 @app.route('/auth/register', methods=['POST'])
 def user_register():
@@ -126,9 +127,44 @@ def add_bus():
         cursor.close()
         return { "message": "Bus Added Successfully"}
 
-@app.route('/delete', methods=['POST'])
-def delete():
-    return 'Delete'
+@app.route('/delete/<int:id>', methods=['POST'])
+def delete(id):
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """DELETE FROM buses WHERE id = (%s)""", [str(id)]
+    )
+    mysql.connection.commit()
+    cursor.close()
+    return {"id": id, "message": "Deleted Successfully"}
+
+@app.route('/bus/edit/<int:id>', methods=["POST"])
+def edit_bus(id):
+    if request.method == 'POST':
+        body = request.json
+        source = body['source']
+        destination = body['destination']
+        bus = body['bus']
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            """UPDATE buses SET source = (%s), destination = (%s), bus = (%s) WHERE id = (%s)""", (source, destination, str(bus), id)
+        )
+        mysql.connection.commit()
+        cursor.close()
+        return { "message": "Bus Added Successfully"}
+
+@app.route('/bus/filter')
+def filter_bus():
+    source = request.args.get('source')
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """select *  from  (SELECT buses.id, bus, schedule, t1.cities AS source, t2.cities AS destination FROM buses JOIN cities AS t1 ON t1.id = buses.source JOIN cities AS t2 on t2.id = buses.destination) as filter where filter.source  = %s""", [str(source)]
+    )
+    results = cursor.fetchall()
+    cursor.close()
+    filtered_bus = list()
+    for bus in results:
+        filtered_bus.append(bus)
+    return {'filteredBus': filtered_bus}
 
 def hash_cycle(usr_str):
     for i in range(10):
