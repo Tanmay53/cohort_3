@@ -15,20 +15,24 @@ export default function Table({ datasource }) {
         </tr>
       </thead>
       <tbody>
-        {datasource.map(item => (
-          <tr key={item.id}>
-            <td>{item.source}</td>
-            <td>{item.destination}</td>
-            <td>{item.bus_pid}</td>
-            <td>{item.start_time}</td>
-            <td>
-              <Link to="/edit">Edit</Link>
-            </td>
-            <td>
-              <Link to="/edit">Delete</Link>
-            </td>
-          </tr>
-        ))}
+        {datasource.length > 0 ? (
+          datasource.map(item => (
+            <tr key={item.id}>
+              <td>{item.source}</td>
+              <td>{item.destination}</td>
+              <td>{item.bus_pid}</td>
+              <td>{item.start_time}</td>
+              <td>
+                <Link to="/edit">Edit</Link>
+              </td>
+              <td>
+                <Link to="/edit">Delete</Link>
+              </td>
+            </tr>
+          ))
+        ) : (
+          <p>No more Data</p>
+        )}
       </tbody>
     </table>
   );

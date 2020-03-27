@@ -39,3 +39,4 @@ export const DELETE_BUS = "DELETE_BUS";
 
 // List Bus
 export const LIST_BUS = "LIST_BUS";
+export const CHANGE_PAGE = "CHANGE_PAGE";

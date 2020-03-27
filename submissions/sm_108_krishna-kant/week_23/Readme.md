@@ -37,4 +37,4 @@
 - [ ] User should able to select number of rows to be shown in the page
 - [ ] User should be able to Update the Bus Details
 - [ ] User should be able to Delete Bus Data
-- [ ] User should be able to change page
+- [x] User should be able to change page
