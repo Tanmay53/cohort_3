@@ -1,0 +1,47 @@
+Preemptive scheduling and Non preemptive scheduling differences with example in Priority
+
+Preemptive Scheduling
+
+Preemptive Scheduling means once a process started its execution, the current running process can be paused for a short period of time to handle some other process of higher priority, it means we can change (preempt) the control of CPU from one process to another if required.
+
+This supports multi-tasking as it gives the user impression that the user can work on multiple processes.
+
+It is practical because if some process of higher priority is encountered then the current process can be paused to handle that process.
+
+P1 = Process
+P2 = Priority (Lower the number, higher is the priority.)
+AT = Arrival Time
+ET = Execution Time
+
+P1 | AT | ET | P2
+A  | 3  | 2  | 2
+B  | 2  | 4  | 1
+C  | 0  | 6  | 2
+D  | 1  | 4  | 2
+
+- C arrives at time 0 and allocated to the process
+- D arrives at time 1, time left for the complete execution of the C is more than the time required by the D. So, process D is allocated to the CPU.
+- B arrives at time 2, the time left for the execution of D is 3 which is less than B and C but B has higher priority so B is allocated. 
+- A arrives at time 3, but B is not completed yet so it will be queued and after completion of B, A will execute as it's ET is less than D (which is 3 right now)
+
+Non-Preemptive Scheduling
+
+Non-Preemptive Scheduling means once a process starts its execution or the CPU is processing a specific task it cannot be paused or in other words we cannot preempt the CPU to some other process.
+
+This cannot support the execution of process in a multi task fashion. It executes all the processes in a sequential manner.
+
+It is not practical as all processes are not of same priority and are not always known to the system in advance.
+
+P1 = Process
+P2 = Priority
+AT = Arrival Time
+ET = Execution Time
+
+P1 | AT | ET | P2
+A  | 3  | 2  | 1
+B  | 2  | 4  | 2
+C  | 0  | 6  | 1
+D  | 1  | 4  | 1
+
+Here execution will follow 
+C => D => B => A => B

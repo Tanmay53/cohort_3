@@ -19,15 +19,7 @@ export default function Routes() {
         <PrivateRoute path="/insert">
           <Insert />
         </PrivateRoute>
-        {/* <PrivateRoute path="/blog/:id">
-          <Blog />
-        </PrivateRoute>
-        <PrivateRoute path="/delete/:id">
-          <Delete />
-        </PrivateRoute>
-        <PrivateRoute path="/edit/:id">
-          <Edit />
-        </PrivateRoute> */}
+
         <Route component={NotFound} />
       </Switch>
     </div>
