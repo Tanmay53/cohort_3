@@ -65,14 +65,14 @@ class Update extends Component {
         e.preventDefault()
         let token = localStorage.getItem("token")
         let isLoggedIn = localStorage.getItem("isLoggedIn")
+        let id = this.props.match.params.id
         let name = this.state.name
-        let email = this.state.email
         let classs = this.state.class
         let section = this.state.section
         let gender = this.state.gender
         let subject = this.state.subject
         let mobile = this.state.mobile
-        if(name === "" || email === "" || gender === "" || section === "" || classs === ""){
+        if(name === "" || gender === "" || section === "" || classs === ""){
             swal("Fill all the table","try again","error")
         }
         else if(JSON.parse(token) != null && JSON.parse(isLoggedIn) === true){
@@ -81,12 +81,12 @@ class Update extends Component {
             }
             axios.post('http://127.0.0.1:5000/update',{
                 "name" : name,
-                "email" : email,
                 "class" : classs,
                 "gender" : gender,
                 "section": section,
                 "subject" : subject,
-                "mobile" : mobile
+                "mobile" : mobile,
+                "tid": id
             },tokenCheck).then
             (res =>{
                 if(res.data.message === "teacher data updated"){
@@ -119,7 +119,7 @@ class Update extends Component {
         return (
             <div>
                 <div className="bgLogin mt-5">
-                    <h3 className="text-center mt-1">Add Teacher Data</h3>
+                    <h3 className="text-center mt-1">Update Teacher Data</h3>
                     <div className="mx-3">
                         <label className="ml-1 mt-2">Name</label>
                         <input className="form-control" onChange={this.handleChange} type="text" value={this.state.name} name="name" placeholder="Enter Name" />

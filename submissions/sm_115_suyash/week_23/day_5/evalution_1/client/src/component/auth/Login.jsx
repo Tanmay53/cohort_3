@@ -36,7 +36,7 @@ class Login extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="d-flex justify-content-center">
         <div className="mx-auto mt-4">
           <h1>Sign In</h1>
           <div>
@@ -52,11 +52,13 @@ class Login extends Component {
               placeholder="Enter Your Password"
               value={this.state.password}
               onChange={this.handleChange}
+              className="mt-2"
               name="password"
             />
           </div>
           <button
             type="primary"
+            className="mt-2 px-3 py-2 text-white btn-dark"
             loading={this.state.loading}
             onClick={this.handleSubmit}
           >

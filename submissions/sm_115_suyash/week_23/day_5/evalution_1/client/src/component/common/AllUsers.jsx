@@ -39,9 +39,14 @@ class AllUsers extends Component {
         {this.props.allUsers != undefined ? (
           this.props.allUsers.map(ele => {
             return (
-              <p>
+              <p className="ml-3">
                 <span>{ele.name} </span>
-                <button onClick={() => this.follow(ele.id)}>Follow</button>
+                <button
+                  className="ml-3 px-3 py-2 text-white btn-dark"
+                  onClick={() => this.follow(ele.id)}
+                >
+                  Follow
+                </button>
               </p>
             );
           })

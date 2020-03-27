@@ -26,8 +26,9 @@ export const fetchFollowingTweetsFail = payload => ({
 export const fetchFollowingTweets = payload => dispatch => {
   console.log(payload);
   dispatch(axiosRequest());
+  let page = payload.page || 1;
   axios({
-    url: "http://localhost:5000/show/tweets",
+    url: `http://localhost:5000/show/tweets?page=${page}`,
     data: payload,
     headers: {
       "Content-Type": "application/json"
@@ -35,7 +36,7 @@ export const fetchFollowingTweets = payload => dispatch => {
     method: "POST"
   })
     .then(res => {
-      dispatch(fetchFollowingTweetsSuccess(res.data.data));
+      dispatch(fetchFollowingTweetsSuccess(res.data));
     })
     .catch(err => {
       dispatch(fetchFollowingTweetsFail(err.message));
