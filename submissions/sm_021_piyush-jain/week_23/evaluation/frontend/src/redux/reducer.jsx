@@ -42,11 +42,11 @@ const reducer = (state = initialstate, action) => {
                 ...state,
                 dataPerPage: Number(action.payload)
             }
-            case ACTIVE_PAGE:
-                return {
-                    ...state,
-                    activePage: Number(action.payload)
-                }
+        case ACTIVE_PAGE:
+            return {
+                ...state,
+                activePage: Number(action.payload)
+            }
         default:
             return state
     }

@@ -35,8 +35,8 @@ class Admin extends React.Component {
                 dataPerPage: this.props.dataPerPage,
             }
         })
-            .then(res => {
-                this.props.page(res.data.curr_page_items)
+            .then(async(res)=> {
+                await  this.props.page(res.data.curr_page_items)
                 this.setState({
                     pageNo: res.data.total_pages
                 })
@@ -96,12 +96,12 @@ class Admin extends React.Component {
 
     handlePerPage = async (e) => {
         this.props.perPage(e.target.value)
-        await this.pagination()
+       setTimeout(()=>this.pagination(),1000)
     }
 
     changeActive = (val) => {
         this.props.activePage(val)
-        this.pagination()
+        setTimeout(()=>this.pagination(),1000)
     }
 
     render() {
