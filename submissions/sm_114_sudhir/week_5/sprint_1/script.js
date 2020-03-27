@@ -59,50 +59,50 @@ function findDeatils(){
 
 
 
-//Showing data in tabular form
-//function findDeatils(){
-//    var studentName=document.getElementById('selName').value
-//    var result=document.getElementById('showResult')
-//    var show=""
-//    var name=document.getElementById('name').value
-//    var tdStdName=document.createElement('td')
-//    tdStdName.innerHTML=name
-//    var tdStdName1=document.createElement('td')
-//    tdStdName.innerHTML=name
-//    var trstdName=document.querySelector('#stdName')
-//    trstdName.appendChild(tdStdName)
-//
-//    console.log(trstdName)
-//    shownamearrobj.forEach(function(element){
-//    console.log(element)
-//        if(studentName==element.Name){
-//            //console.log(element)
-//            for(key in element){
-//                show=show+key+':- '+element[key]+'<br />'
-//            }
-//        }
-//    })
-//    result.innerHTML=show
-//}
+// Showing data in tabular form
+function findDeatils(){
+   var studentName=document.getElementById('selName').value
+   var result=document.getElementById('showResult')
+   var show=""
+   var name=document.getElementById('name').value
+   var tdStdName=document.createElement('td')
+   tdStdName.innerHTML=name
+   var tdStdName1=document.createElement('td')
+   tdStdName.innerHTML=name
+   var trstdName=document.querySelector('#stdName')
+   trstdName.appendChild(tdStdName)
+
+   console.log(trstdName)
+   shownamearrobj.forEach(function(element){
+   console.log(element)
+       if(studentName==element.Name){
+           //console.log(element)
+           for(key in element){
+               show=show+key+':- '+element[key]+'<br />'
+           }
+       }
+   })
+   result.innerHTML=show
+}
 
 //2nd
 //to ses student details
-//function findDeatils(){  
-//    var stdTble=document.querySelector('stdTable')
-//    var filterValue=document.querySelector('selName')
-//    newStdResultArr=arrobj.filter(function(ele){
-//        if(studentName==val.Grade){
-//            return ele
-//        }
-//    })
-//
-//    newStdResultArr.forEach(function(value){
-//        var 
-//    })
-//
-//
-//
-//}
+function findDeatils(){  
+   var stdTble=document.querySelector('stdTable')
+   var filterValue=document.querySelector('selName')
+   newStdResultArr=arrobj.filter(function(ele){
+       if(studentName==val.Grade){
+           return ele
+       }
+   })
+
+   newStdResultArr.forEach(function(value){
+       var 
+   })
+
+
+
+}
 
 
 

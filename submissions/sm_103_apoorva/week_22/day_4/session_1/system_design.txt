@@ -1,0 +1,93 @@
+Name: Masai Chat
+
+High Level Design:----
+
+Web Application
+
+1.UI figma
+2.Landing Page
+3.Registration/signup Page
+4.Login Page
+5.Success Login/user details Page
+6.Groups 
+7.Direct messeges
+
+API docs:
+1.User Registration
+2.User Signin
+3.user details
+4.update user details
+4.Write message to  groups or personnel
+5.Read message from groups or personnel
+6.Add image/videos to group or personnel messages
+7.update message
+8.Delete messages
+
+DB design:
+1.Users
+2.Groups
+3.user_group
+4.messages
+5.Message_uid
+6.Message_gid
+
+
+Low Level Database Schema:---
+
+Tables-
+
+USERS:
+1.uid auto_increment
+2.Name
+3.email
+4.DOB
+5.password
+6.salt
+7.city
+8.about/status
+
+Primary Key- uid
+
+
+GROUPS:
+1.gid
+2.Name
+3.created_at (default date)
+4.uid
+
+Primary Key-gid
+foregin key- uid
+
+USER_GROUP:
+1.ugid
+2.uid
+3.gid
+
+Primary Key - ugid
+foregin Key- uid,gid
+
+MESSAGES:
+
+1.mid
+2.created_at(default)
+3. updated_at(default)
+4.text
+5.image (can be null)
+6.videos(can be null)
+
+Primary key: mid
+
+Message_uid:
+
+1.muid
+2.mid
+3.receiver_uid
+
+Message_gid:
+
+1.mgid
+2.mid
+3.receiver_group_id
+
+Primary key- mgid
+foregin key- mid,receiver_group_id(gid)

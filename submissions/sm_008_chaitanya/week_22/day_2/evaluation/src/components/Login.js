@@ -7,6 +7,7 @@ class Login extends React.Component{
         this.state={
             username:'',
             password:'',
+            islogged:false
         }
     }
 
@@ -22,8 +23,10 @@ class Login extends React.Component{
         .then(res=>{
             if(res){
                 if(res.data.error===false){
-                    // <Redirect to="/form" />
-                    console.log('happy')
+                    alert('You are Successfully Logged in...!')
+                    this.setState({
+                        islogged:true
+                    })
                 }
             }
         })
@@ -31,6 +34,11 @@ class Login extends React.Component{
 
     }
     render(){
+        if(this.state.islogged){
+            return(
+                <Redirect push to="/jobopenings"/>
+            )
+        }
         return(
             <React.Fragment>
                 <div className="container">

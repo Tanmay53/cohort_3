@@ -1,7 +1,10 @@
 #cards>div {
     margin-top: 4%;
 }
-
+#certPadding{
+    padding: 2px;
+    border:1px solid grey;
+}
 #FormStyle {
     background-color: grey;
     width: 30%;
