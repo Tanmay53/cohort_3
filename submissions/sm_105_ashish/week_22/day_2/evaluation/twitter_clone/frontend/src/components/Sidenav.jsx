@@ -7,6 +7,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import {Link} from "react-router-dom";
 import {connect} from "react-redux"
+import {signOut} from "../redux/Action"
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -45,7 +46,7 @@ const useStyles = makeStyles({
     >
       <List>
         <ListItem>
-      <img  className="mx-auto" style={{width:"150px",borderRadius:"80px"}} src={props.user.imageurl} alt="prf"/>
+      <img  className="mx-auto" style={{width:"150px",borderRadius:"80px"}} src={props.user.imgurl} alt="prf"/>
       </ListItem>
   <ListItem>Name: {props.user.name}</ListItem>
   <ListItem>Email id: {props.user.email}</ListItem>
@@ -54,16 +55,22 @@ const useStyles = makeStyles({
       <Divider/>
       <List>
       <ListItem>
-          <Link className="btn btn-secondary" to="/user/Edit">Upload profile Pic</Link>
+          <Link className="btn btn-info" to="/user">Home</Link>
+        </ListItem>
+        <ListItem>
+          <Link className="btn btn-info" to="/user/allUsers">All users</Link>
+        </ListItem>
+      <ListItem>
+          <Link className="btn btn-info" to="/user/Edit">Upload profile Pic</Link>
           </ListItem>
         <ListItem>
-          <Link to="/user/myblog" className="btn btn-secondary">My Blogs</Link>
+          <Link to="/user/mytweets" className="btn btn-info">Profile</Link>
           </ListItem>
           <ListItem>
-          <button className="btn btn-secondary" onClick={()=>alert("hello")}>Your Favourite</button>
+          <Link to="/user/newtweet" className="btn btn-info">Tweet</Link>
           </ListItem>
           <ListItem>
-          <Link to="/user/newblog" className="btn btn-secondary">Write Your Blog</Link>
+          <button onClick={()=>props.signOut()} className="btn btn-danger">Log out</button>
           </ListItem>
      
       </List>
@@ -84,6 +91,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch=> ({
+  signOut :()=>dispatch(signOut())
   
 })
 

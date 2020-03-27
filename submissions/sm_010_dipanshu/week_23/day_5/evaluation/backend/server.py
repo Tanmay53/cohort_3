@@ -1,0 +1,27 @@
+from flask import Flask
+from flask_mysqldb import MySQL
+
+app = Flask(__name__)
+mysql = MySQL(app)
+
+app.config["MYSQL_USER"] = "dipanshu"
+app.config["MYSQL_PASSWORD"] = "MasaiSchool02@"
+app.config["MYSQL_DB"] = "grocery_store"
+app.config["MYSQL_CURSORCLASS"] = "DictCursor"
+
+from auth.blueprint_auth import auth
+from products.blueprint_products import products
+from categories.blueprint_categories import categories
+
+app.register_blueprint(auth, url_prefix="/auth")
+app.register_blueprint(products, url_prefix="/products")
+app.register_blueprint(categories, url_prefix="/categories")
+
+
+@app.after_request
+def add_header(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization ')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,POST,PATCH,DELETE')
+
+    return response
