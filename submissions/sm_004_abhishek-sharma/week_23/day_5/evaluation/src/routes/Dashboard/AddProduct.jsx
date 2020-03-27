@@ -6,7 +6,7 @@ export class AddProduct extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            id: 0,
+            id: this.props.items.length+1,
             category: "Fruits",
             product: "",
             price: 0
@@ -104,8 +104,13 @@ export class AddProduct extends Component {
     }
 }
 
+const mapStateToProps = (state) => ({
+    items: state.userReducer.groceryList,
+})
+
+
 const mapDispatchToProps = dispatch => ({
     add: payload => dispatch(addProduct(payload))
 })
 
-export default connect(null, mapDispatchToProps)(AddProduct)
+export default connect(mapStateToProps, mapDispatchToProps)(AddProduct)
