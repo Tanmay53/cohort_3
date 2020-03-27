@@ -25,7 +25,6 @@ const login=(token,person)=>{
 const signUp=(email,password)=>{
     return async dispatch=>{
         alert("called")
-        dispatch(request())
           return  await axios({
             method: 'post',
             url: "http://127.0.0.1:5000/auth/login",
