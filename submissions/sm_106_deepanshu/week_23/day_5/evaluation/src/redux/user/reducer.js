@@ -2,12 +2,21 @@ import {
   ADD_ARTIST,
   ADD_ALBUM,
   EDIT_ALBUM,
-  DELETE_ALBUM
+  DELETE_ALBUM,
+  FILTER_BY_ARTIST,
+  CHANGE_PAGE_NO,
+
 } from './action'
 
 const initialState = {
   artist: [],
-  album: []
+  album: [],
+  page: 1,
+  perPage: 10,
+  length: 0,
+  totalPages: 0,
+
+
 }
 
 const userReducer = (state = initialState, action) => {
@@ -52,9 +61,22 @@ const userReducer = (state = initialState, action) => {
           ...state, album: arr.length > 0 ? [...arr] : []
         }
       }
+    case FILTER_BY_ARTIST:
+      console.log('filter called')
+      return {
+        ...state
+      }
+    case CHANGE_PAGE_NO:
+      return {
+        ...state,
+        page: action.payload
+      }
+
+
     default:
       return state;
   }
+
 }
 
 export default userReducer
