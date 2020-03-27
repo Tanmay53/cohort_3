@@ -12,8 +12,11 @@
 
 ##### Backend Setup
 
-- `cd client`
-- `npm start`
+- `cd server`
+- `source bus-route/bin/activate`
+- `export FLASK_APP=server.py`
+- `export FLASK_ENV=development`
+- `flask run`
 
 ### Rubrics
 
