@@ -58,83 +58,84 @@ export class Dashboard extends Component {
                     </div>
                 </div>
                 {/* Settings */}
-                <div className ="container-fluid bg-light">
-                    <div className="row mt-3">
-                        {/* Filter acc to Category */}
-                        <div className="col-4 offset-2">
-                            <div className="input-group mb-3">
-                                <div className="input-group-prepend">
-                                    <label className="input-group-text">Filter</label>
+                {
+                    grocery.length > 0 &&
+                        <div>
+                            <div className ="container-fluid bg-light">
+                                <div className="row pt-3">
+                                    {/* Filter acc to Category */}
+                                    <div className="col-4 offset-2">
+                                        <div className="input-group mb-3">
+                                            <div className="input-group-prepend">
+                                                <label className="input-group-text">Filter</label>
+                                            </div>
+                                            <select className="custom-select" onChange={this.filterCategory}>
+                                                <option value = "all">All Category</option>
+                                                <option value = "Fruits">Fruits</option>
+                                                <option value = "Vegetables">Vegetables</option>
+                                                <option value = "Frozen">Frozen</option>
+                                                <option value = "Dairy">Dairy</option>
+                                                <option value = "Meat">Meat</option>
+                                                <option value = "Spices">Spices</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    {/* Sort by Price */}
+                                    <div className="col-4">
+                                        <div className="input-group mb-3">
+                                            <div className="input-group-prepend">
+                                                <label className="input-group-text">Sort By Price</label>
+                                            </div>
+                                            <select className="custom-select" onChange={this.sortPrice}>
+                                                <option value="asc">Ascending</option>
+                                                <option value="dec">Descending</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                                <select className="custom-select" onChange={this.filterCategory}>
-                                    <option value = "all">All Category</option>
-                                    <option value = "Fruits">Fruits</option>
-                                    <option value = "Vegetables">Vegetables</option>
-                                    <option value = "Frozen">Frozen</option>
-                                    <option value = "Dairy">Dairy</option>
-                                    <option value = "Meat">Meat</option>
-                                    <option value = "Spices">Spices</option>
-                                </select>
                             </div>
-                        </div>
-                        {/* Sort by Price */}
-                        <div className="col-4">
-                            <div className="input-group mb-3">
-                                <div className="input-group-prepend">
-                                    <label className="input-group-text">Sort By Price</label>
+                            {/* // Pagination */}
+                            <div className="container-fluid bg-light">
+                                <div className="row d-flex justify-content-center">
+                                    <nav aria-label="Page navigation example">
+                                        <ul className="pagination">
+                                            {pageList}                       
+                                        </ul>
+                                    </nav>
                                 </div>
-                                <select className="custom-select" onChange={this.sortPrice}>
-                                    <option value="asc">Ascending</option>
-                                    <option value="dec">Descending</option>
-                                </select>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Pagination */}
-                <div className="container-fluid bg-light">
-                    <div className="row d-flex justify-content-center">
-                        <nav aria-label="Page navigation example">
-                            <ul className="pagination">
-                                {pageList}                       
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                {/* Table */}
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-8 offset-2">
-                            <table className="table">
-                                <thead className="thead-dark">
-                                    <tr>
-                                        <th scope="col">No.</th>
-                                        <th scope="col">Product</th>
-                                        <th scope="col">Category</th>
-                                        <th scope="col">Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {
-                                        (grocery.length >0) 
-                                        ?
-                                        grocery.map((item, index) => {
-                                            return(
-                                                <tr key={item.id}>
-                                                    <td> {index+1} </td>
-                                                    <td className = "text-capitalize">{item.product}</td>
-                                                    <td>{item.category}</td>
-                                                    <td>{item.price}</td>
+                            {/* Table */}
+                            <div className="container-fluid bg-light">
+                                <div className="row">
+                                    <div className="col-8 offset-2">
+                                        <table className="table">
+                                            <thead className="thead-dark">
+                                                <tr>
+                                                    <th scope="col">No.</th>
+                                                    <th scope="col">Product</th>
+                                                    <th scope="col">Category</th>
+                                                    <th scope="col">Price</th>
                                                 </tr>
-                                            )
-                                        })
-                                        : null
-                                    }
-                                </tbody>
-                            </table>
+                                            </thead>
+                                            <tbody>
+                                                {grocery.map((item, index) => {
+                                                        return(
+                                                            <tr key={item.id}>
+                                                                <td> {index+1} </td>
+                                                                <td className = "text-capitalize">{item.product}</td>
+                                                                <td>{item.category}</td>
+                                                                <td>{item.price}</td>
+                                                            </tr>
+                                                        )
+                                                    })}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>      
                         </div>
-                    </div>
-                </div>
+                }
+            {/* // End */}
             </React.Fragment>
         )
     }

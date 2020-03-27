@@ -12,8 +12,15 @@
 
 ##### Backend Setup
 
-- `cd client`
-- `npm start`
+- `cd server`
+- `source bus-route/bin/activate`
+- `export FLASK_APP=server.py`
+- `export FLASK_ENV=development`
+- `flask run`
+
+##### Database Setup
+- `Find SQL dump in db/backup.sql`
+- `mysql -u root -p busroute < backup.sql`
 
 ### Rubrics
 
@@ -37,4 +44,4 @@
 - [ ] User should able to select number of rows to be shown in the page
 - [ ] User should be able to Update the Bus Details
 - [ ] User should be able to Delete Bus Data
-- [ ] User should be able to change page
+- [x] User should be able to change page
