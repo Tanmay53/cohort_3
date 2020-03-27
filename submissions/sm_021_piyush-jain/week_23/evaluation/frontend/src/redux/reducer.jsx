@@ -9,7 +9,7 @@ const initialstate = {
     token: localStorage.getItem("token"),
     personType: localStorage.getItem("type"),
     activePage: 1,
-    dataPerPage: 10,
+    dataPerPage: 5,
     pageData: []
 }
 

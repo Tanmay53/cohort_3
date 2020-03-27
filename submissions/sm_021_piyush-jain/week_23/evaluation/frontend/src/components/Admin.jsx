@@ -113,9 +113,16 @@ class Admin extends React.Component {
 
     render() {
         var array = []
-        array.push(<ul class="pagination"></ul>)
+        array.push(<ul class="pagination ml-5"></ul>)
         for (var i = 0; i <= this.state.pageNo; i++) {
-            array.push(<li class="page-item" onClick={()=>this.changeActive(i+1 )}>{i + 1}</li>)
+            if(this.props.activePage==i+1)
+            {
+                array.push(<li class="page-item list-inline-item border border-secondary bg-dark text-white p-2" onClick={()=>this.changeActive(i+1 )}>{i + 1}</li>)
+            }
+            else
+            {
+                array.push(<li class="page-item list-inline-item border border-primary p-2" onClick={()=>this.changeActive(i+1 )}>{i + 1}</li>)
+        }
         }
         array.push(<ul class="pagination"></ul>)
         console.log(this.state)
@@ -195,7 +202,7 @@ const mapDispatchToProps = dispatch => {
         logout: () => dispatch(logout()),
         page: (payload) => dispatch(page(payload)),
         perPage: (payload) => dispatch(perPage(payload)),
-        activePage: (payload) => dispatch(activePage(payload))
+        // activePage: (payload) => dispatch(activePage(payload))
     })
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Admin)
