@@ -50,11 +50,16 @@ def list_trips():
     if limit is None and page is None:
         start = 0
         end = 10
-    if limit is not None:
-        end = int(limit)
-
-    if page is not None and limit is not None:
+    elif page is not None and limit is not None:
         start = (int(page) - 1 ) * int(limit)
+        end = int(limit)
+    elif limit is not None:
+        end = int(limit)
+    elif page is not None :
+        start = (int(page) - 1 ) * 10
+        end = 10
+
+    
     
     try:
         conn = server.mysql.connection.cursor()
