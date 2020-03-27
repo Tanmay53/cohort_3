@@ -18,17 +18,27 @@ mysql = MySQL(app)
 
 @app.route('/')
 def home():
+    # pagination
+    curr_page = request.args.get('page', default = 1, type = int)
+    per_page = request.args.get('per_page', default = 5, type = int)
+    prev_page_end = (curr_page -1) * per_page
     cursor = mysql.connection.cursor()
     cursor.execute(
-        """SELECT buses.id, bus, schedule, t1.cities AS source, t2.cities AS destination FROM buses JOIN cities AS t1 ON t1.id = buses.source JOIN cities AS t2 on t2.id = buses.destination"""
+        """SELECT buses.id, bus, schedule, t1.cities AS source, t2.cities AS destination FROM buses JOIN cities AS t1 ON t1.id = buses.source JOIN cities AS t2 on t2.id = buses.destination LIMIT %s, %s""", (prev_page_end, per_page)
     )
     results = cursor.fetchall()
+    cursor.execute(
+        """SELECT COUNT(buses.id) AS totalData FROM buses JOIN cities AS t1 ON t1.id = buses.source JOIN cities AS t2 on t2.id = buses.destination"""
+    )
+    result_data = cursor.fetchall()
     cursor.close()
     buses = []
     for bus in results:
         buses.append(bus)
-    return {"buses": buses}
-
+    total_rows = []
+    for row in result_data:
+        total_rows.append(row)
+    return {"buses": buses, "totalRows": total_rows}
 
 @app.route('/auth/register', methods=['POST'])
 def user_register():
@@ -141,6 +151,20 @@ def edit_bus(id):
         mysql.connection.commit()
         cursor.close()
         return { "message": "Bus Added Successfully"}
+
+@app.route('/bus/filter')
+def filter_bus():
+    source = request.args.get('source')
+    cursor = mysql.connection.cursor()
+    cursor.execute(
+        """select *  from  (SELECT buses.id, bus, schedule, t1.cities AS source, t2.cities AS destination FROM buses JOIN cities AS t1 ON t1.id = buses.source JOIN cities AS t2 on t2.id = buses.destination) as filter where filter.source  = %s""", [str(source)]
+    )
+    results = cursor.fetchall()
+    cursor.close()
+    filtered_bus = list()
+    for bus in results:
+        filtered_bus.append(bus)
+    return {'filteredBus': filtered_bus}
 
 def hash_cycle(usr_str):
     for i in range(10):

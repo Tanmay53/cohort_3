@@ -29,7 +29,9 @@ export default function ButtonAppBar() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Buses
+            <Link to="/" className="text-white">
+              Buses
+            </Link>
           </Typography>
           <Link to="/addcityandbuses">
             <Button className="text-white">Add City and Bus</Button>

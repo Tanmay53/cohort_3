@@ -73,7 +73,7 @@ function Register(props) {
       <CssBaseline />
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
-          Register
+            Register
         </Typography>
         <form className={classes.form} noValidate>
             <TextField
