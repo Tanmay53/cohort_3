@@ -1,4 +1,4 @@
-import { ADD_BUS } from "../actionType";
+import { ADD_BUS, LIST_BUS } from "../actionType";
 
 const initialState = {
   buses: []
@@ -11,6 +11,11 @@ export default (state = initialState, action) => {
     case ADD_BUS:
       return {
         ...state
+      };
+    case LIST_BUS:
+      return {
+        ...state,
+        buses: payload
       };
     default:
       return {
