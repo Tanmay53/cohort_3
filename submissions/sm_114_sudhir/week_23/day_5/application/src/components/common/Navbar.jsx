@@ -42,6 +42,9 @@ function Navbar(props) {
           <Typography variant="h6" className={classes.title}>
             Grocery App
           </Typography>
+          <Link to="/">
+            <Button className="text-white" color="inherit">Home</Button>
+          </Link>
           <Link to="/register">
             <Button className="text-white" color="inherit">Register</Button>
           </Link>
