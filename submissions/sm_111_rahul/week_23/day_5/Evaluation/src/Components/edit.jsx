@@ -88,7 +88,7 @@ class Edit extends Component {
                 onChange={this.handleChange}
               />
               <div className="form-group">
-                <label htmlFor="#artistSelected">Class</label>
+                <label htmlFor="#artistSelected">Select Artist</label>
                 <select
                   id="artistSelected"
                   name="artistSelected"

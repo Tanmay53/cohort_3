@@ -17,7 +17,7 @@ export default function TeacherTable({ data }) {
                 </thead>
                 <tbody>
                     {data && data.map(teacher => {
-                        return <tr>
+                        return <tr key={teacher.id}>
                             <td>{teacher.name}</td>
                             <td>{teacher.class}</td>
                             <td>{teacher.section}</td>
