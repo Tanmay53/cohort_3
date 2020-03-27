@@ -1,0 +1,337 @@
+command: ps aux > process_all_users.txt
+command for listing processes by USER = root: ps -U root -u root u
+
+
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.1  0.0 225604  7992 ?        Ss   09:56   1:08 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    09:56   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        I<   09:56   0:00 [rcu_gp]
+root         4  0.0  0.0      0     0 ?        I<   09:56   0:00 [rcu_par_gp]
+root         6  0.0  0.0      0     0 ?        I<   09:56   0:00 [kworker/0:0H-kb]
+root         9  0.0  0.0      0     0 ?        I<   09:56   0:00 [mm_percpu_wq]
+root        10  0.0  0.0      0     0 ?        S    09:56   0:02 [ksoftirqd/0]
+root        11  0.1  0.0      0     0 ?        I    09:56   1:02 [rcu_sched]
+root        12  0.0  0.0      0     0 ?        S    09:56   0:00 [migration/0]
+root        13  0.0  0.0      0     0 ?        S    09:56   0:00 [idle_inject/0]
+root        14  0.0  0.0      0     0 ?        S    09:56   0:00 [cpuhp/0]
+root        15  0.0  0.0      0     0 ?        S    09:56   0:00 [cpuhp/1]
+root        16  0.0  0.0      0     0 ?        S    09:56   0:00 [idle_inject/1]
+root        17  0.0  0.0      0     0 ?        S    09:56   0:00 [migration/1]
+root        18  0.0  0.0      0     0 ?        S    09:56   0:01 [ksoftirqd/1]
+root        20  0.0  0.0      0     0 ?        I<   09:56   0:00 [kworker/1:0H-kb]
+root        21  0.0  0.0      0     0 ?        S    09:56   0:00 [cpuhp/2]
+root        22  0.0  0.0      0     0 ?        S    09:56   0:00 [idle_inject/2]
+root        23  0.0  0.0      0     0 ?        S    09:56   0:00 [migration/2]
+root        24  0.0  0.0      0     0 ?        S    09:56   0:00 [ksoftirqd/2]
+root        26  0.0  0.0      0     0 ?        I<   09:56   0:00 [kworker/2:0H-kb]
+root        27  0.0  0.0      0     0 ?        S    09:56   0:00 [cpuhp/3]
+root        28  0.0  0.0      0     0 ?        S    09:56   0:00 [idle_inject/3]
+root        29  0.0  0.0      0     0 ?        S    09:56   0:00 [migration/3]
+root        30  0.0  0.0      0     0 ?        S    09:56   0:00 [ksoftirqd/3]
+root        33  0.0  0.0      0     0 ?        S    09:56   0:00 [cpuhp/4]
+root        34  0.0  0.0      0     0 ?        S    09:56   0:00 [idle_inject/4]
+root        35  0.0  0.0      0     0 ?        S    09:56   0:00 [migration/4]
+root        36  0.0  0.0      0     0 ?        S    09:56   0:00 [ksoftirqd/4]
+root        38  0.0  0.0      0     0 ?        I<   09:56   0:00 [kworker/4:0H-kb]
+root        39  0.0  0.0      0     0 ?        S    09:56   0:00 [cpuhp/5]
+root        40  0.0  0.0      0     0 ?        S    09:56   0:00 [idle_inject/5]
+root        41  0.0  0.0      0     0 ?        S    09:56   0:00 [migration/5]
+root        42  0.0  0.0      0     0 ?        S    09:56   0:05 [ksoftirqd/5]
+root        44  0.0  0.0      0     0 ?        I<   09:56   0:00 [kworker/5:0H-kb]
+root        45  0.0  0.0      0     0 ?        S    09:56   0:00 [cpuhp/6]
+root        46  0.0  0.0      0     0 ?        S    09:56   0:00 [idle_inject/6]
+root        47  0.0  0.0      0     0 ?        S    09:56   0:00 [migration/6]
+root        48  0.0  0.0      0     0 ?        S    09:56   0:00 [ksoftirqd/6]
+root        50  0.0  0.0      0     0 ?        I<   09:56   0:00 [kworker/6:0H-kb]
+root        51  0.0  0.0      0     0 ?        S    09:56   0:00 [cpuhp/7]
+root        52  0.0  0.0      0     0 ?        S    09:56   0:00 [idle_inject/7]
+root        53  0.0  0.0      0     0 ?        S    09:56   0:00 [migration/7]
+root        54  0.0  0.0      0     0 ?        S    09:56   0:00 [ksoftirqd/7]
+root        56  0.0  0.0      0     0 ?        I<   09:56   0:00 [kworker/7:0H-kb]
+root        57  0.0  0.0      0     0 ?        S    09:56   0:00 [kdevtmpfs]
+root        58  0.0  0.0      0     0 ?        I<   09:56   0:00 [netns]
+root        59  0.0  0.0      0     0 ?        S    09:56   0:00 [rcu_tasks_kthre]
+root        60  0.0  0.0      0     0 ?        S    09:56   0:00 [kauditd]
+root        63  0.0  0.0      0     0 ?        S    09:56   0:00 [khungtaskd]
+root        64  0.0  0.0      0     0 ?        S    09:56   0:00 [oom_reaper]
+root        65  0.0  0.0      0     0 ?        I<   09:56   0:00 [writeback]
+root        66  0.0  0.0      0     0 ?        S    09:56   0:00 [kcompactd0]
+root        67  0.0  0.0      0     0 ?        SN   09:56   0:00 [ksmd]
+root        68  0.0  0.0      0     0 ?        SN   09:56   0:00 [khugepaged]
+root       161  0.0  0.0      0     0 ?        I<   09:56   0:00 [kintegrityd]
+root       162  0.0  0.0      0     0 ?        I<   09:56   0:00 [kblockd]
+root       163  0.0  0.0      0     0 ?        I<   09:56   0:00 [blkcg_punt_bio]
+root       164  0.0  0.0      0     0 ?        I<   09:56   0:00 [tpm_dev_wq]
+root       165  0.0  0.0      0     0 ?        I<   09:56   0:00 [ata_sff]
+root       166  0.0  0.0      0     0 ?        I<   09:56   0:00 [md]
+root       167  0.0  0.0      0     0 ?        I<   09:56   0:00 [edac-poller]
+root       168  0.0  0.0      0     0 ?        I<   09:56   0:00 [devfreq_wq]
+root       169  0.0  0.0      0     0 ?        S    09:56   0:00 [watchdogd]
+root       176  0.0  0.0      0     0 ?        S    09:56   0:04 [kswapd0]
+root       178  0.0  0.0      0     0 ?        S    09:56   0:00 [ecryptfs-kthrea]
+root       181  0.0  0.0      0     0 ?        I<   09:56   0:00 [kthrotld]
+root       182  0.0  0.0      0     0 ?        S    09:56   0:00 [irq/122-aerdrv]
+root       183  0.0  0.0      0     0 ?        S    09:56   0:00 [irq/122-pcie-dp]
+root       184  0.0  0.0      0     0 ?        S    09:56   0:00 [irq/123-aerdrv]
+root       185  0.0  0.0      0     0 ?        S    09:56   0:00 [irq/123-pcie-dp]
+root       186  0.0  0.0      0     0 ?        S    09:56   0:00 [irq/124-aerdrv]
+root       187  0.0  0.0      0     0 ?        S    09:56   0:00 [irq/124-pcie-dp]
+root       188  0.0  0.0      0     0 ?        I<   09:56   0:00 [acpi_thermal_pm]
+root       193  0.0  0.0      0     0 ?        I<   09:56   0:00 [ipv6_addrconf]
+root       204  0.0  0.0      0     0 ?        I<   09:56   0:00 [kstrp]
+root       223  0.0  0.0      0     0 ?        I<   09:56   0:00 [charger_manager]
+root       282  0.0  0.0      0     0 ?        I<   09:56   0:00 [nvme-wq]
+root       283  0.0  0.0      0     0 ?        I<   09:56   0:00 [nvme-reset-wq]
+root       284  0.0  0.0      0     0 ?        I<   09:56   0:00 [nvme-delete-wq]
+root       285  0.0  0.0      0     0 ?        S    09:56   0:00 [scsi_eh_0]
+root       286  0.0  0.0      0     0 ?        I<   09:56   0:00 [scsi_tmf_0]
+root       287  0.0  0.0      0     0 ?        S    09:56   0:00 [scsi_eh_1]
+root       288  0.0  0.0      0     0 ?        I<   09:56   0:00 [scsi_tmf_1]
+root       294  0.0  0.0      0     0 ?        I<   09:56   0:02 [kworker/7:1H-ev]
+root       315  0.0  0.0      0     0 ?        I<   09:56   0:02 [kworker/0:1H-kb]
+root       318  0.0  0.0      0     0 ?        S    09:56   0:02 [jbd2/nvme0n1p2-]
+root       319  0.0  0.0      0     0 ?        I<   09:56   0:00 [ext4-rsv-conver]
+root       359  0.0  0.3 119924 31388 ?        S<s  09:56   0:03 /lib/systemd/systemd-journald
+root       365  0.0  0.0      0     0 ?        I<   09:56   0:01 [kworker/2:1H-kb]
+root       385  0.0  0.0  47196  5100 ?        Ss   09:56   0:01 /lib/systemd/systemd-udevd
+root       387  0.0  0.0      0     0 ?        I<   09:56   0:03 [kworker/6:1H-kb]
+root       388  0.0  0.0      0     0 ?        I<   09:56   0:02 [kworker/1:1H-ev]
+root       411  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop0]
+root       430  0.0  0.0      0     0 ?        I<   09:56   0:00 [kworker/5:1H-ev]
+root       439  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop1]
+root       441  0.0  0.0      0     0 ?        I<   09:56   0:01 [kworker/4:1H-ev]
+root       442  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop2]
+root       453  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop3]
+root       464  0.0  0.0      0     0 ?        I<   09:56   0:00 [cfg80211]
+root       472  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop4]
+root       480  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop5]
+root       489  0.0  0.0      0     0 ?        I<   09:56   0:00 [kworker/3:1H-kb]
+root       490  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop6]
+root       495  0.0  0.0      0     0 ?        I<   09:56   0:00 [cryptd]
+root       510  0.1  0.0      0     0 ?        S    09:56   0:58 [irq/103-ELAN070]
+root       532  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop7]
+root       543  0.0  0.0      0     0 ?        I    22:06   0:00 [kworker/6:2]
+root       581  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop8]
+root       608  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop9]
+systemd+   639  0.0  0.0 146112  2368 ?        Ssl  09:56   0:00 /lib/systemd/systemd-timesyncd
+systemd+   642  0.0  0.0  71164  5528 ?        Ss   09:56   0:03 /lib/systemd/systemd-resolved
+root       647  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop10]
+root       673  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop11]
+root       690  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop12]
+root       720  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop13]
+root       735  0.0  0.1 518172 12472 ?        Ssl  09:56   0:02 /usr/lib/udisks2/udisksd
+root       737  0.0  0.2 177632 16624 ?        Ssl  09:56   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root       740  0.0  0.0 434384  6820 ?        Ssl  09:56   0:00 /usr/sbin/ModemManager --filter-policy=strict
+syslog     742  0.0  0.0 263032  3860 ?        Ssl  09:56   0:01 /usr/sbin/rsyslogd -n
+root       743  0.0  0.0  38424  3264 ?        Ss   09:56   0:00 /usr/sbin/cron -f
+root       744  0.0  0.0  71140  5620 ?        Ss   09:56   0:01 /lib/systemd/systemd-logind
+root       746  0.0  0.1 186992  8756 ?        Ssl  09:56   0:06 /usr/sbin/thermald --no-daemon --dbus-enable
+root       747  0.0  0.0   4548   776 ?        Ss   09:56   0:03 /usr/sbin/acpid
+root       752  0.0  0.0 110492  3472 ?        Ssl  09:56   0:03 /usr/sbin/irqbalance --foreground
+message+   754  0.0  0.0  51808  5896 ?        Ss   09:56   0:10 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root       758  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop14]
+root       767  0.0  0.0  45560  6764 ?        Ss   09:56   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root       768  0.0  0.2 580792 16932 ?        Ssl  09:56   0:08 /usr/sbin/NetworkManager --no-daemon
+avahi      770  0.0  0.0  47260  3116 ?        Ss   09:56   0:00 avahi-daemon: running [asheesh-HP-Laptop-14s-cr1xxx.local]
+root       777  0.0  0.1 308532  8580 ?        Ssl  09:56   0:01 /usr/lib/accountsservice/accounts-daemon
+root       784  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop15]
+avahi      786  0.0  0.0  47072   336 ?        S    09:56   0:00 avahi-daemon: chroot helper
+root       835  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop16]
+root       860  0.0  0.1 321760 11760 ?        Ssl  09:56   0:01 /usr/lib/policykit-1/polkitd --no-debug
+root       864  0.0  0.0  36488  4148 ?        Ss   09:56   0:00 /usr/lib/bluetooth/bluetoothd
+root       882  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop17]
+root       928  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop18]
+root       931  0.0  0.0      0     0 ?        I    22:19   0:00 [kworker/3:1-mm_]
+root       948  0.0  0.2 194352 17928 ?        Ssl  09:56   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root       985  0.0  0.0      0     0 ?        S<   09:56   0:00 [loop19]
+root       986  0.0  0.0 308056  7516 ?        Ssl  09:56   0:00 /usr/sbin/gdm3
+root      1000  0.0  0.2 1971920 19608 ?       Ssl  09:56   0:08 /usr/lib/snapd/snapd
+mysql     1010  0.0  2.1 1424388 169508 ?      Sl   09:56   0:38 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+root      1037  0.0  0.0 261548  7632 ?        Sl   09:56   0:00 gdm-session-worker [pam/gdm-launch-environment]
+gdm       1056  0.0  0.0  77028  6756 ?        Ss   09:56   0:00 /lib/systemd/systemd --user
+gdm       1057  0.0  0.0 114212  2772 ?        S    09:56   0:00 (sd-pam)
+gdm       1072  0.0  0.0 197796  5372 tty1     Ssl+ 09:56   0:00 /usr/lib/gdm3/gdm-wayland-session gnome-session --autostart /usr/share/gdm/greeter/autostart
+gdm       1074  0.0  0.0  50328  4268 ?        Ss   09:56   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+gdm       1076  0.0  0.1 566944 14632 tty1     Sl+  09:56   0:00 /usr/lib/gnome-session/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+root      1085  0.0  0.0      0     0 ?        I    22:20   0:00 [kworker/7:1-eve]
+gdm       1086  0.1  1.7 3742528 142748 tty1   Sl+  09:56   1:22 /usr/bin/gnome-shell
+root      1093  0.0  0.1 322552  8312 ?        Ssl  09:56   0:01 /usr/lib/upower/upowerd
+gdm       1141  0.0  0.3 923244 28876 tty1     Sl+  09:56   0:00 /usr/bin/Xwayland :1024 -rootless -terminate -accessx -core -listen 4 -listen 5 -displayfd 6
+gdm       1168  0.0  0.1 365592  8520 ?        Ssl  09:56   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+gdm       1177  0.0  0.0  49924  3476 ?        S    09:56   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+gdm       1179  0.0  0.0 220764  7048 ?        Sl   09:56   0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+root      1183  0.0  0.0      0     0 ?        I    22:21   0:00 [kworker/1:0-eve]
+gdm       1185  0.0  0.1 1415676 10204 ?       Ssl  09:56   0:00 /usr/bin/pulseaudio --daemonize=no
+rtkit     1186  0.0  0.0 183504  2832 ?        SNsl 09:56   0:00 /usr/lib/rtkit/rtkit-daemon
+gdm       1240  0.0  0.1 448968  9344 tty1     Sl   09:56   0:00 ibus-daemon --xim --panel disable
+gdm       1243  0.0  0.0 294556  7400 tty1     Sl   09:56   0:00 /usr/lib/ibus/ibus-dconf
+gdm       1246  0.0  0.3 491312 29524 tty1     Sl   09:56   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+gdm       1248  0.0  0.0 292500  7520 ?        Sl   09:56   0:00 /usr/lib/ibus/ibus-portal
+gdm       1257  0.0  0.0 271560  4944 ?        Ssl  09:56   0:00 /usr/libexec/xdg-permission-store
+root      1265  0.0  0.1 315224  8852 ?        Ssl  09:56   0:00 /usr/lib/x86_64-linux-gnu/boltd
+root      1266  0.0  0.4 457388 35516 ?        Ssl  09:56   0:13 /usr/lib/packagekit/packagekitd
+gdm       1267  0.0  0.3 639792 29984 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+gdm       1268  0.0  0.0 294476  7836 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+gdm       1270  0.0  0.3 490940 28476 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+gdm       1275  0.0  0.3 813364 30832 tty1     Sl+  09:56   0:06 /usr/lib/gnome-settings-daemon/gsd-color
+gdm       1279  0.0  0.1 393712 13332 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+gdm       1280  0.0  0.0 283736  5788 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+gdm       1282  0.0  0.3 643272 29592 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+gdm       1285  0.0  0.3 1003432 31580 tty1    Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+gdm       1287  0.0  0.0 201996  4652 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+gdm       1291  0.0  0.3 935132 31972 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+gdm       1294  0.0  0.1 267012  8544 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+gdm       1295  0.0  0.0 202016  4468 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+gdm       1296  0.0  0.0 275732  4704 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+gdm       1301  0.0  0.1 321432  9928 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+gdm       1305  0.0  0.1 390548  8748 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+gdm       1309  0.0  0.1 340928  9352 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+gdm       1312  0.0  0.3 576088 30572 tty1     Sl+  09:56   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+gdm       1321  0.0  0.0 218700  7572 tty1     Sl   09:56   0:00 /usr/lib/ibus/ibus-engine-simple
+colord    1362  0.0  0.1 339588 14708 ?        Ssl  09:56   0:01 /usr/lib/colord/colord
+whoopsie  1423  0.0  0.1 468720 13000 ?        Ssl  09:56   0:00 /usr/bin/whoopsie -f
+kernoops  1432  0.0  0.0  56940   416 ?        Ss   09:56   0:01 /usr/sbin/kerneloops --test
+kernoops  1439  0.0  0.0  56940   420 ?        Ss   09:56   0:01 /usr/sbin/kerneloops
+root      1704  0.0  0.0      0     0 ?        I    22:25   0:00 [kworker/2:0-eve]
+asheesh   1913  0.4  1.5 4857976 128256 tty2   Sl+  22:29   0:19 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=561 --no-v8-untrusted-code-mitigations --shared-files
+root      1939  0.0  0.0      0     0 ?        I    22:29   0:00 [kworker/4:2-eve]
+root      1941  0.0  0.0      0     0 ?        I    22:29   0:00 [kworker/4:5-mm_]
+asheesh   2001  0.2  1.2 4820312 103900 tty2   Sl+  22:32   0:12 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=562 --no-v8-untrusted-code-mitigations --shared-files
+asheesh   2029  0.0  0.6 4784832 56060 tty2    Sl+  22:32   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=563 --no-v8-untrusted-code-mitigations --shared-files
+root      2125  0.0  0.1 415340  8684 ?        Sl   10:00   0:00 gdm-session-worker [pam/gdm-password]
+asheesh   2129  0.0  0.0  77192  6924 ?        Ss   10:00   0:00 /lib/systemd/systemd --user
+asheesh   2130  0.0  0.0 261676  2816 ?        S    10:00   0:00 (sd-pam)
+asheesh   2143  0.0  0.0 288380  7032 ?        Sl   10:00   0:03 /usr/bin/gnome-keyring-daemon --daemonize --login
+asheesh   2147  0.0  0.0 212132  5880 tty2     Ssl+ 10:00   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+asheesh   2149  5.4  1.3 566228 108680 tty2    Sl+  10:00  45:21 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+asheesh   2155  0.0  0.0  51360  5468 ?        Ss   10:00   0:04 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+asheesh   2158  0.0  0.1 578028 15320 tty2     Sl+  10:00   0:01 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+asheesh   2254  0.0  0.0  11300   320 ?        Ss   10:00   0:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+asheesh   2257  0.0  0.0 365788  7228 ?        Ssl  10:00   0:00 /usr/lib/gvfs/gvfsd
+asheesh   2262  0.0  0.0 432020  7444 ?        Sl   10:00   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+asheesh   2272  0.0  0.1 367872  8708 ?        Ssl  10:00   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+asheesh   2277  0.0  0.0  50048  3964 ?        S    10:00   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+asheesh   2280  0.0  0.0 220788  6884 ?        Sl   10:00   0:07 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+asheesh   2295  3.9  4.6 4283932 371344 tty2   Rl+  10:00  32:54 /usr/bin/gnome-shell
+asheesh   2305  3.2  0.1 2221368 12264 ?       S<l  10:00  27:11 /usr/bin/pulseaudio --start --log-target=syslog
+root      2322  0.0  0.0      0     0 ?        S<   10:00   0:00 [krfcommd]
+asheesh   2324  0.0  0.1 451700  9988 tty2     Sl   10:00   0:33 ibus-daemon --xim --panel disable
+asheesh   2328  0.0  0.1 296660  8128 tty2     Sl   10:00   0:00 /usr/lib/ibus/ibus-dconf
+asheesh   2330  0.0  0.2 356204 21740 tty2     Sl   10:00   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+asheesh   2332  0.0  0.1 294596  8344 ?        Sl   10:00   0:00 /usr/lib/ibus/ibus-portal
+asheesh   2341  0.0  0.0 271560  5476 ?        Ssl  10:00   0:00 /usr/libexec/xdg-permission-store
+asheesh   2348  0.0  0.2 696436 16292 ?        Sl   10:00   0:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+asheesh   2352  0.0  0.2 1374396 21472 ?       Ssl  10:00   0:00 /usr/lib/evolution/evolution-source-registry
+asheesh   2360  0.0  0.2 781704 20288 ?        Sl   10:00   0:00 /usr/lib/gnome-online-accounts/goa-daemon
+asheesh   2371  0.0  0.0 188036  5440 ?        Sl   10:00   0:00 /usr/lib/dconf/dconf-service
+asheesh   2377  0.0  0.1 319552  9144 ?        Sl   10:00   0:00 /usr/lib/gnome-online-accounts/goa-identity-service
+asheesh   2381  0.0  0.1 320180  9908 ?        Ssl  10:00   0:01 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+asheesh   2385  0.0  0.0 378820  7272 ?        Ssl  10:00   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+asheesh   2390  0.0  0.0 288784  6536 ?        Ssl  10:00   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+asheesh   2394  0.0  0.1 294416  8280 ?        Ssl  10:00   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+asheesh   2398  0.0  0.0 274044  5780 ?        Ssl  10:00   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+asheesh   2404  0.0  0.3 808420 25296 tty2     Sl+  10:00   0:01 /usr/lib/gnome-settings-daemon/gsd-power
+asheesh   2406  0.0  0.1 349320 10216 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+asheesh   2407  0.0  0.0 423340  5820 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+asheesh   2408  0.0  0.0 275732  4820 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+asheesh   2410  0.0  0.1 471456 12052 tty2     Sl+  10:00   0:04 /usr/lib/gnome-settings-daemon/gsd-sharing
+asheesh   2418  0.0  0.1 392784  8576 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+asheesh   2424  0.0  0.2 504672 23136 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+asheesh   2426  0.0  0.2 440660 22116 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+asheesh   2429  0.0  0.1 343100  9536 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+asheesh   2445  0.0  0.1 296644  8124 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+asheesh   2446  0.0  0.2 678260 23584 tty2     Sl+  10:00   0:11 /usr/lib/gnome-settings-daemon/gsd-color
+asheesh   2447  0.0  0.2 355800 21540 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+asheesh   2450  0.0  0.1 374948  8920 tty2     Sl+  10:00   0:02 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+asheesh   2451  0.0  0.1 476588 14600 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+asheesh   2455  0.0  0.3 1478452 25540 tty2    Sl+  10:00   0:02 /usr/lib/gnome-settings-daemon/gsd-media-keys
+asheesh   2456  0.0  0.2 516652 22388 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+asheesh   2457  0.0  0.1 296648  8068 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+asheesh   2479  0.0  0.1 508764 12616 tty2     Sl+  10:00   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+asheesh   2496  0.0  0.6 825768 56000 tty2     Sl+  10:00   0:02 nautilus-desktop
+asheesh   2502  0.2  1.5 909096 121656 tty2    Sl+  10:00   2:04 /usr/lib/slack/slack
+asheesh   2504  0.0  0.0 271932  6144 tty2     Sl+  10:00   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+asheesh   2529  0.0  0.1 384296 10000 ?        Sl   10:00   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.7 /org/gtk/gvfs/exec_spaw/0
+asheesh   2536  0.0  0.2 377632 23056 tty2     S+   10:00   0:00 /usr/lib/slack/slack --type=zygote
+asheesh   2538  0.0  0.1 377632  8452 tty2     S+   10:00   0:00 /usr/lib/slack/slack --type=zygote
+asheesh   2546  0.0  0.7 894332 57976 ?        Ssl  10:00   0:00 /usr/lib/evolution/evolution-calendar-factory
+root      2569  0.0  0.0      0     0 ?        I    22:43   0:00 [kworker/5:0-cgr]
+asheesh   2581  2.5  0.8 519956 70852 tty2     Sl+  10:00  21:21 /proc/self/exe --type=gpu-process --field-trial-handle=16019329142977070209,13299764850283375090,131072 --disable-features=SpareRendererForSitePerProcess --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --service-request-channel-token=3485635894092027815
+asheesh   2586  0.0  0.0 220928  8000 tty2     Sl   10:00   0:09 /usr/lib/ibus/ibus-engine-simple
+asheesh   2603  0.0  0.6 1142596 53560 ?       Sl   10:00   0:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx2546x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/2546/2
+asheesh   2612  0.0  0.5 472828 42296 tty2     Sl+  10:00   0:12 /usr/lib/slack/slack --type=utility --field-trial-handle=16019329142977070209,13299764850283375090,131072 --disable-features=SpareRendererForSitePerProcess --lang=en-GB --service-sandbox-type=network --standard-schemes=slack-resources,slack-sounds,slack-webapp-dev --secure-schemes=slack-resources,slack-sounds,slack-webapp-dev --bypasscsp-schemes=slack-resources,slack-sounds,slack-webapp-dev --cors-schemes=slack-resources,slack-sounds,slack-webapp-dev --fetch-schemes=slack-resources,slack-sounds,slack-webapp-dev --service-worker-schemes=slack-resources,slack-sounds,slack-webapp-dev --service-request-channel-token=11286018697090686779 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+asheesh   2635  0.0  0.2 734856 17200 ?        Ssl  10:00   0:00 /usr/lib/evolution/evolution-addressbook-factory
+asheesh   2649  0.0  0.2 1023988 17564 ?       Sl   10:00   0:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx2635x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/2635/2
+asheesh   2666  2.7  3.4 24390432 280164 tty2  Sl+  10:00  22:34 /usr/lib/slack/slack --type=renderer --autoplay-policy=no-user-gesture-required --force-color-profile=srgb --field-trial-handle=16019329142977070209,13299764850283375090,131072 --disable-features=SpareRendererForSitePerProcess --lang=en-GB --standard-schemes=slack-resources,slack-sounds,slack-webapp-dev --secure-schemes=slack-resources,slack-sounds,slack-webapp-dev --bypasscsp-schemes=slack-resources,slack-sounds,slack-webapp-dev --cors-schemes=slack-resources,slack-sounds,slack-webapp-dev --fetch-schemes=slack-resources,slack-sounds,slack-webapp-dev --service-worker-schemes=slack-resources,slack-sounds,slack-webapp-dev --app-path=/usr/lib/slack/resources/app.asar --no-sandbox --no-zygote --preload=/usr/lib/slack/resources/app.asar/dist/main-preload-entry-point.bundle.js --background-color=#1A1D21 --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=1763146410630712507 --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101 --enable-node-leakage-in-renderers {"preloadEnvironment":{"resourcePath":"/usr/lib/slack/resources/app.asar","appVersion":"4.3.2","linux":{"os":"Ubuntu 18.04.4 LTS","name":"18.04","release":"bionic","codename":"","desktopEnvironment":"Unity"},"sessionId":"NmQyY2Y5OTAtMDAyNi01NDlkLTk3MmMtMDk3OGNkMzI5MGQ2XzE1ODQ3NjUwMTA1NzU=","uuid":"6d2cf990-0026-549d-972c-0978cd3290d6","releaseChannel":"prod","teamId":"app","windowType":"main"},"crashReporterOpts":{"productName":"Slack","companyName":"Slack Technologies","uploadToServer":true,"submitURL":"https://slack.com/apps/breakpad?instanceUid=6d2cf990-0026-549d-972c-0978cd3290d6","extra":{"instanceUid":"6d2cf990-0026-549d-972c-0978cd3290d6","sessionId":"NmQyY2Y5OTAtMDAyNi01NDlkLTk3MmMtMDk3OGNkMzI5MGQ2XzE1ODQ3NjUwMTA1NzU="}},"perfTimer":{"mainPid":2502,"BOOT":[248,665335702],"numTeamsAtLaunch":2,"SHELL":[249,182964809],"APP_READY":[249,200581789],"APP_CREATED":[249,353130304],"MAIN_WINDOW_CREATING":[249,403105120]},"identifier":"slack_preload_metadata_arguments"}
+asheesh   2713  2.2  4.9 1313696 398368 tty2   SLl+ 10:00  18:23 /opt/google/chrome/chrome
+asheesh   2719  0.0  0.0  14712   824 tty2     S+   10:00   0:00 cat
+asheesh   2720  0.0  0.0  14712   844 tty2     S+   10:00   0:00 cat
+asheesh   2723  0.0  0.5 455056 44584 tty2     S+   10:00   0:00 /opt/google/chrome/chrome --type=zygote
+asheesh   2724  0.0  0.0  27220  3252 tty2     S+   10:00   0:00 /opt/google/chrome/nacl_helper
+asheesh   2727  0.0  0.1 455056 15092 tty2     S+   10:00   0:01 /opt/google/chrome/chrome --type=zygote
+asheesh   2747  5.5  1.7 651100 138100 tty2    Sl+  10:00  45:41 /opt/google/chrome/chrome --type=gpu-process --field-trial-handle=14154798710896861890,16540363981818484718,131072 --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --shared-files
+asheesh   2751  0.5  1.0 573644 84876 tty2     SLl+ 10:00   4:18 /opt/google/chrome/chrome --type=utility --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --shared-files
+asheesh   2804  0.0  1.1 4807876 90004 tty2    Sl+  10:00   0:23 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --no-v8-untrusted-code-mitigations --shared-files
+asheesh   2854  0.2  1.4 4875064 113260 tty2   Sl+  10:00   1:49 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files
+asheesh   2862  0.0  1.0 4786368 87008 tty2    Sl+  10:00   0:00 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --extension-process --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=6 --no-v8-untrusted-code-mitigations --shared-files
+asheesh   2934  1.2  1.6 4920416 135360 tty2   Sl+  10:00  10:35 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=13 --no-v8-untrusted-code-mitigations --shared-files
+root      3256  0.0  0.0 107692  7664 ?        Ss   10:01   0:00 /usr/sbin/cupsd -l
+root      3257  0.0  0.1 303528 10452 ?        Ssl  10:01   0:00 /usr/sbin/cups-browsed
+asheesh   3283  0.0  2.1 1281092 173476 tty2   SLl+ 10:01   0:06 /usr/bin/gnome-software --gapplication-service
+asheesh   3286  0.0  0.3 607136 27780 tty2     Sl+  10:01   0:01 update-notifier
+root      3392  1.3  0.0      0     0 ?        I    22:59   0:40 [kworker/u16:1-e]
+root      3401  1.1  0.0      0     0 ?        I    22:59   0:31 [kworker/u16:2-e]
+root      3542  0.0  0.0      0     0 ?        I    23:06   0:00 [kworker/3:2-cgr]
+asheesh   3588  0.3  1.4 843096 118280 tty2    Sl+  23:10   0:08 /usr/share/code/code --no-sandbox --unity-launch
+asheesh   3592  0.0  0.4 332616 35476 tty2     S+   23:10   0:00 /usr/share/code/code --type=zygote --no-sandbox
+asheesh   3615  1.3  1.0 482988 82096 tty2     Sl+  23:10   0:28 /usr/share/code/code --type=gpu-process --field-trial-handle=8239688016852664011,10822135146303127572,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --disable-color-correct-rendering --no-sandbox --gpu-preferences=KAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA --service-request-channel-token=11310072265101315561
+asheesh   3628  0.0  0.6 418268 55056 tty2     Sl+  23:10   0:00 /usr/share/code/code --type=utility --field-trial-handle=8239688016852664011,10822135146303127572,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --lang=en-GB --service-sandbox-type=network --no-sandbox --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --service-request-channel-token=6437817156229039182 --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+asheesh   3639  5.4  2.7 1140212 223768 tty2   SLl+ 23:10   1:59 /usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=8239688016852664011,10822135146303127572,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --lang=en-GB --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/usr/share/code/resources/app --node-integration --webview-tag --no-sandbox --no-zygote --background-color=#1e1e1e --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=9295353731268728433 --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+asheesh   3769  0.0  0.2 793028 21244 tty2     Sl+  10:02   0:00 /usr/lib/deja-dup/deja-dup-monitor
+asheesh   3870  0.7  2.9 840020 237060 tty2    Sl+  23:10   0:15 /usr/share/code/code --inspect-port=0 /usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost
+asheesh   3871  0.0  0.1  32908  8368 pts/0    Ss+  23:10   0:00 /bin/bash
+asheesh   4074  0.0  0.7 541224 62360 tty2     Rl+  23:10   0:00 /usr/share/code/code /usr/share/code/resources/app/out/bootstrap-fork --type=watcherService
+asheesh   4101  0.0  0.7 540248 62320 tty2     Sl+  23:10   0:00 /usr/share/code/code /usr/share/code/resources/app/out/bootstrap-fork --type=searchService
+asheesh   4141  0.0  1.3 737000 108928 tty2    Sl+  23:10   0:01 /usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=8239688016852664011,10822135146303127572,131072 --disable-features=LayoutNG,PictureInPicture,SpareRendererForSitePerProcess --lang=en-GB --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/usr/share/code/resources/app --node-integration --no-sandbox --no-zygote --background-color=#1e1e1e --disable-blink-features=Auxclick --num-raster-threads=4 --enable-main-frame-before-activation --service-request-channel-token=6639719931806177888 --renderer-client-id=7 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+asheesh   4165  0.0  0.0   4624   832 tty2     S+   23:10   0:00 /bin/sh -c "/home/asheesh/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.1783/dotnet_modules/vsls-agent" --autoexit --enableRpcInitialize --pipe vscode.1f3aa44f63bef18dc4e1d89c79e2a0df --service https://prod.liveshare.vsengsaas.visualstudio.com/ --signalRServiceUri https://signlr-prod.core.vsengsaas.visualstudio.com/api/signalr/signalrhub --agentExtensionPath "/home/asheesh/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.1783/dotnet_modules/Microsoft.VisualStudio.LiveShare.Agent.PresenceService.dll"
+asheesh   4166  0.1  1.0 3507476 82096 tty2    Sl+  23:10   0:02 /home/asheesh/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.1783/dotnet_modules/vsls-agent --autoexit --enableRpcInitialize --pipe vscode.1f3aa44f63bef18dc4e1d89c79e2a0df --service https://prod.liveshare.vsengsaas.visualstudio.com/ --signalRServiceUri https://signlr-prod.core.vsengsaas.visualstudio.com/api/signalr/signalrhub --agentExtensionPath /home/asheesh/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.1783/dotnet_modules/Microsoft.VisualStudio.LiveShare.Agent.PresenceService.dll
+asheesh   4205  0.0  0.3 146560 24396 tty2     Sl+  23:10   0:00 /usr/bin/python3 completion.py
+asheesh   4208  0.0  0.2  69032 20492 tty2     S+   23:10   0:00 /usr/bin/python3 lib/python/jedi/inference/compiled/subprocess/__main__.py lib/python 3.6.9
+asheesh   4233  0.0  0.1  32908  8284 pts/2    Ss+  23:11   0:00 /bin/bash
+root      4679  0.0  0.0      0     0 ?        I    23:21   0:00 [kworker/1:2-mm_]
+root      4936  0.0  0.0      0     0 ?        I    23:31   0:00 [kworker/0:0-rcu]
+asheesh   4967  0.0  0.7 1659992 60168 ?       Sl   10:55   0:10 /usr/bin/nautilus --gapplication-service
+root      5067  0.0  0.0      0     0 ?        I    23:37   0:00 [kworker/0:1-eve]
+root      5087  0.0  0.0      0     0 ?        I    23:38   0:00 [kworker/u16:3-i]
+root      5119  0.0  0.0      0     0 ?        I    23:39   0:00 [kworker/5:2-eve]
+root      5200  0.0  0.0      0     0 ?        I    23:42   0:00 [kworker/0:2]
+root      5234  0.0  0.0      0     0 ?        I    23:43   0:00 [kworker/3:0-cgr]
+root      5328  0.0  0.0      0     0 ?        I    23:46   0:00 [kworker/5:1-mm_]
+asheesh   5334  0.0  0.0  46768  3704 pts/1    R+   23:47   0:00 ps aux
+asheesh   5713  0.0  0.0 218076  5972 ?        Sl   10:56   0:00 /usr/lib/libreoffice/program/oosplash --writer file:///home/asheesh/APS_library/Masai_lecture_links/data_structure_links.odt
+asheesh   5731  0.0  2.7 1648996 222944 ?      Sl   10:56   0:12 /usr/lib/libreoffice/program/soffice.bin --writer file:///home/asheesh/APS_library/Masai_lecture_links/data_structure_links.odt --splash-pipe=5
+gdm      10058  0.0  0.0 187772  5004 ?        Sl   11:59   0:00 /usr/lib/dconf/dconf-service
+asheesh  11702  0.0  0.1 384268  9028 ?        Sl   12:20   0:00 /usr/lib/gvfs/gvfsd-network --spawner :1.7 /org/gtk/gvfs/exec_spaw/4
+asheesh  11746  0.0  0.0 381288  7316 ?        Sl   12:20   0:00 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.7 /org/gtk/gvfs/exec_spaw/12
+asheesh  14425  0.0  0.0 204680  6172 ?        Ssl  14:00   0:00 /usr/lib/gvfs/gvfsd-metadata
+asheesh  15623  0.0  0.1 359636 10216 ?        Sl   14:14   0:00 /usr/lib/gvfs/gvfsd-http --spawner :1.7 /org/gtk/gvfs/exec_spaw/13
+asheesh  16252  0.0  0.0  24560  2048 tty2     Sl+  14:19   0:00 /usr/bin/zoom
+asheesh  16258  0.0  0.0   4624   804 tty2     S+   14:19   0:00 sh -c export SSB_HOME=/home/asheesh/.zoom; export QSG_INFO=1; export LD_LIBRARY_PATH=/opt/zoom; export BREAKPAD_CLIENT_FD=3; /opt/zoom/zoom ""
+asheesh  16259 21.5 10.4 6727404 837548 tty2   Sl+  14:19 122:30 /opt/zoom/zoom
+asheesh  20210  0.0  0.0 495396  5780 ?        Ssl  15:40   0:00 /usr/libexec/xdg-document-portal
+asheesh  20431  0.0  0.1 445840 10536 ?        Ssl  15:43   0:00 /usr/bin/zeitgeist-daemon
+asheesh  20437  0.0  0.2 331036 16456 ?        Ssl  15:43   0:00 /usr/lib/zeitgeist/zeitgeist/zeitgeist-fts
+root     23592  0.0  0.0      0     0 ?        I<   17:03   0:00 [kworker/3:2H-ev]
+root     23970  0.0  0.0      0     0 ?        I<   17:08   0:00 [kworker/u17:2-h]
+root     28365  0.0  0.0      0     0 ?        I    19:32   0:05 [kworker/6:1-mm_]
+asheesh  30921  0.2  1.6 4859368 135444 tty2   Sl+  20:40   0:28 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=512 --no-v8-untrusted-code-mitigations --shared-files
+asheesh  31076  0.3  1.3 4821408 105044 tty2   Sl+  20:43   0:37 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=521 --no-v8-untrusted-code-mitigations --shared-files
+asheesh  31105  0.2  1.5 4845880 126176 tty2   Sl+  20:43   0:27 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=14154798710896861890,16540363981818484718,131072 --lang=en-GB --enable-auto-reload --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=524 --no-v8-untrusted-code-mitigations --shared-files
+asheesh  31558  0.4  0.4 802412 38448 ?        Ssl  20:53   0:45 /usr/lib/gnome-terminal/gnome-terminal-server
+asheesh  31567  0.0  0.1  32908  8280 pts/1    Ss   20:53   0:00 bash
+root     32499  0.0  0.0      0     0 ?        I    21:04   0:00 [kworker/2:2-mm_]
+root     32566  0.0  0.0      0     0 ?        S    21:56   0:00 [irq/127-mei_me]
+root     32569  0.0  0.0      0     0 ?        I    21:56   0:00 [kworker/7:0]
+root     32570  0.0  0.0      0     0 ?        S    21:56   0:00 [RTW_CMD_THREAD]
+root     32586  0.0  0.0      0     0 ?        I<   21:56   0:00 [kworker/u17:1-h]
+root     32677  0.0  0.0  25988  6336 ?        S    21:56   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-wlo1.pid -lf /var/lib/NetworkManager/dhclient-c716c897-4a76-4743-8b0d-bf0c58949319-wlo1.lease -cf /var/lib/NetworkManager/dhclient-wlo1.conf wlo1

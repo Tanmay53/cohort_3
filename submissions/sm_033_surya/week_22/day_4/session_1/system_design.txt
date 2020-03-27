@@ -1,0 +1,28 @@
+Name:Justchat
+
+Mobile application
+
+1.Login page
+2.Registration page
+3.Login success
+4.registration success
+5.userprofile page
+6.dashboard/all chats displays
+7.chat page
+8.contact names page
+
+
+Database:
+1.users  table
+2.chat table
+3.messages table
+
+Api Doc:
+1.users registration
+2.login
+3.create group
+4.create chat
+5.send message
+6.delete messages/group
+7.fecth contact users data
+

@@ -1,0 +1,10 @@
+.box{
+    height: 100%;
+    text-align: center;
+    color: rgb(2, 43, 119);
+    background-color: coral;
+}
+
+#box1{
+    width: 470px;   
+}

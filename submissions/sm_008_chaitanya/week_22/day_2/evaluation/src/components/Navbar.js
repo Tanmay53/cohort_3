@@ -20,9 +20,6 @@ class Navbar extends React.Component{
                                 <li className="nav-item active">
                                     <Link className="nav-link text-light h5 font-weight-bold pr-5" to="/signup">SignUp</Link>
                                 </li>
-                                <li className="nav-item active">
-                                    <Link className="nav-link text-light h5 font-weight-bold pr-5" to="/jobopenings">Hiring</Link>
-                                </li>
                             </ul>
                         </div>
                     </nav>

@@ -1,0 +1,13 @@
+command: ps axo stat,tty,pid | head -n 10 > process_10.txt
+note: Don't use space in the first part of the command.
+
+STAT TT         PID
+Ss   ?            1
+S    ?            2
+I<   ?            3
+I<   ?            4
+I<   ?            6
+I<   ?            9
+S    ?           10
+I    ?           11
+S    ?           12
