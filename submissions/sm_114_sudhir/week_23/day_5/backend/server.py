@@ -127,7 +127,7 @@ def get_categories():
     return {"categories": categories}
 
 @app.route('/product/filter')
-def filter_bus():
+def filter_product():
     category = request.args.get('category')
     cursor = mysql.connection.cursor()
     cursor.execute(

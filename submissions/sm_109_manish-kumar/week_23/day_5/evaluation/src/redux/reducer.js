@@ -12,7 +12,7 @@ import {
 } from "./actionType";
 
 const initialState = {
-  isAuth :true,
+  isAuth :false,
   isLoading:true,
   error:false,
   data:[],

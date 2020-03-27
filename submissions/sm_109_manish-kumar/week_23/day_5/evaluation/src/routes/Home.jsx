@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux";
+import Pagination from "./Pagination"
 import {
   salarySortDec,
   filterDepartment,
@@ -7,6 +8,15 @@ import {
 } from "../redux/action"
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       currentPage:1,
+       postPerPage:20
+    }
+  }
+  
   
   addemploye = (e) => {
     e.preventDefault();
@@ -14,8 +24,6 @@ class Home extends Component {
   }
 
   selectChange = (e) => {
-    // e.preventDefault();
-    // console.log(e.target.value)
     if(e.target.value === "salary Increase"){
       const {sortSalaryInc} = this.props;
       sortSalaryInc()
@@ -30,9 +38,20 @@ class Home extends Component {
     const {depart} = this.props;
     depart(e.target.value)
   }
+  paginate = (number) => {
+    this.setState ({
+      currentPage: number
+    })
+  }
+
 
   render() {
     const {data} = this.props;
+    const {currentPage,postPerPage} = this.state
+    const lastPost = currentPage*postPerPage;
+    const firstPost = lastPost - postPerPage
+    const currentData = data.slice(firstPost, lastPost)
+    
     return (
       <div>
         <div className="d-flex justify-content-around m-4 bg-dark p-2">
@@ -65,7 +84,7 @@ class Home extends Component {
               </tr>
             </thead>
             <tbody>
-              {data.map((ele, i) => {
+              {currentData.map((ele, i) => {
                 return(
                   <tr key={i}>
                     <td>{ele.name} </td>
@@ -77,6 +96,11 @@ class Home extends Component {
               })}
             </tbody>
           </table>
+          <Pagination
+        postsPerPage={this.state.postsPerPage}
+        totalPosts={data}
+        paginate={this.paginate}
+      />
         </div>
       </div>
     )

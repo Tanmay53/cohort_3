@@ -74,9 +74,7 @@ class Home extends Component {
 
 
     render() {
-        const length = this.props.employeeData.length
         const page = this.props.page;
-        const totalPage = length / this.props.perPage
         console.log("state", this.state)
         return (
             <div>
@@ -139,9 +137,7 @@ class Home extends Component {
                     </table>
                 </div>
                 <div className="d-flex justify-content-center">
-                    {/* {<PageList />} */}
-                    <button onClick={() => { this.props.changePage(this.props.page - 1) }}>Previous</button>
-                    <button onClick={() => { this.props.changePage(this.props.page + 1) }}>Next</button>
+                    {<PageList />}
                 </div>
             </div>
         )
@@ -159,7 +155,6 @@ const mapStateToProps = (state) => ({
 // Dispatching Action
 const mapDispatchToProps = dispatch => ({
     deleteEmployee: (payload) => dispatch(deleteEmployee(payload)),
-    changePage: (payload) => dispatch(changePage(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

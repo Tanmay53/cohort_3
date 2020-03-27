@@ -18,13 +18,13 @@ const SignupValidator = ({ state }) => {
         errors["username"] = "this field is required"
     }
     else if (state.username.length < 4) {
-        errors["username"] = "password length must be greater than 4 characters"
+        errors["username"] = "username length must be greater than 4 characters"
     }
     if (validator.isEmpty(state.name)) {
         errors["name"] = "this field is required"
     }
     else if (state.name.length < 3) {
-        errors["name"] = "password length must be greater than 3 characters"
+        errors["name"] = "name length must be greater than 3 characters"
     }
 
     return (
