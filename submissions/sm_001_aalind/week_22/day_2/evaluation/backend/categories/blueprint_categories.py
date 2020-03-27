@@ -27,7 +27,7 @@ def category():
         categories = get_all_categories()
 
         return json.dumps({"error": False, "payload": {"categories": categories}})
-    elif http_method == "POST" and user["email"] == "admin@gmail.com":
+    elif http_method == "POST" and user["type"] == "admin":
         name = request.json.get("name")
 
         addition = add_category(name)
@@ -47,7 +47,7 @@ def category_chg_del(category_id):
     token = req_header[1]
     user = jwt.decode(token, "grocery_store", algorithm=["HS256"])
 
-    if user["email"] == "admin@gmail.com":
+    if user["type"] == "admin":
         if http_method == "PATCH":
             name = request.json.get("name")
 

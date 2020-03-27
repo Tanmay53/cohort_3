@@ -1,0 +1,2 @@
+1. What is an addressable space in a processor?
+2. What is time multiplexing?
