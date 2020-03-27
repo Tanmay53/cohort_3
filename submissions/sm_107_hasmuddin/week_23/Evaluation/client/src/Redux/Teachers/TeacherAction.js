@@ -58,6 +58,9 @@ export const fetch_teachers = (data) => {
         axios.post("http://127.0.0.1:5000/teachers_record", data)
             .then(res => {
                 dispatch(fetchTeachers(res.data))
+                let teachers = res.data
+                localStorage.setItem("classes", JSON.stringify(teachers.classes))
+                localStorage.setItem("sections", JSON.stringify(teachers.sections))
             })
     }
 }
