@@ -30,7 +30,7 @@
 
 #### Frontend
 
-- [ ] Able to Add City Stored in list of cities
+- [x] Able to Add City Stored in list of cities
 - [ ] You should be able add a Bus with time and location
 - [ ] List all the trips of Buses on Home Page
 - [ ] User able to filter all the data based on Source and Destination
