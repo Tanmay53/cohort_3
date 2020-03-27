@@ -171,14 +171,13 @@ def show_users():
 def user_following():
     userId = request.json["user_id"]
     follower_id = request.json["follower_id"]
-    data = []
     try:
         cursor = mysql.connection.cursor()
         cursor.execute(
             """ INSERT INTO follow(user_id, following) VALUES (%s,%s) """, (userId, follower_id)
         )
-        data = cursor.fetchall()
-        return jsonify({"message": "Successfully","error":False, "data": data}),200
+        cursor.connection.commit()
+        return jsonify({"message": "Successfully","error":False}),200
     except Exception as err:
         return jsonify({"message": str(err), "error":True}),400
     finally:

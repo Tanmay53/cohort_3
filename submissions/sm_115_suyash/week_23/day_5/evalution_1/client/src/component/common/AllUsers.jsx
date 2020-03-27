@@ -6,7 +6,7 @@ class AllUsers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userId: 0,
+      user_id: 0,
       follower_id: 0
     };
   }
@@ -21,11 +21,12 @@ class AllUsers extends Component {
   follow = id => {
     this.setState(
       {
-        userId: this.props.user.id,
+        user_id: this.props.user.id,
         follower_id: id
       },
       () => {
-        followNewUser(this.state);
+        console.log(this.state);
+        this.props.followNewUser(this.state);
       }
     );
   };
@@ -34,6 +35,7 @@ class AllUsers extends Component {
     console.log(this.props.allUsers);
     return (
       <div>
+        <h2 className="text-center">All Users</h2>
         {this.props.allUsers != undefined ? (
           this.props.allUsers.map(ele => {
             return (

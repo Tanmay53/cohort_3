@@ -9,7 +9,11 @@ import {
   FETCH_FOLLOWING_TWEETS_SUCCESS,
   FETCH_FOLLOWING_TWEETS_FAIL,
   ADD_NEW_TWEET_SUCCESS,
-  ADD_NEW_TWEET_FAIL
+  ADD_NEW_TWEET_FAIL,
+  FETCH_ALL_USERS_SUCCESS,
+  FETCH_ALL_USERS_FAIL,
+  FOLLOW_NEW_USER_SUCCESS,
+  FOLLOW_NEW_USER_FAIL
 } from "./action";
 
 const initialState = {
@@ -77,6 +81,27 @@ const reducer = (state = initialState, action) => {
       };
     case ADD_NEW_TWEET_FAIL:
       alert(action.payload);
+      return {
+        ...state,
+        axiosLoding: false
+      };
+    case FETCH_ALL_USERS_SUCCESS:
+      return {
+        ...state,
+        axiosLoding: false,
+        allUsers: action.payload
+      };
+    case FETCH_ALL_USERS_FAIL:
+      return {
+        ...state,
+        axiosLoding: false
+      };
+    case FOLLOW_NEW_USER_SUCCESS:
+      return {
+        ...state,
+        axiosLoding: false
+      };
+    case FOLLOW_NEW_USER_FAIL:
       return {
         ...state,
         axiosLoding: false

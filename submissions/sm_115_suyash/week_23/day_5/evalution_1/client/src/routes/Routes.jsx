@@ -5,6 +5,7 @@ import SignUp from "../component/auth/SignUp";
 import AddNewTweet from "../component/common/AddNewTweet";
 import Home from "../component/common/Home";
 import UserProfile from "../component/common/UserProfile";
+import AllUsers from "../component/common/AllUsers";
 
 class Routes extends Component {
   render() {
@@ -21,6 +22,9 @@ class Routes extends Component {
             <Link to="/add">Add Tweet</Link>
           </li>
           <li>
+            <Link to="/alluser">All User</Link>
+          </li>
+          <li>
             <Link to="/login">Login</Link>
           </li>
         </ul>
@@ -29,6 +33,7 @@ class Routes extends Component {
         <Route path="/add" component={AddNewTweet} />
         <Route path="/signup" component={SignUp} />
         <Route path="/profile" component={UserProfile} />
+        <Route path="/alluser" component={AllUsers} />
       </>
     );
   }

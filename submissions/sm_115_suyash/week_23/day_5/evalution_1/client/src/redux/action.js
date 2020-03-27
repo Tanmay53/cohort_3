@@ -98,7 +98,7 @@ export const fetchAllUsers = payload => dispatch => {
   })
     .then(res => {
       console.log(res.data);
-      dispatch(fetchAllUsersSuccess(res.data));
+      dispatch(fetchAllUsersSuccess(res.data.data));
     })
     .catch(err => {
       console.log(err.message);
@@ -122,7 +122,7 @@ export const followNewUser = payload => dispatch => {
   console.log(payload);
   dispatch(axiosRequest());
   axios({
-    url: "http://localhost:5000/show/users",
+    url: "http://localhost:5000/user/following",
     data: payload,
     headers: {
       "Content-Type": "application/json"
