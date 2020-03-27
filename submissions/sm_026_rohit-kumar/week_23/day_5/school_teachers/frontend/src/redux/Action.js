@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 const user_login = (data) => {
     return {
         type: 'USER_LOGIN',
@@ -19,6 +21,16 @@ const load_teacher = (data) => {
     }
 }
 
+const fetchTeachers = () => {
+      return dispatch => {
+      return axios.get('http://localhost:5000/teacher/fetch')
+        .then(res => {
+          console.log('teachers : ', res)
+          return dispatch(load_teacher(res['data']['data']));
+        })
+    }
+  }
 
 
-export {user_login, user_logout, load_teacher}
+
+export {user_login, user_logout, fetchTeachers}

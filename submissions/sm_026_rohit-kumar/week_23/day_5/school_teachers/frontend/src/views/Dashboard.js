@@ -2,23 +2,16 @@ import React from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
+import {fetchTeachers} from '../redux/Action'
 
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            teachers: []
-        }
     }
 
     componentDidMount = () => {
-        axios.get('http://localhost:5000/teacher/fetch')
-        .then(res => {
-            this.setState({
-                teachers: res['data']['data']
-            })
-        })
+        this.props.fetchTeachers()
     }
 
     render() {
@@ -38,7 +31,7 @@ class Dashboard extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.state.teachers.map((item, index) => {
+                    {this.props.teachers.map((item, index) => {
                         return <tr>
                                     <td>{index + 1}</td> 
                                     <td>{item['teacher_name']}</td>
@@ -58,8 +51,16 @@ const mapStateToProps = (state) => {
     return {
         isLoggedIn: state.login.isLoggedIn,
         menuLabel: state.login.menuLabel,
-        showRegisterButton: state.login.showRegisterButton
+        showRegisterButton: state.login.showRegisterButton,
+        teachers: state.teacher.teachers
+
     }
 }
 
-export default connect(mapStateToProps, null)(Dashboard)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchTeachers: () => dispatch(fetchTeachers())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
