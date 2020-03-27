@@ -3,7 +3,7 @@ import { SEND_TOKEN, ADD_EMPLOYEE, DELETE_EMPLOYEE, CHANGE_PAGE } from './action
 const initialState = {
     page: 1,
     perPage: 20,
-    loginData: { token: '', error: false },
+    loginData: { token: '', error: true },
     departmentData: ["Electrical", "Computer", "Mechanical", "Electronics", "Civil", "Aeronautical"],
     employeeData: [
         { "name": "Prabhat", "gender": "Male", "department": "Computer", "salary": 450000 },
