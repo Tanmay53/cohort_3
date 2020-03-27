@@ -36,3 +36,7 @@ export const LOAD_LOCATION = "LOAD_LOCATION";
 export const ADD_BUS = "ADD_BUS";
 export const EDIT_BUS = "EDIT_BUS";
 export const DELETE_BUS = "DELETE_BUS";
+
+// List Bus
+export const LIST_BUS = "LIST_BUS";
+export const CHANGE_PAGE = "CHANGE_PAGE";

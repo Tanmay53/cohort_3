@@ -3,6 +3,7 @@ import { Tabs, PageHeader, Row, Col } from "antd";
 import { AppleOutlined, AndroidOutlined } from "@ant-design/icons";
 import AddCity from "../components/AddCity";
 import AddBus from "../components/AddBus";
+import BusList from "../components/BusList";
 
 const { TabPane } = Tabs;
 
@@ -26,7 +27,9 @@ export default function Dashboard() {
                 </span>
               }
               key="1"
-            ></TabPane>
+            >
+              <BusList></BusList>
+            </TabPane>
             <TabPane
               tab={
                 <span>
