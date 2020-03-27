@@ -4,7 +4,11 @@ import {
   REGISTER_USER_FAILURE,
   LOGIN_USER_REQUEST,
   LOGIN_USER_SUCCESS,
-  LOGIN_USER_FAILURE
+  LOGIN_USER_FAILURE,
+  ADD_EMPLOYEE,
+  SORT_SALARY_INC,
+  SORT_SALARY_DEC,
+  FILTER_DEPARTMENT
 } from "./actionType";
 import axios from "axios";
 
@@ -29,19 +33,52 @@ export const registerAdminFailure = payload => {
   }
 }
 
-export const loginUserRequest = () => ({
-  type: LOGIN_USER_REQUEST
-});
+export const loginUserRequest = () => {
+  return {
+    type: LOGIN_USER_REQUEST
+  }
+};
 
-export const loginUserSuccess = payload => ({
-  type: LOGIN_USER_SUCCESS,
-  payload
-});
+export const loginUserSuccess = payload => {
+  return {
+    type: LOGIN_USER_SUCCESS,
+    payload
+  }
+};
 
-export const loginUserFailure = payload => ({
-  type: LOGIN_USER_FAILURE,
-  error: payload
-});
+export const loginUserFailure = payload => {
+  return {
+    type: LOGIN_USER_FAILURE,
+    error: payload
+  }
+};
+
+export const addEmployee = payload => {
+  return {
+    type: ADD_EMPLOYEE,
+    payload
+  }
+}
+
+export const salarySortInc = () => {
+  return {
+    type:SORT_SALARY_INC
+  }
+}
+
+export const salarySortDec = () => {
+  return {
+    type:SORT_SALARY_DEC
+  }
+}
+
+export const  filterDepartment = payload => {
+  return {
+    type: FILTER_DEPARTMENT,
+    payload
+  }
+}
+
 
 export const registerUser = payload => {
   return dispatch => {
