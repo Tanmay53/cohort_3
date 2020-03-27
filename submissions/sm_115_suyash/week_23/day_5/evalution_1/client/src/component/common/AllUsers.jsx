@@ -21,7 +21,7 @@ class AllUsers extends Component {
   follow = id => {
     this.setState(
       {
-        userId: this.props.user.id,
+        user_id: this.props.user.id,
         follower_id: id
       },
       () => {
