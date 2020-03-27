@@ -18,6 +18,10 @@
 - `export FLASK_ENV=development`
 - `flask run`
 
+##### Database Setup
+- `Find SQL dump in db/backup.sql`
+- `mysql -u root -p busroute < backup.sql`
+
 ### Rubrics
 
 #### Backend
