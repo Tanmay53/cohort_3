@@ -1,0 +1,6 @@
+export const ADD_CITY = "ADD_CITY"
+export const ADD_BUS = "ADD_BUS"
+export const EDIT_BUS_DETAILS = "EDIT_BUS_DETAILS"
+export const DELETE_BUS = "DELETE_BUS"
+export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE"
+export const SET_PER_PAGE = "SET_PER_PAGE"
