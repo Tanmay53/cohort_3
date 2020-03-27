@@ -41,13 +41,13 @@ class AddEmployee extends Component {
                                     <input type="text" name="name" value={this.state.album} onChange={this.handelChange} className="form-control px-5" placeholder="Enter Album Name" />
                                 </div>
                                 <div className="form-group">
-                                    <label>Enter Year</label>
+                                    <label>Gender</label>
                                     <select className="custom-select px-3" name="gender" value={this.state.gender} onChange={this.handelChange} >
                                         {["Male","Female"].map((item,index)=><option key={item+index} value={item}>{item}</option>)}
                                     </select>
                                 </div>
                                 <div className="form-group">
-                                    <label>Select Artist</label>
+                                    <label>Department</label>
                                     <select className="custom-select px-3" name="department" value={this.state.department} onChange={this.handelChange} >
                                         {this.props.departmentData.map((item,index)=><option key={item+index} value={item}>{item}</option>)}
                                     </select>
