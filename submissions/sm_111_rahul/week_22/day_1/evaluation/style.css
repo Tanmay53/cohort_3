@@ -91,24 +91,38 @@ header > h1,
   font-size: 30px;
   text-align: center;
 }
- button {
-    color: rgb(182, 29, 29);
-    font-size: 20px;
-    border-radius: 2px;
-    width: 100px;
-    float: right;
+button {
+  color: rgb(182, 29, 29);
+  font-size: 20px;
+  border-radius: 2px;
+  width: 100px;
+  float: right;
 }
+/* }
+@media only screen and (max-width: 1160px){
+  
+}
+@media only screen and (max-width: 992px){
+  
+}
+@media only screen and (max-width: 768px){
 
-@media screen and (max-width: 680px) {
+} */
+@media screen and (max-width: 768px) {
   * {
-    margin: 5px 10px;
+    margin: 5px auto;
     padding: 0px;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    padding: 0px 1% 0px 1%;
   }
 
   .container {
     display: grid;
     height: 200vh;
-    width: 460px;
+    padding: 0px auto;
     grid-template-columns: 400px;
     grid-template-rows: 1fr 1.5fr 1.5fr 2fr 2fr 1fr;
   }
@@ -134,5 +148,4 @@ header > h1,
   .container > footer {
     grid-area: 6 / 1 / 7 / 2;
   }
-  
 }
