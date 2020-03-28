@@ -1,6 +1,8 @@
 import React from 'react'
 
 function Sort(props){
+  /*sort dropdown component*/
+
   return (
     <select
       className='form-control col-md-2 offset-md-2 col-sm-4 offset-sm-4'

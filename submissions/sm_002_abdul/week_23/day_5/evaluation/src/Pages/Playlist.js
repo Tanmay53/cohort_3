@@ -34,7 +34,7 @@ class Playlist extends React.Component{
 
     let filteredPlaylist = JSON.parse(localStorage.getItem('filteredPlaylist'))
 
-    //console.log(artists)
+    /*using local storage to persists the data even after referesh using local storage*/
 
     if (artists.length>0){
       this.setState({
@@ -62,6 +62,8 @@ class Playlist extends React.Component{
   }
 
   addArtist = (artist) =>{
+    /*When the user adds artist it updates artists state and populate the dropdown accordingly*/
+
     let updatedArtistsList = [...this.state.artists,artist]
 
     this.setState({
@@ -72,6 +74,8 @@ class Playlist extends React.Component{
   }
 
   addNewSong = (newSong) =>{
+    //When the user inputs new song details and submit. It updates the playlist state and data of table
+
     let updatedPlaylist = [...this.state.playlist,newSong]
 
     this.setState({
@@ -85,6 +89,9 @@ class Playlist extends React.Component{
   }
 
   editDataSubmit = ( id, updatedAlbum, updatedYear )=>{
+
+    // The current function is invoked when the user clicks on edit button in the table
+    // It edits the data and updates the state accordingly
 
     console.log('playlist editDataSubmit parameter',id,updatedAlbum,updatedYear)
 
@@ -109,6 +116,10 @@ class Playlist extends React.Component{
   }
 
   deleteData = (id) =>{
+
+    // The current function is invoked when the user clicks on delete button. It deletes the required element
+    // And updates the state accordingly
+
     let dataAfterDeletion = this.state.playlist.filter(el=>{
       return el.id!==id
     })
@@ -123,6 +134,11 @@ class Playlist extends React.Component{
   }
 
   sort = (e) =>{
+
+    // When the user clicks on dropdown of sort by date. This current function gets invoked. 
+    // it sorts the data of table in ascending and descending order of dates
+
+
     if (e.target.value!==''){
 
       if (e.target.value==="ascending"){
@@ -159,6 +175,10 @@ class Playlist extends React.Component{
   }
 
   filter = (e) =>{
+
+    // When the user clicks on dropdown of filter by artist. This current function gets invoked.
+    // It updates the data of the table filtering it by the artist selected
+
     let selectedArtist = e.target.value
 
     if (selectedArtist !== ""){
@@ -187,14 +207,14 @@ class Playlist extends React.Component{
     console.log("playlist", this.state)
     return (
       <>
-        <Form
-          artists={this.state.artists}
+        <Form                                   //Form component in which user inputs data
+          artists={this.state.artists} 
           addArtist = {this.addArtist}
           addNewSong = {this.addNewSong}/>
 
-        <div className="row">
+        <div className="row">                         {/*sort and filter components*/}
           <Sort
-            sort = {this.sort}/>
+            sort = {this.sort}/>  
 
           <Filter
             artists = {this.state.artists}
@@ -202,7 +222,7 @@ class Playlist extends React.Component{
         </div>
 
 
-        <Table
+        <Table                                  /*Table which displays data*/
           playlist={this.state.filteredPlaylist}
           editDataSubmit={this.editDataSubmit}
           deleteData={this.deleteData}/>

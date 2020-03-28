@@ -3,6 +3,9 @@ import axios from 'axios'
 import {login} from "../action/action"
 import store from '../store/store'
 
+/* The login State of App is maintained by redux store where as other component playlist is maintained 
+by react and local storage*/
+
 class Login extends React.Component{
   constructor(){
     super()
@@ -60,8 +63,9 @@ class Login extends React.Component{
     })
     .then (resp=>{
       if (resp.data.error===false){
-        store.dispatch(login(true))
-      }
+        store.dispatch(login(true)) /*axios call is made and the login state in redux store 
+        is changed depending on the response from API*/
+      } 
     })
     this.setState({
       loginUsername:'',
