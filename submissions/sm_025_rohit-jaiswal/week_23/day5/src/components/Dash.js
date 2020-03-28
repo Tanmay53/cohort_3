@@ -37,7 +37,7 @@ const Dash = props => {
         <option value="Maths">Maths</option>
         <option value="English">English</option>
         <option value="Biology">Biology</option>
-        <option value="P.Ed">P.Ed</option>
+        <option value="P.Ed">P.Edu</option>
       </select>
       <div className="col">
         <table className="table border mt-4">
