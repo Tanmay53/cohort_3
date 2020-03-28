@@ -20,12 +20,12 @@ class Head extends React.Component {
         </div>
         <div class=" text-center text-success m-5 p-5">
           <Link to="/signin">
-            <b>Signin</b>
+            <b>Signin Here</b>
           </Link>
           <br />
 
           <Link to="/login">
-            <b>Login</b>
+            <b>Login Here</b>
           </Link>
         </div>
       </div>
