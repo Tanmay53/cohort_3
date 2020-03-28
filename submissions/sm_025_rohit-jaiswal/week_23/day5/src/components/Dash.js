@@ -31,7 +31,7 @@ const Dash = props => {
   return (
     <div className="container text-center">
       <select onClick={props.filterSubject} className="btn btn-success m-2">
-        <option value="all">Flter Subject</option>
+        <option value="colc">Flter Subject</option>
         <option value="Physics">Physics</option>
         <option value="Chemistry">Chemistry</option>
         <option value="Maths">Maths</option>
