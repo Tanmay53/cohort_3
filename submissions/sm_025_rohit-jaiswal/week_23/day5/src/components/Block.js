@@ -201,7 +201,7 @@ class Block extends React.Component {
               </select>
             </div>
             <div className="text-center">
-              <button className="btn btn-primary mt-3 mb-5">Enter</button>
+              <button className="btn btn-primary mt-3 mb-5">Enter to Update</button>
             </div>
           </form>
         </div>

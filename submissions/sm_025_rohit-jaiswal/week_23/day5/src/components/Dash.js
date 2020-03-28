@@ -1,6 +1,6 @@
 import React from "react";
 
-const Assign = props => {
+const Decide = props => {
   return (
     <tr>
       <th>{props.name}</th>
@@ -53,7 +53,7 @@ const Dash = props => {
           </thead>
           <tbody>
             {props.data.map(element => (
-              <Assign
+              <Decide
                 key={element.id}
                 id={element.id}
                 name={element.name}
