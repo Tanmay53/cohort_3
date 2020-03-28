@@ -1,6 +1,8 @@
 import React from "react"
 import uuid from "react-uuid"
 
+/*Form Component which allows user to input data*/
+
 class Form extends React.Component{
   constructor(props){
     super(props)
