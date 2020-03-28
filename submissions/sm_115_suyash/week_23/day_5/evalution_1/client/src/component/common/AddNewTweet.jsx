@@ -33,14 +33,21 @@ class AddNewTweet extends Component {
   render() {
     return (
       <div>
-        <h1>Create New Post</h1>
+        <h1 className="text-center">Create New Post</h1>
         <input
           type="text"
+          placeholder="Enter Your Tweets"
           onChange={this.handleChange}
           name="new_post"
+          className="ml-3"
           value={this.state.new_post}
         />
-        <button onClick={this.addNew}>Add Post</button>
+        <button
+          className="ml-3 px-3 py-2 text-white btn-dark"
+          onClick={this.addNew}
+        >
+          Add Post
+        </button>
       </div>
     );
   }

@@ -24,7 +24,9 @@ const initialState = {
   user: {},
   token: "",
   followingData: [],
-  allUsers: []
+  allUsers: [],
+  prv: 0,
+  nxt: 0
 };
 
 const reducer = (state = initialState, action) => {
@@ -63,9 +65,12 @@ const reducer = (state = initialState, action) => {
         signInMsg: action.payload.message
       };
     case FETCH_FOLLOWING_TWEETS_SUCCESS:
+      console.log(action.payload);
       return {
         ...state,
-        followingData: action.payload,
+        followingData: action.payload.data,
+        nxt: action.payload.nxt,
+        prv: action.payload.prv,
         axiosLoding: false
       };
     case FETCH_FOLLOWING_TWEETS_FAIL:

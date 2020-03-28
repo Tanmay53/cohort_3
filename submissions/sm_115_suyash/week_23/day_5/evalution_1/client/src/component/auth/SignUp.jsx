@@ -34,39 +34,45 @@ class SignUp extends Component {
   };
   render() {
     return (
-      <div className="mx-auto">
-        <h1>Sign Up</h1>
-        <div>
-          <input
-            placeholder="Enter Your Name"
-            name="name"
-            onChange={this.handleChange}
-            value={this.state.name}
-          />
+      <div className="d-flex justify-content-center">
+        <div className="mx-auto">
+          <h1>Sign Up</h1>
+          <div>
+            <input
+              placeholder="Enter Your Name"
+              className="mt-2"
+              name="name"
+              onChange={this.handleChange}
+              value={this.state.name}
+            />
+          </div>
+          <div>
+            <input
+              placeholder="Enter Your Email"
+              className="mt-2"
+              name="email"
+              onChange={this.handleChange}
+              value={this.state.email}
+            />
+          </div>
+          <div>
+            <input
+              placeholder="Enter Your Password"
+              className="mt-2"
+              name="password"
+              onChange={this.handleChange}
+              value={this.state.password}
+            />
+          </div>
+          <button
+            type="primary"
+            loading={this.state.loading}
+            onClick={this.handleSubmit}
+            className="ml-3 mt-2 px-3 py-2 text-white btn-dark"
+          >
+            Sign Up
+          </button>
         </div>
-        <div>
-          <input
-            placeholder="Enter Your Email"
-            name="email"
-            onChange={this.handleChange}
-            value={this.state.email}
-          />
-        </div>
-        <div>
-          <input
-            placeholder="Enter Your Password"
-            name="password"
-            onChange={this.handleChange}
-            value={this.state.password}
-          />
-        </div>
-        <button
-          type="primary"
-          loading={this.state.loading}
-          onClick={this.handleSubmit}
-        >
-          Sign Up
-        </button>
       </div>
     );
   }

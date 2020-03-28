@@ -123,9 +123,12 @@ def login():
 def show_following_data():
     userId = request.json["user_id"]
     page = request.args.get('page')
+    print(page)
     limit = request.args.get('limit')
     starting = 0
     offset = 0
+    prv = 1
+    nxt = 1
     if limit is None and page is None:
         starting = 0
         offset = 20
@@ -134,6 +137,9 @@ def show_following_data():
         offset = int(limit)
     elif page is not None:
         starting = (int(page) - 1) * 20
+        prv = int(page) - 1
+        nxt = int(page) + 1
+        offset = 20
     elif limit is not None:
         offset = int(limit)
     data = []
@@ -143,7 +149,8 @@ def show_following_data():
             """ SELECT post.*, user.name as following FROM post JOIN user ON post.user_id = user.id WHERE user_id IN (SELECT following FROM follow WHERE user_id = %s) ORDER BY post.created_at DESC LIMIT %s,%s; """,(userId,starting,offset)
         )
         data = cursor.fetchall()
-        return jsonify({"message": "Successfully","error":False, "data": data}),200
+        print(starting,offset,prv,nxt)
+        return jsonify({"message": "Successfully","error":False, "data": data, "prv":prv, "nxt":nxt}),200
     except Exception as err:
         return jsonify({"message": str(err), "error":True}),400
     finally:
