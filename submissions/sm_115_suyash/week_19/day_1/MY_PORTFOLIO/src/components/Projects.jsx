@@ -5,13 +5,14 @@ const Projects = () => {
   return (
     <div className="text-center container">
       <h2 className="text-muted mt-5 pt-3 nothingCall">Projects</h2>
-      <div className="row mt-5 px-5 justify-content-center">
+      <div className="row mt-5 ml-2 justify-content-center">
         <Card
           img="template.jpeg"
           title="Template"
           para="This temlated copy from TEMPLATE.COM"
           link="Click Me"
           linkSrc="https://ninja-templeted.netlify.com"
+          gitSrc="https://github.com/SuyashMishra-dev/Template"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg"
@@ -22,7 +23,8 @@ const Projects = () => {
           title="Masai Clone"
           para="Copy of some pages of masai school"
           link="Click Me"
-          linkSrc="#"
+          linkSrc="https://masai-school.netlify.com/"
+          gitSrc="https://github.com/SuyashMishra-dev/clone_masai_school"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
@@ -34,7 +36,8 @@ const Projects = () => {
           title="Github Finder"
           para="Search user by username or by repositry name."
           link="Find User"
-          linkSrc="#"
+          linkSrc="https://github-finder-js.netlify.com/"
+          gitSrc="https://github.com/SuyashMishra-dev/Git-hub-finder"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
@@ -48,12 +51,12 @@ const Projects = () => {
           para="Little bit use of JS."
           link="Edge ledger"
           linkSrc="https://ninjaedgeledger.netlify.com"
+          gitSrc="https://github.com/SuyashMishra-dev/clone_masai_school"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
             "https://cdn.svgporn.com/logos/bootstrap.svg",
-            "https://cdn.svgporn.com/logos/javascript.svg",
-            "https://cdn.svgporn.com/logos/react.svg"
+            "https://cdn.svgporn.com/logos/javascript.svg"
           ]}
         />
         <Card
@@ -61,7 +64,8 @@ const Projects = () => {
           title="Stopwatch"
           para="Use of class component for making it."
           link="Start"
-          linkSrc="#"
+          linkSrc="https://stopwatch-timer.netlify.com/"
+          gitSrc="https://github.com/masai-school/cohort_3/tree/master/submissions/sm_115_suyash/week_8/day_3/StopWatch%20and%20Timer"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
@@ -76,6 +80,7 @@ const Projects = () => {
           para="Welcome to my restaurant."
           link="Click Here"
           linkSrc="https://ninjacoderatmasai.netlify.com"
+          gitSrc="https://github.com/SuyashMishra-dev/masai-week-2-project"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
@@ -89,6 +94,7 @@ const Projects = () => {
           para="Calculate your expense"
           link="Click Here"
           linkSrc="https://ninja-coder-expanse-manager.netlify.com"
+          gitSrc="https://github.com/masai-school/cohort_3/tree/master/submissions/sm_115_suyash/week_14/day_6/Expense%20Manager"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
@@ -104,7 +110,8 @@ const Projects = () => {
           title="Computer Solution"
           para="Here you can buy new Laptop."
           link="Click Here"
-          linkSrc="#"
+          linkSrc="https://computer-solution.netlify.com/"
+          gitSrc="https://github.com/masai-school/cohort_3/tree/master/submissions/sm_115_suyash/week_9/day_3/coding_1"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
@@ -121,6 +128,7 @@ const Projects = () => {
           para="Here you book meeting room "
           link="Book Room"
           linkSrc="https://masai-frontend-10-02-2020.netlify.com"
+          gitSrc="https://github.com/masai-school/cohort_3/tree/master/submissions/sm_115_suyash/week_17/day_1/Sprint%20Evaluation%2010th-feb"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
@@ -128,17 +136,16 @@ const Projects = () => {
             "https://cdn.svgporn.com/logos/javascript.svg",
             "https://cdn.svgporn.com/logos/react.svg",
             "https://cdn.svgporn.com/logos/react-router.svg",
-            "https://cdn.svgporn.com/logos/redux.svg",
-            "https://cdn.svgporn.com/logos/python.svg",
-            "https://cdn.svgporn.com/logos/flask.svg"
+            "https://cdn.svgporn.com/logos/redux.svg"
           ]}
         />
-        <Card
+        {/* <Card
           img="restorent.jpeg"
           title="Blog App"
           para="Come and start writing."
           link="Click Here"
           linkSrc="#"
+          gitSrc="#"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
@@ -157,6 +164,7 @@ const Projects = () => {
           para="Full flash application."
           link="Click Here"
           linkSrc="#"
+          gitSrc="#"
           arr={[
             "https://cdn.svgporn.com/logos/html-5.svg",
             "https://cdn.svgporn.com/logos/css-3.svg",
@@ -167,7 +175,7 @@ const Projects = () => {
             "https://cdn.svgporn.com/logos/redux.svg",
             "https://cdn.svgporn.com/logos/firebase.svg"
           ]}
-        />
+        /> */}
       </div>
     </div>
   );
