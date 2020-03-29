@@ -1,5 +1,7 @@
 import React from "react"
 
+/*Playlist Table which allows user to display the data ; Edit the data and delete the data*/
+
 class Table extends React.Component{
   constructor(props){
     super(props)

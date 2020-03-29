@@ -33,7 +33,7 @@ class Login extends Component {
         return (
             this.props.isLogin ?
             (
-                <Redirect to = "/" />
+                <Redirect to = "/home" />
             ) : 
             (
                 <div>

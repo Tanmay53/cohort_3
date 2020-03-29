@@ -7,14 +7,15 @@ import store from './store/store'
 
 class App extends React.Component{
   render(){
-    const {login} = store.getState()
-
-    //console.log("login response from store",login)
+    const {login} = store.getState() 
     
+    // here we are destructuring state (login state) which we got from redux store
+    // login state in App is maintained by redux store
+
     return (
       <>
         {
-          !(login)
+          !(login) /*Redirecting users according using ternary*/
           ?
           <Redirect to={{ pathname: "/login" }}/>
           :

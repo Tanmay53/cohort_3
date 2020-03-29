@@ -1,7 +1,7 @@
 import {createStore} from "redux"
 import {reducer} from '../reducer/reducer'
 
-const loginState = {
+const loginState = { // redux store.
   login : false
 }
 

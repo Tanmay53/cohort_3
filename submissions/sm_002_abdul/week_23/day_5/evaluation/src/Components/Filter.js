@@ -1,6 +1,9 @@
 import React from "react"
 
 function Filter(props){
+
+  //Filter dropdown is populates from the props (which gets updated when the state updates)
+
   const {artists} = props
   return (
     <select
