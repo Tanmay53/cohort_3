@@ -30,7 +30,7 @@ export default function Tools() {
             src="https://cdn.svgporn.com/logos/visual-studio-code.svg"
             alt=""
             height="140px"
-            className="mx-5 d-block"
+            className="mx-5 d-block react-margin"
           />
           <small>VS Code</small>
         </div>

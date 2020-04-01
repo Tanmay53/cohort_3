@@ -13,7 +13,7 @@ const Header = () => {
             className="rounded-circle p-2 border border-primary"
           />
         </div>
-        <h3 className="my-name">Suyash Misrha</h3>
+        <h3 className="my-name">Suyash Mishra</h3>
         <p className="text-muted">Full Stack Developer</p>
         <div className="d-block d-md-flex">
           <div>
@@ -44,31 +44,37 @@ const Header = () => {
             that can inspire others and lead to the growth of mine as well as
             the organisation I will work with.
           </p>
-          <a href="#">
+          <a href="https://github.com/SuyashMishra-dev" target="_blank">
             <i
               class="fab fa-github-alt text-muted px-2 my-icon"
               style={{ fontSize: "1.5rem" }}
             ></i>
           </a>
-          <a href="#">
+          <a href="https://twitter.com/SuyashM03310987" target="_blank">
             <i
               class="fab fa-twitter text-muted px-2 my-icon"
               style={{ fontSize: "1.5rem" }}
             ></i>
           </a>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/suyash-mishra-b5913a171/"
+            target="_blank"
+          >
             <i
               class="fab fa-linkedin-in text-muted px-2 my-icon"
               style={{ fontSize: "1.5rem" }}
             ></i>
           </a>
-          <a href="#">
+          <a
+            href="https://www.hackerrank.com/Suyashmishra8604?hr_r=1"
+            target="_blank"
+          >
             <i
               class="fab fa-hackerrank text-muted px-2 my-icon"
               style={{ fontSize: "1.5rem" }}
             ></i>
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/coder.ninja/" target="_blank">
             <i
               class="fab fa-instagram text-muted px-2 my-icon"
               style={{ fontSize: "1.5rem" }}
@@ -77,7 +83,11 @@ const Header = () => {
         </div>
       </div>
       <div className="text-center mt-4">
-        <a href="#" className="btn cv-btn mb-5 dosis">
+        <a
+          href="https://drive.google.com/file/d/1KZtR_6vs8iZxY5valtuWT9CAEva-ox--/view?usp=sharing"
+          className="btn cv-btn mb-5 dosis"
+          target="_blank"
+        >
           Resume
         </a>
       </div>
