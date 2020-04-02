@@ -8,7 +8,7 @@ class AddData extends Component {
     return (
       <div className="container-fluid">
         <h1 className="text-center pt-3">
-          Welcome {this.props.userLoginInfo.fName}{" "}
+          Welcome, Hello {this.props.userLoginInfo.fName}{" "}
           {this.props.userLoginInfo.lName} Your Total Balance:{" "}
           {this.props.totalBal} INR
         </h1>
