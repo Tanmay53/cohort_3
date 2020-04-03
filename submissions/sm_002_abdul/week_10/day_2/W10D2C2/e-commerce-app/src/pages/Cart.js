@@ -4,7 +4,11 @@ import CartItems from '../components/CartItems'
 import OrderConfirmation from "../components/OrderConfirmation"
 
 class Cart extends React.Component{
-  render(){
+
+  render(props){
+
+    const {cart} = this.props
+
     return (
       <div className="container-fluid">
         <h1 className="text-center text-secondary">Check Out</h1>
@@ -21,7 +25,13 @@ class Cart extends React.Component{
           <CartItems/>
         </table>
 
-        <OrderConfirmation/>
+        {
+          cart.length>0
+          ?
+          <OrderConfirmation/>
+          :
+          <h1 className="text-center text-secondary">You Have No Items In Your Cart</h1>      
+        }
       </div>
     )
   }
