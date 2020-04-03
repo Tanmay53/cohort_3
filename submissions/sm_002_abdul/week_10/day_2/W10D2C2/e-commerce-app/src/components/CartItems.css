@@ -1,0 +1,8 @@
+.add-remove{
+  border-radius: 40%;
+  border: 1px solid grey;
+  padding: 1%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
