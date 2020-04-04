@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+    <div id = "root"></div>
+    <input placeholder="enter number" id="input1" type="number"/>
+    <input placeholder="enter number" id="input2" type="number"/>
+    <button>Add</button>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script  src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script type ="text/babel">
+    //Write your code below this line
+      function add(num1,num2){
+        const elem = (<h1>{num1+num2}</h1>)
+        ReactDOM.render(elem,document.querySelector("#root"))
+      }
+
+      let input1 = Number(document.querySelector("#input1").value)
+      let input2 = Number(document.querySelector("#input2").value)
+
+      let button = document.querySelector('button')
+      button.addEventListener('click',()=>add(input1,input2))
+
+    </script>
+</body>
+</html>
